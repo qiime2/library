@@ -1,6 +1,11 @@
+# PICK UP:
+# - sync library source onto infrastructure.qiime2.org: its probably better to just run a `git pull`
+# - tweak the playbook so that it runs docker compose correctly
+# - set up new UFW rules role
+# - done?
 - name: copy celery docker compose template and Dockerfile
   copy:
-    src: ../..
+    src: .
     dest: "/home/ubuntu"
   # with_items:
   #   - docker-compose.yml
