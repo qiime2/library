@@ -1,14 +1,14 @@
 - name: copy celery docker compose template and Dockerfile
-  template:
-    src: "{{ item }}"
+  copy:
+    src: .
     dest: "/home/ubuntu"
-  with_items:
-    - docker-compose.yml
-    - Dockerfile
+  # with_items:
+  #   - docker-compose.yml
+  #   - Dockerfile
 
-- name: start atc and pg containers
+- name: start celery and rmq containers
   become: True
-  command: docker-compose -f $HOME/docker-compose.yml up -d
+  command: docker-compose -f /home/ubuntu/docker-compose.yml up -d
   register: dc
   # TODO: update
   changed_when: '"Creating concourse_db_1" in dc.stderr and "Creating concourse_web_1" in dc.stderr'
