@@ -1,6 +1,6 @@
 - name: copy celery docker compose template and Dockerfile
   copy:
-    src: .
+    src: ../..
     dest: "/home/ubuntu"
   # with_items:
   #   - docker-compose.yml
