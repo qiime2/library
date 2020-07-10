@@ -8,6 +8,7 @@
   git:
     repo: https://github.com/qiime2/library
     dest: /home/ubuntu/library-src
+    version: master
     update: yes
 
 - name: start celery and rmq containers
