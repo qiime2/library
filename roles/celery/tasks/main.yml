@@ -1,6 +1,4 @@
 # PICK UP:
-# - sync library source onto infrastructure.qiime2.org: its probably better to just run a `git pull`
-# - tweak the playbook so that it runs docker compose correctly
 # - set up new UFW rules role
 # - done?
 
@@ -12,9 +10,8 @@
     version: infrastructure.qiime2.org-worker
     update: yes
 
-- name: start celery and rmq containers
+- name: start containers
   become: True
   command: docker-compose -f /home/ubuntu/library-src/docker-compose.yml up -d
   register: dc
-  # TODO: update
-  changed_when: '"Creating concourse_db_1" in dc.stderr and "Creating concourse_web_1" in dc.stderr'
+  changed_when: '"Creating library-src_worker_1" in dc.stderr'
