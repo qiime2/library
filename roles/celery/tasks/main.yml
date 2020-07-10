@@ -12,6 +12,6 @@
 
 - name: start containers
   become: True
-  command: docker-compose -f /home/ubuntu/library-src/docker-compose.yml up -d
+  command: docker-compose -f /home/ubuntu/library-src/docker-compose.yml up -p library -e SPLEEN={{ SPLEEN }} -d
   register: dc
-  changed_when: '"Creating library-src_worker_1" in dc.stderr'
+  changed_when: '"Creating library-worker_1" in dc.stderr'

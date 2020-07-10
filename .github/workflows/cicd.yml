@@ -136,4 +136,6 @@ jobs:
       - name: deploy to infrastructure.qiime2.org
         # TODO: uncomment before merging
         # if: github.ref == 'refs/heads/master'
-        run: ansible-playbook -i inventory.yml --private-key=key.pem -u ubuntu --become provision.yml
+        env:
+          SPLEEN: "${{ secrets.SPLEEN }}"
+        run: ansible-playbook -i inventory.yml --private-key=key.pem -u ubuntu --become -e SPLEEN=$SPLEEN provision.yml
