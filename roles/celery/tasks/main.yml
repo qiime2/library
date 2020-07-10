@@ -8,7 +8,8 @@
   git:
     repo: https://github.com/qiime2/library
     dest: /home/ubuntu/library-src
-    version: master
+    # TODO: update this before merging
+    version: infrastructure.qiime2.org-worker
     update: yes
 
 - name: start celery and rmq containers
