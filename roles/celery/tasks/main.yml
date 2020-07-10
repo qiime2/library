@@ -12,6 +12,7 @@
     force: yes
 
 - name: template in docker-compose vars
+  no_log: True
   template:
     src: "{{ item }}"
     dest: "/home/ubuntu/library-src/{{ item }}"

@@ -137,5 +137,5 @@ jobs:
         # TODO: uncomment before merging
         # if: github.ref == 'refs/heads/master'
         env:
-          SPLEEN: "${{ secrets.SPLEEN }}"
-        run: ansible-playbook -i inventory.yml --private-key=key.pem -u ubuntu --become -e SPLEEN=$SPLEEN provision.yml
+          RABBITMQ_URL: "${{ secrets.RABBITMQ_URL }}"
+        run: ansible-playbook -i inventory.yml --private-key=key.pem -u ubuntu --become -e RABBITMQ_URL=$RABBITMQ_URL provision.yml
