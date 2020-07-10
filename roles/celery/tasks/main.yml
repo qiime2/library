@@ -1,13 +1,8 @@
-# PICK UP:
-# - set up new UFW rules role
-# - done?
-
 - name: sync source
   git:
     repo: https://github.com/qiime2/library
     dest: /home/ubuntu/library-src
-    # TODO: update this before merging
-    version: infrastructure.qiime2.org-worker
+    version: master
     update: yes
     force: yes
 
