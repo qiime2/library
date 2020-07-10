@@ -1,0 +1,10 @@
+---
+
+- name: ufw open ports
+  ufw:
+    rule: allow
+    state: enabled
+    name: "{{ item }}"
+  with_items:
+    - OpenSSH
+    - Nginx Full
