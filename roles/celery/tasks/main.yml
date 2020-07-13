@@ -2,7 +2,8 @@
   git:
     repo: https://github.com/qiime2/library
     dest: /home/ubuntu/library-src
-    version: master
+    # TODO: revert before merging
+    version: celery-routing
     update: yes
     force: yes
 

@@ -97,7 +97,8 @@ jobs:
 
   deploy-worker:
     runs-on: ubuntu-latest
-    needs: deploy-web
+    # TODO: uncomment before merging
+    # needs: deploy-web
     steps:
       - uses: actions/checkout@v2
         with:
@@ -124,7 +125,8 @@ jobs:
         run: ansible-lint provision.yml
 
       - name: prepare ssh key
-        if: github.ref == 'refs/heads/master'
+        # TODO: uncomment before merging
+        # if: github.ref == 'refs/heads/master'
         env:
           SSH_PRIVATE_KEY_WORKER: "${{ secrets.SSH_PRIVATE_KEY_WORKER }}"
         run: |
@@ -132,7 +134,8 @@ jobs:
           chmod 600 key.pem
 
       - name: deploy to infrastructure.qiime2.org
-        if: github.ref == 'refs/heads/master'
+        # TODO: uncomment before merging
+        # if: github.ref == 'refs/heads/master'
         env:
           RABBITMQ_URL: "${{ secrets.RABBITMQ_URL }}"
         run: ansible-playbook -i inventory.yml --private-key=key.pem -u ubuntu --become -e RABBITMQ_URL=$RABBITMQ_URL provision.yml
