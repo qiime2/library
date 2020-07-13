@@ -1,7 +1,6 @@
 import os
 
 import environ
-import kombu
 
 
 env = environ.Env()
@@ -88,10 +87,4 @@ RABBITMQ_URL = env('RABBITMQ_URL', default='amqp://guest@mq')
 CELERY_BROKER_URL = env('RABBITMQ_URL', default='amqp://guest@mq')
 CELERY_RESULT_BACKEND = 'rpc'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TASK_QUEUES = (
-    kombu.Queue('default',    routing_key='task.#'),
-    kombu.Queue('packages', routing_key='package.#'),
-)
-CELERY_TASK_DEFAULT_EXCHANGE = 'tasks'
-CELERY_TASK_DEFAULT_EXCHANGE_TYPE = 'topic'
-CELERY_TASK_DEFAULT_ROUTING_KEY = 'task.default'
+CELERY_TASK_ROUTES = {'library.index.tasks.debug': {'queue': 'packages'}}
