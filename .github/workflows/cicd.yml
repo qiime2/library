@@ -74,8 +74,8 @@ jobs:
         flake8
         python manage.py collectstatic --noinput
         celery worker -A config.celery -b pyamqp://user:spleen2@localhost:5672 -Q packages,default &
-        celery inspect -A config.celery registered
         sleep 15
+        celery inspect -A config.celery registered
         python manage.py test --noinput
 
   deploy-web:
