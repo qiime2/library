@@ -87,4 +87,4 @@ RABBITMQ_URL = env('RABBITMQ_URL', default='amqp://guest@mq')
 CELERY_BROKER_URL = env('RABBITMQ_URL', default='amqp://guest@mq')
 CELERY_RESULT_BACKEND = 'rpc'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TASK_ROUTES = {'*': {'queue': 'packages'}}
+CELERY_TASK_ROUTES = {'library.index.tasks.*': {'queue': 'packages'}}
