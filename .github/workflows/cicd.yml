@@ -51,10 +51,11 @@ jobs:
         python-version: 3.8
 
     - name: install and set up dependencies
+      shell: bash -l {0}
       run: |
-        conda run pip install -r requirements/production.txt
+        pip install -r requirements/production.txt
+        pip install -q https://github.com/qiime2/q2lint/archive/master.zip
         conda install flake8 conda-build
-        conda run pip install -q https://github.com/qiime2/q2lint/archive/master.zip
 
     - name: run tests
       env:
@@ -70,8 +71,9 @@ jobs:
         AWS_SECRET_ACCESS_KEY: scream
         AWS_SES_REGION_NAME: for
         AWS_SES_REGION_ENDPOINT: icecream
+      shell: bash -l {0}
       run: |
-        conda run flake8
+        flake8
         python manage.py collectstatic --noinput
         celery worker -A config.celery -b pyamqp://user:spleen2@localhost:5672 -Q packages,default &
         sleep 15
