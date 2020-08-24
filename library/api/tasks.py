@@ -1,4 +1,3 @@
-import os
 import pathlib
 import shutil
 import tempfile
@@ -54,4 +53,3 @@ def handle_new_builds(payload):
         | reindex_conda_server.s() \
         | integrate_new_package.s()
     return chain()
-
