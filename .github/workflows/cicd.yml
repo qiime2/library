@@ -54,7 +54,7 @@ jobs:
       run: |
         conda run pip install -r requirements/production.txt
         conda install flake8 conda-build
-        pip install -q https://github.com/qiime2/q2lint/archive/master.zip
+        conda run pip install -q https://github.com/qiime2/q2lint/archive/master.zip
 
     - name: run tests
       env:
@@ -71,7 +71,7 @@ jobs:
         AWS_SES_REGION_NAME: for
         AWS_SES_REGION_ENDPOINT: icecream
       run: |
-        flake8
+        conda run flake8
         python manage.py collectstatic --noinput
         celery worker -A config.celery -b pyamqp://user:spleen2@localhost:5672 -Q packages,default &
         sleep 15
