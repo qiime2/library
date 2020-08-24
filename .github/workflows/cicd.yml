@@ -52,6 +52,7 @@ jobs:
 
     - name: install and set up dependencies
       run: |
+        which pip
         conda install flake8 conda-build
         pip install -q https://github.com/qiime2/q2lint/archive/master.zip
         pip install -r requirements/production.txt
