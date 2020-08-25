@@ -11,3 +11,5 @@ COPY . /code/
 RUN pip install -r requirements/production.txt
 RUN apt-get update -y
 RUN apt-get install procps -y
+
+EXPOSE 8000
