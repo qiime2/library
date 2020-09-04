@@ -90,6 +90,7 @@ CELERY_RESULT_BACKEND = 'rpc'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_ROUTES = {
     'index.*': {'queue': 'default'},
+    'db.*': {'queue': 'db'},
     'packages.*': {'queue': 'packages'},
 }
 GITHUB_TOKEN = env('GITHUB_TOKEN', default='')
