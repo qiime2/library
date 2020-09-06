@@ -14,7 +14,8 @@ class PackageIntegrationForm(forms.Form):
 
     def is_known(self):
         try:
-            package = Package.get(token=token)
+            package = Package.objects.get(token=self.cleaned_data['token'])
+
             config = {
                 'package_id': package.pk,
                 'run_id': self.cleaned_data['run_id'],
