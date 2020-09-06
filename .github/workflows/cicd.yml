@@ -76,7 +76,7 @@ jobs:
         flake8
         python manage.py collectstatic --noinput
         python manage.py migrate --noinput
-        celery worker -A config.celery &
+        celery worker -A config.celery --loglevel=INFO &
         sleep 15
         python manage.py test --noinput
 
