@@ -4,7 +4,8 @@ import urllib.request
 import zipfile
 
 
-class GitHubNotReadyException(Exception): pass
+class GitHubNotReadyException(Exception):
+    pass
 
 
 class GitHubArtifactManager:
