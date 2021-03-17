@@ -29,7 +29,7 @@ logger = get_task_logger(__name__)
 def setup_periodic_tasks(sender, **kwargs):
     # cron job - reindex staging server every tenish minutes
     # TODO: stop hard-coding the release
-    staging_path = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / 'staging' / '2021.4'
+    staging_path = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / '2021.4' / 'staged'
 
     sender.add_periodic_task(
         600.0,  # seconds
