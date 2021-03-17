@@ -33,7 +33,7 @@ def setup_periodic_tasks(sender, **kwargs):
 
     sender.add_periodic_task(
         600.0,  # seconds
-        reindex_conda_server.s(dict(), str(staging_path), 'staging'),
+        reindex_conda_server.s(dict(), str(staging_path), '2021.4-staged'),
         name='packages.reindex_staging',
     )
 

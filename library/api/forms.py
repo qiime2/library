@@ -35,7 +35,7 @@ class PackageIntegrationForm(forms.Form):
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
                 'channel': channel_path,
-                'channel_name': 'qiime2/unverified',
+                'channel_name': '2021.4-tested',
             }
         except Package.DoesNotExist:
             config = None
