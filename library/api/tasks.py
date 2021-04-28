@@ -15,7 +15,6 @@ from celery import chain
 from celery.decorators import task
 from celery.utils.log import get_task_logger
 import conda_build.api
-from django import conf
 
 from . import utils
 from ..packages.models import Package, PackageBuild

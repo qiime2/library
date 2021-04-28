@@ -14,8 +14,7 @@ from ..packages.models import Package
 
 
 # TODO: stop hard-coding the release
-RELEASE = '2021.8'
-BASE_PATH = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / RELEASE
+BASE_PATH = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / conf.settings.QIIME2_RELEASE
 
 
 class PackageIntegrationForm(forms.Form):
@@ -40,7 +39,7 @@ class PackageIntegrationForm(forms.Form):
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
                 'channel': str(channel_path),
-                'channel_name': '%s-tested' % (RELEASE,),
+                'channel_name': '%s-tested' % (conf.settings.QIIME2_RELEASE,),
             }
         except Package.DoesNotExist:
             config = None
