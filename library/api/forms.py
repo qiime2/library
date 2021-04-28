@@ -13,7 +13,6 @@ from django import forms, conf
 from ..packages.models import Package
 
 
-# TODO: stop hard-coding the release
 BASE_PATH = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / conf.settings.QIIME2_RELEASE
 
 

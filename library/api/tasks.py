@@ -15,6 +15,7 @@ from celery import chain
 from celery.decorators import task
 from celery.utils.log import get_task_logger
 import conda_build.api
+from django import conf
 
 from . import utils
 from ..packages.models import Package, PackageBuild
@@ -32,7 +33,7 @@ def setup_periodic_tasks(sender, **kwargs):
 
         sender.add_periodic_task(
             600.0,  # seconds
-            reindex_conda_server.s(dict(), str(path), '%s-%s' % (utils.RELEASE, gate,)),
+            reindex_conda_server.s(dict(), str(path), '%s-%s' % (conf.settings.QIIME2_RELEASE, gate,)),
             name='packages.reindex_%s' % (gate,),
         )
 
