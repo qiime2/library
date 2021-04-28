@@ -13,6 +13,11 @@ from django import forms, conf
 from ..packages.models import Package
 
 
+# TODO: stop hard-coding the release
+RELEASE = '2021.8'
+BASE_PATH = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / RELEASE
+
+
 class PackageIntegrationForm(forms.Form):
     token = forms.UUIDField(required=True)
     run_id = forms.CharField(required=True)
@@ -22,7 +27,7 @@ class PackageIntegrationForm(forms.Form):
     artifact_name = forms.CharField(required=True)
 
     def is_known(self):
-        channel_path = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2' / '2021.8' / 'tested'
+        channel_path = BASE_PATH / 'tested'
         try:
             package = Package.objects.get(token=self.cleaned_data['token'])
 
@@ -35,7 +40,7 @@ class PackageIntegrationForm(forms.Form):
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
                 'channel': str(channel_path),
-                'channel_name': '2021.8-tested',
+                'channel_name': '%s-tested' % (RELEASE,),
             }
         except Package.DoesNotExist:
             config = None
