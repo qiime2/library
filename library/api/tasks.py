@@ -131,3 +131,13 @@ def package_build_record_unverified_channel_finished(ctx):
     package_build_record.save()
 
     return ctx
+
+
+@task(name='git.update_conda_build_config')
+def update_conda_build_config(ctx, branch, release, gate):
+    pass
+
+
+@task(name='git.open_pull_request')
+def open_pull_request(ctx, branch, base):
+    pass

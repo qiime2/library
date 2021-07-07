@@ -103,6 +103,7 @@ CELERY_TASK_ROUTES = {
     'index.*': {'queue': 'default'},
     'db.*': {'queue': 'db'},
     'packages.*': {'queue': 'packages'},
+    'git.*': {'queue': 'git'},
 }
 GITHUB_TOKEN = env('GITHUB_TOKEN', default='')
 CONDA_ASSET_PATH = 'data/'
