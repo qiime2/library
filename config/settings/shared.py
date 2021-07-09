@@ -98,6 +98,7 @@ RABBITMQ_URL = env('RABBITMQ_URL', default='amqp://guest@mq')
 # We want to use the rmq url set by dokku, emulating in dev
 CELERY_BROKER_URL = env('RABBITMQ_URL', default='amqp://guest@mq')
 CELERY_RESULT_BACKEND = 'django-db'
+CELERY_RESULT_EXPIRES = 60 * 60 * 24  # once per day
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_ROUTES = {
     'index.*': {'queue': 'default'},

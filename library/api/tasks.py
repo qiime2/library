@@ -6,6 +6,7 @@
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
 
+import datetime
 import pathlib
 import shutil
 import tempfile
@@ -16,6 +17,9 @@ from celery.decorators import task
 from celery.utils.log import get_task_logger
 import conda_build.api
 from django import conf
+from django.db import transaction
+from django.utils import timezone
+from django_celery_results.models import TaskResult
 
 from . import utils
 from . import forms
@@ -28,13 +32,29 @@ logger = get_task_logger(__name__)
 
 @app.on_after_finalize.connect
 def setup_periodic_tasks(sender, **kwargs):
+    sender.add_periodic_task(15.0, celery_backend_cleanup.s(), name='db.clean_up_reindex_tasks')
+
     for gate in ['tested', 'staged']:
         path = forms.BASE_PATH / gate
         sender.add_periodic_task(
             300.0,  # seconds
             reindex_conda_server.s(dict(), str(path), '%s-%s' % (conf.settings.QIIME2_RELEASE, gate)),
             name='packages.reindex_%s' % (gate,),
+            result_expires=10,
+            wtf_mate=False,
         )
+
+
+@task(name='db.celery_backend_cleanup')
+def celery_backend_cleanup():
+    with transaction.atomic():
+        TaskResult.objects.filter(
+            date_done__lt=timezone.now() - datetime.timedelta(seconds=conf.settings.CELERY_RESULT_EXPIRES),
+            task_name__in=[
+                'packages.reindex_conda_server',
+                'packages.celery_backend_cleanup',
+            ],
+        ).delete()
 
 
 def handle_new_builds(ctx):
@@ -61,7 +81,9 @@ def handle_new_builds(ctx):
             channel, channel_name,
         ),
 
-        package_build_record_unverified_channel_finished.s(),
+        package_build_record_set_unverified_true.s(),
+
+    # TODO: add success callback to trigger tested_cbc update
     ).apply_async(countdown=600)
 
 
@@ -98,12 +120,12 @@ def fetch_package_from_github(ctx, github_token, repository, run_id, channel, pa
         for filepath in tmp_filepaths:
             utils.unzip(filepath)
 
-        unverified_pkgs_fp = pathlib.Path(channel)
-        utils.bootstrap_pkgs_dir(unverified_pkgs_fp)
+        tested_pkgs_fp = pathlib.Path(channel)
+        utils.bootstrap_pkgs_dir(tested_pkgs_fp)
 
         filematcher = '**/*%s*.tar.bz2' % (package_name,)
         for from_path in tmp_pathlib.glob(filematcher):
-            to_path = unverified_pkgs_fp / from_path.parent.name / from_path.name
+            to_path = tested_pkgs_fp / from_path.parent.name / from_path.name
             shutil.copy(from_path, to_path)
 
     return ctx
@@ -123,12 +145,14 @@ def reindex_conda_server(ctx, channel, channel_name):
 
 
 @task(name='db.package_build_record_set_unverified_true')
-def package_build_record_unverified_channel_finished(ctx):
+def package_build_record_set_unverified_true(ctx):
     pk = ctx.pop('package_build_record')
 
     package_build_record = PackageBuild.objects.get(pk=pk)
     package_build_record.unverified = True
     package_build_record.save()
+
+    # TODO: compare all artifact names for given version (and run?), then trigger update_conda_build_config
 
     return ctx
 
