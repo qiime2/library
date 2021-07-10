@@ -32,12 +32,16 @@ logger = get_task_logger(__name__)
 
 @app.on_after_finalize.connect
 def setup_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(15.0, celery_backend_cleanup.s(), name='db.clean_up_reindex_tasks')
+    sender.add_periodic_task(
+        60 * 60 * 24, # 24 hours
+        celery_backend_cleanup.s(),
+        name='db.clean_up_reindex_tasks'
+    )
 
     for gate in ['tested', 'staged']:
         path = forms.BASE_PATH / gate
         sender.add_periodic_task(
-            300.0,  # seconds
+            60 * 5,  # 5 minutes
             reindex_conda_server.s(dict(), str(path), '%s-%s' % (conf.settings.QIIME2_RELEASE, gate)),
             name='packages.reindex_%s' % (gate,),
             result_expires=10,
@@ -83,8 +87,13 @@ def handle_new_builds(ctx):
 
         package_build_record_set_unverified_true.s(),
 
-    # TODO: add success callback to trigger tested_cbc update
-    ).apply_async(countdown=600)
+        update_conda_build_config.s(
+            github_token, 'main', conf.settings.QIIME2_RELEASE, 'tested', package_name, version),
+
+        # open_pull_request.s(
+        #     '%s-%s' % (package_name, version), conf.settings.QIIME2_RELEASE, 'staged', 'main'),
+
+    ).apply_async(countdown=60 * 10)  # 10 minutes
 
 
 @task(name='db.create_package_build_record_and_update_package')
@@ -152,16 +161,37 @@ def package_build_record_set_unverified_true(ctx):
     package_build_record.unverified = True
     package_build_record.save()
 
-    # TODO: compare all artifact names for given version (and run?), then trigger update_conda_build_config
+    # needs to be JSON serializable, sets aren't roundtrippable though, so listify queryset
+    ctx['build_artifacts'] = list(PackageBuild.objects.filter(
+        package=package_build_record.package,
+        version=package_build_record.version,
+    ).distinct().values_list('artifact_name', flat=True))
 
     return ctx
 
 
 @task(name='git.update_conda_build_config')
-def update_conda_build_config(ctx, branch, release, gate):
-    pass
+def update_conda_build_config(ctx, github_token, branch, release, gate, package_name, version):
+    # TODO: drop this when alpha2 is ready
+    if not ctx['dev_mode']:
+        return ctx
+
+    if set(ctx['build_artifacts']) != {'osx-64', 'linux-64'}:
+        return ctx
+
+    mgr = utils.CondaBuildConfigManager(github_token, branch, release, gate, package_name, version)
+    mgr.update()
+
+    return ctx
 
 
-@task(name='git.open_pull_request')
-def open_pull_request(ctx, branch, base):
-    pass
+# @task(name='git.open_pull_request')
+# def open_pull_request(ctx, branch, release, gate, base):
+#     # TODO: drop this when alpha2 is ready
+#     if not ctx['dev_mode']:
+#         return ctx
+#
+#     if ctx['build_artifacts'] != ('osx-64', 'linux-64'):
+#         return ctx
+#
+#     utils.update_conda_build_config(branch, release, gate)
