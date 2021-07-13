@@ -27,6 +27,10 @@ class GitHubNotReadyException(Exception):
     pass
 
 
+class AdvisoryLockNotReadyException(Exception):
+    pass
+
+
 class GitHubArtifactManager:
     def __init__(self, github_token, repository, run_id, artifact_name, tmpdir):
         self.github_token = github_token
@@ -212,7 +216,7 @@ class CondaBuildConfigManager:
                 cbc[self.package_name] = [self.version]
                 self.commit_to_github(cbc, sha)
             else:
-                print('waiting on lock...')
+                raise AdvisoryLockNotReadyException
 
     def fetch_from_github(self):
         try:
