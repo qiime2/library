@@ -150,7 +150,6 @@ def bootstrap_pkgs_dir(fp_pathlib):
 @contextlib.contextmanager
 def advisory_lock(lock_id):
     lock_id = int(lock_id)
-    timeout_at = time.monotonic() + (60 * 20)
     cursor = connection.cursor()
 
     try:
