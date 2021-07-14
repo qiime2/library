@@ -41,7 +41,7 @@ TIME_24_HR = 60 * 60 * 24
 @app.on_after_finalize.connect
 def setup_periodic_tasks(sender, **kwargs):
     sender.add_periodic_task(
-        TIME_24_HRS,
+        TIME_24_HR,
         celery_backend_cleanup.s(),
         name='db.clean_up_reindex_tasks'
     )

@@ -8,11 +8,9 @@
 
 import base64
 import contextlib
-import hashlib
 import json
 from packaging import version
 import shutil
-import time
 import urllib.request
 import urllib.error
 import zipfile
@@ -93,7 +91,7 @@ class GitHubArtifactManager:
             with urllib.request.urlopen(request) as resp, \
                     download_pathlib.open('wb') as save_fh:
                 shutil.copyfileobj(resp, save_fh)
-        except:
+        except Exception:
             raise urllib.error.HTTPError
 
     def fetch_artifact(self, record):
