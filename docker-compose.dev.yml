@@ -9,14 +9,16 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
 
   mq:
-    image: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
 
   worker:
     build:
       context: .
       args:
         RUNENV: local
-    command: bash -c "celery -A config.celery -b amqp://guest@mq/ worker --loglevel=info -Q packages,db,git,default,periodic"
+    command: bash -c "celery -A config.celery -b amqp://guest@mq/ worker --loglevel=info -Q packages,db,git,default,periodic,pipeline"
     depends_on:
       - mq
     links:
@@ -32,7 +34,7 @@ services:
       context: .
       args:
         RUNENV: local
-    command: bash -c "celery -A config.celery beat"
+    command: bash -c "celery -A config.celery beat --loglevel debug"
     volumes:
       - .:/code
       - ./data:/data

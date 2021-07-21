@@ -13,9 +13,8 @@ import tempfile
 import urllib.error
 import uuid
 
-from celery import chain
+from celery import chain, shared_task
 from celery.decorators import task
-from celery.schedules import crontab
 from celery.utils.log import get_task_logger
 import conda_build.api
 from django import conf
@@ -30,31 +29,6 @@ from config.celery import app
 
 logger = get_task_logger(__name__)
 
-TIME = {
-    '03_MIN': 60 * 3,
-    '05_MIN': 60 * 5,
-    '10_MIN': 60 * 10,
-    '90_MIN': 60 * 90,
-    '02_HR': 60 * 60 * 2,
-
-    '4A_CRON': crontab(minute=0, hour=4),  # daily at 4a
-    'HRLY_CRON': crontab(minute=0),  # hourly
-}
-
-
-EPOCH = {
-    'dev': conf.settings.QIIME2_DEV,
-    'release': conf.settings.QIIME2_RELEASE,
-}
-
-
-BASE_PATH = pathlib.Path(conf.settings.CONDA_ASSET_PATH) / 'qiime2'
-
-
-# For development purposes it's a lot nicer to have short cycle times (30 sec)
-if conf.settings.DEBUG:
-    TIME = {k: 30 for k in TIME.keys()}
-
 
 # NOTES:
 # 1. All periodic tasks should be registered in `setup_periodic_tasks`
@@ -68,33 +42,7 @@ if conf.settings.DEBUG:
 #    add it to `db.clean_up_reindex_tasks`.
 
 
-# TODO: prefix pipelines with their own special pipeline queue
-
-
-@app.on_after_finalize.connect
-def setup_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(
-        TIME['4A_CRON'],
-        celery_backend_cleanup.s(),
-    )
-
-    for gate in ('tested', 'staged'):
-        for epoch in EPOCH.values():
-            path = BASE_PATH / epoch / gate
-
-            sender.add_periodic_task(
-                TIME['05_MIN'],
-                reindex_conda_server.s(dict(), str(path), '%s-%s' % (epoch, gate)),
-            )
-
-    for release in EPOCH.values():
-        sender.add_periodic_task(
-            TIME['HRLY_CRON'],
-            periodic_handle_staged_prs.s(release),
-        )
-
-
-@task(name='db.celery_backend_cleanup')
+@shared_task(name='db.celery_backend_cleanup')
 def celery_backend_cleanup():
     with transaction.atomic():
         TaskResult.objects.filter(
@@ -106,7 +54,7 @@ def celery_backend_cleanup():
         ).delete()
 
 
-@task(name='periodic.handle_staged_prs')
+@shared_task(name='pipeline.handle_staged_prs')
 def periodic_handle_staged_prs(release):
     ctx = dict()
     return chain(
@@ -131,8 +79,8 @@ def handle_new_builds(initial_vals):
     # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
     # this is where any chain-specific dynamic state should live (ids, urls, etc)
     ctx = dict()
-    epoch = EPOCH[build_target]
-    channel = str(BASE_PATH / epoch / 'tested')
+    epoch = conf.settings.EPOCH[build_target]
+    channel = str(conf.settings.CONDA_BASE_PATH / epoch / 'tested')
 
     return chain(
         # explicitly pass ctx into the first subtask in the chaint
@@ -153,7 +101,7 @@ def handle_new_builds(initial_vals):
 
         update_conda_build_config.s(github_token, epoch, package_name, version, dev_mode),
 
-    ).apply_async(countdown=TIME['10_MIN'])
+    ).apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])
 
 
 @task(name='db.create_package_build_record_and_update_package')
@@ -178,7 +126,7 @@ def create_package_build_record_and_update_package(
 
 @task(name='packages.fetch_package_from_github',
       autoretry_for=[urllib.error.HTTPError, urllib.error.URLError, utils.GitHubNotReadyException],
-      max_retries=12, retry_backoff=TIME['03_MIN'], retry_backoff_max=TIME['90_MIN'])
+      max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'], retry_backoff_max=conf.settings.TASK_TIMES['90_MIN'])
 def fetch_package_from_github(ctx, github_token, repository, run_id, channel, package_name, artifact_name):
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp_pathlib = pathlib.Path(tmpdir)
@@ -200,7 +148,7 @@ def fetch_package_from_github(ctx, github_token, repository, run_id, channel, pa
     return ctx
 
 
-@task(name='packages.reindex_conda_server')
+@shared_task(name='packages.reindex_conda_server')
 def reindex_conda_server(ctx, channel, channel_name):
     conda_config = conda_build.api.Config(verbose=False)
     conda_build.api.update_index(
@@ -249,7 +197,7 @@ def verify_all_architectures_present(ctx):
 
 @task(name='git.update_conda_build_config',
       autoretry_for=[utils.AdvisoryLockNotReadyException],
-      max_retries=12, retry_backoff=TIME['03_MIN'], retry_backoff_max=TIME['02_HR'])
+      max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'], retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
 def update_conda_build_config(ctx, github_token, release, package_name, version, dev_mode):
     # TODO: drop this when alpha2 is ready
     if not dev_mode:
@@ -293,7 +241,7 @@ def find_packages_ready_for_integration(ctx, release):
 
 @task(name='git.open_pull_request',
       autoretry_for=[utils.AdvisoryLockNotReadyException],
-      max_retries=12, retry_backoff=TIME['03_MIN'], retry_backoff_max=TIME['02_HR'])
+      max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'], retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
 def open_pull_request(ctx, github_token, release):
     if len(ctx['package_versions']) < 1:
         return ctx
