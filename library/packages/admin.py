@@ -25,6 +25,7 @@ class PackageBuildInline(admin.TabularInline):
                        'clickable_integration_pr_url', 'release')
     extra = 0
     can_delete = False
+    ordering = ('-version',)
 
     def has_add_permission(self, req, obj):
         return False
@@ -50,6 +51,7 @@ class PackageBuildAdmin(admin.ModelAdmin):
               'clickable_integration_pr_url', 'release')
     readonly_fields = ('package', 'github_run_id', 'version', 'linux_64', 'osx_64',
                        'clickable_integration_pr_url', 'release')
+    ordering = ('-version',)
 
     @admin.display(description='Integration PR')
     def clickable_integration_pr_url(self, instance):

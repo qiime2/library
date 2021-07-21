@@ -52,6 +52,7 @@ def handle_staged_prs(release):
     )()
 
 
+@shared_task(name='pipeline.handle_new_builds')
 def handle_new_builds(initial_vals):
     package_id = initial_vals['package_id']
     run_id = initial_vals['run_id']
