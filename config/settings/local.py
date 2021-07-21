@@ -44,6 +44,8 @@ from .shared import (
     QIIME2_RELEASE,
     BASE_CONDA_PATH,
     EPOCH,
+
+    generate_beat_schedule,
 )
 
 
@@ -107,43 +109,4 @@ TASK_TIMES = {
     '4A_CRON': 30,
     'HRLY_CRON': 30,
 }
-CELERY_BEAT_SCHEDULE = {
-    'periodic.clean_up_backend': {
-        'task': 'db.celery_backend_cleanup',
-        'schedule': TASK_TIMES['4A_CRON'],
-    },
-    'periodic.handle_staged_prs_dev': {
-        'task': 'pipeline.handle_staged_prs',
-        'schedule': TASK_TIMES['HRLY_CRON'],
-        'args': (QIIME2_DEV,),
-    },
-    'periodic.handle_staged_prs_release': {
-        'task': 'pipeline.handle_staged_prs',
-        'schedule': TASK_TIMES['HRLY_CRON'],
-        'args': (QIIME2_RELEASE,),
-    },
-    'periodic.reindex_dev_tested': {
-        'task': 'packages.reindex_conda_server',
-        'schedule': TASK_TIMES['05_MIN'],
-        'args': (dict(), str(BASE_CONDA_PATH / QIIME2_DEV / 'tested'),
-                 '%s-tested' % (QIIME2_DEV,)),
-    },
-    'periodic.reindex_dev_staged': {
-        'task': 'packages.reindex_conda_server',
-        'schedule': TASK_TIMES['05_MIN'],
-        'args': (dict(), str(BASE_CONDA_PATH / QIIME2_DEV / 'staged'),
-                 '%s-staged' % (QIIME2_DEV,)),
-    },
-    'periodic.reindex_release_tested': {
-        'task': 'packages.reindex_conda_server',
-        'schedule': TASK_TIMES['05_MIN'],
-        'args': (dict(), str(BASE_CONDA_PATH / QIIME2_RELEASE / 'tested'),
-                 '%s-staged' % (QIIME2_RELEASE,)),
-    },
-    'periodic.reindex_release_staged': {
-        'task': 'packages.reindex_conda_server',
-        'schedule': TASK_TIMES['05_MIN'],
-        'args': (dict(), str(BASE_CONDA_PATH / QIIME2_RELEASE / 'staged'),
-                 '%s-staged' % (QIIME2_RELEASE,)),
-    },
-}
+CELERY_BEAT_SCHEDULE = generate_beat_schedule(TASK_TIMES)

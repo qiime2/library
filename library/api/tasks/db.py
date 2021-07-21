@@ -32,12 +32,14 @@ def celery_backend_cleanup():
 
 @shared_task(name='db.create_package_build_record_and_update_package')
 def create_package_build_record_and_update_package(
-        ctx, package_id, run_id, version, package_name, repository, artifact_name, release):
+        ctx, package_id, run_id, version, package_name, repository, artifact_name,
+        release, epoch):
     package_build_record, _ = PackageBuild.objects.get_or_create(
         package_id=package_id,
         github_run_id=run_id,
         version=version,
         release=release,
+        epoch=epoch,
     )
 
     package = Package.objects.get(pk=package_id)

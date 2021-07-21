@@ -62,19 +62,20 @@ def handle_new_builds(initial_vals):
     artifact_name = initial_vals['artifact_name']
     github_token = initial_vals['github_token']
     channel_name = initial_vals['channel_name']
-    build_target = initial_vals['build_target']
+    epoch = initial_vals['build_target']
     dev_mode = initial_vals['dev_mode']
 
     # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
     # this is where any chain-specific dynamic state should live (ids, urls, etc)
     ctx = dict()
-    release = conf.settings.EPOCH[build_target]
+    release = conf.settings.EPOCH[epoch]
     channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
 
     return chain(
         # explicitly pass ctx into the first subtask in the chaint
         create_package_build_record_and_update_package.s(
-            ctx, package_id, run_id, version, package_name, repository, artifact_name, release,
+            ctx, package_id, run_id, version, package_name, repository,
+            artifact_name, release, epoch,
         ),
 
         # ctx is implicitly applied as first arg for every other subtask in the chain
