@@ -65,11 +65,13 @@ def handle_new_builds(initial_vals):
     epoch = initial_vals['build_target']
     dev_mode = initial_vals['dev_mode']
 
+    gate = 'tested'
+
     # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
     # this is where any chain-specific dynamic state should live (ids, urls, etc)
     ctx = dict()
     release = conf.settings.EPOCH[epoch]
-    channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
+    channel = str(conf.settings.BASE_CONDA_PATH / release / gate)
 
     return chain(
         # explicitly pass ctx into the first subtask in the chaint
@@ -77,18 +79,14 @@ def handle_new_builds(initial_vals):
             ctx, package_id, run_id, version, package_name, repository,
             artifact_name, release, epoch,
         ),
-
         # ctx is implicitly applied as first arg for every other subtask in the chain
         fetch_package_from_github.s(
             github_token, repository, run_id, channel, package_name, artifact_name,
         ),
-
         reindex_conda_server.s(channel, channel_name),
-
-        mark_uploaded.s(artifact_name),
-
-        verify_all_architectures_present.s(),
-
-        update_conda_build_config.s(github_token, release, package_name, version, dev_mode),
-
+        mark_uploaded.s(artifact_name, gate),
+        verify_all_architectures_present.s(gate),
+        update_conda_build_config.s(
+            github_token, release, package_name, version, dev_mode
+        ),
     ).apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])

@@ -53,32 +53,32 @@ def create_package_build_record_and_update_package(
 
 
 @shared_task(name='db.mark_uploaded')
-def mark_uploaded(ctx, artifact_name):
+def mark_uploaded(ctx, artifact_name, gate):
     if 'uploaded' not in ctx:
         raise Exception('mark_as_uploaded called before reindex_conda_server')
 
     pk = ctx['package_build_record']
     package_build_record = PackageBuild.objects.get(pk=pk)
 
-    if artifact_name == 'linux-64':
-        package_build_record.linux_64 = True
-    elif artifact_name == 'osx-64':
-        package_build_record.osx_64 = True
-    else:
+    if artifact_name not in ('linux-64', 'osx-64'):
         raise Exception('unknown build type')
 
+    attr = '%s_%s' % (artifact_name.replace('-', '_'), gate)
+    setattr(package_build_record, attr, True)
     package_build_record.save()
 
     return ctx
 
 
 @shared_task(name='db.verify_all_architectures_present')
-def verify_all_architectures_present(ctx):
+def verify_all_architectures_present(ctx, gate):
     pk = ctx['package_build_record']
     ctx['not_all_architectures_present'] = True
 
     package_build_record = PackageBuild.objects.get(pk=pk)
-    if package_build_record.linux_64 and package_build_record.osx_64:
+    linux_64 = getattr(package_build_record, 'linux_64_%s' % (gate,))
+    osx_64 = getattr(package_build_record, 'osx_64_%s' % (gate,))
+    if linux_64 and osx_64:
         ctx['not_all_architectures_present'] = False
 
     return ctx
@@ -92,10 +92,12 @@ def find_packages_ready_for_integration(ctx, release):
     for distro in Distro.objects.all():
         package_versions[distro.name] = dict()
         for record in PackageBuild.objects.filter(
-                    linux_64=True,
-                    osx_64=True,
-                    integration_pr_url='',
                     release=release,
+                    linux_64_tested=True,
+                    osx_64_tested=True,
+                    integration_pr_url='',
+                    linux_64_staged=False,
+                    osx_64_staged=False,
                     package__in=distro.packages.all(),
                 ):
             if record.package.name in package_versions[distro.name]:

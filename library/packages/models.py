@@ -10,8 +10,9 @@ import uuid
 
 from django.db import models
 
+from library.utils.models import AuditModel
 
-class Package(models.Model):
+class Package(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     token = models.UUIDField(default=uuid.uuid4, editable=False)
@@ -22,13 +23,15 @@ class Package(models.Model):
         return 'Package<name=%s, token=%s>' % (name, self.token)
 
 
-class PackageBuild(models.Model):
+class PackageBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     package = models.ForeignKey('Package', on_delete=models.CASCADE, related_name='package_builds')
     github_run_id = models.CharField(max_length=100)
     version = models.CharField(max_length=255)
-    linux_64 = models.BooleanField(default=False)
-    osx_64 = models.BooleanField(default=False)
+    linux_64_tested = models.BooleanField(default=False)
+    osx_64_tested = models.BooleanField(default=False)
+    linux_64_staged = models.BooleanField(default=False)
+    osx_64_staged = models.BooleanField(default=False)
     integration_pr_url = models.URLField(default='')
     release = models.CharField(max_length=50)
     epoch = models.CharField(max_length=50)
@@ -37,7 +40,7 @@ class PackageBuild(models.Model):
         return 'PackageBuild<github_run_id=%s, version=%s>' % (self.github_run_id, self.version)
 
 
-class Distro(models.Model):
+class Distro(AuditModel):
     name = models.CharField(max_length=255)
     packages = models.ManyToManyField(
         Package,
@@ -50,7 +53,7 @@ class Distro(models.Model):
 
 # For now we won't worry about release and/or epoch, but I imagine we will
 # want to circle back on that in the future.
-class DistroPackages(models.Model):
+class DistroPackages(AuditModel):
     distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
     package = models.ForeignKey(Package, on_delete=models.CASCADE)
 

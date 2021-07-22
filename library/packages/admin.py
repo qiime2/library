@@ -19,10 +19,12 @@ def url_helper(instance, field):
 
 class PackageBuildInline(admin.TabularInline):
     model = PackageBuild
-    fields = ('package', 'github_run_id', 'version', 'linux_64', 'osx_64',
-              'clickable_integration_pr_url', 'release')
-    readonly_fields = ('package', 'github_run_id', 'version', 'linux_64', 'osx_64',
-                       'clickable_integration_pr_url', 'release')
+    fields = ('package', 'github_run_id', 'release', 'epoch', 'version',
+              'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
+              'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
+    readonly_fields = ('package', 'github_run_id', 'release', 'epoch', 'version',
+                       'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
+                       'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
     extra = 0
     can_delete = False
     ordering = ('-version',)
@@ -57,10 +59,12 @@ class PackageAdmin(admin.ModelAdmin):
 
 
 class PackageBuildAdmin(admin.ModelAdmin):
-    fields = ('package', 'github_run_id', 'version', 'linux_64', 'osx_64',
-              'clickable_integration_pr_url', 'release')
-    readonly_fields = ('package', 'github_run_id', 'version', 'linux_64', 'osx_64',
-                       'clickable_integration_pr_url', 'release')
+    fields = ('package', 'github_run_id', 'release', 'epoch', 'version',
+              'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
+              'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
+    readonly_fields = ('package', 'github_run_id', 'release', 'epoch', 'version',
+                       'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
+                       'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
     ordering = ('-version',)
 
     @admin.display(description='Integration PR')

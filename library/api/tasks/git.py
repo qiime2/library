@@ -44,7 +44,6 @@ def open_pull_request(ctx, github_token, release):
 
     branch = str(uuid.uuid4())
     package_versions = ctx['package_versions']
-    # TODO: add distro
     mgr = utils.IntegrationGitRepoManager(github_token, branch, release, 'staged', package_versions)
     ctx['pr_url'] = mgr.open_staged_pr()
 
