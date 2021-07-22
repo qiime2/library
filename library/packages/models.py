@@ -15,7 +15,6 @@ class Package(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     token = models.UUIDField(default=uuid.uuid4, editable=False)
-    core = models.BooleanField(default=False)
     repository = models.CharField(max_length=255)
 
     def __str__(self):
@@ -36,3 +35,24 @@ class PackageBuild(models.Model):
 
     def __str__(self):
         return 'PackageBuild<github_run_id=%s, version=%s>' % (self.github_run_id, self.version)
+
+
+class Distro(models.Model):
+    name = models.CharField(max_length=255)
+    packages = models.ManyToManyField(
+        Package,
+        through='DistroPackages',
+    )
+
+    def __str__(self):
+        return self.name
+
+
+# For now we won't worry about release and/or epoch, but I imagine we will
+# want to circle back on that in the future.
+class DistroPackages(models.Model):
+    distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
+    package = models.ForeignKey(Package, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'DistroPackages<distro=%s, package=%s>' % (self.distro, self.package)

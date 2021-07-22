@@ -9,7 +9,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Package, PackageBuild
+from .models import Package, PackageBuild, Distro
 
 
 def url_helper(instance, field):
@@ -35,9 +35,19 @@ class PackageBuildInline(admin.TabularInline):
         return url_helper(instance, 'integration_pr_url')
 
 
+class DistroInline(admin.TabularInline):
+    model = Package.distro_set.through
+    extra = 0
+    can_delete = False
+    ordering = ('distro__name',)
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
 class PackageAdmin(admin.ModelAdmin):
     readonly_fields = ('token', )
-    inlines = [PackageBuildInline]
+    inlines = [PackageBuildInline, DistroInline]
 
     def get_readonly_fields(self, request, obj=None):
         if obj:
@@ -58,5 +68,25 @@ class PackageBuildAdmin(admin.ModelAdmin):
         return url_helper(instance, 'integration_pr_url')
 
 
+class PackageInline(admin.TabularInline):
+    model = Distro.packages.through
+    extra = 0
+    can_delete = False
+    readonly_field = ('package_name',)
+
+    def has_add_permission(self, req, obj):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+class DistroAdmin(admin.ModelAdmin):
+    fields = ('name',)
+    ordering = ('name',)
+    inlines = [PackageInline]
+
+
 admin.site.register(Package, PackageAdmin)
 admin.site.register(PackageBuild, PackageBuildAdmin)
+admin.site.register(Distro, DistroAdmin)
