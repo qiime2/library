@@ -8,6 +8,7 @@
 
 import base64
 import contextlib
+import copy
 import json
 from packaging import version
 import shutil
@@ -159,22 +160,16 @@ def advisory_lock(lock_id):
         cursor.close()
 
 
-class CondaBuildConfigManager:
-    def __init__(self, github_token, branch, epoch, gate, package_versions):
+class IntegrationGitRepoManager:
+    def __init__(self, github_token, branch, release, gate, package_versions):
         self.github_token = github_token
         self.branch = branch
-        self.epoch = epoch
+        self.release = release
         self.gate = gate
-        self.package_versions = {p.replace('-', '_'): v for p, v in package_versions.items()}
+        self.package_versions = package_versions
 
         self.validate_config()
 
-        self.path = '%s/%s/conda_build_config.yaml' % (self.epoch, self.gate)
-
-        cmt_msg = 'updating %s %s packages\n\n' % (self.epoch, self.gate)
-        for pkg, ver in self.package_versions.items():
-            cmt_msg += '- %s=%s\n' % (pkg, ver)
-        self.commit_msg = cmt_msg
         # TODO: conditional setup
         self.owner = 'thermokarst'
         self.repo = 'package-integration'
@@ -188,7 +183,7 @@ class CondaBuildConfigManager:
         if self.branch == '':
             raise Exception('TODO13')
 
-        if self.epoch == '':
+        if self.release == '':
             raise Exception('TODO14')
 
         if self.gate not in ('tested', 'staged'):
@@ -197,37 +192,49 @@ class CondaBuildConfigManager:
         if len(self.package_versions) < 1:
             raise Exception('TODO16')
 
-    def update(self):
+    def update_conda_build_config(self):
         with advisory_lock(42) as lock:
             if lock:
                 # Wait until we get a lock before setting up ghapi
                 self.ghapi = GhApi(token=self.github_token)
-                cbc, sha = self.fetch_from_github()
-                for package_name, ver in self.package_versions.items():
-                    if package_name in cbc:
-                        last_versions = cbc[package_name]
-                        if len(last_versions) != 1:
-                            raise Exception('TODO17')
-                        if compare_package_versions(ver, last_versions[0]):
-                            raise Exception('TODO18')
-                    cbc[package_name] = [ver]
-                self.add_branch_if_missing()
-                self.commit_to_github(cbc, sha)
+                for distro, package_versions in self.package_versions.items():
+                    if distro is None:
+                        v = (self.release, self.gate)
+                        path = '%s/%s/conda_build_config.yaml' % v
+                        msg = 'updating %s %s cbc.yml\n\n' % v
+                    else:
+                        v = (self.release, self.gate, distro)
+                        path = '%s/%s/%s/conda_build_config.yaml' % v
+                        msg = 'updating %s %s %s cbc.yml\n\n' % v
+                    cbc, sha = self.fetch_yaml_from_github(path)
+                    for package_name, ver in package_versions.items():
+                        # cbc.yml _needs_ snake case names
+                        package_name = package_name.replace('-', '_')
+                        if package_name in cbc:
+                            last_versions = cbc[package_name]
+                            if len(last_versions) != 1:
+                                raise Exception('TODO17')
+                            if compare_package_versions(ver, last_versions[0]):
+                                raise Exception('TODO18')
+                        cbc[package_name] = [ver]
+                        msg += '- %s ==%s\n' % (package_name, ver)
+                    self.add_branch_if_missing()
+                    self.commit_to_github(cbc, sha, path, msg)
             else:
                 raise AdvisoryLockNotReadyException
 
-    def fetch_from_github(self):
+    def fetch_yaml_from_github(self, path):
         try:
             payload = self.ghapi.repos.get_content(
                 owner=self.owner,
                 repo=self.repo,
-                path=self.path,
+                path=path,
                 # always use latest main as a basis
                 ref=self.main_branch,
             )
 
-            cbc = base64.b64decode(payload['content'])
-            parsed = yaml.load(cbc, Loader=yaml.FullLoader)
+            content = base64.b64decode(payload['content'])
+            parsed = yaml.load(content, Loader=yaml.FullLoader)
 
             results = (parsed, payload['sha'])
         except HTTP404NotFoundError:
@@ -255,27 +262,53 @@ class CondaBuildConfigManager:
                 sha=payload['object']['sha'],
             )
 
-    def commit_to_github(self, cbc, sha):
-        updated = yaml.dump(cbc)
+    def commit_to_github(self, yaml_content, sha, path, msg):
+        updated = yaml.dump(yaml_content)
         content = base64.b64encode(updated.encode('utf-8')).decode('utf-8')
 
         self.ghapi.repos.create_or_update_file_contents(
             owner=self.owner,
             repo=self.repo,
-            path=self.path,
-            message=self.commit_msg,
+            path=path,
+            message=msg,
             content=content,
             sha=sha,
             branch=self.branch
         )
 
-    def open_pr(self):
-        self.update()
+    def update_distro_metapackage_recipe(self, distro, packages):
+        v = (self.release, self.gate, distro)
+        path = '%s/%s/%s/data.yaml' % v
+        msg = 'updating %s %s %s data.yml\n\n' % v
+        data, sha = self.fetch_yaml_from_github(path)
+        if 'run' not in data:
+            raise Exception('TODO19')
+        run_reqs = copy.deepcopy(data['run'])
+        run_reqs = set(run_reqs)
+        changes = False
+        for package in packages:
+            if package not in data['run']:
+                run_reqs.add(package)
+                msg += '- %s\n' % (package,)
+                changes = True
+        if changes:
+            data['run'] = sorted(run_reqs)
+            self.commit_to_github(data, sha, path, msg)
+
+    def open_staged_pr(self):
+        self.update_conda_build_config()
+        for distro, package_versions in self.package_versions.items():
+            if distro is None:
+                raise Exception('TODO20')
+            packages = set(package_versions.keys())
+            self.update_distro_metapackage_recipe(distro, packages)
+
+        pr_msg = '%s %s' % (self.release, self.gate)
 
         payload = self.ghapi.pulls.create(
             owner=self.owner,
             repo=self.repo,
-            title=self.commit_msg,
+            title=pr_msg,
             head=self.branch,
             base=self.main_branch,
             maintainer_can_modify=True,

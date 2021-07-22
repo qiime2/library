@@ -26,9 +26,10 @@ def update_conda_build_config(ctx, github_token, release, package_name, version,
     if ctx['not_all_architectures_present']:
         return ctx
 
-    package_versions = {package_name: version}
-    mgr = utils.CondaBuildConfigManager(github_token, 'main', release, 'tested', package_versions)
-    mgr.update()
+    # distro doesn't matter here, so skip it by setting to `None`
+    package_versions = {None: {package_name: version}}
+    mgr = utils.IntegrationGitRepoManager(github_token, 'main', release, 'tested', package_versions)
+    mgr.update_conda_build_config()
 
     return ctx
 
@@ -43,7 +44,8 @@ def open_pull_request(ctx, github_token, release):
 
     branch = str(uuid.uuid4())
     package_versions = ctx['package_versions']
-    mgr = utils.CondaBuildConfigManager(github_token, branch, release, 'staged', package_versions)
-    ctx['pr_url'] = mgr.open_pr()
+    # TODO: add distro
+    mgr = utils.IntegrationGitRepoManager(github_token, branch, release, 'staged', package_versions)
+    ctx['pr_url'] = mgr.open_staged_pr()
 
     return ctx

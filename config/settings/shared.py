@@ -130,6 +130,8 @@ TASK_TIMES = {
     '4A_CRON': crontab(minute=0, hour=4),  # daily at 4a
     'HRLY_CRON': crontab(minute=0),  # hourly
 }
+
+
 def generate_beat_schedule(TASK_TIMES):
     return {
         'periodic.clean_up_backend': {
@@ -171,4 +173,6 @@ def generate_beat_schedule(TASK_TIMES):
                      '%s-staged' % (QIIME2_RELEASE,)),
         },
     }
+
+
 CELERY_BEAT_SCHEDULE = generate_beat_schedule(TASK_TIMES)

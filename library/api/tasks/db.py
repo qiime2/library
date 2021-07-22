@@ -15,7 +15,7 @@ from django import conf
 from django.utils import timezone
 
 from .. import utils
-from library.packages.models import Package, PackageBuild
+from library.packages.models import Package, PackageBuild, Distro
 
 
 @shared_task(name='db.celery_backend_cleanup')
@@ -89,20 +89,25 @@ def find_packages_ready_for_integration(ctx, release):
     package_versions = dict()
     package_build_ids = set()
 
-    for record in PackageBuild.objects.filter(
-                linux_64=True,
-                osx_64=True,
-                integration_pr_url='',
-                release=release,
-            ):
-        if record.package.name in package_versions:
-            # in case multiple versions exist at this point, only consider the _newest_ one
-            if utils.compare_package_versions(package_versions[record.package.name], record.version):
-                package_versions[record.package.name] = record.version
+    for distro in Distro.objects.all():
+        package_versions[distro.name] = dict()
+        for record in PackageBuild.objects.filter(
+                    linux_64=True,
+                    osx_64=True,
+                    integration_pr_url='',
+                    release=release,
+                    package__in=distro.packages.all(),
+                ):
+            if record.package.name in package_versions[distro.name]:
+                # in case multiple versions exist at this point, only consider the _newest_ one
+                if utils.compare_package_versions(package_versions[distro.name][record.package.name], record.version):
+                    package_versions[distro.name][record.package.name] = record.version
+                    package_build_ids.add(record.id)
+            else:
+                package_versions[distro.name][record.package.name] = record.version
                 package_build_ids.add(record.id)
-        else:
-            package_versions[record.package.name] = record.version
-            package_build_ids.add(record.id)
+        if len(package_versions[distro.name]) == 0:
+            package_versions.pop(distro.name)
 
     ctx['package_versions'] = package_versions
     ctx['package_build_ids'] = list(package_build_ids)
