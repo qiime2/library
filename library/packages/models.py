@@ -45,18 +45,18 @@ class Distro(AuditModel):
     name = models.CharField(max_length=255)
     packages = models.ManyToManyField(
         Package,
-        through='DistroPackages',
+        through='DistroPackage',
     )
 
     def __str__(self):
-        return self.name
+        return 'Distro<%s>' % (self.name,)
 
 
 # For now we won't worry about release and/or epoch, but I imagine we will
 # want to circle back on that in the future.
-class DistroPackages(AuditModel):
+class DistroPackage(AuditModel):
     distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
     package = models.ForeignKey(Package, on_delete=models.CASCADE)
 
     def __str__(self):
-        return 'DistroPackages<distro=%s, package=%s>' % (self.distro, self.package)
+        return 'DistroPackage<distro=%s, package=%s>' % (self.distro, self.package)
