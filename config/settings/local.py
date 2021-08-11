@@ -40,10 +40,7 @@ from .shared import (
     CELERY_TASK_ROUTES,
     GITHUB_TOKEN,
     CONDA_ASSET_PATH,
-    QIIME2_DEV,
-    QIIME2_RELEASE,
     BASE_CONDA_PATH,
-    EPOCH,
 
     generate_beat_schedule,
 )
@@ -87,10 +84,7 @@ __all__ = [
     'CELERY_BEAT_SCHEDULE',
     'GITHUB_TOKEN',
     'CONDA_ASSET_PATH',
-    'QIIME2_DEV',
-    'QIIME2_RELEASE',
     'BASE_CONDA_PATH',
-    'EPOCH',
 ]
 
 MIDDLEWARE.extend([

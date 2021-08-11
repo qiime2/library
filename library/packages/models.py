@@ -34,11 +34,13 @@ class PackageBuild(AuditModel):
     linux_64_staged = models.BooleanField(default=False)
     osx_64_staged = models.BooleanField(default=False)
     integration_pr_url = models.URLField(default='')
+    # this could be a fk to `Release`, but its simpler to just store the raw release name
     release = models.CharField(max_length=50)
-    epoch = models.CharField(max_length=50)
+    build_target = models.CharField(max_length=50)
 
     def __str__(self):
-        return 'PackageBuild<github_run_id=%s, version=%s>' % (self.github_run_id, self.version)
+        return 'PackageBuild<github_run_id=%s, version=%s, release=%s, build_target=%s>' % (
+            self.github_run_id, self.version, self.release, self.build_target)
 
 
 class Distro(AuditModel):
@@ -52,11 +54,40 @@ class Distro(AuditModel):
         return 'Distro<%s>' % (self.name,)
 
 
-# For now we won't worry about release and/or epoch, but I imagine we will
-# want to circle back on that in the future.
 class DistroPackage(AuditModel):
     distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
     package = models.ForeignKey(Package, on_delete=models.CASCADE)
 
     def __str__(self):
         return 'DistroPackage<distro=%s, package=%s>' % (self.distro, self.package)
+
+
+class CIQuerySet(models.QuerySet):
+    def releases_by_build_target(self, build_target):
+        return self.filter(
+            include_in_ci=True,
+            is_dev=build_target.lower() == 'dev',
+        ).values_list('release', flat=True)
+
+
+class Epoch(AuditModel):
+    release = models.CharField(max_length=255)
+    is_dev = models.BooleanField(default=True)
+    include_in_ci = models.BooleanField(default=False)
+    distros = models.ManyToManyField(
+        Distro,
+        through='EpochDistro',
+    )
+    ci = CIQuerySet.as_manager()
+
+    def __str__(self):
+        return 'Epoch<name=%s, is_dev=%s, include_in_ci=%s>' % (
+            self.release, self.is_dev, self.include_in_ci)
+
+
+class EpochDistro(AuditModel):
+    epoch = models.ForeignKey(Epoch, on_delete=models.CASCADE)
+    distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'EpochDistro<release=%s, distro=%s>' % (self.epoch, self.distro)

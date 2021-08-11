@@ -35,7 +35,6 @@ class PackageIntegrationForm(forms.Form):
                 'repository': self.cleaned_data['repository'],
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
-                'channel_name': '%s-tested' % (conf.settings.QIIME2_RELEASE,),
                 'dev_mode': self.cleaned_data['dev_mode'],
                 'build_target': build_target,
             }

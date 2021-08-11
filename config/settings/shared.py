@@ -108,16 +108,11 @@ CELERY_TASK_ROUTES = {
     'packages.*': {'queue': 'packages'},
     'git.*': {'queue': 'git'},
     'periodic.*': {'queue': 'periodic'},
+    # NOTE: pipeline must run on the same worker node as `db`
     'pipeline.*': {'queue': 'pipeline'},
 }
 CONDA_ASSET_PATH = pathlib.Path('data/')
 BASE_CONDA_PATH = CONDA_ASSET_PATH / 'qiime2'
-QIIME2_RELEASE = '2021.4'
-QIIME2_DEV = '2021.8'
-EPOCH = {
-    'dev': QIIME2_DEV,
-    'release': QIIME2_RELEASE,
-}
 GITHUB_TOKEN = env('GITHUB_TOKEN', default='')
 # Don't forget to update local.py when changing here
 TASK_TIMES = {
@@ -138,39 +133,13 @@ def generate_beat_schedule(TASK_TIMES):
             'task': 'db.celery_backend_cleanup',
             'schedule': TASK_TIMES['4A_CRON'],
         },
-        'periodic.handle_staged_prs_dev': {
-            'task': 'pipeline.handle_staged_prs',
+        'periodic.handle_prs': {
+            'task': 'pipeline.handle_prs',
             'schedule': TASK_TIMES['HRLY_CRON'],
-            'args': (QIIME2_DEV,),
         },
-        'periodic.handle_staged_prs_release': {
-            'task': 'pipeline.handle_staged_prs',
-            'schedule': TASK_TIMES['HRLY_CRON'],
-            'args': (QIIME2_RELEASE,),
-        },
-        'periodic.reindex_dev_tested': {
-            'task': 'packages.reindex_conda_server',
+        'periodic.reindex_conda_server': {
+            'task': 'pipeline.reindex_conda_server',
             'schedule': TASK_TIMES['05_MIN'],
-            'args': (dict(), str(BASE_CONDA_PATH / QIIME2_DEV / 'tested'),
-                     '%s-tested' % (QIIME2_DEV,)),
-        },
-        'periodic.reindex_dev_staged': {
-            'task': 'packages.reindex_conda_server',
-            'schedule': TASK_TIMES['05_MIN'],
-            'args': (dict(), str(BASE_CONDA_PATH / QIIME2_DEV / 'staged'),
-                     '%s-staged' % (QIIME2_DEV,)),
-        },
-        'periodic.reindex_release_tested': {
-            'task': 'packages.reindex_conda_server',
-            'schedule': TASK_TIMES['05_MIN'],
-            'args': (dict(), str(BASE_CONDA_PATH / QIIME2_RELEASE / 'tested'),
-                     '%s-staged' % (QIIME2_RELEASE,)),
-        },
-        'periodic.reindex_release_staged': {
-            'task': 'packages.reindex_conda_server',
-            'schedule': TASK_TIMES['05_MIN'],
-            'args': (dict(), str(BASE_CONDA_PATH / QIIME2_RELEASE / 'staged'),
-                     '%s-staged' % (QIIME2_RELEASE,)),
         },
     }
 

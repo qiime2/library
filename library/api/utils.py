@@ -295,7 +295,7 @@ class IntegrationGitRepoManager:
             data['run'] = sorted(run_reqs)
             self.commit_to_github(data, sha, path, msg)
 
-    def open_staged_pr(self):
+    def open_pr(self):
         self.update_conda_build_config()
         for distro, package_versions in self.package_versions.items():
             if distro is None:
@@ -319,6 +319,14 @@ class IntegrationGitRepoManager:
 
 
 def compare_package_versions(a, b):
-    a = version.parse(str(a))
-    b = version.parse(str(b))
-    return a < b
+    pkg_ver_a = version.Version(str(a))
+    pkg_ver_b = version.Version(str(b))
+    return pkg_ver_a < pkg_ver_b
+
+
+def is_release_package(ver_str):
+    pkg_ver = version.Version(ver_str)
+    # https://packaging.pypa.io/en/latest/version.html#packaging.version.Version.is_prerelease
+    # A boolean value indicating whether this Version instance represents a
+    # prerelease and/or development release.
+    return not pkg_ver.is_prerelease

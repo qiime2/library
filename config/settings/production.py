@@ -37,10 +37,7 @@ from .shared import (
     TASK_TIMES,
     CELERY_BEAT_SCHEDULE,
     GITHUB_TOKEN,
-    QIIME2_DEV,
-    QIIME2_RELEASE,
     BASE_PATH,
-    EPOCH,
 )
 
 __all__ = [
@@ -77,10 +74,7 @@ __all__ = [
     'CELERY_BEAT_SCHEDULE',
     'GITHUB_TOKEN',
     'CONDA_ASSET_PATH',
-    'QIIME2_DEV',
-    'QIIME2_RELEASE',
     'BASE_PATH',
-    'EPOCH',
 ]
 
 DEBUG = False

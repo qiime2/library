@@ -11,6 +11,7 @@ from django.views.decorators import csrf
 
 from . import forms
 from . import tasks
+from library.packages.models import Epoch
 
 
 @csrf.csrf_exempt
@@ -26,8 +27,8 @@ def prepare_packages_for_integration(request):
         payload = {'status': 'error', 'errors': form.errors}
         return http.JsonResponse(payload, status=400)
 
-    # Next, we actually check if we know about this plugin, without leaking that info to the requester
     if (config := form.is_known()):
+        config['build_targets'] = Epoch.ci.releases_by_build_target(config['build_target'])
         tasks.handle_new_builds(config)
 
     payload = {'status': 'ok'}
