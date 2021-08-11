@@ -43,8 +43,8 @@ def fetch_package_from_github(ctx, github_token, repository, run_id, channel, pa
     return ctx
 
 
-@shared_task(name='packages.reindex_conda_server')
-def reindex_conda_server(ctx, channel, channel_name):
+@shared_task(name='packages.reindex_conda_channel')
+def reindex_conda_channel(ctx, channel, channel_name):
     conda_config = conda_build.api.Config(verbose=False)
     conda_build.api.update_index(
         channel,

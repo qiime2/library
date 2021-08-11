@@ -23,7 +23,7 @@ from .git import (
 )
 from .packages import (
     fetch_package_from_github,
-    reindex_conda_server,
+    reindex_conda_channel,
 )
 from library.packages.models import Epoch
 
@@ -48,7 +48,7 @@ logger = get_task_logger(__name__)
 def handle_prs():
     chains = []
     for build_target in ['dev', 'release']:
-        for release in Epoch.ci.release_by_build_target(build_target):
+        for release in Epoch.ci.releases_by_build_target(build_target):
             ctx = dict()
             chain_link = chain(
                 find_packages_ready_for_integration.s(ctx, release),
@@ -56,21 +56,21 @@ def handle_prs():
                 update_package_build_record_integration_pr_url.s(),
             )
             chains.append(chain_link)
-    return group(*chains)()
+    return group(*chains).apply_async()
 
 
-@shared_task(name='pipeline.reindex_conda_server')
-def reindex_conda_server():
+@shared_task(name='pipeline.reindex_conda_channels')
+def reindex_conda_channels():
     tasks = []
     for build_target in ['dev', 'release']:
-        for release in Epoch.ci.release_by_build_target(build_target):
+        for release in Epoch.ci.releases_by_build_target(build_target):
             for gate in ['tested', 'staged']:
                 ctx = dict()
                 path = str(conf.settings.BASE_CONDA_PATH / release / gate)
                 channel_name = '%s-%s' % (release, gate)
-                task = reindex_conda_server(ctx, path, channel_name)
+                task = reindex_conda_channel.s(ctx, path, channel_name)
                 tasks.append(task)
-    return group(*tasks)()
+    return group(*tasks).apply_async()
 
 
 @shared_task(name='pipeline.handle_new_builds')

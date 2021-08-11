@@ -137,8 +137,8 @@ def generate_beat_schedule(TASK_TIMES):
             'task': 'pipeline.handle_prs',
             'schedule': TASK_TIMES['HRLY_CRON'],
         },
-        'periodic.reindex_conda_server': {
-            'task': 'pipeline.reindex_conda_server',
+        'periodic.reindex_conda_channels': {
+            'task': 'pipeline.reindex_conda_channels',
             'schedule': TASK_TIMES['05_MIN'],
         },
     }

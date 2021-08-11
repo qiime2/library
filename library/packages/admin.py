@@ -9,7 +9,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Package, PackageBuild, Distro
+from .models import Package, PackageBuild, Distro, Epoch
 
 
 def url_helper(instance, field):
@@ -85,12 +85,38 @@ class PackageInline(admin.TabularInline):
         return False
 
 
+class EpochInline(admin.TabularInline):
+    model = Epoch.distros.through
+    extra = 0
+    can_delete = False
+    readonly_field = ('release', 'is_dev', 'include_in_ci')
+
+    def has_add_permission(self, req, obj):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
 class DistroAdmin(admin.ModelAdmin):
     fields = ('name',)
     ordering = ('name',)
-    inlines = [PackageInline]
+    inlines = [PackageInline, EpochInline]
+
+
+class DistroInline(admin.TabularInline):
+    model = Epoch.distros.through
+    extra = 0
+    readonly_field = ('name',)
+
+
+class EpochAdmin(admin.ModelAdmin):
+    fields = ('release', 'is_dev', 'include_in_ci')
+    ordering = ('release', 'is_dev', 'include_in_ci')
+    inlines = [DistroInline]
 
 
 admin.site.register(Package, PackageAdmin)
 admin.site.register(PackageBuild, PackageBuildAdmin)
 admin.site.register(Distro, DistroAdmin)
+admin.site.register(Epoch, EpochAdmin)
