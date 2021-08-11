@@ -48,7 +48,7 @@ logger = get_task_logger(__name__)
 def handle_prs():
     chains = []
     for build_target in ['dev', 'release']:
-        for release in Epoch.ci.releases_by_build_target(build_target):
+        for release in Epoch.objects.releases_by_build_target(build_target):
             ctx = dict()
             chain_link = chain(
                 find_packages_ready_for_integration.s(ctx, release),
@@ -63,7 +63,7 @@ def handle_prs():
 def reindex_conda_channels():
     tasks = []
     for build_target in ['dev', 'release']:
-        for release in Epoch.ci.releases_by_build_target(build_target):
+        for release in Epoch.objects.releases_by_build_target(build_target):
             for gate in ['tested', 'staged']:
                 ctx = dict()
                 path = str(conf.settings.BASE_CONDA_PATH / release / gate)

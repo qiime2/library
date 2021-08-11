@@ -24,6 +24,19 @@ class Package(AuditModel):
         return 'Package<name=%s, token=%s>' % (name, self.token)
 
 
+class PackageBuildQuerySet(models.QuerySet):
+    def ready_for_integration(self, release, distro):
+        return self.filter(
+            release=release,
+            linux_64_tested=True,
+            osx_64_tested=True,
+            integration_pr_url='',
+            linux_64_staged=False,
+            osx_64_staged=False,
+            package__in=distro.packages.all(),
+        ).values('package__name', 'version', 'id')
+
+
 class PackageBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     package = models.ForeignKey('Package', on_delete=models.CASCADE, related_name='package_builds')
@@ -37,6 +50,8 @@ class PackageBuild(AuditModel):
     # this could be a fk to `Release`, but its simpler to just store the raw release name
     release = models.CharField(max_length=50)
     build_target = models.CharField(max_length=50)
+
+    objects = PackageBuildQuerySet.as_manager()
 
     def __str__(self):
         return 'PackageBuild<github_run_id=%s, version=%s, release=%s, build_target=%s>' % (
@@ -62,7 +77,7 @@ class DistroPackage(AuditModel):
         return 'DistroPackage<distro=%s, package=%s>' % (self.distro, self.package)
 
 
-class CIQuerySet(models.QuerySet):
+class EpochQuerySet(models.QuerySet):
     def releases_by_build_target(self, build_target):
         return self.filter(
             include_in_ci=True,
@@ -78,7 +93,8 @@ class Epoch(AuditModel):
         Distro,
         through='EpochDistro',
     )
-    ci = CIQuerySet.as_manager()
+
+    objects = EpochQuerySet.as_manager()
 
     def __str__(self):
         return 'Epoch<name=%s, is_dev=%s, include_in_ci=%s>' % (

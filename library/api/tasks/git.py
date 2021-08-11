@@ -44,7 +44,17 @@ def open_pull_request(ctx, github_token, release):
 
     branch = str(uuid.uuid4())
     package_versions = ctx['package_versions']
+    # staged
     mgr = utils.IntegrationGitRepoManager(github_token, branch, release, 'staged', package_versions)
-    ctx['pr_url'] = mgr.open_pr()
+    mgr.update_conda_build_config()
+
+    # released
+    release_package_versions = utils.filter_release_package_versions(package_versions)
+    if len(release_package_versions) > 0:
+        mgr = utils.IntegrationGitRepoManager(github_token, branch, release, 'released', release_package_versions)
+        mgr.update_conda_build_config()
+
+    pr_url = mgr.open_pr()
+    ctx['pr_url'] = pr_url
 
     return ctx

@@ -10,6 +10,7 @@ import base64
 import contextlib
 import copy
 import json
+import os
 from packaging import version
 import shutil
 import urllib.request
@@ -186,11 +187,18 @@ class IntegrationGitRepoManager:
         if self.release == '':
             raise Exception('TODO14')
 
-        if self.gate not in ('tested', 'staged'):
+        if self.gate not in ('tested', 'staged', 'released'):
             raise Exception('TODO15')
 
         if len(self.package_versions) < 1:
             raise Exception('TODO16')
+
+    def path_builder(self, fn, distro=None):
+        if distro is None:
+            parts = [self.release, self.gate, fn]
+        else:
+            parts = [self.release, self.gate, distro, fn]
+        return os.path.join(*parts)
 
     def update_conda_build_config(self):
         with advisory_lock(42) as lock:
@@ -198,14 +206,9 @@ class IntegrationGitRepoManager:
                 # Wait until we get a lock before setting up ghapi
                 self.ghapi = GhApi(token=self.github_token)
                 for distro, package_versions in self.package_versions.items():
-                    if distro is None:
-                        v = (self.release, self.gate)
-                        path = '%s/%s/conda_build_config.yaml' % v
-                        msg = 'updating %s %s cbc.yml\n\n' % v
-                    else:
-                        v = (self.release, self.gate, distro)
-                        path = '%s/%s/%s/conda_build_config.yaml' % v
-                        msg = 'updating %s %s %s cbc.yml\n\n' % v
+                    path = self.path_builder(fn='conda_build_config.yaml',
+                                             distro=distro)
+                    msg = 'updating %s\n\n' % (path,)
                     cbc, sha = self.fetch_yaml_from_github(path)
                     for package_name, ver in package_versions.items():
                         # cbc.yml _needs_ snake case names
@@ -277,9 +280,8 @@ class IntegrationGitRepoManager:
         )
 
     def update_distro_metapackage_recipe(self, distro, packages):
-        v = (self.release, self.gate, distro)
-        path = '%s/%s/%s/data.yaml' % v
-        msg = 'updating %s %s %s data.yml\n\n' % v
+        path = self.path_builder(fn='data.yaml', distro=distro)
+        msg = 'updating %s\n\n' % (path,)
         data, sha = self.fetch_yaml_from_github(path)
         if 'run' not in data:
             raise Exception('TODO19')
@@ -296,7 +298,6 @@ class IntegrationGitRepoManager:
             self.commit_to_github(data, sha, path, msg)
 
     def open_pr(self):
-        self.update_conda_build_config()
         for distro, package_versions in self.package_versions.items():
             if distro is None:
                 raise Exception('TODO20')
@@ -330,3 +331,42 @@ def is_release_package(ver_str):
     # A boolean value indicating whether this Version instance represents a
     # prerelease and/or development release.
     return not pkg_ver.is_prerelease
+
+
+def find_packages_ready_for_integration(package_build_records):
+    # TODO: defaultdict
+    package_versions = dict()
+    package_build_ids = set()
+
+    for distro, records in package_build_records.items():
+        package_versions[distro] = dict()
+        for record in records:
+            package_name = record['package__name']
+            version = record['version']
+            id_ = record['id']
+            if package_name in package_versions[distro]:
+                # in case multiple versions exist at this point, only consider the _newest_ one
+                if utils.compare_package_versions(package_versions[distro][package_name], version):
+                    package_versions[distro][package_name] = version
+                    package_build_ids.add(id_)
+            else:
+                package_versions[distro][package_name] = version
+                package_build_ids.add(id_)
+        if len(package_versions[distro]) == 0:
+            package_versions.pop(distro)
+
+    return package_versions, package_build_ids
+
+
+def filter_release_package_versions(package_versions):
+    # TODO: defaultdict
+    filtered = dict()
+    for distro, versions in package_versions.items():
+        filtered[distro] = dict()
+        for package_name, version in versions.items():
+            if is_release_package(version):
+                filtered[distro][package_name] = version
+        if len(filtered[distro]) == 0:
+            filtered.pop(distro)
+
+    return filtered

@@ -86,31 +86,13 @@ def verify_all_architectures_present(ctx, gate):
 
 @shared_task(name='db.find_packages_ready_for_integration')
 def find_packages_ready_for_integration(ctx, release):
-    package_versions = dict()
-    package_build_ids = set()
-
+    package_build_records = dict()
     for distro in Distro.objects.all():
-        package_versions[distro.name] = dict()
-        for record in PackageBuild.objects.filter(
-                    release=release,
-                    linux_64_tested=True,
-                    osx_64_tested=True,
-                    integration_pr_url='',
-                    linux_64_staged=False,
-                    osx_64_staged=False,
-                    package__in=distro.packages.all(),
-                ):
-            if record.package.name in package_versions[distro.name]:
-                # in case multiple versions exist at this point, only consider the _newest_ one
-                if utils.compare_package_versions(package_versions[distro.name][record.package.name], record.version):
-                    package_versions[distro.name][record.package.name] = record.version
-                    package_build_ids.add(record.id)
-            else:
-                package_versions[distro.name][record.package.name] = record.version
-                package_build_ids.add(record.id)
-        if len(package_versions[distro.name]) == 0:
-            package_versions.pop(distro.name)
+        records = PackageBuild.objects.ready_for_integration(release, distro)
+        package_build_records[distro.name] = list(records)
 
+    package_versions, package_build_ids = utils.find_packages_ready_for_integration(
+        package_build_records)
     ctx['package_versions'] = package_versions
     ctx['package_build_ids'] = list(package_build_ids)
 

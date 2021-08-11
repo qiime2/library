@@ -28,7 +28,7 @@ def prepare_packages_for_integration(request):
         return http.JsonResponse(payload, status=400)
 
     if (config := form.is_known()):
-        config['build_targets'] = Epoch.ci.releases_by_build_target(config['build_target'])
+        config['build_targets'] = Epoch.objects.releases_by_build_target(config['build_target'])
         tasks.handle_new_builds(config)
 
     payload = {'status': 'ok'}
