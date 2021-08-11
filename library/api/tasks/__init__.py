@@ -105,7 +105,7 @@ def handle_new_builds(initial_vals):
             fetch_package_from_github.s(
                 github_token, repository, run_id, channel, package_name, artifact_name,
             ),
-            reindex_conda_server.s(channel, channel_name),
+            reindex_conda_channel.s(channel, channel_name),
             mark_uploaded.s(artifact_name, gate),
             verify_all_architectures_present.s(gate),
             update_conda_build_config.s(
