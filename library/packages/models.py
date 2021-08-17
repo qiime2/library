@@ -107,3 +107,11 @@ class EpochDistro(AuditModel):
 
     def __str__(self):
         return 'EpochDistro<release=%s, distro=%s>' % (self.epoch, self.distro)
+
+
+class DistroBuild(AuditModel):
+    version = models.CharField(max_length=255)
+    github_run_id = models.CharField(max_length=100)
+    name = forms.CharField(required=True)
+    linux_64 = models.BooleanField(default=False)
+    osx_64 = models.BooleanField(default=False)

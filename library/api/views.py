@@ -33,3 +33,22 @@ def prepare_packages_for_integration(request):
 
     payload = {'status': 'ok'}
     return http.JsonResponse(payload, status=200)
+
+
+@csrf.csrf_exempt
+def finalize_integration(request):
+    if request.method != 'POST':
+        payload = {'status': 'error', 'errors': {'http_method': 'invalid http method'}}
+        return http.JsonResponse(payload, status=405)
+
+    form = forms.DistroIntegrationForm(request.POST)
+
+    # First line of checks: ensure that the payload is well formed
+    if not form.is_valid():
+        payload = {'status': 'error', 'errors': form.errors}
+        return http.JsonResponse(payload, status=400)
+
+    tasks.handle_new_distro_build(config)
+
+    payload = {'status': 'ok'}
+    return http.JsonResponse(payload, status=200)

@@ -42,3 +42,27 @@ class PackageIntegrationForm(forms.Form):
             config = None
 
         return config
+
+
+class DistroIntegrationForm(forms.Form):
+    token = forms.UUIDField(required=True)
+    version = forms.CharField(required=True)
+    run_id = forms.CharField(required=True)
+    distro_name = forms.CharField(required=True)
+    release = forms.CharField(required=True)
+    artifact_name = forms.CharField(required=True)
+
+    def is_authorized(self):
+        token = conf.setting.INTEGRATION_TOKEN
+        if token != self.cleaned_data['token']:
+            raise
+        config = {
+            'version': self.cleaned_data['version'],
+            'run_id': self.cleaned_data['run_id'],
+            'distro_name': self.cleaned_data['distro_name'],
+            'release': self.cleaned_data['release'],
+            'artifact_name': self.cleaned_data['artifact_name'],
+            'github_token': conf.settings.GITHUB_TOKEN,
+        }
+
+        return config

@@ -115,3 +115,34 @@ def handle_new_builds(initial_vals):
         chains.append(chain_link)
 
     return group(*chains).apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])
+
+
+@shared_task(name='pipeline.handle_new_distro_build')
+def handle_new_distro_build(initial_vals):
+    version = initial_vals['version']
+    run_id = initial_vals['run_id']
+    distro_name = initial_vals['distro_name']
+    release = initial_vals['release']
+    artifact_name = initial_vals['artifact_name']
+    github_token = initial_vals['github_token']
+    repository = 'thermokarst/package-integration'
+
+    channel = str(conf.settings.BASE_CONDA_PATH / release / gate)
+    channel_name = '%s-tested' % (release,)
+
+    ctx = dict()
+    tasks = chain(
+        # explicitly pass ctx into the first subtask in the chain
+        create_distro_build_record_and_update_package.s(
+            ctx,  # TODO
+        ),
+        # ctx is implicitly applied as first arg for every other subtask in the chain
+
+        fetch_package_from_github.s(
+            github_token, repository, run_id, channel, distro_name, artifact_name,
+        ),
+
+        reindex_conda_channel.s(channel, channel_name),
+    )
+
+    return tasks.apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])
