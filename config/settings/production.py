@@ -37,7 +37,6 @@ from .shared import (
     TASK_TIMES,
     CELERY_BEAT_SCHEDULE,
     GITHUB_TOKEN,
-    BASE_PATH,
     INTEGRATION_REPO,
 )
 
@@ -75,7 +74,6 @@ __all__ = [
     'CELERY_BEAT_SCHEDULE',
     'GITHUB_TOKEN',
     'CONDA_ASSET_PATH',
-    'BASE_PATH',
     'INTEGRATION_REPO',
 ]
 
