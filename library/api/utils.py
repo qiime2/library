@@ -17,6 +17,7 @@ import urllib.request
 import urllib.error
 import zipfile
 
+from django import conf
 from django.db import connection
 from fastcore.utils import HTTP404NotFoundError
 from ghapi.all import GhApi
@@ -39,7 +40,6 @@ class GitHubArtifactManager:
         self.artifact_name = artifact_name
         self.root_pathlib = tmpdir
         self.base_url = 'https://api.github.com'
-        self.valid_names = {'linux-64', 'osx-64'}
 
         self.validate_config()
 
@@ -63,9 +63,6 @@ class GitHubArtifactManager:
 
         if self.artifact_name == '':
             raise Exception('TODO7')
-
-        if self.artifact_name not in self.valid_names:
-            raise Exception('TODO8')
 
     def build_request(self, url, headers=None):
         request = urllib.request.Request(url)
@@ -171,11 +168,10 @@ class IntegrationGitRepoManager:
 
         self.validate_config()
 
-        # TODO: conditional setup
-        self.owner = 'thermokarst'
-        self.repo = 'package-integration'
+        self.owner = conf.settings.INTEGRATION_REPO['owner']
+        self.repo = conf.settings.INTEGRATION_REPO['repo']
         self.ghapi = None
-        self.main_branch = 'main'
+        self.main_branch = conf.settings.INTEGRATION_REPO['branch']
 
     def validate_config(self):
         if self.github_token == '':
@@ -346,7 +342,7 @@ def find_packages_ready_for_integration(package_build_records):
             id_ = record['id']
             if package_name in package_versions[distro]:
                 # in case multiple versions exist at this point, only consider the _newest_ one
-                if utils.compare_package_versions(package_versions[distro][package_name], version):
+                if compare_package_versions(package_versions[distro][package_name], version):
                     package_versions[distro][package_name] = version
                     package_build_ids.add(id_)
             else:
@@ -363,9 +359,9 @@ def filter_release_package_versions(package_versions):
     filtered = dict()
     for distro, versions in package_versions.items():
         filtered[distro] = dict()
-        for package_name, version in versions.items():
-            if is_release_package(version):
-                filtered[distro][package_name] = version
+        for pkg_name, pkg_version in versions.items():
+            if is_release_package(pkg_version):
+                filtered[distro][pkg_name] = pkg_version
         if len(filtered[distro]) == 0:
             filtered.pop(distro)
 

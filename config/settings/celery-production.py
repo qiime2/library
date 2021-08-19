@@ -42,6 +42,7 @@ from .shared import (
     CELERY_BEAT_SCHEDULE,
     GITHUB_TOKEN,
     BASE_CONDA_PATH,
+    INTEGRATION_REPO,
 )
 
 
@@ -84,6 +85,7 @@ __all__ = [
     'GITHUB_TOKEN',
     'CONDA_ASSET_PATH',
     'BASE_CONDA_PATH',
+    'INTEGRATION_REPO',
 ]
 
 DEBUG = False

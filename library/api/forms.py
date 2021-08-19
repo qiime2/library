@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------------
 
 from django import forms, conf
+from django.core.exceptions import PermissionDenied
 
 from ..packages.models import Package
 
@@ -45,17 +46,18 @@ class PackageIntegrationForm(forms.Form):
 
 
 class DistroIntegrationForm(forms.Form):
-    token = forms.UUIDField(required=True)
+    token = forms.CharField(required=True)
     version = forms.CharField(required=True)
     run_id = forms.CharField(required=True)
     distro_name = forms.CharField(required=True)
     release = forms.CharField(required=True)
     artifact_name = forms.CharField(required=True)
+    pr_number = forms.IntegerField(required=True)
 
     def is_authorized(self):
-        token = conf.setting.INTEGRATION_TOKEN
+        token = conf.settings.INTEGRATION_REPO['token']
         if token != self.cleaned_data['token']:
-            raise
+            raise PermissionDenied
         config = {
             'version': self.cleaned_data['version'],
             'run_id': self.cleaned_data['run_id'],
@@ -63,6 +65,7 @@ class DistroIntegrationForm(forms.Form):
             'release': self.cleaned_data['release'],
             'artifact_name': self.cleaned_data['artifact_name'],
             'github_token': conf.settings.GITHUB_TOKEN,
+            'pr_number': self.cleaned_data['pr_number'],
         }
 
         return config

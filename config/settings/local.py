@@ -41,6 +41,7 @@ from .shared import (
     GITHUB_TOKEN,
     CONDA_ASSET_PATH,
     BASE_CONDA_PATH,
+    INTEGRATION_REPO,
 
     generate_beat_schedule,
 )
@@ -85,6 +86,7 @@ __all__ = [
     'GITHUB_TOKEN',
     'CONDA_ASSET_PATH',
     'BASE_CONDA_PATH',
+    'INTEGRATION_REPO',
 ]
 
 MIDDLEWARE.extend([

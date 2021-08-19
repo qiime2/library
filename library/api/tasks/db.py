@@ -15,7 +15,7 @@ from django import conf
 from django.utils import timezone
 
 from .. import utils
-from library.packages.models import Package, PackageBuild, Distro
+from library.packages.models import Package, PackageBuild, Distro, DistroBuild
 
 
 @shared_task(name='db.celery_backend_cleanup')
@@ -32,8 +32,7 @@ def celery_backend_cleanup():
 
 @shared_task(name='db.create_package_build_record_and_update_package')
 def create_package_build_record_and_update_package(
-        ctx, package_id, run_id, version, package_name, repository, artifact_name,
-        release, build_target):
+        ctx, package_id, run_id, version, package_name, repository, release, build_target):
     package_build_record, _ = PackageBuild.objects.get_or_create(
         package_id=package_id,
         github_run_id=run_id,
@@ -52,10 +51,10 @@ def create_package_build_record_and_update_package(
     return ctx
 
 
-@shared_task(name='db.mark_uploaded')
-def mark_uploaded(ctx, artifact_name, gate):
+@shared_task(name='db.mark_uploaded_package')
+def mark_uploaded_package(ctx, artifact_name, gate):
     if 'uploaded' not in ctx:
-        raise Exception('mark_as_uploaded called before reindex_conda_server')
+        raise Exception('mark_uploaded_package called before reindex_conda_server')
 
     pk = ctx['package_build_record']
     package_build_record = PackageBuild.objects.get(pk=pk)
@@ -66,6 +65,26 @@ def mark_uploaded(ctx, artifact_name, gate):
     attr = '%s_%s' % (artifact_name.replace('-', '_'), gate)
     setattr(package_build_record, attr, True)
     package_build_record.save()
+
+    return ctx
+
+
+@shared_task(name='db.mark_uploaded_distro')
+def mark_uploaded_distro(ctx, artifact_name):
+    if 'uploaded' not in ctx:
+        raise Exception('mark_uploaded_distro called before reindex_conda_server')
+
+    pk = ctx['distro_build_record']
+    distro_build_record = DistroBuild.objects.get(pk=pk)
+
+    if 'linux' in artifact_name:
+        distro_build_record.linux_64 = True
+    elif 'osx' in artifact_name:
+        distro_build_record.osx_64 = True
+    else:
+        raise 'invalid architecture'
+
+    distro_build_record.save()
 
     return ctx
 
@@ -87,31 +106,46 @@ def verify_all_architectures_present(ctx, gate):
 @shared_task(name='db.find_packages_ready_for_integration')
 def find_packages_ready_for_integration(ctx, release):
     package_build_records = dict()
+    distro_build_ids = list()
     for distro in Distro.objects.all():
-        records = PackageBuild.objects.ready_for_integration(release, distro)
-        package_build_records[distro.name] = list(records)
+        package_build_records = PackageBuild.objects.ready_for_integration(release, distro)
+        distro_build_record = DistroBuild(
+            distro=distro,
+            package_builds=package_build_records,
+        )
+
+        package_build_records[distro.name] = list(package_build_records)
+        distro_build_ids.append(distro_build_record.pk)
 
     package_versions, package_build_ids = utils.find_packages_ready_for_integration(
         package_build_records)
+
     ctx['package_versions'] = package_versions
     ctx['package_build_ids'] = list(package_build_ids)
+    ctx['distro_build_ids'] = distro_build_ids
 
     return ctx
 
 
 @shared_task(name='db.update_package_build_record_integration_pr_url')
-def update_package_build_record_integration_pr_url(ctx):
-    if len(ctx['package_versions']) < 1:
+def update_distro_build_records_integration_pr_url(ctx):
+    if len(ctx['distro_build_ids']) < 1:
         return ctx
 
-    url = ctx['pr_url']
+    url = ctx.pop('pr_url')
 
     with transaction.atomic():
-        for pk in ctx['package_build_ids']:
-            package_build_record = PackageBuild.objects.get(pk=pk)
-            if package_build_record.integration_pr_url != '':
-                raise Exception('a pr already exists for this package build')
-            package_build_record.integration_pr_url = url
-            package_build_record.save()
+        for pk in ctx['distro_build_ids']:
+            distro_build_record = DistroBuild.objects.get(pk=pk)
+            if distro_build_record.pr_url != '':
+                raise Exception('a pr already exists for this distro build')
+            distro_build_record.pr_url = url
+            distro_build_record.save()
 
+    return ctx
+
+
+@shared_task(name='db.get_distro_build_record')
+def update_distro_build_record(ctx, name, run_id, version):
+    # TODO
     return ctx

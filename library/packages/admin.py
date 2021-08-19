@@ -9,7 +9,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Package, PackageBuild, Distro, Epoch
+from .models import Package, PackageBuild, Distro, Epoch, DistroBuild
 
 
 def url_helper(instance, field):
@@ -38,7 +38,7 @@ class PackageBuildInline(admin.TabularInline):
 
 
 class DistroInline(admin.TabularInline):
-    model = Package.distro_set.through
+    model = Package.distros.through
     extra = 0
     can_delete = False
     ordering = ('distro__name',)
@@ -70,6 +70,9 @@ class PackageBuildAdmin(admin.ModelAdmin):
     @admin.display(description='Integration PR')
     def clickable_integration_pr_url(self, instance):
         return url_helper(instance, 'integration_pr_url')
+
+    def has_add_permission(self, request, obj=None):
+        return False
 
 
 class PackageInline(admin.TabularInline):
@@ -116,7 +119,17 @@ class EpochAdmin(admin.ModelAdmin):
     inlines = [DistroInline]
 
 
+class DistroBuildAdmin(admin.ModelAdmin):
+    fields = ('version', 'github_run_id', 'name', 'linux_64', 'osx_64')
+    readonly_fields = ('version', 'github_run_id', 'name', 'linux_64', 'osx_64')
+    ordering = ('-version',)
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+
 admin.site.register(Package, PackageAdmin)
 admin.site.register(PackageBuild, PackageBuildAdmin)
 admin.site.register(Distro, DistroAdmin)
 admin.site.register(Epoch, EpochAdmin)
+admin.site.register(DistroBuild, DistroBuildAdmin)

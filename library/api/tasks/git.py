@@ -58,3 +58,11 @@ def open_pull_request(ctx, github_token, release):
     ctx['pr_url'] = pr_url
 
     return ctx
+
+
+@shared_task(name='git.merge_integration_pr',
+             autoretry_for=[utils.AdvisoryLockNotReadyException],
+             max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
+             retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
+def merge_integration_pr(ctx, pr_url):
+    pass

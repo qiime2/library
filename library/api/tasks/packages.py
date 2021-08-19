@@ -56,3 +56,13 @@ def reindex_conda_channel(ctx, channel, channel_name):
     ctx['uploaded'] = True
 
     return ctx
+
+
+@shared_task(name='packages.copy_conda_packages')
+def copy_conda_packages(ctx, from_channel, to_channel):
+    pass
+
+
+@shared_task(name='packages.find_packages_to_copy')
+def find_packages_to_copy(ctx, pr_url):
+    pass

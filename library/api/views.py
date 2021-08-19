@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------------
 
 from django import http
+from django.core.exceptions import PermissionDenied
 from django.views.decorators import csrf
 
 from . import forms
@@ -48,7 +49,12 @@ def finalize_integration(request):
         payload = {'status': 'error', 'errors': form.errors}
         return http.JsonResponse(payload, status=400)
 
-    tasks.handle_new_distro_build(config)
+    try:
+        config = form.is_authorized()
+    except PermissionDenied:
+        payload = {'status': 'error', 'errors': {'token': 'invalid token'}}
+        return http.JsonResponse(payload, status=401)
 
+    tasks.handle_new_distro_build(config)
     payload = {'status': 'ok'}
     return http.JsonResponse(payload, status=200)

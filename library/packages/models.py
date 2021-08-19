@@ -13,16 +13,7 @@ from django.db import models
 from library.utils.models import AuditModel
 
 
-class Package(AuditModel):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=255)
-    token = models.UUIDField(default=uuid.uuid4, editable=False)
-    repository = models.CharField(max_length=255)
-
-    def __str__(self):
-        name = self.name if self.name else 'UNSYNCED'
-        return 'Package<name=%s, token=%s>' % (name, self.token)
-
+# ### CUSTOM QUERYSETS
 
 class PackageBuildQuerySet(models.QuerySet):
     def ready_for_integration(self, release, distro):
@@ -34,7 +25,29 @@ class PackageBuildQuerySet(models.QuerySet):
             linux_64_staged=False,
             osx_64_staged=False,
             package__in=distro.packages.all(),
+            distro_builds__isnull=True,
         ).values('package__name', 'version', 'id')
+
+
+class EpochQuerySet(models.QuerySet):
+    def releases_by_build_target(self, build_target):
+        return self.filter(
+            include_in_ci=True,
+            is_dev=build_target.lower() == 'dev',
+        ).values_list('release', flat=True)
+
+
+# ### BASE MODELS
+
+class Package(AuditModel):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=255)
+    token = models.UUIDField(default=uuid.uuid4, editable=False)
+    repository = models.CharField(max_length=255)
+
+    def __str__(self):
+        name = self.name if self.name else 'UNSYNCED'
+        return 'Package<name=%s, token=%s>' % (name, self.token)
 
 
 class PackageBuild(AuditModel):
@@ -46,11 +59,11 @@ class PackageBuild(AuditModel):
     osx_64_tested = models.BooleanField(default=False)
     linux_64_staged = models.BooleanField(default=False)
     osx_64_staged = models.BooleanField(default=False)
-    integration_pr_url = models.URLField(default='')
     # this could be a fk to `Release`, but its simpler to just store the raw release name
     release = models.CharField(max_length=50)
     build_target = models.CharField(max_length=50)
 
+    # Custom Manager
     objects = PackageBuildQuerySet.as_manager()
 
     def __str__(self):
@@ -59,41 +72,30 @@ class PackageBuild(AuditModel):
 
 
 class Distro(AuditModel):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     packages = models.ManyToManyField(
         Package,
-        through='DistroPackage',
+        through='ThroughDistroPackage',
+        related_name='distros',
     )
 
     def __str__(self):
         return 'Distro<%s>' % (self.name,)
 
 
-class DistroPackage(AuditModel):
-    distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
-    package = models.ForeignKey(Package, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return 'DistroPackage<distro=%s, package=%s>' % (self.distro, self.package)
-
-
-class EpochQuerySet(models.QuerySet):
-    def releases_by_build_target(self, build_target):
-        return self.filter(
-            include_in_ci=True,
-            is_dev=build_target.lower() == 'dev',
-        ).values_list('release', flat=True)
-
-
 class Epoch(AuditModel):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     release = models.CharField(max_length=255)
     is_dev = models.BooleanField(default=True)
     include_in_ci = models.BooleanField(default=False)
     distros = models.ManyToManyField(
         Distro,
-        through='EpochDistro',
+        through='ThroughEpochDistro',
+        related_name='epochs',
     )
 
+    # Custom Manager
     objects = EpochQuerySet.as_manager()
 
     def __str__(self):
@@ -101,17 +103,64 @@ class Epoch(AuditModel):
             self.release, self.is_dev, self.include_in_ci)
 
 
-class EpochDistro(AuditModel):
+class DistroBuild(AuditModel):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    version = models.CharField(max_length=255)
+    github_run_id = models.CharField(max_length=100)
+    name = models.CharField(max_length=255)
+    linux_64 = models.BooleanField(default=False)
+    osx_64 = models.BooleanField(default=False)
+    pr_url = models.URLField(default='')
+
+    def __str__(self):
+        return 'DistroBuild<version=%s, github_run_id=%s, name=%s>' % (
+            self.version, self.github_run_id, self.name)
+
+    package_builds = models.ManyToManyField(
+        PackageBuild,
+        through='ThroughDistroBuildPackageBuild',
+        related_name='distro_builds',
+    )
+
+
+# ### BRIDGE TABLES
+
+# Django will make these tables for us automatically, but in my experience this
+# is usually a big pain when you need to start tracking any additional attributes,
+# so let's just get this out of the way now and make these tables.
+
+class ThroughDistroPackage(AuditModel):
+    id = models.BigAutoField(primary_key=True)
+    distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
+    package = models.ForeignKey(Package, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'ThroughDistroPackage<distro=%s, package=%s>' % (self.distro, self.package)
+
+    class Meta:
+        unique_together = ['distro', 'package']
+
+
+class ThroughEpochDistro(AuditModel):
+    id = models.BigAutoField(primary_key=True)
     epoch = models.ForeignKey(Epoch, on_delete=models.CASCADE)
     distro = models.ForeignKey(Distro, on_delete=models.CASCADE)
 
     def __str__(self):
-        return 'EpochDistro<release=%s, distro=%s>' % (self.epoch, self.distro)
+        return 'ThroughEpochDistro<release=%s, distro=%s>' % (self.epoch, self.distro)
+
+    class Meta:
+        unique_together = ['epoch', 'distro']
 
 
-class DistroBuild(AuditModel):
-    version = models.CharField(max_length=255)
-    github_run_id = models.CharField(max_length=100)
-    name = forms.CharField(required=True)
-    linux_64 = models.BooleanField(default=False)
-    osx_64 = models.BooleanField(default=False)
+class ThroughDistroBuildPackageBuild(AuditModel):
+    id = models.BigAutoField(primary_key=True)
+    distro_build = models.ForeignKey(DistroBuild, on_delete=models.CASCADE)
+    package_build = models.ForeignKey(PackageBuild, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'ThroughDistroBuildPackageBuild<distro_build=%s, package_build=%s>' % (
+            self.distro_build, self.package_build)
+
+    class Meta:
+        unique_together = ['distro_build', 'package_build']

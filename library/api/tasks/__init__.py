@@ -12,17 +12,22 @@ from django import conf
 
 from .db import (
     create_package_build_record_and_update_package,
-    mark_uploaded,
-    verify_all_architectures_present,
-    update_package_build_record_integration_pr_url,
     find_packages_ready_for_integration,
+    mark_uploaded_package,
+    mark_uploaded_distro,
+    update_distro_build_record,
+    update_distro_build_records_integration_pr_url,
+    verify_all_architectures_present,
 )
 from .git import (
-    update_conda_build_config,
+    merge_integration_pr,
     open_pull_request,
+    update_conda_build_config,
 )
 from .packages import (
+    copy_conda_packages,
     fetch_package_from_github,
+    find_packages_to_copy,
     reindex_conda_channel,
 )
 from library.packages.models import Epoch
@@ -53,7 +58,7 @@ def handle_prs():
             chain_link = chain(
                 find_packages_ready_for_integration.s(ctx, release),
                 open_pull_request.s(conf.settings.GITHUB_TOKEN, release),
-                update_package_build_record_integration_pr_url.s(),
+                update_distro_build_records_integration_pr_url.s(),
             )
             chains.append(chain_link)
     return group(*chains).apply_async()
@@ -99,14 +104,14 @@ def handle_new_builds(initial_vals):
             # explicitly pass ctx into the first subtask in the chain
             create_package_build_record_and_update_package.s(
                 ctx, package_id, run_id, version, package_name, repository,
-                artifact_name, release, build_target,
+                release, build_target,
             ),
             # ctx is implicitly applied as first arg for every other subtask in the chain
             fetch_package_from_github.s(
                 github_token, repository, run_id, channel, package_name, artifact_name,
             ),
             reindex_conda_channel.s(channel, channel_name),
-            mark_uploaded.s(artifact_name, gate),
+            mark_uploaded_package.s(artifact_name, gate),
             verify_all_architectures_present.s(gate),
             update_conda_build_config.s(
                 github_token, release, package_name, version, dev_mode
@@ -125,24 +130,30 @@ def handle_new_distro_build(initial_vals):
     release = initial_vals['release']
     artifact_name = initial_vals['artifact_name']
     github_token = initial_vals['github_token']
-    repository = 'thermokarst/package-integration'
+    _int_repo = conf.settings.INTEGRATION_REPO
+    repository = '%s/%s' % (_int_repo['owner'], _int_repo['repo'])
+    pr_url = 'https://github.com/%s/%s/pull/%d/' % (
+        _int_repo['owner'], _int_repo['repo'], initial_vals['pr_number'])
 
-    channel = str(conf.settings.BASE_CONDA_PATH / release / gate)
-    channel_name = '%s-tested' % (release,)
+    # glob.glob('data/qiime2/2021.8/tested/**/q2-no-op*0.0.2*')
+
+    from_channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
+    to_channel = str(conf.settings.BASE_CONDA_PATH / release / 'staged')
+    channel_name = '%s-%s-staged' % (release, distro_name)
 
     ctx = dict()
     tasks = chain(
         # explicitly pass ctx into the first subtask in the chain
-        create_distro_build_record_and_update_package.s(
-            ctx,  # TODO
-        ),
+        update_distro_build_record.s(ctx, distro_name, run_id, version),
         # ctx is implicitly applied as first arg for every other subtask in the chain
-
         fetch_package_from_github.s(
-            github_token, repository, run_id, channel, distro_name, artifact_name,
+            github_token, repository, run_id, to_channel, distro_name, artifact_name,
         ),
-
-        reindex_conda_channel.s(channel, channel_name),
+        find_packages_to_copy.s(pr_url),
+        copy_conda_packages.s(from_channel, to_channel),
+        reindex_conda_channel.s(to_channel, channel_name),
+        merge_integration_pr.s(pr_url),
+        mark_uploaded_distro.s(artifact_name),
     )
 
     return tasks.apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])
