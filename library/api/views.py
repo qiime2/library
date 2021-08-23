@@ -23,14 +23,13 @@ def prepare_packages_for_integration(request):
 
     form = forms.PackageIntegrationForm(request.POST, initial={'build_target': 'dev'})
 
-    # First line of checks: ensure that the payload is well formed
     if not form.is_valid():
         payload = {'status': 'error', 'errors': form.errors}
         return http.JsonResponse(payload, status=400)
 
     if (config := form.is_known()):
         config['build_targets'] = Epoch.objects.releases_by_build_target(config['build_target'])
-        tasks.handle_new_builds(config)
+        tasks.handle_new_package_build(config)
 
     payload = {'status': 'ok'}
     return http.JsonResponse(payload, status=200)
@@ -44,7 +43,6 @@ def finalize_integration(request):
 
     form = forms.DistroIntegrationForm(request.POST)
 
-    # First line of checks: ensure that the payload is well formed
     if not form.is_valid():
         payload = {'status': 'error', 'errors': form.errors}
         return http.JsonResponse(payload, status=400)

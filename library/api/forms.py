@@ -19,7 +19,6 @@ class PackageIntegrationForm(forms.Form):
     package_name = forms.CharField(required=True)
     repository = forms.CharField(required=True)
     artifact_name = forms.CharField(required=True)
-    dev_mode = forms.BooleanField(required=False, initial=False)
     build_target = forms.CharField(required=False)
 
     def is_known(self):
@@ -36,7 +35,6 @@ class PackageIntegrationForm(forms.Form):
                 'repository': self.cleaned_data['repository'],
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
-                'dev_mode': self.cleaned_data['dev_mode'],
                 'build_target': build_target,
             }
         except Package.DoesNotExist:

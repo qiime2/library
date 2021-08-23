@@ -13,9 +13,9 @@ from django import conf
 from .db import (
     create_package_build_record_and_update_package,
     find_packages_ready_for_integration,
+    get_or_create_and_update_distro_build_record,
     mark_uploaded_package,
     mark_uploaded_distro,
-    update_distro_build_record,
     update_distro_build_records_integration_pr_url,
     verify_all_architectures_present,
 )
@@ -69,6 +69,7 @@ def reindex_conda_channels():
     tasks = []
     for build_target in ['dev', 'release']:
         for release in Epoch.objects.releases_by_build_target(build_target):
+            # TODO: look up distros
             for gate in ['tested', 'staged']:
                 ctx = dict()
                 path = str(conf.settings.BASE_CONDA_PATH / release / gate)
@@ -79,7 +80,7 @@ def reindex_conda_channels():
 
 
 @shared_task(name='pipeline.handle_new_builds')
-def handle_new_builds(initial_vals):
+def handle_new_package_build(initial_vals):
     package_id = initial_vals['package_id']
     run_id = initial_vals['run_id']
     version = initial_vals['version']
@@ -89,7 +90,6 @@ def handle_new_builds(initial_vals):
     github_token = initial_vals['github_token']
     build_target = initial_vals['build_target']
     build_targets = initial_vals['build_targets']
-    dev_mode = initial_vals['dev_mode']
     gate = 'tested'
 
     chains = []
@@ -113,9 +113,7 @@ def handle_new_builds(initial_vals):
             reindex_conda_channel.s(channel, channel_name),
             mark_uploaded_package.s(artifact_name, gate),
             verify_all_architectures_present.s(gate),
-            update_conda_build_config.s(
-                github_token, release, package_name, version, dev_mode
-            ),
+            update_conda_build_config.s(github_token, release, package_name, version),
         )
         chains.append(chain_link)
 
@@ -130,29 +128,35 @@ def handle_new_distro_build(initial_vals):
     release = initial_vals['release']
     artifact_name = initial_vals['artifact_name']
     github_token = initial_vals['github_token']
-    _int_repo = conf.settings.INTEGRATION_REPO
-    repository = '%s/%s' % (_int_repo['owner'], _int_repo['repo'])
-    pr_url = 'https://github.com/%s/%s/pull/%d/' % (
-        _int_repo['owner'], _int_repo['repo'], initial_vals['pr_number'])
+    owner = conf.settings.INTEGRATION_REPO['owner']
+    repo = conf.settings.INTEGRATION_REPO['repo']
+    repository = '%s/%s' % (owner, repo)
+    pr_number = initial_vals['pr_number']
+    pr_url = 'https://github.com/%s/%s/pull/%d/' % (owner, repo, pr_number)
 
     # glob.glob('data/qiime2/2021.8/tested/**/q2-no-op*0.0.2*')
 
     from_channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
-    to_channel = str(conf.settings.BASE_CONDA_PATH / release / 'staged')
+    to_channel = str(conf.settings.BASE_CONDA_PATH / release / 'staged' / distro_name)
+    # TODO: handle release builds
     channel_name = '%s-%s-staged' % (release, distro_name)
 
     ctx = dict()
     tasks = chain(
         # explicitly pass ctx into the first subtask in the chain
-        update_distro_build_record.s(ctx, distro_name, run_id, version),
+        get_or_create_and_update_distro_build_record.s(
+            ctx, distro_name, run_id, version, pr_url, artifact_name,
+        ),
         # ctx is implicitly applied as first arg for every other subtask in the chain
         fetch_package_from_github.s(
             github_token, repository, run_id, to_channel, distro_name, artifact_name,
         ),
-        find_packages_to_copy.s(pr_url),
-        copy_conda_packages.s(from_channel, to_channel),
+        # TODO: Circle back on this. For now we'll just include the `tested` channel
+        # in any attempts to install.
+        # find_packages_to_copy.s(),
+        # copy_conda_packages.s(from_channel, to_channel),
         reindex_conda_channel.s(to_channel, channel_name),
-        merge_integration_pr.s(pr_url),
+        merge_integration_pr.s(pr_number),
         mark_uploaded_distro.s(artifact_name),
     )
 

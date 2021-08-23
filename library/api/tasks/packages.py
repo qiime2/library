@@ -58,11 +58,15 @@ def reindex_conda_channel(ctx, channel, channel_name):
     return ctx
 
 
+@shared_task(name='packages.find_packages_to_copy')
+def find_packages_to_copy(ctx):
+    # TODO: Circle back on this. For now we'll just include the `tested` channel
+    # in any attempts to install.
+    return ctx
+
+
 @shared_task(name='packages.copy_conda_packages')
 def copy_conda_packages(ctx, from_channel, to_channel):
-    pass
-
-
-@shared_task(name='packages.find_packages_to_copy')
-def find_packages_to_copy(ctx, pr_url):
-    pass
+    # TODO: Circle back on this. For now we'll just include the `tested` channel
+    # in any attempts to install.
+    return ctx

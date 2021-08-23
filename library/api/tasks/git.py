@@ -18,18 +18,14 @@ from .. import utils
              autoretry_for=[utils.AdvisoryLockNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
-def update_conda_build_config(ctx, github_token, release, package_name, version, dev_mode):
-    # TODO: drop this when alpha2 is ready
-    if not dev_mode:
-        return ctx
-
+def update_conda_build_config(ctx, github_token, release, package_name, version):
     if ctx['not_all_architectures_present']:
         return ctx
 
     # distro doesn't matter here, so skip it by setting to `None`
     package_versions = {None: {package_name: version}}
-    mgr = utils.IntegrationGitRepoManager(github_token, 'main', release, 'tested', package_versions)
-    mgr.update_conda_build_config()
+    mgr = utils.IntegrationGitRepoManager(github_token)
+    mgr.update_conda_build_config('main', release, 'tested', package_versions)
 
     return ctx
 
@@ -45,16 +41,15 @@ def open_pull_request(ctx, github_token, release):
     branch = str(uuid.uuid4())
     package_versions = ctx['package_versions']
     # staged
-    mgr = utils.IntegrationGitRepoManager(github_token, branch, release, 'staged', package_versions)
-    mgr.update_conda_build_config()
+    mgr = utils.IntegrationGitRepoManager(github_token)
+    mgr.update_integration(branch, release, 'staged', package_versions)
 
     # released
     release_package_versions = utils.filter_release_package_versions(package_versions)
     if len(release_package_versions) > 0:
-        mgr = utils.IntegrationGitRepoManager(github_token, branch, release, 'released', release_package_versions)
-        mgr.update_conda_build_config()
+        mgr.update_integration(branch, release, 'released', release_package_versions)
 
-    pr_url = mgr.open_pr()
+    pr_url = mgr.open_pr(branch, 'asdf')
     ctx['pr_url'] = pr_url
 
     return ctx
@@ -64,5 +59,8 @@ def open_pull_request(ctx, github_token, release):
              autoretry_for=[utils.AdvisoryLockNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
-def merge_integration_pr(ctx, pr_url):
-    pass
+def merge_integration_pr(ctx, github_token, pr_url):
+    mgr = utils.IntegrationGitRepoManager(github_token)
+    mgr.merge_integration_pr(pr_url)
+
+    return ctx

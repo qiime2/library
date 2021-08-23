@@ -107,14 +107,15 @@ class DistroBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     version = models.CharField(max_length=255)
     github_run_id = models.CharField(max_length=100)
-    name = models.CharField(max_length=255)
+    # this could be a fk to `Distro`, but its simpler to just store the raw distro name
+    distro_name = models.CharField(max_length=255)
     linux_64 = models.BooleanField(default=False)
     osx_64 = models.BooleanField(default=False)
     pr_url = models.URLField(default='')
 
     def __str__(self):
-        return 'DistroBuild<version=%s, github_run_id=%s, name=%s>' % (
-            self.version, self.github_run_id, self.name)
+        return 'DistroBuild<version=%s, github_run_id=%s, distro_name=%s>' % (
+            self.version, self.github_run_id, self.distro_name)
 
     package_builds = models.ManyToManyField(
         PackageBuild,

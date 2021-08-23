@@ -159,35 +159,20 @@ def advisory_lock(lock_id):
 
 
 class IntegrationGitRepoManager:
-    def __init__(self, github_token, branch, release, gate, package_versions):
-        self.github_token = github_token
-        self.branch = branch
-        self.release = release
-        self.gate = gate
-        self.package_versions = package_versions
+    def __init__(self, github_token):
+        if github_token == '':
+            raise Exception('TODO12')
 
-        self.validate_config()
+        self.github_token = github_token
 
         self.owner = conf.settings.INTEGRATION_REPO['owner']
         self.repo = conf.settings.INTEGRATION_REPO['repo']
-        self.ghapi = None
         self.main_branch = conf.settings.INTEGRATION_REPO['branch']
+        self.ghapi = None
 
-    def validate_config(self):
-        if self.github_token == '':
-            raise Exception('TODO12')
-
-        if self.branch == '':
-            raise Exception('TODO13')
-
-        if self.release == '':
-            raise Exception('TODO14')
-
-        if self.gate not in ('tested', 'staged', 'released'):
-            raise Exception('TODO15')
-
-        if len(self.package_versions) < 1:
-            raise Exception('TODO16')
+    def construct_interface(self):
+        if self.ghapi is None:
+            self.ghapi = GhApi(token=self.github_token)
 
     def path_builder(self, fn, distro=None):
         if distro is None:
@@ -196,12 +181,24 @@ class IntegrationGitRepoManager:
             parts = [self.release, self.gate, distro, fn]
         return os.path.join(*parts)
 
-    def update_conda_build_config(self):
+    def update_conda_build_config(self, branch, release, gate, package_versions):
+        if branch == '':
+            raise Exception('TODO13')
+
+        if release == '':
+            raise Exception('TODO14')
+
+        if gate not in ('tested', 'staged', 'released'):
+            raise Exception('TODO15')
+
+        if len(package_versions) < 1:
+            raise Exception('TODO16')
+
         with advisory_lock(42) as lock:
             if lock:
                 # Wait until we get a lock before setting up ghapi
-                self.ghapi = GhApi(token=self.github_token)
-                for distro, package_versions in self.package_versions.items():
+                self.construct_interface()
+                for distro, package_versions in package_versions.items():
                     path = self.path_builder(fn='conda_build_config.yaml',
                                              distro=distro)
                     msg = 'updating %s\n\n' % (path,)
@@ -217,8 +214,8 @@ class IntegrationGitRepoManager:
                                 raise Exception('TODO18')
                         cbc[package_name] = [ver]
                         msg += '- %s ==%s\n' % (package_name, ver)
-                    self.add_branch_if_missing()
-                    self.commit_to_github(cbc, sha, path, msg)
+                    self.add_branch_if_missing(branch)
+                    self.commit_to_github(cbc, sha, path, msg, branch)
             else:
                 raise AdvisoryLockNotReadyException
 
@@ -241,12 +238,12 @@ class IntegrationGitRepoManager:
 
         return results
 
-    def add_branch_if_missing(self):
+    def add_branch_if_missing(self, branch):
         try:
             self.ghapi.repos.get_branch(
                 owner=self.owner,
                 repo=self.repo,
-                branch=self.branch,
+                branch=branch,
             )
         except HTTP404NotFoundError:
             payload = self.ghapi.git.get_ref(
@@ -257,11 +254,11 @@ class IntegrationGitRepoManager:
             self.ghapi.git.create_ref(
                 owner=self.owner,
                 repo=self.repo,
-                ref='refs/heads/%s' % (self.branch,),
+                ref='refs/heads/%s' % (branch,),
                 sha=payload['object']['sha'],
             )
 
-    def commit_to_github(self, yaml_content, sha, path, msg):
+    def commit_to_github(self, yaml_content, sha, path, msg, branch):
         updated = yaml.dump(yaml_content)
         content = base64.b64encode(updated.encode('utf-8')).decode('utf-8')
 
@@ -272,10 +269,10 @@ class IntegrationGitRepoManager:
             message=msg,
             content=content,
             sha=sha,
-            branch=self.branch
+            branch=branch
         )
 
-    def update_distro_metapackage_recipe(self, distro, packages):
+    def update_distro_metapackage_recipe(self, distro, packages, branch):
         path = self.path_builder(fn='data.yaml', distro=distro)
         msg = 'updating %s\n\n' % (path,)
         data, sha = self.fetch_yaml_from_github(path)
@@ -291,28 +288,54 @@ class IntegrationGitRepoManager:
                 changes = True
         if changes:
             data['run'] = sorted(run_reqs)
-            self.commit_to_github(data, sha, path, msg)
+            self.commit_to_github(data, sha, path, msg, branch)
 
-    def open_pr(self):
-        for distro, package_versions in self.package_versions.items():
+    def update_integration(self, branch, release, gate, package_versions):
+        self.construct_interface()
+        self.update_conda_build_config(branch, release, gate, package_versions)
+
+        for distro, pkg_vers in package_versions.items():
             if distro is None:
                 raise Exception('TODO20')
-            packages = set(package_versions.keys())
-            self.update_distro_metapackage_recipe(distro, packages)
+            packages = set(pkg_vers.keys())
+            self.update_distro_metapackage_recipe(distro, packages, branch)
 
-        pr_msg = '%s %s' % (self.release, self.gate)
-
+    def open_pr(self, branch, pr_msg):
+        self.construct_interface()
         payload = self.ghapi.pulls.create(
             owner=self.owner,
             repo=self.repo,
             title=pr_msg,
-            head=self.branch,
+            head=branch,
             base=self.main_branch,
             maintainer_can_modify=True,
             draft=False,
         )
 
         return payload['html_url']
+
+    def merge_integration_pr(self, pr_number):
+        self.construct_interface()
+
+        try:
+            self.ghapi.pulls.check_if_merged(
+                owner=self.owner,
+                repo=self.repo,
+                pull_number=pr_number,
+            )
+        except HTTP404NotFoundError:
+            return
+
+        payload = self.ghapi.pulls.merge(
+            owner=self.owner,
+            repo=self.repo,
+            pull_number=pr_number,
+            commit_title='merging pr %d' % (pr_number,),
+            merge_method='merge',
+        )
+
+        if not payload['merged']:
+            raise Exception('TODO21')
 
 
 def compare_package_versions(a, b):

@@ -145,7 +145,20 @@ def update_distro_build_records_integration_pr_url(ctx):
     return ctx
 
 
-@shared_task(name='db.get_distro_build_record')
-def update_distro_build_record(ctx, name, run_id, version):
-    # TODO
+@shared_task(name='db.update_distro_build_record')
+def get_or_create_and_update_distro_build_record(ctx, distro_name, run_id, version, pr_url, artifact_name):
+    # NOTE: it is possible for a PR to be created manually, which means
+    # there aren't any specifically associated PackageBuild records, or
+    # preexisting DistroBuild records.
+    record, _ = DistroBuild.get_or_create(
+        version=version,
+        distro_name=distro_name,
+        github_run_id=run_id,
+    )
+
+    record.pr_url = pr_url
+    record.save()
+
+    ctx['distro_build_record_pk'] = str(record.pk)
+
     return ctx
