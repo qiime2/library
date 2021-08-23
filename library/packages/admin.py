@@ -20,21 +20,17 @@ def url_helper(instance, field):
 class PackageBuildInline(admin.TabularInline):
     model = PackageBuild
     fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
-              'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
-              'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
+              'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
+              'created_at', 'updated_at')
     readonly_fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
-                       'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
-                       'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
+                       'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
+                       'created_at', 'updated_at')
     extra = 0
     can_delete = False
     ordering = ('-version',)
 
     def has_add_permission(self, req, obj):
         return False
-
-    @admin.display(description='Integration PR')
-    def clickable_integration_pr_url(self, instance):
-        return url_helper(instance, 'integration_pr_url')
 
 
 class DistroInline(admin.TabularInline):
@@ -60,16 +56,12 @@ class PackageAdmin(admin.ModelAdmin):
 
 class PackageBuildAdmin(admin.ModelAdmin):
     fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
-              'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
-              'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
+              'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
+              'created_at', 'updated_at')
     readonly_fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
-                       'linux_64_tested', 'osx_64_tested', 'clickable_integration_pr_url',
-                       'linux_64_staged', 'osx_64_staged', 'created_at', 'updated_at')
+                       'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
+                       'created_at', 'updated_at')
     ordering = ('-version',)
-
-    @admin.display(description='Integration PR')
-    def clickable_integration_pr_url(self, instance):
-        return url_helper(instance, 'integration_pr_url')
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -120,12 +112,18 @@ class EpochAdmin(admin.ModelAdmin):
 
 
 class DistroBuildAdmin(admin.ModelAdmin):
-    fields = ('version', 'github_run_id', 'name', 'linux_64', 'osx_64')
-    readonly_fields = ('version', 'github_run_id', 'name', 'linux_64', 'osx_64')
-    ordering = ('-version',)
+    fields = ('version', 'github_run_id', 'distro_name', 'linux_64', 'osx_64',
+              'clickable_integration_pr_url')
+    readonly_fields = ('version', 'github_run_id', 'distro_name', 'linux_64', 'osx_64',
+                       'clickable_integration_pr_url')
+    ordering = ('-updated_at',)
 
     def has_add_permission(self, request, obj=None):
         return False
+
+    @admin.display(description='Integration PR')
+    def clickable_integration_pr_url(self, instance):
+        return url_helper(instance, 'pr_url')
 
 
 admin.site.register(Package, PackageAdmin)

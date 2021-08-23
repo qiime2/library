@@ -60,6 +60,7 @@ class DistroIntegrationForm(forms.Form):
             'version': self.cleaned_data['version'],
             'run_id': self.cleaned_data['run_id'],
             'distro_name': self.cleaned_data['distro_name'],
+            # TODO: is this an epoch?
             'release': self.cleaned_data['release'],
             'artifact_name': self.cleaned_data['artifact_name'],
             'github_token': conf.settings.GITHUB_TOKEN,

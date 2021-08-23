@@ -105,20 +105,25 @@ def verify_all_architectures_present(ctx, gate):
 
 @shared_task(name='db.find_packages_ready_for_integration')
 def find_packages_ready_for_integration(ctx, release):
-    package_build_records = dict()
+    package_builds = dict()
     distro_build_ids = list()
     for distro in Distro.objects.all():
         package_build_records = PackageBuild.objects.ready_for_integration(release, distro)
-        distro_build_record = DistroBuild(
-            distro=distro,
-            package_builds=package_build_records,
-        )
+        package_build_records = list(package_build_records)
+        if len(package_build_records) > 0:
+            distro_build_record = DistroBuild(
+                distro_name=distro.name,
+            )
 
-        package_build_records[distro.name] = list(package_build_records)
-        distro_build_ids.append(distro_build_record.pk)
+            distro_build_record.save()
+            pbrs = [r['id'] for r in package_build_records]
+            distro_build_record.package_builds.set(pbrs)
+
+            package_builds[distro.name] = package_build_records
+            distro_build_ids.append(distro_build_record.pk)
 
     package_versions, package_build_ids = utils.find_packages_ready_for_integration(
-        package_build_records)
+        package_builds)
 
     ctx['package_versions'] = package_versions
     ctx['package_build_ids'] = list(package_build_ids)
@@ -127,15 +132,19 @@ def find_packages_ready_for_integration(ctx, release):
     return ctx
 
 
-@shared_task(name='db.update_package_build_record_integration_pr_url')
+@shared_task(name='db.update_distro_build_record_integration_pr_url')
 def update_distro_build_records_integration_pr_url(ctx):
     if len(ctx['distro_build_ids']) < 1:
         return ctx
 
+    if 'pr_url' not in ctx:
+        return ctx
+
+    distro_build_ids = ctx.pop('distro_build_ids')
     url = ctx.pop('pr_url')
 
     with transaction.atomic():
-        for pk in ctx['distro_build_ids']:
+        for pk in distro_build_ids:
             distro_build_record = DistroBuild.objects.get(pk=pk)
             if distro_build_record.pr_url != '':
                 raise Exception('a pr already exists for this distro build')
@@ -150,15 +159,15 @@ def get_or_create_and_update_distro_build_record(ctx, distro_name, run_id, versi
     # NOTE: it is possible for a PR to be created manually, which means
     # there aren't any specifically associated PackageBuild records, or
     # preexisting DistroBuild records.
-    record, _ = DistroBuild.get_or_create(
-        version=version,
+    record, _ = DistroBuild.objects.get_or_create(
         distro_name=distro_name,
-        github_run_id=run_id,
+        pr_url=pr_url,
     )
 
-    record.pr_url = pr_url
+    record.version = version
+    record.github_run_id = run_id
     record.save()
 
-    ctx['distro_build_record_pk'] = str(record.pk)
+    ctx['distro_build_record'] = str(record.pk)
 
     return ctx

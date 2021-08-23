@@ -174,11 +174,11 @@ class IntegrationGitRepoManager:
         if self.ghapi is None:
             self.ghapi = GhApi(token=self.github_token)
 
-    def path_builder(self, fn, distro=None):
+    def path_builder(self, release, gate, fn, distro=None):
         if distro is None:
-            parts = [self.release, self.gate, fn]
+            parts = [release, gate, fn]
         else:
-            parts = [self.release, self.gate, distro, fn]
+            parts = [release, gate, distro, fn]
         return os.path.join(*parts)
 
     def update_conda_build_config(self, branch, release, gate, package_versions):
@@ -199,7 +199,9 @@ class IntegrationGitRepoManager:
                 # Wait until we get a lock before setting up ghapi
                 self.construct_interface()
                 for distro, package_versions in package_versions.items():
-                    path = self.path_builder(fn='conda_build_config.yaml',
+                    path = self.path_builder(release=release,
+                                             gate=gate,
+                                             fn='conda_build_config.yaml',
                                              distro=distro)
                     msg = 'updating %s\n\n' % (path,)
                     cbc, sha = self.fetch_yaml_from_github(path)
@@ -272,8 +274,8 @@ class IntegrationGitRepoManager:
             branch=branch
         )
 
-    def update_distro_metapackage_recipe(self, distro, packages, branch):
-        path = self.path_builder(fn='data.yaml', distro=distro)
+    def update_distro_metapackage_recipe(self, release, gate, distro, packages, branch):
+        path = self.path_builder(release=release, gate=gate, fn='data.yaml', distro=distro)
         msg = 'updating %s\n\n' % (path,)
         data, sha = self.fetch_yaml_from_github(path)
         if 'run' not in data:
@@ -298,7 +300,7 @@ class IntegrationGitRepoManager:
             if distro is None:
                 raise Exception('TODO20')
             packages = set(pkg_vers.keys())
-            self.update_distro_metapackage_recipe(distro, packages, branch)
+            self.update_distro_metapackage_recipe(release, gate, distro, packages, branch)
 
     def open_pr(self, branch, pr_msg):
         self.construct_interface()
@@ -323,19 +325,18 @@ class IntegrationGitRepoManager:
                 repo=self.repo,
                 pull_number=pr_number,
             )
+        # 404 when PR not merged (this is weird, right?)
         except HTTP404NotFoundError:
-            return
+            payload = self.ghapi.pulls.merge(
+                owner=self.owner,
+                repo=self.repo,
+                pull_number=pr_number,
+                commit_title='merging pr %d' % (pr_number,),
+                merge_method='merge',
+            )
 
-        payload = self.ghapi.pulls.merge(
-            owner=self.owner,
-            repo=self.repo,
-            pull_number=pr_number,
-            commit_title='merging pr %d' % (pr_number,),
-            merge_method='merge',
-        )
-
-        if not payload['merged']:
-            raise Exception('TODO21')
+            if not payload['merged']:
+                raise Exception('TODO21')
 
 
 def compare_package_versions(a, b):

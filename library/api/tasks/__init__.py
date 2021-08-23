@@ -152,7 +152,7 @@ def handle_new_distro_build(initial_vals):
         # find_packages_to_copy.s(),
         # copy_conda_packages.s(from_channel, to_channel),
         reindex_conda_channel.s(to_channel, channel_name),
-        merge_integration_pr.s(pr_number),
+        merge_integration_pr.s(github_token, pr_number),
         mark_uploaded_distro.s(artifact_name),
     )
 

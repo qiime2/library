@@ -49,7 +49,7 @@ def open_pull_request(ctx, github_token, release):
     if len(release_package_versions) > 0:
         mgr.update_integration(branch, release, 'released', release_package_versions)
 
-    pr_url = mgr.open_pr(branch, 'asdf')
+    pr_url = mgr.open_pr(branch, '%s %s' % (release, gate))
     ctx['pr_url'] = pr_url
 
     return ctx
@@ -59,8 +59,8 @@ def open_pull_request(ctx, github_token, release):
              autoretry_for=[utils.AdvisoryLockNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
-def merge_integration_pr(ctx, github_token, pr_url):
+def merge_integration_pr(ctx, github_token, pr_number):
     mgr = utils.IntegrationGitRepoManager(github_token)
-    mgr.merge_integration_pr(pr_url)
+    mgr.merge_integration_pr(pr_number)
 
     return ctx

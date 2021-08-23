@@ -21,7 +21,6 @@ class PackageBuildQuerySet(models.QuerySet):
             release=release,
             linux_64_tested=True,
             osx_64_tested=True,
-            integration_pr_url='',
             linux_64_staged=False,
             osx_64_staged=False,
             package__in=distro.packages.all(),
