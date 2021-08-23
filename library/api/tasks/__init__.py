@@ -25,9 +25,7 @@ from .git import (
     update_conda_build_config,
 )
 from .packages import (
-    copy_conda_packages,
     fetch_package_from_github,
-    find_packages_to_copy,
     reindex_conda_channel,
 )
 from library.packages.models import Epoch
@@ -134,10 +132,8 @@ def handle_new_distro_build(initial_vals):
     pr_number = initial_vals['pr_number']
     pr_url = 'https://github.com/%s/%s/pull/%d/' % (owner, repo, pr_number)
 
-    # glob.glob('data/qiime2/2021.8/tested/**/q2-no-op*0.0.2*')
-
-    from_channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
     to_channel = str(conf.settings.BASE_CONDA_PATH / release / 'staged' / distro_name)
+    # from_channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
     # TODO: handle release builds
     channel_name = '%s-%s-staged' % (release, distro_name)
 
