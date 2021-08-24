@@ -49,7 +49,7 @@ def open_pull_request(ctx, github_token, release):
     if len(release_package_versions) > 0:
         mgr.update_integration(branch, release, 'released', release_package_versions)
 
-    pr_url = mgr.open_pr(branch, '%s %s' % (release, gate))
+    pr_url = mgr.open_pr(branch, '%s staged' % (release, ))
     ctx['pr_url'] = pr_url
 
     return ctx
