@@ -9,7 +9,8 @@
 from django import forms, conf
 from django.core.exceptions import PermissionDenied
 
-from ..packages.models import Package
+from .tasks import PackageBuildCfg, DistroBuildCfg
+from ..packages.models import Package, Epoch
 
 
 class PackageIntegrationForm(forms.Form):
@@ -23,20 +24,20 @@ class PackageIntegrationForm(forms.Form):
 
     def is_known(self):
         try:
-            package = Package.objects.get(token=self.cleaned_data['token'])
+            Package.objects.get(token=self.cleaned_data['token'])
             build_target = self.cleaned_data['build_target']
             build_target = build_target if build_target != '' else 'dev'
 
-            config = {
-                'package_id': package.pk,
-                'run_id': self.cleaned_data['run_id'],
-                'version': self.cleaned_data['version'],
-                'package_name': self.cleaned_data['package_name'],
-                'repository': self.cleaned_data['repository'],
-                'artifact_name': self.cleaned_data['artifact_name'],
-                'github_token': conf.settings.GITHUB_TOKEN,
-                'build_target': build_target,
-            }
+            config = PackageBuildCfg(
+                version=self.cleaned_data['version'],
+                run_id=self.cleaned_data['run_id'],
+                package_name=self.cleaned_data['package_name'],
+                repository=self.cleaned_data['repository'],
+                artifact_name=self.cleaned_data['artifact_name'],
+                github_token=conf.settings.GITHUB_TOKEN,
+                build_target=build_target,
+                epochs=Epoch.objects.by_build_target(build_target),
+            )
         except Package.DoesNotExist:
             config = None
 
@@ -47,8 +48,8 @@ class DistroIntegrationForm(forms.Form):
     token = forms.CharField(required=True)
     version = forms.CharField(required=True)
     run_id = forms.CharField(required=True)
-    distro_name = forms.CharField(required=True)
-    release = forms.CharField(required=True)
+    distro = forms.CharField(required=True)
+    epoch = forms.CharField(required=True)
     artifact_name = forms.CharField(required=True)
     pr_number = forms.IntegerField(required=True)
 
@@ -56,15 +57,17 @@ class DistroIntegrationForm(forms.Form):
         token = conf.settings.INTEGRATION_REPO['token']
         if token != self.cleaned_data['token']:
             raise PermissionDenied
-        config = {
-            'version': self.cleaned_data['version'],
-            'run_id': self.cleaned_data['run_id'],
-            'distro_name': self.cleaned_data['distro_name'],
-            # TODO: is this an epoch?
-            'release': self.cleaned_data['release'],
-            'artifact_name': self.cleaned_data['artifact_name'],
-            'github_token': conf.settings.GITHUB_TOKEN,
-            'pr_number': self.cleaned_data['pr_number'],
-        }
+
+        config = DistroBuildCfg(
+            version=self.cleaned_data['version'],
+            run_id=self.cleaned_data['run_id'],
+            distro=self.cleaned_data['distro'],
+            epoch=self.cleaned_data['epoch'],
+            artifact_name=self.cleaned_data['artifact_name'],
+            github_token=conf.settings.GITHUB_TOKEN,
+            pr_number=self.cleaned_data['pr_number'],
+            owner=conf.settings.INTEGRATION_REPO['owner'],
+            repo=conf.settings.INTEGRATION_REPO['repo'],
+        )
 
         return config

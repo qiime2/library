@@ -31,20 +31,20 @@ def celery_backend_cleanup():
 
 
 @shared_task(name='db.create_package_build_record_and_update_package')
-def create_package_build_record_and_update_package(
-        ctx, package_id, run_id, version, package_name, repository, release, build_target):
-    package_build_record, _ = PackageBuild.objects.get_or_create(
-        package_id=package_id,
-        github_run_id=run_id,
-        version=version,
-        release=release,
-        build_target=build_target,
-    )
+def create_package_build_record_and_update_package(ctx, cfg: 'PackageBuildCfg', epoch):  # noqa: F821
+    package_record = Package.objects.get(token=cfg.package_token)
+    package_record.name = cfg.package_name
+    package_record.repository = cfg.repository
+    package_record.save()
 
-    package = Package.objects.get(pk=package_id)
-    package.name = package_name
-    package.repository = repository
-    package.save()
+    package_build_record, _ = PackageBuild.objects.get_or_create(
+        package=package_record,
+        github_run_id=cfg.run_id,
+        version=cfg.version,
+        # TODO
+        epoch=epoch,
+        build_target=cfg.build_target,
+    )
 
     ctx['package_build_record'] = package_build_record.pk
 
@@ -52,17 +52,17 @@ def create_package_build_record_and_update_package(
 
 
 @shared_task(name='db.mark_uploaded_package')
-def mark_uploaded_package(ctx, artifact_name, gate):
+def mark_uploaded_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
     if 'uploaded' not in ctx:
         raise Exception('mark_uploaded_package called before reindex_conda_server')
 
     pk = ctx['package_build_record']
     package_build_record = PackageBuild.objects.get(pk=pk)
 
-    if artifact_name not in ('linux-64', 'osx-64'):
+    if cfg.artifact_name not in ('linux-64', 'osx-64'):
         raise Exception('unknown build type')
 
-    attr = '%s_%s' % (artifact_name.replace('-', '_'), gate)
+    attr = '%s_%s' % (cfg.artifact_name.replace('-', '_'), cfg.gate)
     setattr(package_build_record, attr, True)
     package_build_record.save()
 
@@ -70,16 +70,16 @@ def mark_uploaded_package(ctx, artifact_name, gate):
 
 
 @shared_task(name='db.mark_uploaded_distro')
-def mark_uploaded_distro(ctx, artifact_name):
+def mark_uploaded_distro(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
     if 'uploaded' not in ctx:
         raise Exception('mark_uploaded_distro called before reindex_conda_server')
 
     pk = ctx['distro_build_record']
     distro_build_record = DistroBuild.objects.get(pk=pk)
 
-    if 'linux' in artifact_name:
+    if 'linux' in cfg.artifact_name:
         distro_build_record.linux_64 = True
-    elif 'osx' in artifact_name:
+    elif 'osx' in cfg.artifact_name:
         distro_build_record.osx_64 = True
     else:
         raise 'invalid architecture'
@@ -90,13 +90,13 @@ def mark_uploaded_distro(ctx, artifact_name):
 
 
 @shared_task(name='db.verify_all_architectures_present')
-def verify_all_architectures_present(ctx, gate):
+def verify_all_architectures_present(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
     pk = ctx['package_build_record']
     ctx['not_all_architectures_present'] = True
 
     package_build_record = PackageBuild.objects.get(pk=pk)
-    linux_64 = getattr(package_build_record, 'linux_64_%s' % (gate,))
-    osx_64 = getattr(package_build_record, 'osx_64_%s' % (gate,))
+    linux_64 = getattr(package_build_record, 'linux_64_%s' % (cfg.gate,))
+    osx_64 = getattr(package_build_record, 'osx_64_%s' % (cfg.gate,))
     if linux_64 and osx_64:
         ctx['not_all_architectures_present'] = False
 
@@ -104,11 +104,11 @@ def verify_all_architectures_present(ctx, gate):
 
 
 @shared_task(name='db.find_packages_ready_for_integration')
-def find_packages_ready_for_integration(ctx, release):
+def find_packages_ready_for_integration(ctx, epoch):
     package_builds = dict()
     distro_build_ids = list()
     for distro in Distro.objects.all():
-        package_build_records = PackageBuild.objects.ready_for_integration(release, distro)
+        package_build_records = PackageBuild.objects.ready_for_integration(epoch, distro)
         package_build_records = list(package_build_records)
         if len(package_build_records) > 0:
             distro_build_record = DistroBuild(
@@ -155,17 +155,17 @@ def update_distro_build_records_integration_pr_url(ctx):
 
 
 @shared_task(name='db.update_distro_build_record')
-def get_or_create_and_update_distro_build_record(ctx, distro_name, run_id, version, pr_url, artifact_name):
+def get_or_create_and_update_distro_build_record(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
     # NOTE: it is possible for a PR to be created manually, which means
     # there aren't any specifically associated PackageBuild records, or
     # preexisting DistroBuild records.
     record, _ = DistroBuild.objects.get_or_create(
-        distro_name=distro_name,
-        pr_url=pr_url,
+        distro_name=cfg.distro,
+        pr_url=cfg.pr_url,
     )
 
-    record.version = version
-    record.github_run_id = run_id
+    record.version = cfg.version
+    record.github_run_id = cfg.run_id
     record.save()
 
     ctx['distro_build_record'] = str(record.pk)

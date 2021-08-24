@@ -6,28 +6,14 @@
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
 
+from dataclasses import dataclass
+from typing import List
+
 from celery import chain, group, shared_task
 from celery.utils.log import get_task_logger
 from django import conf
 
-from .db import (
-    create_package_build_record_and_update_package,
-    find_packages_ready_for_integration,
-    get_or_create_and_update_distro_build_record,
-    mark_uploaded_package,
-    mark_uploaded_distro,
-    update_distro_build_records_integration_pr_url,
-    verify_all_architectures_present,
-)
-from .git import (
-    merge_integration_pr,
-    open_pull_request,
-    update_conda_build_config,
-)
-from .packages import (
-    fetch_package_from_github,
-    reindex_conda_channel,
-)
+from . import db, git, packages
 from library.packages.models import Epoch
 
 
@@ -47,16 +33,60 @@ logger = get_task_logger(__name__)
 #    add it to `db.clean_up_reindex_tasks`.
 
 
+@dataclass(frozen=True)
+class BuildCfg:
+    # treat this class like an ABC, please.
+    github_token: str
+    run_id: str
+    package_name: str
+    artifact_name: str
+
+
+@dataclass(frozen=True)
+class PackageBuildCfg(BuildCfg):
+    version: str
+    distro: str
+    pr_number: int
+    repository: str
+    build_target: str
+    package_token: str
+    epochs: List[str]
+
+    def __post_init__(self):
+        # https://docs.python.org/3/library/dataclasses.html#frozen-instances
+        object.__setattr__(self, 'gate', 'tested')
+        object.__setattr__(self, 'to_channel', str(conf.settings.BASE_CONDA_PATH / self.epoch / self.gate))
+
+
+@dataclass(frozen=True)
+class DistroBuildCfg(BuildCfg):
+    version: str
+    distro: str
+    epoch: str
+    pr_number: int
+    # TODO: names? Are these even necessary?
+    owner: str
+    repo: str
+
+    def __post_init__(self):
+        # https://docs.python.org/3/library/dataclasses.html#frozen-instances
+        object.__setattr__(self, 'gate', 'staged')
+        object.__setattr__(self, 'pr_url', 'https://github/%s/%s/pull/%d/' % (self.owner, self.repo, self.pr_number))
+        object.__setattr__(self, 'to_channel',
+                           str(conf.settings.BASE_CONDA_PATH / self.epoch / self.gate / self.distro))
+        object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
+
+
 @shared_task(name='pipeline.handle_prs')
 def handle_prs():
     chains = []
     for build_target in ['dev', 'release']:
-        for release in Epoch.objects.releases_by_build_target(build_target):
+        for epoch in Epoch.objects.by_build_target(build_target):
             ctx = dict()
             chain_link = chain(
-                find_packages_ready_for_integration.s(ctx, release),
-                open_pull_request.s(conf.settings.GITHUB_TOKEN, release),
-                update_distro_build_records_integration_pr_url.s(),
+                db.find_packages_ready_for_integration.s(ctx, epoch),
+                git.open_pull_request.s(conf.settings.GITHUB_TOKEN, epoch),
+                db.update_distro_build_records_integration_pr_url.s(),
             )
             chains.append(chain_link)
     return group(*chains).apply_async()
@@ -66,52 +96,34 @@ def handle_prs():
 def reindex_conda_channels():
     tasks = []
     for build_target in ['dev', 'release']:
-        for release in Epoch.objects.releases_by_build_target(build_target):
+        for epoch in Epoch.objects.by_build_target(build_target):
             # TODO: look up distros
             for gate in ['tested', 'staged']:
                 ctx = dict()
-                path = str(conf.settings.BASE_CONDA_PATH / release / gate)
-                channel_name = '%s-%s' % (release, gate)
-                task = reindex_conda_channel.s(ctx, path, channel_name)
+                channel = str(conf.settings.BASE_CONDA_PATH / epoch / gate)
+                channel_name = '%s-%s' % (epoch, gate)
+                task = packages.reindex_conda_channel.s(ctx, channel, channel_name)
                 tasks.append(task)
     return group(*tasks).apply_async()
 
 
 @shared_task(name='pipeline.handle_new_builds')
-def handle_new_package_build(initial_vals):
-    package_id = initial_vals['package_id']
-    run_id = initial_vals['run_id']
-    version = initial_vals['version']
-    package_name = initial_vals['package_name']
-    repository = initial_vals['repository']
-    artifact_name = initial_vals['artifact_name']
-    github_token = initial_vals['github_token']
-    build_target = initial_vals['build_target']
-    build_targets = initial_vals['build_targets']
-    gate = 'tested'
-
+def handle_new_package_build(cfg: PackageBuildCfg):
     chains = []
-    for release in build_targets:
-        channel = str(conf.settings.BASE_CONDA_PATH / release / gate)
-        channel_name = '%s-tested' % (release,)
+    for epoch in cfg.epochs:
+        # TODO: move this comment up
         # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
         # this is where any chain-specific dynamic state should live (ids, urls, etc)
         ctx = dict()
 
         chain_link = chain(
             # explicitly pass ctx into the first subtask in the chain
-            create_package_build_record_and_update_package.s(
-                ctx, package_id, run_id, version, package_name, repository,
-                release, build_target,
-            ),
+            db.create_package_build_record_and_update_package.s(ctx, cfg, epoch),
             # ctx is implicitly applied as first arg for every other subtask in the chain
-            fetch_package_from_github.s(
-                github_token, repository, run_id, channel, package_name, artifact_name,
-            ),
-            reindex_conda_channel.s(channel, channel_name),
-            mark_uploaded_package.s(artifact_name, gate),
-            verify_all_architectures_present.s(gate),
-            update_conda_build_config.s(github_token, release, package_name, version),
+            packages.fetch_package_from_github.s(cfg),
+            db.mark_uploaded_package.s(cfg),
+            db.verify_all_architectures_present.s(cfg),
+            git.update_conda_build_config.s(cfg),
         )
         chains.append(chain_link)
 
@@ -119,41 +131,21 @@ def handle_new_package_build(initial_vals):
 
 
 @shared_task(name='pipeline.handle_new_distro_build')
-def handle_new_distro_build(initial_vals):
-    version = initial_vals['version']
-    run_id = initial_vals['run_id']
-    distro_name = initial_vals['distro_name']
-    release = initial_vals['release']
-    artifact_name = initial_vals['artifact_name']
-    github_token = initial_vals['github_token']
-    owner = conf.settings.INTEGRATION_REPO['owner']
-    repo = conf.settings.INTEGRATION_REPO['repo']
-    repository = '%s/%s' % (owner, repo)
-    pr_number = initial_vals['pr_number']
-    pr_url = 'https://github.com/%s/%s/pull/%d/' % (owner, repo, pr_number)
-
-    to_channel = str(conf.settings.BASE_CONDA_PATH / release / 'staged' / distro_name)
-    # from_channel = str(conf.settings.BASE_CONDA_PATH / release / 'tested')
+def handle_new_distro_build(cfg: DistroBuildCfg):
     # TODO: handle release builds
-    channel_name = '%s-%s-staged' % (release, distro_name)
 
     ctx = dict()
     tasks = chain(
         # explicitly pass ctx into the first subtask in the chain
-        get_or_create_and_update_distro_build_record.s(
-            ctx, distro_name, run_id, version, pr_url, artifact_name,
-        ),
+        db.get_or_create_and_update_distro_build_record.s(ctx, cfg),
         # ctx is implicitly applied as first arg for every other subtask in the chain
-        fetch_package_from_github.s(
-            github_token, repository, run_id, to_channel, distro_name, artifact_name,
-        ),
+        packages.fetch_package_from_github.s(cfg),
         # TODO: Circle back on this. For now we'll just include the `tested` channel
-        # in any attempts to install.
+        # in any attempts to install. This might be a better periodic task.
         # find_packages_to_copy.s(),
         # copy_conda_packages.s(from_channel, to_channel),
-        reindex_conda_channel.s(to_channel, channel_name),
-        merge_integration_pr.s(github_token, pr_number),
-        mark_uploaded_distro.s(artifact_name),
+        git.merge_integration_pr.s(cfg),
+        db.mark_uploaded_distro.s(cfg),
     )
 
     return tasks.apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])

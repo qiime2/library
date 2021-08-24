@@ -18,14 +18,14 @@ from .. import utils
              autoretry_for=[utils.AdvisoryLockNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
-def update_conda_build_config(ctx, github_token, release, package_name, version):
+def update_conda_build_config(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
     if ctx['not_all_architectures_present']:
         return ctx
 
     # distro doesn't matter here, so skip it by setting to `None`
-    package_versions = {None: {package_name: version}}
-    mgr = utils.IntegrationGitRepoManager(github_token)
-    mgr.update_conda_build_config('main', release, 'tested', package_versions)
+    package_versions = {None: {cfg.package_name: cfg.version}}
+    mgr = utils.IntegrationGitRepoManager(cfg.github_token)
+    mgr.update_conda_build_config('main', cfg.epoch, cfg.gate, package_versions)
 
     return ctx
 
@@ -59,8 +59,9 @@ def open_pull_request(ctx, github_token, release):
              autoretry_for=[utils.AdvisoryLockNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
-def merge_integration_pr(ctx, github_token, pr_number):
-    mgr = utils.IntegrationGitRepoManager(github_token)
-    mgr.merge_integration_pr(pr_number)
+def merge_integration_pr(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
+    # TODO?
+    mgr = utils.IntegrationGitRepoManager(cfg.github_token)
+    mgr.merge_integration_pr(cfg.pr_number)
 
     return ctx

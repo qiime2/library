@@ -16,9 +16,9 @@ from library.utils.models import AuditModel
 # ### CUSTOM QUERYSETS
 
 class PackageBuildQuerySet(models.QuerySet):
-    def ready_for_integration(self, release, distro):
+    def ready_for_integration(self, epoch_name, distro):
         return self.filter(
-            release=release,
+            epoch_name=epoch_name,
             linux_64_tested=True,
             osx_64_tested=True,
             linux_64_staged=False,
@@ -29,11 +29,11 @@ class PackageBuildQuerySet(models.QuerySet):
 
 
 class EpochQuerySet(models.QuerySet):
-    def releases_by_build_target(self, build_target):
+    def by_build_target(self, build_target):
         return self.filter(
             include_in_ci=True,
             is_dev=build_target.lower() == 'dev',
-        ).values_list('release', flat=True)
+        ).values_list('name', flat=True)
 
 
 # ### BASE MODELS
@@ -46,7 +46,7 @@ class Package(AuditModel):
 
     def __str__(self):
         name = self.name if self.name else 'UNSYNCED'
-        return 'Package<name=%s, token=%s>' % (name, self.token)
+        return 'Package<name=%s>' % (name,)
 
 
 class PackageBuild(AuditModel):
@@ -58,16 +58,16 @@ class PackageBuild(AuditModel):
     osx_64_tested = models.BooleanField(default=False)
     linux_64_staged = models.BooleanField(default=False)
     osx_64_staged = models.BooleanField(default=False)
-    # this could be a fk to `Release`, but its simpler to just store the raw release name
-    release = models.CharField(max_length=50)
+    # TODO
+    epoch_name = models.CharField(max_length=50)
     build_target = models.CharField(max_length=50)
 
     # Custom Manager
     objects = PackageBuildQuerySet.as_manager()
 
     def __str__(self):
-        return 'PackageBuild<github_run_id=%s, version=%s, release=%s, build_target=%s>' % (
-            self.github_run_id, self.version, self.release, self.build_target)
+        return 'PackageBuild<github_run_id=%s, version=%s, epoch=%s, build_target=%s>' % (
+            self.github_run_id, self.version, self.epoch, self.build_target)
 
 
 class Distro(AuditModel):
@@ -85,7 +85,7 @@ class Distro(AuditModel):
 
 class Epoch(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    release = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     is_dev = models.BooleanField(default=True)
     include_in_ci = models.BooleanField(default=False)
     distros = models.ManyToManyField(
@@ -99,14 +99,14 @@ class Epoch(AuditModel):
 
     def __str__(self):
         return 'Epoch<name=%s, is_dev=%s, include_in_ci=%s>' % (
-            self.release, self.is_dev, self.include_in_ci)
+            self.name, self.is_dev, self.include_in_ci)
 
 
 class DistroBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     version = models.CharField(max_length=255)
     github_run_id = models.CharField(max_length=100)
-    # this could be a fk to `Distro`, but its simpler to just store the raw distro name
+    # TODO
     distro_name = models.CharField(max_length=255)
     linux_64 = models.BooleanField(default=False)
     osx_64 = models.BooleanField(default=False)

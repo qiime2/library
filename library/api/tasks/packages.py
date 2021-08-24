@@ -22,20 +22,21 @@ from .. import utils
              autoretry_for=[urllib.error.HTTPError, urllib.error.URLError, utils.GitHubNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['90_MIN'])
-def fetch_package_from_github(ctx, github_token, repository, run_id, channel, package_name, artifact_name):
+def fetch_package_from_github(ctx, cfg: 'BuildCfg'):  # noqa: F821
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp_pathlib = pathlib.Path(tmpdir)
 
-        mgr = utils.GitHubArtifactManager(github_token, repository, run_id, artifact_name, tmp_pathlib)
+        # TODO: make this constructor accept these new dataclasses
+        mgr = utils.GitHubArtifactManager(cfg.github_token, cfg.repository, cfg.run_id, cfg.artifact_name, tmp_pathlib)
         tmp_filepaths = mgr.sync()
 
         for filepath in tmp_filepaths:
             utils.unzip(filepath)
 
-        tested_pkgs_fp = pathlib.Path(channel)
+        tested_pkgs_fp = pathlib.Path(cfg.to_channel)
         utils.bootstrap_pkgs_dir(tested_pkgs_fp)
 
-        filematcher = '**/*%s*.tar.bz2' % (package_name,)
+        filematcher = '**/*%s*.tar.bz2' % (cfg.package_name,)
         for from_path in tmp_pathlib.glob(filematcher):
             to_path = tested_pkgs_fp / from_path.parent.name / from_path.name
             shutil.copy(from_path, to_path)

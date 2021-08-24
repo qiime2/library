@@ -12,7 +12,6 @@ from django.views.decorators import csrf
 
 from . import forms
 from . import tasks
-from library.packages.models import Epoch
 
 
 @csrf.csrf_exempt
@@ -28,7 +27,6 @@ def prepare_packages_for_integration(request):
         return http.JsonResponse(payload, status=400)
 
     if (config := form.is_known()):
-        config['build_targets'] = Epoch.objects.releases_by_build_target(config['build_target'])
         tasks.handle_new_package_build(config)
 
     payload = {'status': 'ok'}

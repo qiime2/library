@@ -19,10 +19,10 @@ def url_helper(instance, field):
 
 class PackageBuildInline(admin.TabularInline):
     model = PackageBuild
-    fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
+    fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
               'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
               'created_at', 'updated_at')
-    readonly_fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
+    readonly_fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
                        'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
                        'created_at', 'updated_at')
     extra = 0
@@ -55,10 +55,10 @@ class PackageAdmin(admin.ModelAdmin):
 
 
 class PackageBuildAdmin(admin.ModelAdmin):
-    fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
+    fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
               'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
               'created_at', 'updated_at')
-    readonly_fields = ('package', 'github_run_id', 'release', 'build_target', 'version',
+    readonly_fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
                        'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
                        'created_at', 'updated_at')
     ordering = ('-version',)
@@ -84,7 +84,7 @@ class EpochInline(admin.TabularInline):
     model = Epoch.distros.through
     extra = 0
     can_delete = False
-    readonly_field = ('release', 'is_dev', 'include_in_ci')
+    readonly_field = ('name', 'is_dev', 'include_in_ci')
 
     def has_add_permission(self, req, obj):
         return False
@@ -106,8 +106,8 @@ class DistroInline(admin.TabularInline):
 
 
 class EpochAdmin(admin.ModelAdmin):
-    fields = ('release', 'is_dev', 'include_in_ci')
-    ordering = ('release', 'is_dev', 'include_in_ci')
+    fields = ('name', 'is_dev', 'include_in_ci')
+    ordering = ('name', 'is_dev', 'include_in_ci')
     inlines = [DistroInline]
 
 
