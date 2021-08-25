@@ -17,19 +17,42 @@ def url_helper(instance, field):
     return format_html(f'<a href="{url}" target="_blank">{url}</a>')
 
 
+class DistroBuildInline(admin.TabularInline):
+    model = PackageBuild.distro_builds.through
+    extra = 0
+    can_delete = False
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
 class PackageBuildInline(admin.TabularInline):
     model = PackageBuild
-    fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
-              'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
-              'created_at', 'updated_at')
-    readonly_fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
-                       'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
-                       'created_at', 'updated_at')
+    fields = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+              'linux_64', 'osx_64', 'created_at', 'updated_at')
+    readonly_fields = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+                       'linux_64', 'osx_64', 'created_at', 'updated_at')
     extra = 0
     can_delete = False
     ordering = ('-updated_at',)
 
-    def has_add_permission(self, req):
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+
+# TODO
+class PackageBuildInline2(admin.TabularInline):
+    model = DistroBuild.package_builds.through
+    extra = 0
+    can_delete = False
+
+    def has_add_permission(self, request, obj=None):
         return False
 
     def has_change_permission(self, request, obj=None):
@@ -49,9 +72,9 @@ class DistroInline(admin.StackedInline):
 
 
 class PackageAdmin(admin.ModelAdmin):
-    list_display=('name', 'token', 'repository', 'updated_at', 'created_at')
-    fields=('name', 'token', 'repository', 'updated_at', 'created_at')
-    readonly_fields = ('token', 'updated_at', 'created_at')
+    list_display=('name', 'token', 'repository', 'created_at', 'updated_at')
+    fields=('name', 'token', 'repository', 'created_at', 'updated_at')
+    readonly_fields = ('token', 'created_at', 'updated_at')
     inlines = [PackageBuildInline, DistroInline]
     ordering = ('-updated_at',)
 
@@ -63,21 +86,22 @@ class PackageAdmin(admin.ModelAdmin):
 
 
 class PackageBuildAdmin(admin.ModelAdmin):
-    list_display = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
-                    'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
-                    'created_at', 'updated_at')
-    fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
-              'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
-              'created_at', 'updated_at')
-    readonly_fields = ('package', 'github_run_id', 'epoch_name', 'build_target', 'version',
-                       'linux_64_tested', 'osx_64_tested', 'linux_64_staged', 'osx_64_staged',
-                       'created_at', 'updated_at')
+    list_display = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+                    'linux_64', 'osx_64', 'created_at', 'updated_at')
+    fields = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+              'linux_64', 'osx_64', 'created_at', 'updated_at')
+    readonly_fields = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+                       'linux_64', 'osx_64', 'created_at', 'updated_at')
     ordering = ('-updated_at',)
+    inlines = [DistroBuildInline]
 
     def has_add_permission(self, request):
         return False
 
     def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
 
@@ -104,9 +128,9 @@ class EpochInline(admin.TabularInline):
 
 
 class DistroAdmin(admin.ModelAdmin):
-    list_display = ('name', 'updated_at', 'created_at')
-    fields = ('name', 'updated_at', 'created_at')
-    readonly_fields = ('updated_at', 'created_at')
+    list_display = ('name', 'created_at', 'updated_at')
+    fields = ('name', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')
     ordering = ('-updated_at',)
     inlines = [PackageInline, EpochInline]
 
@@ -123,21 +147,23 @@ class DistroInline(admin.TabularInline):
 
 
 class EpochAdmin(admin.ModelAdmin):
-    list_display = ('name', 'is_dev', 'include_in_ci')
-    fields = ('name', 'is_dev', 'include_in_ci')
+    list_display = ('name', 'is_dev', 'include_in_ci', 'created_at', 'updated_at')
+    fields = ('name', 'is_dev', 'include_in_ci', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')
     ordering = ('-updated_at',)
     inlines = [DistroInline]
 
 
-# TODO: show associated package builds
 class DistroBuildAdmin(admin.ModelAdmin):
-    list_display = ('version', 'github_run_id', 'distro_name', 'linux_64', 'osx_64',
-                    'clickable_integration_pr_url', 'updated_at', 'created_at')
-    fields = ('version', 'github_run_id', 'distro_name', 'linux_64', 'osx_64',
-              'clickable_integration_pr_url', 'updated_at', 'created_at')
-    readonly_fields = ('version', 'github_run_id', 'distro_name', 'linux_64', 'osx_64',
-                       'clickable_integration_pr_url', 'updated_at', 'created_at')
+    list_display_links = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64')
+    list_display = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
+                    'clickable_integration_pr_url', 'created_at', 'updated_at')
+    fields = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
+              'clickable_integration_pr_url', 'created_at', 'updated_at')
+    readonly_fields = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
+                       'clickable_integration_pr_url', 'created_at', 'updated_at')
     ordering = ('-updated_at',)
+    inlines = [PackageBuildInline2]
 
     def has_add_permission(self, request):
         return False

@@ -359,26 +359,26 @@ def is_release_package(ver_str):
 def find_packages_ready_for_integration(package_build_records):
     # TODO: defaultdict
     package_versions = dict()
-    package_build_ids = set()
+    package_build_pks = set()
 
     for distro, records in package_build_records.items():
         package_versions[distro] = dict()
         for record in records:
             package_name = record['package__name']
             version = record['version']
-            id_ = record['id']
+            pk = str(record['id'])
             if package_name in package_versions[distro]:
                 # in case multiple versions exist at this point, only consider the _newest_ one
                 if compare_package_versions(package_versions[distro][package_name], version):
                     package_versions[distro][package_name] = version
-                    package_build_ids.add(id_)
+                    package_build_pks.add(pk)
             else:
                 package_versions[distro][package_name] = version
-                package_build_ids.add(id_)
+                package_build_pks.add(pk)
         if len(package_versions[distro]) == 0:
             package_versions.pop(distro)
 
-    return package_versions, package_build_ids
+    return package_versions, package_build_pks
 
 
 def filter_release_package_versions(package_versions):

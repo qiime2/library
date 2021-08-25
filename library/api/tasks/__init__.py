@@ -48,18 +48,18 @@ class PackageBuildCfg(BuildCfg):
     repository: str
     build_target: str
     package_token: str
-    epoch: str
+    epoch_name: str
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
         object.__setattr__(self, 'gate', 'tested')
-        object.__setattr__(self, 'to_channel', str(conf.settings.BASE_CONDA_PATH / self.epoch / self.gate))
+        object.__setattr__(self, 'to_channel', str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate))
 
 
 @dataclass(frozen=True)
 class DistroBuildCfg(BuildCfg):
     version: str
-    epoch: str
+    epoch_name: str
     pr_number: int
     # TODO: names? Are these even necessary?
     owner: str
@@ -68,11 +68,11 @@ class DistroBuildCfg(BuildCfg):
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
         object.__setattr__(self, 'gate', 'staged')
-        object.__setattr__(self, 'distro', self.package_name)
-        object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d/' %
+        object.__setattr__(self, 'distro_name', self.package_name)
+        object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d' %
                            (self.owner, self.repo, self.pr_number))
         object.__setattr__(self, 'to_channel',
-                           str(conf.settings.BASE_CONDA_PATH / self.epoch / self.gate / self.distro))
+                           str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate / self.distro_name))
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
 
 
@@ -89,7 +89,7 @@ class DistroBuildCtx:
 
 @dataclass
 class HandlePRsCtx:
-    epoch: str = None
+    epoch_name: str = None
     github_token: str = None
     package_versions: Dict[str, str] = field(default_factory=dict)
     package_build_pks: List[str] = field(default_factory=list)
@@ -108,7 +108,7 @@ def handle_prs():
     chains = []
     for build_target in ['dev', 'release']:
         for epoch in Epoch.objects.by_build_target(build_target):
-            ctx = HandlePRsCtx(epoch=epoch.name, github_token=conf.settings.GITHUB_TOKEN)
+            ctx = HandlePRsCtx(epoch_name=epoch.name, github_token=conf.settings.GITHUB_TOKEN)
             chain_link = chain(
                 db.find_packages_ready_for_integration.s(ctx),
                 git.open_pull_request.s(),
@@ -142,13 +142,13 @@ def reindex_conda_channels():
 @shared_task(name='pipeline.handle_new_builds')
 def handle_new_package_build(initial_data):
     chains = []
-    epochs = initial_data.pop('epochs')
-    for epoch in epochs:
+    epoch_names = initial_data.pop('epoch_names')
+    for epoch_name in epoch_names:
         # TODO: move this comment up
         # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
         # this is where any chain-specific dynamic state should live (ids, urls, etc)
         ctx = PackageBuildCtx()
-        cfg = PackageBuildCfg(epoch=epoch, **initial_data)
+        cfg = PackageBuildCfg(epoch_name=epoch_name, **initial_data)
 
         chain_link = chain(
             # explicitly pass ctx into the first subtask in the chain

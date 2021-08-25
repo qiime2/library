@@ -18,11 +18,9 @@ from library.utils.models import AuditModel
 class PackageBuildQuerySet(models.QuerySet):
     def ready_for_integration(self, epoch_name, distro):
         return self.filter(
-            epoch_name=epoch_name,
-            linux_64_tested=True,
-            osx_64_tested=True,
-            linux_64_staged=False,
-            osx_64_staged=False,
+            epoch__name=epoch_name,
+            linux_64=True,
+            osx_64=True,
             package__in=distro.packages.all(),
             distro_builds__isnull=True,
         ).values('package__name', 'version', 'id')
@@ -52,22 +50,19 @@ class Package(AuditModel):
 class PackageBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     package = models.ForeignKey('Package', on_delete=models.CASCADE, related_name='package_builds')
+    epoch = models.ForeignKey('Epoch', on_delete=models.CASCADE, related_name='package_builds')
     github_run_id = models.CharField(max_length=100, verbose_name='Github Run ID')
     version = models.CharField(max_length=255)
-    linux_64_tested = models.BooleanField(default=False, verbose_name='Linux 64 Tested?')
-    osx_64_tested = models.BooleanField(default=False, verbose_name='OSX 64 Tested?')
-    linux_64_staged = models.BooleanField(default=False, verbose_name='Linux 64 Staged?')
-    osx_64_staged = models.BooleanField(default=False, verbose_name='OSX 64 Staged?')
-    # TODO
-    epoch_name = models.CharField(max_length=50, verbose_name='Epoch Name')
+    linux_64 = models.BooleanField(default=False, verbose_name='Linux 64 Package?')
+    osx_64 = models.BooleanField(default=False, verbose_name='OSX 64 Package?')
     build_target = models.CharField(max_length=50, verbose_name='Build Target')
 
     # Custom Manager
     objects = PackageBuildQuerySet.as_manager()
 
     def __str__(self):
-        return 'PackageBuild<github_run_id=%s, version=%s, epoch_name=%s, build_target=%s>' % (
-            self.github_run_id, self.version, self.epoch_name, self.build_target)
+        return 'PackageBuild<github_run_id=%s, version=%s, build_target=%s>' % (
+            self.github_run_id, self.version, self.build_target)
 
     class Meta:
         verbose_name = 'Package Build'
@@ -113,17 +108,15 @@ class Epoch(AuditModel):
 
 class DistroBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    distro = models.ForeignKey('Distro', on_delete=models.CASCADE, related_name='distro_builds')
     version = models.CharField(max_length=255)
     github_run_id = models.CharField(max_length=100, verbose_name='Github Run ID')
-    # TODO
-    distro_name = models.CharField(max_length=255, verbose_name='Distro Name')
-    linux_64 = models.BooleanField(default=False, verbose_name='Linux 64')
-    osx_64 = models.BooleanField(default=False, verbose_name='OSX 64')
+    linux_64 = models.BooleanField(default=False, verbose_name='Linux 64 Package?')
+    osx_64 = models.BooleanField(default=False, verbose_name='OSX 64 Package?')
     pr_url = models.URLField(default='', verbose_name='PR URL')
 
     def __str__(self):
-        return 'DistroBuild<version=%s, github_run_id=%s, distro_name=%s>' % (
-            self.version, self.github_run_id, self.distro_name)
+        return 'DistroBuild<pk=%s>' % (self.pk,)
 
     package_builds = models.ManyToManyField(
         PackageBuild,
@@ -133,6 +126,7 @@ class DistroBuild(AuditModel):
 
     class Meta:
         verbose_name = 'Distro Build'
+        unique_together = ['distro', 'pr_url']
 
 
 # ### BRIDGE TABLES

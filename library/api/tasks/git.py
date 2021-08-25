@@ -25,7 +25,7 @@ def update_conda_build_config(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  
     # distro doesn't matter here, so skip it by setting to `None`
     package_versions = {None: {cfg.package_name: cfg.version}}
     mgr = utils.IntegrationGitRepoManager(cfg.github_token)
-    mgr.update_conda_build_config('main', cfg.epoch, cfg.gate, package_versions)
+    mgr.update_conda_build_config('main', cfg.epoch_name, cfg.gate, package_versions)
 
     return ctx
 
@@ -41,14 +41,14 @@ def open_pull_request(ctx: 'HandlePRsCtx'):  # noqa: F821
     branch = str(uuid.uuid4())
     # staged
     mgr = utils.IntegrationGitRepoManager(ctx.github_token)
-    mgr.update_integration(branch, ctx.epoch, 'staged', ctx.package_versions)
+    mgr.update_integration(branch, ctx.epoch_name, 'staged', ctx.package_versions)
 
     # released
     release_package_versions = utils.filter_release_package_versions(ctx.package_versions)
     if len(release_package_versions) > 0:
-        mgr.update_integration(branch, ctx.epoch, 'released', release_package_versions)
+        mgr.update_integration(branch, ctx.epoch_name, 'released', release_package_versions)
 
-    pr_url = mgr.open_pr(branch, '%s staged' % (ctx.epoch, ))
+    pr_url = mgr.open_pr(branch, '%s staged' % (ctx.epoch_name, ))
     ctx.pr_url = pr_url
 
     return ctx

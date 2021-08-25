@@ -36,7 +36,7 @@ class PackageIntegrationForm(forms.Form):
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
                 'build_target': build_target,
-                'epochs': Epoch.objects.by_build_target(build_target).values_list('name', flat=True),
+                'epoch_names': Epoch.objects.by_build_target(build_target).values_list('name', flat=True),
                 'package_token': str(self.cleaned_data['token']),
             }
         except Package.DoesNotExist:
@@ -63,7 +63,7 @@ class DistroIntegrationForm(forms.Form):
             version=self.cleaned_data['version'],
             run_id=self.cleaned_data['run_id'],
             package_name=self.cleaned_data['distro'],
-            epoch=self.cleaned_data['epoch'],
+            epoch_name=self.cleaned_data['epoch'],
             artifact_name=self.cleaned_data['artifact_name'],
             github_token=conf.settings.GITHUB_TOKEN,
             pr_number=self.cleaned_data['pr_number'],

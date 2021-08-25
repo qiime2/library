@@ -15,7 +15,7 @@ from django import conf
 from django.utils import timezone
 
 from .. import utils
-from library.packages.models import Package, PackageBuild, Distro, DistroBuild
+from library.packages.models import Package, PackageBuild, Distro, DistroBuild, Epoch
 
 
 @shared_task(name='db.celery_backend_cleanup')
@@ -38,12 +38,13 @@ def create_package_build_record_and_update_package(ctx: 'PackageBuildCtx',  # no
     package_record.repository = cfg.repository
     package_record.save()
 
+    epoch_record = Epoch.objects.get(name=cfg.epoch_name)
+
     package_build_record, _ = PackageBuild.objects.get_or_create(
         package=package_record,
         github_run_id=cfg.run_id,
         version=cfg.version,
-        # TODO
-        epoch_name=cfg.epoch,
+        epoch=epoch_record,
         build_target=cfg.build_target,
     )
 
@@ -59,7 +60,7 @@ def mark_uploaded_package(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # no
     if cfg.artifact_name not in ('linux-64', 'osx-64'):
         raise Exception('unknown build type')
 
-    attr = '%s_%s' % (cfg.artifact_name.replace('-', '_'), cfg.gate)
+    attr = cfg.artifact_name.replace('-', '_')
     setattr(package_build_record, attr, True)
     package_build_record.save()
 
@@ -98,16 +99,16 @@ def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
     package_builds = dict()
     distro_build_pks = list()
     for distro in Distro.objects.all():
-        package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch, distro)
+        package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch_name, distro)
         package_build_records = list(package_build_records)
         if len(package_build_records) > 0:
-            distro_build_record = DistroBuild(distro_name=distro.name)
+            distro_build_record = DistroBuild(distro=distro)
             distro_build_record.save()
             pbrs = [r['id'] for r in package_build_records]
             distro_build_record.package_builds.set(pbrs)
 
             package_builds[distro.name] = package_build_records
-            distro_build_pks.append(distro_build_record.pk)
+            distro_build_pks.append(str(distro_build_record.pk))
 
     package_versions, package_build_pks = utils.find_packages_ready_for_integration(
         package_builds)
@@ -140,8 +141,10 @@ def get_or_create_and_update_distro_build_record(ctx: 'DistroBuildCtx', cfg: 'Di
     # NOTE: it is possible for a PR to be created manually, which means
     # there aren't any specifically associated PackageBuild records, or
     # preexisting DistroBuild records.
+    distro_record = Distro.objects.get(name=cfg.distro_name)
+
     record, _ = DistroBuild.objects.get_or_create(
-        distro_name=cfg.distro,
+        distro=distro_record,
         pr_url=cfg.pr_url,
     )
 
