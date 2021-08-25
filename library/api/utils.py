@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------------
 
 import base64
+import collections
 import contextlib
 import copy
 import json
@@ -358,12 +359,10 @@ def is_release_package(ver_str):
 
 
 def find_packages_ready_for_integration(package_build_records):
-    # TODO: defaultdict
-    package_versions = dict()
+    package_versions = collections.defaultdict(dict)
     package_build_pks = set()
 
     for distro, records in package_build_records.items():
-        package_versions[distro] = dict()
         for record in records:
             package_name = record['package__name']
             version = record['version']
@@ -376,21 +375,15 @@ def find_packages_ready_for_integration(package_build_records):
             else:
                 package_versions[distro][package_name] = version
                 package_build_pks.add(pk)
-        if len(package_versions[distro]) == 0:
-            package_versions.pop(distro)
 
     return package_versions, package_build_pks
 
 
 def filter_release_package_versions(package_versions):
-    # TODO: defaultdict
-    filtered = dict()
+    filtered = collections.defaultdict(dict)
     for distro, versions in package_versions.items():
-        filtered[distro] = dict()
         for pkg_name, pkg_version in versions.items():
             if is_release_package(pkg_version):
                 filtered[distro][pkg_name] = pkg_version
-        if len(filtered[distro]) == 0:
-            filtered.pop(distro)
 
     return filtered
