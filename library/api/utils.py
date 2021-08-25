@@ -12,6 +12,7 @@ import copy
 import json
 import os
 from packaging import version
+import pathlib
 import shutil
 import urllib.request
 import urllib.error
@@ -139,9 +140,11 @@ def unzip(fp_pathlib):
         zip_fh.extractall(str(fp_pathlib.parent / new_name))
 
 
-def bootstrap_pkgs_dir(fp_pathlib):
+def bootstrap_pkgs_dir(fp):
+    if isinstance(fp, str):
+        fp = pathlib.Path(fp)
     for arch in ('linux-64', 'osx-64'):
-        (fp_pathlib / arch).mkdir(parents=True, exist_ok=True)
+        (fp / arch).mkdir(parents=True, exist_ok=True)
 
 
 @contextlib.contextmanager

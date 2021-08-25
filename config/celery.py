@@ -29,13 +29,19 @@ def decoder(obj):
     if type_ := obj.pop('__type__', None):
         from library.api.tasks import (
             DistroBuildCfg,
+            DistroBuildCtx,
+            HandlePRsCtx,
             PackageBuildCfg,
+            PackageBuildCtx,
         )
         # throwaway dict to map str name to actual class. we could also `eval`
         # but for smaller sets of custom classes, i think this is a bit cleaner
         return {
             'DistroBuildCfg': DistroBuildCfg,
+            'DistroBuildCtx': DistroBuildCtx,
+            'HandlePRsCtx': HandlePRsCtx,
             'PackageBuildCfg': PackageBuildCfg,
+            'PackageBuildCtx': PackageBuildCtx,
         }[type_](**obj)
     return obj
 

@@ -33,7 +33,7 @@ class EpochQuerySet(models.QuerySet):
         return self.filter(
             include_in_ci=True,
             is_dev=build_target.lower() == 'dev',
-        ).values_list('name', flat=True)
+        )
 
 
 # ### BASE MODELS

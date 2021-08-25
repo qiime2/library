@@ -6,7 +6,8 @@
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import List, Dict, Optional
 
 from celery import chain, group, shared_task
 from celery.utils.log import get_task_logger
@@ -75,15 +76,42 @@ class DistroBuildCfg(BuildCfg):
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
 
 
+@dataclass
+class PackageBuildCtx:
+    package_build_pk: Optional[str] = None
+    not_all_architectures_present: bool = True
+
+
+@dataclass
+class DistroBuildCtx:
+    distro_build_pk: Optional[str] = None
+
+
+@dataclass
+class HandlePRsCtx:
+    epoch: str = None
+    github_token: str = None
+    package_versions: Dict[str, str] = field(default_factory=dict)
+    package_build_pks: List[str] = field(default_factory=list)
+    distro_build_pks: List[str] = field(default_factory=list)
+    pr_url: str = None
+
+    def ready_to_open_pr(self):
+        return len(self.package_versions)
+
+    def ready_to_update_distro_build_records(self):
+        return len(self.distro_build_pks) and self.pr_url
+
+
 @shared_task(name='pipeline.handle_prs')
 def handle_prs():
     chains = []
     for build_target in ['dev', 'release']:
         for epoch in Epoch.objects.by_build_target(build_target):
-            ctx = dict()
+            ctx = HandlePRsCtx(epoch=epoch.name, github_token=conf.settings.GITHUB_TOKEN)
             chain_link = chain(
-                db.find_packages_ready_for_integration.s(ctx, epoch),
-                git.open_pull_request.s(conf.settings.GITHUB_TOKEN, epoch),
+                db.find_packages_ready_for_integration.s(ctx),
+                git.open_pull_request.s(),
                 db.update_distro_build_records_integration_pr_url.s(),
             )
             chains.append(chain_link)
@@ -95,13 +123,19 @@ def reindex_conda_channels():
     tasks = []
     for build_target in ['dev', 'release']:
         for epoch in Epoch.objects.by_build_target(build_target):
-            # TODO: look up distros
-            for gate in ['tested', 'staged']:
-                ctx = dict()
-                channel = str(conf.settings.BASE_CONDA_PATH / epoch / gate)
-                channel_name = '%s-%s' % (epoch, gate)
-                task = packages.reindex_conda_channel.s(ctx, channel, channel_name)
+            task = packages.reindex_conda_channel.s(
+                str(conf.settings.BASE_CONDA_PATH / epoch.name / 'tested'),
+                '%s-tested' % (epoch.name,),
+            )
+            tasks.append(task)
+
+            for distro in epoch.distros.all():
+                task = packages.reindex_conda_channel.s(
+                    str(conf.settings.BASE_CONDA_PATH / epoch.name / 'staged' / distro.name),
+                    '%s-%s-staged' % (epoch.name, distro.name),
+                )
                 tasks.append(task)
+
     return group(*tasks).apply_async()
 
 
@@ -113,7 +147,7 @@ def handle_new_package_build(initial_data):
         # TODO: move this comment up
         # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
         # this is where any chain-specific dynamic state should live (ids, urls, etc)
-        ctx = dict()
+        ctx = PackageBuildCtx()
         cfg = PackageBuildCfg(epoch=epoch, **initial_data)
 
         chain_link = chain(
@@ -134,7 +168,7 @@ def handle_new_package_build(initial_data):
 def handle_new_distro_build(cfg: DistroBuildCfg):
     # TODO: handle release builds
 
-    ctx = dict()
+    ctx = DistroBuildCtx()
     tasks = chain(
         # explicitly pass ctx into the first subtask in the chain
         db.get_or_create_and_update_distro_build_record.s(ctx, cfg),

@@ -31,7 +31,8 @@ def celery_backend_cleanup():
 
 
 @shared_task(name='db.create_package_build_record_and_update_package')
-def create_package_build_record_and_update_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
+def create_package_build_record_and_update_package(ctx: 'PackageBuildCtx',  # noqa: F821
+                                                   cfg: 'PackageBuildCfg'):  # noqa: F821
     package_record = Package.objects.get(token=cfg.package_token)
     package_record.name = cfg.package_name
     package_record.repository = cfg.repository
@@ -46,15 +47,14 @@ def create_package_build_record_and_update_package(ctx, cfg: 'PackageBuildCfg'):
         build_target=cfg.build_target,
     )
 
-    ctx['package_build_record'] = str(package_build_record.pk)
+    ctx.package_build_pk = str(package_build_record.pk)
 
     return ctx
 
 
 @shared_task(name='db.mark_uploaded_package')
-def mark_uploaded_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
-    pk = ctx['package_build_record']
-    package_build_record = PackageBuild.objects.get(pk=pk)
+def mark_uploaded_package(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # noqa: F821
+    package_build_record = PackageBuild.objects.get(pk=ctx.package_build_pk)
 
     if cfg.artifact_name not in ('linux-64', 'osx-64'):
         raise Exception('unknown build type')
@@ -67,9 +67,8 @@ def mark_uploaded_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
 
 
 @shared_task(name='db.mark_uploaded_distro')
-def mark_uploaded_distro(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
-    pk = ctx['distro_build_record']
-    distro_build_record = DistroBuild.objects.get(pk=pk)
+def mark_uploaded_distro(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
+    distro_build_record = DistroBuild.objects.get(pk=ctx.distro_build_pk)
 
     if 'linux' in cfg.artifact_name:
         distro_build_record.linux_64 = True
@@ -84,72 +83,60 @@ def mark_uploaded_distro(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
 
 
 @shared_task(name='db.verify_all_architectures_present')
-def verify_all_architectures_present(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
-    pk = ctx['package_build_record']
-    ctx['not_all_architectures_present'] = True
-
-    package_build_record = PackageBuild.objects.get(pk=pk)
+def verify_all_architectures_present(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # noqa: F821
+    package_build_record = PackageBuild.objects.get(pk=ctx.package_build_pk)
     linux_64 = getattr(package_build_record, 'linux_64_%s' % (cfg.gate,))
     osx_64 = getattr(package_build_record, 'osx_64_%s' % (cfg.gate,))
     if linux_64 and osx_64:
-        ctx['not_all_architectures_present'] = False
+        ctx.not_all_architectures_present = False
 
     return ctx
 
 
 @shared_task(name='db.find_packages_ready_for_integration')
-def find_packages_ready_for_integration(ctx, epoch):
+def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
     package_builds = dict()
-    distro_build_ids = list()
+    distro_build_pks = list()
     for distro in Distro.objects.all():
-        package_build_records = PackageBuild.objects.ready_for_integration(epoch, distro)
+        package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch, distro)
         package_build_records = list(package_build_records)
         if len(package_build_records) > 0:
-            distro_build_record = DistroBuild(
-                distro_name=distro.name,
-            )
-
+            distro_build_record = DistroBuild(distro_name=distro.name)
             distro_build_record.save()
             pbrs = [r['id'] for r in package_build_records]
             distro_build_record.package_builds.set(pbrs)
 
             package_builds[distro.name] = package_build_records
-            distro_build_ids.append(distro_build_record.pk)
+            distro_build_pks.append(distro_build_record.pk)
 
-    package_versions, package_build_ids = utils.find_packages_ready_for_integration(
+    package_versions, package_build_pks = utils.find_packages_ready_for_integration(
         package_builds)
 
-    ctx['package_versions'] = package_versions
-    ctx['package_build_ids'] = list(package_build_ids)
-    ctx['distro_build_ids'] = distro_build_ids
+    ctx.package_versions = package_versions
+    ctx.package_build_pks = list(package_build_pks)
+    ctx.distro_build_pks = distro_build_pks
 
     return ctx
 
 
 @shared_task(name='db.update_distro_build_record_integration_pr_url')
-def update_distro_build_records_integration_pr_url(ctx):
-    if len(ctx['distro_build_ids']) < 1:
+def update_distro_build_records_integration_pr_url(ctx: 'HandlePRsCtx'):  # noqa: F821
+    if not ctx.ready_to_update_distro_build_records():
         return ctx
-
-    if 'pr_url' not in ctx:
-        return ctx
-
-    distro_build_ids = ctx.pop('distro_build_ids')
-    url = ctx.pop('pr_url')
 
     with transaction.atomic():
-        for pk in distro_build_ids:
+        for pk in ctx.distro_build_pks:
             distro_build_record = DistroBuild.objects.get(pk=pk)
             if distro_build_record.pr_url != '':
                 raise Exception('a pr already exists for this distro build')
-            distro_build_record.pr_url = url
+            distro_build_record.pr_url = ctx.pr_url
             distro_build_record.save()
 
     return ctx
 
 
 @shared_task(name='db.update_distro_build_record')
-def get_or_create_and_update_distro_build_record(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
+def get_or_create_and_update_distro_build_record(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
     # NOTE: it is possible for a PR to be created manually, which means
     # there aren't any specifically associated PackageBuild records, or
     # preexisting DistroBuild records.
@@ -162,6 +149,6 @@ def get_or_create_and_update_distro_build_record(ctx, cfg: 'DistroBuildCfg'):  #
     record.github_run_id = cfg.run_id
     record.save()
 
-    ctx['distro_build_record'] = str(record.pk)
+    ctx.distro_build_pk = str(record.pk)
 
     return ctx

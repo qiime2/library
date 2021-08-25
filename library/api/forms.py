@@ -36,7 +36,7 @@ class PackageIntegrationForm(forms.Form):
                 'artifact_name': self.cleaned_data['artifact_name'],
                 'github_token': conf.settings.GITHUB_TOKEN,
                 'build_target': build_target,
-                'epochs': Epoch.objects.by_build_target(build_target),
+                'epochs': Epoch.objects.by_build_target(build_target).values_list('name', flat=True),
                 'package_token': str(self.cleaned_data['token']),
             }
         except Package.DoesNotExist:

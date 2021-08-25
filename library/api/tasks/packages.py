@@ -9,6 +9,7 @@
 import pathlib
 import shutil
 import tempfile
+from typing import Union
 import urllib.error
 
 from celery import shared_task
@@ -22,7 +23,7 @@ from .. import utils
              autoretry_for=[urllib.error.HTTPError, urllib.error.URLError, utils.GitHubNotReadyException],
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['90_MIN'])
-def fetch_package_from_github(ctx, cfg: 'BuildCfg'):  # noqa: F821
+def fetch_package_from_github(ctx: Union['PackageBuildCtx', 'DistroBuildCtx'], cfg: 'BuildCfg'):  # noqa: F821
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp_pathlib = pathlib.Path(tmpdir)
 
@@ -33,19 +34,21 @@ def fetch_package_from_github(ctx, cfg: 'BuildCfg'):  # noqa: F821
         for filepath in tmp_filepaths:
             utils.unzip(filepath)
 
-        tested_pkgs_fp = pathlib.Path(cfg.to_channel)
-        utils.bootstrap_pkgs_dir(tested_pkgs_fp)
+        pkgs_fp = pathlib.Path(cfg.to_channel)
+        utils.bootstrap_pkgs_dir(pkgs_fp)
 
         filematcher = '**/*%s*.tar.bz2' % (cfg.package_name,)
         for from_path in tmp_pathlib.glob(filematcher):
-            to_path = tested_pkgs_fp / from_path.parent.name / from_path.name
+            to_path = pkgs_fp / from_path.parent.name / from_path.name
             shutil.copy(from_path, to_path)
 
     return ctx
 
 
 @shared_task(name='packages.reindex_conda_channel')
-def reindex_conda_channel(ctx, channel, channel_name):
+def reindex_conda_channel(channel, channel_name):
+    utils.bootstrap_pkgs_dir(channel)
+
     conda_config = conda_build.api.Config(verbose=False)
     conda_build.api.update_index(
         channel,
@@ -53,10 +56,6 @@ def reindex_conda_channel(ctx, channel, channel_name):
         threads=1,
         channel_name=channel_name,
     )
-
-    ctx['uploaded'] = True
-
-    return ctx
 
 
 @shared_task(name='packages.find_packages_to_copy')
