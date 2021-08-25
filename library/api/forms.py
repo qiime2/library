@@ -9,7 +9,7 @@
 from django import forms, conf
 from django.core.exceptions import PermissionDenied
 
-from .tasks import PackageBuildCfg, DistroBuildCfg
+from .tasks import DistroBuildCfg
 from ..packages.models import Package, Epoch
 
 
@@ -28,16 +28,17 @@ class PackageIntegrationForm(forms.Form):
             build_target = self.cleaned_data['build_target']
             build_target = build_target if build_target != '' else 'dev'
 
-            config = PackageBuildCfg(
-                version=self.cleaned_data['version'],
-                run_id=self.cleaned_data['run_id'],
-                package_name=self.cleaned_data['package_name'],
-                repository=self.cleaned_data['repository'],
-                artifact_name=self.cleaned_data['artifact_name'],
-                github_token=conf.settings.GITHUB_TOKEN,
-                build_target=build_target,
-                epochs=Epoch.objects.by_build_target(build_target),
-            )
+            config = {
+                'version': self.cleaned_data['version'],
+                'run_id': self.cleaned_data['run_id'],
+                'package_name': self.cleaned_data['package_name'],
+                'repository': self.cleaned_data['repository'],
+                'artifact_name': self.cleaned_data['artifact_name'],
+                'github_token': conf.settings.GITHUB_TOKEN,
+                'build_target': build_target,
+                'epochs': Epoch.objects.by_build_target(build_target),
+                'package_token': str(self.cleaned_data['token']),
+            }
         except Package.DoesNotExist:
             config = None
 
@@ -61,7 +62,7 @@ class DistroIntegrationForm(forms.Form):
         config = DistroBuildCfg(
             version=self.cleaned_data['version'],
             run_id=self.cleaned_data['run_id'],
-            distro=self.cleaned_data['distro'],
+            package_name=self.cleaned_data['distro'],
             epoch=self.cleaned_data['epoch'],
             artifact_name=self.cleaned_data['artifact_name'],
             github_token=conf.settings.GITHUB_TOKEN,

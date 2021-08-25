@@ -7,7 +7,6 @@
 # ----------------------------------------------------------------------------
 
 from dataclasses import dataclass
-from typing import List
 
 from celery import chain, group, shared_task
 from celery.utils.log import get_task_logger
@@ -38,19 +37,17 @@ class BuildCfg:
     # treat this class like an ABC, please.
     github_token: str
     run_id: str
-    package_name: str
     artifact_name: str
+    package_name: str
 
 
 @dataclass(frozen=True)
 class PackageBuildCfg(BuildCfg):
     version: str
-    distro: str
-    pr_number: int
     repository: str
     build_target: str
     package_token: str
-    epochs: List[str]
+    epoch: str
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
@@ -61,7 +58,6 @@ class PackageBuildCfg(BuildCfg):
 @dataclass(frozen=True)
 class DistroBuildCfg(BuildCfg):
     version: str
-    distro: str
     epoch: str
     pr_number: int
     # TODO: names? Are these even necessary?
@@ -71,7 +67,9 @@ class DistroBuildCfg(BuildCfg):
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
         object.__setattr__(self, 'gate', 'staged')
-        object.__setattr__(self, 'pr_url', 'https://github/%s/%s/pull/%d/' % (self.owner, self.repo, self.pr_number))
+        object.__setattr__(self, 'distro', self.package_name)
+        object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d/' %
+                           (self.owner, self.repo, self.pr_number))
         object.__setattr__(self, 'to_channel',
                            str(conf.settings.BASE_CONDA_PATH / self.epoch / self.gate / self.distro))
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
@@ -108,17 +106,19 @@ def reindex_conda_channels():
 
 
 @shared_task(name='pipeline.handle_new_builds')
-def handle_new_package_build(cfg: PackageBuildCfg):
+def handle_new_package_build(initial_data):
     chains = []
-    for epoch in cfg.epochs:
+    epochs = initial_data.pop('epochs')
+    for epoch in epochs:
         # TODO: move this comment up
         # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
         # this is where any chain-specific dynamic state should live (ids, urls, etc)
         ctx = dict()
+        cfg = PackageBuildCfg(epoch=epoch, **initial_data)
 
         chain_link = chain(
             # explicitly pass ctx into the first subtask in the chain
-            db.create_package_build_record_and_update_package.s(ctx, cfg, epoch),
+            db.create_package_build_record_and_update_package.s(ctx, cfg),
             # ctx is implicitly applied as first arg for every other subtask in the chain
             packages.fetch_package_from_github.s(cfg),
             db.mark_uploaded_package.s(cfg),

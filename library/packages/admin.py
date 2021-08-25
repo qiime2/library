@@ -12,6 +12,9 @@ from django.utils.html import format_html
 from .models import Package, PackageBuild, Distro, Epoch, DistroBuild
 
 
+# TODO: fix up list views
+
+
 def url_helper(instance, field):
     url = getattr(instance, field)
     return format_html(f'<a href="{url}" target="_blank">{url}</a>')
@@ -111,6 +114,7 @@ class EpochAdmin(admin.ModelAdmin):
     inlines = [DistroInline]
 
 
+# TODO: show associated package builds
 class DistroBuildAdmin(admin.ModelAdmin):
     fields = ('version', 'github_run_id', 'distro_name', 'linux_64', 'osx_64',
               'clickable_integration_pr_url')

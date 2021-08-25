@@ -66,8 +66,8 @@ class PackageBuild(AuditModel):
     objects = PackageBuildQuerySet.as_manager()
 
     def __str__(self):
-        return 'PackageBuild<github_run_id=%s, version=%s, epoch=%s, build_target=%s>' % (
-            self.github_run_id, self.version, self.epoch, self.build_target)
+        return 'PackageBuild<github_run_id=%s, version=%s, epoch_name=%s, build_target=%s>' % (
+            self.github_run_id, self.version, self.epoch_name, self.build_target)
 
 
 class Distro(AuditModel):

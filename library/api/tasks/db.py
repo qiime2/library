@@ -31,7 +31,7 @@ def celery_backend_cleanup():
 
 
 @shared_task(name='db.create_package_build_record_and_update_package')
-def create_package_build_record_and_update_package(ctx, cfg: 'PackageBuildCfg', epoch):  # noqa: F821
+def create_package_build_record_and_update_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
     package_record = Package.objects.get(token=cfg.package_token)
     package_record.name = cfg.package_name
     package_record.repository = cfg.repository
@@ -42,20 +42,17 @@ def create_package_build_record_and_update_package(ctx, cfg: 'PackageBuildCfg', 
         github_run_id=cfg.run_id,
         version=cfg.version,
         # TODO
-        epoch=epoch,
+        epoch_name=cfg.epoch,
         build_target=cfg.build_target,
     )
 
-    ctx['package_build_record'] = package_build_record.pk
+    ctx['package_build_record'] = str(package_build_record.pk)
 
     return ctx
 
 
 @shared_task(name='db.mark_uploaded_package')
 def mark_uploaded_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
-    if 'uploaded' not in ctx:
-        raise Exception('mark_uploaded_package called before reindex_conda_server')
-
     pk = ctx['package_build_record']
     package_build_record = PackageBuild.objects.get(pk=pk)
 
@@ -71,9 +68,6 @@ def mark_uploaded_package(ctx, cfg: 'PackageBuildCfg'):  # noqa: F821
 
 @shared_task(name='db.mark_uploaded_distro')
 def mark_uploaded_distro(ctx, cfg: 'DistroBuildCfg'):  # noqa: F821
-    if 'uploaded' not in ctx:
-        raise Exception('mark_uploaded_distro called before reindex_conda_server')
-
     pk = ctx['distro_build_record']
     distro_build_record = DistroBuild.objects.get(pk=pk)
 
