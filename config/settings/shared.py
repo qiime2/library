@@ -147,7 +147,7 @@ def generate_beat_schedule(TASK_TIMES):
 
 
 CELERY_BEAT_SCHEDULE = generate_beat_schedule(TASK_TIMES)
-# TODO: change this
+# TODO: change this to qiime2/package-integration-dev
 INTEGRATION_REPO = {
     'owner': 'thermokarst',
     'repo': 'package-integration',

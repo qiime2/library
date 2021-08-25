@@ -27,7 +27,6 @@ def fetch_package_from_github(ctx: Union['PackageBuildCtx', 'DistroBuildCtx'], c
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp_pathlib = pathlib.Path(tmpdir)
 
-        # TODO: make this constructor accept these new dataclasses
         mgr = utils.GitHubArtifactManager(cfg.github_token, cfg.repository, cfg.run_id, cfg.artifact_name, tmp_pathlib)
         tmp_filepaths = mgr.sync()
 

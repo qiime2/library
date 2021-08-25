@@ -23,15 +23,13 @@ logger = get_task_logger(__name__)
 # NOTES:
 # 1. All periodic tasks should be registered in
 #    `config.settings.shared.generate_beat_schedule`
-# 2. All tasks should take a context variable as the first argument, this should
-#    be a dict to play nicely with other tasks.
+# 2. All tasks should take a context variable as the first argument.
 # 3. All tasks should be prefixed with a queue (e.g. `git`, `db`, etc). This
 #    will allow for appropriate worker delegation.
 # 4. All tasks that interact directly with the database must run in `db` queue.
 # 5. All tasks that interact with packages.qiime2.org must run in the `packages` queue.
 # 6. If a task generates a lot of noisy results that aren't important, make sure to
 #    add it to `db.clean_up_reindex_tasks`.
-
 
 @dataclass(frozen=True)
 class BuildCfg:
@@ -61,7 +59,6 @@ class DistroBuildCfg(BuildCfg):
     version: str
     epoch_name: str
     pr_number: int
-    # TODO: names? Are these even necessary?
     owner: str
     repo: str
 
@@ -144,9 +141,6 @@ def handle_new_package_build(initial_data):
     chains = []
     epoch_names = initial_data.pop('epoch_names')
     for epoch_name in epoch_names:
-        # TODO: move this comment up
-        # `ctx` is implicitly passed as the first arg to each sub-task in the chain,
-        # this is where any chain-specific dynamic state should live (ids, urls, etc)
         ctx = PackageBuildCtx()
         cfg = PackageBuildCfg(epoch_name=epoch_name, **initial_data)
 

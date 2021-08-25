@@ -46,24 +46,24 @@ class GitHubArtifactManager:
 
     def validate_config(self):
         if self.github_token == '':
-            raise Exception('TODO1')
+            raise Exception('Missing Github Token')
 
         if self.github_repository == '':
-            raise Exception('TODO2')
+            raise Exception('Missing Github Repository')
         parts = self.github_repository.split('/')
         if len(parts) != 2:
-            raise Exception('TODO3')
+            raise Exception('Invalid Github Repository Format')
         org, repo = parts
         if org == '':
-            raise Exception('TODO4')
+            raise Exception('Missing Github Org/Name')
         if repo == '':
-            raise Exception('TODO5')
+            raise Exception('Missing Github Repo')
 
         if self.run_id == '':
-            raise Exception('TODO6')
+            raise Exception('Missing Github Actions Run ID')
 
         if self.artifact_name == '':
-            raise Exception('TODO7')
+            raise Exception('Missing Artifact Name')
 
     def build_request(self, url, headers=None):
         request = urllib.request.Request(url)
@@ -84,7 +84,7 @@ class GitHubArtifactManager:
 
     def fetch_binary_file(self, url, download_pathlib):
         if download_pathlib.exists():
-            raise Exception('TODO9')
+            raise Exception('Attempting to overwrite file that already exists')
 
         try:
             request = self.build_request(url)
@@ -112,10 +112,11 @@ class GitHubArtifactManager:
                 if record['size_in_bytes'] <= 100000000:
                     filtered_records.append(record)
                 else:
-                    raise Exception('TODO10')
+                    raise Exception('Artifact size too large')
 
         if len(filtered_records) != 1:
-            raise GitHubNotReadyException('TODO11: %r' % (filtered_records, ))
+            raise GitHubNotReadyException('Incorrect number of filtered records: %r' %
+                                          (filtered_records, ))
 
         return filtered_records
 
@@ -164,7 +165,7 @@ def advisory_lock(lock_id):
 class IntegrationGitRepoManager:
     def __init__(self, github_token):
         if github_token == '':
-            raise Exception('TODO12')
+            raise Exception('Missing Github Token')
 
         self.github_token = github_token
 
@@ -177,32 +178,32 @@ class IntegrationGitRepoManager:
         if self.ghapi is None:
             self.ghapi = GhApi(token=self.github_token)
 
-    def path_builder(self, release, gate, fn, distro=None):
+    def path_builder(self, epoch, gate, fn, distro=None):
         if distro is None:
-            parts = [release, gate, fn]
+            parts = [epoch, gate, fn]
         else:
-            parts = [release, gate, distro, fn]
+            parts = [epoch, gate, distro, fn]
         return os.path.join(*parts)
 
-    def update_conda_build_config(self, branch, release, gate, package_versions):
+    def update_conda_build_config(self, branch, epoch, gate, package_versions):
         if branch == '':
-            raise Exception('TODO13')
+            raise Exception('Missing branch')
 
-        if release == '':
-            raise Exception('TODO14')
+        if epoch == '':
+            raise Exception('Missing epoch name')
 
-        if gate not in ('tested', 'staged', 'released'):
-            raise Exception('TODO15')
+        if gate not in ('tested', 'staged', 'epochd'):
+            raise Exception('Incorrect gate')
 
         if len(package_versions) < 1:
-            raise Exception('TODO16')
+            raise Exception('Missing package versions')
 
         with advisory_lock(42) as lock:
             if lock:
                 # Wait until we get a lock before setting up ghapi
                 self.construct_interface()
                 for distro, package_versions in package_versions.items():
-                    path = self.path_builder(release=release,
+                    path = self.path_builder(epoch=epoch,
                                              gate=gate,
                                              fn='conda_build_config.yaml',
                                              distro=distro)
@@ -214,9 +215,9 @@ class IntegrationGitRepoManager:
                         if package_name in cbc:
                             last_versions = cbc[package_name]
                             if len(last_versions) != 1:
-                                raise Exception('TODO17')
+                                raise Exception('Incorrect number of versions')
                             if compare_package_versions(ver, last_versions[0]):
-                                raise Exception('TODO18')
+                                raise Exception('Package version confusion')
                         cbc[package_name] = [ver]
                         msg += '- %s ==%s\n' % (package_name, ver)
                     self.add_branch_if_missing(branch)
@@ -277,12 +278,12 @@ class IntegrationGitRepoManager:
             branch=branch
         )
 
-    def update_distro_metapackage_recipe(self, release, gate, distro, packages, branch):
-        path = self.path_builder(release=release, gate=gate, fn='data.yaml', distro=distro)
+    def update_distro_metapackage_recipe(self, epoch, gate, distro, packages, branch):
+        path = self.path_builder(epoch=epoch, gate=gate, fn='data.yaml', distro=distro)
         msg = 'updating %s\n\n' % (path,)
         data, sha = self.fetch_yaml_from_github(path)
         if 'run' not in data:
-            raise Exception('TODO19')
+            raise Exception('Something went wrong fetching YAML from GH')
         run_reqs = copy.deepcopy(data['run'])
         run_reqs = set(run_reqs)
         changes = False
@@ -295,15 +296,15 @@ class IntegrationGitRepoManager:
             data['run'] = sorted(run_reqs)
             self.commit_to_github(data, sha, path, msg, branch)
 
-    def update_integration(self, branch, release, gate, package_versions):
+    def update_integration(self, branch, epoch, gate, package_versions):
         self.construct_interface()
-        self.update_conda_build_config(branch, release, gate, package_versions)
+        self.update_conda_build_config(branch, epoch, gate, package_versions)
 
         for distro, pkg_vers in package_versions.items():
             if distro is None:
-                raise Exception('TODO20')
+                raise Exception('Missing distro name')
             packages = set(pkg_vers.keys())
-            self.update_distro_metapackage_recipe(release, gate, distro, packages, branch)
+            self.update_distro_metapackage_recipe(epoch, gate, distro, packages, branch)
 
     def open_pr(self, branch, pr_msg):
         self.construct_interface()
@@ -339,7 +340,7 @@ class IntegrationGitRepoManager:
             )
 
             if not payload['merged']:
-                raise Exception('TODO21')
+                raise Exception('Something went wrong merging PR')
 
 
 def compare_package_versions(a, b):

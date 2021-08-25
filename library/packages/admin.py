@@ -46,8 +46,7 @@ class PackageBuildInline(admin.TabularInline):
         return False
 
 
-# TODO
-class PackageBuildInline2(admin.TabularInline):
+class PackageBuildInlineDistroBuild(admin.TabularInline):
     model = DistroBuild.package_builds.through
     extra = 0
     can_delete = False
@@ -163,7 +162,7 @@ class DistroBuildAdmin(admin.ModelAdmin):
     readonly_fields = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
                        'clickable_integration_pr_url', 'created_at', 'updated_at')
     ordering = ('-updated_at',)
-    inlines = [PackageBuildInline2]
+    inlines = [PackageBuildInlineDistroBuild]
 
     def has_add_permission(self, request):
         return False
