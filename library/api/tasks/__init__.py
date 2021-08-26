@@ -75,13 +75,14 @@ class DistroBuildCfg(BuildCfg):
 
 @dataclass
 class PackageBuildCtx:
-    package_build_pk: Optional[str] = None
+    pk: Optional[str] = None
     not_all_architectures_present: bool = True
 
 
 @dataclass
 class DistroBuildCtx:
-    distro_build_pk: Optional[str] = None
+    pk: Optional[str] = None
+    not_all_architectures_present: bool = True
 
 
 @dataclass
@@ -150,7 +151,7 @@ def handle_new_package_build(initial_data):
             # ctx is implicitly applied as first arg for every other subtask in the chain
             packages.fetch_package_from_github.s(cfg),
             db.mark_uploaded_package.s(cfg),
-            db.verify_all_architectures_present.s(cfg),
+            db.verify_all_architectures_present.s(),
             git.update_conda_build_config.s(cfg),
         )
         chains.append(chain_link)
@@ -168,12 +169,13 @@ def handle_new_distro_build(cfg: DistroBuildCfg):
         db.get_or_create_and_update_distro_build_record.s(ctx, cfg),
         # ctx is implicitly applied as first arg for every other subtask in the chain
         packages.fetch_package_from_github.s(cfg),
+        db.mark_uploaded_distro.s(cfg),
+        db.verify_all_architectures_present.s(),
         # TODO: Circle back on this. For now we'll just include the `tested` channel
         # in any attempts to install. This might be a better periodic task.
         # find_packages_to_copy.s(),
         # copy_conda_packages.s(from_channel, to_channel),
         git.merge_integration_pr.s(cfg),
-        db.mark_uploaded_distro.s(cfg),
     )
 
     return tasks.apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])

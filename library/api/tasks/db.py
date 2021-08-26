@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------------
 
 import datetime
+from typing import Union
 
 from celery import shared_task
 from django_celery_results.models import TaskResult
@@ -48,14 +49,14 @@ def create_package_build_record_and_update_package(ctx: 'PackageBuildCtx',  # no
         build_target=cfg.build_target,
     )
 
-    ctx.package_build_pk = str(package_build_record.pk)
+    ctx.pk = str(package_build_record.pk)
 
     return ctx
 
 
 @shared_task(name='db.mark_uploaded_package')
 def mark_uploaded_package(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # noqa: F821
-    package_build_record = PackageBuild.objects.get(pk=ctx.package_build_pk)
+    package_build_record = PackageBuild.objects.get(pk=ctx.pk)
 
     if cfg.artifact_name not in ('linux-64', 'osx-64'):
         raise Exception('unknown build type')
@@ -69,7 +70,7 @@ def mark_uploaded_package(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # no
 
 @shared_task(name='db.mark_uploaded_distro')
 def mark_uploaded_distro(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
-    distro_build_record = DistroBuild.objects.get(pk=ctx.distro_build_pk)
+    distro_build_record = DistroBuild.objects.get(pk=ctx.pk)
 
     if 'linux' in cfg.artifact_name:
         distro_build_record.linux_64 = True
@@ -84,11 +85,16 @@ def mark_uploaded_distro(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa:
 
 
 @shared_task(name='db.verify_all_architectures_present')
-def verify_all_architectures_present(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # noqa: F821
-    package_build_record = PackageBuild.objects.get(pk=ctx.package_build_pk)
-    linux_64 = getattr(package_build_record, 'linux_64_%s' % (cfg.gate,))
-    osx_64 = getattr(package_build_record, 'osx_64_%s' % (cfg.gate,))
-    if linux_64 and osx_64:
+def verify_all_architectures_present(ctx: Union['PackageBuildCtx',  # noqa: F821
+                                                'DistroBuildCtx']):  # noqa: F821
+    model = {
+        'PackageBuildCtx': PackageBuild,
+        'DistroBuildCtx': DistroBuild,
+    }[str(type(ctx).__name__)]
+
+    build_record = model.objects.get(pk=ctx.pk)
+    if build_record.linux_64 and build_record.osx_64:
+        # I know, double-negative is weird here...
         ctx.not_all_architectures_present = False
 
     return ctx
@@ -98,11 +104,19 @@ def verify_all_architectures_present(ctx: 'PackageBuildCtx', cfg: 'PackageBuildC
 def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
     package_builds = dict()
     distro_build_pks = list()
+
+    epoch = Epoch.objects.get(name=ctx.epoch_name)
+
     for distro in Distro.objects.all():
         package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch_name, distro)
         package_build_records = list(package_build_records)
         if len(package_build_records) > 0:
-            distro_build_record = DistroBuild(distro=distro)
+            distro_build_record, _ = DistroBuild.objects.get_or_create(
+                distro=distro,
+                epoch=epoch,
+                # TODO: need to perform a version-check to make sure we aren't downgrading on accident
+                pr_url='',
+            )
             distro_build_record.save()
             pbrs = [r['id'] for r in package_build_records]
             distro_build_record.package_builds.set(pbrs)
@@ -129,7 +143,8 @@ def update_distro_build_records_integration_pr_url(ctx: 'HandlePRsCtx'):  # noqa
         for pk in ctx.distro_build_pks:
             distro_build_record = DistroBuild.objects.get(pk=pk)
             if distro_build_record.pr_url != '':
-                raise Exception('a pr already exists for this distro build')
+                raise Exception('a pr already exists for this distro build: %s vs %s' %
+                                (distro_build_record.pr_url, ctx.pr_url))
             distro_build_record.pr_url = ctx.pr_url
             distro_build_record.save()
 
@@ -141,10 +156,12 @@ def get_or_create_and_update_distro_build_record(ctx: 'DistroBuildCtx', cfg: 'Di
     # NOTE: it is possible for a PR to be created manually, which means
     # there aren't any specifically associated PackageBuild records, or
     # preexisting DistroBuild records.
-    distro_record = Distro.objects.get(name=cfg.distro_name)
+    distro = Distro.objects.get(name=cfg.distro_name)
+    epoch = Epoch.objects.get(name=cfg.epoch_name)
 
     record, _ = DistroBuild.objects.get_or_create(
-        distro=distro_record,
+        distro=distro,
+        epoch=epoch,
         pr_url=cfg.pr_url,
     )
 
@@ -152,6 +169,6 @@ def get_or_create_and_update_distro_build_record(ctx: 'DistroBuildCtx', cfg: 'Di
     record.github_run_id = cfg.run_id
     record.save()
 
-    ctx.distro_build_pk = str(record.pk)
+    ctx.pk = str(record.pk)
 
     return ctx

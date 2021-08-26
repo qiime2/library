@@ -109,6 +109,7 @@ class Epoch(AuditModel):
 class DistroBuild(AuditModel):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     distro = models.ForeignKey('Distro', on_delete=models.CASCADE, related_name='distro_builds')
+    epoch = models.ForeignKey('Epoch', on_delete=models.CASCADE, related_name='distro_builds')
     version = models.CharField(max_length=255)
     github_run_id = models.CharField(max_length=100, verbose_name='Github Run ID')
     linux_64 = models.BooleanField(default=False, verbose_name='Linux 64 Package?')
@@ -126,7 +127,7 @@ class DistroBuild(AuditModel):
 
     class Meta:
         verbose_name = 'Distro Build'
-        unique_together = ['distro', 'pr_url']
+        unique_together = ['distro', 'pr_url', 'epoch']
 
 
 # ### BRIDGE TABLES

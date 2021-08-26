@@ -21,6 +21,8 @@ class DistroBuildInline(admin.TabularInline):
     model = PackageBuild.distro_builds.through
     extra = 0
     can_delete = False
+    verbose_name = 'Distro Build'
+    verbose_name_plural = 'Distro Builds'
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -154,12 +156,12 @@ class EpochAdmin(admin.ModelAdmin):
 
 
 class DistroBuildAdmin(admin.ModelAdmin):
-    list_display_links = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64')
-    list_display = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
+    list_display_links = ('distro', 'epoch', 'version', 'github_run_id', 'linux_64', 'osx_64')
+    list_display = ('distro', 'epoch', 'version', 'github_run_id', 'linux_64', 'osx_64',
                     'clickable_integration_pr_url', 'created_at', 'updated_at')
-    fields = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
+    fields = ('distro', 'version', 'github_run_id', 'epoch', 'linux_64', 'osx_64',
               'clickable_integration_pr_url', 'created_at', 'updated_at')
-    readonly_fields = ('version', 'github_run_id', 'distro', 'linux_64', 'osx_64',
+    readonly_fields = ('distro', 'epoch', 'version', 'github_run_id', 'linux_64', 'osx_64',
                        'clickable_integration_pr_url', 'created_at', 'updated_at')
     ordering = ('-updated_at',)
     inlines = [PackageBuildInlineDistroBuild]

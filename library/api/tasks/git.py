@@ -59,7 +59,9 @@ def open_pull_request(ctx: 'HandlePRsCtx'):  # noqa: F821
              max_retries=12, retry_backoff=conf.settings.TASK_TIMES['03_MIN'],
              retry_backoff_max=conf.settings.TASK_TIMES['02_HR'])
 def merge_integration_pr(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
-    # TODO?
+    if ctx.not_all_architectures_present:
+        return ctx
+
     mgr = utils.IntegrationGitRepoManager(cfg.github_token)
     mgr.merge_integration_pr(cfg.pr_number)
 

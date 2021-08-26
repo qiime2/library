@@ -53,7 +53,7 @@ class GitHubArtifactManager:
             raise Exception('Missing Github Repository')
         parts = self.github_repository.split('/')
         if len(parts) != 2:
-            raise Exception('Invalid Github Repository Format')
+            raise Exception('Invalid Github Repository Format: %s' % (self.github_repository,))
         org, repo = parts
         if org == '':
             raise Exception('Missing Github Org/Name')
@@ -85,7 +85,7 @@ class GitHubArtifactManager:
 
     def fetch_binary_file(self, url, download_pathlib):
         if download_pathlib.exists():
-            raise Exception('Attempting to overwrite file that already exists')
+            raise Exception('Attempting to overwrite file that already exists: %s' % (download_pathlib,))
 
         try:
             request = self.build_request(url)
@@ -113,7 +113,7 @@ class GitHubArtifactManager:
                 if record['size_in_bytes'] <= 100000000:
                     filtered_records.append(record)
                 else:
-                    raise Exception('Artifact size too large')
+                    raise Exception('Artifact size too large: %d' % (record['size_in_bytes'],))
 
         if len(filtered_records) != 1:
             raise GitHubNotReadyException('Incorrect number of filtered records: %r' %
@@ -193,8 +193,8 @@ class IntegrationGitRepoManager:
         if epoch == '':
             raise Exception('Missing epoch name')
 
-        if gate not in ('tested', 'staged', 'epochd'):
-            raise Exception('Incorrect gate')
+        if gate not in ('tested', 'staged', 'released'):
+            raise Exception('Incorrect gate: %s' % (gate,))
 
         if len(package_versions) < 1:
             raise Exception('Missing package versions')
@@ -376,7 +376,7 @@ def find_packages_ready_for_integration(package_build_records):
                 package_versions[distro][package_name] = version
                 package_build_pks.add(pk)
 
-    return package_versions, package_build_pks
+    return dict(package_versions), package_build_pks
 
 
 def filter_release_package_versions(package_versions):
@@ -386,4 +386,4 @@ def filter_release_package_versions(package_versions):
             if is_release_package(pkg_version):
                 filtered[distro][pkg_name] = pkg_version
 
-    return filtered
+    return dict(filtered)
