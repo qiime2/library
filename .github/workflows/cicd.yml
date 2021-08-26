@@ -71,6 +71,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: scream
         AWS_SES_REGION_NAME: for
         AWS_SES_REGION_ENDPOINT: icecream
+        INTEGRATION_REPO_TOKEN: i-scream-for-ice-spleen
       shell: bash -l {0}
       run: |
         flake8
