@@ -43,10 +43,10 @@ def open_pull_request(ctx: 'HandlePRsCtx'):  # noqa: F821
     mgr = utils.IntegrationGitRepoManager(ctx.github_token)
     mgr.update_integration(branch, ctx.epoch_name, 'staged', ctx.package_versions)
 
-    # released
-    release_package_versions = utils.filter_release_package_versions(ctx.package_versions)
-    if len(release_package_versions) > 0:
-        mgr.update_integration(branch, ctx.epoch_name, 'released', release_package_versions)
+    # TODO: released
+    # release_package_versions = utils.filter_release_package_versions(ctx.package_versions)
+    # if len(release_package_versions) > 0:
+    #     mgr.update_integration(branch, ctx.epoch_name, 'released', release_package_versions)
 
     pr_url = mgr.open_pr(branch, '%s staged' % (ctx.epoch_name, ))
     ctx.pr_url = pr_url

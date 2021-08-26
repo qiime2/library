@@ -103,3 +103,5 @@ RABBITMQ_URL = env('RABBITMQ_URL')
 # We want to use the rmq url set by dokku
 CELERY_BROKER_URL = env('RABBITMQ_URL')
 CONDA_ASSET_PATH = '/data/'
+INTEGRATION_REPO['owner'] = 'qiime2'
+INTEGRATION_REPO['token'] = env('INTEGRATION_REPO_TOKEN')

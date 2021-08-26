@@ -114,7 +114,6 @@ def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
             distro_build_record, _ = DistroBuild.objects.get_or_create(
                 distro=distro,
                 epoch=epoch,
-                # TODO: need to perform a version-check to make sure we aren't downgrading on accident
                 pr_url='',
             )
             distro_build_record.save()
