@@ -99,8 +99,7 @@ class Epoch(AuditModel):
     objects = EpochQuerySet.as_manager()
 
     def __str__(self):
-        return 'Epoch<name=%s, is_dev=%s, include_in_ci=%s>' % (
-            self.name, self.is_dev, self.include_in_ci)
+        return 'Epoch<%s>' % (self.name,)
 
     class Meta:
         verbose_name = 'Epoch'
