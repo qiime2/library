@@ -76,7 +76,7 @@ class PackageAdmin(admin.ModelAdmin):
     list_display = ('name', 'token', 'repository', 'created_at', 'updated_at')
     fields = ('name', 'token', 'repository', 'created_at', 'updated_at')
     readonly_fields = ('token', 'created_at', 'updated_at')
-    inlines = [PackageBuildInline, DistroInline]
+    inlines = [DistroInline, PackageBuildInline]
     ordering = ('-updated_at',)
 
     def get_readonly_fields(self, request, obj=None):
