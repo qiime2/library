@@ -20,6 +20,10 @@ from library.packages.models import Epoch
 logger = get_task_logger(__name__)
 
 
+GATE_TESTED = 'tested'
+GATE_STAGED = 'staged'
+
+
 # NOTES:
 # 1. All periodic tasks should be registered in
 #    `config.settings.shared.generate_beat_schedule`
@@ -50,7 +54,7 @@ class PackageBuildCfg(BuildCfg):
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
-        object.__setattr__(self, 'gate', 'tested')
+        object.__setattr__(self, 'gate', GATE_TESTED)
         object.__setattr__(self, 'to_channel', str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate))
 
 
@@ -65,12 +69,12 @@ class DistroBuildCfg(BuildCfg):
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
-        object.__setattr__(self, 'gate', 'staged')
+        object.__setattr__(self, 'gate', GATE_STAGED)
         object.__setattr__(self, 'distro_name', self.package_name)
         object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d' %
                            (self.owner, self.repo, self.pr_number))
         object.__setattr__(self, 'from_channel',
-                           str(conf.settings.BASE_CONDA_PATH / self.epoch_name / 'tested'))
+                           str(conf.settings.BASE_CONDA_PATH / self.epoch_name / GATE_TESTED))
         object.__setattr__(self, 'to_channel',
                            str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate / self.distro_name))
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
