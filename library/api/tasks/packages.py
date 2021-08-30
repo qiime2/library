@@ -45,7 +45,8 @@ def fetch_package_from_github(ctx: Union['PackageBuildCtx', 'DistroBuildCtx'], c
 
 
 @shared_task(name='packages.reindex_conda_channel')
-def reindex_conda_channel(channel, channel_name):
+def reindex_conda_channel(ctx, channel, channel_name):
+    # NOTE: ctx unused here, but we need an arg for it for task chaining
     utils.bootstrap_pkgs_dir(channel)
 
     conda_config = conda_build.api.Config(verbose=False)
@@ -55,6 +56,8 @@ def reindex_conda_channel(channel, channel_name):
         threads=1,
         channel_name=channel_name,
     )
+
+    return ctx
 
 
 @shared_task(name='packages.find_packages_to_copy')
