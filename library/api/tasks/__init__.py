@@ -61,6 +61,7 @@ class DistroBuildCfg(BuildCfg):
     pr_number: int
     owner: str
     repo: str
+    package_versions: Dict[str, str] = field(default_factory=dict)
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
@@ -68,6 +69,8 @@ class DistroBuildCfg(BuildCfg):
         object.__setattr__(self, 'distro_name', self.package_name)
         object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d' %
                            (self.owner, self.repo, self.pr_number))
+        object.__setattr__(self, 'from_channel',
+                           str(conf.settings.BASE_CONDA_PATH / self.epoch_name / 'tested'))
         object.__setattr__(self, 'to_channel',
                            str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate / self.distro_name))
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
@@ -83,6 +86,7 @@ class PackageBuildCtx:
 class DistroBuildCtx:
     pk: Optional[str] = None
     not_all_architectures_present: bool = True
+    pkg_fns: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -171,10 +175,8 @@ def handle_new_distro_build(cfg: DistroBuildCfg):
         packages.fetch_package_from_github.s(cfg),
         db.mark_uploaded_distro.s(cfg),
         db.verify_all_architectures_present.s(),
-        # TODO: Circle back on this. For now we'll just include the `tested` channel
-        # in any attempts to install. This might be a better periodic task.
-        # find_packages_to_copy.s(),
-        # copy_conda_packages.s(from_channel, to_channel),
+        packages.find_packages_to_copy.s(cfg),
+        packages.copy_conda_packages.s(cfg),
         git.merge_integration_pr.s(cfg),
     )
 

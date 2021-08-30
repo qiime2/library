@@ -58,14 +58,27 @@ def reindex_conda_channel(channel, channel_name):
 
 
 @shared_task(name='packages.find_packages_to_copy')
-def find_packages_to_copy(ctx):
-    # TODO: Circle back on this. For now we'll just include the `tested` channel
-    # in any attempts to install.
+def find_packages_to_copy(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
+    fns = []
+    for pkg, ver in cfg.package_versions.items():
+        base_dir = pathlib.Path(ctx.from_path)
+        fn_pair = [fn.relative_to(base_dir) for fn in base_dir.glob('**/%s*%s*' % (pkg, ver))]
+        if len(fn_pair) != 2:  # 2 bc one osx, one linux
+            raise Exception('Incorrect number of file matches: %r' % (fn_pair,))
+        fns.extend(fn_pair)
+
+    ctx.pkg_fns = fns
+
     return ctx
 
 
 @shared_task(name='packages.copy_conda_packages')
-def copy_conda_packages(ctx, from_channel, to_channel):
-    # TODO: Circle back on this. For now we'll just include the `tested` channel
-    # in any attempts to install.
+def copy_conda_packages(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
+    from_path = pathlib.Path(ctx.from_path)
+    to_path = pathlib.Path(ctx.to_path)
+
+    for fn in ctx.pkg_fns:
+        shutil.copy(from_path / fn,
+                    to_path / fn)
+
     return ctx

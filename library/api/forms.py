@@ -53,6 +53,8 @@ class DistroIntegrationForm(forms.Form):
     epoch = forms.CharField(required=True)
     artifact_name = forms.CharField(required=True)
     pr_number = forms.IntegerField(required=True)
+    # TODO: make this required
+    package_versions = forms.JSONField(required=False)
 
     def is_authorized(self):
         token = conf.settings.INTEGRATION_REPO['token']
@@ -69,6 +71,7 @@ class DistroIntegrationForm(forms.Form):
             pr_number=self.cleaned_data['pr_number'],
             owner=conf.settings.INTEGRATION_REPO['owner'],
             repo=conf.settings.INTEGRATION_REPO['repo'],
+            package_versions=self.cleaned_data['package_versions'],
         )
 
         return config
