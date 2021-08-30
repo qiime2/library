@@ -59,10 +59,13 @@ def reindex_conda_channel(channel, channel_name):
 
 @shared_task(name='packages.find_packages_to_copy')
 def find_packages_to_copy(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
+    if ctx.not_all_architectures_present:
+        return ctx
+
     fns = []
     for pkg, ver in cfg.package_versions.items():
-        base_dir = pathlib.Path(ctx.from_path)
-        fn_pair = [fn.relative_to(base_dir) for fn in base_dir.glob('**/%s*%s*' % (pkg, ver))]
+        base_dir = pathlib.Path(cfg.from_channel)
+        fn_pair = [str(fn.relative_to(base_dir)) for fn in base_dir.glob('**/%s*%s*.tar.bz2' % (pkg, ver))]
         if len(fn_pair) != 2:  # 2 bc one osx, one linux
             raise Exception('Incorrect number of file matches: %r' % (fn_pair,))
         fns.extend(fn_pair)
@@ -74,8 +77,11 @@ def find_packages_to_copy(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa
 
 @shared_task(name='packages.copy_conda_packages')
 def copy_conda_packages(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
-    from_path = pathlib.Path(ctx.from_path)
-    to_path = pathlib.Path(ctx.to_path)
+    if ctx.not_all_architectures_present:
+        return ctx
+
+    from_path = pathlib.Path(cfg.from_channel)
+    to_path = pathlib.Path(cfg.to_channel)
 
     for fn in ctx.pkg_fns:
         shutil.copy(from_path / fn,
