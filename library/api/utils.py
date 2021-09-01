@@ -10,6 +10,7 @@ import base64
 import collections
 import contextlib
 import copy
+import datetime
 import json
 import os
 from packaging import version
@@ -287,15 +288,13 @@ class IntegrationGitRepoManager:
             raise Exception('Something went wrong fetching YAML from GH')
         run_reqs = copy.deepcopy(data['run'])
         run_reqs = set(run_reqs)
-        changes = False
         for package in packages:
             if package not in data['run']:
                 run_reqs.add(package)
                 msg += '- %s\n' % (package,)
-                changes = True
-        if changes:
-            data['run'] = sorted(run_reqs)
-            self.commit_to_github(data, sha, path, msg, branch)
+        data['run'] = sorted(run_reqs)
+        data['version'] = datetime.datetime.utcnow().strftime('%Y.%m.%d.%H.%M.%S')
+        self.commit_to_github(data, sha, path, msg, branch)
 
     def update_integration(self, branch, epoch, gate, package_versions):
         self.construct_interface()
