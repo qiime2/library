@@ -34,7 +34,7 @@ def prepare_packages_for_integration(request):
 
 
 @csrf.csrf_exempt
-def finalize_integration(request):
+def stage_metapackage(request):
     if request.method != 'POST':
         payload = {'status': 'error', 'errors': {'http_method': 'invalid http method'}}
         return http.JsonResponse(payload, status=405)

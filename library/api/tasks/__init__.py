@@ -22,6 +22,7 @@ logger = get_task_logger(__name__)
 
 GATE_TESTED = 'tested'
 GATE_STAGED = 'staged'
+GATE_PASSED = 'passed'
 
 
 # NOTES:
@@ -132,7 +133,7 @@ def reindex_conda_channels():
             task = packages.reindex_conda_channel.s(
                 None,
                 str(conf.settings.BASE_CONDA_PATH / epoch.name / GATE_TESTED),
-                '%s-tested' % (epoch.name,),
+                '%s-%s' % (epoch.name, GATE_TESTED),
             )
             tasks.append(task)
 
@@ -140,7 +141,7 @@ def reindex_conda_channels():
                 task = packages.reindex_conda_channel.s(
                     None,
                     str(conf.settings.BASE_CONDA_PATH / epoch.name / GATE_STAGED / distro.name),
-                    '%s-%s-staged' % (epoch.name, distro.name),
+                    '%s-%s-%s' % (epoch.name, distro.name, GATE_STAGED),
                 )
                 tasks.append(task)
 
@@ -160,7 +161,7 @@ def handle_new_package_build(initial_data):
             db.create_package_build_record_and_update_package.s(ctx, cfg),
             # ctx is implicitly applied as first arg for every other subtask in the chain
             packages.fetch_package_from_github.s(cfg),
-            packages.reindex_conda_channel.s(cfg.to_channel, '%s-tested' % (cfg.epoch_name,)),
+            packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s' % (cfg.epoch_name, GATE_TESTED)),
             db.mark_uploaded_package.s(cfg),
             db.verify_all_architectures_present.s(),
             git.update_conda_build_config.s(cfg),
@@ -172,19 +173,17 @@ def handle_new_package_build(initial_data):
 
 @shared_task(name='pipeline.handle_new_distro_build')
 def handle_new_distro_build(cfg: DistroBuildCfg):
-    # TODO: handle release builds
-
     ctx = DistroBuildCtx()
     tasks = chain(
         # explicitly pass ctx into the first subtask in the chain
         db.get_or_create_and_update_distro_build_record.s(ctx, cfg),
         # ctx is implicitly applied as first arg for every other subtask in the chain
         packages.fetch_package_from_github.s(cfg),
-        packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s-staged' % (cfg.epoch_name, cfg.distro_name)),
         db.mark_uploaded_distro.s(cfg),
         db.verify_all_architectures_present.s(),
         packages.find_packages_to_copy.s(cfg),
         packages.copy_conda_packages.s(cfg),
+        packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s-%s' % (cfg.epoch_name, cfg.distro_name, GATE_STAGED)),
         git.merge_integration_pr.s(cfg),
     )
 

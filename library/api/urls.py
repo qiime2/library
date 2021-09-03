@@ -17,6 +17,6 @@ app_name = 'api'
 urlpatterns = [
     path('packages/', include([
         path('integrate/', views.prepare_packages_for_integration, name='package-integrate'),
-        path('finalize/', views.finalize_integration, name='package-finalize'),
+        path('stage/', views.stage_metapackage, name='package-stage'),
     ])),
 ]
