@@ -44,6 +44,9 @@ from .shared import (
     CELERY_TASK_ROUTES,
     GITHUB_TOKEN,
     INTEGRATION_REPO,
+    GATE_TESTED,
+    GATE_STAGED,
+    GATE_PASSED,
 
     generate_beat_schedule,
 )
@@ -90,6 +93,9 @@ __all__ = [
     'GITHUB_TOKEN',
     'BASE_CONDA_PATH',
     'INTEGRATION_REPO',
+    'GATE_TESTED',
+    'GATE_STAGED',
+    'GATE_PASSED',
 ]
 
 MIDDLEWARE.extend([

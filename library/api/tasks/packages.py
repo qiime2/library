@@ -87,7 +87,8 @@ def copy_conda_packages(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: 
     to_path = pathlib.Path(cfg.to_channel)
 
     for fn in ctx.pkg_fns:
-        shutil.copy(from_path / fn,
-                    to_path / fn)
+        to_dest = to_path / fn
+        if not to_dest.exists():
+            shutil.copy(from_path / fn, to_dest)
 
     return ctx

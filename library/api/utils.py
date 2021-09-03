@@ -194,7 +194,7 @@ class IntegrationGitRepoManager:
         if epoch == '':
             raise Exception('Missing epoch name')
 
-        if gate not in ('tested', 'staged', 'released'):
+        if gate not in (conf.settings.GATE_TESTED, conf.settings.GATE_STAGED):
             raise Exception('Incorrect gate: %s' % (gate,))
 
         if len(package_versions) < 1:

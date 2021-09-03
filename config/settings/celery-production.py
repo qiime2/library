@@ -45,6 +45,9 @@ from .shared import (
     GITHUB_TOKEN,
     BASE_CONDA_PATH,
     INTEGRATION_REPO,
+    GATE_TESTED,
+    GATE_STAGED,
+    GATE_PASSED,
 )
 
 
@@ -89,6 +92,9 @@ __all__ = [
     'GITHUB_TOKEN',
     'BASE_CONDA_PATH',
     'INTEGRATION_REPO',
+    'GATE_TESTED',
+    'GATE_STAGED',
+    'GATE_PASSED',
 ]
 
 DEBUG = False

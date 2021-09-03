@@ -20,11 +20,6 @@ from library.packages.models import Epoch
 logger = get_task_logger(__name__)
 
 
-GATE_TESTED = 'tested'
-GATE_STAGED = 'staged'
-GATE_PASSED = 'passed'
-
-
 # NOTES:
 # 1. All periodic tasks should be registered in
 #    `config.settings.shared.generate_beat_schedule`
@@ -55,7 +50,7 @@ class PackageBuildCfg(BuildCfg):
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
-        object.__setattr__(self, 'gate', GATE_TESTED)
+        object.__setattr__(self, 'gate', conf.settings.GATE_TESTED)
         object.__setattr__(self, 'to_channel', str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate))
 
 
@@ -66,16 +61,15 @@ class DistroBuildCfg(BuildCfg):
     pr_number: int
     owner: str
     repo: str
+    gate: str
+    from_channel: str
     package_versions: Dict[str, str] = field(default_factory=dict)
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
-        object.__setattr__(self, 'gate', GATE_STAGED)
         object.__setattr__(self, 'distro_name', self.package_name)
         object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d' %
                            (self.owner, self.repo, self.pr_number))
-        object.__setattr__(self, 'from_channel',
-                           str(conf.settings.BASE_CONDA_PATH / self.epoch_name / GATE_TESTED))
         object.__setattr__(self, 'to_channel',
                            str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate / self.distro_name))
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
@@ -132,16 +126,16 @@ def reindex_conda_channels():
         for epoch in Epoch.objects.by_build_target(build_target):
             task = packages.reindex_conda_channel.s(
                 None,
-                str(conf.settings.BASE_CONDA_PATH / epoch.name / GATE_TESTED),
-                '%s-%s' % (epoch.name, GATE_TESTED),
+                str(conf.settings.BASE_CONDA_PATH / epoch.name / conf.settings.GATE_TESTED),
+                '%s-%s' % (epoch.name, conf.settings.GATE_TESTED),
             )
             tasks.append(task)
 
             for distro in epoch.distros.all():
                 task = packages.reindex_conda_channel.s(
                     None,
-                    str(conf.settings.BASE_CONDA_PATH / epoch.name / GATE_STAGED / distro.name),
-                    '%s-%s-%s' % (epoch.name, distro.name, GATE_STAGED),
+                    str(conf.settings.BASE_CONDA_PATH / epoch.name / conf.settings.GATE_STAGED / distro.name),
+                    '%s-%s-%s' % (epoch.name, distro.name, conf.settings.GATE_STAGED),
                 )
                 tasks.append(task)
 
@@ -161,9 +155,9 @@ def handle_new_package_build(initial_data):
             db.create_package_build_record_and_update_package.s(ctx, cfg),
             # ctx is implicitly applied as first arg for every other subtask in the chain
             packages.fetch_package_from_github.s(cfg),
-            packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s' % (cfg.epoch_name, GATE_TESTED)),
+            packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s' % (cfg.epoch_name, conf.settings.GATE_TESTED)),
             db.mark_uploaded_package.s(cfg),
-            db.verify_all_architectures_present.s(),
+            db.verify_all_architectures_present.s(cfg),
             git.update_conda_build_config.s(cfg),
         )
         chains.append(chain_link)
@@ -179,12 +173,31 @@ def handle_new_distro_build(cfg: DistroBuildCfg):
         db.get_or_create_and_update_distro_build_record.s(ctx, cfg),
         # ctx is implicitly applied as first arg for every other subtask in the chain
         packages.fetch_package_from_github.s(cfg),
-        db.mark_uploaded_distro.s(cfg),
-        db.verify_all_architectures_present.s(),
+        db.mark_distro_gate.s(cfg),
+        db.verify_all_architectures_present.s(cfg),
         packages.find_packages_to_copy.s(cfg),
         packages.copy_conda_packages.s(cfg),
-        packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s-%s' % (cfg.epoch_name, cfg.distro_name, GATE_STAGED)),
+        packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s-%s' %
+                                         (cfg.epoch_name, cfg.distro_name, conf.settings.GATE_STAGED)),
         git.merge_integration_pr.s(cfg),
+    )
+
+    return tasks.apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])
+
+
+@shared_task(name='pipeline.handle_passed_distro_build')
+def handle_passed_distro_build(cfg: DistroBuildCfg):
+    ctx = DistroBuildCtx()
+    tasks = chain(
+        # explicitly pass ctx into the first subtask in the chain
+        db.get_or_create_and_update_distro_build_record.s(ctx, cfg),
+        # ctx is implicitly applied as first arg for every other subtask in the chain
+        db.mark_distro_gate.s(cfg),
+        db.verify_all_architectures_present.s(cfg),
+        packages.find_packages_to_copy.s(cfg),
+        packages.copy_conda_packages.s(cfg),
+        packages.reindex_conda_channel.s(cfg.to_channel, '%s-%s-%s' %
+                                         (cfg.epoch_name, cfg.distro_name, conf.settings.GATE_PASSED)),
     )
 
     return tasks.apply_async(countdown=conf.settings.TASK_TIMES['10_MIN'])

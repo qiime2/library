@@ -9,6 +9,7 @@
 import uuid
 
 from django.db import models
+from django import conf
 
 from library.utils.models import AuditModel
 
@@ -56,6 +57,12 @@ class PackageBuild(AuditModel):
     linux_64 = models.BooleanField(default=False, verbose_name='Linux 64 Package?')
     osx_64 = models.BooleanField(default=False, verbose_name='OSX 64 Package?')
     build_target = models.CharField(max_length=50, verbose_name='Build Target')
+
+    def verify_gate(self, gate):
+        if gate not in (conf.settings.GATE_TESTED,):
+            raise Exception('invalid gate: %s' % (gate,))
+
+        return self.linux_64 and self.osx_64
 
     # Custom Manager
     objects = PackageBuildQuerySet.as_manager()
@@ -111,9 +118,41 @@ class DistroBuild(AuditModel):
     epoch = models.ForeignKey('Epoch', on_delete=models.CASCADE, related_name='distro_builds')
     version = models.CharField(max_length=255)
     github_run_id = models.CharField(max_length=100, verbose_name='Github Run ID')
-    linux_64 = models.BooleanField(default=False, verbose_name='Linux 64 Package?')
-    osx_64 = models.BooleanField(default=False, verbose_name='OSX 64 Package?')
+    staged_linux_64 = models.BooleanField(default=False, verbose_name='Linux Staged?')
+    staged_osx_64 = models.BooleanField(default=False, verbose_name='OSX Staged?')
+    passed_linux_64 = models.BooleanField(default=False, verbose_name='Linux Passed?')
+    passed_osx_64 = models.BooleanField(default=False, verbose_name='OSX Passed?')
+    # TODO: should/can this be unique?
     pr_url = models.URLField(default='', verbose_name='PR URL')
+
+    def mark_gate(self, gate, artifact_name):
+        if gate not in (conf.settings.GATE_STAGED, conf.settings.GATE_PASSED):
+            raise Exception('invalid gate: %s' % (gate,))
+
+        distro, arch = artifact_name.split('-')
+
+        if distro != self.distro.name:
+            raise Exception('invalid distro: %s' % (distro,))
+
+        if arch not in ('linux', 'osx'):
+            raise Exception('invalid arch: %s' % (arch,))
+
+        attr = {
+            conf.settings.GATE_STAGED: {'linux': 'staged_linux_64', 'osx': 'staged_osx_64'},
+            conf.settings.GATE_PASSED: {'linux': 'passed_linux_64', 'osx': 'passed_osx_64'},
+        }[gate][arch]
+
+        setattr(self, attr, True)
+
+    def verify_gate(self, gate):
+        if gate not in (conf.settings.GATE_STAGED, conf.settings.GATE_PASSED):
+            raise Exception('invalid gate: %s' % (gate,))
+
+        if gate == conf.settings.GATE_STAGED:
+            return self.staged_linux_64 and self.staged_osx_64
+
+        if gate == conf.settings.GATE_PASSED:
+            return self.passed_linux_64 and self.passed_osx_64
 
     def __str__(self):
         return 'DistroBuild<pk=%s>' % (self.pk,)

@@ -53,13 +53,18 @@ class DistroIntegrationForm(forms.Form):
     epoch = forms.CharField(required=True)
     artifact_name = forms.CharField(required=True)
     pr_number = forms.IntegerField(required=True)
-    # TODO: make this required
-    package_versions = forms.JSONField(required=False)
+    package_versions = forms.JSONField(required=True)
 
-    def is_authorized(self):
+    def is_authorized(self, gate):
         token = conf.settings.INTEGRATION_REPO['token']
         if token != self.cleaned_data['token']:
             raise PermissionDenied
+
+        from_channel_base = conf.settings.BASE_CONDA_PATH / self.cleaned_data['epoch']
+        if gate == conf.settings.GATE_STAGED:
+            from_channel = str(from_channel_base / conf.settings.GATE_TESTED)
+        elif gate == conf.settings.GATE_PASSED:
+            from_channel = str(from_channel_base / conf.settings.GATE_PASSED / self.cleaned_data['distro'])
 
         config = DistroBuildCfg(
             version=self.cleaned_data['version'],
@@ -72,6 +77,8 @@ class DistroIntegrationForm(forms.Form):
             owner=conf.settings.INTEGRATION_REPO['owner'],
             repo=conf.settings.INTEGRATION_REPO['repo'],
             package_versions=self.cleaned_data['package_versions'],
+            gate=gate,
+            from_channel=from_channel,
         )
 
         return config

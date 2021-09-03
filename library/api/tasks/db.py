@@ -68,17 +68,10 @@ def mark_uploaded_package(ctx: 'PackageBuildCtx', cfg: 'PackageBuildCfg'):  # no
     return ctx
 
 
-@shared_task(name='db.mark_uploaded_distro')
-def mark_uploaded_distro(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
+@shared_task(name='db.mark_distro_gate')
+def mark_distro_gate(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa: F821
     distro_build_record = DistroBuild.objects.get(pk=ctx.pk)
-
-    if 'linux' in cfg.artifact_name:
-        distro_build_record.linux_64 = True
-    elif 'osx' in cfg.artifact_name:
-        distro_build_record.osx_64 = True
-    else:
-        raise 'invalid architecture'
-
+    distro_build_record.mark_gate(cfg.gate, cfg.artifact_name)
     distro_build_record.save()
 
     return ctx
@@ -86,14 +79,16 @@ def mark_uploaded_distro(ctx: 'DistroBuildCtx', cfg: 'DistroBuildCfg'):  # noqa:
 
 @shared_task(name='db.verify_all_architectures_present')
 def verify_all_architectures_present(ctx: Union['PackageBuildCtx',  # noqa: F821
-                                                'DistroBuildCtx']):  # noqa: F821
+                                                'DistroBuildCtx'],  # noqa: F821
+                                     cfg: Union['PackageBuildCfg',  # noqa: F821
+                                                'DistroBuildCfg']):  # noqa: F821
     model = {
         'PackageBuildCtx': PackageBuild,
         'DistroBuildCtx': DistroBuild,
     }[str(type(ctx).__name__)]
 
     build_record = model.objects.get(pk=ctx.pk)
-    if build_record.linux_64 and build_record.osx_64:
+    if build_record.verify_gate(cfg.gate):
         # I know, double-negative is weird here...
         ctx.not_all_architectures_present = False
 

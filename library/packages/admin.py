@@ -156,12 +156,15 @@ class EpochAdmin(admin.ModelAdmin):
 
 
 class DistroBuildAdmin(admin.ModelAdmin):
-    list_display_links = ('distro', 'epoch', 'version', 'github_run_id', 'linux_64', 'osx_64')
-    list_display = ('distro', 'epoch', 'version', 'github_run_id', 'linux_64', 'osx_64',
+    list_display_links = ('distro', 'epoch', 'version', 'github_run_id')
+    list_display = ('distro', 'epoch', 'version', 'github_run_id',
+                    'staged_linux_64', 'staged_osx_64', 'passed_linux_64', 'passed_osx_64',
                     'clickable_integration_pr_url', 'created_at', 'updated_at')
-    fields = ('distro', 'version', 'github_run_id', 'epoch', 'linux_64', 'osx_64',
+    fields = ('distro', 'version', 'github_run_id', 'epoch',
+              'staged_linux_64', 'staged_osx_64', 'passed_linux_64', 'passed_osx_64',
               'clickable_integration_pr_url', 'created_at', 'updated_at')
-    readonly_fields = ('distro', 'epoch', 'version', 'github_run_id', 'linux_64', 'osx_64',
+    readonly_fields = ('distro', 'epoch', 'version', 'github_run_id',
+                       'staged_linux_64', 'staged_osx_64', 'passed_linux_64', 'passed_osx_64',
                        'clickable_integration_pr_url', 'created_at', 'updated_at')
     ordering = ('-updated_at',)
     inlines = [PackageBuildInlineDistroBuild]

@@ -18,5 +18,6 @@ urlpatterns = [
     path('packages/', include([
         path('integrate/', views.prepare_packages_for_integration, name='package-integrate'),
         path('stage/', views.stage_metapackage, name='package-stage'),
+        path('pass/', views.pass_metapackage, name='package-pass'),
     ])),
 ]

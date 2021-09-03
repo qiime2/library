@@ -152,3 +152,6 @@ INTEGRATION_REPO = {
     'branch': 'main',
     'token': 'foo',
 }
+GATE_TESTED = 'tested'
+GATE_STAGED = 'staged'
+GATE_PASSED = 'passed'
