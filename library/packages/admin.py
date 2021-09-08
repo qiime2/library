@@ -6,15 +6,15 @@
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
 
+from django import conf
 from django.contrib import admin
 from django.utils.html import format_html
 
 from .models import Package, PackageBuild, Distro, Epoch, DistroBuild
 
 
-def url_helper(instance, field):
-    url = getattr(instance, field)
-    return format_html(f'<a href="{url}" target="_blank">{url}</a>')
+def url_helper(url, name):
+    return format_html(f'<a href="{url}" target="_blank">{name}</a>')
 
 
 class DistroBuildInline(admin.TabularInline):
@@ -33,9 +33,9 @@ class DistroBuildInline(admin.TabularInline):
 
 class PackageBuildInline(admin.TabularInline):
     model = PackageBuild
-    fields = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+    fields = ('package', 'clickable_gh_run_url', 'epoch', 'build_target', 'version',
               'linux_64', 'osx_64', 'created_at', 'updated_at')
-    readonly_fields = ('package', 'github_run_id', 'epoch', 'build_target', 'version',
+    readonly_fields = ('package', 'clickable_gh_run_url', 'epoch', 'build_target', 'version',
                        'linux_64', 'osx_64', 'created_at', 'updated_at')
     extra = 0
     can_delete = False
@@ -46,6 +46,13 @@ class PackageBuildInline(admin.TabularInline):
 
     def has_change_permission(self, request, obj=None):
         return False
+
+    @admin.display(description='GH Run')
+    def clickable_gh_run_url(self, instance):
+        if instance.github_run_id != '':
+            url = f'https://github.com/{instance.package.repository}/actions/runs/{instance.github_run_id}'
+            return url_helper(url, 'Link')
+        return 'NA'
 
 
 class PackageBuildInlineDistroBuild(admin.TabularInline):
@@ -156,16 +163,19 @@ class EpochAdmin(admin.ModelAdmin):
 
 
 class DistroBuildAdmin(admin.ModelAdmin):
-    list_display_links = ('distro', 'epoch', 'version', 'github_run_id')
-    list_display = ('distro', 'epoch', 'version', 'github_run_id',
-                    'staged_linux_64', 'staged_osx_64', 'passed_linux_64', 'passed_osx_64',
-                    'clickable_integration_pr_url', 'created_at', 'updated_at')
-    fields = ('distro', 'version', 'github_run_id', 'epoch',
-              'staged_linux_64', 'staged_osx_64', 'passed_linux_64', 'passed_osx_64',
-              'clickable_integration_pr_url', 'created_at', 'updated_at')
-    readonly_fields = ('distro', 'epoch', 'version', 'github_run_id',
-                       'staged_linux_64', 'staged_osx_64', 'passed_linux_64', 'passed_osx_64',
-                       'clickable_integration_pr_url', 'created_at', 'updated_at')
+    list_display_links = ('distro', 'epoch', 'version')
+    list_display = ('distro', 'epoch', 'version', 'clickable_staged_gh_run_url',
+                    'staged_linux_64', 'staged_osx_64', 'clickable_passed_gh_run_url',
+                    'passed_linux_64', 'passed_osx_64', 'clickable_integration_pr_url',
+                    'created_at', 'updated_at')
+    fields = ('distro', 'epoch', 'version', 'clickable_staged_gh_run_url',
+              'staged_linux_64', 'staged_osx_64', 'clickable_passed_gh_run_url',
+              'passed_linux_64', 'passed_osx_64', 'clickable_integration_pr_url',
+              'created_at', 'updated_at')
+    readonly_fields = ('distro', 'epoch', 'version', 'clickable_staged_gh_run_url',
+                       'staged_linux_64', 'staged_osx_64', 'clickable_passed_gh_run_url',
+                       'passed_linux_64', 'passed_osx_64', 'clickable_integration_pr_url',
+                       'created_at', 'updated_at')
     ordering = ('-updated_at',)
     inlines = [PackageBuildInlineDistroBuild]
 
@@ -180,7 +190,29 @@ class DistroBuildAdmin(admin.ModelAdmin):
 
     @admin.display(description='Integration PR')
     def clickable_integration_pr_url(self, instance):
-        return url_helper(instance, 'pr_url')
+        if instance.pr_url != '':
+            return url_helper(instance.pr_url, 'Link')
+        return 'NA'
+
+    @admin.display(description='Staged GH Run')
+    def clickable_staged_gh_run_url(self, instance):
+        if instance.staged_github_run_id != '':
+            org = conf.settings.INTEGRATION_REPO['owner']
+            repo = conf.settings.INTEGRATION_REPO['repo']
+            gh_run_id = instance.staged_github_run_id
+            url = f'https://github.com/{org}/{repo}/actions/runs/{gh_run_id}'
+            return url_helper(url, 'Link')
+        return 'NA'
+
+    @admin.display(description='Passed GH Run')
+    def clickable_passed_gh_run_url(self, instance):
+        if instance.passed_github_run_id != '':
+            org = conf.settings.INTEGRATION_REPO['owner']
+            repo = conf.settings.INTEGRATION_REPO['repo']
+            gh_run_id = instance.passed_github_run_id
+            url = f'https://github.com/{org}/{repo}/actions/runs/{gh_run_id}'
+            return url_helper(url, 'Link')
+        return 'NA'
 
 
 admin.site.register(Package, PackageAdmin)

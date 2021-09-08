@@ -94,7 +94,8 @@ class HandlePRsCtx:
     github_token: str = None
     package_versions: Dict[str, str] = field(default_factory=dict)
     package_build_pks: List[str] = field(default_factory=list)
-    distro_build_pks: List[str] = field(default_factory=list)
+    distro_build_pks: Dict[str, str] = field(default_factory=dict)
+    distro_build_versions: Dict[str, str] = field(default_factory=dict)
     pr_url: str = None
 
     def ready_to_open_pr(self):

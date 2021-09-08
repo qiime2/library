@@ -117,11 +117,12 @@ class DistroBuild(AuditModel):
     distro = models.ForeignKey('Distro', on_delete=models.CASCADE, related_name='distro_builds')
     epoch = models.ForeignKey('Epoch', on_delete=models.CASCADE, related_name='distro_builds')
     version = models.CharField(max_length=255)
-    github_run_id = models.CharField(max_length=100, verbose_name='Github Run ID')
-    staged_linux_64 = models.BooleanField(default=False, verbose_name='Linux Staged?')
-    staged_osx_64 = models.BooleanField(default=False, verbose_name='OSX Staged?')
-    passed_linux_64 = models.BooleanField(default=False, verbose_name='Linux Passed?')
-    passed_osx_64 = models.BooleanField(default=False, verbose_name='OSX Passed?')
+    staged_github_run_id = models.CharField(max_length=100, verbose_name='Staged GH Run ID')
+    staged_linux_64 = models.BooleanField(default=False, verbose_name='Linux Staged Pkg?')
+    staged_osx_64 = models.BooleanField(default=False, verbose_name='OSX Staged Pkg?')
+    passed_github_run_id = models.CharField(max_length=100, verbose_name='Passed GH Run ID')
+    passed_linux_64 = models.BooleanField(default=False, verbose_name='Linux Passed Pkg?')
+    passed_osx_64 = models.BooleanField(default=False, verbose_name='OSX Passed Pkg?')
     # TODO: should/can this be unique?
     pr_url = models.URLField(default='', verbose_name='PR URL')
 

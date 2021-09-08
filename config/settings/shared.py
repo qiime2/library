@@ -124,7 +124,7 @@ TASK_TIMES = {
     '02_HR': 60 * 60 * 2,
 
     '4A_CRON': crontab(minute=0, hour=4),  # daily at 4a
-    'HRLY_CRON': crontab(minute=0),  # hourly
+    'HRLY_CRON': crontab(minute=23),  # hourly
 }
 
 

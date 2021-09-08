@@ -52,7 +52,7 @@ class DistroIntegrationForm(forms.Form):
     distro = forms.CharField(required=True)
     epoch = forms.CharField(required=True)
     artifact_name = forms.CharField(required=True)
-    pr_number = forms.IntegerField(required=True)
+    pr_number = forms.IntegerField(required=False)
     package_versions = forms.JSONField(required=True)
 
     def is_authorized(self, gate):
@@ -64,7 +64,7 @@ class DistroIntegrationForm(forms.Form):
         if gate == conf.settings.GATE_STAGED:
             from_channel = str(from_channel_base / conf.settings.GATE_TESTED)
         elif gate == conf.settings.GATE_PASSED:
-            from_channel = str(from_channel_base / conf.settings.GATE_PASSED / self.cleaned_data['distro'])
+            from_channel = str(from_channel_base / conf.settings.GATE_STAGED / self.cleaned_data['distro'])
 
         config = DistroBuildCfg(
             version=self.cleaned_data['version'],

@@ -41,9 +41,8 @@ def open_pull_request(ctx: 'HandlePRsCtx'):  # noqa: F821
     branch = str(uuid.uuid4())
     # staged
     mgr = utils.IntegrationGitRepoManager(ctx.github_token)
-    mgr.update_integration(branch, ctx.epoch_name, conf.settings.GATE_STAGED, ctx.package_versions)
-
-    # TODO: released
+    versions = mgr.update_integration(branch, ctx.epoch_name, conf.settings.GATE_STAGED, ctx.package_versions)
+    ctx.distro_build_versions = versions
 
     pr_url = mgr.open_pr(branch, '%s %s' % (ctx.epoch_name, conf.settings.GATE_STAGED))
     ctx.pr_url = pr_url

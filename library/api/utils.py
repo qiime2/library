@@ -295,16 +295,21 @@ class IntegrationGitRepoManager:
         data['run'] = sorted(run_reqs)
         data['version'] = datetime.datetime.utcnow().strftime('%Y.%m.%d.%H.%M.%S')
         self.commit_to_github(data, sha, path, msg, branch)
+        return data['version']
 
     def update_integration(self, branch, epoch, gate, package_versions):
         self.construct_interface()
         self.update_conda_build_config(branch, epoch, gate, package_versions)
 
+        versions = {}
         for distro, pkg_vers in package_versions.items():
             if distro is None:
                 raise Exception('Missing distro name')
             packages = set(pkg_vers.keys())
-            self.update_distro_metapackage_recipe(epoch, gate, distro, packages, branch)
+            version = self.update_distro_metapackage_recipe(epoch, gate, distro, packages, branch)
+            versions[distro] = version
+
+        return versions
 
     def open_pr(self, branch, pr_msg):
         self.construct_interface()

@@ -98,7 +98,7 @@ def verify_all_architectures_present(ctx: Union['PackageBuildCtx',  # noqa: F821
 @shared_task(name='db.find_packages_ready_for_integration')
 def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
     package_builds = dict()
-    distro_build_pks = list()
+    distro_build_pks = dict()
 
     epoch = Epoch.objects.get(name=ctx.epoch_name)
 
@@ -110,13 +110,14 @@ def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
                 distro=distro,
                 epoch=epoch,
                 pr_url='',
+                version='',
             )
             distro_build_record.save()
             pbrs = [r['id'] for r in package_build_records]
             distro_build_record.package_builds.set(pbrs)
 
             package_builds[distro.name] = package_build_records
-            distro_build_pks.append(str(distro_build_record.pk))
+            distro_build_pks[distro.name] = str(distro_build_record.pk)
 
     package_versions, package_build_pks = utils.find_packages_ready_for_integration(
         package_builds)
@@ -134,12 +135,13 @@ def update_distro_build_records_integration_pr_url(ctx: 'HandlePRsCtx'):  # noqa
         return ctx
 
     with transaction.atomic():
-        for pk in ctx.distro_build_pks:
+        for distro_name, pk in ctx.distro_build_pks.items():
             distro_build_record = DistroBuild.objects.get(pk=pk)
             if distro_build_record.pr_url != '':
                 raise Exception('a pr already exists for this distro build: %s vs %s' %
                                 (distro_build_record.pr_url, ctx.pr_url))
             distro_build_record.pr_url = ctx.pr_url
+            distro_build_record.version = ctx.distro_build_versions[distro_name]
             distro_build_record.save()
 
     return ctx
@@ -156,11 +158,16 @@ def get_or_create_and_update_distro_build_record(ctx: 'DistroBuildCtx', cfg: 'Di
     record, _ = DistroBuild.objects.get_or_create(
         distro=distro,
         epoch=epoch,
-        pr_url=cfg.pr_url,
+        version=cfg.version,
     )
 
-    record.version = cfg.version
-    record.github_run_id = cfg.run_id
+    if cfg.gate == conf.settings.GATE_STAGED:
+        record.staged_github_run_id = cfg.run_id
+    elif cfg.gate == conf.settings.GATE_PASSED:
+        record.passed_github_run_id = cfg.run_id
+    else:
+        raise Exception('invalid gate %s' % (cfg.gate,))
+
     record.save()
 
     ctx.pk = str(record.pk)
