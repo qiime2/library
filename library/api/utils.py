@@ -214,13 +214,16 @@ class IntegrationGitRepoManager:
                     for package_name, ver in package_versions.items():
                         # cbc.yml _needs_ snake case names
                         package_name = package_name.replace('-', '_')
+
                         if package_name in cbc:
                             last_versions = cbc[package_name]
                             if len(last_versions) != 1:
                                 raise Exception('Incorrect number of versions')
                             if compare_package_versions(ver, last_versions[0]):
                                 raise Exception('Package version confusion')
-                        cbc[package_name] = [ver]
+                        # cbc.yml _needs_ stringified version identifiers,
+                        # also, cbc.yml expects an array for each package
+                        cbc[package_name] = [str(ver)]
                         msg += '- %s ==%s\n' % (package_name, ver)
                     self.add_branch_if_missing(branch)
                     self.commit_to_github(cbc, sha, path, msg, branch)

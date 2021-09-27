@@ -163,6 +163,7 @@ def get_or_create_and_update_distro_build_record(ctx: 'DistroBuildCtx', cfg: 'Di
 
     if cfg.gate == conf.settings.GATE_STAGED:
         record.staged_github_run_id = cfg.run_id
+        record.pr_url = cfg.pr_url
     elif cfg.gate == conf.settings.GATE_PASSED:
         record.passed_github_run_id = cfg.run_id
     else:
