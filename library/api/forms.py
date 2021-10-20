@@ -65,6 +65,8 @@ class DistroIntegrationForm(forms.Form):
             from_channel = str(from_channel_base / conf.settings.GATE_TESTED)
         elif gate == conf.settings.GATE_PASSED:
             from_channel = str(from_channel_base / conf.settings.GATE_STAGED / self.cleaned_data['distro'])
+        else:
+            raise ValueError('invalid gate: %s' % (gate,))
 
         config = DistroBuildCfg(
             version=self.cleaned_data['version'],

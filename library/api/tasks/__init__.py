@@ -58,21 +58,26 @@ class PackageBuildCfg(BuildCfg):
 class DistroBuildCfg(BuildCfg):
     version: str
     epoch_name: str
-    pr_number: int
     owner: str
     repo: str
     gate: str
     from_channel: str
     package_versions: Dict[str, str] = field(default_factory=dict)
+    pr_number: int = None
 
     def __post_init__(self):
         # https://docs.python.org/3/library/dataclasses.html#frozen-instances
         object.__setattr__(self, 'distro_name', self.package_name)
-        object.__setattr__(self, 'pr_url', 'https://github.com/%s/%s/pull/%d' %
-                           (self.owner, self.repo, self.pr_number))
         object.__setattr__(self, 'to_channel',
                            str(conf.settings.BASE_CONDA_PATH / self.epoch_name / self.gate / self.distro_name))
         object.__setattr__(self, 'repository', '%s/%s' % (self.owner, self.repo))
+
+        if self.pr_number is not None:
+            pr_url = 'https://github.com/%s/%s/pull/%d' % (self.owner, self.repo, self.pr_number)
+        else:
+            pr_url = ''
+
+        object.__setattr__(self, 'pr_url', pr_url)
 
 
 @dataclass
