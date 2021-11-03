@@ -13,7 +13,7 @@ import yaml
 
 def read_packages(variables_fp):
     with open(variables_fp) as fh:
-        variables = yaml.load(fh)
+        variables = yaml.load(fh, Loader=yaml.CLoader)
 
     G = nx.DiGraph()
 
@@ -24,13 +24,15 @@ def read_packages(variables_fp):
         for dep in project.get('deps', []):
             G.add_edge(project['name'], dep)
 
-    return list(reversed(list(nx.topological_sort(G))))
+    return list(reversed(list(nx.topological_generations(G))))
 
 
 def write_packages(packages_fp, packages):
     with open(packages_fp, 'w') as fh:
-        for package in packages:
-            fh.write('%s\n' % (package,))
+        for level in packages:
+            fh.write('\n')
+            for package in sorted(level):
+                fh.write('%s\n' % (package,))
 
 
 if __name__ == '__main__':

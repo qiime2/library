@@ -10,25 +10,36 @@ import sys
 
 
 def read_packages(names_fp):
-    package_names = []
+    # this is a bit gross, but it works
+    package_names, level = [], None
     with open(names_fp) as fh:
         for line in fh:
-            package_names.append(line.strip())
+            val = line.strip()
+            if val == '':
+                if level is not None:
+                    package_names.append(level)
+                level = []
+            else:
+                level.append(val)
+        if level:
+            package_names.append(level)
     return package_names
 
 
 def write_badges(fp_badges, package_names, branch):
     with open(fp_badges, 'w') as fh:
-        for name in package_names:
-            fh.write(
-                '[![ci](https://github.com/qiime2/%s/actions/workflows/'
-                'ci.yml/badge.svg?branch=%s&event=push) %s]'
-                '(https://github.com/qiime2/%s/actions/workflows/'
-                'ci.yml?query=branch%%3A%s)\n\n' % (name,
-                                                    branch,
-                                                    name,
-                                                    name,
-                                                    branch))
+        for i, level in enumerate(package_names):
+            fh.write('### level: %d\n\n' % i)
+            for name in level:
+                fh.write(
+                    '[![ci](https://github.com/qiime2/%s/actions/workflows/'
+                    'ci.yml/badge.svg?branch=%s&event=push) %s]'
+                    '(https://github.com/qiime2/%s/actions/workflows/'
+                    'ci.yml?query=branch%%3A%s)\n\n' % (name,
+                                                        branch,
+                                                        name,
+                                                        name,
+                                                        branch))
 
 
 if __name__ == '__main__':
