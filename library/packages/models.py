@@ -166,7 +166,7 @@ class DistroBuild(AuditModel):
 
     class Meta:
         verbose_name = 'Distro Build'
-        unique_together = ['distro', 'pr_url', 'epoch']
+        unique_together = ['distro', 'version', 'epoch']
 
 
 # ### BRIDGE TABLES

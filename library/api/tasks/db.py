@@ -106,11 +106,12 @@ def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
         package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch_name, distro)
         package_build_records = list(package_build_records)
         if len(package_build_records) > 0:
+            version = datetime.datetime.utcnow().strftime('%Y.%m.%d.%H.%M.%S')
             distro_build_record, _ = DistroBuild.objects.get_or_create(
                 distro=distro,
                 epoch=epoch,
                 pr_url='',
-                version='',
+                version=version,
             )
             distro_build_record.save()
             pbrs = [r['id'] for r in package_build_records]
@@ -141,7 +142,6 @@ def update_distro_build_records_integration_pr_url(ctx: 'HandlePRsCtx'):  # noqa
                 raise Exception('a pr already exists for this distro build: %s vs %s' %
                                 (distro_build_record.pr_url, ctx.pr_url))
             distro_build_record.pr_url = ctx.pr_url
-            distro_build_record.version = ctx.distro_build_versions[distro_name]
             distro_build_record.save()
 
     return ctx
