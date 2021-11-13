@@ -102,6 +102,7 @@ class HandlePRsCtx:
     distro_build_pks: Dict[str, str] = field(default_factory=dict)
     distro_build_versions: Dict[str, str] = field(default_factory=dict)
     pr_url: str = None
+    version: str = None
 
     def ready_to_open_pr(self):
         return len(self.package_versions)

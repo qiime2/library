@@ -282,7 +282,7 @@ class IntegrationGitRepoManager:
             branch=branch
         )
 
-    def update_distro_metapackage_recipe(self, epoch, gate, distro, packages, branch):
+    def update_distro_metapackage_recipe(self, epoch, gate, distro, packages, branch, version):
         path = self.path_builder(epoch=epoch, gate=gate, fn='data.yaml', distro=distro)
         msg = 'updating %s\n\n' % (path,)
         data, sha = self.fetch_yaml_from_github(path)
@@ -295,9 +295,10 @@ class IntegrationGitRepoManager:
                 run_reqs.add(package)
                 msg += '- %s\n' % (package,)
         data['run'] = sorted(run_reqs)
+        data['version'] = version
         self.commit_to_github(data, sha, path, msg, branch)
 
-    def update_integration(self, branch, epoch, gate, package_versions):
+    def update_integration(self, branch, epoch, gate, package_versions, version):
         self.construct_interface()
         self.update_conda_build_config(branch, epoch, gate, package_versions)
 
@@ -305,7 +306,7 @@ class IntegrationGitRepoManager:
             if distro is None:
                 raise Exception('Missing distro name')
             packages = set(pkg_vers.keys())
-            self.update_distro_metapackage_recipe(epoch, gate, distro, packages, branch)
+            self.update_distro_metapackage_recipe(epoch, gate, distro, packages, branch, version)
 
     def open_pr(self, branch, pr_msg):
         self.construct_interface()
