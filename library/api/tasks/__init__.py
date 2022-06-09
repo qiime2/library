@@ -96,6 +96,7 @@ class DistroBuildCtx:
 @dataclass
 class HandlePRsCtx:
     epoch_name: str = None
+    distro_name: str = None
     github_token: str = None
     package_versions: Dict[str, str] = field(default_factory=dict)
     package_build_pks: List[str] = field(default_factory=list)
@@ -116,13 +117,16 @@ def handle_prs():
     chains = []
     for build_target in ['dev', 'release']:
         for epoch in Epoch.objects.by_build_target(build_target):
-            ctx = HandlePRsCtx(epoch_name=epoch.name, github_token=conf.settings.GITHUB_TOKEN)
-            chain_link = chain(
-                db.find_packages_ready_for_integration.s(ctx),
-                git.open_pull_request.s(),
-                db.update_distro_build_records_integration_pr_url.s(),
-            )
-            chains.append(chain_link)
+            for distro in epoch.distros.all():
+                ctx = HandlePRsCtx(epoch_name=epoch.name,
+                                   distro_name=distro.name,
+                                   github_token=conf.settings.GITHUB_TOKEN)
+                chain_link = chain(
+                    db.find_packages_ready_for_integration.s(ctx),
+                    git.open_pull_request.s(),
+                    db.update_distro_build_records_integration_pr_url.s(),
+                )
+                chains.append(chain_link)
     return group(*chains).apply_async()
 
 

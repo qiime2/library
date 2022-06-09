@@ -101,24 +101,24 @@ def find_packages_ready_for_integration(ctx: 'HandlePRsCtx'):  # noqa: F821
     distro_build_pks = dict()
 
     epoch = Epoch.objects.get(name=ctx.epoch_name)
+    distro = Distro.objects.get(name=ctx.distro_name)
 
-    for distro in Distro.objects.all():
-        package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch_name, distro)
-        package_build_records = list(package_build_records)
-        if len(package_build_records) > 0:
-            ctx.version = datetime.datetime.utcnow().strftime('%Y.%m.%d.%H.%M.%S')
-            distro_build_record, _ = DistroBuild.objects.get_or_create(
-                distro=distro,
-                epoch=epoch,
-                pr_url='',
-                version=ctx.version,
-            )
-            distro_build_record.save()
-            pbrs = [r['id'] for r in package_build_records]
-            distro_build_record.package_builds.set(pbrs)
+    package_build_records = PackageBuild.objects.ready_for_integration(ctx.epoch_name, distro)
+    package_build_records = list(package_build_records)
+    if len(package_build_records) > 0:
+        ctx.version = datetime.datetime.utcnow().strftime('%Y.%m.%d.%H.%M.%S')
+        distro_build_record, _ = DistroBuild.objects.get_or_create(
+            distro=distro,
+            epoch=epoch,
+            pr_url='',
+            version=ctx.version,
+        )
+        distro_build_record.save()
+        pbrs = [r['id'] for r in package_build_records]
+        distro_build_record.package_builds.set(pbrs)
 
-            package_builds[distro.name] = package_build_records
-            distro_build_pks[distro.name] = str(distro_build_record.pk)
+        package_builds[distro.name] = package_build_records
+        distro_build_pks[distro.name] = str(distro_build_record.pk)
 
     package_versions, package_build_pks = utils.find_packages_ready_for_integration(
         package_builds)

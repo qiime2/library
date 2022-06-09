@@ -19,11 +19,11 @@ from library.utils.models import AuditModel
 class PackageBuildQuerySet(models.QuerySet):
     def ready_for_integration(self, epoch_name, distro):
         return self.filter(
+            ~models.Q(distro_builds__distro=distro),
             epoch__name=epoch_name,
             linux_64=True,
             osx_64=True,
-            package__in=distro.packages.all(),
-            distro_builds__isnull=True,
+            package__in=distro.packages.all()
         ).values('package__name', 'version', 'id')
 
 

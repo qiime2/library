@@ -367,15 +367,20 @@ def find_packages_ready_for_integration(package_build_records):
         for record in records:
             package_name = record['package__name']
             version = record['version']
+
+            # Older records are also added to the distro-build so that if there
+            # were multiple available versions (or much older ones) they will
+            # no longer be collected by PackageBuildQuerySet in future runs as
+            # they have been associated (though not chosen for
+            # conda_build_config).
             pk = str(record['id'])
-            if package_name in package_versions[distro]:
-                # in case multiple versions exist at this point, only consider the _newest_ one
-                if compare_package_versions(package_versions[distro][package_name], version):
-                    package_versions[distro][package_name] = version
-                    package_build_pks.add(pk)
-            else:
-                package_versions[distro][package_name] = version
-                package_build_pks.add(pk)
+            package_build_pks.add(pk)
+
+            distro_packages = package_versions[distro]
+            existing_package = distro_packages.get(package_name)
+            if existing_package is None \
+                    or compare_package_versions(existing_package, version):
+                distro_packages[package_name] = version
 
     return dict(package_versions), package_build_pks
 
