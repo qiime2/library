@@ -18,4 +18,7 @@ urlpatterns = [
     path('packages/', include([
         path('', views.list_packages, name='list-packages'),
     ])),
+    path('distros/', include([
+        path('', views.list_distros, name='list-distros'),
+    ])),
 ]
