@@ -5,17 +5,12 @@
 
 {% block 'content' %}
 <div class="content">
-  <h3>Latest Plugins</h3>
-  {% for row in plugins|list_of_lists:3 %}
-    <div class="columns">
-      {% for plugin in row %}
-        <div class="column is-one-third">
-          {% card plugin %}
-        </div>
-      {% endfor %}
-    </div>
-  {% empty %}
-  <h4>No plugins in the Library.</h4>
-  {% endfor %}
+  <h2>QIIME 2 Library: Current Plans and Future Directions</h2>
+  <p>
+    We are currently in the process of re-thinking the ways that we will support community-driven development in the context of our existing <a href="https://docs.qiime2.org/2024.2/install/#qiime-2-2024-2-distributions">distributions</a> (tiny, amplicon, metagenome). Our end goal is to provide users with information such as the compatibility of community plugins with our current distributions, as well as the test coverage and documentation associated with each plugin. This is something that we are currently having active discussions about, and hope to make progress on in the coming year.
+  </p>
+  <p>
+    In the meantime, we are leaving the current site up as-is. Please be aware that because these plugins are developed by the QIIME 2 developer community, and not the core QIIME 2 development team, some may not be actively maintained or compatible with the current release versions of the QIIME 2 distributions. We encourage you to continue using these plugins as you are able, keeping in mind that we cannot guarantee the usability of any individual plugin. Please refer to each plugin's README and author's contact information for any questions or concerns regarding usability and maintenance, and don't hesitate to reach out on the <a href="https://forum.qiime2.org/">QIIME 2 Forum</a> if you're not sure where to go for help!
+  </p>
 </div>
 {% endblock %}
