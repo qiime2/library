@@ -1,4 +1,5 @@
 <script lang="ts">
+    import utf8 from "utf8";
     import { Octokit, App } from "octokit";
 
     // Probably want to create an authentication token and secret it in here
@@ -44,7 +45,7 @@
         });
 
         // Convert it back to a normal string
-        const contents = atob(readme['data']['content']);
+        const contents = utf8.decode(atob(readme['data']['content']));
         console.log(contents);
 
         const per_page = 30;
