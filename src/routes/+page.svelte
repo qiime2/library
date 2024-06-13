@@ -67,7 +67,7 @@
                     'X-GitHub-Api-Version': '2022-11-28'
                 }
             });
-            console.log(runs);
+
             if (total_count == -1) {
                 total_count = runs['data']['total_count'];
             }
