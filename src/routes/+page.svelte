@@ -46,6 +46,48 @@
         // Convert it back to a normal string
         const contents = atob(readme['data']['content']);
         console.log(contents);
+
+        const per_page = 30;
+        let page = 0;
+        let total_count = -1;
+        let time = '';
+
+        // Need to get the first page of runs
+        // Check for a status completed conclusions success run of ci-dev
+        //  If found then get the time
+        //  If not found get the next page
+        // Repeat until we have found the time or exhausted all runs
+        do {
+            const runs = await octokit.request('GET /repos/qiime2/qiime2/actions/runs', {
+                owner: 'qiime2',
+                repo: 'qiime2',
+                per_page: `${per_page}`,
+                page: `${page + 1}`,
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
+            console.log(runs);
+            if (total_count == -1) {
+                total_count = runs['data']['total_count'];
+            }
+
+            // Check for valid run
+            for (const run of runs['data']['workflow_runs']) {
+                if (run['name'] == 'ci-dev' && run['status'] === 'completed' && run['conclusion'] == 'success') {
+                    time = run['updated_at'];
+                    break;
+                }
+            }
+
+            if (time !== '') {
+                break;
+            }
+
+            page++;
+        } while (per_page * page < total_count)
+
+        console.log(time);
     }
 </script>
 
