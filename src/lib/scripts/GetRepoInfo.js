@@ -1,5 +1,5 @@
 // This script executed via github actions
-import utf8 from 'utf8';
+// import utf8 from 'utf8';
 import fs from 'node:fs';
 import core from '@actions/core';
 import github from '@actions/github';
@@ -64,7 +64,8 @@ for (const repo of repos) {
     });
 
     // Convert it back to a normal string
-    const contents = utf8.decode(atob(readme['data']['content']));
+    // const contents = utf8.decode(atob(readme['data']['content']));
+    const contents = atob(readme['data']['content']);
     repo_info['readme'] = contents
 
     if (!(owner in repo_infos)) {
