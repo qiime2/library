@@ -76,4 +76,4 @@ for (const repo of repos) {
     repo_infos[owner][repo_name] = repo_info;
 }
 
-fs.writeFile('/static/info.json', JSON.stringify(repo_infos));
+fs.writeFileSync('/static/info.json', JSON.stringify(repo_infos));
