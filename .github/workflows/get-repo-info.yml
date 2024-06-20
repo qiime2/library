@@ -7,6 +7,10 @@ inputs:
 # on:
   # schedule:
     # - cron: '0 0 * * *'
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   run-js-and-push:
