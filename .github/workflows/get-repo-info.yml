@@ -22,6 +22,11 @@ jobs:
         with:
           node-version: '20.5.1'
 
+      - name: Install deps
+        run: |
+          npm install @actions/core
+          npm install @actions/github
+
       - name: Get Repo Info
         run: node src/lib/scripts/GetRepoInfo.js
 
