@@ -6,10 +6,10 @@ name: Get Repo Info
     # - cron: '0 0 * * *'
 on:
   push:
-    inputs:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
     branches:
       - main
+    inputs:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   get-info-and-push:
