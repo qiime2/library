@@ -2,7 +2,7 @@
     import SvelteMarkdown from "svelte-markdown";
 
     async function getRepoInfos() {
-        const response = await fetch('/static/info.json');
+        const response = await fetch('/info.json');
         const json = response.text();
         return json
     }
