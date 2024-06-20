@@ -8,8 +8,6 @@ on:
   push:
     branches:
       - main
-    inputs:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   get-info-and-push:
