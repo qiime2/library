@@ -1,14 +1,13 @@
 name: Get Repo Info
 
-inputs:
-  github-token: ${{ secrets.GITHUB_TOKEN }}
-
 # Run every night at midnight
 # on:
   # schedule:
     # - cron: '0 0 * * *'
 on:
   push:
+    inputs:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
     branches:
       - main
 
