@@ -1,5 +1,5 @@
 name: Get Repo Info
-description: Gets updated repo info and commits the new info
+
 inputs:
   github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -13,7 +13,7 @@ on:
       - main
 
 jobs:
-  run-js-and-push:
+  get-info-and-push:
     runs-on: ubuntu-latest
 
     steps:
