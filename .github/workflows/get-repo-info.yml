@@ -23,7 +23,7 @@ jobs:
           node-version: '20.5.1'
 
       - name: Get Repo Info
-        run: node src/lib/scripts/GetRepoInfo.ts
+        run: node src/lib/scripts/GetRepoInfo.js
 
       - name: Commit Repo Changes
         run: |
