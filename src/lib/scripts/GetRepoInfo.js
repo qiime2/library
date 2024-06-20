@@ -8,8 +8,8 @@ const repos = [['qiime2', 'qiime2'], ['qiime2', 'q2cli'], ['qiime2', 'q2-types']
 
 const repo_infos = {};
 
-const token = core.getInput('github-token');
-const octokit = github.getOctokit(token);
+// const token = core.getInput('github-token');
+const octokit = github.getOctokit(process.argv[1]);
 
 for (const repo of repos) {
     const repo_info = {};

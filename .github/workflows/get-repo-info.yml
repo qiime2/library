@@ -31,9 +31,7 @@ jobs:
           npm install @actions/github
 
       - name: Get Repo Info
-        run: node src/lib/scripts/GetRepoInfo.js
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+        run: node src/lib/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit Repo Changes
         run: |
