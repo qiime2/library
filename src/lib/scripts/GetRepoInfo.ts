@@ -72,7 +72,6 @@ for (const repo of repos) {
     }
 
     repo_infos[owner][repo_name] = repo_info;
-
-    fs.writeFile('/static/info.json', JSON.stringify(repo_infos));
-    return repo_infos;
 }
+
+fs.writeFile('/static/info.json', JSON.stringify(repo_infos));
