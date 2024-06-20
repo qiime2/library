@@ -1,0 +1,33 @@
+name: Get Repo Info
+description: Gets updated repo info and commits the new info
+inputs:
+  github-token: ${{ secrets.GITHUB_TOKEN }}
+
+# Run every night at midnight
+# on:
+  # schedule:
+    # - cron: '0 0 * * *'
+
+jobs:
+  run-js-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.5.1'
+
+      - name: Get Repo Info
+        run: node src/lib/GetRepoInfo.js
+
+      - name: Commit Repo Changes
+        run: |
+          git config --local user.email "q2d2.noreply@gmail.com"
+          git config --local user.name "q2d2"
+          git add .
+          git commit -m "Updated Repo Info"
+          git push
