@@ -4,7 +4,7 @@
     async function getRepoInfos() {
         const response = await fetch('/info.json');
         const json = response.text();
-        return json
+        return JSON.parse(json)
     }
 </script>
 
@@ -15,8 +15,7 @@
     {#await getRepoInfos()}
         ...getting repo infos
     {:then repo_infos}
-        {console.log(repo_infos)}
-        <!-- {#each Object.keys(repo_infos) as owner}
+        {#each Object.keys(repo_infos) as owner}
             {#each Object.values(repo_infos[owner]) as repo_info}
                 <SvelteMarkdown source={repo_info['readme']} />
                 <p>
@@ -33,7 +32,7 @@
                     {/each}
                 </p>
             {/each}
-        {/each} -->
+        {/each}
     {/await}
 </div>
 
