@@ -29,6 +29,7 @@ jobs:
         run: |
           npm install @actions/core
           npm install @actions/github
+          npm install utf8
 
       - name: Get Repo Info
         run: node src/lib/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
