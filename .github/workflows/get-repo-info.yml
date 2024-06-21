@@ -9,8 +9,8 @@ on:
     branches:
       - main
 
-# env:
-#   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   get-info-and-push:
@@ -36,6 +36,7 @@ jobs:
 
       - name: Commit Repo Changes
         run: |
+          git remote set-url --push origin https://q2d2:$GITHUB_TOKEN@github.com/Oddant1/library-svelte
           git config --local user.email "q2d2.noreply@gmail.com"
           git config --local user.name "q2d2"
           git add .
