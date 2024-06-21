@@ -76,4 +76,4 @@ for (const repo of repos) {
     repo_infos[owner][repo_name] = repo_info;
 }
 
-fs.writeFileSync('home/runner/work/library-svelte/library-svelte/static/info.json', JSON.stringify(repo_infos));
+fs.writeFileSync('/home/runner/work/library-svelte/library-svelte/static/info.json', JSON.stringify(repo_infos));
