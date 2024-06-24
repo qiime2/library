@@ -4,6 +4,9 @@ name: Get Repo Info
 on:
   schedule:
     - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
 
 jobs:
   get-info-and-push:
