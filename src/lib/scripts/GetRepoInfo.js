@@ -1,15 +1,10 @@
 // This script executed via github actions
 import utf8 from 'utf8';
 import fs from 'node:fs';
-import core from '@actions/core';
 import github from '@actions/github';
 
 const repos = [['qiime2', 'qiime2'], ['qiime2', 'q2cli'], ['qiime2', 'q2-types']]
-
 const repo_infos = {};
-
-// const token = core.getInput('github-token');
-// console.log(process.argv[1])
 const octokit = github.getOctokit(process.argv[2]);
 
 for (const repo of repos) {
@@ -66,7 +61,6 @@ for (const repo of repos) {
 
     // Convert it back to a normal string
     const contents = utf8.decode(atob(readme['data']['content']));
-    // const contents = atob(readme['data']['content']);
     repo_info['readme'] = contents
 
     if (!(owner in repo_infos)) {
