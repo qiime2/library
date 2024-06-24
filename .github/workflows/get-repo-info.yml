@@ -1,14 +1,13 @@
 name: Get Repo Info
 
 # Run every night at midnight
-# on:
-  # schedule:
-    # - cron: '0 0 * * *'
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
     branches:
       - main
-      
+
 jobs:
   get-info-and-push:
     permissions:
