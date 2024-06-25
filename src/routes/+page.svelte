@@ -10,7 +10,7 @@
         delete json['date_fetched'];
 
         for (const repo of Object.keys(json)) {
-            repo_infos.concat(json[repo]);
+            repo_infos.push(json[repo]);
         }
     }
 </script>
@@ -21,7 +21,7 @@
  <div id='container'>
     {#await getOverview()}
         ...getting overview
-    {:then overview}
+    {:then}
         <table>
             <tr>
                 <th>Repo Owner</th>
