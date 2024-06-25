@@ -2,7 +2,7 @@
     import SvelteMarkdown from "svelte-markdown";
 
     async function getRepoInfos() {
-        const response = await fetch('/info.json');
+        const response = await fetch('/json/overview.json');
         const json = await response.json();
         return json;
     }
@@ -15,7 +15,8 @@
     {#await getRepoInfos()}
         ...getting repo infos
     {:then repo_infos}
-        {#each Object.keys(repo_infos) as owner}
+        {repo_infos}
+        <!-- {#each Object.keys(repo_infos) as owner}
             {#each Object.values(repo_infos[owner]) as repo_info}
                 <SvelteMarkdown source={repo_info['readme']} />
                 <p>
@@ -32,7 +33,7 @@
                     {/each}
                 </p>
             {/each}
-        {/each}
+        {/each} -->
     {/await}
 </div>
 

@@ -3,12 +3,21 @@ import utf8 from 'utf8';
 import fs from 'node:fs';
 import github from '@actions/github';
 
-const repos = [['qiime2', 'qiime2'], ['qiime2', 'q2cli'], ['qiime2', 'q2-types']]
+// Maybe we build up the data in a "new_json" dir then rename that dir to "json"
+const new_path = '/home/runner/work/library-svelte/library-svelte/static/new-json';
+const root_path = '/home/runner/work/library-svelte/library-svelte/static/json';
+const repos = [['qiime2', 'qiime2'], ['qiime2', 'q2cli'], ['qiime2', 'q2-types']];
 const repo_infos = {};
+const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
+
+// Make sure we start from a clean slate
+fs.rmsync(new_path, { recursive: true, force: true });
+fs.mkdirSync(new_path);
 
 for (const repo of repos) {
     const repo_info = {};
+    const repo_overview = {}
     const owner = repo[0];
     const repo_name = repo[1];
 
@@ -36,6 +45,7 @@ for (const repo of repos) {
     // Get the date, can be done via author or committer
     const commit_date = commits['data'][0]['commit']['committer']['date']
     repo_info['commit_date'] = commit_date;
+    repo_overview['commit_date'] = commit_date;
 
     // Get general repo data
     const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}`, {
@@ -49,6 +59,7 @@ for (const repo of repos) {
     // Pull stars off that
     const stars = repo_data['data']['stargazers_count'];
     repo_info['stars'] = stars;
+    repo_overview['stars'] = stars;
 
     // Get the readme
     const readme = await octokit.request(`GET /repos/${owner}/${repo_name}/readme`, {
@@ -63,11 +74,20 @@ for (const repo of repos) {
     const contents = utf8.decode(atob(readme['data']['content']));
     repo_info['readme'] = contents
 
-    if (!(owner in repo_infos)) {
-        repo_infos[owner] = {};
+    if (!fs.existsSync(`${new_path}/${owner}`)) {
+        fs.mkdirSync(`${new_path}/${owner}`);
+    }
+    fs.writeFileSync(`${new_path}/${owner}/${repo_name}.json`, JSON.stringify(repo_info));
+
+    if (!(owner in overview)) {
+        overview[owner] = {};
     }
 
-    repo_infos[owner][repo_name] = repo_info;
+    overview[owner][repo_name] = repo_overview;
+    overview['date'] = new Date();
 }
 
-fs.writeFileSync('/home/runner/work/library-svelte/library-svelte/static/info.json', JSON.stringify(repo_infos));
+fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
+
+// Rename the stuff we just wrote into the real directory
+fs.renameSync(new_path, root_path);
