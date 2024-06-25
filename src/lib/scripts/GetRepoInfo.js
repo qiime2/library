@@ -7,12 +7,11 @@ import github from '@actions/github';
 const new_path = '/home/runner/work/library-svelte/library-svelte/static/new-json';
 const root_path = '/home/runner/work/library-svelte/library-svelte/static/json';
 const repos = [['qiime2', 'qiime2'], ['qiime2', 'q2cli'], ['qiime2', 'q2-types']];
-const repo_infos = {};
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
 // Make sure we start from a clean slate
-fs.rmsync(new_path, { recursive: true, force: true });
+fs.rmdirSync(new_path, { recursive: true, force: true });
 fs.mkdirSync(new_path);
 
 for (const repo of repos) {
