@@ -11,7 +11,9 @@ const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
 // Make sure we start from a clean slate
-fs.rmdirSync(new_path, { recursive: true, force: true });
+if (fs.existsSync(new_path)) {
+    fs.rmdirSync(new_path, { recursive: true, force: true });
+}
 fs.mkdirSync(new_path);
 
 for (const repo of repos) {
