@@ -1,9 +1,14 @@
 <script lang="ts">
     import SvelteMarkdown from "svelte-markdown";
 
-    async function getRepoInfos() {
+    let date_fetched: string = '';
+
+    async function getOverview() {
         const response = await fetch('/json/overview.json');
         const json = await response.json();
+
+        date_fetched = json['date_fetched'];
+        delete json['date_fetched'];
         return json;
     }
 </script>
@@ -12,28 +17,37 @@
  then make the list of data sortable by last commit date, last ci pass date,
  and number of stars -->
 <div id="container">
-    {#await getRepoInfos()}
-        ...getting repo infos
-    {:then repo_infos}
-        {repo_infos}
-        <!-- {#each Object.keys(repo_infos) as owner}
-            {#each Object.values(repo_infos[owner]) as repo_info}
-                <SvelteMarkdown source={repo_info['readme']} />
-                <p>
-                    {repo_info['commit_date']}
-                </p>
-                <p>
-                    {repo_info['stars']}
-                </p>
-                <p>
-                    {#each repo_info['runs']['data']['check_runs'] as run}
-                        <p>{run['name']}</p>
-                        <p>{run['status']}</p>
-                        <p>{run['conclusion']}</p>
-                    {/each}
-                </p>
+    {#await getOverview()}
+        ...getting overview
+    {:then overview}
+        <table>
+            <tr>
+                <th>Repo Owner</th>
+                <th>Repo Name</th>
+                <th>Num Stars</th>
+                <th>Last Commit Date</th>
+                <th>Last Commit Status</th>
+            </tr>
+            {#each Object.keys(overview) as owner}
+                {#each Object.keys(overview[owner]) as repo_name}
+                    <tr>
+                        <td>{owner}</td>
+                        <td>{repo_name}</td>
+                        <td>{overview[owner][repo_name]['stars']}</td>
+                        <td>{overview[owner][repo_name]['commit_date']}</td>
+                        <td>{overview[owner][repo_name]['runs_status']}</td>
+                    </tr>
+                {/each}
             {/each}
-        {/each} -->
+        </table>
+        <p>
+            date fetched:&nbsp;
+            {#if date_fetched !== ''}
+                {date_fetched}
+            {:else}
+                error
+            {/if}
+        </p>
     {/await}
 </div>
 
