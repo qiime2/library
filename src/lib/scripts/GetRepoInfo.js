@@ -3,18 +3,16 @@ import utf8 from 'utf8';
 import fs from 'node:fs';
 import github from '@actions/github';
 
-// Maybe we build up the data in a "new_json" dir then rename that dir to "json"
-const new_path = '/home/runner/work/library-svelte/library-svelte/static/new-json';
 const root_path = '/home/runner/work/library-svelte/library-svelte/static/json';
 const repos = [['qiime2', 'qiime2'], ['qiime2', 'q2cli'], ['qiime2', 'q2-types']];
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
 // Make sure we start from a clean slate
-if (fs.existsSync(new_path)) {
-    fs.rmdirSync(new_path, { recursive: true, force: true });
+if (fs.existsSync(root_path)) {
+    fs.rmdirSync(root_path, { recursive: true, force: true });
 }
-fs.mkdirSync(new_path);
+fs.mkdirSync(root_path);
 
 for (const repo of repos) {
     const repo_info = {};
@@ -75,10 +73,10 @@ for (const repo of repos) {
     const contents = utf8.decode(atob(readme['data']['content']));
     repo_info['readme'] = contents
 
-    if (!fs.existsSync(`${new_path}/${owner}`)) {
-        fs.mkdirSync(`${new_path}/${owner}`);
+    if (!fs.existsSync(`${root_path}/${owner}`)) {
+        fs.mkdirSync(`${root_path}/${owner}`);
     }
-    fs.writeFileSync(`${new_path}/${owner}/${repo_name}.json`, JSON.stringify(repo_info));
+    fs.writeFileSync(`${root_path}/${owner}/${repo_name}.json`, JSON.stringify(repo_info));
 
     if (!(owner in overview)) {
         overview[owner] = {};
@@ -88,7 +86,4 @@ for (const repo of repos) {
     overview['date_fetched'] = new Date();
 }
 
-fs.writeFileSync(`${new_path}/overview.json`, JSON.stringify(overview));
-
-// Rename the stuff we just wrote into the real directory
-fs.renameSync(new_path, root_path);
+fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
