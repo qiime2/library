@@ -1,6 +1,4 @@
 <script lang="ts">
-    import SvelteMarkdown from "svelte-markdown";
-
     let date_fetched: string = '';
 
     async function getOverview() {
@@ -32,7 +30,7 @@
                 {#each Object.keys(overview[owner]) as repo_name}
                     <tr>
                         <td>{owner}</td>
-                        <td>{repo_name}</td>
+                        <td><a href="repo?owner={owner}&repo_name={repo_name}">{repo_name}</a></td>
                         <td>{overview[owner][repo_name]['stars']}</td>
                         <td>{overview[owner][repo_name]['commit_date']}</td>
                         <td>{overview[owner][repo_name]['runs_status']}</td>
