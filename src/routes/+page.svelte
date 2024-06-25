@@ -14,7 +14,7 @@
 <!-- Get a list of repos from somewhere and fetch this info about these repos
  then make the list of data sortable by last commit date, last ci pass date,
  and number of stars -->
-<div id="container">
+ <div id='container'>
     {#await getOverview()}
         ...getting overview
     {:then overview}
@@ -55,9 +55,13 @@
         margin: auto;
     }
 
-    .card {
-        border-style: solid;
-        border-color: black;
-        border: 2px;
+    table, th, td {
+        @apply border
+        border-solid
+        border-gray-300;
+    }
+
+    th, td {
+        @apply p-4;
     }
 </style>
