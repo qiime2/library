@@ -42,7 +42,7 @@ for (const repo of repos) {
     repo_info['runs'] = runs;
 
     overview['runs_status'] = 'passed'
-    for (const run of runs['data']) {
+    for (const run of runs['data']['check_runs']) {
         if (run['status'] !== 'completed') {
             overview['runs_status'] = 'in progress'
             break;
