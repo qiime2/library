@@ -88,7 +88,7 @@ for (const repo of repos) {
     overview['date'] = new Date();
 }
 
-fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
+fs.writeFileSync(`${new_path}/overview.json`, JSON.stringify(overview));
 
 // Rename the stuff we just wrote into the real directory
 fs.renameSync(new_path, root_path);
