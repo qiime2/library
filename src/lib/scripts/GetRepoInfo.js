@@ -85,7 +85,7 @@ for (const repo of repos) {
     }
 
     overview[owner][repo_name] = repo_overview;
-    overview['date'] = new Date();
+    overview['date_fetched'] = new Date();
 }
 
 fs.writeFileSync(`${new_path}/overview.json`, JSON.stringify(overview));
