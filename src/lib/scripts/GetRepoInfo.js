@@ -19,10 +19,17 @@ if (fs.existsSync(root_path)) {
 fs.mkdirSync(root_path);
 
 for (const repo of repos) {
-  const repo_info = {};
-  const repo_overview = {};
   const owner = repo[0];
   const repo_name = repo[1];
+
+  const repo_info = {
+    owner: owner,
+    repo_name: repo_name,
+  };
+  const repo_overview = {
+    owner: owner,
+    repo_name: repo_name,
+  };
 
   // Get the latest commit
   const commits = await octokit.request(
@@ -107,12 +114,8 @@ for (const repo of repos) {
     JSON.stringify(repo_info),
   );
 
-  if (!(owner in overview)) {
-    overview[owner] = {};
-  }
-
-  overview[owner][repo_name] = repo_overview;
-  overview["date_fetched"] = new Date();
+  overview[repo_name] = repo_overview;
 }
 
+overview["date_fetched"] = new Date();
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));

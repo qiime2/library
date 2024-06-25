@@ -1,5 +1,6 @@
 <script lang="ts">
     let date_fetched: string | undefined = undefined;
+    let repo_infos: Array<Object> = [];
 
     async function getOverview() {
         const response = await fetch('/json/overview.json');
@@ -7,7 +8,10 @@
 
         date_fetched = json['date_fetched'];
         delete json['date_fetched'];
-        return json;
+
+        for (const repo of Object.keys(json)) {
+            repo_infos.concat(json[repo]);
+        }
     }
 </script>
 
@@ -26,16 +30,14 @@
                 <th>Last Commit Date</th>
                 <th>Last Commit Status</th>
             </tr>
-            {#each Object.keys(overview) as owner}
-                {#each Object.keys(overview[owner]) as repo_name}
-                    <tr>
-                        <td>{owner}</td>
-                        <td><a href="repo?owner={owner}&repo_name={repo_name}">{repo_name}</a></td>
-                        <td>{overview[owner][repo_name]['stars']}</td>
-                        <td>{overview[owner][repo_name]['commit_date']}</td>
-                        <td>{overview[owner][repo_name]['runs_status']}</td>
-                    </tr>
-                {/each}
+            {#each repo_infos as repo_info}
+                <tr>
+                    <td>{repo_info['owner']}</td>
+                    <td><a href="repo?owner={repo_info['owner']}&repo_name={repo_info['repo_name']}">{repo_info['repo_name']}</a></td>
+                    <td>{repo_info['stars']}</td>
+                    <td>{repo_info['commit_date']}</td>
+                    <td>{repo_info['runs_status']}</td>
+                </tr>
             {/each}
         </table>
         <p>
