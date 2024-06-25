@@ -58,7 +58,8 @@
     table, th, td {
         @apply border
         border-solid
-        border-gray-300;
+        border-gray-300
+        text-left;
     }
 
     th, td {
