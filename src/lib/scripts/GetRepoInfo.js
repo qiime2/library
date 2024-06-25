@@ -41,15 +41,15 @@ for (const repo of repos) {
     });
     repo_info['runs'] = runs;
 
-    overview['runs_status'] = 'passed'
+    repo_overview['runs_status'] = 'passed'
     for (const run of runs['data']['check_runs']) {
         if (run['status'] !== 'completed') {
-            overview['runs_status'] = 'in progress'
+            repo_overview['runs_status'] = 'in progress'
             break;
         }
 
         if (run['conclusion'] === 'failure') {
-            overview['runs_status'] = 'failed';
+            repo_overview['runs_status'] = 'failed';
             break;
         }
     }
