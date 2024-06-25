@@ -41,6 +41,20 @@ for (const repo of repos) {
     });
     repo_info['runs'] = runs;
 
+    overview['runs_status'] = 'passed'
+    for (const run of runs['data']) {
+        if (run['status'] !== 'completed') {
+            overview['runs_status'] = 'in progress'
+            break;
+        }
+
+        if (run['conclusion'] === 'failure') {
+            overview['runs_status'] = 'failed';
+            break;
+        }
+    }
+
+
     // Get the date, can be done via author or committer
     const commit_date = commits['data'][0]['commit']['committer']['date']
     repo_info['commit_date'] = commit_date;
