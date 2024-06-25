@@ -1,5 +1,5 @@
 <script lang="ts">
-    let date_fetched: string = '';
+    let date_fetched: string | undefined = undefined;
 
     async function getOverview() {
         const response = await fetch('/json/overview.json');
@@ -40,7 +40,7 @@
         </table>
         <p>
             date fetched:&nbsp;
-            {#if date_fetched !== ''}
+            {#if date_fetched !== undefined}
                 {date_fetched}
             {:else}
                 error
