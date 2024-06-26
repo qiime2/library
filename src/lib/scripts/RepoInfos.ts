@@ -29,9 +29,6 @@ export function sortArray(this_col: string) {
     const A = a[this_col as keyof Object];
     const B = b[this_col as keyof Object];
 
-    console.log(A);
-    console.log(B);
-
     if (A < B) {
       return sort_descending === true ? 1 : -1;
     } else if (A > B) {
