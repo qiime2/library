@@ -7,8 +7,8 @@ export const overview = writable<{
   repo_overviews: Object[];
   date_fetched: string;
 }>({
-  'repo_overviews': [],
-  'date_fetched': ''
+  repo_overviews: [],
+  date_fetched: "",
 });
 
 let sort_col: string;
@@ -52,8 +52,8 @@ export function sortArray(this_col: string) {
 
   if (repo_infos !== undefined) {
     overview.set({
-      'repo_overviews': repo_infos.sort(compareElements),
-      'date_fetched': date_fetched
+      repo_overviews: repo_infos.sort(compareElements),
+      date_fetched: date_fetched,
     });
   }
 }

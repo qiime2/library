@@ -40,7 +40,7 @@
     {#await getOverview()}
         ...getting overview
     {:then}
-        <table class="centered">
+        <table class='centered'>
             <tr>
                 <RepoCard this_col={'Repo Owner'}/>
                 <RepoCard this_col={'Repo Name'}/>

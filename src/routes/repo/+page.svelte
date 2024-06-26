@@ -13,11 +13,11 @@
     }
 </script>
 
-<div id="container">
+<div id='container'>
     {#await getRepoInfo()}
         ...getting info
     {:then repo_info}
-        <div>
+        <div id='info'>
             <p>
                 {repo_info['Commit Date']}
             </p>
@@ -45,5 +45,13 @@
         grid
         grid-cols-2
         gap-4;
+    }
+
+    #info {
+        height: fit-content;
+        @apply border
+        border-solid
+        border-gray-300
+        p-4;
     }
 </style>
