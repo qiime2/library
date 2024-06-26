@@ -2,7 +2,7 @@ import { writable } from "svelte/store";
 import { sort_info } from "$lib/scripts/SortStore.ts";
 
 let _repo_infos: Array<Object>;
-const repo_infos = writable([]);
+const repo_infos = writable<Object[]>([]);
 
 let sort_col: string;
 let sort_ascending: boolean;
