@@ -10,6 +10,11 @@
     });
 
     async function getOverview() {
+        // Check if we already got it
+        if (_repo_infos.length !== 0) {
+            return;
+        }
+
         const response = await fetch('/json/overview.json');
         const json = await response.json();
 
