@@ -23,12 +23,12 @@ for (const repo of repos) {
   const repo_name = repo[1];
 
   const repo_info = {
-    owner: owner,
-    repo_name: repo_name,
+    "Repo Owner": owner,
+    "Repo Name": repo_name,
   };
   const repo_overview = {
-    owner: owner,
-    repo_name: repo_name,
+    "Repo Owner": owner,
+    "Repo Name": repo_name,
   };
 
   // Get the latest commit
@@ -56,25 +56,25 @@ for (const repo of repos) {
       },
     },
   );
-  repo_info["runs"] = runs;
+  repo_info["Commit Status"] = runs;
 
-  repo_overview["runs_status"] = "passed";
+  repo_overview["Commit Status"] = "passed";
   for (const run of runs["data"]["check_runs"]) {
     if (run["status"] !== "completed") {
-      repo_overview["runs_status"] = "in progress";
+      repo_overview["Commit Status"] = "in progress";
       break;
     }
 
     if (run["conclusion"] === "failure") {
-      repo_overview["runs_status"] = "failed";
+      repo_overview["Commit Status"] = "failed";
       break;
     }
   }
 
   // Get the date, can be done via author or committer
   const commit_date = commits["data"][0]["commit"]["committer"]["date"];
-  repo_info["commit_date"] = commit_date;
-  repo_overview["commit_date"] = commit_date;
+  repo_info["Commit Date"] = commit_date;
+  repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
   const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}`, {
@@ -87,8 +87,8 @@ for (const repo of repos) {
 
   // Pull stars off that
   const stars = repo_data["data"]["stargazers_count"];
-  repo_info["stars"] = stars;
-  repo_overview["stars"] = stars;
+  repo_info["Stars"] = stars;
+  repo_overview["Stars"] = stars;
 
   // Get the readme
   const readme = await octokit.request(
@@ -104,7 +104,7 @@ for (const repo of repos) {
 
   // Convert it back to a normal string
   const contents = utf8.decode(atob(readme["data"]["content"]));
-  repo_info["readme"] = contents;
+  repo_info["Readme"] = contents;
 
   if (!fs.existsSync(`${root_path}/${owner}`)) {
     fs.mkdirSync(`${root_path}/${owner}`);
@@ -117,5 +117,5 @@ for (const repo of repos) {
   overview[repo_name] = repo_overview;
 }
 
-overview["date_fetched"] = new Date();
+overview["Date Fetched"] = new Date();
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
