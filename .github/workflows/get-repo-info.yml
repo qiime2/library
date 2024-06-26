@@ -31,7 +31,7 @@ jobs:
           npm install utf8
 
       - name: Get Repo Info
-        run: node src/lib/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
+        run: node src/lib/scripts/GetRepoInfo.ts ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit Repo Changes
         run: |
