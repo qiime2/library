@@ -11,9 +11,9 @@
 
     async function getOverview() {
         // Check if we already got it
-        if (_repo_infos.length !== 0) {
-            return;
-        }
+        // if (_repo_infos.length !== 0) {
+        //     return;
+        // }
 
         const response = await fetch('/json/overview.json');
         const json = await response.json();
@@ -32,7 +32,7 @@
 <!-- Get a list of repos from somewhere and fetch this info about these repos
  then make the list of data sortable by last commit date, last ci pass date,
  and number of stars -->
- <div id='container'>
+<div id='container'>
     {#await getOverview()}
         ...getting overview
     {:then}
