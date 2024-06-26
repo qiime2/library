@@ -1,19 +1,20 @@
 <script lang="ts">
     import RepoCard from '$lib/components/RepoCard.svelte';
-    import { repo_infos } from '$lib/scripts/RepoInfos.ts';
+    import { overview } from '$lib/scripts/RepoInfos.ts';
 
-    let _repo_infos: Array<Object>;
-    let date_fetched: string | undefined = undefined;
+    let repo_overviews: Array<Object>;
+    let date_fetched: string;
 
-    repo_infos.subscribe((value) => {
-        _repo_infos = value;
+    overview.subscribe((value) => {
+        repo_overviews = value.repo_overviews;
+        date_fetched = value.date_fetched;
     });
 
     async function getOverview() {
         // Check if we already got it
-        // if (_repo_infos.length !== 0) {
-        //     return;
-        // }
+        if (repo_overviews.length !== 0) {
+            return;
+        }
 
         const response = await fetch('/json/overview.json');
         const json = await response.json();
@@ -22,10 +23,13 @@
         delete json['Date Fetched'];
 
         for (const repo of Object.keys(json)) {
-            _repo_infos.push(json[repo]);
+            repo_overviews.push(json[repo]);
         }
 
-        repo_infos.set(_repo_infos);
+        overview.set({
+            'repo_overviews': repo_overviews,
+            'date_fetched': date_fetched
+        });
     }
 </script>
 
@@ -44,19 +48,19 @@
                 <RepoCard this_col={'Commit Date'}/>
                 <RepoCard this_col={'Commit Status'}/>
             </tr>
-            {#each _repo_infos as repo_info}
+            {#each repo_overviews as repo_overview}
                 <tr>
-                    <td>{repo_info['Repo Owner']}</td>
-                    <td><a href="repo?owner={repo_info['Repo Owner']}&repo_name={repo_info['Repo Name']}">{repo_info['Repo Name']}</a></td>
-                    <td>{repo_info['Stars']}</td>
-                    <td>{repo_info['Commit Date']}</td>
-                    <td>{repo_info['Commit Status']}</td>
+                    <td>{repo_overview['Repo Owner']}</td>
+                    <td><a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Name']}</a></td>
+                    <td>{repo_overview['Stars']}</td>
+                    <td>{repo_overview['Commit Date']}</td>
+                    <td>{repo_overview['Commit Status']}</td>
                 </tr>
             {/each}
         </table>
         <p>
             date fetched:&nbsp;
-            {#if date_fetched !== undefined}
+            {#if date_fetched !== ''}
                 {date_fetched}
             {:else}
                 error

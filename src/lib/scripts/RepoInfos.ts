@@ -1,8 +1,15 @@
 import { writable } from "svelte/store";
 import { sort_info } from "$lib/scripts/SortStore.ts";
 
-let _repo_infos: Array<Object>;
-const repo_infos = writable<Object[]>([]);
+let repo_infos: Array<Object>;
+let date_fetched: string;
+export const overview = writable<{
+  repo_overviews: Object[];
+  date_fetched: string;
+}>({
+  'repo_overviews': [],
+  'date_fetched': ''
+});
 
 let sort_col: string;
 let sort_ascending: boolean;
@@ -38,13 +45,15 @@ export function sortArray(this_col: string) {
     return 0;
   }
 
-  repo_infos.subscribe((value) => {
-    _repo_infos = value;
+  overview.subscribe((value) => {
+    repo_infos = value.repo_overviews;
+    date_fetched = value.date_fetched;
   });
 
-  if (_repo_infos !== undefined) {
-    repo_infos.set(_repo_infos.sort(compareElements));
+  if (repo_infos !== undefined) {
+    overview.set({
+      'repo_overviews': repo_infos.sort(compareElements),
+      'date_fetched': date_fetched
+    });
   }
 }
-
-export { repo_infos };
