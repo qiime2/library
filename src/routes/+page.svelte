@@ -66,14 +66,14 @@
         margin: auto;
     }
 
-    table, th, td {
+    table, td {
         @apply border
         border-solid
         border-gray-300
         text-left;
     }
 
-    th, td {
+    td {
         @apply p-4;
     }
 </style>

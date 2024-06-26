@@ -2,14 +2,13 @@
     import SvelteMarkdown from "svelte-markdown";
 
     const url = new URL(window.location.href);
-    const owner = url.searchParams.get('Owner Name');
-    const repo_name = url.searchParams.get('Repo Name');
+    const owner = url.searchParams.get('owner');
+    const repo_name = url.searchParams.get('repo_name');
 
     async function getRepoInfo() {
         const response = await fetch(`/json/${owner}/${repo_name}.json`);
         const repo_info = await response.json();
 
-        console.log(repo_info)
         return repo_info;
     }
 </script>
@@ -26,7 +25,7 @@
             {repo_info['Stars']}
         </p>
         <p>
-            {#each repo_info['runs']['data']['check_runs'] as run}
+            {#each repo_info['Commit Status']['data']['check_runs'] as run}
                 <p>{run['name']}</p>
                 <p>{run['status']}</p>
                 <p>{run['conclusion']}</p>
