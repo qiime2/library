@@ -1,11 +1,11 @@
 <script lang="ts">
     import SvelteMarkdown from "svelte-markdown";
 
-    const url = new URL(window.location.href);
-    const owner = url.searchParams.get('owner');
-    const repo_name = url.searchParams.get('repo_name');
-
     async function getRepoInfo() {
+        const url = new URL(window.location.href);
+        const owner = url.searchParams.get('owner');
+        const repo_name = url.searchParams.get('repo_name');
+
         const response = await fetch(`/json/${owner}/${repo_name}.json`);
         const repo_info = await response.json();
 
