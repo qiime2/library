@@ -71,8 +71,9 @@
 
 <style lang="postcss">
     #container {
+        margin-top: 70px;
         @apply max-w-7xl
-        m-auto;
+        mx-auto;
     }
 
     .centered {

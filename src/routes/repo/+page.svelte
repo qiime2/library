@@ -40,8 +40,9 @@
 
 <style lang="postcss">
     #container {
+        margin-top: 70px;
         @apply max-w-7xl
-        m-auto
+        mx-auto
         grid
         grid-cols-2
         gap-4;
