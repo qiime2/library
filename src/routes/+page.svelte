@@ -40,7 +40,7 @@
     {#await getOverview()}
         ...getting overview
     {:then}
-        <table>
+        <table class="centered">
             <tr>
                 <RepoCard this_col={'Repo Owner'}/>
                 <RepoCard this_col={'Repo Name'}/>
@@ -71,8 +71,12 @@
 
 <style lang="postcss">
     #container {
-        width: 50%;
-        margin: auto;
+        @apply max-w-7xl
+        m-auto;
+    }
+
+    .centered {
+        @apply mx-auto;
     }
 
     table, td {
@@ -84,5 +88,9 @@
 
     td {
         @apply p-4;
+    }
+
+    p {
+        @apply text-center;
     }
 </style>

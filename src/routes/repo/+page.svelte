@@ -17,19 +17,33 @@
     {#await getRepoInfo()}
         ...getting info
     {:then repo_info}
-        <SvelteMarkdown source={repo_info['Readme']} />
-        <p>
-            {repo_info['Commit Date']}
-        </p>
-        <p>
-            {repo_info['Stars']}
-        </p>
-        <p>
-            {#each repo_info['Commit Status']['data']['check_runs'] as run}
-                <p>{run['name']}</p>
-                <p>{run['status']}</p>
-                <p>{run['conclusion']}</p>
-            {/each}
-        </p>
+        <div>
+            <p>
+                {repo_info['Commit Date']}
+            </p>
+            <p>
+                {repo_info['Stars']}
+            </p>
+            <p>
+                {#each repo_info['Commit Status']['data']['check_runs'] as run}
+                    <p>{run['name']}</p>
+                    <p>{run['status']}</p>
+                    <p>{run['conclusion']}</p>
+                {/each}
+            </p>
+        </div>
+        <div>
+            <SvelteMarkdown source={repo_info['Readme']} />
+        </div>
     {/await}
 </div>
+
+<style lang="postcss">
+    #container {
+        @apply max-w-7xl
+        m-auto
+        grid
+        grid-cols-2
+        gap-4;
+    }
+</style>
