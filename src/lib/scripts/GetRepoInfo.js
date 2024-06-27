@@ -124,11 +124,12 @@ for (const repo of repos) {
 }
 
 const x = await octokit.request(
-  `GET /repos/Oddant1/cookiecutter-qiime2-plugin/cookiecutter/environments`,
+  `GET /repos/Oddant1/cookiecutter-qiime2-plugin/contents/cookiecutter/environments`,
   {
     owner: 'Oddant1',
     repo: 'cookiecutter-qiime2-plugin',
     sha: 'test',
+    path: '/cookiecutter/environments/',
     headers: {
       "X-GitHub-Api-Version": "2022-11-28",
     },
