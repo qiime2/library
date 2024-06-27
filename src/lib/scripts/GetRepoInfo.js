@@ -5,9 +5,9 @@ import github from "@actions/github";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const repos = [
-  ["qiime2", "qiime2"],
-  ["qiime2", "q2cli"],
-  ["qiime2", "q2-types"],
+  ["qiime2", "qiime2", "dev"],
+  ["qiime2", "q2cli", "dev"],
+  ["qiime2", "q2-types", "dev"],
 ];
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
@@ -21,6 +21,7 @@ fs.mkdirSync(root_path);
 for (const repo of repos) {
   const owner = repo[0];
   const repo_name = repo[1];
+  const branch = repo[2];
 
   const repo_info = {
     "Repo Owner": owner,
@@ -37,6 +38,7 @@ for (const repo of repos) {
     {
       owner: owner,
       repo: repo_name,
+      sha: branch,
       per_page: 1,
       headers: {
         "X-Github-Api-Version": "2022-11-28",
@@ -50,6 +52,7 @@ for (const repo of repos) {
     {
       owner: owner,
       repo: repo_name,
+      sha: branch,
       ref: `${sha}`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
@@ -80,6 +83,7 @@ for (const repo of repos) {
   const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}`, {
     owner: owner,
     repo: repo_name,
+    sha: branch,
     headers: {
       "X-Github-Api-Version": "2022-11-28",
     },
@@ -96,6 +100,7 @@ for (const repo of repos) {
     {
       owner: owner,
       repo: repo_name,
+      sha: branch,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
