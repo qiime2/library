@@ -5,9 +5,9 @@ import github from "@actions/github";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const repos = [
-  ["qiime2", "qiime2", "dev"],
-  ["qiime2", "q2cli", "dev"],
-  ["qiime2", "q2-types", "dev"],
+  ["Oddant1", "qiime2", "test"],
+  ["Oddant1", "q2cli", "test"],
+  ["Oddant1", "q2-types", "test"],
   ["Oddant1", "cookiecutter-qiime2-plugin", "test"]
 ];
 const overview = {};
@@ -112,6 +112,20 @@ for (const repo of repos) {
   const contents = utf8.decode(atob(readme["data"]["content"]));
   repo_info["Readme"] = contents;
 
+  const envs = await octokit.request(
+    `GET /repos/Oddant1/cookiecutter-qiime2-plugin/contents/cookiecutter/environments/`,
+    {
+      owner: 'Oddant1',
+      repo: 'cookiecutter-qiime2-plugin',
+      ref: 'test',
+      path: '/cookiecutter/environments/',
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    },
+  );
+  repo_info["Envs"] = envs;
+
   if (!fs.existsSync(`${root_path}/${owner}`)) {
     fs.mkdirSync(`${root_path}/${owner}`);
   }
@@ -122,20 +136,6 @@ for (const repo of repos) {
 
   overview[repo_name] = repo_overview;
 }
-
-const x = await octokit.request(
-  `GET /repos/Oddant1/cookiecutter-qiime2-plugin/contents/cookiecutter/environments/`,
-  {
-    owner: 'Oddant1',
-    repo: 'cookiecutter-qiime2-plugin',
-    ref: 'test',
-    path: '/cookiecutter/environments/',
-    headers: {
-      "X-GitHub-Api-Version": "2022-11-28",
-    },
-  },
-);
-console.log(x)
 
 overview["Date Fetched"] = new Date();
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));

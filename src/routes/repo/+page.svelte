@@ -31,6 +31,9 @@
                     <p>{run['conclusion']}</p>
                 {/each}
             </p>
+            <p>
+                {repo_info['Envs']}
+            </p>
         </div>
         <div>
             <SvelteMarkdown source={repo_info['Readme']} />
