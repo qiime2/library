@@ -123,5 +123,18 @@ for (const repo of repos) {
   overview[repo_name] = repo_overview;
 }
 
+const x = await octokit.request(
+  `GET /repos/${owner}/${repo_name}/cookiecutter/environments`,
+  {
+    owner: 'Oddant1',
+    repo: 'cookiecutter-qiime2-plugin',
+    sha: 'test',
+    headers: {
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+  },
+);
+console.log(x)
+
 overview["Date Fetched"] = new Date();
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
