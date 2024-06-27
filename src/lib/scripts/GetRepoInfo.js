@@ -124,7 +124,7 @@ for (const repo of repos) {
 }
 
 const x = await octokit.request(
-  `GET /repos/${owner}/${repo_name}/cookiecutter/environments`,
+  `GET /repos/Oddant1/cookiecutter/cookiecutter/environments`,
   {
     owner: 'Oddant1',
     repo: 'cookiecutter-qiime2-plugin',
