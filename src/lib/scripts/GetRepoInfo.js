@@ -35,11 +35,11 @@ for (const repo of repos) {
 
   // Get the latest commit
   const commits = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/commits`,
+    `GET /repos/${owner}/${repo_name}/branches/${branch}/commits`,
     {
       owner: owner,
       repo: repo_name,
-      sha: branch,
+      branch: branch,
       per_page: 1,
       headers: {
         "X-Github-Api-Version": "2022-11-28",
@@ -49,11 +49,11 @@ for (const repo of repos) {
 
   const sha = commits["data"][0]["sha"];
   const runs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/commits/${sha}/check-runs`,
+    `GET /repos/${owner}/${repo_name}/branches/${branch}/commits/${sha}/check-runs`,
     {
       owner: owner,
       repo: repo_name,
-      sha: branch,
+      branch: branch,
       ref: `${sha}`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
@@ -81,10 +81,10 @@ for (const repo of repos) {
   repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
-  const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}`, {
+  const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}/branches/${branch}`, {
     owner: owner,
     repo: repo_name,
-    sha: branch,
+    branch: branch,
     headers: {
       "X-Github-Api-Version": "2022-11-28",
     },
@@ -97,11 +97,11 @@ for (const repo of repos) {
 
   // Get the readme
   const readme = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/readme`,
+    `GET /repos/${owner}/${repo_name}/branches/${branch}/readme`,
     {
       owner: owner,
       repo: repo_name,
-      sha: branch,
+      branch: branch,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
