@@ -2,6 +2,7 @@ name: Get Repo Info
 
 # Run every night at midnight
 on:
+  workflow_dispatch
 # schedule:
 #   - cron: "0 0 * * *"
   push:
