@@ -128,7 +128,7 @@ const x = await octokit.request(
   {
     owner: 'Oddant1',
     repo: 'cookiecutter-qiime2-plugin',
-    sha: 'test',
+    ref: 'test',
     path: '/cookiecutter/environments/cookiecutter-qiime2-amplicon-macos-2024.5.yml',
     headers: {
       "X-GitHub-Api-Version": "2022-11-28",
