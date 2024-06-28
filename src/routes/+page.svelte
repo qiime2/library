@@ -59,9 +59,11 @@
             {/each}
         </table>
         {#each repo_overviews as repo_overview}
-            {repo_overview['Distros']}
-            {repo_overview['OSes']}
-            {repo_overview['Epochs']}
+            <p>
+                {repo_overview['Distros']}
+                {repo_overview['OSes']}
+                {repo_overview['Epochs']}
+            </p>
         {/each}
         <p>
             date fetched:&nbsp;
