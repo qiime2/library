@@ -32,7 +32,7 @@
                 {/each}
             </p>
             <p>
-                {repo_info['Envs']}
+                {JSON.stringify(repo_info['Envs'])}
             </p>
         </div>
         <div>

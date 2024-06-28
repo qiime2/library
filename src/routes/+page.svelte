@@ -58,6 +58,11 @@
                 </tr>
             {/each}
         </table>
+        {#each repo_overviews as repo_overview}
+            {repo_overview['Distros']}
+            {repo_overview['OSes']}
+            {repo_overview['Epochs']}
+        {/each}
         <p>
             date fetched:&nbsp;
             {#if date_fetched !== ''}
