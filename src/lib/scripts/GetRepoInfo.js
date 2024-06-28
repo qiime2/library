@@ -127,18 +127,18 @@ for (const repo of repos) {
 
   repo_info['Envs'] = envs;
 
-  overview['Distros'] = [];
-  overview['OSes'] = [];
-  overview['Epochs'] = []
+  repo_overview['Distros'] = [];
+  repo_overview['OSes'] = [];
+  repo_overview['Epochs'] = []
 
   for (const env of envs['data']) {
     // Strip the extension off the end of the name
     const name = env['name'].substring(0, env['name'].indexOf('.yml'));
     const split = name.split('-');
 
-    overview['Distros'].push(split[1]);
-    overview['OSes'].push(split[2]);
-    overview['Epochs'].push(split[3]);
+    repo_overview['Distros'].push(split[1]);
+    repo_overview['OSes'].push(split[2]);
+    repo_overview['Epochs'].push(split[3]);
   }
 
   if (!fs.existsSync(`${root_path}/${owner}`)) {
