@@ -60,9 +60,9 @@
         </table>
         {#each repo_overviews as repo_overview}
             <p>
-                {repo_overview['Distros']}
-                {repo_overview['OSes']}
-                {repo_overview['Epochs']}
+                {JSON.stringify(repo_overview['Distros'])}
+                {JSON.stringify(repo_overview['OSes'])}
+                {JSON.stringify(repo_overview['Epochs'])}
             </p>
         {/each}
         <p>

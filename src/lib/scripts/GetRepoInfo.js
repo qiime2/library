@@ -107,12 +107,12 @@ for (const repo of repos) {
   repo_info["Readme"] = contents;
 
   const envs = await octokit.request(
-    `GET /repos/Oddant1/cookiecutter-qiime2-plugin/contents/cookiecutter/environments/`,
+    `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace('-', '_')}/environments/`,
     {
-      owner: 'Oddant1',
-      repo: 'cookiecutter-qiime2-plugin',
-      ref: 'test',
-      path: '/cookiecutter/environments/',
+      owner: owner,
+      repo: repo_name,
+      ref: branch,
+      path: `/${repo_name.replace('-', '_')}/environments/`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
