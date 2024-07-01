@@ -15,7 +15,7 @@ const octokit = github.getOctokit(process.argv[2]);
 
 // Make sure we start from a clean slate
 if (fs.existsSync(root_path)) {
-  fs.rmdirSync(root_path, { recursive: true, force: true });
+  fs.rmSync(root_path, { recursive: true, force: true });
 }
 fs.mkdirSync(root_path);
 
@@ -107,7 +107,7 @@ for (const repo of repos) {
   repo_info["Readme"] = contents;
 
   const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace('-', '_')}/environments/`,
+    `GET /repos/${owner}/${repo_name}/contents/environments/`,
     {
       owner: owner,
       repo: repo_name,
