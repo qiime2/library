@@ -24,10 +24,7 @@ for (const repo of repos) {
   const repo_name = repo[1];
   const branch = repo[2];
 
-  const repo_info = {
-    "Repo Owner": owner,
-    "Repo Name": repo_name,
-  };
+  const repo_info = {};
   const repo_overview = {
     "Repo Owner": owner,
     "Repo Name": repo_name,
@@ -53,14 +50,13 @@ for (const repo of repos) {
     {
       owner: owner,
       repo: repo_name,
-      ref: branch,
       ref: `${sha}`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
     },
   );
-  repo_info["Commit Status"] = runs;
+  repo_info["Commit Runs"] = runs;
 
   repo_overview["Commit Status"] = "passed";
   for (const run of runs["data"]["check_runs"]) {
@@ -77,7 +73,6 @@ for (const repo of repos) {
 
   // Get the date, can be done via author or committer
   const commit_date = commits["data"][0]["commit"]["committer"]["date"];
-  repo_info["Commit Date"] = commit_date;
   repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
@@ -92,7 +87,6 @@ for (const repo of repos) {
 
   // Pull stars off that
   const stars = repo_data["data"]["stargazers_count"];
-  repo_info["Stars"] = stars;
   repo_overview["Stars"] = stars;
 
   // Get the readme
@@ -125,8 +119,6 @@ for (const repo of repos) {
     },
   );
 
-  repo_info['Envs'] = envs;
-
   repo_overview['Distros'] = new Set();
   repo_overview['OSes'] = new Set();
   repo_overview['Epochs'] = new Set();
@@ -140,6 +132,8 @@ for (const repo of repos) {
     repo_overview['OSes'].add(split[2]);
     repo_overview['Epochs'].add(split[3]);
   }
+
+  repo_info = {...repo_info, ...repo_overview};
 
   if (!fs.existsSync(`${root_path}/${owner}`)) {
     fs.mkdirSync(`${root_path}/${owner}`);

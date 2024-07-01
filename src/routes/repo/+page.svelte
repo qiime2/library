@@ -25,7 +25,7 @@
                 {repo_info['Stars']}
             </p>
             <p>
-                {#each repo_info['Commit Status']['data']['check_runs'] as run}
+                {#each repo_info['Commit Runs']['data']['check_runs'] as run}
                     <p>{run['name']}</p>
                     <p>{run['status']}</p>
                     <p>{run['conclusion']}</p>
