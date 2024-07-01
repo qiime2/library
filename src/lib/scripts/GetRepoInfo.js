@@ -8,7 +8,7 @@ const repos = [
   ["Oddant1", "qiime2", "test"],
   ["Oddant1", "q2cli", "test"],
   ["Oddant1", "q2-types", "test"],
-  ["Oddant1", "cookiecutter-qiime2-plugin", "test"]
+  ["Oddant1", "q2-cookiecutter", "test"]
 ];
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
