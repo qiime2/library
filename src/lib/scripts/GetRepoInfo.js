@@ -24,8 +24,8 @@ for (const repo of repos) {
   const repo_name = repo[1];
   const branch = repo[2];
 
-  const repo_info = {};
-  const repo_overview = {
+  let repo_info = {};
+  let repo_overview = {
     "Repo Owner": owner,
     "Repo Name": repo_name,
   };
