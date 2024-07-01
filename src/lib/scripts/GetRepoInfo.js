@@ -107,7 +107,7 @@ for (const repo of repos) {
   repo_info["Readme"] = contents;
 
   const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/environments/`,
+    `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace('-', '_')}/environments/`,
     {
       owner: owner,
       repo: repo_name,
