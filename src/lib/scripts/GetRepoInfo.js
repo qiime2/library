@@ -123,7 +123,9 @@ for (const repo of repos) {
   repo_overview['OSes'] = new Set();
   repo_overview['Epochs'] = new Set();
 
+  console.log(envs)
   for (const env of envs['data']) {
+    console.log(env)
     // Strip the extension off the end of the name
     const name = env['name'].substring(0, env['name'].indexOf('.yml'));
     const split = name.split('-');
