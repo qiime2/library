@@ -8,7 +8,7 @@ const repos = [
   ["Oddant1", "qiime2", "test"],
   ["Oddant1", "q2cli", "test"],
   ["Oddant1", "q2-types", "test"],
-  ["Oddant1", "q2-cookiecutter", "test"]
+  ["Oddant1", "q2-cookiecutter", "test"],
 ];
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
@@ -107,40 +107,40 @@ for (const repo of repos) {
   repo_info["Readme"] = contents;
 
   const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace('-', '_')}/environments/`,
+    `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace("-", "_")}/environments/`,
     {
       owner: owner,
       repo: repo_name,
       ref: branch,
-      path: `/${repo_name.replace('-', '_')}/environments/`,
+      path: `/${repo_name.replace("-", "_")}/environments/`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
     },
   );
 
-  repo_overview['Distros'] = new Set();
-  repo_overview['OSes'] = new Set();
-  repo_overview['Epochs'] = new Set();
+  repo_overview["Distros"] = new Set();
+  repo_overview["OSes"] = new Set();
+  repo_overview["Epochs"] = new Set();
 
-  console.log("ENVS")
-  console.log(envs)
-  for (const env of envs['data']) {
-    console.log("ENV")
-    console.log(env)
+  console.log("ENVS");
+  console.log(envs);
+  for (const env of envs["data"]) {
+    console.log("ENV");
+    console.log(env);
     // Strip the extension off the end of the name
-    console.log("NAME")
-    const name = env['name'].substring(0, env['name'].indexOf('.yml'));
-    console.log(name)
-    const split = name.split('-');
-    console.log(split)
+    console.log("NAME");
+    const name = env["name"].substring(0, env["name"].indexOf(".yml"));
+    console.log(name);
+    const split = name.split("-");
+    console.log(split);
 
-    repo_overview['Distros'].add(split[1]);
-    repo_overview['OSes'].add(split[2]);
-    repo_overview['Epochs'].add(split[3]);
+    repo_overview["Distros"].add(split[1]);
+    repo_overview["OSes"].add(split[2]);
+    repo_overview["Epochs"].add(split[3]);
   }
 
-  repo_info = {...repo_info, ...repo_overview};
+  repo_info = { ...repo_info, ...repo_overview };
 
   if (!fs.existsSync(`${root_path}/${owner}`)) {
     fs.mkdirSync(`${root_path}/${owner}`);
