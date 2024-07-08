@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Mon, 08 Jul 2024 18:42:19 GMT",
-      "etag": "W/\"f11b77d105109e4c67adbab670e02d9f6901b5735135f8bd82057e2fd702425d\"",
+      "date": "Mon, 08 Jul 2024 18:49:22 GMT",
+      "etag": "W/\"e584e0eb4d9aee5b4104ea1d318358f9ce8e546d7c23f44baa897829214b2a93\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "0CF0:371256:C647F13:C84DF0D:668C330A",
+      "x-github-request-id": "A800:3444F0:7C9F0C:E409C4:668C34B1",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4974",
+      "x-ratelimit-remaining": "4952",
       "x-ratelimit-reset": "1720467553",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "26",
+      "x-ratelimit-used": "48",
       "x-xss-protection": "0"
     },
     "data": {
@@ -477,6 +477,6 @@
   "Commit Status": "passed",
   "Commit Date": "2023-08-17T16:13:24Z",
   "Stars": 0,
-  "Distros": ["amplicon", "metagenome"],
-  "Epochs": ["2024.10", "2024.5"]
+  "Distros": ["amplicon", "metagenome", "something", "tiny"],
+  "Epochs": ["2023.11", "2024.10", "2024.2", "2024.5"]
 }
