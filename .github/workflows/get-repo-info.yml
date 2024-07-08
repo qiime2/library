@@ -30,12 +30,12 @@ jobs:
           npm install @actions/core
           npm install @actions/github
           npm install utf8
+          npm install prettier
 
       - name: Get Repo Info
         run: |
           node src/lib/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
-          npm install prettier
-          prettier --plugin-search-dir ./static/json --write ./static/json
+          npx prettier --plugin-search-dir ./static/json --write ./static/json
 
       - name: Commit Repo Changes
         run: |
