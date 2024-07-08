@@ -123,17 +123,10 @@ for (const repo of repos) {
   const OSes = new Set();
   const epochs = new Set();
 
-  console.log("ENVS");
-  console.log(envs);
   for (const env of envs["data"]) {
-    console.log("ENV");
-    console.log(env);
     // Strip the extension off the end of the name
-    console.log("NAME");
     const name = env["name"].substring(0, env["name"].indexOf(".yml"));
-    console.log(name);
     const split = name.split("-");
-    console.log(split);
 
     distros.add(split[1]);
     OSes.add(split[2]);
