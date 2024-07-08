@@ -1,5 +1,6 @@
 <script lang="ts">
-    import RepoCard from '$lib/components/RepoCard.svelte';
+    import CutOffList from '$lib/components/CutOffList.svelte';
+    import SortableColumn from '$lib/components/SortableColumn.svelte';
     import { overview } from '$lib/scripts/RepoInfos.ts';
 
     let repo_overviews: Array<Object>;
@@ -42,13 +43,13 @@
     {:then}
         <table class='centered'>
             <tr>
-                <RepoCard this_col={'Repo Owner'}/>
-                <RepoCard this_col={'Repo Name'}/>
-                <RepoCard this_col={'Stars'}/>
-                <RepoCard this_col={'Commit Date'}/>
-                <RepoCard this_col={'Commit Status'}/>
-                <RepoCard this_col={'Distros'}/>
-                <RepoCard this_col={'Epochs'}/>
+                <SortableColumn this_col={'Repo Owner'}/>
+                <SortableColumn this_col={'Repo Name'}/>
+                <SortableColumn this_col={'Stars'}/>
+                <SortableColumn this_col={'Commit Date'}/>
+                <SortableColumn this_col={'Commit Status'}/>
+                <SortableColumn this_col={'Distros'}/>
+                <SortableColumn this_col={'Epochs'}/>
             </tr>
             {#each repo_overviews as repo_overview}
                 <tr>
@@ -57,8 +58,8 @@
                     <td>{repo_overview['Stars']}</td>
                     <td>{repo_overview['Commit Date']}</td>
                     <td>{repo_overview['Commit Status']}</td>
-                    <td>{repo_overview['Distros']}</td>
-                    <td>{repo_overview['Epochs']}</td>
+                    <td><CutOffList list={repo_overview['Distros']} collapseNumber={3}/></td>
+                    <td><CutOffList list={repo_overview['Epochs']} collapseNumber={3}/></td>
                 </tr>
             {/each}
         </table>
