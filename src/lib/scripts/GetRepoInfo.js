@@ -119,9 +119,9 @@ for (const repo of repos) {
     },
   );
 
-  repo_overview["Distros"] = new Set();
-  repo_overview["OSes"] = new Set();
-  repo_overview["Epochs"] = new Set();
+  const distros = new Set();
+  const OSes = new Set();
+  const epochs = new Set();
 
   console.log("ENVS");
   console.log(envs);
@@ -135,10 +135,14 @@ for (const repo of repos) {
     const split = name.split("-");
     console.log(split);
 
-    repo_overview["Distros"].add(split[1]);
-    repo_overview["OSes"].add(split[2]);
-    repo_overview["Epochs"].add(split[3]);
+    distros.add(split[1]);
+    OSes.add(split[2]);
+    epochs.add(split[3]);
   }
+
+  repo_overview["Distros"] = Array.from(distros);
+  repo_overview["OSes"] = Array.from(OSes);
+  repo_overview["Epochs"] = Array.from(epochs);
 
   repo_info = { ...repo_info, ...repo_overview };
 
