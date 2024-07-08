@@ -9,7 +9,7 @@
             return list.slice(0, collapseNumber);
         }
 
-        return list.slice(0,-1);
+        return list.slice(0, -1);
     }
 </script>
 
