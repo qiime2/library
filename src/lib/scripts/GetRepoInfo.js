@@ -120,7 +120,6 @@ for (const repo of repos) {
   );
 
   const distros = new Set();
-  const OSes = new Set();
   const epochs = new Set();
 
   for (const env of envs["data"]) {
@@ -129,12 +128,10 @@ for (const repo of repos) {
     const split = name.split("-");
 
     distros.add(split[1]);
-    OSes.add(split[2]);
-    epochs.add(split[3]);
+    epochs.add(split[2]);
   }
 
   repo_overview["Distros"] = Array.from(distros);
-  repo_overview["OSes"] = Array.from(OSes);
   repo_overview["Epochs"] = Array.from(epochs);
 
   repo_info = { ...repo_info, ...repo_overview };

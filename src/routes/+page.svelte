@@ -47,6 +47,8 @@
                 <RepoCard this_col={'Stars'}/>
                 <RepoCard this_col={'Commit Date'}/>
                 <RepoCard this_col={'Commit Status'}/>
+                <RepoCard this_col={'Distros'}/>
+                <RepoCard this_col={'Epochs'}/>
             </tr>
             {#each repo_overviews as repo_overview}
                 <tr>
@@ -55,16 +57,11 @@
                     <td>{repo_overview['Stars']}</td>
                     <td>{repo_overview['Commit Date']}</td>
                     <td>{repo_overview['Commit Status']}</td>
+                    <td>{repo_overview['Distros']}</td>
+                    <td>{repo_overview['Epochs']}</td>
                 </tr>
             {/each}
         </table>
-        {#each repo_overviews as repo_overview}
-            <p>
-                {JSON.stringify(repo_overview['Distros'])}
-                {JSON.stringify(repo_overview['OSes'])}
-                {JSON.stringify(repo_overview['Epochs'])}
-            </p>
-        {/each}
         <p>
             date fetched:&nbsp;
             {#if date_fetched !== ''}
