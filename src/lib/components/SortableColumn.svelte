@@ -1,7 +1,7 @@
 <!-- I need to make this sort stuff reactive so I can make each table header a component -->
 <script lang="ts">
     import { sort_info } from '$lib/scripts/SortStore.ts';
-    import { sortArray } from '$lib/scripts/RepoInfos.ts';
+    import { sortArray } from '$lib/scripts/OverviewStore';
 
     export let this_col: string;
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import CutOffList from '$lib/components/CutOffList.svelte';
-    import SortableColumn from '$lib/components/SortableColumn.svelte';
-    import { overview } from '$lib/scripts/RepoInfos.ts';
+    import RepoCard from '$lib/components/RepoCard.svelte';
+    import SortButtons from '$lib/components/SortButtons.svelte';
+    import { overview } from '$lib/scripts/OverviewStore';
 
     let repo_overviews: Array<Object>;
     let date_fetched: string;
@@ -41,28 +41,10 @@
     {#await getOverview()}
         ...getting overview
     {:then}
-        <table class='centered'>
-            <tr>
-                <SortableColumn this_col={'Repo Owner'}/>
-                <SortableColumn this_col={'Repo Name'}/>
-                <SortableColumn this_col={'Stars'}/>
-                <SortableColumn this_col={'Commit Date'}/>
-                <SortableColumn this_col={'Commit Status'}/>
-                <SortableColumn this_col={'Distros'}/>
-                <SortableColumn this_col={'Epochs'}/>
-            </tr>
-            {#each repo_overviews as repo_overview}
-                <tr>
-                    <td>{repo_overview['Repo Owner']}</td>
-                    <td><a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Name']}</a></td>
-                    <td>{repo_overview['Stars']}</td>
-                    <td>{repo_overview['Commit Date']}</td>
-                    <td>{repo_overview['Commit Status']}</td>
-                    <td><CutOffList list={repo_overview['Distros']} collapseNumber={3}/></td>
-                    <td><CutOffList list={repo_overview['Epochs']} collapseNumber={3}/></td>
-                </tr>
-            {/each}
-        </table>
+        <SortButtons />
+        {#each repo_overviews as repo_overview}
+            <RepoCard {repo_overview}/>
+        {/each}
         <p>
             date fetched:&nbsp;
             {#if date_fetched !== ''}

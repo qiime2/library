@@ -13,14 +13,12 @@
     }
 </script>
 
-{#key isCollapsed}
-    {#each displayList() as element}
-        {element},&nbsp;
-    {/each}
-    {#if !(isCollapsed && list.length > collapseNumber)}
-        {list.slice(-1)}
-    {/if}
-{/key}
+{#each displayList() as element}
+    {element},&nbsp;
+{/each}
+{#if !(isCollapsed && list.length > collapseNumber)}
+    {list.slice(-1)}
+{/if}
 {#if list.length > collapseNumber}
     {#if isCollapsed}
         <span on:click={() => isCollapsed = !isCollapsed}>...</span>
