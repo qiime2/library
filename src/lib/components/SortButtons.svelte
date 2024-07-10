@@ -55,44 +55,62 @@
     }
 </script>
 
-{#each columns as column}
-    <div class="sortButton">
-        {column}
-        <button on:click={() => sortArray(column)}>
-            <svg fill="none"
-                width="10"
-                height="10"
-            >
-                {#if sort_col !== column}
-                    <path
-                        stroke-width="3"
-                        stroke="rgb(119, 119, 119)"
-                        d="M0 5L10 5"
-                    />
-                {:else if sort_ascending}
-                    <path
-                        stroke-width="3"
-                        stroke="rgb(119, 119, 119)"
-                        d="M0 3L5 8a0,2 0 0 1 1,1M5 8L10 3"
-                    />
-                {:else}
-                    <path
-                        stroke-width="3"
-                        stroke="rgb(119, 119, 119)"
-                        d="M0 8L5 3a0,2 0 0 1 1,1M5 3L10 8"
-                    />
-                {/if}
-            </svg>
-        </button>
-    </div>
-{/each}
+<div id="container">
+    {#each columns as column}
+        <div class="sortButton">
+            <div style="margin-right: 10px">{column}</div>
+            <button on:click={() => sortArray(column)}>
+                <svg fill="none"
+                    width="10"
+                    height="10"
+                >
+                    {#if sort_col !== column}
+                        <path
+                            stroke-width="3"
+                            stroke="rgb(119, 119, 119)"
+                            d="M0 5L10 5"
+                        />
+                    {:else if sort_ascending}
+                        <path
+                            stroke-width="3"
+                            stroke="rgb(119, 119, 119)"
+                            d="M0 3L5 8a0,2 0 0 1 1,1M5 8L10 3"
+                        />
+                    {:else}
+                        <path
+                            stroke-width="3"
+                            stroke="rgb(119, 119, 119)"
+                            d="M0 8L5 3a0,2 0 0 1 1,1M5 3L10 8"
+                        />
+                    {/if}
+                </svg>
+            </button>
+        </div>
+    {/each}
+</div>
 
 <style lang="postcss">
+    #container {
+        box-shadow: rgb(153, 153, 153) 5px 5px 5px;
+        @apply flex
+        border
+        border-solid
+        rounded-lg
+        border-gray-300
+        max-w-7xl
+        my-10
+        mx-auto
+        p-4;
+    }
+
     .sortButton {
         @apply border
         border-solid
+        rounded-lg
         border-gray-300
         text-left
-        p-4;
+        p-4
+        mx-auto
+        flex;
     }
 </style>
