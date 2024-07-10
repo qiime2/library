@@ -2,8 +2,6 @@
     import CutOffList from '$lib/components/CutOffList.svelte';
 
     export let repo_overview: Object;
-
-    $: console.log(repo_overview)
 </script>
 
 <div class='repo-card'>
