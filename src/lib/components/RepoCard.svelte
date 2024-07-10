@@ -2,6 +2,8 @@
     import CutOffList from '$lib/components/CutOffList.svelte';
 
     export let repo_overview: Object;
+
+    $: console.log(repo_overview)
 </script>
 
 <div class='repo-card'>
@@ -10,10 +12,10 @@
     {repo_overview['Stars']}
     {repo_overview['Commit Date']}
     {repo_overview['Commit Status']}
-    {repo_overview['Distros']}
-    {repo_overview['Epochs']}
-    <!-- <CutOffList list={repo_overview['Distros']} collapseNumber={3} />
-    <CutOffList list={repo_overview['Epochs']} collapseNumber={3} /> -->
+    <!-- {repo_overview['Distros']}
+    {repo_overview['Epochs']} -->
+    <CutOffList list={repo_overview['Distros']} collapseNumber={3} />
+    <CutOffList list={repo_overview['Epochs']} collapseNumber={3} />
 </div>
 
 <style lang="postcss">

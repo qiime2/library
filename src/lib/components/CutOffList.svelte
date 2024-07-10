@@ -13,16 +13,18 @@
     }
 </script>
 
-{#each displayList() as element}
-    {element},&nbsp;
-{/each}
-{#if !(isCollapsed && list.length > collapseNumber)}
-    {list.slice(-1)}
-{/if}
-{#if list.length > collapseNumber}
-    {#if isCollapsed}
-        <span on:click={() => isCollapsed = !isCollapsed}>...</span>
-    {:else}
-        <span on:click={() => isCollapsed = !isCollapsed}>&lt;-</span>
+{#key list}
+    {#each displayList() as element}
+        {element},&nbsp;
+    {/each}
+    {#if !(isCollapsed && list.length > collapseNumber)}
+        {list.slice(-1)}
     {/if}
-{/if}
+    {#if list.length > collapseNumber}
+        {#if isCollapsed}
+            <span on:click={() => (isCollapsed = !isCollapsed)}>...</span>
+        {:else}
+            <span on:click={() => (isCollapsed = !isCollapsed)}>&lt;-</span>
+        {/if}
+    {/if}
+{/key}
