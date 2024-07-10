@@ -5,13 +5,13 @@
 </script>
 
 <div class='repo-card'>
-    {repo_overview['Repo Owner']}
-    <a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Name']}</a>
-    {repo_overview['Stars']}
-    {repo_overview['Commit Date']}
-    {repo_overview['Commit Status']}
-    <CutOffList list={repo_overview['Distros']} collapseNumber={3} />
-    <CutOffList list={repo_overview['Epochs']} collapseNumber={3} />
+    <div>Owner: {repo_overview['Repo Owner']}</div>
+    <div>Name: <a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Name']}</a></div>
+    <div># Stars: {repo_overview['Stars']}</div>
+    <div>Latest Commit Date: {repo_overview['Commit Date']}</div>
+    <div>Latest Commit Status: {repo_overview['Commit Status']}</div>
+    <div>Supported Distros: <CutOffList list={repo_overview['Distros']} collapseNumber={3} /></div>
+    <div>Supported Epochs: <CutOffList list={repo_overview['Epochs']} collapseNumber={3} /></div>
 </div>
 
 <style lang="postcss">

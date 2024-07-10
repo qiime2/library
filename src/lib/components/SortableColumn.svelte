@@ -6,11 +6,11 @@
     export let this_col: string;
 
     let sort_col: string;
-    let sort_descending: boolean;
+    let sort_ascending: boolean;
 
     sort_info.subscribe((sort_values) => {
         sort_col = sort_values.sort_col;
-        sort_descending = sort_values.sort_descending;
+        sort_ascending = sort_values.sort_ascending;
     });
 </script>
 
@@ -27,17 +27,17 @@
                     stroke="rgb(119, 119, 119)"
                     d="M0 5L10 5"
                 />
-            {:else if sort_descending}
+            {:else if sort_ascending}
                 <path
                     stroke-width="3"
                     stroke="rgb(119, 119, 119)"
-                    d="M0 3L5 8a0,2 0 0 1 1,1M5 8L10 3"
+                    d="M0 8L5 3a0,2 0 0 1 1,1M5 3L10 8"
                 />
             {:else}
                 <path
                     stroke-width="3"
                     stroke="rgb(119, 119, 119)"
-                    d="M0 8L5 3a0,2 0 0 1 1,1M5 3L10 8"
+                    d="M0 3L5 8a0,2 0 0 1 1,1M5 8L10 3"
                 />
             {/if}
         </svg>

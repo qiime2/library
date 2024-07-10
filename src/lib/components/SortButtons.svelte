@@ -7,7 +7,7 @@
 
     sort_info.subscribe((sort_values) => {
         sort_col = sort_values.sort_col;
-        sort_ascending = sort_values.sort_descending;
+        sort_ascending = sort_values.sort_ascending;
     });
 
     let repo_overviews: Object[];
@@ -30,7 +30,7 @@
 
         sort_info.set({
             sort_col: sort_col,
-            sort_descending: sort_ascending,
+            sort_ascending: sort_ascending,
         });
 
         function compareElements(a: Object, b: Object) {
@@ -38,9 +38,9 @@
             const B = b[this_col as keyof Object];
 
             if (A < B) {
-            return sort_ascending === true ? -1 : 1;
+                return sort_ascending === true ? 1 : -1;
             } else if (A > B) {
-            return sort_ascending === true ? 1 : -1;
+                return sort_ascending === true ? -1 : 1;
             }
 
             return 0;
