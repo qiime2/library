@@ -10,6 +10,7 @@
     <div># Stars: {repo_overview['Stars']}</div>
     <div>Latest Commit Date: {repo_overview['Commit Date']}</div>
     <div>Latest Commit Status: {repo_overview['Commit Status']}</div>
+    <div>NOTE: Not all distros are necessarily supported for all epochs</div>
     <div>Supported Distros: <CutOffList list={repo_overview['Distros']} collapseNumber={3} /></div>
     <div>Supported Epochs: <CutOffList list={repo_overview['Epochs']} collapseNumber={3} /></div>
 </div>
