@@ -1,21 +1,37 @@
 <script lang="ts">
+    import { onDestroy } from 'svelte';
+
     import RepoCard from "$lib/components/RepoCard.svelte";
     import SortButtons from "$lib/components/SortButtons.svelte";
     import { overview } from "$lib/scripts/OverviewStore";
-    import { parse } from "svelte/compiler";
+    import { cards } from "$lib/scripts/CardsStore";
 
     let repo_overviews: Array<Object>;
     let date_fetched: string;
-
-    let cards_per_page = 2;
-    let current_page = 1;
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
         date_fetched = value.date_fetched;
     });
 
-    let num_pages = 0;
+    let cards_per_page: number;
+    let current_page: number;
+    let num_pages: number;
+
+    cards.subscribe((value) => {
+        cards_per_page = value.cards_per_page;
+        current_page = value.current_page;
+        num_pages = value.num_pages;
+    })
+
+    // Update our info when we leave so we can snag it when we come back
+    onDestroy(() => {
+        cards.set({
+            cards_per_page: cards_per_page,
+            current_page: current_page,
+            num_pages: num_pages
+        })
+    });
 
     async function getOverview() {
         // Check if we already got it
@@ -48,40 +64,21 @@
         );
     }
 
-    function onKeyDown(event: KeyboardEvent) {
-        if (event.key == "Enter") {
-            const inputElement = document.getElementById(
-                "pagesInput",
-            ) as HTMLInputElement;
-        }
-    }
-
-    function validateInput(event: InputEvent) {
-        event.preventDefault();
-
-        const INPUT = document.getElementById(
+    function handleChange(event: Event) {
+        const inputElement = document.getElementById(
             "setCardsPerPage",
         ) as HTMLInputElement;
 
-        let val = parseInt(INPUT.value);
+        const currentVal = parseInt(inputElement.value);
 
-        // Handle NaN
-        if (val !== val) {
-            val = 1;
+        // If we have something less than 1 (should only ever be 0) or a NaN
+        // then set this back to what it was before
+        if (currentVal < 1 || currentVal !== currentVal) {
+            inputElement.value = String(cards_per_page);
+        } else {
+            cards_per_page = currentVal;
+            num_pages = Math.ceil(repo_overviews.length / cards_per_page);
         }
-
-        if (val < 1) {
-            val = 1;
-        }
-
-        if (val === 1 || cards_per_page === 1) {
-            INPUT.value = String(val);
-        }
-
-        cards_per_page = val;
-        console.log(val);
-        INPUT.dispatchEvent(new Event("change"));
-        // INPUT.dispatchEvent(new Event("input"));
     }
 </script>
 
@@ -93,7 +90,7 @@
         ...getting overview
     {:then}
         <SortButtons />
-        {#key repo_overviews}
+        {#key cards_per_page}
             {#key current_page}
                 {#each getCurrentPage() as repo_overview}
                     <RepoCard {repo_overview} />
@@ -132,7 +129,7 @@
             type="number"
             value={cards_per_page}
             min="1"
-            on:input={validateInput}
+            on:change={handleChange}
         />
     {/await}
 </div>

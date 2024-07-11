@@ -49,7 +49,7 @@
         if (repo_overviews !== undefined) {
             overview.set({
                 repo_overviews: repo_overviews.sort(compareElements),
-                date_fetched: date_fetched,
+                date_fetched: date_fetched
             });
         }
     }
