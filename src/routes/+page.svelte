@@ -1,15 +1,21 @@
 <script lang="ts">
-    import RepoCard from '$lib/components/RepoCard.svelte';
-    import SortButtons from '$lib/components/SortButtons.svelte';
-    import { overview } from '$lib/scripts/OverviewStore';
+    import RepoCard from "$lib/components/RepoCard.svelte";
+    import SortButtons from "$lib/components/SortButtons.svelte";
+    import { overview } from "$lib/scripts/OverviewStore";
+    import { parse } from "svelte/compiler";
 
     let repo_overviews: Array<Object>;
     let date_fetched: string;
+
+    let cards_per_page = 2;
+    let current_page = 1;
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
         date_fetched = value.date_fetched;
     });
+
+    let num_pages = 0;
 
     async function getOverview() {
         // Check if we already got it
@@ -17,42 +23,117 @@
             return;
         }
 
-        const response = await fetch('/json/overview.json');
+        const response = await fetch("/json/overview.json");
         const json = await response.json();
 
-        date_fetched = json['Date Fetched'];
-        delete json['Date Fetched'];
+        date_fetched = json["Date Fetched"];
+        delete json["Date Fetched"];
 
         for (const repo of Object.keys(json)) {
             repo_overviews.push(json[repo]);
         }
 
         overview.set({
-            'repo_overviews': repo_overviews,
-            'date_fetched': date_fetched
+            repo_overviews: repo_overviews,
+            date_fetched: date_fetched,
         });
+
+        num_pages = Math.ceil(repo_overviews.length / cards_per_page);
+    }
+
+    function getCurrentPage() {
+        return repo_overviews.slice(
+            (current_page - 1) * cards_per_page,
+            current_page * cards_per_page,
+        );
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+        if (event.key == "Enter") {
+            const inputElement = document.getElementById(
+                "pagesInput",
+            ) as HTMLInputElement;
+        }
+    }
+
+    function validateInput(event: InputEvent) {
+        event.preventDefault();
+
+        const INPUT = document.getElementById(
+            "setCardsPerPage",
+        ) as HTMLInputElement;
+
+        let val = parseInt(INPUT.value);
+
+        // Handle NaN
+        if (val !== val) {
+            val = 1;
+        }
+
+        if (val < 1) {
+            val = 1;
+        }
+
+        if (val === 1 || cards_per_page === 1) {
+            INPUT.value = String(val);
+        }
+
+        cards_per_page = val;
+        console.log(val);
+        INPUT.dispatchEvent(new Event("change"));
+        // INPUT.dispatchEvent(new Event("input"));
     }
 </script>
 
 <!-- Get a list of repos from somewhere and fetch this info about these repos
  then make the list of data sortable by last commit date, last ci pass date,
  and number of stars -->
-<div id='container'>
+<div id="container">
     {#await getOverview()}
         ...getting overview
     {:then}
         <SortButtons />
-        {#each repo_overviews as repo_overview}
-            <RepoCard {repo_overview}/>
-        {/each}
+        {#key repo_overviews}
+            {#key current_page}
+                {#each getCurrentPage() as repo_overview}
+                    <RepoCard {repo_overview} />
+                {/each}
+            {/key}
+        {/key}
+        <button
+            on:click={() => {
+                if (current_page > 1) {
+                    current_page--;
+                }
+            }}
+        >
+            &lt;-
+        </button>
+        {current_page}/{num_pages}
+        <button
+            on:click={() => {
+                if (current_page < num_pages) {
+                    current_page++;
+                }
+            }}
+        >
+            -&gt;
+        </button>
         <p>
             date fetched:&nbsp;
-            {#if date_fetched !== ''}
+            {#if date_fetched !== ""}
                 {date_fetched}
             {:else}
                 error
             {/if}
         </p>
+        Cards per page:<input
+            id="setCardsPerPage"
+            type="number"
+            value={cards_per_page}
+            min="1"
+            on:input={validateInput}
+        />
     {/await}
 </div>
 
@@ -67,7 +148,8 @@
         @apply mx-auto;
     }
 
-    table, td {
+    table,
+    td {
         @apply border
         border-solid
         border-gray-300
