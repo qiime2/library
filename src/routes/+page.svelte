@@ -90,12 +90,10 @@
         ...getting overview
     {:then}
         <SortButtons />
-        {#key cards_per_page}
-            {#key current_page}
-                {#each getCurrentPage() as repo_overview}
-                    <RepoCard {repo_overview} />
-                {/each}
-            {/key}
+        {#key [cards_per_page, repo_overviews, current_page]}
+            {#each getCurrentPage() as repo_overview}
+                <RepoCard {repo_overview} />
+            {/each}
         {/key}
         <button
             on:click={() => {
