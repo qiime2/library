@@ -79,6 +79,12 @@
             cards_per_page = currentVal;
             num_pages = Math.ceil(repo_overviews.length / cards_per_page);
         }
+
+        // The num_pages could drop below the current page we're on. We don't
+        // want to leave ourselves on some weird empty non page
+        if (current_page > num_pages) {
+            current_page = num_pages;
+        }
     }
 </script>
 
