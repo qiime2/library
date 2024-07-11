@@ -138,24 +138,4 @@
         @apply max-w-7xl
         mx-auto;
     }
-
-    .centered {
-        @apply mx-auto;
-    }
-
-    table,
-    td {
-        @apply border
-        border-solid
-        border-gray-300
-        text-left;
-    }
-
-    td {
-        @apply p-4;
-    }
-
-    p {
-        @apply text-center;
-    }
 </style>
