@@ -25,6 +25,8 @@
         num_pages = value.num_pages;
     })
 
+    let filtered_overviews: Array<Object>;
+
     // Update our info when we leave so we can snag it when we come back
     onDestroy(() => {
         cards.set({
@@ -37,6 +39,7 @@
     async function getOverview() {
         // Check if we already got it
         if (repo_overviews.length !== 0) {
+            filtered_overviews = repo_overviews;
             return;
         }
 
@@ -55,14 +58,31 @@
             date_fetched: date_fetched,
         });
 
-        num_pages = Math.ceil(repo_overviews.length / cards_per_page);
+        filtered_overviews = repo_overviews;
+        num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
     }
 
     function getCurrentPage() {
-        return repo_overviews.slice(
+        return filtered_overviews.slice(
             (current_page - 1) * cards_per_page,
             current_page * cards_per_page,
         );
+    }
+
+    export function applySearchFilter () {
+        const searchBar = document.getElementById("searchInput") as HTMLInputElement;
+        const searchFilter = searchBar.value;
+
+        let _filtered_overviews = []
+
+        for (const repo_overview of repo_overviews) {
+            if (repo_overview["Repo Name" as keyof Object].startsWith(searchFilter)) {
+                _filtered_overviews.push(repo_overview);
+            }
+        }
+
+        filtered_overviews = _filtered_overviews;
+        num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
     }
 
     function handleChange(event: Event) {
@@ -78,7 +98,7 @@
             inputElement.value = String(cards_per_page);
         } else {
             cards_per_page = currentVal;
-            num_pages = Math.ceil(repo_overviews.length / cards_per_page);
+            num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
         }
 
         // The num_pages could drop below the current page we're on. We don't
@@ -97,10 +117,12 @@
         ...getting overview
     {:then}
         <div id="columns">
-            <SearchBar />
+            <div id="searchBar">
+                Search: <input id="searchInput" placeholder="repo name" on:input={applySearchFilter} />
+            </div>
             <SortButtons />
         </div>
-        {#key [cards_per_page, repo_overviews, current_page]}
+        {#key [cards_per_page, filtered_overviews, current_page]}
             {#each getCurrentPage() as repo_overview}
                 <RepoCard {repo_overview} />
             {/each}
@@ -151,5 +173,13 @@
 
     #columns {
         display: flex;
+        border-bottom: 2px solid lightgrey;
+        @apply pb-4
+        mb-4
+    }
+
+    #searchBar {
+        margin-right: auto;
+        margin-top: auto;
     }
 </style>
