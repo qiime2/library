@@ -42,5 +42,6 @@
     #searchBar {
         margin-right: auto;
         margin-top: auto;
+        @apply p-2;
     }
 </style>

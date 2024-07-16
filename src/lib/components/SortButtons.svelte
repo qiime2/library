@@ -111,7 +111,6 @@
         border-gray-300
         text-left
         p-2
-        mt-2
         mx-2
         flex
         w-auto;
