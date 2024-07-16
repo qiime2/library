@@ -3,6 +3,7 @@
 
     import RepoCard from "$lib/components/RepoCard.svelte";
     import SortButtons from "$lib/components/SortButtons.svelte";
+    import SearchBar from "$lib/components/SearchBar.svelte";
     import { overview } from "$lib/scripts/OverviewStore";
     import { cards } from "$lib/scripts/CardsStore";
 
@@ -95,7 +96,10 @@
     {#await getOverview()}
         ...getting overview
     {:then}
-        <SortButtons />
+        <div id="columns">
+            <SearchBar />
+            <SortButtons />
+        </div>
         {#key [cards_per_page, repo_overviews, current_page]}
             {#each getCurrentPage() as repo_overview}
                 <RepoCard {repo_overview} />
@@ -143,5 +147,9 @@
         margin-top: 70px;
         @apply max-w-7xl
         mx-auto;
+    }
+
+    #columns {
+        display: flex;
     }
 </style>

@@ -55,7 +55,8 @@
     }
 </script>
 
-<div id="container">
+<div id="buttons">
+    Sort By:
     {#each columns as column}
         <div class="sortButton">
             <div style="margin-right: 10px">{column}</div>
@@ -90,17 +91,14 @@
 </div>
 
 <style lang="postcss">
-    #container {
+    #buttons {
         box-shadow: rgb(153, 153, 153) 5px 5px 5px;
-        @apply flex
-        border
+        width: 50%;
+        @apply border
         border-solid
         rounded-lg
         border-gray-300
-        max-w-7xl
-        my-10
-        mx-auto
-        p-4;
+        p-2;
     }
 
     .sortButton {
@@ -109,7 +107,8 @@
         rounded-lg
         border-gray-300
         text-left
-        p-4
+        p-2
+        mt-2
         mx-auto
         flex;
     }
