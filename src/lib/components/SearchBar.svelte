@@ -25,10 +25,9 @@
             }
         }
 
-
         overview.set({
             repo_overviews: repo_overviews,
-            filter: filter,
+            filter: searchFilter,
             filtered_overviews: _filtered_overviews,
             date_fetched: date_fetched
         });
@@ -36,7 +35,7 @@
 </script>
 
 <div id="searchBar">
-    Search: <input id="searchInput" placeholder="repo name" on:input={applySearchFilter} />
+    Search: <input id="searchInput" placeholder="repo name" value={filter} on:input={applySearchFilter} />
 </div>
 
 <style lang="postcss">

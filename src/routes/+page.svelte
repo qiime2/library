@@ -41,7 +41,6 @@
     async function getOverview() {
         // Check if we already got it
         if (repo_overviews.length !== 0) {
-            filtered_overviews = repo_overviews;
             return;
         }
 
