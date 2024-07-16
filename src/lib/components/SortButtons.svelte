@@ -98,18 +98,13 @@
 
 <style lang="postcss">
     #buttons {
-        box-shadow: rgb(153, 153, 153) 5px 5px 5px;
-        width: 50%;
-        @apply border
-        border-solid
-        rounded-lg
-        border-gray-300
-        p-2
-        flex;
+        justify-content: center;
+        align-items: center;
+        @apply flex
+        w-auto;
     }
 
     .sortButton {
-        width: 20%;
         @apply border
         border-solid
         rounded-lg
@@ -117,7 +112,8 @@
         text-left
         p-2
         mt-2
-        mx-auto
-        flex;
+        mx-2
+        flex
+        w-auto;
     }
 </style>
