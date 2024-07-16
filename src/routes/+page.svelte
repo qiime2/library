@@ -111,7 +111,7 @@
     {#await getOverview()}
         ...getting overview
     {:then}
-        <div id="columns">
+        <div class="columns">
             <SearchBar />
             <SortButtons />
         </div>
@@ -120,40 +120,51 @@
                 <RepoCard {repo_overview} />
             {/each}
         {/key}
-        <button
-            on:click={() => {
-                if (current_page > 1) {
-                    current_page--;
-                }
-            }}
-        >
-            <svg fill="none"
-                width="10"
-                height="10">
-                <path
-                    stroke-width="3"
-                    stroke="rgb(119, 119, 119)"
-                    d="m8 0L3 5a0,2 0 0 1 1,1M3 5L8 10"/>
-            </svg>
-        </button>
-        {current_page}/{num_pages}
-        <button
-            on:click={() => {
-                if (current_page < num_pages) {
-                    current_page++;
-                }
-            }}
-        >
-            <svg fill="none"
-                width="10"
-                height="10">
-                <path
-                    stroke-width="3"
-                    stroke="rgb(119, 119, 119)"
-                    d="m3 0L8 5a0,2 0 0 1 1,1M8 5L3 10"/>
-            </svg>
-        </button>
-        <p>
+        <div class="columns">
+            <div style="margin-right: auto">
+                <button
+                        on:click={() => {
+                            if (current_page > 1) {
+                                current_page--;
+                            }
+                        }}
+                    >
+                        <svg fill="none"
+                            width="10"
+                            height="10">
+                            <path
+                                stroke-width="3"
+                                stroke="rgb(119, 119, 119)"
+                                d="m8 0L3 5a0,2 0 0 1 1,1M3 5L8 10"/>
+                        </svg>
+                    </button>
+                    {current_page}/{num_pages}
+                    <button
+                        on:click={() => {
+                            if (current_page < num_pages) {
+                                current_page++;
+                            }
+                        }}
+                    >
+                    <svg fill="none"
+                        width="10"
+                        height="10">
+                        <path
+                            stroke-width="3"
+                            stroke="rgb(119, 119, 119)"
+                            d="m3 0L8 5a0,2 0 0 1 1,1M8 5L3 10"/>
+                    </svg>
+                </button>
+            </div>
+            Cards per page: <input
+                id="setCardsPerPage"
+                type="number"
+                value={cards_per_page}
+                min="1"
+                on:change={handleChange}
+            />
+        </div>
+        <p id="date">
             date fetched:&nbsp;
             {#if date_fetched !== ""}
                 {date_fetched}
@@ -161,13 +172,6 @@
                 error
             {/if}
         </p>
-        Cards per page:<input
-            id="setCardsPerPage"
-            type="number"
-            value={cards_per_page}
-            min="1"
-            on:change={handleChange}
-        />
     {/await}
 </div>
 
@@ -178,7 +182,11 @@
         mx-auto;
     }
 
-    #columns {
+    #date {
+        @apply text-center;
+    }
+
+    .columns {
         display: flex;
         border-bottom: 2px solid lightgrey;
         @apply pb-4
