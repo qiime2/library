@@ -170,9 +170,4 @@
         @apply pb-4
         mb-4
     }
-
-    #searchBar {
-        margin-right: auto;
-        margin-top: auto;
-    }
 </style>
