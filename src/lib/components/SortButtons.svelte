@@ -104,10 +104,12 @@
         border-solid
         rounded-lg
         border-gray-300
-        p-2;
+        p-2
+        flex;
     }
 
     .sortButton {
+        width: 20%;
         @apply border
         border-solid
         rounded-lg
