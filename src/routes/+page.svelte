@@ -8,10 +8,14 @@
     import { cards } from "$lib/scripts/CardsStore";
 
     let repo_overviews: Array<Object>;
+    let filter: string;
+    let filtered_overviews: Array<Object>;
     let date_fetched: string;
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
+        filter = value.filter;
+        filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
     });
 
@@ -24,8 +28,6 @@
         current_page = value.current_page;
         num_pages = value.num_pages;
     })
-
-    let filtered_overviews: Array<Object>;
 
     // Update our info when we leave so we can snag it when we come back
     onDestroy(() => {
@@ -55,10 +57,11 @@
 
         overview.set({
             repo_overviews: repo_overviews,
+            filter: "",
+            filtered_overviews: repo_overviews,
             date_fetched: date_fetched,
         });
 
-        filtered_overviews = repo_overviews;
         num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
     }
 
@@ -67,22 +70,6 @@
             (current_page - 1) * cards_per_page,
             current_page * cards_per_page,
         );
-    }
-
-    export function applySearchFilter () {
-        const searchBar = document.getElementById("searchInput") as HTMLInputElement;
-        const searchFilter = searchBar.value;
-
-        let _filtered_overviews = []
-
-        for (const repo_overview of repo_overviews) {
-            if (repo_overview["Repo Name" as keyof Object].startsWith(searchFilter)) {
-                _filtered_overviews.push(repo_overview);
-            }
-        }
-
-        filtered_overviews = _filtered_overviews;
-        num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
     }
 
     function handleChange(event: Event) {
@@ -107,6 +94,16 @@
             current_page = num_pages;
         }
     }
+
+    $: {
+        const _num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
+
+        if (_num_pages === 0) {
+            num_pages = 1;
+        } else {
+            num_pages = _num_pages;
+        }
+    }
 </script>
 
 <!-- Get a list of repos from somewhere and fetch this info about these repos
@@ -117,9 +114,7 @@
         ...getting overview
     {:then}
         <div id="columns">
-            <div id="searchBar">
-                Search: <input id="searchInput" placeholder="repo name" on:input={applySearchFilter} />
-            </div>
+            <SearchBar />
             <SortButtons />
         </div>
         {#key [cards_per_page, filtered_overviews, current_page]}

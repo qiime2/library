@@ -11,10 +11,14 @@
     });
 
     let repo_overviews: Object[];
+    let filter: string;
+    let filtered_overviews: Object[];
     let date_fetched: string;
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
+        filter = value.filter;
+        filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
     });
 
@@ -48,7 +52,9 @@
 
         if (repo_overviews !== undefined) {
             overview.set({
-                repo_overviews: repo_overviews.sort(compareElements),
+                repo_overviews: repo_overviews,
+                filter: filter,
+                filtered_overviews: filtered_overviews.sort(compareElements),
                 date_fetched: date_fetched
             });
         }
