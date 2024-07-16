@@ -156,7 +156,7 @@
                     </svg>
                 </button>
             </div>
-            Cards per page: <input
+            Cards per page:&nbsp;<input
                 id="setCardsPerPage"
                 type="number"
                 value={cards_per_page}
