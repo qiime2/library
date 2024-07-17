@@ -111,7 +111,7 @@
     {#await getOverview()}
         ...getting overview
     {:then}
-        <div class="columns">
+        <div id="topBar">
             <SearchBar />
             <SortButtons />
         </div>
@@ -120,7 +120,7 @@
                 <RepoCard {repo_overview} />
             {/each}
         {/key}
-        <div class="columns">
+        <div id="bottomBar">
             <div style="margin-right: auto">
                 <button
                         on:click={() => {
@@ -186,10 +186,17 @@
         @apply text-center;
     }
 
-    .columns {
+    #topBar {
         display: flex;
         border-bottom: 2px solid lightgrey;
         @apply pb-4
         mb-4
+    }
+
+    #bottomBar {
+        display: flex;
+        border-top: 2px solid lightgrey;
+        @apply pt-4
+        mt-4
     }
 </style>
