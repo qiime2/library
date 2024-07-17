@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../../app.css";
+
     import { onDestroy } from 'svelte';
 
     import RepoCard from "$lib/components/RepoCard.svelte";

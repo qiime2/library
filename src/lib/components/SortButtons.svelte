@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../../app.css";
+
     import { overview } from '$lib/scripts/OverviewStore';
     import { sort_info } from '$lib/scripts/SortStore.ts';
 

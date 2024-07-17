@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../../app.css";
+
     import CutOffList from '$lib/components/CutOffList.svelte';
 
     export let repo_overview: Object;

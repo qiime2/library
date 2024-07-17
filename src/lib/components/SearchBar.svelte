@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../../app.css";
+
     import { overview } from "$lib/scripts/OverviewStore";
 
     let repo_overviews: Array<Object>;
