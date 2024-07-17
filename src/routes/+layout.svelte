@@ -1,3 +1,7 @@
+<script lang="ts">
+    import "../../app.css";
+</script>
+
 <nav id='navbar'>
   <div id='nav-container'>
     <a href='/'>

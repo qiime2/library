@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../../app.css";
+
     import SvelteMarkdown from "svelte-markdown";
 
     async function getRepoInfo() {
