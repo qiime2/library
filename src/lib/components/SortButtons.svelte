@@ -5,11 +5,11 @@
     import { sort_info } from '$lib/scripts/SortStore.ts';
 
     let sort_col: string;
-    let sort_ascending: boolean;
+    let sort_descending: boolean;
 
     sort_info.subscribe((sort_values) => {
         sort_col = sort_values.sort_col;
-        sort_ascending = sort_values.sort_ascending;
+        sort_descending = sort_values.sort_descending;
     });
 
     let repo_overviews: Object[];
@@ -28,15 +28,15 @@
 
     function sortArray(this_col: string) {
         if (this_col === sort_col) {
-            sort_ascending = !sort_ascending;
+            sort_descending = !sort_descending;
         } else {
             sort_col = this_col;
-            sort_ascending = true;
+            sort_descending = true;
         }
 
         sort_info.set({
             sort_col: sort_col,
-            sort_ascending: sort_ascending,
+            sort_descending: sort_descending,
         });
 
         function compareElements(a: Object, b: Object) {
@@ -44,9 +44,9 @@
             const B = b[this_col as keyof Object];
 
             if (A < B) {
-                return sort_ascending === true ? 1 : -1;
+                return sort_descending === true ? 1 : -1;
             } else if (A > B) {
-                return sort_ascending === true ? -1 : 1;
+                return sort_descending === true ? -1 : 1;
             }
 
             return 0;
@@ -79,7 +79,7 @@
                             stroke="rgb(119, 119, 119)"
                             d="M0 5L10 5"
                         />
-                    {:else if sort_ascending}
+                    {:else if sort_descending}
                         <path
                             stroke-width="3"
                             stroke="rgb(119, 119, 119)"

@@ -37,7 +37,7 @@
 </script>
 
 <div id="searchBar">
-    Search: <input id="searchInput" placeholder="repo name" value={filter} on:input={applySearchFilter} />
+    <input id="searchInput" placeholder="search" value={filter} on:input={applySearchFilter} />
 </div>
 
 <style lang="postcss">
