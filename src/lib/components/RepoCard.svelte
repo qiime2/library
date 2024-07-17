@@ -19,7 +19,7 @@
 
 <style lang="postcss">
     .repo-card {
-        box-shadow: rgb(153, 153, 153) 5px 5px 5px;
+        box-shadow: rgb(153, 153, 153) 2px 2px 2px;
         @apply border
         border-solid
         rounded-lg
