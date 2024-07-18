@@ -10,7 +10,7 @@
     <a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Owner']}/{repo_overview['Repo Name']}</a>
     <div>
         <svg height="16" width="160">
-            <!-- Put some kinda svg star here -->
+            <!-- Put some kinda svg star here maybe heroicons -->
             <text x="20" y="14">{repo_overview['Stars']}</text>
         </svg>
     </div>
