@@ -64,14 +64,16 @@
 </script>
 
 <div id="buttons">
-    Sort By:
     {#each columns as column}
         <div class="sortButton">
-            <div style="margin-right: 10px">{column}</div>
             <button on:click={() => sortArray(column)}>
+                <div class="float-left">
+                    {column}
+                </div>
                 <svg fill="none"
                     width="10"
                     height="10"
+                    class="svg"
                 >
                     {#if sort_col !== column}
                         <path
@@ -100,21 +102,21 @@
 
 <style lang="postcss">
     #buttons {
-        justify-content: center;
-        align-items: center;
-        @apply flex
-        w-auto;
+        @apply flex;
     }
 
     .sortButton {
-        @apply border
-        border-solid
-        rounded-lg
-        border-gray-300
-        text-left
-        p-2
-        mx-2
-        flex
-        w-auto;
+        @apply flex
+        mx-2;
+    }
+
+    .label {
+        @apply float-left;
+    }
+
+    .svg {
+        @apply ml-2
+        my-2
+        float-right;
     }
 </style>

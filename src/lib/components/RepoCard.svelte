@@ -7,8 +7,7 @@
 </script>
 
 <div class='repo-card'>
-    <div>Owner: {repo_overview['Repo Owner']}</div>
-    <div>Name: <a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Name']}</a></div>
+    <a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Owner']}/{repo_overview['Repo Name']}</a>
     <div># Stars: {repo_overview['Stars']}</div>
     <div>Latest Commit Date: {repo_overview['Commit Date']}</div>
     <div>Latest Commit Status: {repo_overview['Commit Status']}</div>

@@ -5,3 +5,17 @@
 * {
   font-family: Arial;
 }
+
+a:link {
+  text-decoration: underline;
+  cursor: pointer;
+  @apply text-blue-700;
+}
+
+a:visited {
+  @apply text-purple-700;
+}
+
+a:hover {
+  @apply text-blue-800;
+}

@@ -191,14 +191,24 @@
     #topBar {
         display: flex;
         border-bottom: 2px solid lightgrey;
-        @apply pb-4
-        mb-4
+        @apply border-gray-400
+        pb-4
+        mb-4;
     }
 
     #bottomBar {
         display: flex;
-        border-top: 2px solid lightgrey;
-        @apply pt-4
-        mt-4
+        border-top: 2px solid;
+        @apply border-gray-400
+        pt-4
+        mt-4;
+    }
+
+    #setCardsPerPage {
+        @apply border
+        border-solid
+        rounded
+        border-gray-300
+        px-2;
     }
 </style>

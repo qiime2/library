@@ -36,14 +36,16 @@
     }
 </script>
 
-<div id="searchBar">
-    <input id="searchInput" placeholder="search" value={filter} on:input={applySearchFilter} />
-</div>
+ <input id="searchInput" placeholder="search" value={filter} on:input={applySearchFilter} />
 
 <style lang="postcss">
-    #searchBar {
-        margin-right: auto;
-        margin-top: auto;
-        @apply p-2;
+    #searchInput {
+        @apply border
+        border-solid
+        rounded
+        border-gray-300
+        mr-auto
+        mt-auto
+        pl-2;
     }
 </style>
