@@ -89,9 +89,9 @@ for (const repo of repos) {
   const stars = repo_data["data"]["stargazers_count"];
   repo_overview["Stars"] = stars;
 
-  // Get the readme
-  const readme = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/readme`,
+  // Get the info
+  const info = await octokit.request(
+    `GET /repos/${owner}/${repo_name}/.qiime2/info.md`,
     {
       owner: owner,
       repo: repo_name,
@@ -103,8 +103,8 @@ for (const repo of repos) {
   );
 
   // Convert it back to a normal string
-  const contents = utf8.decode(atob(readme["data"]["content"]));
-  repo_info["Readme"] = contents;
+  const contents = utf8.decode(atob(info["data"]["content"]));
+  repo_info["Info"] = contents;
 
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace("-", "_")}/environments/`,

@@ -38,7 +38,7 @@
             </p>
         </div>
         <div class="prose-lg">
-            <SvelteMarkdown source={repo_info["Readme"]} />
+            <SvelteMarkdown source={repo_info["Info"]} />
         </div>
     {/await}
 </div>
