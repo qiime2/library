@@ -91,11 +91,12 @@ for (const repo of repos) {
 
   // Get the info
   const info = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/.qiime2/info.md`,
+    `GET /repos/${owner}/${repo_name}/contents/.qiime2/info.md`,
     {
       owner: owner,
       repo: repo_name,
       ref: branch,
+      path: '.qiime2/info.md',
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
