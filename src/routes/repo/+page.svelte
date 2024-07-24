@@ -5,8 +5,8 @@
 
     async function getRepoInfo() {
         const url = new URL(window.location.href);
-        const owner = url.searchParams.get('owner');
-        const repo_name = url.searchParams.get('repo_name');
+        const owner = url.searchParams.get("owner");
+        const repo_name = url.searchParams.get("repo_name");
 
         const response = await fetch(`/json/${owner}/${repo_name}.json`);
         const repo_info = await response.json();
@@ -15,30 +15,30 @@
     }
 </script>
 
-<div id='container'>
+<div id="container">
     {#await getRepoInfo()}
         ...getting info
     {:then repo_info}
-        <div id='info'>
+        <div id="info">
             <p>
-                {repo_info['Commit Date']}
+                {repo_info["Commit Date"]}
             </p>
             <p>
-                {repo_info['Stars']}
+                {repo_info["Stars"]}
             </p>
             <p>
-                {#each repo_info['Commit Runs']['data']['check_runs'] as run}
-                    <p>{run['name']}</p>
-                    <p>{run['status']}</p>
-                    <p>{run['conclusion']}</p>
+                {#each repo_info["Commit Runs"]["data"]["check_runs"] as run}
+                    <p>{run["name"]}</p>
+                    <p>{run["status"]}</p>
+                    <p>{run["conclusion"]}</p>
                 {/each}
             </p>
             <p>
-                {JSON.stringify(repo_info['Envs'])}
+                {JSON.stringify(repo_info["Envs"])}
             </p>
         </div>
-        <div>
-            <SvelteMarkdown source={repo_info['Readme']} />
+        <div class="prose">
+            <SvelteMarkdown source={repo_info["Readme"]} />
         </div>
     {/await}
 </div>
