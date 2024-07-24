@@ -46,7 +46,7 @@
 <style lang="postcss">
     #container {
         margin-top: 70px;
-        @apply max-w-7xl
+        @apply max-w-screen-2xl
         mx-auto
         grid
         grid-cols-2

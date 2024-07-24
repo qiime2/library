@@ -28,7 +28,6 @@
         border-solid
         rounded-lg
         border-gray-300
-        max-w-7xl
         my-5
         mx-auto
         p-4;

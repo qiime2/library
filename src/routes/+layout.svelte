@@ -26,7 +26,7 @@
 
   #nav-container {
     @apply flex
-    max-w-7xl
+    max-w-screen-2xl
     mx-auto
     px-2;
   }
