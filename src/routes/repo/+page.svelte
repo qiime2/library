@@ -37,7 +37,7 @@
                 {JSON.stringify(repo_info["Envs"])}
             </p>
         </div>
-        <div class="prose">
+        <div class="prose-lg">
             <SvelteMarkdown source={repo_info["Readme"]} />
         </div>
     {/await}
