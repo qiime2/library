@@ -13,7 +13,7 @@
     }
 </script>
 
-{#key list}
+{#key isCollapsed}
     {#each displayList() as element}
         {element},&nbsp;
     {/each}
