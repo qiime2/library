@@ -96,7 +96,7 @@ for (const repo of repos) {
       owner: owner,
       repo: repo_name,
       ref: branch,
-      path: '.qiime2/info.md',
+      path: ".qiime2/info.md",
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
