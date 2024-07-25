@@ -5,7 +5,7 @@
     let isCollapsed: Boolean = true;
 
     function displayList(): Array<string> {
-        if (isCollapsed && list.length > collapseNumber) {
+        if (isCollapsed && list.length > collapseNumber + 1) {
             return list.slice(0, collapseNumber);
         }
 
@@ -17,10 +17,10 @@
     {#each displayList() as element}
         {element},&nbsp;
     {/each}
-    {#if !(isCollapsed && list.length > collapseNumber)}
+    {#if !(isCollapsed && list.length > collapseNumber + 1)}
         {list.slice(-1)}
     {/if}
-    {#if list.length > collapseNumber}
+    {#if list.length > collapseNumber + 1}
         {#if isCollapsed}
             <span on:click={() => (isCollapsed = !isCollapsed)}>...</span>
         {:else}
