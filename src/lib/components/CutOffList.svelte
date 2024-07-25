@@ -15,16 +15,16 @@
 
 {#key isCollapsed}
     {#each displayList() as element}
-        {element},&nbsp;
+        &nbsp;{element},
     {/each}
     {#if !(isCollapsed && list.length > collapseNumber + 1)}
         {list.slice(-1)}
     {/if}
     {#if list.length > collapseNumber + 1}
         {#if isCollapsed}
-            <span on:click={() => (isCollapsed = !isCollapsed)}>...</span>
+            <span on:click={() => (isCollapsed = !isCollapsed)}>&nbsp;...</span>
         {:else}
-            <span on:click={() => (isCollapsed = !isCollapsed)}>&lt;-</span>
+            <span on:click={() => (isCollapsed = !isCollapsed)}>&nbsp;&lt;-</span>
         {/if}
     {/if}
 {/key}
