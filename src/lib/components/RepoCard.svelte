@@ -9,9 +9,7 @@
 <div class='repo-card'>
     <a class='link' href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Owner']}/{repo_overview['Repo Name']}</a>
     <p class='description'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {repo_overview['Short Description']}
     </p>
     <div>NOTE: Not all distros are necessarily supported for all epochs</div>
     <div class='container mb-4'>

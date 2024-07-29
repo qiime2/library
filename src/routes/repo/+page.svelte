@@ -30,7 +30,7 @@
                 </a>
             </p>
             <p class='info-content'>
-                Something else goes here
+                {repo_info['Short Description']}
             </p>
         </div>
         <!-- I prefer the width setting it to small makes the div, but now it's too small. For some reason just prose makes it too narrow -->

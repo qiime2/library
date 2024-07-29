@@ -105,8 +105,25 @@ for (const repo of repos) {
   );
 
   // Convert it back to a normal string
-  const contents = utf8.decode(atob(info["data"]["content"]));
-  repo_info["Info"] = contents;
+  const info_contents = utf8.decode(atob(info["data"]["content"]));
+  repo_info["Info"] = info_contents;
+
+  // Get the short description
+  const short_description = await octokit.request(
+    `GET /repos/${owner}/${repo_name}/contents/.qiime2/short-description.txt`,
+    {
+      owner: owner,
+      repo: repo_name,
+      ref: branch,
+      path: ".qiime2/short-description.txt",
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    },
+  );
+
+  const short_description_contents = utf8.decode(atob(info["data"]["content"]));
+  repo_info["Short Description"] = short_description_contents;
 
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace("-", "_")}/environments/`,
