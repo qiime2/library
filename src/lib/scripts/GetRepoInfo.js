@@ -122,7 +122,7 @@ for (const repo of repos) {
     },
   );
 
-  const short_description_contents = utf8.decode(atob(info["data"]["content"]));
+  const short_description_contents = utf8.decode(atob(short_description["data"]["content"]));
   repo_info["Short Description"] = short_description_contents;
 
   const envs = await octokit.request(
