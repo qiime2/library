@@ -17,7 +17,7 @@
         } else {
             // If we get here then... Who knows what we have. Just display the
             // text
-            return ;''
+            return '';
         }
 
         return text_format;
