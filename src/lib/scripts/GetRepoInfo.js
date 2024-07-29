@@ -90,6 +90,24 @@ for (const repo of repos) {
   const stars = repo_data["data"]["stargazers_count"];
   repo_overview["Stars"] = stars;
 
+  // Get the short description
+  const short_description = await octokit.request(
+    `GET /repos/${owner}/${repo_name}/contents/.qiime2/short-description.txt`,
+    {
+      owner: owner,
+      repo: repo_name,
+      ref: branch,
+      path: ".qiime2/short-description.txt",
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    },
+  );
+
+  const short_description_contents = utf8.decode(atob(short_description["data"]["content"]));
+  repo_overview["Short Description"] = short_description_contents;
+
+
   // Get the info
   const info = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/.qiime2/info.md`,
@@ -107,23 +125,6 @@ for (const repo of repos) {
   // Convert it back to a normal string
   const info_contents = utf8.decode(atob(info["data"]["content"]));
   repo_info["Info"] = info_contents;
-
-  // Get the short description
-  const short_description = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/.qiime2/short-description.txt`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      path: ".qiime2/short-description.txt",
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-
-  const short_description_contents = utf8.decode(atob(short_description["data"]["content"]));
-  repo_info["Short Description"] = short_description_contents;
 
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace("-", "_")}/environments/`,
