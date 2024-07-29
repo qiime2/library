@@ -104,9 +104,10 @@ for (const repo of repos) {
     },
   );
 
-  const short_description_contents = utf8.decode(atob(short_description["data"]["content"]));
+  const short_description_contents = utf8.decode(
+    atob(short_description["data"]["content"]),
+  );
   repo_overview["Short Description"] = short_description_contents;
-
 
   // Get the info
   const info = await octokit.request(

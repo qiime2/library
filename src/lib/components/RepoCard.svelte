@@ -4,6 +4,20 @@
     import CutOffList from '$lib/components/CutOffList.svelte';
 
     export let repo_overview: Object;
+
+    function getStatusColor() {
+        let text = 'text-white rounded px-2 font-bold ';
+
+        if (repo_overview['Commit Status'] === 'passed') {
+            text += 'bg-green-500';
+        } else if (repo_overview['Commit Status'] === 'failed') {
+            text += 'bg-red-500';
+        } else {
+            return '';
+        }
+
+        return text;
+    }
 </script>
 
 <div class='repo-card'>
@@ -27,7 +41,11 @@
             </svg>
         </div>
         <div class='flex mx-auto'>Latest Commit Date: {repo_overview['Commit Date']}</div>
-        <div class='flex ml-auto'>Latest Commit Status: {repo_overview['Commit Status']}</div>
+        <div class='flex ml-auto'>Latest Commit Status:&nbsp;
+            <span class='{getStatusColor()}'>
+                {repo_overview['Commit Status']}
+            </span>
+        </div>
     </div>
 </div>
 
