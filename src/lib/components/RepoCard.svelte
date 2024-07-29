@@ -7,11 +7,14 @@
 </script>
 
 <div class='repo-card'>
-    <a class='link' href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">{repo_overview['Repo Owner']}/{repo_overview['Repo Name']}</a>
+    <h1>
+        <a href="repo?owner={repo_overview['Repo Owner']}&repo_name={repo_overview['Repo Name']}">
+            {repo_overview['Repo Owner']}/{repo_overview['Repo Name']}</a>
+    </h1>
     <p class='description'>
         {repo_overview['Short Description']}
     </p>
-    <div>NOTE: Not all distros are necessarily supported for all epochs</div>
+    <div><span class='font-bold'>NOTE: </span>Not all distros are necessarily supported for all epochs</div>
     <div class='container mb-4'>
         <div class='flex mr-auto'>Supported Distros:<CutOffList list={repo_overview['Distros']} collapseNumber={2} /></div>
         <div class='flex ml-auto'>Supported Epochs:<CutOffList list={repo_overview['Epochs']} collapseNumber={2} /></div>
@@ -52,5 +55,10 @@
     .container {
         @apply flex
         mx-auto;
+    }
+
+    h1 {
+        @apply text-2xl
+        font-bold;
     }
 </style>
