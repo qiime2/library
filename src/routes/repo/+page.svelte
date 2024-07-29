@@ -24,7 +24,10 @@
                 {repo_info['Repo Owner']}/{repo_info['Repo Name']}
             </h1>
             <p class='info-content'>
-                source: <a href="https://github.com/{repo_info['Repo Owner']}/{repo_info['Repo Name']}/tree/{repo_info['Branch']}">https://github.com/{repo_info['Repo Owner']}/{repo_info['Repo Name']}/tree/{repo_info['Branch']}</a>
+                <span class='font-bold'>source: </span>
+                <a href="https://github.com/{repo_info['Repo Owner']}/{repo_info['Repo Name']}/tree/{repo_info['Branch']}">
+                    https://github.com/{repo_info['Repo Owner']}/{repo_info['Repo Name']}/tree/{repo_info['Branch']}
+                </a>
             </p>
             <p class='info-content'>
                 Something else goes here

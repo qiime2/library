@@ -28,7 +28,7 @@ for (const repo of repos) {
   let repo_overview = {
     "Repo Owner": owner,
     "Repo Name": repo_name,
-    "Branch": branch,
+    Branch: branch,
   };
 
   // Get the latest commit
