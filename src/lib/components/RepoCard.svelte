@@ -6,17 +6,21 @@
     export let repo_overview: Object;
 
     function getStatusColor() {
-        let text = 'text-white rounded px-2 font-bold ';
+        let text_format = 'text-white rounded px-2 font-bold ';
 
         if (repo_overview['Commit Status'] === 'passed') {
-            text += 'bg-green-500';
+            text_format += 'bg-green-500';
         } else if (repo_overview['Commit Status'] === 'failed') {
-            text += 'bg-red-500';
+            text_format += 'bg-red-500';
+        } else if (repo_overview['Commit Status'] === 'in progress') {
+            text_format += 'bg-yellow-500';
         } else {
-            return '';
+            // If we get here then... Who knows what we have. Just display the
+            // text
+            return ;''
         }
 
-        return text;
+        return text_format;
     }
 </script>
 
