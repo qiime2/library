@@ -10,7 +10,9 @@ const repos = yaml.load(
     "/home/runner/work/library-svelte/library-svelte/static/repos.yaml",
   ),
 );
-const overview = {};
+const overview = {
+  "Repo": Object
+};
 const octokit = github.getOctokit(process.argv[2]);
 
 let global_distros = new Set();
@@ -171,7 +173,7 @@ for (const repo of repos["repos"]) {
     JSON.stringify(repo_info),
   );
 
-  overview[repo_name] = repo_overview;
+  overview['Repos'][repo_name] = repo_overview;
 }
 
 overview["Date Fetched"] = new Date();

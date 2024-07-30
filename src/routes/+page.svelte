@@ -53,9 +53,8 @@
         const json = await response.json();
 
         date_fetched = json["Date Fetched"];
-        delete json["Date Fetched"];
 
-        for (const repo of Object.keys(json)) {
+        for (const repo of Object.keys([json['Repos']])) {
             repo_overviews.push(json[repo]);
         }
 
