@@ -158,6 +158,7 @@ for (const repo of repos["repos"]) {
   repo_overview["Distros"] = Array.from(distros);
   repo_overview["Epochs"] = Array.from(epochs);
 
+  console.log(global_distros.union)
   global_distros = global_distros.union(distros);
   global_epochs = global_epochs.union(epochs);
 
