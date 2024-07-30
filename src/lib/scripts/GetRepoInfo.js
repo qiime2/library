@@ -153,20 +153,13 @@ for (const repo of repos["repos"]) {
 
     distros.add(split[1]);
     epochs.add(split[2]);
+
+    global_distros.add(split[1]);
+    global_epochs.add(split[2]);
   }
 
   repo_overview["Distros"] = Array.from(distros);
   repo_overview["Epochs"] = Array.from(epochs);
-
-  global_distros = global_distros.union(distros);
-  for (const distro of distros) {
-    global_distros.add(distro);
-  }
-
-  global_epochs = global_epochs.union(epochs);
-  for (const epoch of epochs) {
-    global_epochs.add(epoch);
-  }
 
   repo_info = { ...repo_info, ...repo_overview };
 
