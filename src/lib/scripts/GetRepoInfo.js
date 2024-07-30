@@ -158,11 +158,15 @@ for (const repo of repos["repos"]) {
   repo_overview["Distros"] = Array.from(distros);
   repo_overview["Epochs"] = Array.from(epochs);
 
-  console.log(global_distros);
-  Object.keys(global_distros).forEach((x) => console.log(x))
-  console.log(global_distros.union);
   global_distros = global_distros.union(distros);
+  for (const distro of distros) {
+    global_distros.add(distro);
+  }
+
   global_epochs = global_epochs.union(epochs);
+  for (const epoch of epochs) {
+    global_epochs.add(epoch);
+  }
 
   repo_info = { ...repo_info, ...repo_overview };
 
