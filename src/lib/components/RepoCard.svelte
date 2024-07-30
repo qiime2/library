@@ -33,9 +33,6 @@
     <p class='description'>
         {repo_overview['Short Description']}
     </p>
-    <div class='container mb-4'>
-
-    </div>
     <div class='container'>
         <div class='flex mr-auto'>
             <div>
