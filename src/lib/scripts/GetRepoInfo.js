@@ -5,7 +5,7 @@ import github from "@actions/github";
 import yaml from "js-yaml";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
-const repos = yaml.load(fs.readFileSync("/home/runner/work/library-svelte/library/svelte/static/repos.yaml"));
+const repos = yaml.load(fs.readFileSync("/home/runner/work/library-svelte/library-svelte/static/repos.yaml"));
 console.log(repos);
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
