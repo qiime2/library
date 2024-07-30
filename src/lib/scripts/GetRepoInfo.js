@@ -5,7 +5,11 @@ import github from "@actions/github";
 import yaml from "js-yaml";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
-const repos = yaml.load(fs.readFileSync("/home/runner/work/library-svelte/library-svelte/static/repos.yaml"));
+const repos = yaml.load(
+  fs.readFileSync(
+    "/home/runner/work/library-svelte/library-svelte/static/repos.yaml",
+  ),
+);
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
@@ -15,10 +19,10 @@ if (fs.existsSync(root_path)) {
 }
 fs.mkdirSync(root_path);
 
-for (const repo of repos['repos']) {
-  const owner = repo['owner'];
-  const repo_name = repo['name'];
-  const branch = repo['branch'];
+for (const repo of repos["repos"]) {
+  const owner = repo["owner"];
+  const repo_name = repo["name"];
+  const branch = repo["branch"];
 
   let repo_info = {};
   let repo_overview = {
