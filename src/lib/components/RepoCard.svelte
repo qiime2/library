@@ -55,13 +55,10 @@
 
 <style lang="postcss">
     .repo-card {
-        box-shadow: rgb(153, 153, 153) 2px 2px 2px;
         @apply max-w-7xl
         border
         border-solid
-        rounded-lg
         border-gray-300
-        my-5
         ml-auto
         p-4;
     }
