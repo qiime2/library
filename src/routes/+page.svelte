@@ -54,8 +54,8 @@
 
         date_fetched = json["Date Fetched"];
 
-        for (const repo of Object.keys([json['Repos']])) {
-            repo_overviews.push(json[repo]);
+        for (const repo of Object.keys(json['Repos'])) {
+            repo_overviews.push(json['Repos'][repo]);
         }
 
         // TODO: Overview needs to contain all repos and all distros supported
