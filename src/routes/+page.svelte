@@ -60,7 +60,6 @@
         distros = json['Distros'];
         epochs = json['Epochs'];
 
-
         // TODO: Overview needs to contain all repos and all distros supported
         // by all repos
         overview.set({
