@@ -1,7 +1,7 @@
 <script lang="ts">
     import "../app.css";
 
-    import { onDestroy } from 'svelte';
+    import { onDestroy } from "svelte";
 
     import RepoCard from "$lib/components/RepoCard.svelte";
     import SortButtons from "$lib/components/SortButtons.svelte";
@@ -49,16 +49,16 @@
             return;
         }
 
-        const response = await fetch('/json/overview.json');
+        const response = await fetch("/json/overview.json");
         const json = await response.json();
 
-        for (const repo of Object.keys(json['Repos'])) {
-            repo_overviews.push(json['Repos'][repo]);
+        for (const repo of Object.keys(json["Repos"])) {
+            repo_overviews.push(json["Repos"][repo]);
         }
 
-        date_fetched = json['Date Fetched'];
-        distros = json['Distros'];
-        epochs = json['Epochs'];
+        date_fetched = json["Date Fetched"];
+        distros = json["Distros"];
+        epochs = json["Epochs"];
 
         // TODO: Overview needs to contain all repos and all distros supported
         // by all repos

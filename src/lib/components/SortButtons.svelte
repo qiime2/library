@@ -1,8 +1,8 @@
 <script lang="ts">
     import "../../app.css";
 
-    import { overview } from '$lib/scripts/OverviewStore';
-    import { sort_info } from '$lib/scripts/SortStore.ts';
+    import { overview } from "$lib/scripts/OverviewStore";
+    import { sort_info } from "$lib/scripts/SortStore.ts";
 
     let sort_col: string;
     let sort_descending: boolean;
@@ -24,7 +24,7 @@
         date_fetched = value.date_fetched;
     });
 
-    const columns = ['Repo Owner', 'Repo Name', 'Stars', 'Commit Date', 'Commit Status'];
+    const columns = ["Repo Owner", "Repo Name", "Stars", "Commit Date", "Commit Status"];
 
     function sortArray(this_col: string) {
         if (this_col === sort_col) {
