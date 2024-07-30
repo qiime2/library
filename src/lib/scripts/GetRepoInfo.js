@@ -193,15 +193,15 @@ function sortEpochs(a, b) {
   const monthB = parseInt(B[1]);
 
   if (yearA > yearB) {
-    return 1;
-  } else if (yearA < yearB) {
     return -1;
+  } else if (yearA < yearB) {
+    return 1;
   }
 
   if (monthA > monthB) {
-    return 1;
-  } else {
     return -1;
+  } else {
+    return 1;
   }
 }
 
