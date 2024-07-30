@@ -31,8 +31,8 @@
         num_pages = value.num_pages;
     })
 
-    let epochs = [];
-    let distros = [];
+    let distros: Array<String>;
+    let epochs: Array<String>;
 
     // Update our info when we leave so we can snag it when we come back
     onDestroy(() => {
@@ -52,11 +52,14 @@
         const response = await fetch("/json/overview.json");
         const json = await response.json();
 
-        date_fetched = json["Date Fetched"];
-
         for (const repo of Object.keys(json['Repos'])) {
             repo_overviews.push(json['Repos'][repo]);
         }
+
+        date_fetched = json["Date Fetched"];
+        distros = json['Distros'];
+        epochs = json['Epochs'];
+
 
         // TODO: Overview needs to contain all repos and all distros supported
         // by all repos
