@@ -13,6 +13,9 @@ const repos = yaml.load(
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
+let global_distros = new Set();
+let global_epochs = new Set();
+
 // Make sure we start from a clean slate
 if (fs.existsSync(root_path)) {
   fs.rmSync(root_path, { recursive: true, force: true });
@@ -155,6 +158,9 @@ for (const repo of repos["repos"]) {
   repo_overview["Distros"] = Array.from(distros);
   repo_overview["Epochs"] = Array.from(epochs);
 
+  global_distros = global_distros.union(distros);
+  global_epochs = global_epochs.union(epochs);
+
   repo_info = { ...repo_info, ...repo_overview };
 
   if (!fs.existsSync(`${root_path}/${owner}`)) {
@@ -169,4 +175,37 @@ for (const repo of repos["repos"]) {
 }
 
 overview["Date Fetched"] = new Date();
+
+global_distros = Array.from(global_distros);
+global_epochs = Array.from(global_epochs);
+
+global_distros.sort();
+global_epochs.sort(sortEpochs);
+
+function sortEpochs(a, b) {
+  const A = a.split('.');
+  const B = b.split('.');
+
+  const yearA = parseInt(A[0]);
+  const monthA = parseInt(A[1]);
+
+  const yearB = parseInt(B[0]);
+  const monthB = parseInt(B[1]);
+
+  if (yearA > yearB) {
+    return 1;
+  } else if (yearA < yearB) {
+    return -1;
+  }
+
+  if (monthA > monthB) {
+    return 1;
+  } else {
+    return -1;
+  }
+}
+
+overview["Distros"] = global_distros;
+overview["Epochs"] = global_epochs;
+
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));

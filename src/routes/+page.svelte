@@ -31,6 +31,9 @@
         num_pages = value.num_pages;
     })
 
+    let epochs = [];
+    let distros = [];
+
     // Update our info when we leave so we can snag it when we come back
     onDestroy(() => {
         cards.set({
@@ -56,6 +59,8 @@
             repo_overviews.push(json[repo]);
         }
 
+        // TODO: Overview needs to contain all repos and all distros supported
+        // by all repos
         overview.set({
             repo_overviews: repo_overviews,
             filter: "",
@@ -117,11 +122,18 @@
             <SearchBar />
             <SortButtons />
         </div>
-        {#key [cards_per_page, filtered_overviews, current_page]}
-            {#each getCurrentPage() as repo_overview}
-                <RepoCard {repo_overview} />
-            {/each}
-        {/key}
+        <div class="grid grid-cols-[15%_85%]">
+            <div class="h-100 border border-solid border-black">
+
+            </div>
+            <div>
+                {#key [cards_per_page, filtered_overviews, current_page]}
+                    {#each getCurrentPage() as repo_overview}
+                        <RepoCard {repo_overview} />
+                    {/each}
+                {/key}
+            </div>
+        </div>
         <div id="bottomBar">
             <div style="margin-right: auto">
                 <button
