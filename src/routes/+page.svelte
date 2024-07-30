@@ -124,8 +124,22 @@
             <SortButtons />
         </div>
         <div class="grid grid-cols-[15%_85%]">
-            <div class="h-100 border border-solid border-black">
-
+            <div class="h-fit">
+                <span class="font-bold">
+                    Distros:
+                </span>
+                <br/>
+                {#each distros as distro}
+                    <button class="filterButton">{distro}</button>
+                {/each}
+                <br/>
+                <span class="font-bold">
+                    Epochs:
+                </span>
+                <br/>
+                {#each epochs as epoch}
+                    <button class="filterButton">{epoch}</button>
+                {/each}
             </div>
             <div>
                 {#key [cards_per_page, filtered_overviews, current_page]}
@@ -223,5 +237,15 @@
         rounded
         border-gray-300
         px-2;
+    }
+
+    .filterButton {
+        @apply my-1
+        mr-1
+        p-1
+        border
+        border-gray-300
+        border-solid
+        rounded;
     }
 </style>
