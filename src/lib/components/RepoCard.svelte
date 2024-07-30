@@ -48,10 +48,8 @@
                 {repo_overview['Commit Status']}
             </span>
         </div>
-        <div class='flex ml-auto'>
-            <div class="pr-2">Distros:<CutOffList list={repo_overview['Distros']} collapseNumber={2} /></div>
-            <div>Epochs:<CutOffList list={repo_overview['Epochs']} collapseNumber={2} /></div>
-        </div>
+        <div class="mx-auto">Distros:<CutOffList list={repo_overview['Distros']} collapseNumber={2} /></div>
+        <div class="ml-auto">Epochs:<CutOffList list={repo_overview['Epochs']} collapseNumber={2} /></div>
     </div>
 </div>
 
