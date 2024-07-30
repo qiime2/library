@@ -2,14 +2,11 @@
 import utf8 from "utf8";
 import fs from "node:fs";
 import github from "@actions/github";
+import yaml from "js-yaml";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
-const repos = [
-  ["Oddant1", "qiime2", "test"],
-  ["Oddant1", "q2cli", "test"],
-  ["Oddant1", "q2-types", "test"],
-  ["Oddant1", "q2-cookiecutter", "test"],
-];
+const repos = yaml.load(fs.readFileSync("/home/runner/work/library-svelte/library/svelte/static/repos.yaml"));
+console.log(repos);
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
