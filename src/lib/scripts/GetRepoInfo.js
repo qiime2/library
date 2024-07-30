@@ -11,7 +11,7 @@ const repos = yaml.load(
   ),
 );
 const overview = {
-  "Repos": {}
+  Repos: {},
 };
 const octokit = github.getOctokit(process.argv[2]);
 
@@ -173,7 +173,7 @@ for (const repo of repos["repos"]) {
     JSON.stringify(repo_info),
   );
 
-  overview['Repos'][repo_name] = repo_overview;
+  overview["Repos"][repo_name] = repo_overview;
 }
 
 overview["Date Fetched"] = new Date();
