@@ -11,7 +11,7 @@ const repos = yaml.load(
   ),
 );
 const overview = {
-  "Repo": {}
+  "Repos": {}
 };
 const octokit = github.getOctokit(process.argv[2]);
 
