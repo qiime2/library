@@ -183,8 +183,8 @@ global_distros.sort();
 global_epochs.sort(sortEpochs);
 
 function sortEpochs(a, b) {
-  const A = a.split('.');
-  const B = b.split('.');
+  const A = a.split(".");
+  const B = b.split(".");
 
   const yearA = parseInt(A[0]);
   const monthA = parseInt(A[1]);
