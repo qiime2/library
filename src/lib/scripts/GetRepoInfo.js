@@ -6,7 +6,6 @@ import yaml from "js-yaml";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const repos = yaml.load(fs.readFileSync("/home/runner/work/library-svelte/library-svelte/static/repos.yaml"));
-console.log(repos);
 const overview = {};
 const octokit = github.getOctokit(process.argv[2]);
 
@@ -17,9 +16,9 @@ if (fs.existsSync(root_path)) {
 fs.mkdirSync(root_path);
 
 for (const repo of repos) {
-  const owner = repo[0];
-  const repo_name = repo[1];
-  const branch = repo[2];
+  const owner = repo['owner'];
+  const repo_name = repo['name'];
+  const branch = repo['branch'];
 
   let repo_info = {};
   let repo_overview = {
