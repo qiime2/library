@@ -22,9 +22,9 @@
     {/if}
     {#if list.length > collapseNumber + 1}
         {#if isCollapsed}
-            <span on:click={() => (isCollapsed = !isCollapsed)}>&nbsp;...</span>
+            <span on:click={() => (isCollapsed = !isCollapsed)}>...</span>
         {:else}
-            <span on:click={() => (isCollapsed = !isCollapsed)}>&nbsp;&lt;-</span>
+            <span on:click={() => (isCollapsed = !isCollapsed)}>&lt;-</span>
         {/if}
     {/if}
 {/key}
