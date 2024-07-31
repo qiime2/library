@@ -46,7 +46,7 @@
                 {repo_overview["Commit Status"]}
             </span>
         </div>
-        <div>Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
+        <div style="word-break: break-all">Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
         <div>Epochs:<CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
     </div>
 </div>
