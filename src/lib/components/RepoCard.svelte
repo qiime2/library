@@ -34,7 +34,7 @@
         {repo_overview["Short Description"]}
     </p>
     <div class="container">
-        <div class="flex lg:mr-auto">
+        <div class="flex">
             <div>
                 <svg height="24" width="40" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" stroke="currentColor">
                     <path fill="none" stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
@@ -47,7 +47,7 @@
             </span>
         </div>
         <div>Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
-        <div class="lg:ml-auto">Epochs:<CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
+        <div>Epochs:<CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
     </div>
 </div>
 
@@ -70,8 +70,8 @@
     }
 
     .container {
-        @apply lg:flex
-        lg:mx-auto;
+        @apply lg:grid
+        lg:grid-cols-[40%_30%_30%]
     }
 
     h1 {
