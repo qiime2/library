@@ -10,21 +10,26 @@
     import { cards } from "$lib/scripts/CardsStore";
     import { sort_info } from "$lib/scripts/SortStore.ts";
     import { sortOverviews } from "$lib/scripts/util";
+    import FilterButton from "$lib/components/FilterButton.svelte";
 
     let repo_overviews: Array<Object>;
-    let filter: string;
+    let search_filter: string;
     let filtered_overviews: Array<Object>;
     let date_fetched: string;
     let distros: Array<string> = [];
     let epochs: Array<string> = [];
+    let filter_distros: Array<string> = [];
+    let filter_epochs: Array<string> = [];
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
-        filter = value.filter;
+        search_filter = value.search_filter;
         filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
         distros = value.distros,
-        epochs = value.epochs
+        epochs = value.epochs,
+        filter_distros = value.filter_distros,
+        filter_epochs = value.filter_epochs
     });
 
     let cards_per_page: number;
@@ -74,11 +79,13 @@
         repo_overviews = sortOverviews(repo_overviews, sort_col, sort_descending);
         overview.set({
             repo_overviews: repo_overviews,
-            filter: "",
+            search_filter: "",
             filtered_overviews: repo_overviews,
             date_fetched: date_fetched,
             distros: distros,
-            epochs: epochs
+            epochs: epochs,
+            filter_distros: filter_distros,
+            filter_epochs: filter_epochs
         });
 
         num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
@@ -142,7 +149,7 @@
                 </span>
                 <br/>
                 {#each distros as distro}
-                    <button class="filterButton">{distro}</button>
+                    <FilterButton this_filter={distro} filter_type="Distro"/>
                 {/each}
                 <br/>
                 <span class="font-bold">
@@ -150,7 +157,7 @@
                 </span>
                 <br/>
                 {#each epochs as epoch}
-                    <button class="filterButton">{epoch}</button>
+                    <FilterButton this_filter={epoch} filter_type="Epoch" />
                 {/each}
             </div>
             <div>

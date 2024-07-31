@@ -2,6 +2,7 @@
     import "../../app.css";
 
     import { overview } from "$lib/scripts/OverviewStore";
+    import { applyFilters } from "$lib/scripts/util";
 
     let overview_store;
 
@@ -11,26 +12,18 @@
 
     export function applySearchFilter () {
         const searchBar = document.getElementById("searchInput") as HTMLInputElement;
-        const searchFilter = searchBar.value;
+        const search_filter = searchBar.value;
 
-        let filtered_overviews = []
-
-        for (const repo_overview of overview_store.repo_overviews) {
-            if (String(repo_overview["Repo Name" as keyof Object]).startsWith(searchFilter)) {
-                filtered_overviews.push(repo_overview);
-            }
-        }
-
-        overview_store.filter = searchFilter;
-        overview_store.filtered_overviews = filtered_overviews;
-
+        overview_store.search_filter = search_filter;
         overview.set({
             ...overview_store
         });
+
+        applyFilters();
     }
 </script>
 
-<input id="searchInput" placeholder="search" value={overview_store.filter} on:input={applySearchFilter} />
+<input id="searchInput" placeholder="search" value={overview_store.search_filter} on:input={applySearchFilter} />
 
 <style lang="postcss">
     #searchInput {
