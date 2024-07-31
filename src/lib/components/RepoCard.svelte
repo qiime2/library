@@ -46,8 +46,8 @@
                 {repo_overview["Commit Status"]}
             </span>
         </div>
-        <div class="mx-auto">Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
-        <div class="ml-auto">Epochs:<CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
+        <div class="lg:mx-auto">Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
+        <div class="lg:ml-auto">Epochs:<CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
     </div>
 </div>
 
@@ -70,8 +70,8 @@
     }
 
     .container {
-        @apply flex
-        mx-auto;
+        @apply lg:flex
+        lg:mx-auto;
     }
 
     h1 {
