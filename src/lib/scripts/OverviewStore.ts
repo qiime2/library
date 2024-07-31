@@ -17,5 +17,5 @@ export const overview = writable<{
   distros: [],
   epochs: [],
   filter_distros: [],
-  filter_epochs: []
+  filter_epochs: [],
 });
