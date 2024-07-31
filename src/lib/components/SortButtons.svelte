@@ -1,8 +1,14 @@
 <script lang="ts">
     import "../../app.css";
-
+    import { sortOverviews } from "$lib/scripts/util";
     import { overview } from "$lib/scripts/OverviewStore";
     import { sort_info } from "$lib/scripts/SortStore.ts";
+
+    let overview_store;
+
+    overview.subscribe((value) => {
+        overview_store = value;
+    });
 
     let sort_col: string;
     let sort_descending: boolean;
@@ -12,61 +18,32 @@
         sort_descending = sort_values.sort_descending;
     });
 
-    let repo_overviews: Object[];
-    let filter: string;
-    let filtered_overviews: Object[];
-    let date_fetched: string;
-
-    overview.subscribe((value) => {
-        repo_overviews = value.repo_overviews;
-        filter = value.filter;
-        filtered_overviews = value.filtered_overviews;
-        date_fetched = value.date_fetched;
-    });
-
     const columns = ["Repo Owner", "Repo Name", "Stars", "Commit Date", "Commit Status"];
 
-    function sortArray(this_col: string) {
+    function sortButton(this_col: string) {
         if (this_col === sort_col) {
             sort_descending = !sort_descending;
         } else {
-            sort_col = this_col;
             sort_descending = true;
         }
 
+        overview_store.filtered_overviews = sortOverviews(overview_store.filtered_overviews, this_col, sort_descending);
+
         sort_info.set({
-            sort_col: sort_col,
-            sort_descending: sort_descending,
+            sort_col: this_col,
+            sort_descending: sort_descending
         });
 
-        function compareElements(a: Object, b: Object) {
-            const A = a[this_col as keyof Object];
-            const B = b[this_col as keyof Object];
-
-            if (A < B) {
-                return sort_descending === true ? 1 : -1;
-            } else if (A > B) {
-                return sort_descending === true ? -1 : 1;
-            }
-
-            return 0;
-        }
-
-        if (repo_overviews !== undefined) {
-            overview.set({
-                repo_overviews: repo_overviews,
-                filter: filter,
-                filtered_overviews: filtered_overviews.sort(compareElements),
-                date_fetched: date_fetched
-            });
-        }
+        overview.set({
+            ...overview_store
+        });
     }
 </script>
 
 <div id="buttons">
     {#each columns as column}
         <div class="sortButton">
-            <button on:click={() => sortArray(column)}>
+            <button on:click={() => sortButton(column)}>
                 <div class="float-left">
                     {column}
                 </div>

@@ -5,9 +5,13 @@ export const overview = writable<{
   filter: string;
   filtered_overviews: Object[];
   date_fetched: string;
+  distros: string[];
+  epochs: string[];
 }>({
   repo_overviews: [],
   filter: "",
   filtered_overviews: [],
   date_fetched: "",
+  distros: [],
+  epochs: [],
 });

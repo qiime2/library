@@ -8,11 +8,15 @@
     import SearchBar from "$lib/components/SearchBar.svelte";
     import { overview } from "$lib/scripts/OverviewStore";
     import { cards } from "$lib/scripts/CardsStore";
+    import { sort_info } from "$lib/scripts/SortStore.ts";
+    import { sortOverviews } from "$lib/scripts/util";
 
     let repo_overviews: Array<Object>;
     let filter: string;
     let filtered_overviews: Array<Object>;
     let date_fetched: string;
+    let distros: Array<string> = [];
+    let epochs: Array<string> = [];
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
@@ -31,8 +35,13 @@
         num_pages = value.num_pages;
     })
 
-    let distros: Array<String>;
-    let epochs: Array<String>;
+    let sort_col: string;
+    let sort_descending: boolean;
+
+    sort_info.subscribe((sort_values) => {
+        sort_col = sort_values.sort_col;
+        sort_descending = sort_values.sort_descending;
+    });
 
     // Update our info when we leave so we can snag it when we come back
     onDestroy(() => {
@@ -60,13 +69,14 @@
         distros = json["Distros"];
         epochs = json["Epochs"];
 
-        // TODO: Overview needs to contain all repos and all distros supported
-        // by all repos
+        repo_overviews = sortOverviews(repo_overviews, sort_col, sort_descending);
         overview.set({
             repo_overviews: repo_overviews,
             filter: "",
             filtered_overviews: repo_overviews,
             date_fetched: date_fetched,
+            distros: distros,
+            epochs: epochs
         });
 
         num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
