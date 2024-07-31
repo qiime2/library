@@ -70,11 +70,7 @@
         height: 5ex;
         @apply my-2
         px-2
-        overflow-y-scroll
-        border
-        border-gray-300
-        border-solid
-        rounded;
+        overflow-y-auto;
     }
 
     .container {
