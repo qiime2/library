@@ -66,7 +66,10 @@
     }
 
     .description {
-        @apply py-2
+        line-height: 2.5ex;
+        height: 5ex;
+        @apply my-2
+        overflow-y-scroll;
     }
 
     .container {
