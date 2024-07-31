@@ -27,7 +27,8 @@
         filter_epochs = value.filter_epochs
     });
 
-    let selected = this_filter in (filter_type === "Distro" ? filter_distros : filter_epochs);
+    let selected = (filter_type === "Distro" ? filter_distros : filter_epochs).includes(this_filter);
+
 
     function addFilter() {
         let filter_list = (filter_type === "Distro" ? filter_distros : filter_epochs)
