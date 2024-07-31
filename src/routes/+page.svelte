@@ -23,6 +23,8 @@
         filter = value.filter;
         filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
+        distros = value.distros,
+        epochs = value.epochs
     });
 
     let cards_per_page: number;
