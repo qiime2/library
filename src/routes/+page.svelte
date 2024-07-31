@@ -135,7 +135,7 @@
             <SearchBar />
             <SortButtons />
         </div>
-        <div class="grid grid-cols-[15%_85%]">
+        <div id="gridContainer">
             <div class="h-fit">
                 <span class="font-bold">
                     Distros:
@@ -249,6 +249,11 @@
         rounded
         border-gray-300
         px-2;
+    }
+
+    #gridContainer {
+        @apply grid
+        lg:grid-cols-[15%_85%];
     }
 
     .filterButton {
