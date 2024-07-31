@@ -29,7 +29,6 @@
 
     let selected = (filter_type === "Distro" ? filter_distros : filter_epochs).includes(this_filter);
 
-
     function addFilter() {
         let filter_list = (filter_type === "Distro" ? filter_distros : filter_epochs)
 
