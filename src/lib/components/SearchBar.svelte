@@ -3,40 +3,34 @@
 
     import { overview } from "$lib/scripts/OverviewStore";
 
-    let repo_overviews: Array<Object>;
-    let filter: string;
-    let filtered_overviews: Array<Object>;
-    let date_fetched: string;
+    let overview_store;
 
     overview.subscribe((value) => {
-        repo_overviews = value.repo_overviews;
-        filter = value.filter;
-        filtered_overviews = value.filtered_overviews;
-        date_fetched = value.date_fetched;
+        overview_store = value;
     });
 
     export function applySearchFilter () {
         const searchBar = document.getElementById("searchInput") as HTMLInputElement;
         const searchFilter = searchBar.value;
 
-        let _filtered_overviews = []
+        let filtered_overviews = []
 
-        for (const repo_overview of repo_overviews) {
+        for (const repo_overview of overview_store.repo_overviews) {
             if (String(repo_overview["Repo Name" as keyof Object]).startsWith(searchFilter)) {
-                _filtered_overviews.push(repo_overview);
+                filtered_overviews.push(repo_overview);
             }
         }
 
+        overview_store.filter = searchFilter;
+        overview_store.filtered_overviews = filtered_overviews;
+
         overview.set({
-            repo_overviews: repo_overviews,
-            filter: searchFilter,
-            filtered_overviews: _filtered_overviews,
-            date_fetched: date_fetched
+            ...overview_store
         });
     }
 </script>
 
- <input id="searchInput" placeholder="search" value={filter} on:input={applySearchFilter} />
+<input id="searchInput" placeholder="search" value={overview_store.filter} on:input={applySearchFilter} />
 
 <style lang="postcss">
     #searchInput {
