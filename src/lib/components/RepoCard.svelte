@@ -69,7 +69,12 @@
         line-height: 2.5ex;
         height: 5ex;
         @apply my-2
-        overflow-y-scroll;
+        px-2
+        overflow-y-scroll
+        border
+        border-gray-300
+        border-solid
+        rounded;
     }
 
     .container {
