@@ -213,7 +213,7 @@
             />
         </div>
         <p id="date">
-            Date Updated:&nbsp;
+            Date Updated:
             {#if date_fetched !== ""}
                 {date_fetched}
             {:else}
