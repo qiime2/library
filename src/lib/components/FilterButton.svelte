@@ -43,8 +43,8 @@
         if (filter_type === "Distro") {
             overview.set({
                 repo_overviews: repo_overviews,
-                search_filter: "",
-                filtered_overviews: repo_overviews,
+                search_filter: search_filter,
+                filtered_overviews: filtered_overviews,
                 date_fetched: date_fetched,
                 distros: distros,
                 epochs: epochs,
@@ -54,8 +54,8 @@
         } else {
             overview.set({
                 repo_overviews: repo_overviews,
-                search_filter: "",
-                filtered_overviews: repo_overviews,
+                search_filter: search_filter,
+                filtered_overviews: filtered_overviews,
                 date_fetched: date_fetched,
                 distros: distros,
                 epochs: epochs,
