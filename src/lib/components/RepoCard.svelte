@@ -69,7 +69,6 @@
         line-height: 2.5ex;
         height: 5ex;
         @apply my-2
-        px-2
         overflow-y-auto;
     }
 
