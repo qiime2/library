@@ -9,7 +9,7 @@
     import { overview } from "$lib/scripts/OverviewStore";
     import { cards } from "$lib/scripts/CardsStore";
     import { sort_info } from "$lib/scripts/SortStore.ts";
-    import { sortOverviews } from "$lib/scripts/util";
+    import { sortOverviews, formatDate } from "$lib/scripts/util";
     import FilterButton from "$lib/components/FilterButton.svelte";
 
     let repo_overviews: Array<Object>;
@@ -145,7 +145,7 @@
         <div id="gridContainer">
             <div class="h-fit">
                 <span class="font-bold">
-                    Distros:
+                    Compatible Distributions:
                 </span>
                 <br/>
                 {#each distros as distro}
@@ -153,7 +153,7 @@
                 {/each}
                 <br/>
                 <span class="font-bold">
-                    Epochs:
+                    Compatible QIIME 2 Epochs:
                 </span>
                 <br/>
                 {#each epochs as epoch}
@@ -215,7 +215,7 @@
         <p id="date">
             Date Updated:
             {#if date_fetched !== ""}
-                {date_fetched}
+                {formatDate(date_fetched)}
             {:else}
                 error
             {/if}

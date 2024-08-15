@@ -2,6 +2,7 @@
     import "../../app.css";
 
     import CutOffList from "$lib/components/CutOffList.svelte";
+    import { formatDate } from "$lib/scripts/util";
 
     export let repo_overview: Object;
 
@@ -41,7 +42,7 @@
                     <text stroke-width="1" x="25" y="18">{repo_overview["Stars"]}</text>
                 </svg>
             </div>
-            <div>Last Commit: {repo_overview["Commit Date"]}&nbsp;</div>
+            <div>Last Commit: {formatDate(repo_overview["Commit Date"])}&nbsp;</div>
             <span class="{getStatusColor()} h-fit">
                 {repo_overview["Commit Status"]}
             </span>

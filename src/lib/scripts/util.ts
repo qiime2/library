@@ -55,3 +55,17 @@ export function applyFilters() {
     ...overview_store,
   });
 }
+
+export function formatDate(dateStr: string) {
+  // Expecting a date string of the format given by the GitHub REST API
+  // yyyy-mm-ddTHH:MM:SS.MILZ
+  const split = dateStr.split("T");
+
+  const date = split[0];
+  const time = split[1];
+
+  const splitTime = time.split(":");
+  const finalTime = splitTime[0] + ":" + splitTime[1];
+
+  return date + " at " + finalTime + " UTC";
+}
