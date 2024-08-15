@@ -64,15 +64,15 @@ for (const repo of repos["repos"]) {
   );
   repo_info["Commit Runs"] = runs;
 
-  repo_overview["Commit Status"] = "passed";
+  repo_overview["Build Status"] = "passed";
   for (const run of runs["data"]["check_runs"]) {
     if (run["status"] !== "completed") {
-      repo_overview["Commit Status"] = "in progress";
+      repo_overview["Build Status"] = "in progress";
       break;
     }
 
     if (run["conclusion"] === "failure") {
-      repo_overview["Commit Status"] = "failed";
+      repo_overview["Build Status"] = "failed";
       break;
     }
   }

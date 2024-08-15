@@ -9,11 +9,11 @@
     function getStatusColor() {
         let text_format = "text-white rounded px-2 font-bold ";
 
-        if (repo_overview["Commit Status"] === "passed") {
+        if (repo_overview["Build Status"] === "passed") {
             text_format += "bg-green-500";
-        } else if (repo_overview["Commit Status"] === "failed") {
+        } else if (repo_overview["Build Status"] === "failed") {
             text_format += "bg-red-500";
-        } else if (repo_overview["Commit Status"] === "in progress") {
+        } else if (repo_overview["Build Status"] === "in progress") {
             text_format += "bg-yellow-500";
         } else {
             // If we get here then... Who knows what we have. Just display the
@@ -44,7 +44,7 @@
             </div>
             <div>Last Commit: {formatDate(repo_overview["Commit Date"])}&nbsp;</div>
             <span class="{getStatusColor()} h-fit">
-                {repo_overview["Commit Status"]}
+                {repo_overview["Build Status"]}
             </span>
         </div>
         <div style="word-break: break-all">Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>

@@ -18,7 +18,7 @@
         sort_descending = sort_values.sort_descending;
     });
 
-    const columns = ["Repo Owner", "Repo Name", "Stars", "Commit Date", "Commit Status"];
+    const columns = ["Repo Owner", "Repo Name", "Stars", "Commit Date", "Build Status"];
 
     function sortButton(this_col: string) {
         if (this_col === sort_col) {
