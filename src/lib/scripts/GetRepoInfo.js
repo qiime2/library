@@ -163,6 +163,9 @@ for (const repo of repos["repos"]) {
   repo_overview["Distros"] = Array.from(distros);
   repo_overview["Epochs"] = Array.from(epochs);
 
+  repo_overview["Distros"].sort();
+  repo_overview["Epochs"].sort(sortEpochs);
+
   repo_info = { ...repo_info, ...repo_overview };
 
   if (!fs.existsSync(`${root_path}/${owner}`)) {

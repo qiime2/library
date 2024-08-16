@@ -43,6 +43,7 @@
                 </svg>
             </div>
             <div>Last Commit: {formatDate(repo_overview["Commit Date"])}&nbsp;</div>
+            Build Status:&nbsp;
             <span class="{getStatusColor()} h-fit">
                 {repo_overview["Build Status"]}
             </span>
