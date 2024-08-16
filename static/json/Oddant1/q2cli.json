@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 16 Aug 2024 16:51:57 GMT",
-      "etag": "W/\"6921c496bb147b807ceaff7e10be19353c1da60531ee9f0aa9f096a6e0053ac8\"",
+      "date": "Fri, 16 Aug 2024 16:56:19 GMT",
+      "etag": "W/\"deb576465138b8eecffd54398034e5dcff6579dc2677bd6bcfde357ce3a23771\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "3818:FD81A:A8C09:A9F46:66BF83AD",
+      "x-github-request-id": "23C0:2E9C49:D94FB:19F9A5:66BF84B3",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4990",
+      "x-ratelimit-remaining": "4964",
       "x-ratelimit-reset": "1723830705",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "10",
+      "x-ratelimit-used": "36",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -39,6 +39,6 @@
   "Commit Date": "2022-12-10T16:19:10Z",
   "Stars": 0,
   "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  "Distros": ["amplicon", "metagenome"],
-  "Epochs": ["2024.10", "2024.5"]
+  "Distros": ["amplicon", "metagenome", "tiny"],
+  "Epochs": ["2024.10", "2024.5", "2024.2"]
 }
