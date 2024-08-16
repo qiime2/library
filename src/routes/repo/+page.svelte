@@ -1,6 +1,7 @@
 <script lang="ts">
     import "../../app.css";
 
+    import { spaceSeperatedList } from "$lib/scripts/util";
     import SvelteMarkdown from "svelte-markdown";
 
     async function getRepoInfo() {
@@ -32,6 +33,20 @@
             <p class="info-content">
                 {repo_info["Short Description"]}
             </p>
+            <div class="info-content">
+                <p>
+                    <span class="font-bold">NOTE: </span>
+                    Not all distributions are necessarily supported for all epochs.
+                </p>
+                <p class="my-2">
+                    <span class="font-bold">Compatible Distributions: </span>
+                    {spaceSeperatedList(repo_info["Distros"])}
+                </p>
+                <p>
+                    <span class="font-bold">Compatible QIIME 2 Epochs: </span>
+                    {spaceSeperatedList(repo_info["Epochs"])}
+                </p>
+            </div>
         </div>
         <!-- I prefer the width setting it to small makes the div, but now it's too small. For some reason just prose makes it too narrow -->
         <div class="prose-base">
