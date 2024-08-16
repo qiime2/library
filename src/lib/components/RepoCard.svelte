@@ -42,14 +42,19 @@
                     <text stroke-width="1" x="25" y="18">{repo_overview["Stars"]}</text>
                 </svg>
             </div>
-            <div>Last Commit: {formatDate(repo_overview["Commit Date"])}&nbsp;</div>
-            Build Status:&nbsp;
-            <span class="{getStatusColor()} h-fit">
-                {repo_overview["Build Status"]}
-            </span>
+            <div>
+                <span class="font-bold">Last Commit:</span>
+                {formatDate(repo_overview["Commit Date"])}&nbsp;
+            </div>
+            <div>
+                <span class="font-bold">Build Status:</span>
+                <span class="{getStatusColor()} h-fit">
+                    {repo_overview["Build Status"]}
+                </span>
+            </div>
         </div>
-        <div style="word-break: break-all">Distros:<CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
-        <div style="word-break: break-all">Epochs:<CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
+        <div class="lg:mx-10" style="word-break: break-all"><span class="font-bold">Distros:</span><CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
+        <div style="word-break: break-all"><span class="font-bold">Epochs:</span><CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
     </div>
 </div>
 
@@ -76,7 +81,7 @@
 
     .container {
         @apply lg:grid
-        lg:grid-cols-[40%_30%_30%]
+        lg:grid-cols-[42%_29%_29%]
     }
 
     h1 {
