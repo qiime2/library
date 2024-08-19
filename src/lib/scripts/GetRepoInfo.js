@@ -24,9 +24,13 @@ const repo_list = await octokit.request(
   },
 );
 
-const repos = yaml.load(repo_list);
-console.log(repo_list)
-console.log(repos)
+const repo_string = utf8.decode(
+  atob(repo_list["data"]["content"]),
+);
+
+const repos = yaml.load(repo_string);
+// console.log(repo_list)
+// console.log(repos)
 
 const overview = {
   Repos: {},
