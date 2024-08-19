@@ -25,7 +25,7 @@ const repo_list = await octokit.request(
 );
 
 const repos = yaml.load(repo_list);
-console.log(repos)
+console.log(`${repos}`)
 
 const overview = {
   Repos: {},
