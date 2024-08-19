@@ -5,15 +5,30 @@ import github from "@actions/github";
 import yaml from "js-yaml";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
-const repos = yaml.load(
-  fs.readFileSync(
-    "/home/runner/work/library-svelte/library-svelte/static/repos.yaml",
-  ),
+// const repos = yaml.load(
+//   fs.readFileSync(
+//     "/home/runner/work/library-svelte/library-svelte/static/repos.yaml",
+//   ),
+// );
+const octokit = github.getOctokit(process.argv[2]);
+
+const repo_list = await octokit.request(
+  "GET /repos/Oddant1/library-repos/contents/repos.yaml",
+  {
+    owner: "Oddant1",
+    repo: "library-repos",
+    path: "repos.yaml",
+    headers: {
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+  },
 );
+
+const repos = yaml.load(repo_list);
+
 const overview = {
   Repos: {},
 };
-const octokit = github.getOctokit(process.argv[2]);
 
 let global_distros = new Set();
 let global_epochs = new Set();
