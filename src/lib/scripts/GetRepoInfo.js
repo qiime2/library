@@ -5,11 +5,6 @@ import github from "@actions/github";
 import yaml from "js-yaml";
 
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
-// const repos = yaml.load(
-//   fs.readFileSync(
-//     "/home/runner/work/library-svelte/library-svelte/static/repos.yaml",
-//   ),
-// );
 const octokit = github.getOctokit(process.argv[2]);
 
 const repo_list = await octokit.request(
@@ -24,13 +19,9 @@ const repo_list = await octokit.request(
   },
 );
 
-const repo_string = utf8.decode(
-  atob(repo_list["data"]["content"]),
-);
+const repo_string = utf8.decode(atob(repo_list["data"]["content"]));
 
 const repos = yaml.load(repo_string);
-// console.log(repo_list)
-// console.log(repos)
 
 const overview = {
   Repos: {},
