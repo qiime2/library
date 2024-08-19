@@ -73,10 +73,10 @@ export function formatDate(dateStr: string) {
 export function spaceSeperatedList(list: Array<Object>) {
   // If you put a {some_list_var} in a svelte file you get element,element with
   // no space. I don't like this
-  let listStr = `${list[0]}`
+  let listStr = `${list[0]}`;
 
   for (const elem of list.slice(1)) {
-    listStr +=`, ${elem}`;
+    listStr += `, ${elem}`;
   }
 
   return listStr;
