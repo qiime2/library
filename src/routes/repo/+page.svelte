@@ -25,7 +25,7 @@
                 {repo_info["Repo Owner"]}/{repo_info["Repo Name"]}
             </h1>
             <p class="info-content">
-                <span class="font-bold">source: </span>
+                <span class="font-bold">Source: </span>
                 <a href="https://github.com/{repo_info['Repo Owner']}/{repo_info['Repo Name']}/tree/{repo_info['Branch']}">
                     https://github.com/{repo_info["Repo Owner"]}/{repo_info["Repo Name"]}/tree/{repo_info["Branch"]}
                 </a>
