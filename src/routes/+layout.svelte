@@ -27,8 +27,7 @@
   #nav-container {
     @apply flex
     max-w-screen-2xl
-    mx-auto
-    px-2;
+    mx-auto;
   }
 
   #navlogo {
