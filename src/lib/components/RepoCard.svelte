@@ -34,6 +34,9 @@
     <p class="description">
         {repo_overview["Short Description"]}
     </p>
+    <!-- TODO: This is a placeholder -->
+    <span class="font-bold">User Docs: </span>
+    <a href="https://docs.qiime2.org/2024.5/">https://docs.qiime2.org/2024.5/</a>
     <div class="container">
         <div class="flex">
             <div>
