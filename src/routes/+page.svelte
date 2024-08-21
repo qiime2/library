@@ -204,7 +204,8 @@
                     </svg>
                 </button>
             </div>
-            Cards per page:&nbsp;<input
+            <span class="font-bold">Per Page:&nbsp;</span>
+            <input
                 id="setCardsPerPage"
                 type="number"
                 value={cards_per_page}
@@ -213,7 +214,7 @@
             />
         </div>
         <p id="date">
-            Date Updated:
+            <span class="font-bold">Date Updated: </span>
             {#if date_fetched !== ""}
                 {formatDate(date_fetched)}
             {:else}
