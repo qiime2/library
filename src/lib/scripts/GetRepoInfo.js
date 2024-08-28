@@ -41,10 +41,6 @@ for (const repo of repos["repos"]) {
   const repo_name = repo["name"];
   const branch = repo["branch"];
 
-  if (repo_name !== "qiime2") {
-    continue;
-  }
-
   let repo_info = {};
   let repo_overview = {
     "Repo Owner": owner,
