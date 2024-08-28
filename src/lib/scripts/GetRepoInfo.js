@@ -134,7 +134,7 @@ for (const repo of repos["repos"]) {
   repo_info["Short Description"] = info_yaml["short_description"];
   repo_info["User Docs"] = info_yaml["user_docs_link"];
 
-  const long_description_path = repo_info["long_description_path"];
+  const long_description_path = info_yaml["long_description_path"];
 
   // Get the info
   const long_description = await octokit.request(
