@@ -50,7 +50,7 @@
         </div>
         <!-- I prefer the width setting it to small makes the div, but now it's too small. For some reason just prose makes it too narrow -->
         <div class="prose-base">
-            <SvelteMarkdown source={repo_info["Info"]} />
+            <SvelteMarkdown source={repo_info["Long Description"]} />
         </div>
     {/await}
 </div>

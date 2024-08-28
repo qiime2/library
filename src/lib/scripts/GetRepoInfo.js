@@ -41,6 +41,10 @@ for (const repo of repos["repos"]) {
   const repo_name = repo["name"];
   const branch = repo["branch"];
 
+  if (repo_name !== "qiime2") {
+    continue;
+  }
+
   let repo_info = {};
   let repo_overview = {
     "Repo Owner": owner,
@@ -107,9 +111,9 @@ for (const repo of repos["repos"]) {
   const stars = repo_data["data"]["stargazers_count"];
   repo_overview["Stars"] = stars;
 
-  // Get the short description
-  const short_description = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/.qiime2/short-description.txt`,
+  // Get the info about the plugin
+  const info = await octokit.request(
+    `GET /repos/${owner}/${repo_name}/contents/.qiime2/info.yaml`,
     {
       owner: owner,
       repo: repo_name,
@@ -121,19 +125,25 @@ for (const repo of repos["repos"]) {
     },
   );
 
-  const short_description_contents = utf8.decode(
-    atob(short_description["data"]["content"]),
+  const info_contents = utf8.decode(
+    atob(info["data"]["content"])
   );
-  repo_overview["Short Description"] = short_description_contents;
+
+  const info_yaml = yaml.load(info_contents);
+
+  repo_info["Short Description"] = info_yaml["short_description"];
+  repo_info["User Docs"] = info_yaml["user_docs_link"];
+
+  const long_description_path = repo_info["long_description_path"];
 
   // Get the info
-  const info = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/.qiime2/info.md`,
+  const long_description = await octokit.request(
+    `GET /repos/${owner}/${repo_name}/contents/${long_description_path}`,
     {
       owner: owner,
       repo: repo_name,
       ref: branch,
-      path: ".qiime2/info.md",
+      path: long_description_path,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
@@ -141,8 +151,8 @@ for (const repo of repos["repos"]) {
   );
 
   // Convert it back to a normal string
-  const info_contents = utf8.decode(atob(info["data"]["content"]));
-  repo_info["Info"] = info_contents;
+  const long_description_contents = utf8.decode(atob(long_description["data"]["content"]));
+  repo_info["Long Description"] = long_description_contents;
 
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace("-", "_")}/environments/`,
