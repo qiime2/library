@@ -138,9 +138,7 @@ for (const repo of repos) {
     },
   );
 
-  const info_contents = utf8.decode(
-    atob(info["data"]["content"])
-  );
+  const info_contents = utf8.decode(atob(info["data"]["content"]));
 
   const info_yaml = yaml.load(info_contents);
 
@@ -164,7 +162,9 @@ for (const repo of repos) {
   );
 
   // Convert it back to a normal string
-  const long_description_contents = utf8.decode(atob(long_description["data"]["content"]));
+  const long_description_contents = utf8.decode(
+    atob(long_description["data"]["content"]),
+  );
   repo_info["Long Description"] = long_description_contents;
 
   const envs = await octokit.request(
