@@ -53,7 +53,7 @@ if (fs.existsSync(root_path)) {
 }
 fs.mkdirSync(root_path);
 
-for (const repo of repos["repos"]) {
+for (const repo of repos) {
   const owner = repo["owner"];
   const repo_name = repo["name"];
   const branch = repo["branch"];
