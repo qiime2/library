@@ -22,7 +22,7 @@ const repo_list = await octokit.request(
 const repos = [];
 
 for (const repo of repo_list["data"]) {
-  const repo_file_name = repo["name"]
+  const repo_file_name = repo["name"];
 
   const repo_file = await octokit.request(
     `GET /repos/Oddant1/library-repos/contents/repos/${repo_file_name}`,
