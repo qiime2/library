@@ -34,6 +34,16 @@
                 {repo_info["Short Description"]}
             </p>
             <div class="info-content">
+                <span class="font-bold">Install in new env:</span><br>
+                <span class="code">conda env create -n &lt;name&gt; -f &lt;path-to-env-file&gt;</span><br>
+                <div class="mt-2">
+                    <span class="font-bold">Install in exiting env:</span><br>
+                    <p class="code w-fit">
+                        conda activate &lt;env-name&gt;<br>conda update -f &lt;path-to-env-file&gt;
+                    </p>
+                </div>
+            </div>
+            <div class="info-content">
                 <p>
                     <span class="font-bold">NOTE: </span>
                     Not all distributions are necessarily supported for all epochs.
@@ -74,6 +84,12 @@
         border-solid
         border-gray-300
         p-4;
+    }
+
+    .code {
+        @apply bg-gray-200
+        px-2
+        rounded
     }
 
     h1 {
