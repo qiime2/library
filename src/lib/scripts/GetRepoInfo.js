@@ -188,11 +188,11 @@ for (const repo of repos) {
     const name = env["name"].substring(0, env["name"].indexOf(".yml"));
     const split = name.split("-");
 
-    distros.add(split[1]);
-    epochs.add(split[2]);
+    distros.add(split[split.length - 2]);
+    epochs.add(split[split.length - 1]);
 
-    global_distros.add(split[1]);
-    global_epochs.add(split[2]);
+    global_distros.add(split[split.length - 2]);
+    global_epochs.add(split[split.length - 1]);
   }
 
   repo_overview["Distros"] = Array.from(distros);
