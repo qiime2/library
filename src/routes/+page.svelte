@@ -135,6 +135,9 @@
  then make the list of data sortable by last commit date, last ci pass date,
  and number of stars -->
 <div id="container">
+    <div id="banner">
+        This is a reimplementation of the QIIME 2 Library. The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://library.qiime2.org/">here</a>
+    </div>
     {#await getOverview()}
         ...getting overview
     {:then}
@@ -225,6 +228,18 @@
 </div>
 
 <style lang="postcss">
+    #banner {
+        @apply text-center
+        p-10
+        m-4
+        border
+        border-solid
+        border-gray-400
+        rounded-lg
+        text-xl
+        bg-blue-200;
+    }
+
     #container {
         margin-top: 70px;
         @apply max-w-screen-2xl
