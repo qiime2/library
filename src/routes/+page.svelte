@@ -231,7 +231,7 @@
     #banner {
         @apply text-center
         p-10
-        m-4
+        my-4
         border
         border-solid
         border-gray-400
