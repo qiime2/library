@@ -35,7 +35,7 @@
             </p>
             <div class="info-content">
                 <span class="font-bold">Install in new env:</span><br>
-                <span class="code">conda env create -n &lt;name&gt; -f &lt;path-to-env-file&gt;</span><br>
+                <span class="code">conda env create -n &lt;env-name&gt; -f &lt;path-to-env-file&gt;</span><br>
                 <div class="mt-2">
                     <span class="font-bold">Install in exiting env:</span><br>
                     <p class="code w-fit">
