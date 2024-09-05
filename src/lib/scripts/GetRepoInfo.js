@@ -126,7 +126,7 @@ for (const repo of repos) {
 
   // Get the info about the plugin
   const info = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/.qiime2/info.yaml`,
+    `GET /repos/${owner}/${repo_name}/contents/.qiime2/info.yml`,
     {
       owner: owner,
       repo: repo_name,
