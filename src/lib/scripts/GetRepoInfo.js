@@ -167,18 +167,7 @@ for (const repo of repos) {
   );
   repo_info["Long Description"] = long_description_contents;
 
-  const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/${repo_name.replace("-", "_")}/environments/`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      path: `/${repo_name.replace("-", "_")}/environments/`,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
+  const envs = await getEnvPath(owner, repo_name, branch);
 
   const distros = new Set();
   const epochs = new Set();
@@ -249,3 +238,33 @@ overview["Distros"] = global_distros;
 overview["Epochs"] = global_epochs;
 
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
+
+async function getEnvPath(owner, repo_name, branch) {
+  try {
+    return await octokit.request(
+      `GET /repos/${owner}/${repo_name}/contents/.qiime2/environments/`,
+      {
+        owner: owner,
+        repo: repo_name,
+        ref: branch,
+        path: `/.qiime2/environments/`,
+        headers: {
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      },
+    );
+  } catch (error) {
+    return await octokit.request(
+      `GET /repos/${owner}/${repo_name}/contents/environments/`,
+      {
+        owner: owner,
+        repo: repo_name,
+        ref: branch,
+        path: `/environments/`,
+        headers: {
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      },
+    );
+  }
+}
