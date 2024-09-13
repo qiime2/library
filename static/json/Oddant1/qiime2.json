@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 13 Sep 2024 21:31:33 GMT",
-      "etag": "W/\"80e133e408530858546b9246a037fd575dd9b2ed218ff73f4037c8f7e803026d\"",
+      "date": "Fri, 13 Sep 2024 21:43:58 GMT",
+      "etag": "W/\"0612e0de14c2c71d2e243a4ba8111ce254e07975d7cbef7361ea3548021636fb\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "2880:3DFA08:7F7767:F20A86:66E4AF35",
+      "x-github-request-id": "7888:158C70:1774190:2CE8C4D:66E4B21E",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4962",
+      "x-ratelimit-remaining": "4931",
       "x-ratelimit-reset": "1726265994",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "38",
+      "x-ratelimit-used": "69",
       "x-xss-protection": "0"
     },
     "data": {
@@ -484,6 +484,15 @@
   "Stars": 1,
   "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "User Docs": "https://docs.qiime2.org/",
+  "Releases": [
+    "tiny/2024.5",
+    "something/2024.5",
+    "metagenome/2024.10",
+    "amplicon/2024.10",
+    "amplicon/2024.5",
+    "amplicon/2024.2",
+    "amplicon/2023.11"
+  ],
   "Distros": ["amplicon", "metagenome", "something", "tiny"],
   "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
 }

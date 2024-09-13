@@ -9,6 +9,7 @@
       "Stars": 0,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
+      "Releases": ["amplicon/2024.10"],
       "Distros": ["amplicon"],
       "Epochs": ["2024.10"]
     },
@@ -21,6 +22,7 @@
       "Stars": 0,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
+      "Releases": ["metagenome/2024.10", "amplicon/2024.10", "amplicon/2024.5"],
       "Distros": ["amplicon", "metagenome"],
       "Epochs": ["2024.10", "2024.5"]
     },
@@ -33,6 +35,12 @@
       "Stars": 0,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
+      "Releases": [
+        "tiny/2024.2",
+        "metagenome/2024.10",
+        "amplicon/2024.10",
+        "amplicon/2024.5"
+      ],
       "Distros": ["amplicon", "metagenome", "tiny"],
       "Epochs": ["2024.10", "2024.5", "2024.2"]
     },
@@ -45,11 +53,20 @@
       "Stars": 1,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
+      "Releases": [
+        "tiny/2024.5",
+        "something/2024.5",
+        "metagenome/2024.10",
+        "amplicon/2024.10",
+        "amplicon/2024.5",
+        "amplicon/2024.2",
+        "amplicon/2023.11"
+      ],
       "Distros": ["amplicon", "metagenome", "something", "tiny"],
       "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
     }
   },
-  "Date Fetched": "2024-09-13T21:31:33.874Z",
+  "Date Fetched": "2024-09-13T21:43:59.108Z",
   "Distros": ["amplicon", "metagenome", "something", "tiny"],
   "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
 }
