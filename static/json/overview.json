@@ -22,7 +22,7 @@
       "Stars": 0,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
-      "Releases": ["metagenome-2024.10", "amplicon-2024.10", "amplicon-2024.5"],
+      "Releases": ["amplicon-2024.10", "amplicon-2024.5", "metagenome-2024.10"],
       "Distros": ["amplicon", "metagenome"],
       "Epochs": ["2024.10", "2024.5"]
     },
@@ -36,10 +36,10 @@
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
       "Releases": [
-        "tiny-2024.2",
-        "metagenome-2024.10",
         "amplicon-2024.10",
-        "amplicon-2024.5"
+        "amplicon-2024.5",
+        "metagenome-2024.10",
+        "tiny-2024.2"
       ],
       "Distros": ["amplicon", "metagenome", "tiny"],
       "Epochs": ["2024.10", "2024.5", "2024.2"]
@@ -54,19 +54,19 @@
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
       "Releases": [
-        "tiny-2024.5",
-        "something-2024.5",
-        "metagenome-2024.10",
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.11"
+        "amplicon-2023.11",
+        "metagenome-2024.10",
+        "something-2024.5",
+        "tiny-2024.5"
       ],
       "Distros": ["amplicon", "metagenome", "something", "tiny"],
       "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
     }
   },
-  "Date Fetched": "2024-09-13T21:46:08.195Z",
+  "Date Fetched": "2024-09-13T21:50:36.319Z",
   "Distros": ["amplicon", "metagenome", "something", "tiny"],
   "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
 }
