@@ -250,6 +250,8 @@ function sortEpochs(a, b) {
   } else {
     return 1;
   }
+
+  return 0;
 }
 
 function sortReleases(a, b) {
@@ -262,13 +264,17 @@ function sortReleases(a, b) {
   const distroB = B[0];
   const epochB = B[1];
 
-  if (distroA > distroB) {
-    return 1;
-  } else if (distroA < distroB) {
-    return -1;
+  const byEpoch = sortEpochs(epochA, epochB);
+
+  if (byEpoch === 0) {
+    if (distroA > distroB) {
+      return 1;
+    } else if (distroA < distroB) {
+      return -1;
+    }
   }
 
-  return sortEpochs(epochA, epochB);
+  return byEpoch;
 }
 
 overview["Distros"] = global_distros;
