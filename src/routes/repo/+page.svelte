@@ -44,17 +44,9 @@
                 </div>
             </div>
             <div class="info-content">
-                <p>
-                    <span class="font-bold">NOTE: </span>
-                    Not all distributions are necessarily supported for all epochs.
-                </p>
                 <p class="my-2">
-                    <span class="font-bold">Compatible Distributions: </span>
-                    {spaceSeperatedList(repo_info["Distros"])}
-                </p>
-                <p>
-                    <span class="font-bold">Compatible QIIME 2 Epochs: </span>
-                    {spaceSeperatedList(repo_info["Epochs"])}
+                    <span class="font-bold">Compatible Releases: </span>
+                    {spaceSeperatedList(repo_info["Releases"])}
                 </p>
             </div>
         </div>

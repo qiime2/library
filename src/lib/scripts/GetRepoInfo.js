@@ -263,9 +263,9 @@ function sortReleases(a, b) {
   const epochB = B[1];
 
   if (distroA > distroB) {
-    return -1;
-  } else if (distroA < distroB) {
     return 1;
+  } else if (distroA < distroB) {
+    return -1;
   }
 
   return sortEpochs(epochA, epochB);
