@@ -40,8 +40,7 @@
             <span class="font-bold">User Docs: </span>
             <a href={repo_overview["User Docs"]}>{repo_overview["User Docs"]}</a>
         </div>
-        <div style="word-break: break-all"><span class="font-bold">Distros:</span><CutOffList list={repo_overview["Distros"]} collapseNumber={2} /></div>
-        <div style="word-break: break-all"><span class="font-bold">Epochs:</span><CutOffList list={repo_overview["Epochs"]} collapseNumber={2} /></div>
+        <div style="word-break: break-all"><span class="font-bold">Releases:</span><CutOffList list={repo_overview["Releases"]} collapseNumber={2} /></div>
     </div>
     <div class="container">
         <div>

@@ -182,17 +182,23 @@ for (const repo of repos) {
 
   const distros = new Set();
   const epochs = new Set();
+  repo_overview["Releases"] = [];
 
   for (const env of envs["data"]) {
     // Strip the extension off the end of the name
     const name = env["name"].substring(0, env["name"].indexOf(".yml"));
     const split = name.split("-");
 
-    distros.add(split[split.length - 2]);
-    epochs.add(split[split.length - 1]);
+    const distro = split[split.length - 2];
+    const epoch = split[split.length - 1];
+    const release = `${distro}/${epoch}`;
 
-    global_distros.add(split[split.length - 2]);
-    global_epochs.add(split[split.length - 1]);
+    distros.add(distro);
+    epochs.add(epoch);
+    repo_overview["Releases"].push(release);
+
+    global_distros.add(distro);
+    global_epochs.add(epoch);
   }
 
   repo_overview["Distros"] = Array.from(distros);
@@ -200,6 +206,7 @@ for (const repo of repos) {
 
   repo_overview["Distros"].sort();
   repo_overview["Epochs"].sort(sortEpochs);
+  repo_overview["Releases"].sort(sortReleases);
 
   repo_info = { ...repo_info, ...repo_overview };
 
@@ -243,6 +250,25 @@ function sortEpochs(a, b) {
   } else {
     return 1;
   }
+}
+
+function sortReleases(a, b) {
+  const A = a.split("/");
+  const B = b.split("/");
+
+  const distroA = A[0];
+  const epochA = A[1];
+
+  const distroB = B[0];
+  const epochB = B[1];
+
+  if (distroA > distroB) {
+    return -1;
+  } else if (distroA < distroB) {
+    return 1;
+  }
+
+  return sortEpochs(epochA, epochB);
 }
 
 overview["Distros"] = global_distros;
