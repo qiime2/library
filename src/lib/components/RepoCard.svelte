@@ -34,13 +34,12 @@
     <p class="description">
         {repo_overview["Short Description"]}
     </p>
-    <!-- TODO: This is a placeholder -->
-    <div class="container">
+    <div class="container2">
         <div>
             <span class="font-bold">User Docs: </span>
             <a href={repo_overview["User Docs"]}>{repo_overview["User Docs"]}</a>
         </div>
-        <div style="word-break: break-all"><span class="font-bold">Releases:</span><CutOffList list={repo_overview["Releases"]} collapseNumber={2} /></div>
+        <div style="word-break: break-all"><span class="font-bold">Releases:</span><CutOffList list={repo_overview["Releases"]} collapseNumber={5} /></div>
     </div>
     <div class="container">
         <div>
@@ -86,6 +85,11 @@
     .container {
         @apply lg:grid
         lg:grid-cols-[33%_33%_33%]
+    }
+
+    .container2 {
+        @apply lg:grid
+        lg:grid-cols-[33%_67%]
     }
 
     h1 {
