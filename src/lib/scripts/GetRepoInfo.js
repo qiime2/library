@@ -191,7 +191,7 @@ for (const repo of repos) {
 
     const distro = split[split.length - 2];
     const epoch = split[split.length - 1];
-    const release = `${distro}/${epoch}`;
+    const release = `${distro}-${epoch}`;
 
     distros.add(distro);
     epochs.add(epoch);
@@ -253,8 +253,8 @@ function sortEpochs(a, b) {
 }
 
 function sortReleases(a, b) {
-  const A = a.split("/");
-  const B = b.split("/");
+  const A = a.split("-");
+  const B = b.split("-");
 
   const distroA = A[0];
   const epochA = A[1];
