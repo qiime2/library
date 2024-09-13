@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 13 Sep 2024 21:50:34 GMT",
-      "etag": "W/\"42c380306a6559711dad4061b7562f6b2e4c7d216639b34c86b6bb16383cf7d7\"",
+      "date": "Fri, 13 Sep 2024 21:54:02 GMT",
+      "etag": "W/\"7641d95ab88392fbc70a9600e69c454021b489217ee928f12a9a8e1b90360f9c\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "4C80:153E14:1617F2E:2A3DC8F:66E4B3AA",
+      "x-github-request-id": "0900:1F0A19:16625CC:2ADB700:66E4B47A",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4875",
+      "x-ratelimit-remaining": "4844",
       "x-ratelimit-reset": "1726265994",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "125",
+      "x-ratelimit-used": "156",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -42,8 +42,8 @@
   "User Docs": "https://docs.qiime2.org/",
   "Releases": [
     "amplicon-2024.10",
-    "amplicon-2024.5",
     "metagenome-2024.10",
+    "amplicon-2024.5",
     "tiny-2024.2"
   ],
   "Distros": ["amplicon", "metagenome", "tiny"],
