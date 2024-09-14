@@ -69,6 +69,7 @@
             </div>
             <div class="info-content">
 
+<!-- TODO: Clean up this whole block here -->
 <div class="flex flex-col gap-1">
   <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
   <label class="block text-magnum-900" use:melt={$label}>Desired Release</label>
