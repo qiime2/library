@@ -191,7 +191,7 @@ for (const repo of repos) {
 
     const distro = split[split.length - 2];
     const epoch = split[split.length - 1];
-    const release = `${distro}-${epoch}`;
+    const release = `qiime2-${distro}-${epoch}`;
 
     distros.add(distro);
     epochs.add(epoch);

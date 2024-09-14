@@ -1,8 +1,30 @@
 <script lang="ts">
     import "../../app.css";
 
+    import { createSelect, melt } from '@melt-ui/svelte';
+    import { fade } from 'svelte/transition';
     import { spaceSeperatedList } from "$lib/scripts/util";
     import SvelteMarkdown from "svelte-markdown";
+
+    let repo_info = {};
+    let releases: Array<string> = [];
+
+    let env_name: string = '<env-name>';
+    let env_filepath: string = '<path-to-env-file>';
+    // https://raw.githubusercontent.com/Oddant1/qiime2/refs/heads/test/.qiime2/library/environments/qiime2-qiime2-amplicon-2023.11.yml
+
+    const {
+        elements: { trigger, menu, option, group, groupLabel, label },
+        states: { selectedLabel, open },
+        helpers: { isSelected },
+    } = createSelect<string>({
+        forceVisible: true,
+        positioning: {
+        placement: 'bottom',
+        fitViewport: true,
+        sameWidth: true,
+        },
+    });
 
     async function getRepoInfo() {
         const url = new URL(window.location.href);
@@ -10,16 +32,30 @@
         const repo_name = url.searchParams.get("repo_name");
 
         const response = await fetch(`/json/${owner}/${repo_name}.json`);
-        const repo_info = await response.json();
+        const _repo_info = await response.json();
 
-        return repo_info;
+        releases = _repo_info["Releases"];
+        repo_info = _repo_info;
+    }
+
+    function updateInstallInstructions(release: string) {
+      console.log(release)
+      env_name = `qiime2-${release}`;
+      env_filepath = `https://raw.githubusercontent.com/${repo_info['Repo Owner']}/${repo_info['Repo Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Repo Name']}-${release}.yml
+`
+    // https://raw.githubusercontent.com/Oddant1/qiime2/refs/heads/test/.qiime2/library/environments/qiime2-qiime2-amplicon-2023.11.yml
+
+      // install_instruction_info.set({
+      //   env_name: release,
+      //   env_filepath: env_filepath
+      // });
     }
 </script>
 
 <div id="container">
     {#await getRepoInfo()}
         ...getting info
-    {:then repo_info}
+    {:then}
         <div id="info">
             <h1 class="info-content">
                 {repo_info["Repo Owner"]}/{repo_info["Repo Name"]}
@@ -34,20 +70,63 @@
                 {repo_info["Short Description"]}
             </p>
             <div class="info-content">
-                <span class="font-bold">Install in new env:</span><br>
-                <span class="code">conda env create -n &lt;env-name&gt; -f &lt;path-to-env-file&gt;</span><br>
-                <div class="mt-2">
-                    <span class="font-bold">Install in exiting env:</span><br>
-                    <p class="code w-fit">
-                        conda activate &lt;env-name&gt;<br>conda update -f &lt;path-to-env-file&gt;
-                    </p>
-                </div>
-            </div>
-            <div class="info-content">
                 <p class="my-2">
                     <span class="font-bold">Compatible Releases: </span>
                     {spaceSeperatedList(repo_info["Releases"])}
                 </p>
+            </div>
+            <div class="info-content">
+
+<div class="flex flex-col gap-1">
+  <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
+  <label class="block text-magnum-900" use:melt={$label}>Desired Release</label>
+  <button
+    class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
+  text-magnum-700 shadow transition-opacity hover:opacity-90"
+    use:melt={$trigger}
+    aria-label="Releases"
+  >
+    {$selectedLabel || 'Select a release'}
+    <!-- <ChevronDown class="size-5" /> -->
+  </button>
+  {#if $open}
+    <div
+      class=" z-10 flex max-h-[300px] flex-col
+    overflow-y-auto rounded-lg bg-white p-1
+    shadow focus:!ring-0"
+      use:melt={$menu}
+      transition:fade={{ duration: 150 }}
+    >
+      {#each releases as release}
+             <div
+              class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800
+              hover:bg-magnum-100 focus:z-10
+              focus:text-magnum-700
+              data-[highlighted]:bg-magnum-200 data-[highlighted]:text-magnum-900
+              data-[disabled]:opacity-50"
+              use:melt={$option({ value: release, label: release })}
+              on:click={() => updateInstallInstructions(release)}
+            >
+              <div class="check {$isSelected(release) ? 'block' : 'hidden'}">
+                <!-- <Check class="size-4" /> -->
+              </div>
+
+                {release}
+            </div>
+      {/each}
+    </div>
+  {/if}
+</div>
+
+                <span class="font-bold">Install in new env:</span><br>
+                Note: Name can be changed to whatever you choose<br>
+                <span class="code">conda env create --name {env_name} --file {env_filepath}</span><br>
+                <div class="mt-2">
+                    <span class="font-bold">Install in exiting env:</span><br>
+                    <p class="code w-fit">
+                        conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br>conda update --file &lt;path-to-env-file&gt;
+                    </p>
+                </div>
             </div>
         </div>
         <!-- I prefer the width setting it to small makes the div, but now it's too small. For some reason just prose makes it too narrow -->
