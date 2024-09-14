@@ -11,7 +11,6 @@
 
     let env_name: string = '<env-name>';
     let env_filepath: string = '<path-to-env-file>';
-    // https://raw.githubusercontent.com/Oddant1/qiime2/refs/heads/test/.qiime2/library/environments/qiime2-qiime2-amplicon-2023.11.yml
 
     const {
         elements: { trigger, menu, option, group, groupLabel, label },
@@ -41,14 +40,7 @@
     function updateInstallInstructions(release: string) {
       console.log(release)
       env_name = `qiime2-${release}`;
-      env_filepath = `https://raw.githubusercontent.com/${repo_info['Repo Owner']}/${repo_info['Repo Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Repo Name']}-${release}.yml
-`
-    // https://raw.githubusercontent.com/Oddant1/qiime2/refs/heads/test/.qiime2/library/environments/qiime2-qiime2-amplicon-2023.11.yml
-
-      // install_instruction_info.set({
-      //   env_name: release,
-      //   env_filepath: env_filepath
-      // });
+      env_filepath = `https://raw.githubusercontent.com/${repo_info['Repo Owner']}/${repo_info['Repo Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Repo Name']}-${release}.yml`
     }
 </script>
 
@@ -120,11 +112,13 @@
 
                 <span class="font-bold">Install in new env:</span><br>
                 Note: Name can be changed to whatever you choose<br>
-                <span class="code">conda env create --name {env_name} --file {env_filepath}</span><br>
+                <p class="code">
+                  conda env create --name {env_name} --file {env_filepath}
+                </p >
                 <div class="mt-2">
                     <span class="font-bold">Install in exiting env:</span><br>
-                    <p class="code w-fit">
-                        conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br>conda update --file &lt;path-to-env-file&gt;
+                    <p class="code">
+                        conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br>conda update --file {env_filepath}
                     </p>
                 </div>
             </div>
