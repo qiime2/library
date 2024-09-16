@@ -35,4 +35,9 @@
         mt-auto
         pl-2;
     }
+
+    #searchInput:hover {
+        @apply bg-gray-300
+        border-gray-400;
+    }
 </style>
