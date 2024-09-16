@@ -256,11 +256,11 @@ function sortReleases(a, b) {
   const A = a.split("-");
   const B = b.split("-");
 
-  const distroA = A[0];
-  const epochA = A[1];
+  const distroA = A[1];
+  const epochA = A[2];
 
-  const distroB = B[0];
-  const epochB = B[1];
+  const distroB = B[1];
+  const epochB = B[2];
 
   if (distroA > distroB) {
     return 1;
