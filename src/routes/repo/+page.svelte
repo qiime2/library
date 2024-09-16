@@ -5,8 +5,6 @@
     import { fade } from 'svelte/transition';
     import { spaceSeperatedList } from "$lib/scripts/util";
     import SvelteMarkdown from "svelte-markdown";
-    import { CONDA_DEFAULT_ENV } from "$env/static/private";
-    import { removeHighlight, removeHighlight } from "@melt-ui/svelte/internal/helpers";
 
     let repo_info = {};
     let releases: Array<string> = [];
