@@ -193,7 +193,7 @@ for (const repo of repos) {
 
     const distro = split[split.length - 2];
     const epoch = split[split.length - 1];
-    const release = `qiime2-${distro}-${epoch}`;
+    const release = `${distro}-${epoch}`;
 
     distros.add(distro);
     epochs.add(epoch);
@@ -260,11 +260,11 @@ function sortReleases(a, b) {
   const A = a.split("-");
   const B = b.split("-");
 
-  const distroA = A[1];
-  const epochA = A[2];
+  const distroA = A[0];
+  const epochA = A[1];
 
-  const distroB = B[1];
-  const epochB = B[2];
+  const distroB = B[0];
+  const epochB = B[1];
 
   const byEpoch = sortEpochs(epochA, epochB);
 
