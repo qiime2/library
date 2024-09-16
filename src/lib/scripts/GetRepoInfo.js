@@ -58,9 +58,7 @@ for (const repo of repos) {
   const repo_name = repo["name"];
   const branch = repo["branch"];
 
-  let repo_info = {
-    "non_conda_install": repo["non_conda_install"]
-  };
+  let repo_info = {};
 
   let repo_overview = {
     "Repo Owner": owner,
@@ -147,6 +145,7 @@ for (const repo of repos) {
 
   repo_overview["Short Description"] = info_yaml["short_description"];
   repo_overview["User Docs"] = info_yaml["user_docs_link"];
+  repo_info["non_conda_install"] = repo["non_conda_install"]
 
   const long_description_path = info_yaml["long_description_path"];
 
