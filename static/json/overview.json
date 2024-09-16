@@ -9,9 +9,7 @@
       "Stars": 0,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
-      "Releases": ["amplicon-2024.10"],
-      "Distros": ["amplicon"],
-      "Epochs": ["2024.10"]
+      "Releases": ["amplicon-2024.10"]
     },
     "q2-types": {
       "Repo Owner": "Oddant1",
@@ -22,9 +20,7 @@
       "Stars": 0,
       "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "User Docs": "https://docs.qiime2.org/",
-      "Releases": ["amplicon-2024.10", "metagenome-2024.10", "amplicon-2024.5"],
-      "Distros": ["amplicon", "metagenome"],
-      "Epochs": ["2024.10", "2024.5"]
+      "Releases": ["amplicon-2024.10", "metagenome-2024.10", "amplicon-2024.5"]
     },
     "q2cli": {
       "Repo Owner": "Oddant1",
@@ -40,9 +36,7 @@
         "metagenome-2024.10",
         "amplicon-2024.5",
         "tiny-2024.2"
-      ],
-      "Distros": ["amplicon", "metagenome", "tiny"],
-      "Epochs": ["2024.10", "2024.5", "2024.2"]
+      ]
     },
     "qiime2": {
       "Repo Owner": "Oddant1",
@@ -61,12 +55,18 @@
         "tiny-2024.5",
         "amplicon-2024.2",
         "amplicon-2023.11"
-      ],
-      "Distros": ["amplicon", "metagenome", "something", "tiny"],
-      "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
+      ]
     }
   },
-  "Date Fetched": "2024-09-16T19:30:49.613Z",
-  "Distros": ["amplicon", "metagenome", "something", "tiny"],
-  "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
+  "Date Fetched": "2024-09-16T19:43:33.038Z",
+  "Releases": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "amplicon-2024.5",
+    "something-2024.5",
+    "tiny-2024.5",
+    "amplicon-2024.2",
+    "tiny-2024.2",
+    "amplicon-2023.11"
+  ]
 }

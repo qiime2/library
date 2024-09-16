@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Mon, 16 Sep 2024 19:30:49 GMT",
-      "etag": "W/\"27aa30af969aeb2588eda9065bfa83bd38cc7a40c69fac2ad0e7b4982dad585d\"",
+      "date": "Mon, 16 Sep 2024 19:43:32 GMT",
+      "etag": "W/\"a56947616f1fcb5ebfc1beb483d3d14a13c8d77790b737b620edf96e60e71446\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "7A40:32E8D6:FC8BAE:1E519D6:66E88769",
+      "x-github-request-id": "DC40:232FC3:BD36A6:BE55EC:66E88A64",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4911",
+      "x-ratelimit-remaining": "4880",
       "x-ratelimit-reset": "1726518091",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "89",
+      "x-ratelimit-used": "120",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -49,7 +49,5 @@
     "tiny-2024.5",
     "amplicon-2024.2",
     "amplicon-2023.11"
-  ],
-  "Distros": ["amplicon", "metagenome", "something", "tiny"],
-  "Epochs": ["2024.10", "2024.5", "2024.2", "2023.11"]
+  ]
 }
