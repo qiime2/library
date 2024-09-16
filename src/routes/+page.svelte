@@ -144,7 +144,7 @@
                     Compatible Releases:
                 </span>
                 <br/>
-                <div class="grid grid-col-1">
+                <div id="filterButtons">
                     {#each releases as release}
                         <FilterButton this_filter={release}/>
                     {/each}
@@ -236,6 +236,13 @@
         margin-top: 70px;
         @apply max-w-screen-2xl
         mx-auto;
+    }
+
+    #filterButtons {
+        @apply grid
+        grid-cols-1
+        h-full
+        overflow-y-auto;
     }
 
     #date {
