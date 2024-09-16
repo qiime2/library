@@ -86,7 +86,7 @@ for (const repo of repos) {
     {
       owner: owner,
       repo: repo_name,
-      ref: `${sha}`,
+      head_sha: `${sha}`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
