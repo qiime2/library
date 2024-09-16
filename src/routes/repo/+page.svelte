@@ -119,6 +119,7 @@
                         </div>
                     {/if}
                 </div>
+                <!-- TODO: Make these overflow and scroll -->
                 <span class="font-bold">Install in new env:</span><br>
                     Note: Name can be changed to whatever you choose<br>
                 <p class="code">
