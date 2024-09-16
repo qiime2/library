@@ -9,7 +9,7 @@
     let repo_info = {};
     let releases: Array<string> = [];
 
-    let env_name: string = '<env-name>';
+    let env_name: string = '<env-nameaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa>';
     let env_filepath: string = '<path-to-env-file>';
 
     const {
@@ -68,58 +68,71 @@
                 </p>
             </div>
             <div class="info-content">
-
-<!-- TODO: Clean up this whole block here -->
-<div class="flex flex-col gap-1">
-  <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-  <label class="block text-magnum-900" use:melt={$label}>Desired Release</label>
-  <button
-    class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
-  text-magnum-700 shadow transition-opacity hover:opacity-90"
-    use:melt={$trigger}
-    aria-label="Releases"
-  >
-    {$selectedLabel || 'Select a release'}
-    <!-- <ChevronDown class="size-5" /> -->
-  </button>
-  {#if $open}
-    <div
-      class=" z-10 flex max-h-[300px] flex-col
-    overflow-y-auto rounded-lg bg-white p-1
-    shadow focus:!ring-0"
-      use:melt={$menu}
-      transition:fade={{ duration: 150 }}
-    >
-      {#each releases as release}
-             <div
-              class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800
-              hover:bg-magnum-100 focus:z-10
-              focus:text-magnum-700
-              data-[highlighted]:bg-magnum-200 data-[highlighted]:text-magnum-900
-              data-[disabled]:opacity-50"
-              use:melt={$option({ value: release, label: release })}
-              on:click={() => updateInstallInstructions(release)}
-            >
-              <div class="check {$isSelected(release) ? 'block' : 'hidden'}">
-                <!-- <Check class="size-4" /> -->
-              </div>
-
-                {release}
-            </div>
-      {/each}
-    </div>
-  {/if}
-</div>
-
+                <!-- TODO: Clean up this whole block here -->
+                <div class="flex flex-col gap-1">
+                    <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
+                    <label class="block text-magnum-900" use:melt={$label}>Desired Release</label>
+                    <button
+                        class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
+                    text-magnum-700 shadow transition-opacity hover:opacity-90"
+                        use:melt={$trigger}
+                        aria-label="Releases"
+                    >
+                        {$selectedLabel || 'Select a release'}
+                        <svg fill="none"
+                            width="10"
+                            height="10">
+                            <path
+                                stroke-width="3"
+                                stroke="rgb(119, 119, 119)"
+                                d="M0 3L5 8a0,2 0 0 1 1,1M5 8L10 3"
+                            />
+                        </svg>
+                    </button>
+                    {#if $open}
+                        <div
+                        class=" z-10 flex max-h-[300px] flex-col
+                        overflow-y-auto rounded-lg bg-white p-1
+                        shadow focus:!ring-0"
+                        use:melt={$menu}
+                        transition:fade={{ duration: 150 }}
+                        >
+                            {#each releases as release}
+                                <div
+                                class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800
+                                hover:bg-magnum-100 focus:z-10
+                                focus:text-magnum-700
+                                data-[highlighted]:bg-magnum-200 data-[highlighted]:text-magnum-900
+                                data-[disabled]:opacity-50"
+                                use:melt={$option({ value: release, label: release })}
+                                on:click={() => updateInstallInstructions(release)}
+                                >
+                                    <div class="check inline-block {$isSelected(release) ? 'opacity-100' : 'opacity-0'}">
+                                        <svg fill="none"
+                                            width="10"
+                                            height="10">
+                                            <path
+                                                stroke-width="2"
+                                                stroke="rgb(119, 119, 119)"
+                                                d="M0 4L5 8M4 8L10 0"
+                                            />
+                                        </svg>
+                                    </div>
+                                    {release}
+                                </div>
+                            {/each}
+                        </div>
+                    {/if}
+                </div>
                 <span class="font-bold">Install in new env:</span><br>
-                Note: Name can be changed to whatever you choose<br>
+                    Note: Name can be changed to whatever you choose<br>
                 <p class="code">
-                  conda env create --name {env_name} --file {env_filepath}
+                    conda env create --name {env_name} --file {env_filepath}
                 </p >
                 <div class="mt-2">
                     <span class="font-bold">Install in exiting env:</span><br>
-                    <p class="code">
-                        conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br>conda update --file {env_filepath}
+                    <p class="code overflow-x-scroll w-auto">
+                        conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
                     </p>
                 </div>
             </div>
@@ -156,6 +169,7 @@
         @apply bg-gray-200
         px-2
         rounded
+        overflow-x-auto;
     }
 
     h1 {
