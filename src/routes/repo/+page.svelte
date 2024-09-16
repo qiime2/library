@@ -66,15 +66,18 @@
                     {spaceSeperatedList(repo_info["Releases"])}
                 </p>
             </div>
-            {#if repo_info["non_conda_install"]}
-                <p>
-                    This plugin cannot be installed via conda, please see the install instructions in the README to the right.
-                </p>
-            {:else}
-                <div class="info-content">
+            <div class="info-content">
+                <div class="mb-4">
+                    <span class="font-bold text-lg">Install Instructions</span>
+                </div>
+                {#if repo_info["non_conda_install"]}
+                    <p>
+                        This plugin cannot be installed via conda, please see the install instructions in the README to the right.
+                    </p>
+                {:else}
                     <div class="flex flex-col gap-1">
                         <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-                        <label class="block" use:melt={$label}>Desired Release</label>
+                        <label class="block font-bold" use:melt={$label}>Desired Release</label>
                         <button
                             class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
                             shadow transition-opacity hover:opacity-90"
@@ -125,19 +128,19 @@
                         {/if}
                     </div>
                     <!-- TODO: Make these overflow and scroll -->
-                    <span class="font-bold">Install in new env:</span><br>
-                        Note: Name can be changed to whatever you choose<br>
-                    <p class="code">
-                        conda env create --name {env_name} --file {env_filepath}
-                    </p >
-                    <div class="mt-2">
-                        <span class="font-bold">Install in exiting env:</span><br>
-                        <p class="code overflow-x-scroll w-auto">
-                            conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
-                        </p>
+                    <div class="my-4">
+                        <span class="font-bold">Install in new env:</span><br>
+                            Note: Name can be changed to whatever you choose<br>
+                        <p class="code">
+                            conda env create --name {env_name} --file {env_filepath}
+                        </p >
                     </div>
-                </div>
-            {/if}
+                    <span class="font-bold">Install in exiting env:</span><br>
+                    <p class="code overflow-x-scroll w-auto">
+                        conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
+                    </p>
+                {/if}
+            </div>
         </div>
         <!-- I prefer the width setting it to small makes the div, but now it's too small. For some reason just prose makes it too narrow -->
         <div class="prose-base">
