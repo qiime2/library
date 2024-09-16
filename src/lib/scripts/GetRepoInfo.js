@@ -250,8 +250,6 @@ function sortEpochs(a, b) {
   } else {
     return 1;
   }
-
-  return 0;
 }
 
 function sortReleases(a, b) {
