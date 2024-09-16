@@ -1,7 +1,7 @@
 {
   "Commit Runs": {
     "status": 200,
-    "url": "https://api.github.com/repos/Oddant1/q2cli/commits/70b9da8b85e31939743dc731eb921f1ffc771d02/check-runs?owner=Oddant1&repo=q2cli&ref=70b9da8b85e31939743dc731eb921f1ffc771d02",
+    "url": "https://api.github.com/repos/Oddant1/q2cli/commits/bcb258170d66d84ca6b9e2fb425c7c6ee55771ad/check-runs?owner=Oddant1&repo=q2cli&ref=bcb258170d66d84ca6b9e2fb425c7c6ee55771ad",
     "headers": {
       "access-control-allow-origin": "*",
       "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset",
@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Mon, 16 Sep 2024 18:52:30 GMT",
-      "etag": "W/\"87d918e5d14379dc8453225f9c6b9e55992301b60e3255ab31b9637d19841f7c\"",
+      "date": "Mon, 16 Sep 2024 19:21:46 GMT",
+      "etag": "W/\"9925044b0693d852a8b76beab6585f2ac799964af90028567699006c3317e9ed\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "BC00:232FC3:81B8C7:827A3C:66E87E6D",
+      "x-github-request-id": "8000:28F7FB:A14EE7:13623F9:66E88549",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4824",
-      "x-ratelimit-reset": "1726512948",
+      "x-ratelimit-remaining": "4979",
+      "x-ratelimit-reset": "1726518091",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "176",
+      "x-ratelimit-used": "21",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -37,7 +37,7 @@
   "Repo Name": "q2cli",
   "Branch": "test",
   "Build Status": "passed",
-  "Commit Date": "2022-12-10T16:19:10Z",
+  "Commit Date": "2024-09-16T18:12:08Z",
   "Stars": 0,
   "Short Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "User Docs": "https://docs.qiime2.org/",
