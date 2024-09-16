@@ -72,7 +72,7 @@ for (const repo of repos) {
     {
       owner: owner,
       repo: repo_name,
-      ref: branch,
+      sha: branch,
       per_page: 1,
       headers: {
         "X-Github-Api-Version": "2022-11-28",
