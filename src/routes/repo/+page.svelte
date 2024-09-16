@@ -38,7 +38,6 @@
     }
 
     function updateInstallInstructions(release: string) {
-      console.log(release)
       env_name = `${release}`;
       env_filepath = `https://raw.githubusercontent.com/${repo_info['Repo Owner']}/${repo_info['Repo Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Repo Name']}-${release}.yml`
     }
