@@ -48,7 +48,7 @@
     }
 </script>
 
-<button class="filterButton" class:active={selected} on:click={() => addFilter()}>{this_filter}</button>
+<button type="button" class="filterButton" class:active={selected} on:click={() => addFilter()}>{this_filter}</button>
 
 <style lang="postcss">
     .filterButton {
@@ -58,7 +58,9 @@
         border
         border-gray-300
         border-solid
-        rounded;
+        rounded
+        text-left
+        pl-4;
     }
 
     .active {

@@ -144,9 +144,11 @@
                     Compatible Releases:
                 </span>
                 <br/>
-                {#each releases as release}
-                    <FilterButton this_filter={release}/>
-                {/each}
+                <div class="grid grid-col-1">
+                    {#each releases as release}
+                        <FilterButton this_filter={release}/>
+                    {/each}
+                </div>
             </div>
             <div>
                 {#key [cards_per_page, filtered_overviews, current_page]}
@@ -156,8 +158,9 @@
                 {/key}
             </div>
         </div>
-        <div id="bottomBar">
-            <div style="margin-right: auto">
+        <div id="pageControls">
+            <div></div>
+            <div class="mx-auto">
                 <button
                         on:click={() => {
                             if (current_page > 1) {
@@ -192,23 +195,27 @@
                     </svg>
                 </button>
             </div>
-            <span class="font-bold">Per Page:&nbsp;</span>
-            <input
-                id="setCardsPerPage"
-                type="number"
-                value={cards_per_page}
-                min="1"
-                on:change={handleChange}
-            />
+            <div class="ml-auto">
+                <span class="font-bold">Per Page:&nbsp;</span>
+                <input
+                    id="setCardsPerPage"
+                    type="number"
+                    value={cards_per_page}
+                    min="1"
+                    on:change={handleChange}
+                />
+            </div>
         </div>
-        <p id="date">
-            <span class="font-bold">Date Updated: </span>
-            {#if date_fetched !== ""}
-                {formatDate(date_fetched)}
-            {:else}
-                error
-            {/if}
-        </p>
+        <div id="bottomBar">
+            <p id="date">
+                <span class="font-bold">Date Updated: </span>
+                {#if date_fetched !== ""}
+                    {formatDate(date_fetched)}
+                {:else}
+                    error
+                {/if}
+            </p>
+        </div>
     {/await}
 </div>
 
@@ -243,11 +250,16 @@
         mb-4;
     }
 
+    #pageControls {
+        @apply grid
+        grid-cols-3
+        pt-4;
+    }
+
     #bottomBar {
-        display: flex;
         border-top: 2px solid;
         @apply border-gray-400
-        pt-4
+        py-4
         mt-4;
     }
 

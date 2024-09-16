@@ -38,7 +38,7 @@
     }
 
     function updateInstallInstructions(release: string) {
-      env_name = `${release}`;
+      env_name = `qiime2-${release}`;
       env_filepath = `https://raw.githubusercontent.com/${repo_info['Repo Owner']}/${repo_info['Repo Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Repo Name']}-qiime2-${release}.yml`
     }
 </script>
@@ -131,14 +131,14 @@
                     <div class="my-4">
                         <span class="font-bold">Install in new env:</span><br>
                             Note: Name can be changed to whatever you choose<br>
-                        <p class="code">
+                        <code class="code">
                             conda env create --name {env_name} --file {env_filepath}
-                        </p >
+                        </code>
                     </div>
                     <span class="font-bold">Install in exiting env:</span><br>
-                    <p class="code overflow-x-scroll w-auto">
+                    <code class="code">
                         conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
-                    </p>
+                    </code>
                 {/if}
             </div>
         </div>
@@ -171,9 +171,12 @@
     }
 
     .code {
-        @apply bg-gray-200
-        px-2
-        rounded;
+        @apply block
+        bg-gray-200
+        p-3
+        rounded
+        overflow-x-auto
+        whitespace-pre;
     }
 
     h1 {
