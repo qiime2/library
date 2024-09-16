@@ -63,8 +63,12 @@
         pl-4;
     }
 
+    .filterButton:hover {
+        @apply bg-gray-300
+        border-gray-400;
+    }
+
     .active {
-        @apply bg-gray-500
-        text-white;
+        @apply bg-gray-200;
     }
 </style>
