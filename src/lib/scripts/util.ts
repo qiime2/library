@@ -37,15 +37,9 @@ export function applyFilters() {
     ),
   );
 
-  for (const distro of overview_store.filter_distros) {
+  for (const release of overview_store.filter_releases) {
     filtered_overviews = filtered_overviews.filter((e) =>
-      e["Distros"].includes(distro),
-    );
-  }
-
-  for (const epoch of overview_store.filter_epochs) {
-    filtered_overviews = filtered_overviews.filter((e) =>
-      e["Epochs"].includes(epoch),
+      e["Releases"].includes(release),
     );
   }
 

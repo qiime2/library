@@ -44,8 +44,7 @@ const overview = {
   Repos: {},
 };
 
-let global_distros = new Set();
-let global_epochs = new Set();
+let global_releases= new Set();
 
 // Make sure we start from a clean slate
 if (fs.existsSync(root_path)) {
@@ -182,8 +181,6 @@ for (const repo of repos) {
     },
   );
 
-  const distros = new Set();
-  const epochs = new Set();
   repo_overview["Releases"] = [];
 
   for (const env of envs["data"]) {
@@ -195,19 +192,10 @@ for (const repo of repos) {
     const epoch = split[split.length - 1];
     const release = `${distro}-${epoch}`;
 
-    distros.add(distro);
-    epochs.add(epoch);
     repo_overview["Releases"].push(release);
-
-    global_distros.add(distro);
-    global_epochs.add(epoch);
+    global_releases.add(release);
   }
 
-  repo_overview["Distros"] = Array.from(distros);
-  repo_overview["Epochs"] = Array.from(epochs);
-
-  repo_overview["Distros"].sort();
-  repo_overview["Epochs"].sort(sortEpochs);
   repo_overview["Releases"].sort(sortReleases);
 
   repo_info = { ...repo_info, ...repo_overview };
@@ -225,11 +213,31 @@ for (const repo of repos) {
 
 overview["Date Fetched"] = new Date();
 
-global_distros = Array.from(global_distros);
-global_epochs = Array.from(global_epochs);
+global_releases = Array.from(global_releases);
+global_releases.sort(sortReleases);
 
-global_distros.sort();
-global_epochs.sort(sortEpochs);
+function sortReleases(a, b) {
+  const A = a.split("-");
+  const B = b.split("-");
+
+  const distroA = A[0];
+  const epochA = A[1];
+
+  const distroB = B[0];
+  const epochB = B[1];
+
+  const byEpoch = sortEpochs(epochA, epochB);
+
+  if (byEpoch === 0) {
+    if (distroA > distroB) {
+      return 1;
+    } else if (distroA < distroB) {
+      return -1;
+    }
+  }
+
+  return byEpoch;
+}
 
 function sortEpochs(a, b) {
   const A = a.split(".");
@@ -256,30 +264,6 @@ function sortEpochs(a, b) {
   return 0;
 }
 
-function sortReleases(a, b) {
-  const A = a.split("-");
-  const B = b.split("-");
-
-  const distroA = A[0];
-  const epochA = A[1];
-
-  const distroB = B[0];
-  const epochB = B[1];
-
-  const byEpoch = sortEpochs(epochA, epochB);
-
-  if (byEpoch === 0) {
-    if (distroA > distroB) {
-      return 1;
-    } else if (distroA < distroB) {
-      return -1;
-    }
-  }
-
-  return byEpoch;
-}
-
-overview["Distros"] = global_distros;
-overview["Epochs"] = global_epochs;
+overview["Releases"] = global_releases;
 
 fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));

@@ -16,20 +16,16 @@
     let search_filter: string;
     let filtered_overviews: Array<Object>;
     let date_fetched: string;
-    let distros: Array<string> = [];
-    let epochs: Array<string> = [];
-    let filter_distros: Array<string> = [];
-    let filter_epochs: Array<string> = [];
+    let releases: Array<string> = [];
+    let filter_releases: Array<string> = [];
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
         search_filter = value.search_filter;
         filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
-        distros = value.distros,
-        epochs = value.epochs,
-        filter_distros = value.filter_distros,
-        filter_epochs = value.filter_epochs
+        releases = value.releases,
+        filter_releases = value.filter_releases
     });
 
     let cards_per_page: number;
@@ -73,8 +69,7 @@
         }
 
         date_fetched = json["Date Fetched"];
-        distros = json["Distros"];
-        epochs = json["Epochs"];
+        releases = json["Releases"];
 
         repo_overviews = sortOverviews(repo_overviews, sort_col, sort_descending);
         overview.set({
@@ -82,10 +77,8 @@
             search_filter: "",
             filtered_overviews: repo_overviews,
             date_fetched: date_fetched,
-            distros: distros,
-            epochs: epochs,
-            filter_distros: filter_distros,
-            filter_epochs: filter_epochs
+            releases: releases,
+            filter_releases: filter_releases
         });
 
         num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
@@ -148,19 +141,11 @@
         <div id="gridContainer">
             <div class="h-fit">
                 <span class="font-bold">
-                    Compatible Distributions:
+                    Compatible Releases:
                 </span>
                 <br/>
-                {#each distros as distro}
-                    <FilterButton this_filter={distro} filter_type="Distro"/>
-                {/each}
-                <br/>
-                <span class="font-bold">
-                    Compatible QIIME 2 Epochs:
-                </span>
-                <br/>
-                {#each epochs as epoch}
-                    <FilterButton this_filter={epoch} filter_type="Epoch" />
+                {#each releases as release}
+                    <FilterButton this_filter={release}/>
                 {/each}
             </div>
             <div>
