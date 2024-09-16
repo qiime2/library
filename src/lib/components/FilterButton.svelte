@@ -18,8 +18,7 @@
         search_filter = value.search_filter;
         filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
-        releases = value.releases,
-        filter_releases = value.filter_releases
+        (releases = value.releases), (filter_releases = value.filter_releases);
     });
 
     let selected = filter_releases.includes(this_filter);
@@ -27,12 +26,12 @@
     function addFilter() {
         let filter_list = filter_releases;
 
-        selected = !selected
+        selected = !selected;
 
         if (selected) {
-            filter_list.push(this_filter)
+            filter_list.push(this_filter);
         } else {
-            filter_list = filter_list.filter(e => e !== this_filter)
+            filter_list = filter_list.filter((e) => e !== this_filter);
         }
 
         overview.set({
@@ -48,7 +47,12 @@
     }
 </script>
 
-<button type="button" class="filterButton" class:active={selected} on:click={() => addFilter()}>{this_filter}</button>
+<button
+    type="button"
+    class="filterButton"
+    class:active={selected}
+    on:click={() => addFilter()}>{this_filter}</button
+>
 
 <style lang="postcss">
     .filterButton {
@@ -61,11 +65,6 @@
         rounded
         text-left
         pl-4;
-    }
-
-    .filterButton:hover {
-        @apply bg-gray-300
-        border-gray-400;
     }
 
     .active {
