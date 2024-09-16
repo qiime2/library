@@ -68,13 +68,12 @@
                 </p>
             </div>
             <div class="info-content">
-                <!-- TODO: Clean up this whole block here -->
                 <div class="flex flex-col gap-1">
                     <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-                    <label class="block text-magnum-900" use:melt={$label}>Desired Release</label>
+                    <label class="block" use:melt={$label}>Desired Release</label>
                     <button
                         class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
-                    text-magnum-700 shadow transition-opacity hover:opacity-90"
+                        shadow transition-opacity hover:opacity-90"
                         use:melt={$trigger}
                         aria-label="Releases"
                     >
@@ -99,10 +98,7 @@
                         >
                             {#each releases as release}
                                 <div
-                                class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800
-                                hover:bg-magnum-100 focus:z-10
-                                focus:text-magnum-700
-                                data-[highlighted]:bg-magnum-200 data-[highlighted]:text-magnum-900
+                                class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800 focus:z-10
                                 data-[disabled]:opacity-50"
                                 use:melt={$option({ value: release, label: release })}
                                 on:click={() => updateInstallInstructions(release)}
@@ -168,8 +164,7 @@
     .code {
         @apply bg-gray-200
         px-2
-        rounded
-        overflow-x-auto;
+        rounded;
     }
 
     h1 {
