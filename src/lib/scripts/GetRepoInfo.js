@@ -58,7 +58,10 @@ for (const repo of repos) {
   const repo_name = repo["name"];
   const branch = repo["branch"];
 
-  let repo_info = {};
+  let repo_info = {
+    "non_conda_install": repo["non_conda_install"]
+  };
+
   let repo_overview = {
     "Repo Owner": owner,
     "Repo Name": repo_name,
