@@ -136,7 +136,7 @@
                 </code>
                 {#if repo_info["additional_install_steps"]}
                     <p>
-                        This plugin requires additional steps to complete installations, please consult the readme to the right.
+                        This plugin requires additional steps to complete installation, please consult the readme to the right.
                     </p>
                 {/if}
             </div>
