@@ -135,7 +135,7 @@
                             conda env create --name {env_name} --file {env_filepath}
                         </code>
                     </div>
-                    <span class="font-bold">Install in exiting env:</span><br>
+                    <span class="font-bold">Install in existing env:</span><br>
                     <code class="code">
                         conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
                     </code>
