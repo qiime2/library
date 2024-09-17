@@ -2,10 +2,8 @@
     export let list: Array<string>;
     export let collapseNumber: number;
 
-    let isCollapsed: Boolean = true;
-
     function displayList(): Array<string> {
-        if (isCollapsed && list.length > collapseNumber + 1) {
+        if (list.length > collapseNumber + 1) {
             return list.slice(0, collapseNumber);
         }
 
@@ -13,18 +11,12 @@
     }
 </script>
 
-{#key isCollapsed}
-    {#each displayList() as element}
-        &nbsp;{element},
-    {/each}
-    {#if !(isCollapsed && list.length > collapseNumber + 1)}
-        {list.slice(-1)}
-    {/if}
-    {#if list.length > collapseNumber + 1}
-        {#if isCollapsed}
-            <span on:click={() => (isCollapsed = !isCollapsed)}>...</span>
-        {:else}
-            <span on:click={() => (isCollapsed = !isCollapsed)}>&lt;-</span>
-        {/if}
-    {/if}
-{/key}
+{#each displayList() as element}
+    &nbsp;{element},
+{/each}
+{#if list.length <= collapseNumber}
+    {list.slice(-1)}
+{/if}
+{#if list.length > collapseNumber}
+    ...
+{/if}
