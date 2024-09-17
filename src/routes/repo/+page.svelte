@@ -70,7 +70,7 @@
                 <div class="mb-4">
                     <span class="font-bold text-lg">Install Instructions</span>
                 </div>
-                {#if repo_info["non_conda_install"]}
+                {#if !repo_info["conda_install"]}
                     <p>
                         This plugin cannot be installed via conda, please see the install instructions in the README to the right.
                     </p>
