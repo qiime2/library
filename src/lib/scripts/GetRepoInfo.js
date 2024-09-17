@@ -44,7 +44,7 @@ const overview = {
   Repos: {},
 };
 
-let global_releases= new Set();
+let global_releases = new Set();
 
 // Make sure we start from a clean slate
 if (fs.existsSync(root_path)) {
