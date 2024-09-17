@@ -144,7 +144,7 @@ for (const repo of repos) {
 
   repo_overview["Short Description"] = info_yaml["short_description"];
   repo_overview["User Docs"] = info_yaml["user_docs_link"];
-  repo_info["conda_install"] = info_yaml["conda_install"];
+  repo_info["additional_install_steps"] = info_yaml["additional_install_steps"];
 
   const long_description_path = info_yaml["long_description_path"];
 
