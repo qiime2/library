@@ -67,12 +67,14 @@
                 </p>
             </div>
             <div class="info-content">
-                <div class="mb-4">
-                    <span class="font-bold text-lg">Install Instructions</span>
-                </div>
+                <!-- <div class="mb-4"> -->
+                <h1 class="font-bold mb-4">
+                    Install Instructions
+                </h1>
+                <!-- </div> -->
                 <div class="flex flex-col gap-1">
                     <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-                    <label class="block font-bold" use:melt={$label}>Desired Release</label>
+                    <h2 class="block font-bold" use:melt={$label}>Desired Release</h2>
                     <button
                         class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
                         shadow transition-opacity hover:opacity-90"
@@ -123,20 +125,24 @@
                         </div>
                     {/if}
                 </div>
-                <div class="my-4">
-                    <span class="font-bold">Install in new env:</span><br>
-                        Note: Name can be changed to whatever you choose<br>
-                    <code class="code">
-                        conda env create --name {env_name} --file {env_filepath}
-                    </code>
-                </div>
-                <span class="font-bold">Install in existing env:</span><br>
+                <h2 class="font-bold my-4">
+                    Install in new env:
+                </h2>
+                <p>
+                    <span class="font-bold">Note: </span>Name can be changed to whatever you choose
+                </p>
+                <code class="code">
+                    conda env create --name {env_name} --file {env_filepath}
+                </code>
+                <h2 class="font-bold my-4">
+                    Install in existing env:
+                </h2>
                 <code class="code">
                     conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
                 </code>
                 {#if repo_info["additional_install_steps"]}
-                    <p>
-                        This plugin requires additional steps to complete installation, please consult the readme to the right.
+                    <p class="mt-4">
+                        <span class="font-bold">Note: </span>This plugin requires additional steps to complete installation, please consult the readme to the right.
                     </p>
                 {/if}
             </div>
