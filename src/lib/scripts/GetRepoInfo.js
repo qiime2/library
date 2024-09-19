@@ -8,11 +8,11 @@ const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
 const repo_list = await octokit.request(
-  "GET /repos/Oddant1/library-repos/contents/repos/",
+  "GET /repos/Oddant1/library-plugins/contents/plugins/",
   {
     owner: "Oddant1",
-    repo: "library-repos",
-    path: "/repos/",
+    repo: "library-plugins",
+    path: "/plugins/",
     headers: {
       "X-GitHub-Api-Version": "2022-11-28",
     },
@@ -25,11 +25,11 @@ for (const repo of repo_list["data"]) {
   const repo_file_name = repo["name"];
 
   const repo_file = await octokit.request(
-    `GET /repos/Oddant1/library-repos/contents/repos/${repo_file_name}`,
+    `GET /repos/Oddant1/library-plugins/contents/plugins/${repo_file_name}`,
     {
       owner: "Oddant1",
-      repo: "library-repos",
-      path: `/repos/${repo_file_name}`,
+      repo: "library-plugins",
+      path: `/plugins/${repo_file_name}`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
