@@ -39,7 +39,7 @@
 
     function updateInstallInstructions(release: string) {
       env_name = `qiime2-${release}`;
-      env_filepath = `https://raw.githubusercontent.com/${repo_info['Repo Owner']}/${repo_info['Repo Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Repo Name']}-qiime2-${release}.yml`
+      env_filepath = `https://raw.githubusercontent.com/${repo_info['Plugin Owner']}/${repo_info['Plugin Name']}/refs/heads/${repo_info['Branch']}/.qiime2/library/environments/${repo_info['Plugin Name']}-qiime2-${release}.yml`
     }
 </script>
 
@@ -49,12 +49,12 @@
     {:then}
         <div id="info">
             <h1 class="info-content">
-                {repo_info["Repo Owner"]}/{repo_info["Repo Name"]}
+                {repo_info["Plugin Owner"]}/{repo_info["Plugin Name"]}
             </h1>
             <p class="info-content">
                 <span class="font-bold">Source: </span>
-                <a href="https://github.com/{repo_info['Repo Owner']}/{repo_info['Repo Name']}/tree/{repo_info['Branch']}">
-                    https://github.com/{repo_info["Repo Owner"]}/{repo_info["Repo Name"]}/tree/{repo_info["Branch"]}
+                <a href="https://github.com/{repo_info['Plugin Owner']}/{repo_info['Plugin Name']}/tree/{repo_info['Branch']}">
+                    https://github.com/{repo_info["Plugin Owner"]}/{repo_info["Plugin Name"]}/tree/{repo_info["Branch"]}
                 </a>
             </p>
             <p class="info-content">

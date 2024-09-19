@@ -19,8 +19,8 @@
     });
 
     const columns = [
-        "Repo Owner",
-        "Repo Name",
+        "Plugin Owner",
+        "Plugin Name",
         "Stars",
         "Commit Date",
         "Build Status",

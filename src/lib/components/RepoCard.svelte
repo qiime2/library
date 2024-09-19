@@ -27,8 +27,8 @@
 
 <div class="repo-card">
     <h1>
-        <a href="repo?owner={repo_overview["Repo Owner"]}&repo_name={repo_overview["Repo Name"]}">
-            {repo_overview["Repo Owner"]}/{repo_overview["Repo Name"]}
+        <a href="repo?owner={repo_overview["Plugin Owner"]}&repo_name={repo_overview["Plugin Name"]}">
+            {repo_overview["Plugin Owner"]}/{repo_overview["Plugin Name"]}
         </a>
     </h1>
     <p class="description">

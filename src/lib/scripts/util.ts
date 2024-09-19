@@ -32,7 +32,7 @@ export function applyFilters() {
   let filtered_overviews = [];
 
   filtered_overviews = overview_store.repo_overviews.filter((e) =>
-    String(e["Repo Name" as keyof Object]).startsWith(
+    String(e["Plugin Name" as keyof Object]).startsWith(
       overview_store.search_filter,
     ),
   );

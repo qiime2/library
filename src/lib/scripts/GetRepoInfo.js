@@ -60,8 +60,8 @@ for (const repo of repos) {
   let repo_info = {};
 
   let repo_overview = {
-    "Repo Owner": owner,
-    "Repo Name": repo_name,
+    "Plugin Owner": owner,
+    "Plugin Name": repo_name,
     Branch: branch,
   };
 
