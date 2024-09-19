@@ -67,11 +67,9 @@
                 </p>
             </div>
             <div class="info-content">
-                <!-- <div class="mb-4"> -->
                 <h1 class="font-bold mb-4">
                     Install Instructions
                 </h1>
-                <!-- </div> -->
                 <div class="flex flex-col gap-1">
                     <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
                     <h2 class="block font-bold" use:melt={$label}>Desired Release</h2>
@@ -140,11 +138,6 @@
                 <code class="code">
                     conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
                 </code>
-                {#if repo_info["additional_install_steps"]}
-                    <p class="mt-4">
-                        <span class="font-bold">Note: </span>This plugin requires additional steps to complete installation, please consult the readme to the right.
-                    </p>
-                {/if}
             </div>
         </div>
         <!-- I prefer the width setting it to small makes the div, but now it's too small. For some reason just prose makes it too narrow -->
