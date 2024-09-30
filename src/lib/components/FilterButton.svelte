@@ -70,4 +70,8 @@
     .active {
         @apply bg-gray-200;
     }
+
+    button:hover {
+        @apply bg-gray-300;
+    }
 </style>
