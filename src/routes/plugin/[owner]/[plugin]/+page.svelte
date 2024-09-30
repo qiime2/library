@@ -1,10 +1,12 @@
 <script lang="ts">
-    import "../../app.css";
+    import "../../../../app.css";
 
     import { createSelect, melt } from '@melt-ui/svelte';
     import { fade } from 'svelte/transition';
     import { spaceSeperatedList } from "$lib/scripts/util";
     import SvelteMarkdown from "svelte-markdown";
+
+    export let data;
 
     let repo_info = {};
     let releases: Array<string> = [];
@@ -26,11 +28,7 @@
     });
 
     async function getRepoInfo() {
-        const url = new URL(window.location.href);
-        const owner = url.searchParams.get("owner");
-        const repo_name = url.searchParams.get("repo_name");
-
-        const response = await fetch(`/json/${owner}/${repo_name}.json`);
+        const response = await fetch(`/json/${data.owner}/${data.plugin}.json`);
         const _repo_info = await response.json();
 
         releases = _repo_info["Releases"];
