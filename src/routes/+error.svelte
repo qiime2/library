@@ -16,6 +16,5 @@
 <style lang="postcss">
     #container {
         margin-top: 70px;
-        @apply mx-auto;
     }
 </style>
