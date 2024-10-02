@@ -5,7 +5,7 @@
 <nav id='navbar'>
   <div id='nav-container'>
     <a href='/'>
-      <img id='navlogo' src='q2library.svg' alt='QIIME 2 library logo' />
+      <img id='navlogo' src='/q2library.svg' alt='QIIME 2 library logo' />
     </a>
 </nav>
 
