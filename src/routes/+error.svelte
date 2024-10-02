@@ -1,3 +1,7 @@
+<script lang="ts">
+    import "../app.css";
+</script>
+
 <div id="container">
     <h1 class='text-4xl ml-10'>
         404
