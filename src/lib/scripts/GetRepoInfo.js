@@ -7,6 +7,9 @@ import yaml from "js-yaml";
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
+// TODO: This is a rough up, finalize it
+const ENV_FILE_REGEX = new RegExp(".*-qiime2-.*-20[0-9][0-9].([1-9]|1[0-2]).yml");
+
 const repo_list = await octokit.request(
   "GET /repos/Oddant1/library-plugins/contents/plugins/",
   {
@@ -175,12 +178,12 @@ for (const repo of repos) {
   // or
   // <epoch>-<plugin>-environment.yml?
   const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/.qiime2/library/environments/`,
+    `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
     {
       owner: owner,
       repo: repo_name,
       ref: branch,
-      path: `/.qiime2/library/environments/`,
+      path: `/environment-files/`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
@@ -190,16 +193,18 @@ for (const repo of repos) {
   repo_overview["Releases"] = [];
 
   for (const env of envs["data"]) {
-    // Strip the extension off the end of the name
-    const name = env["name"].substring(0, env["name"].indexOf(".yml"));
-    const split = name.split("-");
+    if (ENV_FILE_REGEX.test(env["name"])) {
+      // Strip the extension off the end of the name
+      const name = env["name"].substring(0, env["name"].indexOf(".yml"));
+      const split = name.split("-");
 
-    const distro = split[split.length - 2];
-    const epoch = split[split.length - 1];
-    const release = `${distro}-${epoch}`;
+      const distro = split[split.length - 2];
+      const epoch = split[split.length - 1];
+      const release = `${distro}-${epoch}`;
 
-    repo_overview["Releases"].push(release);
-    global_releases.add(release);
+      repo_overview["Releases"].push(release);
+      global_releases.add(release);
+    }
   }
 
   repo_overview["Releases"].sort(sortReleases);
