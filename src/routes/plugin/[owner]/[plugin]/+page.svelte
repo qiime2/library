@@ -44,7 +44,7 @@
             </a>
         </p>
         <p class="info-content">
-            {data.repo_info["Short Description"]}
+            {data.repo_info["Description"]}
         </p>
         <div class="info-content">
             <p class="my-2">

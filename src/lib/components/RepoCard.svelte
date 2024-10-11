@@ -32,7 +32,7 @@
         </a>
     </h1>
     <p class="description">
-        {repo_overview["Short Description"]}
+        {repo_overview["Description"]}
     </p>
     <div class="container2">
         <div>

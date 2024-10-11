@@ -123,6 +123,7 @@ for (const repo of repos) {
   // Pull stars off that
   const stars = repo_data["data"]["stargazers_count"];
   repo_overview["Stars"] = stars;
+  repo_overview["Description"] = repo_data["data"]["description"]
 
   // Get the info about the plugin
   const info = await octokit.request(
@@ -142,7 +143,6 @@ for (const repo of repos) {
 
   const info_yaml = yaml.load(info_contents);
 
-  repo_overview["Short Description"] = repo_data["data"]["description"] // info_yaml["short_description"];
   repo_overview["User Docs"] = info_yaml["user_docs_link"];
 
   const long_description_path = info_yaml["long_description_path"];
