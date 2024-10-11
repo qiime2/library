@@ -123,7 +123,29 @@ for (const repo of repos) {
   // Pull stars off that
   const stars = repo_data["data"]["stargazers_count"];
   repo_overview["Stars"] = stars;
+
+  // Pull repo description
   repo_overview["Description"] = repo_data["data"]["description"]
+
+  // Get the README
+  const readme = await octokit.request(
+    `GET /repos/${owner}/${repo_name}/readme`,
+    {
+      owner: owner,
+      repo: repo_name,
+      ref: branch,
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    },
+  );
+
+  // Convert the README to a normal string
+  const readme_contents = utf8.decode(
+    atob(readme["data"]["content"]),
+  );
+  repo_info["Readme"] = readme_contents;
+
 
   // Get the info about the plugin
   const info = await octokit.request(
@@ -144,28 +166,6 @@ for (const repo of repos) {
   const info_yaml = yaml.load(info_contents);
 
   repo_overview["User Docs"] = info_yaml["user_docs_link"];
-
-  const long_description_path = info_yaml["long_description_path"];
-
-  // Get the info
-  const long_description = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/${long_description_path}`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      path: long_description_path,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-
-  // Convert it back to a normal string
-  const long_description_contents = utf8.decode(
-    atob(long_description["data"]["content"]),
-  );
-  repo_info["Long Description"] = long_description_contents;
 
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/.qiime2/library/environments/`,

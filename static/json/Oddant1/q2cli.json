@@ -31,7 +31,7 @@
     },
     "data": { "total_count": 0, "check_runs": [] }
   },
-  "Long Description": "# q2cli\n\n![](https://github.com/qiime2/q2cli/workflows/ci-dev/badge.svg)\n\nA [click-based](http://click.pocoo.org/) command line interface for [QIIME\n2](https://github.com/qiime2/qiime2).\n\n## Installation and getting help\n\nVisit https://qiime2.org to learn more about q2cli and the QIIME 2 project.\n\n## Enabling tab completion\n\n### Bash\n\nTo enable tab completion in Bash, run the following command or add it to your\n`.bashrc`/`.bash_profile`:\n\n```bash\nsource tab-qiime\n```\n\n### ZSH\n\nTo enable tab completion in ZSH, run the following commands or add them to your\n`.zshrc`:\n\n```bash\nautoload -Uz compinit && compinit && autoload bashcompinit && bashcompinit && source tab-qiime\n```\n",
+  "Readme": "# q2cli\n\n![](https://github.com/qiime2/q2cli/workflows/ci-dev/badge.svg)\n\nA [click-based](http://click.pocoo.org/) command line interface for [QIIME\n2](https://github.com/qiime2/qiime2).\n\n## Installation and getting help\n\nVisit https://qiime2.org to learn more about q2cli and the QIIME 2 project.\n\n## Enabling tab completion\n\n### Bash\n\nTo enable tab completion in Bash, run the following command or add it to your\n`.bashrc`/`.bash_profile`:\n\n```bash\nsource tab-qiime\n```\n\n### ZSH\n\nTo enable tab completion in ZSH, run the following commands or add them to your\n`.zshrc`:\n\n```bash\nautoload -Uz compinit && compinit && autoload bashcompinit && bashcompinit && source tab-qiime\n```\n",
   "Plugin Owner": "Oddant1",
   "Plugin Name": "q2cli",
   "Branch": "test",
