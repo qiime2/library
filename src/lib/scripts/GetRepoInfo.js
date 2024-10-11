@@ -142,7 +142,7 @@ for (const repo of repos) {
 
   const info_yaml = yaml.load(info_contents);
 
-  repo_overview["Short Description"] = info_yaml["short_description"];
+  repo_overview["Short Description"] = repo_data["data"]["description"] // info_yaml["short_description"];
   repo_overview["User Docs"] = info_yaml["user_docs_link"];
 
   const long_description_path = info_yaml["long_description_path"];
