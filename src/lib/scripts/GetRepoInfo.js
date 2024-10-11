@@ -167,6 +167,13 @@ for (const repo of repos) {
 
   repo_overview["User Docs"] = info_yaml["user_docs_link"];
 
+  // TODO: env-files or environment-files?
+  //
+  // Have this regex and only read files that match the pattern. Which pattern?
+  //
+  // <plugin>-qiime2-<distro>-<epoch>.yml
+  // or
+  // <epoch>-<plugin>-environment.yml?
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/.qiime2/library/environments/`,
     {
