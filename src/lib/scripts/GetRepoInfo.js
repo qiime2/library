@@ -8,7 +8,9 @@ const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
 // TODO: This is a rough up, finalize it
-const ENV_FILE_REGEX = new RegExp(".*-qiime2-.*-20[0-9][0-9].([1-9]|1[0-2]).yml");
+const ENV_FILE_REGEX = new RegExp(
+  ".*-qiime2-.*-20[0-9][0-9].([1-9]|1[0-2]).yml",
+);
 
 const repo_list = await octokit.request(
   "GET /repos/Oddant1/library-plugins/contents/plugins/",
@@ -128,7 +130,7 @@ for (const repo of repos) {
   repo_overview["Stars"] = stars;
 
   // Pull repo description
-  repo_overview["Description"] = repo_data["data"]["description"]
+  repo_overview["Description"] = repo_data["data"]["description"];
 
   // Get the README
   const readme = await octokit.request(
@@ -144,11 +146,8 @@ for (const repo of repos) {
   );
 
   // Convert the README to a normal string
-  const readme_contents = utf8.decode(
-    atob(readme["data"]["content"]),
-  );
+  const readme_contents = utf8.decode(atob(readme["data"]["content"]));
   repo_info["Readme"] = readme_contents;
-
 
   // Get the info about the plugin
   const info = await octokit.request(
