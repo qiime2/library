@@ -8,8 +8,6 @@
 
     export let data;
 
-    let releases: Array<string> = [];
-
     let env_name: string = '<env-name>';
     let env_filepath: string = '<path-to-env-file>';
 
