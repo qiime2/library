@@ -1,7 +1,7 @@
 {
   "Commit Runs": {
     "status": 200,
-    "url": "https://api.github.com/repos/Oddant1/q2cli/commits/bb939b6f47e084f0dbc6a2cfd3968c304f91a7a0/check-runs?owner=Oddant1&repo=q2cli&head_sha=bb939b6f47e084f0dbc6a2cfd3968c304f91a7a0",
+    "url": "https://api.github.com/repos/Oddant1/q2cli/commits/f5af2148969177a6095e243a92fc0c4dd90d5fd9/check-runs?owner=Oddant1&repo=q2cli&head_sha=f5af2148969177a6095e243a92fc0c4dd90d5fd9",
     "headers": {
       "access-control-allow-origin": "*",
       "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset",
@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 11 Oct 2024 22:33:47 GMT",
-      "etag": "W/\"870cb1c63949dd011f8894ae700e56f1b05acb0a34b26537051808a295970ad5\"",
+      "date": "Mon, 21 Oct 2024 23:00:14 GMT",
+      "etag": "W/\"440399cbf65d3f48f9f23a395cba1ffd59f64377409cfe26aefe1f7429dd5b99\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "BF00:344836:14EC2C3:28181A6:6709A7CB",
+      "x-github-request-id": "D440:2094A0:2C12AE6:54D96E2:6716DCFE",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4972",
-      "x-ratelimit-reset": "1728689610",
+      "x-ratelimit-remaining": "4962",
+      "x-ratelimit-reset": "1729555096",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "28",
+      "x-ratelimit-used": "38",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -35,11 +35,11 @@
   "Plugin Owner": "Oddant1",
   "Plugin Name": "q2cli",
   "Branch": "test",
+  "User Docs": "https://docs.qiime2.org",
   "Build Status": "passed",
-  "Commit Date": "2024-10-11T22:04:43Z",
+  "Commit Date": "2024-10-21T22:39:15Z",
   "Stars": 0,
   "Description": "Command line interface for QIIME 2",
-  "User Docs": "https://docs.qiime2.org/",
   "Releases": [
     "amplicon-2024.10",
     "metagenome-2024.10",

@@ -1,7 +1,7 @@
 {
   "Commit Runs": {
     "status": 200,
-    "url": "https://api.github.com/repos/Oddant1/q2-types/commits/c29fc9998113c8d75ebcbca6a20d851329c70c91/check-runs?owner=Oddant1&repo=q2-types&head_sha=c29fc9998113c8d75ebcbca6a20d851329c70c91",
+    "url": "https://api.github.com/repos/Oddant1/q2-types/commits/277e9ce0fc758ddfa0c01a20c75bcb12431303c7/check-runs?owner=Oddant1&repo=q2-types&head_sha=277e9ce0fc758ddfa0c01a20c75bcb12431303c7",
     "headers": {
       "access-control-allow-origin": "*",
       "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset",
@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 11 Oct 2024 22:33:46 GMT",
-      "etag": "W/\"870cb1c63949dd011f8894ae700e56f1b05acb0a34b26537051808a295970ad5\"",
+      "date": "Mon, 21 Oct 2024 23:00:13 GMT",
+      "etag": "W/\"440399cbf65d3f48f9f23a395cba1ffd59f64377409cfe26aefe1f7429dd5b99\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "BF00:344836:14EC04E:2817CE2:6709A7CA",
+      "x-github-request-id": "D440:2094A0:2C128C0:54D92B5:6716DCFD",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4978",
-      "x-ratelimit-reset": "1728689610",
+      "x-ratelimit-remaining": "4967",
+      "x-ratelimit-reset": "1729555096",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "22",
+      "x-ratelimit-used": "33",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -35,10 +35,10 @@
   "Plugin Owner": "Oddant1",
   "Plugin Name": "q2-types",
   "Branch": "test",
+  "User Docs": "https://docs.qiime2.org",
   "Build Status": "passed",
-  "Commit Date": "2024-10-11T22:04:57Z",
+  "Commit Date": "2024-10-21T22:39:28Z",
   "Stars": 0,
   "Description": "Definitions of common QIIME 2 types.",
-  "User Docs": "https://docs.qiime2.org/",
   "Releases": ["amplicon-2024.10", "metagenome-2024.10", "amplicon-2024.5"]
 }
