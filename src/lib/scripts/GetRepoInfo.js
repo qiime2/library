@@ -68,6 +68,7 @@ for (const repo of repos) {
     "Plugin Owner": owner,
     "Plugin Name": repo_name,
     Branch: branch,
+    "User Docs": repo["docs"]
   };
 
   // Get the latest commit
@@ -166,8 +167,6 @@ for (const repo of repos) {
   const info_contents = utf8.decode(atob(info["data"]["content"]));
 
   const info_yaml = yaml.load(info_contents);
-
-  repo_overview["User Docs"] = info_yaml["user_docs_link"];
 
   // TODO: env-files or environment-files?
   //
