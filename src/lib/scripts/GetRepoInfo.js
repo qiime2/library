@@ -98,7 +98,6 @@ for (const repo of repos) {
     },
   );
   repo_info["Commit Runs"] = runs;
-  console.log(runs);
 
   repo_overview["Build Status"] = "passed";
   for (const run of runs["data"]["check_runs"]) {
