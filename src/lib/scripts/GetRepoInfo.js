@@ -150,20 +150,13 @@ for (const repo of repos) {
   const readme_contents = utf8.decode(atob(readme["data"]["content"]));
   repo_info["Readme"] = readme_contents;
 
-  // TODO: env-files or environment-files?
-  //
-  // Have this regex and only read files that match the pattern. Which pattern?
-  //
-  // <plugin>-qiime2-<distro>-<epoch>.yml
-  // or
-  // <epoch>-<plugin>-environment.yml?
   const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
+    `GET /repos/${owner}/${repo_name}/contents/environments/`,
     {
       owner: owner,
       repo: repo_name,
       ref: branch,
-      path: `/environment-files/`,
+      path: `/environments/`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
