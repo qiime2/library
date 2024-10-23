@@ -13,9 +13,9 @@ const ENV_FILE_REGEX = new RegExp(
 );
 
 const repo_list = await octokit.request(
-  "GET /repos/Oddant1/library-plugins/contents/plugins/",
+  "GET /repos/qiime2/library-plugins/contents/plugins/",
   {
-    owner: "Oddant1",
+    owner: "qiime2",
     repo: "library-plugins",
     path: "/plugins/",
     headers: {
@@ -30,9 +30,9 @@ for (const repo of repo_list["data"]) {
   const repo_file_name = repo["name"];
 
   const repo_file = await octokit.request(
-    `GET /repos/Oddant1/library-plugins/contents/plugins/${repo_file_name}`,
+    `GET /repos/qiime2/library-plugins/contents/plugins/${repo_file_name}`,
     {
-      owner: "Oddant1",
+      owner: "qiime2",
       repo: "library-plugins",
       path: `/plugins/${repo_file_name}`,
       headers: {
