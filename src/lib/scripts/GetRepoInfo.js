@@ -7,6 +7,10 @@ import yaml from "js-yaml";
 const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
+const ENV_FILE_REGEX = new RegExp(
+  `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
+);
+
 const repo_list = await octokit.request(
   "GET /repos/qiime2/library-plugins/contents/plugins/",
   {
@@ -56,10 +60,6 @@ for (const repo of repos) {
   const owner = repo["owner"];
   const repo_name = repo["name"];
   const branch = repo["branch"];
-
-  const ENV_FILE_REGEX = new RegExp(
-    `${repo_name}-qiime2-.*-20[0-9][0-9].([1-9]|1[0-2]).yml`,
-  );
 
   let repo_info = {};
 
