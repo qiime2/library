@@ -3,6 +3,7 @@
     import { sortOverviews } from "$lib/scripts/util";
     import { overview } from "$lib/scripts/OverviewStore";
     import { sort_info } from "$lib/scripts/SortStore.ts";
+    import { SortType, Column } from "$lib/scripts/Column";
 
     let overview_store;
 
@@ -10,7 +11,7 @@
         overview_store = value;
     });
 
-    let sort_col: string;
+    let sort_col: Column;
     let sort_descending: boolean;
 
     sort_info.subscribe((sort_values) => {
@@ -18,16 +19,18 @@
         sort_descending = sort_values.sort_descending;
     });
 
+    // Type refers to the whether this column is to be sorted in alphabetical
+    // order or numerical order
     const columns = [
-        "Plugin Owner",
-        "Plugin Name",
-        "Stars",
-        "Commit Date",
-        "Build Status",
+        new Column("Plugin Owner", SortType.alphabetical),
+        new Column("Plugin Name", SortType.alphabetical),
+        new Column("Stars", SortType.numerical),
+        new Column("Commit Date", SortType.numerical),
+        new Column("Build Status", SortType.alphabetical)
     ];
 
-    function sortButton(this_col: string) {
-        if (this_col === sort_col) {
+    function sortButton(column: Column) {
+        if (column.name === sort_col.name) {
             sort_descending = !sort_descending;
         } else {
             sort_descending = true;
@@ -35,12 +38,12 @@
 
         overview_store.filtered_overviews = sortOverviews(
             overview_store.filtered_overviews,
-            this_col,
+            column,
             sort_descending,
         );
 
         sort_info.set({
-            sort_col: this_col,
+            sort_col: column,
             sort_descending: sort_descending,
         });
 
@@ -54,10 +57,10 @@
     {#each columns as column}
         <button class="sortButton" on:click={() => sortButton(column)}>
             <div class="float-left">
-                {column}
+                {column.name}
             </div>
             <svg fill="none" width="10" height="10" class="svg">
-                {#if sort_col !== column}
+                {#if sort_col.name !== column.name}
                     <path
                         stroke-width="3"
                         stroke="rgb(119, 119, 119)"

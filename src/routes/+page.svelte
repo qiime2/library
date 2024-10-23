@@ -11,6 +11,7 @@
     import { sort_info } from "$lib/scripts/SortStore.ts";
     import { sortOverviews, formatDate } from "$lib/scripts/util";
     import FilterButton from "$lib/components/FilterButton.svelte";
+    import type { Column } from "$lib/scripts/Column";
 
     let repo_overviews: Array<Object>;
     let search_filter: string;
@@ -38,7 +39,7 @@
         num_pages = value.num_pages;
     })
 
-    let sort_col: string;
+    let sort_col: Column;
     let sort_descending: boolean;
 
     sort_info.subscribe((sort_values) => {

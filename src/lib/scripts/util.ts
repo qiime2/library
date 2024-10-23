@@ -1,13 +1,14 @@
 import { overview } from "$lib/scripts/OverviewStore";
+import { SortType, type Column } from "$lib/scripts/Column";
 
 export function sortOverviews(
   filtered_overviews: Object[],
-  sort_col: string,
+  sort_col: Column,
   sort_descending: boolean,
 ) {
   function compareElements(a: Object, b: Object) {
-    const A = a[sort_col as keyof Object];
-    const B = b[sort_col as keyof Object];
+    const A = a[sort_col.name as keyof Object];
+    const B = b[sort_col.name as keyof Object];
 
     if (A < B) {
       return sort_descending === true ? 1 : -1;
@@ -16,6 +17,13 @@ export function sortOverviews(
     }
 
     return 0;
+  }
+
+  // It turns out that similar to how 4 > 3 is true f > b is true, so if we
+  // want to sort alphabetically in the manner expected we need to reverse the
+  // sort order for alphabetical column
+  if (sort_col.sort_type === SortType.alphabetical) {
+    sort_descending = !sort_descending;
   }
 
   filtered_overviews.sort(compareElements);
