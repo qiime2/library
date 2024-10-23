@@ -151,12 +151,12 @@ for (const repo of repos) {
   repo_info["Readme"] = readme_contents;
 
   const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/environments/`,
+    `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
     {
       owner: owner,
       repo: repo_name,
       ref: branch,
-      path: `/environments/`,
+      path: `/environment-files/`,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
