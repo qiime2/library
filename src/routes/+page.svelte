@@ -130,7 +130,7 @@
  and number of stars -->
 <div id="container">
     <div id="banner">
-        This is a reimplementation of the QIIME 2 Library. The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://library.qiime2.org/">here</a>
+        This is a reimplementation of the QIIME 2 Library. The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://old-library.qiime2.org/">here</a>
     </div>
     {#await getOverview()}
         ...getting overview
