@@ -67,7 +67,7 @@ for (const repo of repos) {
     "Plugin Owner": owner,
     "Plugin Name": repo_name,
     Branch: branch,
-    "User Docs": repo["docs"]
+    "User Docs": repo["docs"],
   };
 
   // Get the latest commit
