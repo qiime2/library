@@ -1,13 +1,10 @@
 name: Get Repo Info
 
-# Run every night at midnight
+# Run every night at midnight or when button clicked
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
-# schedule:
-#   - cron: "0 0 * * *"
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   get-info-and-push:
