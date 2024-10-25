@@ -4,7 +4,7 @@ import fs from "node:fs";
 import github from "@actions/github";
 import yaml from "js-yaml";
 
-const root_path = "/home/runner/work/library-svelte/library-svelte/static/json";
+const root_path = "/home/runner/work/library/library/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
 const ENV_FILE_REGEX = new RegExp(
