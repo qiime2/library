@@ -120,7 +120,7 @@
                 Install in existing env:
             </h2>
             <code class="code">
-                conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda update --file {env_filepath}
+                conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda env update --file {env_filepath}
             </code>
         </div>
     </div>
