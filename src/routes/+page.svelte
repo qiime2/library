@@ -14,7 +14,6 @@
     import type { Column } from "$lib/scripts/Column";
 
     let repo_overviews: Array<Object>;
-    let search_filter: string;
     let filtered_overviews: Array<Object>;
     let date_fetched: string;
     let releases: Array<string> = [];
@@ -22,7 +21,6 @@
 
     overview.subscribe((value) => {
         repo_overviews = value.repo_overviews;
-        search_filter = value.search_filter;
         filtered_overviews = value.filtered_overviews;
         date_fetched = value.date_fetched;
         releases = value.releases,
