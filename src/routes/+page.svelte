@@ -161,12 +161,13 @@
             <div></div>
             <div class="mx-auto">
                 <button
-                        on:click={() => {
-                            if (current_page > 1) {
-                                current_page--;
-                            }
-                        }}
-                    >
+                    on:click={() => {
+                        if (current_page > 1) {
+                            current_page--;
+                        }
+                    }}
+                    class="pageButton"
+                >
                     <svg fill="none"
                         width="10"
                         height="10">
@@ -183,6 +184,7 @@
                             current_page++;
                         }
                     }}
+                    class="pageButton"
                 >
                     <svg fill="none"
                         width="10"
@@ -280,6 +282,11 @@
     #gridContainer {
         @apply grid
         lg:grid-cols-[15%_85%];
+    }
+
+    .pageButton {
+        @apply p-2
+        rounded-md;
     }
 
     .filterButton {
