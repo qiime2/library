@@ -63,11 +63,11 @@
 
 <style lang="postcss">
     .repo-card {
-        @apply max-w-7xl
+        @apply w-full
         border
         border-solid
         border-gray-300
-        ml-auto
+        mx-auto
         p-4;
     }
 

@@ -149,7 +149,7 @@
                     {/each}
                 </div>
             </div>
-            <div>
+            <div class="grid grid-cols-1" style="grid-template-rows: repeat({cards_per_page}, minmax(0, 1fr));">
                 {#key [cards_per_page, filtered_overviews, current_page]}
                     {#each getCurrentPage() as repo_overview}
                         <RepoCard {repo_overview} />
