@@ -7,16 +7,21 @@ import yaml from "js-yaml";
 const root_path = "/home/runner/work/library/library/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
+const LIBRARY_PLUGINS_OWNER = "qiime2";
+const LIBRARY_PLUGINS_REPO = "library-plugins";
+const LIBRARY_PLUGINS_BRANCH = "main"
+
 const ENV_FILE_REGEX = new RegExp(
   `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
 );
 
 const repo_list = await octokit.request(
-  "GET /repos/qiime2/library-plugins/contents/plugins/",
+  `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/`,
   {
-    owner: "qiime2",
-    repo: "library-plugins",
+    owner: LIBRARY_PLUGINS_OWNER,
+    repo: LIBRARY_PLUGINS_REPO,
     path: "/plugins/",
+    ref: LIBRARY_PLUGINS_BRANCH,
     headers: {
       "X-GitHub-Api-Version": "2022-11-28",
     },
@@ -29,11 +34,12 @@ for (const repo of repo_list["data"]) {
   const repo_file_name = repo["name"];
 
   const repo_file = await octokit.request(
-    `GET /repos/qiime2/library-plugins/contents/plugins/${repo_file_name}`,
+    `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/${repo_file_name}`,
     {
-      owner: "qiime2",
-      repo: "library-plugins",
+      owner: LIBRARY_PLUGINS_OWNER,
+      repo: LIBRARY_PLUGINS_REPO,
       path: `/plugins/${repo_file_name}`,
+      ref: LIBRARY_PLUGINS_BRANCH,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
       },
