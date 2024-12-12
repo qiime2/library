@@ -5,11 +5,22 @@
       "Plugin Name": "q2-amrfinderplus",
       "Branch": "main",
       "User Docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "Build Status": "failed",
-      "Commit Date": "2024-12-11T08:18:52Z",
+      "Build Status": "passed",
+      "Commit Date": "2024-12-12T10:56:32Z",
       "Stars": 0,
       "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "Releases": ["pathogenome-2024.10"]
+    },
+    "q2-assembly": {
+      "Plugin Owner": "bokulich-lab",
+      "Plugin Name": "q2-assembly",
+      "Branch": "main",
+      "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
+      "Build Status": "passed",
+      "Commit Date": "2024-12-12T11:21:04Z",
+      "Stars": 4,
+      "Description": "QIIME 2 plugin for (meta)genome assembly.",
+      "Releases": ["metagenome-2024.10"]
     },
     "q2-boots": {
       "Plugin Owner": "caporaso-lab",
@@ -28,16 +39,28 @@
       "Branch": "dev",
       "User Docs": "https://q2-fmt.readthedocs.io",
       "Build Status": "passed",
-      "Commit Date": "2024-11-14T04:05:49Z",
+      "Commit Date": "2024-12-12T16:41:52Z",
       "Stars": 4,
       "Description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
       "Releases": ["amplicon-2024.10"]
+    },
+    "q2-moshpit": {
+      "Plugin Owner": "bokulich-lab",
+      "Plugin Name": "q2-moshpit",
+      "Branch": "main",
+      "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
+      "Build Status": "passed",
+      "Commit Date": "2024-12-12T10:22:33Z",
+      "Stars": 3,
+      "Description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "Releases": ["metagenome-2024.10"]
     }
   },
-  "Date Fetched": "2024-12-12T01:36:24.490Z",
+  "Date Fetched": "2024-12-12T18:31:48.130Z",
   "Releases": [
     "amplicon-2025.4",
     "amplicon-2024.10",
+    "metagenome-2024.10",
     "pathogenome-2024.10",
     "amplicon-2024.5"
   ]
