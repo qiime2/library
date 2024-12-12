@@ -1,38 +1,25 @@
-# create-svelte
+> This is intended for developers and people who are interested in learning more about the QIIME 2 Library. The Library is hosted at [https://library.qiime2.org](https://library.qiime2.org).
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# QIIME 2 Library
 
-## Creating a project
+The [QIIME 2 Library](https://library.qiime2.org) provides a means for QIIME 2 developers to host their plugins and for QIIME 2 users to discover new plugins.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Adding a plugin to the library
+To add a plugin to the library, please consult the docs [here](https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Developing the QIIME 2 Library
 
-# create a new project in my-app
-npm create svelte@latest my-app
+
+To host the app locally, first install the dependencies (while in the root of the repo):
+
+```
+npm install
 ```
 
-## Developing
+Then run:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+```
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This will host the app on `localhost:5173` by default.
