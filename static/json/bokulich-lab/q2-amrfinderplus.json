@@ -1,7 +1,7 @@
 {
   "Commit Runs": {
     "status": 200,
-    "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/commits/08ad1578dd46b8fbabb5c304daff5167f1116018/check-runs?owner=bokulich-lab&repo=q2-amrfinderplus&head_sha=08ad1578dd46b8fbabb5c304daff5167f1116018",
+    "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/commits/353f5492636efffc35361b3db312a201843472e5/check-runs?owner=bokulich-lab&repo=q2-amrfinderplus&head_sha=353f5492636efffc35361b3db312a201843472e5",
     "headers": {
       "access-control-allow-origin": "*",
       "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset",
@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Mon, 23 Dec 2024 01:23:08 GMT",
-      "etag": "W/\"4eb0c862608f2ba04be532075d4cb328865b680ccb81267fb6cb35410c9975ed\"",
+      "date": "Tue, 24 Dec 2024 01:21:41 GMT",
+      "etag": "W/\"607984a9d90cf495848245cc080837b31b162048f013973188ebbcddbe9135a6\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,10 +21,10 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "7C00:13186:7564CCA:EAD65FB:6768BB7B",
+      "x-github-request-id": "7018:18613E:3356337:668FE73:676A0CA4",
       "x-ratelimit-limit": "5000",
       "x-ratelimit-remaining": "4990",
-      "x-ratelimit-reset": "1734920574",
+      "x-ratelimit-reset": "1735006888",
       "x-ratelimit-resource": "core",
       "x-ratelimit-used": "10",
       "x-xss-protection": "0"
@@ -33,26 +33,26 @@
       "total_count": 3,
       "check_runs": [
         {
-          "id": 34310832012,
+          "id": 34811044724,
           "name": "build-and-test-qiime2-pathogenome-2024-10 (macos-13)",
-          "node_id": "CR_kwDOMyTAWs8AAAAH_RW_jA",
-          "head_sha": "08ad1578dd46b8fbabb5c304daff5167f1116018",
+          "node_id": "CR_kwDOMyTAWs8AAAAIGuZjdA",
+          "head_sha": "353f5492636efffc35361b3db312a201843472e5",
           "external_id": "bfcc9eb4-0426-5052-d674-8903a76f8aa9",
-          "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34310832012",
-          "html_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12294959552/job/34310832012",
-          "details_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12294959552/job/34310832012",
+          "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34811044724",
+          "html_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12472368571/job/34811044724",
+          "details_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12472368571/job/34811044724",
           "status": "completed",
           "conclusion": "success",
-          "started_at": "2024-12-12T10:56:45Z",
-          "completed_at": "2024-12-12T11:03:14Z",
+          "started_at": "2024-12-23T20:09:44Z",
+          "completed_at": "2024-12-23T20:16:07Z",
           "output": {
             "title": null,
             "summary": null,
             "text": null,
-            "annotations_count": 3,
-            "annotations_url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34310832012/annotations"
+            "annotations_count": 2,
+            "annotations_url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34811044724/annotations"
           },
-          "check_suite": { "id": 31978987308 },
+          "check_suite": { "id": 32392365133 },
           "app": {
             "id": 15368,
             "client_id": "Iv1.05c79e9ad1f6bdfa",
@@ -144,26 +144,26 @@
           "pull_requests": []
         },
         {
-          "id": 34310831627,
+          "id": 34811044494,
           "name": "build-and-test-qiime2-pathogenome-2024-10 (ubuntu-latest)",
-          "node_id": "CR_kwDOMyTAWs8AAAAH_RW-Cw",
-          "head_sha": "08ad1578dd46b8fbabb5c304daff5167f1116018",
+          "node_id": "CR_kwDOMyTAWs8AAAAIGuZijg",
+          "head_sha": "353f5492636efffc35361b3db312a201843472e5",
           "external_id": "128fffe3-62c1-5d5b-7b6c-69ef9528b838",
-          "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34310831627",
-          "html_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12294959552/job/34310831627",
-          "details_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12294959552/job/34310831627",
+          "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34811044494",
+          "html_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12472368571/job/34811044494",
+          "details_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12472368571/job/34811044494",
           "status": "completed",
           "conclusion": "success",
-          "started_at": "2024-12-12T10:56:43Z",
-          "completed_at": "2024-12-12T11:00:17Z",
+          "started_at": "2024-12-23T20:09:43Z",
+          "completed_at": "2024-12-23T20:13:15Z",
           "output": {
             "title": null,
             "summary": null,
             "text": null,
             "annotations_count": 4,
-            "annotations_url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34310831627/annotations"
+            "annotations_url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34811044494/annotations"
           },
-          "check_suite": { "id": 31978987308 },
+          "check_suite": { "id": 32392365133 },
           "app": {
             "id": 15368,
             "client_id": "Iv1.05c79e9ad1f6bdfa",
@@ -255,26 +255,26 @@
           "pull_requests": []
         },
         {
-          "id": 34310831255,
+          "id": 34811044245,
           "name": "lint",
-          "node_id": "CR_kwDOMyTAWs8AAAAH_RW8lw",
-          "head_sha": "08ad1578dd46b8fbabb5c304daff5167f1116018",
+          "node_id": "CR_kwDOMyTAWs8AAAAIGuZhlQ",
+          "head_sha": "353f5492636efffc35361b3db312a201843472e5",
           "external_id": "3a559e2a-952e-58d2-b8db-2e604a9266d7",
-          "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34310831255",
-          "html_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12294959552/job/34310831255",
-          "details_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12294959552/job/34310831255",
+          "url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34811044245",
+          "html_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12472368571/job/34811044245",
+          "details_url": "https://github.com/bokulich-lab/q2-amrfinderplus/actions/runs/12472368571/job/34811044245",
           "status": "completed",
           "conclusion": "success",
-          "started_at": "2024-12-12T10:56:44Z",
-          "completed_at": "2024-12-12T10:56:57Z",
+          "started_at": "2024-12-23T20:09:42Z",
+          "completed_at": "2024-12-23T20:09:51Z",
           "output": {
             "title": null,
             "summary": null,
             "text": null,
             "annotations_count": 1,
-            "annotations_url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34310831255/annotations"
+            "annotations_url": "https://api.github.com/repos/bokulich-lab/q2-amrfinderplus/check-runs/34811044245/annotations"
           },
-          "check_suite": { "id": 31978987308 },
+          "check_suite": { "id": 32392365133 },
           "app": {
             "id": 15368,
             "client_id": "Iv1.05c79e9ad1f6bdfa",
@@ -374,7 +374,7 @@
   "Branch": "main",
   "User Docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
   "Build Status": "passed",
-  "Commit Date": "2024-12-12T10:56:32Z",
+  "Commit Date": "2024-12-23T20:09:30Z",
   "Stars": 0,
   "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
   "Releases": ["pathogenome-2024.10"]
