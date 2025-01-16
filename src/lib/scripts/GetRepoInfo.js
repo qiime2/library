@@ -7,7 +7,7 @@ import yaml from "js-yaml";
 const root_path = "/home/runner/work/library/library/static/json";
 const octokit = github.getOctokit(process.argv[2]);
 
-const LIBRARY_PLUGINS_OWNER = "qiime2";
+const LIBRARY_PLUGINS_OWNER = "cjrodriguez98";
 const LIBRARY_PLUGINS_REPO = "library-plugins";
 const LIBRARY_PLUGINS_BRANCH = "main"
 
