@@ -9,7 +9,7 @@ const octokit = github.getOctokit(process.argv[2]);
 
 const LIBRARY_PLUGINS_OWNER = "qiime2";
 const LIBRARY_PLUGINS_REPO = "library-plugins";
-const LIBRARY_PLUGINS_BRANCH = "main"
+const LIBRARY_PLUGINS_BRANCH = "main";
 
 const ENV_FILE_REGEX = new RegExp(
   `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
