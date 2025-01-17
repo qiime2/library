@@ -31,7 +31,7 @@ jobs:
 
       - name: Get Repo Info
         run: |
-          node src/lib/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
+          node .github/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
           npx prettier --plugin-search-dir ./static/json --write ./static/json
 
       - name: Commit Repo Changes
