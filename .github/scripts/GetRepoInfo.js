@@ -5,6 +5,7 @@ import github from "@actions/github";
 import yaml from "js-yaml";
 
 const ROOT_PATH = "/home/runner/work/library/library/static/json";
+const NEW_ROOT_PATH = "/home/runner/work/library/library/static/new";
 const OCTOKIT = github.getOctokit(process.argv[2]);
 
 const LIBRARY_PLUGINS_OWNER = "qiime2";
@@ -57,10 +58,10 @@ const overview = {
 let global_releases = new Set();
 
 // Make sure we start from a clean slate
-if (fs.existsSync(ROOT_PATH)) {
-  fs.rmSync(ROOT_PATH, { recursive: true, force: true });
+if (fs.existsSync(NEW_ROOT_PATH)) {
+  fs.rmSync(NEW_ROOT_PATH, { recursive: true, force: true });
 }
-fs.mkdirSync(ROOT_PATH);
+fs.mkdirSync(NEW_ROOT_PATH);
 
 for (const repo of repos) {
   const owner = repo["owner"];
@@ -189,11 +190,11 @@ for (const repo of repos) {
 
   repo_info = { ...repo_info, ...repo_overview };
 
-  if (!fs.existsSync(`${ROOT_PATH}/${owner}`)) {
-    fs.mkdirSync(`${ROOT_PATH}/${owner}`);
+  if (!fs.existsSync(`${NEW_ROOT_PATH}/${owner}`)) {
+    fs.mkdirSync(`${NEW_ROOT_PATH}/${owner}`);
   }
   fs.writeFileSync(
-    `${ROOT_PATH}/${owner}/${repo_name}.json`,
+    `${NEW_ROOT_PATH}/${owner}/${repo_name}.json`,
     JSON.stringify(repo_info),
   );
 
@@ -255,4 +256,5 @@ function sortEpochs(a, b) {
 
 overview["Releases"] = global_releases;
 
-fs.writeFileSync(`${ROOT_PATH}/overview.json`, JSON.stringify(overview));
+fs.writeFileSync(`${NEW_ROOT_PATH}/overview.json`, JSON.stringify(overview));
+fs.renameSync(NEW_ROOT_PATH, ROOT_PATH)
