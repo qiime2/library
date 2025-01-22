@@ -1,68 +1,38 @@
 // This script executed via github actions
-import utf8 from "utf8";
 import fs from "node:fs";
-import github from "@actions/github";
-import yaml from "js-yaml";
 
-const root_path = "/home/runner/work/library/library/static/json";
-const octokit = github.getOctokit(process.argv[2]);
+import {
+  getLibraryPlugins,
+  getLatestCommit,
+  getRunsStatusOfCommit,
+  getHighLevelRepoOverview,
+  getReadme,
+  getEnvironmentFiles,
+  sortReleases,
+} from "./helpers.js";
 
-const LIBRARY_PLUGINS_OWNER = "qiime2";
-const LIBRARY_PLUGINS_REPO = "library-plugins";
-const LIBRARY_PLUGINS_BRANCH = "main";
+// Paths we are writing to
+const ROOT_PATH = "/home/runner/work/library/library/static/json";
+const NEW_ROOT_PATH = "/home/runner/work/library/library/static/new";
 
-const ENV_FILE_REGEX = new RegExp(
-  `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
-);
+// Objects containing the loaded .yml files for each plugin indicated in library-plugins
+const REPOS = await getLibraryPlugins();
 
-const repo_list = await octokit.request(
-  `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/`,
-  {
-    owner: LIBRARY_PLUGINS_OWNER,
-    repo: LIBRARY_PLUGINS_REPO,
-    path: "/plugins/",
-    ref: LIBRARY_PLUGINS_BRANCH,
-    headers: {
-      "X-GitHub-Api-Version": "2022-11-28",
-    },
-  },
-);
-
-const repos = [];
-
-for (const repo of repo_list["data"]) {
-  const repo_file_name = repo["name"];
-
-  const repo_file = await octokit.request(
-    `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/${repo_file_name}`,
-    {
-      owner: LIBRARY_PLUGINS_OWNER,
-      repo: LIBRARY_PLUGINS_REPO,
-      path: `/plugins/${repo_file_name}`,
-      ref: LIBRARY_PLUGINS_BRANCH,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-
-  const repo_string = utf8.decode(atob(repo_file["data"]["content"]));
-  repos.push(yaml.load(repo_string));
-}
-
-const overview = {
+// Info about all repos
+const GLOBAL_INFO = {
   Repos: {},
 };
 
+// A set containing all QIIME 2 releases represented by all plugins on the library
 let global_releases = new Set();
 
 // Make sure we start from a clean slate
-if (fs.existsSync(root_path)) {
-  fs.rmSync(root_path, { recursive: true, force: true });
+if (fs.existsSync(NEW_ROOT_PATH)) {
+  fs.rmSync(NEW_ROOT_PATH, { recursive: true, force: true });
 }
-fs.mkdirSync(root_path);
+fs.mkdirSync(NEW_ROOT_PATH);
 
-for (const repo of repos) {
+for (const repo of REPOS) {
   const owner = repo["owner"];
   const repo_name = repo["name"];
   const branch = repo["branch"];
@@ -77,182 +47,60 @@ for (const repo of repos) {
   };
 
   // Get the latest commit
-  const commits = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/commits`,
-    {
-      owner: owner,
-      repo: repo_name,
-      sha: branch,
-      per_page: 1,
-      headers: {
-        "X-Github-Api-Version": "2022-11-28",
-      },
-    },
+  const commit = await getLatestCommit(owner, repo_name, branch);
+  const sha = commit["data"][0]["sha"];
+
+  // Get the status of the latest commit
+  repo_overview["Build Status"] = await getRunsStatusOfCommit(
+    owner,
+    repo_name,
+    sha,
   );
 
-  const sha = commits["data"][0]["sha"];
-  const runs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/commits/${sha}/check-runs`,
-    {
-      owner: owner,
-      repo: repo_name,
-      head_sha: `${sha}`,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-  repo_info["Commit Runs"] = runs;
-
-  repo_overview["Build Status"] = "passed";
-  for (const run of runs["data"]["check_runs"]) {
-    if (run["status"] !== "completed") {
-      repo_overview["Build Status"] = "in progress";
-      break;
-    }
-
-    if (run["conclusion"] === "failure") {
-      repo_overview["Build Status"] = "failed";
-      break;
-    }
-  }
-
-  // Get the date, can be done via author or committer
-  const commit_date = commits["data"][0]["commit"]["committer"]["date"];
+  // Get the date of the latest commit, can be done via author or committer
+  const commit_date = commit["data"][0]["commit"]["committer"]["date"];
   repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
-  const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}`, {
-    owner: owner,
-    repo: repo_name,
-    ref: branch,
-    headers: {
-      "X-Github-Api-Version": "2022-11-28",
-    },
-  });
-
-  // Pull stars off that
-  const stars = repo_data["data"]["stargazers_count"];
-  repo_overview["Stars"] = stars;
-
-  // Pull repo description
+  const repo_data = await getHighLevelRepoOverview(owner, repo_name, branch);
+  repo_overview["Stars"] = repo_data["data"]["stargazers_count"];
   repo_overview["Description"] = repo_data["data"]["description"];
 
-  // Get the README
-  const readme = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/readme`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
+  // Get repo README
+  repo_info["Readme"] = await getReadme(owner, repo_name, branch);
+
+  // Get the releases this plugin is compatible with
+  repo_overview["Releases"] = await getEnvironmentFiles(
+    owner,
+    repo_name,
+    branch,
   );
-
-  // Convert the README to a normal string
-  const readme_contents = utf8.decode(atob(readme["data"]["content"]));
-  repo_info["Readme"] = readme_contents;
-
-  const envs = await octokit.request(
-    `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      path: `/environment-files/`,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-
-  repo_overview["Releases"] = [];
-
-  for (const env of envs["data"]) {
-    if (ENV_FILE_REGEX.test(env["name"])) {
-      // Strip the extension off the end of the name
-      const name = env["name"].substring(0, env["name"].indexOf(".yml"));
-      const split = name.split("-");
-
-      const distro = split[split.length - 2];
-      const epoch = split[split.length - 1];
-      const release = `${distro}-${epoch}`;
-
-      repo_overview["Releases"].push(release);
-      global_releases.add(release);
-    }
-  }
-
-  repo_overview["Releases"].sort(sortReleases);
+  global_releases = new Set([...global_releases, ...repo_overview["Releases"]]);
 
   repo_info = { ...repo_info, ...repo_overview };
 
-  if (!fs.existsSync(`${root_path}/${owner}`)) {
-    fs.mkdirSync(`${root_path}/${owner}`);
+  if (!fs.existsSync(`${NEW_ROOT_PATH}/${owner}`)) {
+    fs.mkdirSync(`${NEW_ROOT_PATH}/${owner}`);
   }
   fs.writeFileSync(
-    `${root_path}/${owner}/${repo_name}.json`,
+    `${NEW_ROOT_PATH}/${owner}/${repo_name}.json`,
     JSON.stringify(repo_info),
   );
 
-  overview["Repos"][repo_name] = repo_overview;
+  GLOBAL_INFO["Repos"][repo_name] = repo_overview;
 }
 
-overview["Date Fetched"] = new Date();
+GLOBAL_INFO["Date Fetched"] = new Date();
 
 global_releases = Array.from(global_releases);
 global_releases.sort(sortReleases);
 
-function sortReleases(a, b) {
-  const A = a.split("-");
-  const B = b.split("-");
+GLOBAL_INFO["Releases"] = global_releases;
 
-  const distroA = A[0];
-  const epochA = A[1];
+fs.writeFileSync(`${NEW_ROOT_PATH}/overview.json`, JSON.stringify(GLOBAL_INFO));
 
-  const distroB = B[0];
-  const epochB = B[1];
-
-  const byEpoch = sortEpochs(epochA, epochB);
-
-  if (byEpoch === 0) {
-    if (distroA > distroB) {
-      return 1;
-    } else if (distroA < distroB) {
-      return -1;
-    }
-  }
-
-  return byEpoch;
+// Remove this at the last minute
+if (fs.existsSync(ROOT_PATH)) {
+  fs.rmSync(ROOT_PATH, { recursive: true, force: true });
 }
-
-function sortEpochs(a, b) {
-  const A = a.split(".");
-  const B = b.split(".");
-
-  const yearA = parseInt(A[0]);
-  const monthA = parseInt(A[1]);
-
-  const yearB = parseInt(B[0]);
-  const monthB = parseInt(B[1]);
-
-  if (yearA > yearB) {
-    return -1;
-  } else if (yearA < yearB) {
-    return 1;
-  }
-
-  if (monthA > monthB) {
-    return -1;
-  } else if (monthA < monthB) {
-    return 1;
-  }
-
-  return 0;
-}
-
-overview["Releases"] = global_releases;
-
-fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
+fs.renameSync(NEW_ROOT_PATH, ROOT_PATH);
