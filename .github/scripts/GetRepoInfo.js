@@ -1,26 +1,21 @@
 // This script executed via github actions
 import fs from "node:fs";
-import github from "@actions/github";
 
-import { Octokit } from "octokit";
 import {
+  getLibraryPlugins,
   getLatestCommit,
   getRunsStatusOfCommit,
   getReadme,
   getEnvironmentFiles,
-  sortReleases,
-  getLibraryPlugins,
-} from "./util.js";
+  getHighLevelRepoOverview,
+} from "./helpers.js";
 
 // Paths we are writing to
 const ROOT_PATH = "/home/runner/work/library/library/static/json";
 const NEW_ROOT_PATH = "/home/runner/work/library/library/static/new";
 
-// Access the GitHub API
-const OCTOKIT = github.getOctokit(process.argv[2]);
-
 // Objects containing the loaded .yml files for each plugin indicated in library-plugins
-const REPOS = await getLibraryPlugins(OCTOKIT);
+const REPOS = await getLibraryPlugins();
 
 // Info about all repos
 const GLOBAL_INFO = {
@@ -51,12 +46,11 @@ for (const repo of REPOS) {
   };
 
   // Get the latest commit
-  const commit = await getLatestCommit(OCTOKIT, owner, repo_name, branch);
+  const commit = await getLatestCommit(owner, repo_name, branch);
   const sha = commit["data"][0]["sha"];
 
   // Get the status of the latest commit
   repo_overview["Build Status"] = await getRunsStatusOfCommit(
-    OCTOKIT,
     owner,
     repo_name,
     sha,
@@ -67,33 +61,15 @@ for (const repo of REPOS) {
   repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
-  const repo_data = await OCTOKIT.request(`GET /repos/${owner}/${repo_name}`, {
-    owner: owner,
-    repo: repo_name,
-    ref: branch,
-    headers: {
-      "X-Github-Api-Version": "2022-11-28",
-    },
-  });
-
-  // Pull stars off that
-  const stars = repo_data["data"]["stargazers_count"];
-  repo_overview["Stars"] = stars;
-
-  // Pull repo description
+  const repo_data = await getHighLevelRepoOverview(owner, repo_name, branch);
+  repo_overview["Stars"] = repo_data["data"]["stargazers_count"];
   repo_overview["Description"] = repo_data["data"]["description"];
 
   // Get repo README
-  repo_info["Readme"] = await getReadme(Octokit, owner, repo_name, branch);
+  repo_info["Readme"] = await getReadme(owner, repo_name, branch);
 
   // Get the releases this plugin is compatible with
-  repo_overview["Releases"] = getEnvironmentFiles(
-    OCTOKIT,
-    ENV_FILE_REGEX,
-    owner,
-    repo_name,
-    branch,
-  );
+  repo_overview["Releases"] = getEnvironmentFiles(owner, repo_name, branch);
   global_releases = new Set([...global_releases, ...repo_overview["Releases"]]);
 
   repo_info = { ...repo_info, ...repo_overview };
@@ -116,10 +92,7 @@ global_releases.sort(sortReleases);
 
 GLOBAL_INFO["Releases"] = global_releases;
 
-fs.writeFileSync(
-  `${NEW_ROOT_PATH}/overview.json`,
-  JSON.stringify(GLOBAL_INFO),
-);
+fs.writeFileSync(`${NEW_ROOT_PATH}/overview.json`, JSON.stringify(GLOBAL_INFO));
 
 // Remove this at the last minute
 if (fs.existsSync(ROOT_PATH)) {

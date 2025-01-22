@@ -1,5 +1,9 @@
 import utf8 from "utf8";
 import yaml from "js-yaml";
+import github from "@actions/github";
+
+// Access the GitHub API
+const OCTOKIT = github.getOctokit(process.argv[2]);
 
 // Where we are looking for plugin list
 const LIBRARY_PLUGINS_OWNER = "qiime2";
@@ -12,7 +16,7 @@ const ENV_FILE_REGEX = new RegExp(
 );
 
 // Get the plugins that are in the library
-export async function getLibraryPlugins(OCTOKIT) {
+export async function getLibraryPlugins() {
   // Will hold the loaded yaml contents of the
   const plugins = [];
 
@@ -52,7 +56,7 @@ export async function getLibraryPlugins(OCTOKIT) {
 
 // Use GitHub API to get the latest commit of the specified branch of the
 // specified repo
-export async function getLatestCommit(OCTOKIT, owner, repo_name, branch) {
+export async function getLatestCommit(owner, repo_name, branch) {
   const commit = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/commits`,
     {
@@ -76,7 +80,7 @@ export async function getLatestCommit(OCTOKIT, owner, repo_name, branch) {
 // 2. failed if any failed
 //
 // 3. in progress if any still running
-export async function getRunsStatusOfCommit(OCTOKIT, owner, repo_name, sha) {
+export async function getRunsStatusOfCommit(owner, repo_name, sha) {
   let build_status = "passed";
 
   const runs = await OCTOKIT.request(
@@ -106,8 +110,20 @@ export async function getRunsStatusOfCommit(OCTOKIT, owner, repo_name, sha) {
   return build_status;
 }
 
+// Use the GitHub API to get the highest level overview of the repo
+export async function getHighLevelRepoOverview(owner, repo_name, branch) {
+  return await OCTOKIT.request(`GET /repos/${owner}/${repo_name}`, {
+    owner: owner,
+    repo: repo_name,
+    ref: branch,
+    headers: {
+      "X-Github-Api-Version": "2022-11-28",
+    },
+  });
+}
+
 // Use the GitHub API to pull the README then convert it to a utf string
-export async function getReadme(OCTOKIT, owner, repo_name, branch) {
+export async function getReadme(owner, repo_name, branch) {
   const readme = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/readme`,
     {
@@ -124,13 +140,7 @@ export async function getReadme(OCTOKIT, owner, repo_name, branch) {
   return utf8.decode(atob(readme["data"]["content"]));
 }
 
-export async function getEnvironmentFiles(
-  OCTOKIT,
-  ENV_FILE_REGEX,
-  owner,
-  repo_name,
-  branch,
-) {
+export async function getEnvironmentFiles(owner, repo_name, branch) {
   let releases = [];
 
   const envs = await OCTOKIT.request(
