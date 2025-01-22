@@ -257,4 +257,9 @@ function sortEpochs(a, b) {
 overview["Releases"] = global_releases;
 
 fs.writeFileSync(`${NEW_ROOT_PATH}/overview.json`, JSON.stringify(overview));
+
+// Remove this at the last minute
+if (fs.existsSync(ROOT_PATH)) {
+  fs.rmSync(ROOT_PATH, { recursive: true, force: true });
+}
 fs.renameSync(NEW_ROOT_PATH, ROOT_PATH)
