@@ -5,9 +5,10 @@ import {
   getLibraryPlugins,
   getLatestCommit,
   getRunsStatusOfCommit,
+  getHighLevelRepoOverview,
   getReadme,
   getEnvironmentFiles,
-  getHighLevelRepoOverview,
+  sortReleases,
 } from "./helpers.js";
 
 // Paths we are writing to
@@ -69,7 +70,11 @@ for (const repo of REPOS) {
   repo_info["Readme"] = await getReadme(owner, repo_name, branch);
 
   // Get the releases this plugin is compatible with
-  repo_overview["Releases"] = await getEnvironmentFiles(owner, repo_name, branch);
+  repo_overview["Releases"] = await getEnvironmentFiles(
+    owner,
+    repo_name,
+    branch,
+  );
   global_releases = new Set([...global_releases, ...repo_overview["Releases"]]);
 
   repo_info = { ...repo_info, ...repo_overview };
