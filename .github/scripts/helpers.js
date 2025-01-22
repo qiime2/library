@@ -52,6 +52,8 @@ export async function getLibraryPlugins() {
     const plugin_string = utf8.decode(atob(plugin_file["data"]["content"]));
     plugins.push(yaml.load(plugin_string));
   }
+
+  return plugins;
 }
 
 // Use GitHub API to get the latest commit of the specified branch of the
