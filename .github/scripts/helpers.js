@@ -179,7 +179,7 @@ export async function getEnvironmentFiles(owner, repo_name, branch) {
 }
 
 // Sort QIIME 2 releases newest to oldest by epoch first then distro
-function sortReleases(a, b) {
+export function sortReleases(a, b) {
   const A = a.split("-");
   const B = b.split("-");
 
