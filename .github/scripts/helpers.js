@@ -56,8 +56,7 @@ export async function getLibraryPlugins() {
   return plugins;
 }
 
-// Use GitHub API to get the latest commit of the specified branch of the
-// specified repo
+// Gg\et the latest commit of the specified branch of the specified repo
 export async function getLatestCommit(owner, repo_name, branch) {
   const commit = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/commits`,
@@ -75,7 +74,7 @@ export async function getLatestCommit(owner, repo_name, branch) {
   return commit;
 }
 
-// Use GitHub API to get the action runs on specified commit and report status
+// Get the action runs on specified commit and report status
 //
 // 1. passed if all passed
 //
@@ -112,7 +111,7 @@ export async function getRunsStatusOfCommit(owner, repo_name, sha) {
   return build_status;
 }
 
-// Use the GitHub API to get the highest level overview of the repo
+// Get the highest level overview of the repo
 export async function getHighLevelRepoOverview(owner, repo_name, branch) {
   return await OCTOKIT.request(`GET /repos/${owner}/${repo_name}`, {
     owner: owner,
@@ -124,7 +123,7 @@ export async function getHighLevelRepoOverview(owner, repo_name, branch) {
   });
 }
 
-// Use the GitHub API to pull the README then convert it to a utf string
+// Get the README then convert it to a utf string
 export async function getReadme(owner, repo_name, branch) {
   const readme = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/readme`,
@@ -142,6 +141,8 @@ export async function getReadme(owner, repo_name, branch) {
   return utf8.decode(atob(readme["data"]["content"]));
 }
 
+// Get all environment files from the given repo and return them sorted by
+// epoch most to least recent then by distro alphabetically
 export async function getEnvironmentFiles(owner, repo_name, branch) {
   let releases = [];
 
@@ -164,6 +165,8 @@ export async function getEnvironmentFiles(owner, repo_name, branch) {
       const name = env["name"].substring(0, env["name"].indexOf(".yml"));
       const split = name.split("-");
 
+      // If the name matched the regex this ought to be the locations of this
+      // information
       const distro = split[split.length - 2];
       const epoch = split[split.length - 1];
       const release = `${distro}-${epoch}`;
