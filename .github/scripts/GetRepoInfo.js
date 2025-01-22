@@ -4,8 +4,8 @@ import fs from "node:fs";
 import github from "@actions/github";
 import yaml from "js-yaml";
 
-const root_path = "/home/runner/work/library/library/static/json";
-const octokit = github.getOctokit(process.argv[2]);
+const ROOT_PATH = "/home/runner/work/library/library/static/json";
+const OCTOKIT = github.getOctokit(process.argv[2]);
 
 const LIBRARY_PLUGINS_OWNER = "qiime2";
 const LIBRARY_PLUGINS_REPO = "library-plugins";
@@ -15,7 +15,7 @@ const ENV_FILE_REGEX = new RegExp(
   `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
 );
 
-const repo_list = await octokit.request(
+const repo_list = await OCTOKIT.request(
   `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/`,
   {
     owner: LIBRARY_PLUGINS_OWNER,
@@ -33,7 +33,7 @@ const repos = [];
 for (const repo of repo_list["data"]) {
   const repo_file_name = repo["name"];
 
-  const repo_file = await octokit.request(
+  const repo_file = await OCTOKIT.request(
     `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/${repo_file_name}`,
     {
       owner: LIBRARY_PLUGINS_OWNER,
@@ -57,10 +57,10 @@ const overview = {
 let global_releases = new Set();
 
 // Make sure we start from a clean slate
-if (fs.existsSync(root_path)) {
-  fs.rmSync(root_path, { recursive: true, force: true });
+if (fs.existsSync(ROOT_PATH)) {
+  fs.rmSync(ROOT_PATH, { recursive: true, force: true });
 }
-fs.mkdirSync(root_path);
+fs.mkdirSync(ROOT_PATH);
 
 for (const repo of repos) {
   const owner = repo["owner"];
@@ -77,7 +77,7 @@ for (const repo of repos) {
   };
 
   // Get the latest commit
-  const commits = await octokit.request(
+  const commits = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/commits`,
     {
       owner: owner,
@@ -91,7 +91,7 @@ for (const repo of repos) {
   );
 
   const sha = commits["data"][0]["sha"];
-  const runs = await octokit.request(
+  const runs = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/commits/${sha}/check-runs`,
     {
       owner: owner,
@@ -122,7 +122,7 @@ for (const repo of repos) {
   repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
-  const repo_data = await octokit.request(`GET /repos/${owner}/${repo_name}`, {
+  const repo_data = await OCTOKIT.request(`GET /repos/${owner}/${repo_name}`, {
     owner: owner,
     repo: repo_name,
     ref: branch,
@@ -139,7 +139,7 @@ for (const repo of repos) {
   repo_overview["Description"] = repo_data["data"]["description"];
 
   // Get the README
-  const readme = await octokit.request(
+  const readme = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/readme`,
     {
       owner: owner,
@@ -155,7 +155,7 @@ for (const repo of repos) {
   const readme_contents = utf8.decode(atob(readme["data"]["content"]));
   repo_info["Readme"] = readme_contents;
 
-  const envs = await octokit.request(
+  const envs = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
     {
       owner: owner,
@@ -189,11 +189,11 @@ for (const repo of repos) {
 
   repo_info = { ...repo_info, ...repo_overview };
 
-  if (!fs.existsSync(`${root_path}/${owner}`)) {
-    fs.mkdirSync(`${root_path}/${owner}`);
+  if (!fs.existsSync(`${ROOT_PATH}/${owner}`)) {
+    fs.mkdirSync(`${ROOT_PATH}/${owner}`);
   }
   fs.writeFileSync(
-    `${root_path}/${owner}/${repo_name}.json`,
+    `${ROOT_PATH}/${owner}/${repo_name}.json`,
     JSON.stringify(repo_info),
   );
 
@@ -255,4 +255,4 @@ function sortEpochs(a, b) {
 
 overview["Releases"] = global_releases;
 
-fs.writeFileSync(`${root_path}/overview.json`, JSON.stringify(overview));
+fs.writeFileSync(`${ROOT_PATH}/overview.json`, JSON.stringify(overview));
