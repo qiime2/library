@@ -1,8 +1,10 @@
 // This script executed via github actions
-import utf8 from "utf8";
 import fs from "node:fs";
-import github from "@actions/github";
 import yaml from "js-yaml";
+import github from "@actions/github";
+
+import { Octokit } from "octokit";
+import { getLatestCommit, getRunsStatusOfCommit, getReadme, getEnvironmentFiles, sortReleases } from "./util";
 
 const ROOT_PATH = "/home/runner/work/library/library/static/json";
 const NEW_ROOT_PATH = "/home/runner/work/library/library/static/new";
@@ -78,48 +80,14 @@ for (const repo of repos) {
   };
 
   // Get the latest commit
-  const commits = await OCTOKIT.request(
-    `GET /repos/${owner}/${repo_name}/commits`,
-    {
-      owner: owner,
-      repo: repo_name,
-      sha: branch,
-      per_page: 1,
-      headers: {
-        "X-Github-Api-Version": "2022-11-28",
-      },
-    },
-  );
+  const commit = await getLatestCommit(OCTOKIT, owner, repo_name, branch);
+  const sha = commit["data"][0]["sha"];
 
-  const sha = commits["data"][0]["sha"];
-  const runs = await OCTOKIT.request(
-    `GET /repos/${owner}/${repo_name}/commits/${sha}/check-runs`,
-    {
-      owner: owner,
-      repo: repo_name,
-      head_sha: `${sha}`,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-  repo_info["Commit Runs"] = runs;
+  // Get the status of the latest commit
+  repo_overview["Build Status"] = await getRunsStatusOfCommit(OCTOKIT, owner, repo_name, sha);
 
-  repo_overview["Build Status"] = "passed";
-  for (const run of runs["data"]["check_runs"]) {
-    if (run["status"] !== "completed") {
-      repo_overview["Build Status"] = "in progress";
-      break;
-    }
-
-    if (run["conclusion"] === "failure") {
-      repo_overview["Build Status"] = "failed";
-      break;
-    }
-  }
-
-  // Get the date, can be done via author or committer
-  const commit_date = commits["data"][0]["commit"]["committer"]["date"];
+  // Get the date of the latest commit, can be done via author or committer
+  const commit_date = commit["data"][0]["commit"]["committer"]["date"];
   repo_overview["Commit Date"] = commit_date;
 
   // Get general repo data
@@ -139,54 +107,12 @@ for (const repo of repos) {
   // Pull repo description
   repo_overview["Description"] = repo_data["data"]["description"];
 
-  // Get the README
-  const readme = await OCTOKIT.request(
-    `GET /repos/${owner}/${repo_name}/readme`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
+  // Get repo README
+  repo_info["Readme"] = await getReadme(Octokit, owner, repo_name, branch);
 
-  // Convert the README to a normal string
-  const readme_contents = utf8.decode(atob(readme["data"]["content"]));
-  repo_info["Readme"] = readme_contents;
-
-  const envs = await OCTOKIT.request(
-    `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
-    {
-      owner: owner,
-      repo: repo_name,
-      ref: branch,
-      path: `/environment-files/`,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
-  );
-
-  repo_overview["Releases"] = [];
-
-  for (const env of envs["data"]) {
-    if (ENV_FILE_REGEX.test(env["name"])) {
-      // Strip the extension off the end of the name
-      const name = env["name"].substring(0, env["name"].indexOf(".yml"));
-      const split = name.split("-");
-
-      const distro = split[split.length - 2];
-      const epoch = split[split.length - 1];
-      const release = `${distro}-${epoch}`;
-
-      repo_overview["Releases"].push(release);
-      global_releases.add(release);
-    }
-  }
-
-  repo_overview["Releases"].sort(sortReleases);
+  // Get the releases this plugin is compatible with
+  repo_overview["Releases"] = getEnvironmentFiles(OCTOKIT, ENV_FILE_REGEX, owner, repo_name, branch);
+  global_releases = new Set([...global_releases, ...repo_overview["Releases"]]);
 
   repo_info = { ...repo_info, ...repo_overview };
 
@@ -205,54 +131,6 @@ overview["Date Fetched"] = new Date();
 
 global_releases = Array.from(global_releases);
 global_releases.sort(sortReleases);
-
-function sortReleases(a, b) {
-  const A = a.split("-");
-  const B = b.split("-");
-
-  const distroA = A[0];
-  const epochA = A[1];
-
-  const distroB = B[0];
-  const epochB = B[1];
-
-  const byEpoch = sortEpochs(epochA, epochB);
-
-  if (byEpoch === 0) {
-    if (distroA > distroB) {
-      return 1;
-    } else if (distroA < distroB) {
-      return -1;
-    }
-  }
-
-  return byEpoch;
-}
-
-function sortEpochs(a, b) {
-  const A = a.split(".");
-  const B = b.split(".");
-
-  const yearA = parseInt(A[0]);
-  const monthA = parseInt(A[1]);
-
-  const yearB = parseInt(B[0]);
-  const monthB = parseInt(B[1]);
-
-  if (yearA > yearB) {
-    return -1;
-  } else if (yearA < yearB) {
-    return 1;
-  }
-
-  if (monthA > monthB) {
-    return -1;
-  } else if (monthA < monthB) {
-    return 1;
-  }
-
-  return 0;
-}
 
 overview["Releases"] = global_releases;
 
