@@ -10,7 +10,7 @@ import {
   getEnvironmentFiles,
   sortReleases,
   getLibraryPlugins,
-} from "./util";
+} from "./util.js";
 
 // Paths we are writing to
 const ROOT_PATH = "/home/runner/work/library/library/static/json";
