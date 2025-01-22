@@ -1,4 +1,54 @@
 import utf8 from "utf8";
+import yaml from "js-yaml";
+
+// Where we are looking for plugin list
+const LIBRARY_PLUGINS_OWNER = "qiime2";
+const LIBRARY_PLUGINS_REPO = "library-plugins";
+const LIBRARY_PLUGINS_BRANCH = "main";
+
+// Env files are ignored if they do not match this regex
+const ENV_FILE_REGEX = new RegExp(
+  `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
+);
+
+// Get the plugins that are in the library
+export async function getLibraryPlugins(OCTOKIT) {
+  // Will hold the loaded yaml contents of the
+  const plugins = [];
+
+  const plugin_list = await OCTOKIT.request(
+    `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/`,
+    {
+      owner: LIBRARY_PLUGINS_OWNER,
+      repo: LIBRARY_PLUGINS_REPO,
+      path: "/plugins/",
+      ref: LIBRARY_PLUGINS_BRANCH,
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    },
+  );
+
+  for (const plugin of plugin_list["data"]) {
+    const plugin_file_name = plugin["name"];
+
+    const plugin_file = await OCTOKIT.request(
+      `GET /repos/${LIBRARY_PLUGINS_OWNER}/${LIBRARY_PLUGINS_REPO}/contents/plugins/${plugin_file_name}`,
+      {
+        owner: LIBRARY_PLUGINS_OWNER,
+        repo: LIBRARY_PLUGINS_REPO,
+        path: `/plugins/${plugin_file_name}`,
+        ref: LIBRARY_PLUGINS_BRANCH,
+        headers: {
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      },
+    );
+
+    const plugin_string = utf8.decode(atob(plugin_file["data"]["content"]));
+    plugins.push(yaml.load(plugin_string));
+  }
+}
 
 // Use GitHub API to get the latest commit of the specified branch of the
 // specified repo
@@ -18,7 +68,6 @@ export async function getLatestCommit(OCTOKIT, owner, repo_name, branch) {
 
   return commit;
 }
-
 
 // Use GitHub API to get the action runs on specified commit and report status
 //
@@ -57,7 +106,6 @@ export async function getRunsStatusOfCommit(OCTOKIT, owner, repo_name, sha) {
   return build_status;
 }
 
-
 // Use the GitHub API to pull the README then convert it to a utf string
 export async function getReadme(OCTOKIT, owner, repo_name, branch) {
   const readme = await OCTOKIT.request(
@@ -76,9 +124,14 @@ export async function getReadme(OCTOKIT, owner, repo_name, branch) {
   return utf8.decode(atob(readme["data"]["content"]));
 }
 
-
-export async function getEnvironmentFiles(OCTOKIT, ENV_FILE_REGEX, owner, repo_name, branch) {
-  let releases = []
+export async function getEnvironmentFiles(
+  OCTOKIT,
+  ENV_FILE_REGEX,
+  owner,
+  repo_name,
+  branch,
+) {
+  let releases = [];
 
   const envs = await OCTOKIT.request(
     `GET /repos/${owner}/${repo_name}/contents/environment-files/`,
@@ -110,7 +163,6 @@ export async function getEnvironmentFiles(OCTOKIT, ENV_FILE_REGEX, owner, repo_n
   return releases.sort(sortReleases);
 }
 
-
 // Sort QIIME 2 releases newest to oldest by epoch first then distro
 function sortReleases(a, b) {
   const A = a.split("-");
@@ -134,7 +186,6 @@ function sortReleases(a, b) {
 
   return byEpoch;
 }
-
 
 // Sort QIIME 2 epochs from newest to oldest
 function sortEpochs(a, b) {
