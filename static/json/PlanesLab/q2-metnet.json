@@ -1,7 +1,7 @@
 {
   "Commit Runs": {
     "status": 200,
-    "url": "https://api.github.com/repos/PlanesLab/q2-metnet/commits/12d5ef881914f8118d6714847c37da11a6e0a494/check-runs?owner=PlanesLab&repo=q2-metnet&head_sha=12d5ef881914f8118d6714847c37da11a6e0a494",
+    "url": "https://api.github.com/repos/PlanesLab/q2-metnet/commits/575fe8da6f9de8c66cdd8248a60df3fae922f540/check-runs?owner=PlanesLab&repo=q2-metnet&head_sha=575fe8da6f9de8c66cdd8248a60df3fae922f540",
     "headers": {
       "access-control-allow-origin": "*",
       "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset",
@@ -9,8 +9,8 @@
       "content-encoding": "gzip",
       "content-security-policy": "default-src 'none'",
       "content-type": "application/json; charset=utf-8",
-      "date": "Mon, 03 Feb 2025 17:06:06 GMT",
-      "etag": "W/\"617f475d9ddb31f77e96b1159e4d576264824f8a1e6829965ab2c126118ca6eb\"",
+      "date": "Mon, 03 Feb 2025 17:40:20 GMT",
+      "etag": "W/\"ee3f862e3192aff0e351c8a99227e0219976d5320d9079ece39b32ed4f4f2ef7\"",
       "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
       "server": "github.com",
       "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
@@ -21,12 +21,12 @@
       "x-frame-options": "deny",
       "x-github-api-version-selected": "2022-11-28",
       "x-github-media-type": "github.v3; format=json",
-      "x-github-request-id": "9380:E77CD:2F2250:5DF759:67A0F77E",
+      "x-github-request-id": "5840:1E4436:63B281:C76C17:67A0FF83",
       "x-ratelimit-limit": "5000",
-      "x-ratelimit-remaining": "4969",
+      "x-ratelimit-remaining": "4925",
       "x-ratelimit-reset": "1738605951",
       "x-ratelimit-resource": "core",
-      "x-ratelimit-used": "31",
+      "x-ratelimit-used": "75",
       "x-xss-protection": "0"
     },
     "data": { "total_count": 0, "check_runs": [] }
@@ -37,7 +37,7 @@
   "Branch": "main",
   "User Docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
   "Build Status": "passed",
-  "Commit Date": "2025-02-03T14:07:22Z",
+  "Commit Date": "2025-02-03T17:38:01Z",
   "Stars": 2,
   "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
   "Releases": ["amplicon-2024.10"]
