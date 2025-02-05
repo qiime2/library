@@ -128,7 +128,9 @@
  and number of stars -->
 <div id="container">
     <div id="banner">
-        This is a reimplementation of the QIIME 2 Library. The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://old-library.qiime2.org/">here</a>
+        This is a reimplementation of the QIIME 2 Library.
+        Learn how to add your plugin <a href="https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html">here</a>.
+        The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://old-library.qiime2.org/">here</a>.
     </div>
     {#await getOverview()}
         ...getting overview
