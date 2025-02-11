@@ -1,5 +1,16 @@
 {
   "Repos": {
+    "genome-sampler": {
+      "Plugin Owner": "caporaso-lab",
+      "Plugin Name": "genome-sampler",
+      "Branch": "dev",
+      "User Docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "Build Status": "passed",
+      "Commit Date": "2025-02-11T17:07:28Z",
+      "Stars": 5,
+      "Description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "Releases": ["tiny-2024.10"]
+    },
     "q2-amrfinderplus": {
       "Plugin Owner": "bokulich-lab",
       "Plugin Name": "q2-amrfinderplus",
@@ -51,7 +62,7 @@
       "User Docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
       "Build Status": "passed",
       "Commit Date": "2025-02-03T17:38:01Z",
-      "Stars": 2,
+      "Stars": 3,
       "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
       "Releases": ["amplicon-2024.10"]
     },
@@ -67,12 +78,13 @@
       "Releases": ["metagenome-2024.10"]
     }
   },
-  "Date Fetched": "2025-02-11T01:20:45.420Z",
+  "Date Fetched": "2025-02-11T18:45:22.040Z",
   "Releases": [
     "amplicon-2025.4",
     "amplicon-2024.10",
     "metagenome-2024.10",
     "pathogenome-2024.10",
+    "tiny-2024.10",
     "amplicon-2024.5"
   ]
 }
