@@ -25,7 +25,7 @@
     });
 
     function updateInstallInstructions(release: string) {
-      env_name = `qiime2-${release}`;
+      env_name = `${data.repo_info['Plugin Name']}-${release}`;
       env_filepath = `https://raw.githubusercontent.com/${data.repo_info['Plugin Owner']}/${data.repo_info['Plugin Name']}/refs/heads/${data.repo_info['Branch']}/environment-files/${data.repo_info['Plugin Name']}-qiime2-${release}.yml`
     }
 </script>
