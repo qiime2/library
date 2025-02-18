@@ -83,6 +83,8 @@
                     >
                         {#each data.repo_info["Releases"] as release}
                             <div
+                            role="button"
+                            tabindex="0"
                             class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800 focus:z-10
                             data-[highlighted]:bg-gray-300
                             data-[disabled]:opacity-50"
