@@ -8,9 +8,7 @@
     // This data comes from +page.ts
     export let data;
 
-    const default_release = data.repo_info["Releases"][0];
-    let selected_release = default_release;
-
+    let selected_release = data.repo_info["Releases"][0];
     let env_name: string = '<env-name>';
     let env_filepath: string = '<path-to-env-file>';
 
@@ -20,7 +18,7 @@
         helpers: { isSelected },
     } = createSelect<string>({
         forceVisible: true,
-        defaultSelected: default_release,
+        defaultSelected: selected_release,
         positioning: {
         placement: 'bottom',
         fitViewport: true,
