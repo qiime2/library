@@ -55,7 +55,6 @@
                 Install Instructions
             </h1>
             <div class="flex flex-col gap-1">
-                <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
                 <h2 class="block font-bold" use:melt={$label}>Desired Release</h2>
                 <button
                     class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
