@@ -22,6 +22,17 @@
       "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "Releases": ["pathogenome-2024.10"]
     },
+    "q2-annotate": {
+      "Plugin Owner": "bokulich-lab",
+      "Plugin Name": "q2-annotate",
+      "Branch": "main",
+      "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
+      "Build Status": "failed",
+      "Commit Date": "2025-02-18T14:37:23Z",
+      "Stars": 3,
+      "Description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "Releases": ["metagenome-2024.10"]
+    },
     "q2-assembly": {
       "Plugin Owner": "bokulich-lab",
       "Plugin Name": "q2-assembly",
@@ -65,20 +76,9 @@
       "Stars": 3,
       "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
       "Releases": ["amplicon-2024.10"]
-    },
-    "q2-moshpit": {
-      "Plugin Owner": "bokulich-lab",
-      "Plugin Name": "q2-moshpit",
-      "Branch": "main",
-      "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
-      "Build Status": "failed",
-      "Commit Date": "2025-02-18T14:37:23Z",
-      "Stars": 3,
-      "Description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "Releases": ["metagenome-2024.10"]
     }
   },
-  "Date Fetched": "2025-02-19T01:21:55.615Z",
+  "Date Fetched": "2025-02-19T18:08:26.265Z",
   "Releases": [
     "amplicon-2025.4",
     "amplicon-2024.10",
