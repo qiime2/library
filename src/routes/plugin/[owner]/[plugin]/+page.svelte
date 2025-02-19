@@ -1,13 +1,14 @@
 <script lang="ts">
     import "../../../../app.css";
-
-    import { createSelect, melt } from '@melt-ui/svelte';
-    import { fade } from 'svelte/transition';
     import { spaceSeperatedList } from "$lib/scripts/util";
     import SvelteMarkdown from "svelte-markdown";
+    import { createSelect, melt } from '@melt-ui/svelte';
+    import { fade } from 'svelte/transition';
 
+    // This data comes from +page.ts
     export let data;
 
+    let selected_release = data.repo_info["Releases"][0];
     let env_name: string = '<env-name>';
     let env_filepath: string = '<path-to-env-file>';
 
@@ -17,6 +18,7 @@
         helpers: { isSelected },
     } = createSelect<string>({
         forceVisible: true,
+        defaultSelected: selected_release,
         positioning: {
         placement: 'bottom',
         fitViewport: true,
@@ -24,9 +26,9 @@
         },
     });
 
-    function updateInstallInstructions(release: string) {
-      env_name = `qiime2-${release}`;
-      env_filepath = `https://raw.githubusercontent.com/${data.repo_info['Plugin Owner']}/${data.repo_info['Plugin Name']}/refs/heads/${data.repo_info['Branch']}/environment-files/${data.repo_info['Plugin Name']}-qiime2-${release}.yml`
+    $: {
+      env_name = `${data.repo_info['Plugin Name']}-${selected_release}`;
+      env_filepath = `https://raw.githubusercontent.com/${data.repo_info['Plugin Owner']}/${data.repo_info['Plugin Name']}/refs/heads/${data.repo_info['Branch']}/environment-files/${data.repo_info['Plugin Name']}-qiime2-${selected_release}.yml`
     }
 </script>
 
@@ -55,15 +57,17 @@
                 Install Instructions
             </h1>
             <div class="flex flex-col gap-1">
-                <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-                <h2 class="block font-bold" use:melt={$label}>Desired Release</h2>
+                <h2 class="block font-bold" use:melt={$label}>Desired Release:</h2>
+                <p>
+                    Choose the release of the plugin you would like to install (defaults to most recent).
+                </p>
                 <button
                     class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2
                     shadow transition-opacity hover:opacity-90"
                     use:melt={$trigger}
                     aria-label="Releases"
                 >
-                    {$selectedLabel || 'Select a release'}
+                    {selected_release}
                     <svg fill="none"
                         width="10"
                         height="10">
@@ -84,11 +88,13 @@
                     >
                         {#each data.repo_info["Releases"] as release}
                             <div
+                            role="button"
+                            tabindex="0"
                             class="relative cursor-pointer rounded-lg py-1 pl-8 pr-4 text-neutral-800 focus:z-10
                             data-[highlighted]:bg-gray-300
                             data-[disabled]:opacity-50"
                             use:melt={$option({ value: release, label: release })}
-                            on:click={() => updateInstallInstructions(release)}
+                            on:click={() => selected_release = release}
                             >
                                 <div class="check inline-block {$isSelected(release) ? 'opacity-100' : 'opacity-0'}">
                                     <svg fill="none"
@@ -107,18 +113,21 @@
                     </div>
                 {/if}
             </div>
-            <h2 class="font-bold my-4">
+            <h2 class="font-bold mt-4">
                 Install in new env:
             </h2>
             <p>
-                <span class="font-bold">Note: </span>Name can be changed to whatever you choose
+                Name can be changed to whatever you choose.
             </p>
             <code class="code">
                 conda env create --name {env_name} --file {env_filepath}
             </code>
-            <h2 class="font-bold my-4">
+            <h2 class="font-bold mt-4">
                 Install in existing env:
             </h2>
+            <p>
+                This env needs to be compatible with the chosen release of this plugin.
+            </p>
             <code class="code">
                 conda activate &lt;env-name&gt; # conda env you wish to install this plugin into<br><br>conda env update --file {env_filepath}
             </code>
