@@ -85,6 +85,7 @@
 </div>
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
     #buttons {
         @apply flex;
     }

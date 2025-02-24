@@ -4,7 +4,7 @@
     import CutOffList from "$lib/components/CutOffList.svelte";
     import { formatDate } from "$lib/scripts/util";
 
-    export let repo_overview: Object;
+    export let repo_overview: any;
 
     function getStatusColor() {
         let text_format = "text-white rounded px-2 font-bold ";
@@ -25,7 +25,7 @@
     }
 </script>
 
-<div class="repo-card">
+<div class="prose max-w-none repo-card rounded-2xl mb-2">
     <h1>
         <a href="/plugin/{repo_overview["Plugin Owner"]}/{repo_overview["Plugin Name"]}">
             {repo_overview["Plugin Owner"]}/{repo_overview["Plugin Name"]}
@@ -62,6 +62,7 @@
 </div>
 
 <style lang="postcss">
+@reference "tailwindcss/theme";
     .repo-card {
         @apply w-full
         border
@@ -84,12 +85,12 @@
 
     .container {
         @apply lg:grid
-        lg:grid-cols-[33%_33%_33%]
+        lg:grid-cols-[34%_33%_33%];
     }
 
     .container2 {
         @apply lg:grid
-        lg:grid-cols-[33%_67%]
+        lg:grid-cols-[33%_67%];
     }
 
     h1 {
