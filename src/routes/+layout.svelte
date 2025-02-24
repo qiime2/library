@@ -20,7 +20,7 @@
 </svelte:head>
 
 <NavBanner/>
-<nav id='navbar' class='pl-2'>
+<nav id='navbar' class='pl-2 scroll-edge'>
   <div class='flex max-width'>
     <a href='/' class='mr-auto'>
       <img id='navlogo' src='/q2library.svg' alt='QIIME 2 library logo' />
@@ -29,6 +29,7 @@
 </nav>
 <slot />
 <footer class='mt-10'></footer>
+
 <style lang='postcss'>
   @reference 'tailwindcss/theme';
   #navbar {

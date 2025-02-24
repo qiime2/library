@@ -1,7 +1,7 @@
 <script lang='ts'>
     export let autohide = false;
 </script>
-<header class="header" class:autohide>
+<header class="header scroll-edge" class:autohide>
   <div class="contents max-width">
     <nav class="title">
       <a href="https://qiime2.org"><h2>QIIME 2</h2></a>

@@ -8,9 +8,11 @@
 {#await data.data}
     Loading content.
 {:then data}
-<div class="max-width">
-    <div class="max-w-4xl mx-2 mt-10">
-        <MySt page={data}></MySt>
+<article class="scroll-edge">
+    <div class="max-width">
+        <div class="max-w-4xl mx-2 mt-10">
+            <MySt page={data}></MySt>
+        </div>
     </div>
-</div>
+</article>
 {/await}

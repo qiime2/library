@@ -11,6 +11,18 @@ html {
   font-family: Arial, sans-serif;
 }
 
+@layer utilities {
+  .scroll-edge {
+    padding-left: calc(100vw - 100%);
+  }
+  .max-width {
+    max-width: calc(1110px + 17em);
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0 0.67em;
+  }
+}
+
 a {
   text-decoration: underline;
 }
