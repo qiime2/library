@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @config "../tailwind.config.js";
+/* Tell Tailwind to search this package for class-names to compile into the build */
+@source "../node_modules/myst-to-react/";
 
 @import "./css/hover.css";
 @import "./css/typography.css";
