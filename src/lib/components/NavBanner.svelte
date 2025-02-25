@@ -68,6 +68,7 @@
   }
 
   a:hover, a:active {
+    color: white;
     text-decoration: underline;
   }
 
