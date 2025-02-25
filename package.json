@@ -20,6 +20,7 @@
     "@tailwindcss/postcss": "^4.0.7",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.7",
+    "myst-parser": "^1.5.11",
     "myst-to-react": "^0.13.7",
     "postcss": "^8.5.2",
     "react": "^18.3.1",
@@ -37,7 +38,6 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0",
-    "@humanspeak/svelte-markdown": "^0.7.18",
     "js-yaml": "^4.1.0",
     "octokit": "^4.1.2",
     "prettier": "^3.5.2",
