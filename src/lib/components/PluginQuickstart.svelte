@@ -28,8 +28,8 @@
 
 </script>
 
-<section class='border-l-violet-500 bg-white border-l-4 rounded overflow-clip shadow-md'>
-    <div class='px-2 py-1 bg-violet-100 not-prose text-lg flex items-center'>
+<section class='border-l-violet-500 bg-white border-l-4 rounded overflow-clip shadow-md prose-sm'>
+    <div class='px-2 py-1 bg-violet-100 not-prose text-base flex items-center'>
         <div class="flex flex-row gap-2 items-center">
             <span class="mt-1 mb-1 font-bold" use:melt={$label}>Quickstart install for:</span>
             <button class="flex min-w-[220px] items-center justify-between rounded-lg bg-white px-3 shadow-inner transition-opacity hover:opacity-90 border border-gray-200"
