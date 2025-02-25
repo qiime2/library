@@ -8,4 +8,6 @@
 
 </script>
 
-<MyStMinimal ast={data.ast}></MyStMinimal>
+<article class="prose lg:prose-lg">
+    <MyStMinimal ast={data.ast}></MyStMinimal>
+</article>
