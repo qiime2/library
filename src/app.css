@@ -7,17 +7,25 @@
 @import "./css/hover.css";
 @import "./css/typography.css";
 
+/* disable dark mode "temporarily" as the root does not apply data-theme at this time */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 html {
   font-family: Arial, sans-serif;
 }
 
 @layer utilities {
   .scroll-edge {
-    padding-left: calc(100vw - 100%);
+    padding-left: 0px;
   }
+  @media screen and (min-width: 1382px) {
+    .scroll-edge {
+      padding-left: calc(100vw - 100%);
+    }
+  }
+
   .max-width {
     max-width: calc(1110px + 17em);
-    width: 100vw;
     margin: 0 auto;
     padding: 0 0.67em;
   }
