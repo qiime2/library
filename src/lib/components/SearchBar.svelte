@@ -26,6 +26,7 @@
 <input id="searchInput" placeholder="search" value={overview_store.search_filter} on:input={applySearchFilter} />
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
     #searchInput {
         @apply border
         border-solid
