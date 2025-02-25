@@ -8,7 +8,7 @@ const OCTOKIT = github.getOctokit(process.argv[2]);
 // Where we are looking for plugin list
 const LIBRARY_PLUGINS_OWNER = "qiime2";
 const LIBRARY_PLUGINS_REPO = "library-plugins";
-const LIBRARY_PLUGINS_BRANCH = "main";
+const LIBRARY_PLUGINS_BRANCH = "add-q2-micom";
 
 // Env files are ignored if they do not match this regex
 const ENV_FILE_REGEX = new RegExp(
