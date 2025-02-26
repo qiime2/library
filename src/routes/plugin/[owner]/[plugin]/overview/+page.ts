@@ -6,8 +6,8 @@ export const load: PageLoad = async ({ fetch, parent }) => {
   docs = docs.endsWith("/") ? docs.slice(0, docs.length - 1) : docs;
 
   let xref_id = data.repo_info["Plugin Name"];
-  if (xref_id.slice(0, 2) == "q2-") {
-    xref_id = xref_id.slice(2);
+  if (xref_id.slice(0, 3) == "q2-") {
+    xref_id = xref_id.slice(3);
   }
   // q2-fmt would become
   // q2-plugin-fmt

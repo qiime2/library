@@ -7,7 +7,7 @@
 {#each data.list as tutorial}
 <div class='border-l-4 rounded border-l-blue-600 overflow-clip shadow-md'>
     <h2 class='bg-blue-50 px-2 text-lg py-2'><a href={tutorial.url}>{tutorial.title}</a></h2>
-    <div class="px-2 pb-1">
+    <div class="px-4 pb-1">
         <a href={tutorial.url}>{tutorial.url}</a>
         <p>{tutorial.description || "(No description available.)"}</p>
     </div>
