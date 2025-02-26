@@ -14,6 +14,15 @@ html {
   font-family: Arial, sans-serif;
 }
 
+[aria-label="Copy code to clipboard"] {
+  @apply bg-white rounded-full p-1;
+}
+
+div:has(> pre.hljs > code) {
+  @apply border border-gray-200 rounded-md;
+  background-color: #f8f8f8;
+}
+
 @layer utilities {
   .scroll-edge {
     padding-left: 0px;
@@ -41,7 +50,8 @@ a:hover,
 }
 
 h1 a,
-h2 a {
+h2 a,
+h3 a {
   font-weight: bold;
   text-decoration: none;
 }
@@ -49,6 +59,8 @@ h2 a {
 h1 a:hover,
 h1 a:active,
 h2 a:hover,
-h2 a:active {
+h2 a:active,
+h3 a:hover,
+h3 a:active {
   text-decoration: underline;
 }

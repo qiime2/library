@@ -1,9 +1,11 @@
 import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ fetch }) => {
+  const baseurl = "https://resources.qiime2.org";
   return {
-    data: await fetch("https://resources.qiime2.org/index.json").then(
-      (request) => request.json(),
+    baseurl,
+    data: await fetch(`${baseurl}/index.json`).then((request) =>
+      request.json(),
     ),
   };
 };

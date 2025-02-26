@@ -1,5 +1,2410 @@
 {
-  "Readme": "# q2-fmt (fecal microbiota transplant)\nNote: This software is in **Beta release**. It is ready for users but interfaces are still subject to change.\n![](https://github.com/qiime2/q2-fmt/actions/workflows/ci-dev.yaml/badge.svg)\n\nq2-fmt is a [QIIME2](https://qiime2.org/) plugin providing all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! \n\nTo learn more about installing and using q2-fmt, refer to the [q2-fmt documentation](https://q2-fmt.readthedocs.io/)\n## Demo\n[![](https://raw.githubusercontent.com/qiime2/q2-fmt/master/demo/screenshot.png)\n**Interactive Link**](https://view.qiime2.org/visualization/?type=html&src=https%3A%2F%2Fraw.githubusercontent.com%2Fqiime2%2Fq2-fmt%2Fmaster%2Fdemo%2Fraincloud-baseline0.qzv)\n",
+  "Readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fmt (fecal microbiota transplant)"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note: This software is in "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Beta release"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". It is ready for users but interfaces are still subject to change.\n"
+          },
+          {
+            "type": "image",
+            "url": "https://github.com/qiime2/q2-fmt/actions/workflows/ci-dev.yaml/badge.svg"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fmt is a "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " plugin providing all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants!"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To learn more about installing and using q2-fmt, refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://q2-fmt.readthedocs.io/",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-fmt documentation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Demo"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/visualization/?type=html&src=https%3A%2F%2Fraw.githubusercontent.com%2Fqiime2%2Fq2-fmt%2Fmaster%2Fdemo%2Fraincloud-baseline0.qzv",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://raw.githubusercontent.com/qiime2/q2-fmt/master/demo/screenshot.png"
+              },
+              {
+                "type": "text",
+                "value": "\n"
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interactive Link"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Github Releases": [
+    {
+      "tag_name": "2024.11.1",
+      "html_url": "https://github.com/qiime2/q2-fmt/releases/tag/2024.11.1",
+      "name": "q2-fmt-2024.11.1-beta",
+      "published_at": "2024-12-12T21:51:56Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "*We fixed a bug that caused an numpy error in "
+              },
+              {
+                "type": "inlineCode",
+                "value": "qiime fmt ped-permutation-test"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: samples dropped by rarefying are in the table when mismatched pairs are made. by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/117",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#117"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/117",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "117"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/q2-fmt/compare/2024.11.0...2024.11.1",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2024.11.0...2024.11.1"
+                  }
+                ],
+                "urlSource": "https://github.com/qiime2/q2-fmt/compare/2024.11.0...2024.11.1",
+                "data": {
+                  "kind": "issue",
+                  "org": "qiime2",
+                  "repo": "q2-fmt",
+                  "issue_number": "2024.11.0...2024.11.1"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2024.11.0",
+      "html_url": "https://github.com/qiime2/q2-fmt/releases/tag/2024.11.0",
+      "name": "q2-fmt-2024.11.0-beta",
+      "published_at": "2024-11-19T00:19:32Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "This is q2-fmt’s official Beta Release!\nHere we present all the methods needed for assessing engraftment extent following FMT. 🎉"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "New Actions include:"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "start": 1,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "PEDF (Proportional Engraftment of Donor Features)"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "PEDF-permutation-test"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "PPRF (Proportion of Persistent Recipient Features)"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "PRDF (Proportion of Recipients with Donor Features)"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Detect-donor-indicators"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "a heatmap Visualization!"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "For more info be sure to checkout our offical tutorial! https://q2-fmt.readthedocs.io/en/latest/intro.html\nIf you have any questions please reach out on the q2-forum! https://forum.qiime2.org/"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: PEDS method, Heatmap VIZ and Associated Unit tests by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/39",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#39"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/39",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "39"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: refactor for sample peds for implementation of Feature peds by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/48",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#48"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/48",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "48"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: Refactoring peds-heatmap and the peds pipeline to split taxonomic labels by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/68",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#68"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/68",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "68"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Update: q2-fmt to py3.9 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/76",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#76"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/76",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "76"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: group-timepoints/engraftment pipeline take to_baseline param by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/71",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#71"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/71",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "71"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: Adds 4th dimension of Sample_Size to Heatmap by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/79",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#79"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/79",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "79"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: group-timepoints to create Dist1D[nestedOrdered] by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/78",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#78"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/78",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "78"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: Add choices to to_distance parameter  by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/83",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#83"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/83",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "83"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: Added command descriptions to q2-fmt command  by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/75",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#75"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/75",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "75"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: engraftment to CC by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/88",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#88"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/88",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "88"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: peds-simulation action by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/58",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#58"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/58",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "58"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: Fixes bug were fdr correction was handed an float instead of a list. by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/90",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#90"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/90",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "90"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: Add more bumpers and tests to cc "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "--to-baseline"
+                  },
+                  {
+                    "type": "text",
+                    "value": " by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/89",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#89"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/89",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "89"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: minor fixes from working with Jeff by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/91",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#91"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/91",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "91"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: q2-fmt ci by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/92",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#92"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/92",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "92"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: goodies for library by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/98",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#98"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/98",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "98"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: PPRS action by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/86",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#86"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/86",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "86"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: q2-fmt tutorial fixes by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/99",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#99"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/99",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "99"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: title is metadata.index.name by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/102",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#102"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/102",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "102"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Reformat for new library spec by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/103",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#103"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/103",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "103"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: updates to be compatible with q2-stats by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/104",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#104"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/104",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "104"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "add content for readthedocs builds by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/105",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#105"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/105",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "105"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "add templated Jupyter Book by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/106",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#106"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/106",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "106"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ADD: detect donor indicators pipeline by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/109",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#109"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/109",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "109"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "REF: PEDs/PEDS Associated Methods  by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/101",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#101"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/101",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "101"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Reformat example data away from frictionless by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/110",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#110"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/110",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "110"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "creating q2-Fmt tutorial by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/107",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#107"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/107",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "107"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: Rename sample-peds, feature-peds, pprs and peds-simulation  by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/111",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#111"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/111",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "111"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "fixes q2-fmt tutorial by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/112",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#112"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/112",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "112"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Update _config.yml by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/cherman2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@cherman2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/113",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#113"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/113",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "113"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/q2-fmt/compare/2023.5.0...2024.11",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2023.5.0...2024.11"
+                  }
+                ],
+                "urlSource": "https://github.com/qiime2/q2-fmt/compare/2023.5.0...2024.11",
+                "data": {
+                  "kind": "issue",
+                  "org": "qiime2",
+                  "repo": "q2-fmt",
+                  "issue_number": "2023.5.0...2024.11"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "0.1.dev0",
+      "html_url": "https://github.com/qiime2/q2-fmt/releases/tag/0.1.dev0",
+      "name": "Pre-release alpha",
+      "published_at": "2022-05-04T17:37:05Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FEAT/IMP: refactoring group_timepoints and adding mann-whitney & wilcoxon significance tests by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FEAT: adding raincloud plot viz by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/3",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/3",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "3"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: raincloud plots by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/5",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#5"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/5",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "5"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: adding engraftment pipeline by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/4",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#4"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/4",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "4"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: add stats table to rainclouds by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/7",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#7"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/7",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "7"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "TEST: adding unit tests and usage examples for wilcoxon method and engraftment pipeline by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/6",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#6"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/6",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "6"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ex: working usage example for mann-whitney-u by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/8",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#8"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/8",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "8"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "TEST: stats unit tests for mann-whitney-u and wilcoxon-srt by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/11",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#11"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/11",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "11"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "LINT/CI: adding ci and linting cleanup by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/17",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#17"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/17",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "17"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-fmt/pull/5",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#5"
+                      }
+                    ],
+                    "urlSource": "https://github.com/qiime2/q2-fmt/pull/5",
+                    "data": {
+                      "kind": "issue",
+                      "org": "qiime2",
+                      "repo": "q2-fmt",
+                      "issue_number": "5"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": https://github.com/qiime2/q2-fmt/commits/0.1.dev0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "Plugin Owner": "qiime2",
   "Plugin Name": "q2-fmt",
   "Branch": "dev",

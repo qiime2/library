@@ -13,11 +13,11 @@
 
   const ast = $derived(u('div', key({class: '-my-5'}), [u('tabSet', key(), [
       u('tabItem', key({title: '[Fresh Install]'}), [
-          u('code', key({lang: 'bash', class: '!my-3 !bg-gray-100'}), create),
+          u('code', key({lang: 'bash', class: '!my-3'}), create),
       ]),
       u('tabItem', key({title: '[Update Existing]'}), [
           u('paragraph', key(), [u('text', key(), `Activate your environment (${base_env}) and run:`)]),
-          u('code', key({lang: 'bash', class: '!mb-3 !-mt-3 !bg-gray-100'}), update),
+          u('code', key({lang: 'bash', class: '!mb-3 !-mt-3'}), update),
       ])
   ])]));
 

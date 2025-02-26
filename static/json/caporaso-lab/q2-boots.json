@@ -1,5 +1,138 @@
 {
-  "Readme": "# q2-boots 🥾\n\n[![Documentation Status](https://readthedocs.org/projects/q2-boots/badge/?version=latest)](https://q2-boots.readthedocs.io/en/latest/?badge=latest)\n\n<img src=\"https://raw.githubusercontent.com/caporaso-lab/q2-boots/refs/heads/main/images/q2-boots-ai-art.png\" width=500 alt=\"Boots covered in cartoony microorganisms\" align=\"right\">\n\nq2-boots is a [QIIME 2](https://qiime2.org) plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.\nTo learn how to install, use, or get help with q2-boots, refer to the [q2-boots documentation](https://q2-boots.readthedocs.io/en/latest/).\n",
+  "Readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-boots 🥾"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://q2-boots.readthedocs.io/en/latest/?badge=latest",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://readthedocs.org/projects/q2-boots/badge/?version=latest",
+                "alt": "Documentation Status"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "html",
+        "value": "<img src=\"https://raw.githubusercontent.com/caporaso-lab/q2-boots/refs/heads/main/images/q2-boots-ai-art.png\" width=500 alt=\"Boots covered in cartoony microorganisms\" align=\"right\">"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-boots is a "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.\nTo learn how to install, use, or get help with q2-boots, refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://q2-boots.readthedocs.io/en/latest/",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-boots documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "Github Releases": [
+    {
+      "tag_name": "2024.10.beta",
+      "html_url": "https://github.com/caporaso-lab/q2-boots/releases/tag/2024.10.beta",
+      "name": "2024.10.beta",
+      "published_at": "2024-11-04T19:26:05Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "2024.5.beta",
+      "html_url": "https://github.com/caporaso-lab/q2-boots/releases/tag/2024.5.beta",
+      "name": "2024.5.beta",
+      "published_at": "2024-08-12T00:19:50Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "0.0.1",
+      "html_url": "https://github.com/caporaso-lab/q2-boots/releases/tag/0.0.1",
+      "name": "0.0.1",
+      "published_at": "2024-04-17T00:51:34Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Initial release of q2-boots"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "no-vis-collections",
+      "html_url": "https://github.com/caporaso-lab/q2-boots/releases/tag/no-vis-collections",
+      "name": "No Visualization Collections",
+      "published_at": "2024-04-17T18:23:14Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Backwards compatible branch with no visualization collections."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "Plugin Owner": "caporaso-lab",
   "Plugin Name": "q2-boots",
   "Branch": "main",

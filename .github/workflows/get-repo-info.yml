@@ -24,15 +24,11 @@ jobs:
 
       - name: Install deps
         run: |
-          npm install @actions/core
-          npm install @actions/github
-          npm install utf8
-          npm install prettier
+          npm intall
 
       - name: Get Repo Info
         run: |
-          node .github/scripts/GetRepoInfo.js ${{ secrets.GITHUB_TOKEN }}
-          npx prettier --plugin-search-dir ./static/json --write ./static/json
+          npm run update
 
       - name: Commit Repo Changes
         run: |

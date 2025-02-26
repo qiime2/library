@@ -1,5 +1,1436 @@
 {
-  "Readme": "# q2-metnet\n\nQIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota.\nRead more about the method in our [paper](https://academic.oup.com/bioinformatics/article/40/11/btae455/7715876).\n\n# Installing\n\n## Creating a conda environment with QIIME2 and q2-metnet\n\n```\nconda env create \\\n -n q2-metnet \\\n -f https://raw.githubusercontent.com/PlanesLab/q2-metnet.git/main/environment-files/q2-metnet-qiime2-amplicon-2024.10.yml\n```\n\n## Using an existing QIIME2 environment\n\nOnce you create your QIIME2 environment, you can install this plugin by cloning this repo and installing manually. To clone the repo:\n\n```\ngit clone https://github.com/PlanesLab/q2-metnet.git\n```\n\nTo install from this repo, check to be into the main directory (running the `ls` command the setup.py file must be displayed), and run:\n\n```\npython setup.py install\n```\n\nThen, update the plugin cache by typing:\n\n```\nqiime dev refresh-cache\n```\n\nYou can check that the installation worked by typing `qiime` on the command line.\nThe `metnet` plugin should show up in the list of available plugins.\n\n# Using the plugin\n\nThere are available four methods in this plugin: \n- `generateFeatures`, which creates the tables of normalized scores for any reaction and subsystem present in the selected metabolic reconstruction across the different samples under study;\n- `differentialReactions`, which computes a differential activity analysis about any kind of reaction for the different conditions under analysis;\n- `differentialExchanges`, which computes a differential activity analysis about exchange reactions for the different conditions under analysis;\n- `differentialSubSystems`, which computes a differential activity analysis about subsystems for the different conditions under analysis;\n- `plotClusteMap`, which permits to visualize different samples by a hierarchically-clustered heatmap;\n- `plotPCA`, which allows to visualize different samples by conducting a Principal Component Analysis;\n- `plotBoxplot`, which generates boxplot of both reaction or subsystem scores to visualize differences between conditions.\n\n## Preparing your data\n\nYou'll need to prepare your ASV (OTU) table, respective taxonomical assignation and metadata file for use with this plugin.\nYour ASV(OTU) table should be imported as a [QIIME 2 artifact](https://docs.qiime2.org/2019.1/concepts/#data-files-qiime-2-artifacts), with **ASVs (OTUs) in rows** and **samples in columns**.\nSimilarly, the taxonomical assignation should be imported as [QIIME 2 artifact](https://docs.qiime2.org/2019.1/concepts/#data-files-qiime-2-artifacts).\n\nMetadata should be a tab-delimited file with a column that contains samples labeled depending on the type of samples they are (for example: `case` and `control`).\nThis column need to be defined to permit the plugin to compute the differential activity analysis.\n\nIf your OTU table is already a QIIME 2 artifact, you can skip directly to running the code.\nOtherwise, follow the instructions on the QIIME 2 webpage to use your own tab-delimited OTU table.\n\n## Generate the normalized scores tables\n\nYou then run the `generateFeatures` script from the `metnet` qiime plugin. The `AGREDA` and `s` parameter of `--p-selection` and `--p-level` are the default parameters.\nThe parameter `--p-selection` can be chosen between `AGREDA` (default) and `AGORAv103`.\nThe parameter `--p-level` correspond to the taxonomic depth, ranging from kingdom (`k`) to species (`s`, default).\n\n```\nqiime metnet generateFeatures \\\n\t--i-frequency ../asv_table.asv.qza \\\n\t--i-taxa ../assigned_taxonomy.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ../output_reactions.qza \\\n\t--o-subsystems ../output_subsystems.qza \\\n\t--o-xmatrix ./output_X_matrix.qza\n```\n\n## Calculate differential analysis scores for exchange reactions\n\nYou then run the `differentialExchanges` script from the `metnet` qiime plugin.\nThe parameter `--p-condition-name` represents the category of the samples related to the condition state in the metadata column.\nThe parameter `--p-control-name` represents the category of the samples related to the control state in the metadata column.\nThe parameter `--p-selection-model` corresponds to the same metabolic reconstruction used in the table generation (`AGREDA` (default), `AGORAv103`).\nThe parameter `--p-input-interest` defines if the focus is just on those exchange that can be input (and may be output as well) or just output (default = True).\n\n```\nqiime metnet differentialExchanges \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--p-input-interest True \\\n\t--o-differential-analysis ../exchanges_differential.qza\n```\n\n## Calculate differential analysis scores for any kind of reactions\n\nYou then run the `differentialReactions` script from the `metnet` qiime plugin.\nThe parameter `--p-condition-name` represents the category of the samples related to the condition state in the metadata column.\nThe parameter `--p-control-name` represents the category of the samples related to the control state in the metadata column.\nThe parameter `--p-selection-model` corresponde to the same metabolic reconstruction used in the table generation (`AGREDA` (default), `AGORAv103`).\n\n```\nqiime metnet differentialReactions \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ../reactions_differential.qza\n```\n\n## Calculate differential analysis scores for subsystems\n\nYou then run the `differentialSubSystems` script from the `metnet` qiime plugin.\nThe parameter `--p-condition-name` represents the category of the samples related to the condition state in the metadata column.\nThe parameter `--p-control-name` represents the category of the samples related to the control state in the metadata column.\n\n```\nqiime metnet differentialSubSystems \\\n\t--i-subsystems ../output_subsystems.qza \t\n\t--m-metadata-file ../metadata.tsv \t\n\t--m-metadata-column columnLabel\\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--o-differential-analysis ../subsystems_differential.qza\n```\n\n## Generate the hierarchically-clustered heatmap\n\nYou then run the `plotClusteMap` script from the `metnet` qiime plugin.\nThe `--i-table` can be the normalized scores table for reactions or subsystems.\nThe input `--m-sample-metadata-file` and the specification of the `--m-sample-metadata-column` define the label groups.\nIt is possible to introduce parameters such as metrics, methods, color_scheme, title etc, not present below.\n\n```\nqiime metnet plotClusteMap \n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../clustermap.qzv\n```\n\n## Compute and visualize the Principal Component Analysis\n\nYou then run the `plotPCA` script from the `metnet` qiime plugin.\nThe `--i-table` can be the normalized scores table for reactions or subsystems.\nThe input `--m-sample-metadata-file` and the specification of the `--m-sample-metadata-column` define the label groups.\nIt is possible to introduce parameters such as color_scheme, title and individual point label (boolean, default = False) not present below.\n```\nqiime metnet plotPCA \\\n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../pca.qzv\n```\n\n## Generate the boxplots\n\nYou then run the `plotBoxplot` script from the `metnet` qiime plugin.\nThe `--i-table` can be the normalized scores table for reactions or subsystems.\nThe `--i-differentialresults` represents the differential activity analysis corresponding to exchanges, reactions or subsystems.\nThe input `--m-sample-metadata-file` and the specification of the `--m-sample-metadata-column` define the label groups.\nThe parameter `--p-condition-name` represents the category of the samples related to the condition state in the metadata column.\nThe parameter `--p-control-name` represents the category of the samples related to the control state in the metadata column.\nThe parameter `--p-namefeature` represents the name of the exchange, reaction or subsystem for which we generate the boxplot. The name must be extracted exactly from the differential activity table.\nIt is possible to define a title.\n\n```\nqiime metnet plotBoxplot \\\n\t--i-table ../output_reactions.qza \\\n\t--i-differentialresults ../exchanges_differential.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-namefeature 'nameExchange' \\\n\t--o-visualization ../boxplot.qzv\n```\n\n## Test files and application\n\nThe **test** folder contains all the input data sources to replicate the manuscript results. To run the following tutorial, we will need the following files:\n+ **asv_table.qza:** feature table with microbial abundances, where rows correspond to each sequence and columns to the different samples. The column **ID** stores the identificators of each sequence (*e.g.* ASV_1).\n+ **taxa.qza:** contains the taxonomic lineage of each sequence. The column **ID** stores the identificators of each sequence, which are written in the same order as in the feature table rows.\n+ **meta.tsv:** file including sample phenotype data. The rows correspond to each sample and are written in the same order as the feature table columns.\n\nIn order to use your own data, please refer to [QIIME2 documentation](https://docs.qiime2.org/2023.7/semantic-types/#common-semantic-types) to check allowed column headers. In any case, you can use the same columnn headers as in this tutorial files. Once QIIME2 and q2-metnet have been successfully installed, the first step is to generate the reactions and subsystem normalized activity scores of our data. This step may take a couple of minutes to be performed.\n\n```\nqiime metnet generateFeatures \\\n\t--i-frequency ./test/asv_table.qza \\\n\t--i-taxa ./test/taxa.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ./rxns_scores.qza \\\n\t--o-subsystems ./subs_scores.qza \\\n\t--o-xmatrix ./Xmatrix.qza\n```\n\nBy the selection of parameters `--p-selection` and `--p-level` we decided to map our different taxonomies to the AGREDA database, until the species level. At this point, the normalized activity scores can be applied to perform a PCA and classify samples. As shown in the **meta.tsv** file, the different clinical conditions are stored in the **Condition** column. Then, we can generate a PCA of our samples and all the reactions scores by the following command. Below is displayed the correspondent figure. Remember that any **qzv** file can be displayed at [QIIME2 View](https://view.qiime2.org/).\n\n```\nqiime metnet plotPCA \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_pca.qzv\n```\n\n<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/pca.png\">\n\nAdditionally, a hierarchically-clustered heatmap can be generated by running the `plotClusteMap`function. In the following example, we are going to generate the heatmap of the reaction scores across samples. Following, the generated figure is shown.\n\n```\nqiime metnet plotClusteMap \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_hclust.qzv\n```\n\n<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/clustermap.png\">\n\nWe are able to show that the normalized activity scores for some of these reactions are altered through the different clinical conditions of our dataset. We are now going to investigate deeper these differences. The different clinical conditions of our data are **Allergic**, **Celiac**, **Lean** and **Obese**, where **Lean** can be considered as the control state. In this example, we are now going to check the differentially expressed reactions and subsystems between **Celiac** and **Lean** samples.\n\n```\nqiime metnet differentialReactions \\\n\t--i-reactions ./rxns_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ./diff_reactions.qza\n```\n```\nqiime metnet differentialSubSystems \\\n\t--i-subsystems ./subs_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--o-differential-analysis ./diff_subs.qza\n```\n```\nqiime metnet differentialExchanges \\\n\t--i-reactions ./rxns_scores.qza \\\n \t--m-metadata-file ./test/meta.tsv \\\n  \t--m-metadata-column Condition \\\n   \t--p-condition-name Celiac \\\n    \t--p-control-name Lean \\\n       \t--o-differential-analysis ./diff_ex.qza\n```\n\nFinally, the differential activity score of a given feature (reaction or subsystem) can be displayed by means of the `plotBoxplot`function. In the following example, we are going to generate the boxplot of the **Bile acid metabolism** subsytem across samples of the **Celiac** and **Lean** condition.\n```\nqiime metnet plotBoxplot \\\n\t--i-table ./subs_scores.qza \\\n\t--i-differentialresults ./diff_subs.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-namefeature \"S144 | Bile acid metabolism\" \\\n\t--o-visualization ./sub_boxplot.qzv\n```\n<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/boxplot.PNG\">\n\nRemember that you can run the following command and visualize the output file [here](https://view.qiime2.org/) to select the different values for '--p-name-feature'.\n```\nqiime metadata tabulate \\\n    --m-input-file ./diff_subs.qza \\\n    --o-visualization ./diff_subs.qzv\n```",
+  "Readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-metnet"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota.\nRead more about the method in our "
+          },
+          {
+            "type": "link",
+            "url": "https://academic.oup.com/bioinformatics/article/40/11/btae455/7715876",
+            "children": [
+              {
+                "type": "text",
+                "value": "paper"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installing"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Creating a conda environment with QIIME2 and q2-metnet"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda env create \\\n -n q2-metnet \\\n -f https://raw.githubusercontent.com/PlanesLab/q2-metnet.git/main/environment-files/q2-metnet-qiime2-amplicon-2024.10.yml"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using an existing QIIME2 environment"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Once you create your QIIME2 environment, you can install this plugin by cloning this repo and installing manually. To clone the repo:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "git clone https://github.com/PlanesLab/q2-metnet.git"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To install from this repo, check to be into the main directory (running the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "ls"
+          },
+          {
+            "type": "text",
+            "value": " command the setup.py file must be displayed), and run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "python setup.py install"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then, update the plugin cache by typing:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime dev refresh-cache"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can check that the installation worked by typing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime"
+          },
+          {
+            "type": "text",
+            "value": " on the command line.\nThe "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " plugin should show up in the list of available plugins."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using the plugin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There are available four methods in this plugin:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "generateFeatures"
+              },
+              {
+                "type": "text",
+                "value": ", which creates the tables of normalized scores for any reaction and subsystem present in the selected metabolic reconstruction across the different samples under study;"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "differentialReactions"
+              },
+              {
+                "type": "text",
+                "value": ", which computes a differential activity analysis about any kind of reaction for the different conditions under analysis;"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "differentialExchanges"
+              },
+              {
+                "type": "text",
+                "value": ", which computes a differential activity analysis about exchange reactions for the different conditions under analysis;"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "differentialSubSystems"
+              },
+              {
+                "type": "text",
+                "value": ", which computes a differential activity analysis about subsystems for the different conditions under analysis;"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "plotClusteMap"
+              },
+              {
+                "type": "text",
+                "value": ", which permits to visualize different samples by a hierarchically-clustered heatmap;"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "plotPCA"
+              },
+              {
+                "type": "text",
+                "value": ", which allows to visualize different samples by conducting a Principal Component Analysis;"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "plotBoxplot"
+              },
+              {
+                "type": "text",
+                "value": ", which generates boxplot of both reaction or subsystem scores to visualize differences between conditions."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Preparing your data"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You’ll need to prepare your ASV (OTU) table, respective taxonomical assignation and metadata file for use with this plugin.\nYour ASV(OTU) table should be imported as a "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2019.1/concepts/#data-files-qiime-2-artifacts",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 artifact"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", with "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "ASVs (OTUs) in rows"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "samples in columns"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nSimilarly, the taxonomical assignation should be imported as "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2019.1/concepts/#data-files-qiime-2-artifacts",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 artifact"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Metadata should be a tab-delimited file with a column that contains samples labeled depending on the type of samples they are (for example: "
+          },
+          {
+            "type": "inlineCode",
+            "value": "case"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "control"
+          },
+          {
+            "type": "text",
+            "value": ").\nThis column need to be defined to permit the plugin to compute the differential activity analysis."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If your OTU table is already a QIIME 2 artifact, you can skip directly to running the code.\nOtherwise, follow the instructions on the QIIME 2 webpage to use your own tab-delimited OTU table."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Generate the normalized scores tables"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "generateFeatures"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin. The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGREDA"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "s"
+          },
+          {
+            "type": "text",
+            "value": " parameter of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-selection"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-level"
+          },
+          {
+            "type": "text",
+            "value": " are the default parameters.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-selection"
+          },
+          {
+            "type": "text",
+            "value": " can be chosen between "
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGREDA"
+          },
+          {
+            "type": "text",
+            "value": " (default) and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGORAv103"
+          },
+          {
+            "type": "text",
+            "value": ".\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-level"
+          },
+          {
+            "type": "text",
+            "value": " correspond to the taxonomic depth, ranging from kingdom ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "k"
+          },
+          {
+            "type": "text",
+            "value": ") to species ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "s"
+          },
+          {
+            "type": "text",
+            "value": ", default)."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet generateFeatures \\\n\t--i-frequency ../asv_table.asv.qza \\\n\t--i-taxa ../assigned_taxonomy.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ../output_reactions.qza \\\n\t--o-subsystems ../output_subsystems.qza \\\n\t--o-xmatrix ./output_X_matrix.qza"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Calculate differential analysis scores for exchange reactions"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "differentialExchanges"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-condition-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-control-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-selection-model"
+          },
+          {
+            "type": "text",
+            "value": " corresponds to the same metabolic reconstruction used in the table generation ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGREDA"
+          },
+          {
+            "type": "text",
+            "value": " (default), "
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGORAv103"
+          },
+          {
+            "type": "text",
+            "value": ").\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-input-interest"
+          },
+          {
+            "type": "text",
+            "value": " defines if the focus is just on those exchange that can be input (and may be output as well) or just output (default = True)."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet differentialExchanges \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--p-input-interest True \\\n\t--o-differential-analysis ../exchanges_differential.qza"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Calculate differential analysis scores for any kind of reactions"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "differentialReactions"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-condition-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-control-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-selection-model"
+          },
+          {
+            "type": "text",
+            "value": " corresponde to the same metabolic reconstruction used in the table generation ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGREDA"
+          },
+          {
+            "type": "text",
+            "value": " (default), "
+          },
+          {
+            "type": "inlineCode",
+            "value": "AGORAv103"
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet differentialReactions \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ../reactions_differential.qza"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Calculate differential analysis scores for subsystems"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "differentialSubSystems"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-condition-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-control-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the control state in the metadata column."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet differentialSubSystems \\\n\t--i-subsystems ../output_subsystems.qza \t\n\t--m-metadata-file ../metadata.tsv \t\n\t--m-metadata-column columnLabel\\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--o-differential-analysis ../subsystems_differential.qza"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Generate the hierarchically-clustered heatmap"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "plotClusteMap"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin.\nThe "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--i-table"
+          },
+          {
+            "type": "text",
+            "value": " can be the normalized scores table for reactions or subsystems.\nThe input "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--m-sample-metadata-file"
+          },
+          {
+            "type": "text",
+            "value": " and the specification of the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--m-sample-metadata-column"
+          },
+          {
+            "type": "text",
+            "value": " define the label groups.\nIt is possible to introduce parameters such as metrics, methods, color_scheme, title etc, not present below."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet plotClusteMap \n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../clustermap.qzv"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Compute and visualize the Principal Component Analysis"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "plotPCA"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin.\nThe "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--i-table"
+          },
+          {
+            "type": "text",
+            "value": " can be the normalized scores table for reactions or subsystems.\nThe input "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--m-sample-metadata-file"
+          },
+          {
+            "type": "text",
+            "value": " and the specification of the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--m-sample-metadata-column"
+          },
+          {
+            "type": "text",
+            "value": " define the label groups.\nIt is possible to introduce parameters such as color_scheme, title and individual point label (boolean, default = False) not present below."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet plotPCA \\\n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../pca.qzv"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Generate the boxplots"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You then run the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "plotBoxplot"
+          },
+          {
+            "type": "text",
+            "value": " script from the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metnet"
+          },
+          {
+            "type": "text",
+            "value": " qiime plugin.\nThe "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--i-table"
+          },
+          {
+            "type": "text",
+            "value": " can be the normalized scores table for reactions or subsystems.\nThe "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--i-differentialresults"
+          },
+          {
+            "type": "text",
+            "value": " represents the differential activity analysis corresponding to exchanges, reactions or subsystems.\nThe input "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--m-sample-metadata-file"
+          },
+          {
+            "type": "text",
+            "value": " and the specification of the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--m-sample-metadata-column"
+          },
+          {
+            "type": "text",
+            "value": " define the label groups.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-condition-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-control-name"
+          },
+          {
+            "type": "text",
+            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-namefeature"
+          },
+          {
+            "type": "text",
+            "value": " represents the name of the exchange, reaction or subsystem for which we generate the boxplot. The name must be extracted exactly from the differential activity table.\nIt is possible to define a title."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet plotBoxplot \\\n\t--i-table ../output_reactions.qza \\\n\t--i-differentialresults ../exchanges_differential.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-namefeature 'nameExchange' \\\n\t--o-visualization ../boxplot.qzv"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Test files and application"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "test"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " folder contains all the input data sources to replicate the manuscript results. To run the following tutorial, we will need the following files:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "asv_table.qza:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " feature table with microbial abundances, where rows correspond to each sequence and columns to the different samples. The column "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ID"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " stores the identificators of each sequence ("
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "e.g."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " ASV_1)."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "taxa.qza:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " contains the taxonomic lineage of each sequence. The column "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ID"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " stores the identificators of each sequence, which are written in the same order as in the feature table rows."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "meta.tsv:"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " file including sample phenotype data. The rows correspond to each sample and are written in the same order as the feature table columns."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In order to use your own data, please refer to "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2023.7/semantic-types/#common-semantic-types",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME2 documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " to check allowed column headers. In any case, you can use the same columnn headers as in this tutorial files. Once QIIME2 and q2-metnet have been successfully installed, the first step is to generate the reactions and subsystem normalized activity scores of our data. This step may take a couple of minutes to be performed."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet generateFeatures \\\n\t--i-frequency ./test/asv_table.qza \\\n\t--i-taxa ./test/taxa.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ./rxns_scores.qza \\\n\t--o-subsystems ./subs_scores.qza \\\n\t--o-xmatrix ./Xmatrix.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "By the selection of parameters "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-selection"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-level"
+          },
+          {
+            "type": "text",
+            "value": " we decided to map our different taxonomies to the AGREDA database, until the species level. At this point, the normalized activity scores can be applied to perform a PCA and classify samples. As shown in the "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "meta.tsv"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " file, the different clinical conditions are stored in the "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Condition"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " column. Then, we can generate a PCA of our samples and all the reactions scores by the following command. Below is displayed the correspondent figure. Remember that any "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "qzv"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " file can be displayed at "
+          },
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME2 View"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet plotPCA \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_pca.qzv"
+      },
+      {
+        "type": "html",
+        "value": "<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/pca.png\">"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Additionally, a hierarchically-clustered heatmap can be generated by running the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "plotClusteMap"
+          },
+          {
+            "type": "text",
+            "value": "function. In the following example, we are going to generate the heatmap of the reaction scores across samples. Following, the generated figure is shown."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet plotClusteMap \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_hclust.qzv"
+      },
+      {
+        "type": "html",
+        "value": "<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/clustermap.png\">"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We are able to show that the normalized activity scores for some of these reactions are altered through the different clinical conditions of our dataset. We are now going to investigate deeper these differences. The different clinical conditions of our data are "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Allergic"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Celiac"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Lean"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Obese"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", where "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Lean"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " can be considered as the control state. In this example, we are now going to check the differentially expressed reactions and subsystems between "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Celiac"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Lean"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " samples."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet differentialReactions \\\n\t--i-reactions ./rxns_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ./diff_reactions.qza"
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet differentialSubSystems \\\n\t--i-subsystems ./subs_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--o-differential-analysis ./diff_subs.qza"
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet differentialExchanges \\\n\t--i-reactions ./rxns_scores.qza \\\n \t--m-metadata-file ./test/meta.tsv \\\n  \t--m-metadata-column Condition \\\n   \t--p-condition-name Celiac \\\n    \t--p-control-name Lean \\\n       \t--o-differential-analysis ./diff_ex.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, the differential activity score of a given feature (reaction or subsystem) can be displayed by means of the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "plotBoxplot"
+          },
+          {
+            "type": "text",
+            "value": "function. In the following example, we are going to generate the boxplot of the "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bile acid metabolism"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " subsytem across samples of the "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Celiac"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Lean"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " condition."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metnet plotBoxplot \\\n\t--i-table ./subs_scores.qza \\\n\t--i-differentialresults ./diff_subs.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-namefeature \"S144 | Bile acid metabolism\" \\\n\t--o-visualization ./sub_boxplot.qzv"
+      },
+      {
+        "type": "html",
+        "value": "<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/boxplot.PNG\">"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Remember that you can run the following command and visualize the output file "
+          },
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " to select the different values for ‘--p-name-feature’."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime metadata tabulate \\\n    --m-input-file ./diff_subs.qza \\\n    --o-visualization ./diff_subs.qzv"
+      }
+    ]
+  },
+  "Github Releases": [],
   "Plugin Owner": "PlanesLab",
   "Plugin Name": "q2-metnet",
   "Branch": "main",

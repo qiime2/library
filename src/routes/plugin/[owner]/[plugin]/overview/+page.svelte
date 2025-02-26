@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import MyST from "$lib/components/MyST.svelte";
+    import MySTDocument from "$lib/components/MySTDocument.svelte";
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -9,7 +9,7 @@
     Loading content.
 {:then page}
 <div class="max-w-4xl">
-    <MyST title={false} skipheading={true} {page} baseurl={data.baseurl}></MyST>
+    <MySTDocument title={false} skipheading={true} {page} baseurl={data.baseurl}/>
 </div>
 {:catch}
     <p class='prose lg:prose-xl'>Documentation available at: <br/><a target="_blank" rel="noopener noreferrer" href={data.baseurl}>{data.baseurl}</a></p>

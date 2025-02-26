@@ -76,14 +76,35 @@
       "Stars": 3,
       "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
       "Releases": ["amplicon-2024.10"]
+    },
+    "q2-micom": {
+      "Plugin Owner": "micom-dev",
+      "Plugin Name": "q2-micom",
+      "Branch": "main",
+      "User Docs": "https://micom-dev.github.io/q2-micom/",
+      "Build Status": "passed",
+      "Commit Date": "2025-02-25T01:39:46Z",
+      "Stars": 10,
+      "Description": "A Qiime plugin for MICOM.",
+      "Releases": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "tiny-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "tiny-2024.10"
+      ]
     }
   },
-  "Date Fetched": "2025-02-24T01:24:18.838Z",
   "Releases": [
     "amplicon-2025.4",
+    "moshpit-2025.4",
+    "tiny-2025.4",
     "amplicon-2024.10",
     "metagenome-2024.10",
     "pathogenome-2024.10",
+    "tiny-2024.10",
     "amplicon-2024.5"
-  ]
+  ],
+  "Date Fetched": "2025-02-26T05:14:21.039Z"
 }

@@ -1,5 +1,1969 @@
 {
-  "Readme": "# `genome-sampler`\n\nSampling viral genomes across time of isolation, location of isolation, and genome divergence.\n\n**Getting started?** Check out [the documentation](https://genome-sampler.readthedocs.io).\n\n**Need help?** Reach out on the [QIIME 2 Forum](https://forum.qiime2.org).\n\n**Want to learn more, or cite genome-sampler?** Read [our paper](https://f1000research.com/articles/9-657).\n",
+  "Readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "genome-sampler"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Sampling viral genomes across time of isolation, location of isolation, and genome divergence."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Getting started?"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " Check out "
+          },
+          {
+            "type": "link",
+            "url": "https://genome-sampler.readthedocs.io",
+            "children": [
+              {
+                "type": "text",
+                "value": "the documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Need help?"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " Reach out on the "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Forum"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Want to learn more, or cite genome-sampler?"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " Read "
+          },
+          {
+            "type": "link",
+            "url": "https://f1000research.com/articles/9-657",
+            "children": [
+              {
+                "type": "text",
+                "value": "our paper"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "Github Releases": [
+    {
+      "tag_name": "2025.02.0",
+      "html_url": "https://github.com/caporaso-lab/genome-sampler/releases/tag/2025.02.0",
+      "name": "genome-sampler 2025.02.0",
+      "published_at": "2025-02-13T23:44:37Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "A long-overdue release of "
+              },
+              {
+                "type": "inlineCode",
+                "value": "genome-sampler"
+              },
+              {
+                "type": "text",
+                "value": " which brings it up to date with the most recent release version of QIIME 2 (2024.10). The documentation has also been transitioned to "
+              },
+              {
+                "type": "link",
+                "url": "https://next.jupyterbook.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Jupyter Book 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Enjoy!"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "NEW: Begin adding label_seqs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/49",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#49"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/49",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "49"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: Fill missing metadata values with given placeholder by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/52",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#52"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/52",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "52"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: Use Evans Fancy Open by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/54",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#54"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/54",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "54"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: adds vcf-based alignment masking by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/56",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#56"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/56",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "56"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: fix pseudo-vcf parsing by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/58",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#58"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/58",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "58"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: fix newline handling by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/59",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#59"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/59",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "59"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH/DEP: add temporary action pending framework fix by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/60",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#60"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/60",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "60"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: fix MSA index using minting from seq ids by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/62",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#62"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/62",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "62"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: mark label_unaligned_seqs as deprecated by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/61",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#61"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/61",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "61"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: Library updates by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/74",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#74"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/74",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "74"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "decrease frequency of stochastic test failures by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/82",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#82"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/82",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "82"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: build env file by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/77",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#77"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/77",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "77"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: replaces VCFLikeMaskFormat with VCFMaskFormat by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/65",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#65"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/65",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "65"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: generalize label-seqs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/72",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#72"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/72",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "72"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DOC: update install instructions for conda envs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/83",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#83"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/83",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "83"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Benchmarks by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/84",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#84"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/84",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "84"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: use config and cores in snakemake by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/85",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#85"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/85",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "85"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI/BUG: incorrect package names by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/86",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#86"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/86",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "86"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add snakemake to env file by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/87",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#87"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/87",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "87"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DOC: tutorial updates by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/69",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#69"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/69",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "69"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "VER: 2020.11.0.dev0 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/91",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#91"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/91",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "91"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: set master CI "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "alp"
+                  },
+                  {
+                    "type": "text",
+                    "value": " target to “staging” by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/90",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#90"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/90",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "90"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "address memory issue with large GISAID files by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/94",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#94"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/94",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "94"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ci: new set-env api by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/95",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#95"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/95",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "95"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ci: handle conda virtual packages by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/96",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#96"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/96",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "96"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ci/maint: use latest qiime2 staging env by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/97",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#97"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/97",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "97"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: updates setup files & CI by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/101",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#101"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/101",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "101"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "update base branch name by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/104",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#104"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/104",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "104"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "prep config for read the docs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/106",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#106"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/106",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "106"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "add formal usage examples to docs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/107",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#107"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/107",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "107"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "update project administrative information by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/109",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#109"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/109",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "109"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Update snakemake tutorial by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/110",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#110"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/110",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "110"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "update for q2doc change by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/gregcaporaso",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@gregcaporaso"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/111",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#111"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/111",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "111"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/49",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#49"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/49",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "49"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/caporaso-lab/genome-sampler/pull/101",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#101"
+                      }
+                    ],
+                    "urlSource": "https://github.com/caporaso-lab/genome-sampler/pull/101",
+                    "data": {
+                      "kind": "issue",
+                      "org": "caporaso-lab",
+                      "repo": "genome-sampler",
+                      "issue_number": "101"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/caporaso-lab/genome-sampler/compare/2020.6.1...2025.02.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2020.6.1...2025.02.0"
+                  }
+                ],
+                "urlSource": "https://github.com/caporaso-lab/genome-sampler/compare/2020.6.1...2025.02.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "caporaso-lab",
+                  "repo": "genome-sampler",
+                  "issue_number": "2020.6.1...2025.02.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2020.8.0",
+      "html_url": "https://github.com/caporaso-lab/genome-sampler/releases/tag/2020.8.0",
+      "name": "2020.8.0",
+      "published_at": "2020-10-17T04:25:39Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "2020.6.1",
+      "html_url": "https://github.com/caporaso-lab/genome-sampler/releases/tag/2020.6.1",
+      "name": "F1000 paper publication release",
+      "published_at": "2020-07-01T02:40:09Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "This release is timed with the publication of our "
+              },
+              {
+                "type": "link",
+                "url": "https://f1000research.com/articles/9-657/v1",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "initial paper on "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "genome-sampler"
+                  },
+                  {
+                    "type": "text",
+                    "value": " in F1000 Research"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2020.6.0",
+      "html_url": "https://github.com/caporaso-lab/genome-sampler/releases/tag/2020.6.0",
+      "name": "2020.6.0",
+      "published_at": "2020-06-12T17:55:22Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "2020.6.0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "Plugin Owner": "caporaso-lab",
   "Plugin Name": "genome-sampler",
   "Branch": "dev",
