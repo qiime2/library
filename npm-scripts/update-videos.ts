@@ -20,8 +20,8 @@ async function main(library) {
                 title: entry.title,
                 description: entry['media:group']['media:description'],
                 uploader: entry.author.name,
-                uloader_id: `channel/${entry['yt:channelId']}`,
-                timestamp: (new Date(entry.published)).getTime()
+                uploader_id: `channel/${entry['yt:channelId']}`,
+                timestamp: (new Date(entry.published)).getTime() / 1000
             }));
         }
         source.timestamp = Math.max(...source.entries.map(({timestamp}) => timestamp))
