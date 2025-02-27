@@ -10,8 +10,9 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --plugin-search-dir . --write .",
     "update:data": "npx tsx ./npm-scripts/update-data.ts ${npm_config_library}",
+    "update:videos": "npx tsx ./npm-scripts/update-videos.ts ${npm_config_library}",
     "update:myst": "npx tsx ./npm-scripts/update-myst.ts",
-    "update": "npm run update:data && npm run update:myst"
+    "update": "npm run update:data && npm run update:videos && npm run update:myst"
   },
   "devDependencies": {
     "@melt-ui/pp": "^0.3.2",
@@ -25,6 +26,7 @@
     "@tailwindcss/postcss": "^4.0.7",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.7",
+    "fast-xml-parser": "^5.0.7",
     "myst-parser": "^1.5.11",
     "myst-to-react": "^0.13.7",
     "postcss": "^8.5.2",

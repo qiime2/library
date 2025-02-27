@@ -41,6 +41,31 @@ export async function getLibraryPlugins(library) {
   return plugins;
 }
 
+
+export async function getLibraryVideos(library) {
+  // Will hold the loaded yaml contents of the data
+  const videos = [];
+
+  let workdir = await mkdtemp(join(tmpdir(), "q2-library-clone"));
+  try {
+    let { stdout, stderr } = await exec(
+      `git clone --depth=1 -- '${library}' '${workdir}'`,
+    );
+    console.log(stdout);
+    console.error(stderr);
+    let basedir = join(workdir, "videos");
+    let entries = await promisify(fs.readdir)(basedir);
+    for (const entry of entries) {
+      let data = await promisify(fs.readFile)(join(basedir, entry));
+      videos.push(yaml.load(data));
+    }
+  } finally {
+    await promisify(fs.rm)(workdir, { force: true, recursive: true });
+  }
+  return videos;
+}
+
+
 // Get the latest commit of the specified branch of the specified repo
 export async function getLatestCommit(octokit, owner, repo_name, branch) {
   const commit = await octokit.request(

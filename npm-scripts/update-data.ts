@@ -166,7 +166,6 @@ if (process.argv[1] === import.meta.filename) {
   if (process.argv.length <= 2) {
     library = DEFAULT_LIBRARY_REPO;
   }
-  console.log(process.argv);
 
   await main(library);
 }
