@@ -38,13 +38,12 @@ div:has(> pre.hljs > code) {
     margin: 0 auto;
     padding: 0 0.67em;
   }
-}
 
-a {
+.prose a {
   text-decoration: underline;
 }
 
-.prose a:active {
+.prose a:active, .prose a:hover {
   color: var(--tw-prose-active-links);
 }
 
@@ -62,4 +61,5 @@ h2 a:active,
 h3 a:hover,
 h3 a:active {
   text-decoration: underline;
+}
 }

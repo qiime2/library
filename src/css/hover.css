@@ -44,3 +44,7 @@
 .hover-link:hover {
   text-decoration-color: var(--tw-prose-active-links);
 }
+
+.hover-card-content a:hover, .hover-card-content a:active {
+  color: var(--tw-prose-active-links);
+}

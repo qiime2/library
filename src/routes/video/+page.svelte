@@ -27,7 +27,7 @@
         <h3 class='font-bold text-sm pt-2 text-gray-800 px-3'>{video.title}</h3>
         <p class='text-gray-600 px-3 text-sm flex mt-1'>
           <span>{new Date(video.timestamp * 1000).toDateString()}</span>
-          <span class='ml-auto'><a href={`https://www.youtube.com/${video.uploader_id}`}>{video.uploader}</a></span>
+          <span class='ml-auto'><a class='hover:underline' href={`https://www.youtube.com/${video.uploader_id}`}>{video.uploader}</a></span>
         </p>
         </div>
       {/each}
