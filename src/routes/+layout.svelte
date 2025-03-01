@@ -1,7 +1,6 @@
 <script lang="ts">
     import "../app.css";
     import NavBanner from "$lib/components/NavBanner.svelte";
-    import { page } from '$app/state';
     import Navigation from "$lib/components/Navigation.svelte";
     const entries: [string, string][] = [
       ['/plugin', 'Plugins'],
@@ -20,7 +19,7 @@
 </svelte:head>
 
 <NavBanner/>
-<nav id='navbar' class='pl-2 scroll-edge'>
+<nav id='navbar' class='pl-2 scroll-edge z-50'>
   <div class='flex max-width'>
     <a href='/' class='mr-auto'>
       <img id='navlogo' src='/q2library.svg' alt='QIIME 2 library logo' />

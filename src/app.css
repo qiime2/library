@@ -47,19 +47,19 @@ div:has(> pre.hljs > code) {
   color: var(--tw-prose-active-links);
 }
 
-h1 a,
-h2 a,
-h3 a {
+.prose h1 a,
+.prose h2 a,
+.prose h3 a {
   font-weight: bold;
   text-decoration: none;
 }
 
-h1 a:hover,
-h1 a:active,
-h2 a:hover,
-h2 a:active,
-h3 a:hover,
-h3 a:active {
+.prose h1 a:hover,
+.prose h1 a:active,
+.prose h2 a:hover,
+.prose h2 a:active,
+.prose h3 a:hover,
+.prose h3 a:active {
   text-decoration: underline;
 }
 }

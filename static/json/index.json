@@ -1,0 +1,192 @@
+{
+  "plugins": [
+    {
+      "Plugin Owner": "micom-dev",
+      "Plugin Name": "q2-micom",
+      "Branch": "main",
+      "User Docs": "https://micom-dev.github.io/q2-micom/",
+      "Build Status": "passed",
+      "Commit Date": "2025-02-25T01:39:46Z",
+      "Stars": 10,
+      "Description": "A Qiime plugin for MICOM.",
+      "Releases": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "tiny-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "tiny-2024.10"
+      ]
+    },
+    {
+      "Plugin Owner": "bokulich-lab",
+      "Plugin Name": "q2-amrfinderplus",
+      "Branch": "main",
+      "User Docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "Build Status": "failed",
+      "Commit Date": "2025-02-21T14:34:59Z",
+      "Stars": 0,
+      "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "Releases": [
+        "pathogenome-2024.10"
+      ]
+    },
+    {
+      "Plugin Owner": "caporaso-lab",
+      "Plugin Name": "genome-sampler",
+      "Branch": "dev",
+      "User Docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "Build Status": "passed",
+      "Commit Date": "2025-02-20T17:24:28Z",
+      "Stars": 6,
+      "Description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "Releases": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "Plugin Owner": "qiime2",
+      "Plugin Name": "q2-fmt",
+      "Branch": "dev",
+      "User Docs": "https://q2-fmt.readthedocs.io",
+      "Build Status": "passed",
+      "Commit Date": "2025-02-18T16:27:00Z",
+      "Stars": 4,
+      "Description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "Releases": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "Plugin Owner": "bokulich-lab",
+      "Plugin Name": "q2-annotate",
+      "Branch": "main",
+      "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
+      "Build Status": "failed",
+      "Commit Date": "2025-02-18T14:37:23Z",
+      "Stars": 3,
+      "Description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "Releases": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
+      "Plugin Owner": "PlanesLab",
+      "Plugin Name": "q2-metnet",
+      "Branch": "main",
+      "User Docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
+      "Build Status": "passed",
+      "Commit Date": "2025-02-03T17:38:01Z",
+      "Stars": 3,
+      "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
+      "Releases": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "Plugin Owner": "caporaso-lab",
+      "Plugin Name": "q2-boots",
+      "Branch": "main",
+      "User Docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "Build Status": "passed",
+      "Commit Date": "2025-01-24T01:34:39Z",
+      "Stars": 3,
+      "Description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "Releases": [
+        "amplicon-2025.4",
+        "amplicon-2024.10",
+        "amplicon-2024.5"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "id": "OynraTqK4gY",
+      "title": "Building a first QIIME 2 plugin",
+      "description": "A walk-through of creating a new QIIME 2 plugin from a template, and an introduction to the *Developing with QIIME 2* online book (develop.qiime2.org).",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1713378336
+    },
+    {
+      "id": "erklD1bofzE",
+      "title": "Expanding the impact of your microbiome study through metadata standardization",
+      "description": "This video by Chloe Herman was made in collaboration with the National Microbiome Data Collaborative (NMDC). The NMDC's mission is to provide a gateway to Findable Accessible Interoperable and Reusable (FAIR) multi-omics microbiome data by leveraging best practices for data curation and processing. For more information and community discussion check out the related QIIME2 Forum post: https://forum.qiime2.org/t/expand-the-impact-of-your-microbiome-data-through-metadata-standardization/23845",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1660066535
+    },
+    {
+      "id": "KMsacdbQ8hA",
+      "title": "Provenance replay demo (alpha software release)",
+      "description": "A video introduction to Provenance Replay, software that supports scientific reproducibility, attribution, and collaboration on the QIIME 2 platform.\n\nProvenance Replay (AKA `provenance_lib`) parses the computational history (or \"provenance\") of QIIME 2 Results, letting you:\n* generate executable scripts for your preferred QIIME 2 interface, allowing users to \"replay\" prior analyses\n* report all citations from a QIIME 2 analysis, so creating your reference section is easy\n* produce reproducibility supplements for publication or collaboration, supporting the reproducibility of your QIIME 2 analyses\n\n`provenance_lib` is available in alpha release on the QIIME 2 Library at https://library.qiime2.org/plugins/provenance_lib/43/\n\nA tutorial, including instructions for getting help with Provenance Replay, can be found on the QIIME 2 forum at: https://forum.qiime2.org/t/provenance-replay-alpha-release-and-tutorial/23279",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1655146105
+    },
+    {
+      "id": "cMRc2KiZZdk",
+      "title": "Longitudinal microbiome analysis",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1652803225
+    },
+    {
+      "id": "rdGSK51iaIM",
+      "title": "Beta diversity visualizations",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1652198435
+    },
+    {
+      "id": "NIGbYdGErLw",
+      "title": "Alpha diversity visualizations",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1651561206
+    },
+    {
+      "id": "gkXsnal4oLA",
+      "title": "Getting help with bioinformatics software",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1650549351
+    },
+    {
+      "id": "w_OBVFMUfps",
+      "title": "Reproducible Bioinformatics",
+      "description": "Slides: https://docs.google.com/presentation/d/e/2PACX-1vSpeE9-rcaoOfyD6FuX9CqkzWp7QkQpmxVtIHtXJd8SP5X4uOjKIxclOdXBvbdRUSotP6_F9i2iU8TJ/pub?start=false&loop=false&delayms=3000",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1650549347
+    },
+    {
+      "id": "W1W9jcrMFHs",
+      "title": "Identifying an even sampling depth",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1650384030
+    },
+    {
+      "id": "_SlnhQRhpIE",
+      "title": "Phylogenetic tree construction",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1649779214
+    },
+    {
+      "id": "9YiRxPgxqAE",
+      "title": "Machine learning in bioinformatics (part 2)",
+      "description": "This lecture goes more in-depth on unsupervised learning, including a worked-example of polar ordination applied to an example human microbiome data set. The slides for this lecture are available at: https://docs.google.com/presentation/d/e/2PACX-1vTRMcgTspHpHZuzHvRIZtl9hnHuaA_FmDFskIJPIPQQOCuLpbcGugM4QfsDD8NA_uMQ9l2KEnUpRyXI/pub?start=false&loop=false&delayms=3000\n\nThe notes in this video can be found at: https://drive.google.com/file/d/1rArohwObOeVhAwO4hwLcyro9oqcPmCxy/view?usp=sharing",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1649448326
+    }
+  ]
+}

@@ -11,6 +11,7 @@
     "format": "prettier --plugin-search-dir . --write .",
     "update:data": "npx tsx ./npm-scripts/update-data.ts ${npm_config_library}",
     "update:videos": "npx tsx ./npm-scripts/update-videos.ts ${npm_config_library}",
+    "update:index": "npx tsx ./npm-scripts/update-index.ts",
     "update:myst": "npx tsx ./npm-scripts/update-myst.ts",
     "update": "npm run update:data && npm run update:videos && npm run update:myst"
   },
