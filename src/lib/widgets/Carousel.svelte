@@ -59,8 +59,9 @@
   .stream:hover {
     max-width: none;
     margin: 0;
-
+    padding: 0;
   }
+
   .expand.stream-grid:hover {
     padding: 0;
   }
