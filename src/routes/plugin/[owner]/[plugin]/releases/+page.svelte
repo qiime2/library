@@ -7,6 +7,9 @@
 
 
 <div class="pl-5">
+    {#if data.repo_info.in_distro }
+    <p class='prose prose-lg'>This plugin is released as part of a base distribution.</p>
+    {:else}
     <ol class="relative border-s-4 border-gray-200 dark:border-gray-700 list-none">
     {#each data.repo_info.releases as release}
         <li class="mb-10 ms-4">
@@ -26,4 +29,5 @@
     <p>No releases found on Github.</p>
     {/each}
     </ol>
+    {/if}
 </div>
