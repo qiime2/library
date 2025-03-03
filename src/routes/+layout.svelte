@@ -3,13 +3,12 @@
     import NavBanner from "$lib/components/NavBanner.svelte";
     import Navigation from "$lib/components/Navigation.svelte";
     const entries: [string, string][] = [
+      ['/quickstart', 'Quickstart'],
       ['/plugin', 'Plugins'],
-      ['/distribution', 'Distributions'],
       ['/book', 'Books'],
-      ['/tutorial', 'Tutorials'],
       ['/video', 'Videos'],
       ['/workshop', 'Workshops'],
-      ['/data-resources', 'Data Resources'],
+      ['/data-resources', 'Resources'],
     ]
 </script>
 

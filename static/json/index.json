@@ -1,15 +1,18 @@
 {
   "plugins": [
     {
-      "Plugin Owner": "micom-dev",
-      "Plugin Name": "q2-micom",
-      "Branch": "main",
-      "User Docs": "https://micom-dev.github.io/q2-micom/",
-      "Build Status": "passed",
-      "Commit Date": "2025-02-25T01:39:46Z",
-      "Stars": 10,
-      "Description": "A Qiime plugin for MICOM.",
-      "Releases": [
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "2970f8d9fe89874a1330e3b9172a725b33f585cb",
+        "status": "passed",
+        "date": "2025-02-25T01:39:46Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
         "amplicon-2025.4",
         "moshpit-2025.4",
         "tiny-2025.4",
@@ -19,84 +22,111 @@
       ]
     },
     {
-      "Plugin Owner": "bokulich-lab",
-      "Plugin Name": "q2-amrfinderplus",
-      "Branch": "main",
-      "User Docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "Build Status": "failed",
-      "Commit Date": "2025-02-21T14:34:59Z",
-      "Stars": 0,
-      "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "Releases": [
-        "pathogenome-2024.10"
-      ]
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
+        "status": "failed",
+        "date": "2025-02-21T14:34:59Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": ["pathogenome-2024.10"]
     },
     {
-      "Plugin Owner": "caporaso-lab",
-      "Plugin Name": "genome-sampler",
-      "Branch": "dev",
-      "User Docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "Build Status": "passed",
-      "Commit Date": "2025-02-20T17:24:28Z",
-      "Stars": 6,
-      "Description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "Releases": [
-        "amplicon-2024.10"
-      ]
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "48f92d95ed614e45186b09d802b3f3c7da451eec",
+        "status": "passed",
+        "date": "2025-02-20T17:24:28Z"
+      },
+      "stars": 6,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": ["amplicon-2024.10"]
     },
     {
-      "Plugin Owner": "qiime2",
-      "Plugin Name": "q2-fmt",
-      "Branch": "dev",
-      "User Docs": "https://q2-fmt.readthedocs.io",
-      "Build Status": "passed",
-      "Commit Date": "2025-02-18T16:27:00Z",
-      "Stars": 4,
-      "Description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "Releases": [
-        "amplicon-2024.10"
-      ]
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io",
+      "last_commit": {
+        "sha": "454b3e4614789c03ca59c584152d4a60e1ac6edd",
+        "status": "passed",
+        "date": "2025-02-18T16:27:00Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": ["amplicon-2024.10"]
     },
     {
-      "Plugin Owner": "bokulich-lab",
-      "Plugin Name": "q2-annotate",
-      "Branch": "main",
-      "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
-      "Build Status": "failed",
-      "Commit Date": "2025-02-18T14:37:23Z",
-      "Stars": 3,
-      "Description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "Releases": [
-        "metagenome-2024.10"
-      ]
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs",
+      "last_commit": {
+        "sha": "aaccacac04bfeee987d4c9109e3ca9c59b660452",
+        "status": "passed",
+        "date": "2025-02-18T14:37:23Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": ["metagenome-2024.10"]
     },
     {
-      "Plugin Owner": "PlanesLab",
-      "Plugin Name": "q2-metnet",
-      "Branch": "main",
-      "User Docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
-      "Build Status": "passed",
-      "Commit Date": "2025-02-03T17:38:01Z",
-      "Stars": 3,
-      "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
-      "Releases": [
-        "amplicon-2024.10"
-      ]
+      "owner": "PlanesLab",
+      "name": "q2-metnet",
+      "branch": "main",
+      "docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
+      "last_commit": {
+        "sha": "575fe8da6f9de8c66cdd8248a60df3fae922f540",
+        "status": "passed",
+        "date": "2025-02-03T17:38:01Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
+      "distros": ["amplicon-2024.10"]
     },
     {
-      "Plugin Owner": "caporaso-lab",
-      "Plugin Name": "q2-boots",
-      "Branch": "main",
-      "User Docs": "https://q2-boots.readthedocs.io/en/latest/",
-      "Build Status": "passed",
-      "Commit Date": "2025-01-24T01:34:39Z",
-      "Stars": 3,
-      "Description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "Releases": [
-        "amplicon-2025.4",
-        "amplicon-2024.10",
-        "amplicon-2024.5"
-      ]
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "95b247b03c2aca837fb60d6d9fdf90188dda8bcd",
+        "status": "passed",
+        "date": "2025-01-24T01:34:39Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
+    }
+  ],
+  "books": [
+    {
+      "url": "https://use.qiime2.org/en/latest/",
+      "source": "https://github.com/caporaso-lab/using-qiime2",
+      "title": "Using QIIME 2",
+      "description": "Your guide to becoming a QIIME 2 Framework power user.",
+      "type": "book",
+      "order": 0
+    },
+    {
+      "url": "https://develop.qiime2.org/en/latest/",
+      "source": "https://github.com/caporaso-lab/developing-with-qiime2",
+      "title": "Developing with QIIME 2",
+      "description": "Your guide for writing, testing, and distributing QIIME 2 plugins, interfaces, and documentation.",
+      "type": "book",
+      "order": 1
+    },
+    {
+      "url": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "source": "https://github.com/qiime2/amplicon-docs",
+      "type": "book"
     }
   ],
   "videos": [

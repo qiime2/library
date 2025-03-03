@@ -1,5 +1,5 @@
 {
-  "Readme": {
+  "readme": {
     "type": "root",
     "children": [
       {
@@ -71,7 +71,7 @@
       }
     ]
   },
-  "Github Releases": [
+  "releases": [
     {
       "tag_name": "2024.10.beta",
       "html_url": "https://github.com/caporaso-lab/q2-boots/releases/tag/2024.10.beta",
@@ -133,13 +133,16 @@
       }
     }
   ],
-  "Plugin Owner": "caporaso-lab",
-  "Plugin Name": "q2-boots",
-  "Branch": "main",
-  "User Docs": "https://q2-boots.readthedocs.io/en/latest/",
-  "Build Status": "passed",
-  "Commit Date": "2025-01-24T01:34:39Z",
-  "Stars": 3,
-  "Description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-  "Releases": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
+  "owner": "caporaso-lab",
+  "name": "q2-boots",
+  "branch": "main",
+  "docs": "https://q2-boots.readthedocs.io/en/latest/",
+  "last_commit": {
+    "sha": "95b247b03c2aca837fb60d6d9fdf90188dda8bcd",
+    "status": "passed",
+    "date": "2025-01-24T01:34:39Z"
+  },
+  "stars": 3,
+  "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+  "distros": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
 }

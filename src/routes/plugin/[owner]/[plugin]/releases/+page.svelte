@@ -8,7 +8,7 @@
 
 <div class="pl-5">
     <ol class="relative border-s-4 border-gray-200 dark:border-gray-700 list-none">
-    {#each data.repo_info['Github Releases'] as release}
+    {#each data.repo_info.releases as release}
         <li class="mb-10 ms-4">
             <span class="absolute flex items-center justify-center size-10 text-white bg-[#1a414c] rounded-full -start-5.5 ring-8 ring-white ">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">

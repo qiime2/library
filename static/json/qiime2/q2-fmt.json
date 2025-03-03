@@ -1,5 +1,5 @@
 {
-  "Readme": {
+  "readme": {
     "type": "root",
     "children": [
       {
@@ -120,7 +120,7 @@
       }
     ]
   },
-  "Github Releases": [
+  "releases": [
     {
       "tag_name": "2024.11.1",
       "html_url": "https://github.com/qiime2/q2-fmt/releases/tag/2024.11.1",
@@ -2405,13 +2405,16 @@
       }
     }
   ],
-  "Plugin Owner": "qiime2",
-  "Plugin Name": "q2-fmt",
-  "Branch": "dev",
-  "User Docs": "https://q2-fmt.readthedocs.io",
-  "Build Status": "passed",
-  "Commit Date": "2025-02-18T16:27:00Z",
-  "Stars": 4,
-  "Description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-  "Releases": ["amplicon-2024.10"]
+  "owner": "qiime2",
+  "name": "q2-fmt",
+  "branch": "dev",
+  "docs": "https://q2-fmt.readthedocs.io",
+  "last_commit": {
+    "sha": "454b3e4614789c03ca59c584152d4a60e1ac6edd",
+    "status": "passed",
+    "date": "2025-02-18T16:27:00Z"
+  },
+  "stars": 4,
+  "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+  "distros": ["amplicon-2024.10"]
 }

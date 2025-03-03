@@ -1,7 +1,10 @@
-import utf8 from "utf8";
 import yaml from "js-yaml";
 import { mystParse } from "myst-parser";
 import { visit } from "unist-util-visit";
+
+import { createOAuthDeviceAuth } from "@octokit/auth-oauth-device";
+import { createActionAuth } from "@octokit/auth-action";
+import { Octokit } from "octokit";
 
 import { join } from "node:path";
 import { tmpdir } from "node:os";
@@ -17,54 +20,78 @@ const ENV_FILE_REGEX = new RegExp(
   `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
 );
 
-// Get the plugins that are in the library
-export async function getLibraryPlugins(library) {
-  // Will hold the loaded yaml contents of the data
-  const plugins = [];
+const DEFAULT_CATALOG_REPO = "https://github.com/qiime2/library-plugins.git";
+
+export async function cleanup(catalog) {
+  await promisify(fs.rm)(catalog, { force: true, recursive: true });
+}
+
+export async function getLibraryCatalog() {
+  let catalog = process.argv[process.argv.length - 1];
+  if (process.argv.length <= 2) {
+    catalog = DEFAULT_CATALOG_REPO;
+  }
 
   let workdir = await mkdtemp(join(tmpdir(), "q2-library-clone"));
   try {
     let { stdout, stderr } = await exec(
-      `git clone --depth=1 -- '${library}' '${workdir}'`,
+      `git clone --depth=1 -- '${catalog}' '${workdir}'`,
     );
     console.log(stdout);
     console.error(stderr);
-    let basedir = join(workdir, "plugins");
-    let entries = await promisify(fs.readdir)(basedir);
-    for (const entry of entries) {
-      let data = await promisify(fs.readFile)(join(basedir, entry));
-      plugins.push(yaml.load(data));
-    }
-  } finally {
+  } catch {
     await promisify(fs.rm)(workdir, { force: true, recursive: true });
   }
-  return plugins;
+
+  return workdir;
 }
 
+export async function get_octokit() {
+  let authenticationStrategy: any;
+  let strategyOptions: any;
+  let authOptions: any;
 
-export async function getLibraryVideos(library) {
-  // Will hold the loaded yaml contents of the data
-  const videos = [];
-
-  let workdir = await mkdtemp(join(tmpdir(), "q2-library-clone"));
-  try {
-    let { stdout, stderr } = await exec(
-      `git clone --depth=1 -- '${library}' '${workdir}'`,
-    );
-    console.log(stdout);
-    console.error(stderr);
-    let basedir = join(workdir, "videos");
-    let entries = await promisify(fs.readdir)(basedir);
-    for (const entry of entries) {
-      let data = await promisify(fs.readFile)(join(basedir, entry));
-      videos.push(yaml.load(data));
-    }
-  } finally {
-    await promisify(fs.rm)(workdir, { force: true, recursive: true });
+  if (process.env.GITHUB_ACTION) {
+    authenticationStrategy = createActionAuth;
+    strategyOptions = {};
+    authOptions = {};
+  } else {
+    authenticationStrategy = createOAuthDeviceAuth;
+    strategyOptions = {
+      clientType: "oauth-app",
+      clientId: "Ov23liI4jm74lL6qxSsN",
+      scopes: ["public_repo"],
+      onVerification(verification) {
+        console.log("========[ GitHub Device Flow ]========");
+        console.log(" Open %s", verification.verification_uri);
+        console.log(" Enter code: %s", verification.user_code);
+        console.log("======================================");
+      },
+    };
+    authOptions = { type: "oauth" };
   }
-  return videos;
+
+  const octokit = new Octokit({
+    authStrategy: authenticationStrategy,
+    auth: strategyOptions,
+  });
+  await octokit.auth(authOptions);
+  return octokit;
 }
 
+export async function loadYamlPath(path: string) {
+  let data = await promisify(fs.readFile)(path);
+  return yaml.load(data.toString("utf8")) as any;
+}
+
+export async function loadYamlDir(path: string) {
+  let results: any[] = [];
+  let entries = await promisify(fs.readdir)(path);
+  for (const entry of entries) {
+    results.push(await loadYamlPath(join(path, entry)));
+  }
+  return results;
+}
 
 // Get the latest commit of the specified branch of the specified repo
 export async function getLatestCommit(octokit, owner, repo_name, branch) {
@@ -153,7 +180,9 @@ export async function getReadme(octokit, owner, repo_name, branch) {
   );
 
   // Convert the README to a normal utf8 string
-  let ast = mystParse(utf8.decode(atob(readme["data"]["content"])));
+  let ast = mystParse(
+    Buffer.from(readme["data"]["content"], "base64").toString("utf-8"),
+  );
   visit(ast, (node) => {
     // no reason to store all of this
     delete node["position"];
@@ -209,7 +238,7 @@ export async function getGithubReleases(octokit, owner, repo_name) {
       "X-GitHub-Api-Version": "2022-11-28",
     },
   });
-  let result = [];
+  let result: any[] = [];
   for (const release of releases.data) {
     let { tag_name, html_url, name, published_at, body } = release;
     let ast = mystParse(body);
@@ -222,7 +251,7 @@ export async function getGithubReleases(octokit, owner, repo_name) {
 // Get all environment files from the given repo and return them sorted by
 // epoch most to least recent then by distro alphabetically
 export async function getEnvironmentFiles(octokit, owner, repo_name, branch) {
-  let releases = [];
+  let releases: any[] = [];
 
   const envs = await octokit.request(
     `GET /repos/${owner}/${repo_name}/contents/environment-files/`,

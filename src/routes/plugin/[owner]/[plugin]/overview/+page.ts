@@ -2,10 +2,10 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ fetch, parent }) => {
   let data = await parent();
-  let docs = data.repo_info["User Docs"];
+  let docs = data.repo_info.docs;
   docs = docs.endsWith("/") ? docs.slice(0, docs.length - 1) : docs;
 
-  let xref_id = data.repo_info["Plugin Name"];
+  let xref_id = data.repo_info.name;
   if (xref_id.slice(0, 3) == "q2-") {
     xref_id = xref_id.slice(3);
   }

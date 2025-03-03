@@ -21,7 +21,7 @@
 </script>
 
 <article class='prose max-w-none'>
-    <div class="border-b border-gray-200 bg-[#f8f8f8] scroll-edge">
+    <div class="border-b border-gray-200 bg-gray-50 scroll-edge">
         <header class='max-width flex flex-wrap'>
             <div class='mr-auto flex flex-col pt-12'>
                 <div class='mb-2'>
@@ -40,27 +40,27 @@
                 </div>
             </div>
             <div class="px-2 max-w-xl py-3 self-center">
-                <PluginQuickstart owner={data.repo_info['Plugin Owner']} plugin={data.repo_info['Plugin Name']} branch={data.repo_info['Branch']} releases={data.repo_info['Releases']} />
+                <PluginQuickstart owner={data.repo_info.owner} plugin={data.repo_info.name} branch={data.repo_info.branch} releases={data.repo_info.distros} />
             </div>
         </header>
     </div>
     <div class="scroll-edge">
         <div class="max-width">
             <div class="mx-2 my-5 relative flex gap-6">
-                <div class='max-w-4xl grow'><slot/></div>
+                <div class='max-w-4xl grow min-h-screen'><slot/></div>
                 <div class='hidden md:block w-3xs lg:w-xs shrink-0 ml-auto border p-4 text-xs lg:text-base'>
                     <p class="info-content">
-                        {data.repo_info["Description"]}
+                        {data.repo_info.description}
                     </p>
                     <p class="info-content">
                         <span class="font-bold">Source: </span>
-                        <a href="https://github.com/{data.repo_info['Plugin Owner']}/{data.repo_info['Plugin Name']}">
-                            https://github.com/{data.repo_info["Plugin Owner"]}/{data.repo_info["Plugin Name"]}</a>
+                        <a href="https://github.com/{data.repo_info.owner}/{data.repo_info.name}">
+                            https://github.com/{data.repo_info.owner}/{data.repo_info.name}</a>
                     </p>
                     <div class="info-content">
                         <p class="my-2">
                             <span class="font-bold">Compatible Releases: </span>
-                            {spaceSeperatedList(data.repo_info["Releases"])}
+                            {spaceSeperatedList(data.repo_info.distros)}
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 {
-  "Readme": {
+  "readme": {
     "type": "root",
     "children": [
       {
@@ -1430,14 +1430,17 @@
       }
     ]
   },
-  "Github Releases": [],
-  "Plugin Owner": "PlanesLab",
-  "Plugin Name": "q2-metnet",
-  "Branch": "main",
-  "User Docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
-  "Build Status": "passed",
-  "Commit Date": "2025-02-03T17:38:01Z",
-  "Stars": 3,
-  "Description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
-  "Releases": ["amplicon-2024.10"]
+  "releases": [],
+  "owner": "PlanesLab",
+  "name": "q2-metnet",
+  "branch": "main",
+  "docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
+  "last_commit": {
+    "sha": "575fe8da6f9de8c66cdd8248a60df3fae922f540",
+    "status": "passed",
+    "date": "2025-02-03T17:38:01Z"
+  },
+  "stars": 3,
+  "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
+  "distros": ["amplicon-2024.10"]
 }

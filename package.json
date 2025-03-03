@@ -9,11 +9,14 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --plugin-search-dir . --write .",
-    "update:data": "npx tsx ./npm-scripts/update-data.ts ${npm_config_library}",
-    "update:videos": "npx tsx ./npm-scripts/update-videos.ts ${npm_config_library}",
-    "update:index": "npx tsx ./npm-scripts/update-index.ts",
-    "update:myst": "npx tsx ./npm-scripts/update-myst.ts",
-    "update": "npm run update:data && npm run update:videos && npm run update:myst"
+    "update:clean": "rm -rf ./static/json ; rm -rf ./static/myst; mkdir -p  ./static/json && mkdir -p ./static/myst",
+    "update:distros": "npx tsx ./npm-scripts/0-update-distros.ts ${npm_config_catalog}",
+    "update:videos": "npx tsx ./npm-scripts/0-update-videos.ts ${npm_config_catalog}",
+    "update:plugins": "npx tsx ./npm-scripts/1-update-plugins.ts ${npm_config_catalog}",
+    "update:books": "npx tsx ./npm-scripts/2-update-books.ts ${npm_config_catalog}",
+    "update:myst": "npx tsx ./npm-scripts/3-update-myst.ts",
+    "update:index": "npx tsx ./npm-scripts/99-update-index.ts",
+    "update": "npm run update:clean && npx tsx ./npm-scripts/update.ts ${npm_config_catalog}"
   },
   "devDependencies": {
     "@melt-ui/pp": "^0.3.2",
@@ -27,6 +30,8 @@
     "@tailwindcss/postcss": "^4.0.7",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.7",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.8",
     "fast-xml-parser": "^5.0.7",
     "myst-parser": "^1.5.11",
     "myst-to-react": "^0.13.7",

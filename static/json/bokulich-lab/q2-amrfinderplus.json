@@ -1,5 +1,5 @@
 {
-  "Readme": {
+  "readme": {
     "type": "root",
     "children": [
       {
@@ -275,14 +275,17 @@
       }
     ]
   },
-  "Github Releases": [],
-  "Plugin Owner": "bokulich-lab",
-  "Plugin Name": "q2-amrfinderplus",
-  "Branch": "main",
-  "User Docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-  "Build Status": "failed",
-  "Commit Date": "2025-02-21T14:34:59Z",
-  "Stars": 0,
-  "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-  "Releases": ["pathogenome-2024.10"]
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-amrfinderplus",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+  "last_commit": {
+    "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
+    "status": "failed",
+    "date": "2025-02-21T14:34:59Z"
+  },
+  "stars": 0,
+  "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+  "distros": ["pathogenome-2024.10"]
 }

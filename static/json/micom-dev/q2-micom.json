@@ -1,5 +1,5 @@
 {
-  "Readme": {
+  "readme": {
     "type": "root",
     "children": [
       {
@@ -586,7 +586,7 @@
       }
     ]
   },
-  "Github Releases": [
+  "releases": [
     {
       "tag_name": "v0.16.0",
       "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.16.0",
@@ -868,15 +868,18 @@
       }
     }
   ],
-  "Plugin Owner": "micom-dev",
-  "Plugin Name": "q2-micom",
-  "Branch": "main",
-  "User Docs": "https://micom-dev.github.io/q2-micom/",
-  "Build Status": "passed",
-  "Commit Date": "2025-02-25T01:39:46Z",
-  "Stars": 10,
-  "Description": "A Qiime plugin for MICOM.",
-  "Releases": [
+  "owner": "micom-dev",
+  "name": "q2-micom",
+  "branch": "main",
+  "docs": "https://micom-dev.github.io/q2-micom/",
+  "last_commit": {
+    "sha": "2970f8d9fe89874a1330e3b9172a725b33f585cb",
+    "status": "passed",
+    "date": "2025-02-25T01:39:46Z"
+  },
+  "stars": 10,
+  "description": "A Qiime plugin for MICOM.",
+  "distros": [
     "amplicon-2025.4",
     "moshpit-2025.4",
     "tiny-2025.4",

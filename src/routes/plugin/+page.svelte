@@ -58,15 +58,12 @@
             return;
         }
 
-        const response = await fetch("/json/overview.json");
+        const response = await fetch("/json/plugins.json");
         const json = await response.json();
 
-        for (const repo of Object.keys(json["Repos"])) {
-            repo_overviews.push(json["Repos"][repo]);
-        }
-
-        date_fetched = json["Date Fetched"];
-        releases = json["Releases"];
+        repo_overviews = json.plugins
+        date_fetched = json.last_updated;
+        releases = json.distros;
 
         repo_overviews = sortOverviews(repo_overviews, sort_col, sort_descending);
         overview.set({

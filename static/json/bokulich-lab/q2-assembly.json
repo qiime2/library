@@ -1,5 +1,5 @@
 {
-  "Readme": {
+  "readme": {
     "type": "root",
     "children": [
       {
@@ -540,7 +540,7 @@
       }
     ]
   },
-  "Github Releases": [
+  "releases": [
     {
       "tag_name": "2023.5.0.dev0",
       "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2023.5.0.dev0",
@@ -2014,13 +2014,16 @@
       }
     }
   ],
-  "Plugin Owner": "bokulich-lab",
-  "Plugin Name": "q2-assembly",
-  "Branch": "main",
-  "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
-  "Build Status": "passed",
-  "Commit Date": "2025-01-18T21:21:29Z",
-  "Stars": 4,
-  "Description": "QIIME 2 plugin for (meta)genome assembly.",
-  "Releases": ["metagenome-2024.10"]
+  "owner": "bokulich-lab",
+  "name": "q2-assembly",
+  "branch": "main",
+  "docs": "https://bokulich-lab.github.io/moshpit-docs",
+  "last_commit": {
+    "sha": "a124882a861acaab65252c565e44d34dee2a43c4",
+    "status": "passed",
+    "date": "2025-01-18T21:21:29Z"
+  },
+  "stars": 4,
+  "description": "QIIME 2 plugin for (meta)genome assembly.",
+  "distros": ["metagenome-2024.10"]
 }

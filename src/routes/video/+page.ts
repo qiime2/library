@@ -3,7 +3,6 @@ export async function load({ fetch }) {
   const videos = await response.json();
 
   return {
-    videos
+    videos,
   };
 }
-
