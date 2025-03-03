@@ -1,0 +1,50 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-sample-classifier"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-sample-classifier/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "qiime2",
+  "name": "q2-sample-classifier",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "pathogenome-2024.10",
+    "amplicon-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9"
+  ],
+  "stars": 6,
+  "description": "QIIME 2 plugin for machine learning prediction of sample data.",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "f880f13b9edf044b11f9eaaf3dacd5f0976dbd85",
+    "status": "passed",
+    "date": "2025-01-18T21:10:03Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-stats"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-stats/workflows/ci-dev/badge.svg"
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "0.1.dev0",
+      "html_url": "https://github.com/qiime2/q2-stats/releases/tag/0.1.dev0",
+      "name": "0.1.dev0",
+      "published_at": "2022-06-06T18:37:19Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": https://github.com/qiime2/q2-stats/commits/0.1.dev0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-stats",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": ["amplicon-2024.10"],
+  "stars": 1,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "294b0dcbae4169a5c639543e53fc62c689a61d3f",
+    "status": "passed",
+    "date": "2025-01-18T21:10:36Z"
+  }
+}

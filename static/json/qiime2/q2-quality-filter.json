@@ -1,0 +1,60 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-quality-filter"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-quality-filter/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/q2-quality-filter/releases/tag/2017.2.0",
+      "name": "q2-quality-filter 2017.2.0",
+      "published_at": "2017-02-07T01:13:45Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-quality-filter",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "amplicon-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9"
+  ],
+  "stars": 1,
+  "description": "Quality filtering for QIIME2",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "30a445cd60dd8c9a36f4effb4ae1f5880895514f",
+    "status": "passed",
+    "date": "2025-01-29T20:26:29Z"
+  }
+}

@@ -1,0 +1,2210 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "qiime2 (the QIIME 2 framework)"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/qiime2/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Source code repository for the QIIME 2 framework."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2™ is a powerful, extensible, and decentralized microbiome bioinformatics\nplatform that is free, open source, and community developed. With a focus on\ndata and analysis transparency, QIIME 2 enables researchers to start an\nanalysis with raw DNA sequence data and finish with publication-quality figures\nand statistical results."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Visit "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "https://qiime2.org"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " to learn more about the QIIME 2\nproject."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Detailed instructions are available in the\n"
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Users"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Head to the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "user docs"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for help getting started,\ncore concepts, tutorials, and other resources."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Just have a question? Please ask it in our\n"
+          },
+          {
+            "type": "link",
+            "url": "https://forum.qiime2.org/c/user-support",
+            "children": [
+              {
+                "type": "text",
+                "value": "forum"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Developers"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Please visit the "
+          },
+          {
+            "type": "link",
+            "url": "https://dev.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "contributing page"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for more\ninformation on contributions, documentation links, and more."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Citing QIIME 2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you use QIIME 2 for any published research, please include the following\ncitation:"
+          }
+        ]
+      },
+      {
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bolyen E, Rideout JR, Dillon MR, Bokulich NA, Abnet CC, Al-Ghalith GA, Alexander H, Alm EJ, Arumugam M, Asnicar F, Bai Y, Bisanz JE, Bittinger K, Brejnrod A, Brislawn CJ, Brown CT, Callahan BJ, Caraballo-Rodríguez AM, Chase J, Cope EK, Da Silva R, Diener C, Dorrestein PC, Douglas GM, Durall DM, Duvallet C, Edwardson CF, Ernst M, Estaki M, Fouquier J, Gauglitz JM, Gibbons SM, Gibson DL, Gonzalez A, Gorlick K, Guo J, Hillmann B, Holmes S, Holste H, Huttenhower C, Huttley GA, Janssen S, Jarmusch AK, Jiang L, Kaehler BD, Kang KB, Keefe CR, Keim P, Kelley ST, Knights D, Koester I, Kosciolek T, Kreps J, Langille MGI, Lee J, Ley R, Liu YX, Loftfield E, Lozupone C, Maher M, Marotz C, Martin BD, McDonald D, McIver LJ, Melnik AV, Metcalf JL, Morgan SC, Morton JT, Naimey AT, Navas-Molina JA, Nothias LF, Orchanian SB, Pearson T, Peoples SL, Petras D, Preuss ML, Pruesse E, Rasmussen LB, Rivers A, Robeson MS, Rosenthal P, Segata N, Shaffer M, Shiffer A, Sinha R, Song SJ, Spear JR, Swafford AD, Thompson LR, Torres PJ, Trinh P, Tripathi A, Turnbaugh PJ, Ul-Hasan S, van der Hooft JJJ, Vargas F, Vázquez-Baeza Y, Vogtmann E, von Hippel M, Walters W, Wan Y, Wang M, Warren J, Weber KC, Williamson CHD, Willis AD, Xu ZZ, Zaneveld JR, Zhang Y, Zhu Q, Knight R, and Caporaso JG. 2019. Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2. Nature Biotechnology 37:852–857. https://doi.org/10.1038/s41587-019-0209-9"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/qiime2/releases/tag/2017.2.0",
+      "name": "QIIME 2 release 2017.2: paired-end analysis support, 100x faster denoising with DADA2",
+      "published_at": "2017-02-07T01:24:36Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re excited to announce the 2017.2 release of the QIIME 2 framework and supporting plugins. This is a "
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "synchronized"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " release, meaning that we intend all interfaces and plugins versioned "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2017.2.*"
+              },
+              {
+                "type": "text",
+                "value": " to work with QIIME 2 "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2017.2.*"
+              },
+              {
+                "type": "text",
+                "value": ". For information about QIIME 2, see https://qiime2.org."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "The 2017.2 synchronized release includes the following new features and interface changes. We aren’t listing all changes here, just the ones we are most excited about and those that will affect end users. For future releases, as the QIIME 2 project is now beginning to stabilize, we are committed to documenting all user-facing changes in changelogs instead of the summary below."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "New and improved features:"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Support for paired-end read analysis with the new methods "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "demux emp-paired"
+                  },
+                  {
+                    "type": "text",
+                    "value": " and "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "dada2 denoise-paired"
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Improved performance for DADA2 denoising using multi-threaded processing (see the "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "n-threads"
+                  },
+                  {
+                    "type": "text",
+                    "value": " parameter) and by training error models on only a subset of the sequences (see the "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "n-reads-learn"
+                  },
+                  {
+                    "type": "text",
+                    "value": " parameter). When denoising a full MiSeq run on 32 processors, this reduced the runtime by over 100x relative to QIIME 2 2.0.6."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Improved error reporting from q2cli command line interface. When an error occurs, users are now presented with concise error messages, but not full Python tracebacks (unless the command is run with the "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "--verbose"
+                  },
+                  {
+                    "type": "text",
+                    "value": " flag, in which case the full Python traceback is presented). This should help users identify and correct errors."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Sample metadata can now be integrated in feature table summary plots, allowing users to interactively explore rarefaction depth parameters in the context of sample metadata. This is available through the new "
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Interactive Sample Detail"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " tab in the visualizations generated by "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "feature-table summarize"
+                  },
+                  {
+                    "type": "text",
+                    "value": " if sample metadata is provided."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The runtime and memory requirements for training and running feature classifiers with "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "q2-feature-classifier"
+                  },
+                  {
+                    "type": "text",
+                    "value": " has been greatly decreased."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "All methods and visualizers now have parameter-specific help text."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "A new method, "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "diversity filter-distance-matrix"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", has been added to support metadata-based filtering of distance matrices."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "The QIIME 2 VirtualBox install instructions have been expanded and improved based on user feedback, and now includes screenshots to help users with installation."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interface changes:"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "demux emp"
+                  },
+                  {
+                    "type": "text",
+                    "value": " has been renamed "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "demux emp-single"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", to indicate that is it intended to be used for single-end read processing."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "dada2 denoise"
+                  },
+                  {
+                    "type": "text",
+                    "value": " has been renamed "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "dada2 denoise-single"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", to indicate that is it intended to be used for single-end read processing."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "In this release cycle, we removed all "
+              },
+              {
+                "type": "inlineCode",
+                "value": "CHANGELOG.md"
+              },
+              {
+                "type": "text",
+                "value": " files as these haven’t been well-maintained yet. We’re working on a new solution for presenting this information which will be in place by the time we transition to our beta release. In the meantime, we’ll present the most important changes in these release notes, and we are available to help users and developers transition between releases on Slack, the QIIME 2 Forum, or repository issue trackers. Get in touch through one of those mechanisms if you have any questions."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We have also updated our version numbering scheme with this release. Our release numbers now take the format "
+              },
+              {
+                "type": "inlineCode",
+                "value": "year.month.patch-number"
+              },
+              {
+                "type": "text",
+                "value": ". For example, this release is "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2017.2.0"
+              },
+              {
+                "type": "text",
+                "value": " and we’re currently planning another release for March, 2017, which will be version "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2017.3.0"
+              },
+              {
+                "type": "text",
+                "value": ". If any bug fix releases are necessary between these releases, those would be numbered by incrementing the patch number so that, for example, the hypothetical next patch release would be "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2017.2.1"
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re very grateful to all of the plugin developers who have contributed functionality to this pipeline."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Because our microbiome analysis functionality is still currently very new, "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 is not yet recommended as a replacement for QIIME 1"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", but we are very interested in having users test QIIME 2 and give us feedback."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "In addition to user testing, we’re also interested in working with developers to contribute new QIIME 2 plugins or interfaces. You should read our draft plugin developer documentation at https://qiime2.org to get started. "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "While QIIME 2 is in its alpha release stage, backward incompatible interface changes that impact plugins and interfaces can and will occur."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "As always, thanks for your interest in QIIME 2!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2.0.6",
+      "html_url": "https://github.com/qiime2/qiime2/releases/tag/2.0.6",
+      "name": "qiime 2.0.6: data provenance, simplified viewing, and new forum",
+      "published_at": "2016-11-02T23:50:51Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re excited to announce the 2.0.6 minor release of the QIIME 2 framework and supporting plugins. This is the second "
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "synchronized"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " release, meaning that we intend all interfaces and plugins versioned "
+              },
+              {
+                "type": "inlineCode",
+                "value": "0.0.6"
+              },
+              {
+                "type": "text",
+                "value": " to work with QIIME "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2.0.6"
+              },
+              {
+                "type": "text",
+                "value": ". For information about QIIME 2, see https://qiime2.org."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "The 2.0.6 synchronized release includes the following new features and interface changes. We aren’t listing all changes here, just the ones we are most excited about and those that will affect end users. For future releases, as the QIIME 2 project is now beginning to stabilize, we are committed to documenting all user-facing changes in changelogs instead of the summary below."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "New features:"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "New .qza/.qzv file format supporting decentralized data provenance tracking. Provenance can be visualized and inspected by uploading a .qza/.qzv file to https://view.qiime2.org (more details about this service below). Other provenance visualization/inspection will be available in the future. Note: data generated with QIIME 2.0.5 will continue to be supported in the current and future releases, though the data will not contain provenance information. All new data generated with QIIME 2.0.6 will contain provenance information."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://view.qiime2.org is a new service for viewing .qza/.qzv files in the browser without requiring QIIME 2 to be installed. This service is great for sharing QIIME data with collaborators who may not have QIIME 2 installed. In addition to file uploads, the service supports viewing .qza/.qzv files accessible via URLs (e.g. Dropbox, Google Drive, GitHub links)."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://docs.qiime2.org is the new site for accessing QIIME 2 user documentation. Many improvements have been made to the site, including links to all data files generated in tutorials and other documentation. These precomputed .qza/.qzv files can be easily viewed at https://view.qiime2.org or downloaded directly. By providing precomputed results, it is possible to read the tutorials and view results without installing QIIME 2 or additional software."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "New QIIME 2 forum (separate from the QIIME 1 forum) for user and developer support, community discussion, announcements, etc: https://forum.qiime2.org"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Support for exporting data from .qza/.qzv files (new CLI command "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime tools export"
+                  },
+                  {
+                    "type": "text",
+                    "value": " and API "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime.sdk.Result.export_data"
+                  },
+                  {
+                    "type": "text",
+                    "value": ")."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime taxa barplot"
+                  },
+                  {
+                    "type": "text",
+                    "value": " has more discrete color palettes and can remove sorting categories, among several other bug fixes and usability enhancements."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Most visualizations have been updated to have a consistent look-and-feel, and many have improved usability and functionality."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interface changes:"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Removed "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "HELP_URL"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "CITATION"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", and "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "CONDA_CHANNEL"
+                  },
+                  {
+                    "type": "text",
+                    "value": " from "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime.sdk"
+                  },
+                  {
+                    "type": "text",
+                    "value": " API."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime feature-table filter"
+                  },
+                  {
+                    "type": "text",
+                    "value": " has been removed in place of "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime feature-table filter-samples"
+                  },
+                  {
+                    "type": "text",
+                    "value": " and "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "filter-features"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", which provide many more table filtering operations. The previous filtering functionality provided by "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime feature-table filter"
+                  },
+                  {
+                    "type": "text",
+                    "value": " is now available in "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime phylogeny filter-table"
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime feature-table view-seq-data"
+                  },
+                  {
+                    "type": "text",
+                    "value": " is now "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime feature-table tabulate-seqs"
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime feature-table view-taxa-data"
+                  },
+                  {
+                    "type": "text",
+                    "value": " is now "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime taxa tabulate"
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "qiime diversity core-metrics --p-counts-per-sample"
+                  },
+                  {
+                    "type": "text",
+                    "value": " is now "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "--p-sampling-depth"
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re very grateful to all of the plugin developers who have contributed functionality to this pipeline."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Because our microbiome analysis functionality is still currently very new, "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 is not yet recommended as a replacement for QIIME 1"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", but we are very interested in having users test QIIME 2 and give us feedback."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "In addition to user testing, we’re also interested in working with developers to contribute new QIIME 2 plugins or interfaces. You should read our draft plugin developer documentation at https://qiime2.org to get started. "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "While QIIME 2 is in its alpha release stage, backward incompatible interface changes that impact plugins and interfaces can and will occur."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "As always, thanks for your interest in QIIME!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2.0.5",
+      "html_url": "https://github.com/qiime2/qiime2/releases/tag/2.0.5",
+      "name": "qiime 2.0.5: Initial End-to-End Microbiome Analysis Pipeline",
+      "published_at": "2016-10-08T21:51:36Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re excited to announce the 2.0.5 minor release of the QIIME 2 framework and supporting plugins. This is the first "
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "synchronized"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " release, meaning that we intend all interfaces and plugins versioned "
+              },
+              {
+                "type": "inlineCode",
+                "value": "0.0.5"
+              },
+              {
+                "type": "text",
+                "value": " to work with QIIME "
+              },
+              {
+                "type": "inlineCode",
+                "value": "2.0.5"
+              },
+              {
+                "type": "text",
+                "value": ".  As always you can see the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/blob/master/CHANGELOG.md#version-205-2016-10-08",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 ChangeLog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " for additional information."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "The new "
+              },
+              {
+                "type": "link",
+                "url": "http://2.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 website"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " is also now live, and contains tutorials and example data that you can use to learn QIIME 2. (This site will eventually transition to replace the current qiime.org.)"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Highlights of this release include:"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Our first attempt to stabilize the "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": ".qza"
+                  },
+                  {
+                    "type": "text",
+                    "value": "/"
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": ".qzv"
+                  },
+                  {
+                    "type": "text",
+                    "value": " archival formats, which means that we intend to support artifacts and visualizations generated by this release ("
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "2.0.5"
+                  },
+                  {
+                    "type": "text",
+                    "value": ") into the future. While we expect the format to continue to evolve, we now have machinery to support future changes in backwards compatible ways."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Significant improvements to QIIME 2’s command line interface ("
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2cli",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2cli"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "). These include a faster response time, tab-completion of command and parameter names, per-command configuration via an "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": ".ini"
+                  },
+                  {
+                    "type": "text",
+                    "value": " file, support for default values, and "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2cli/blob/master/CHANGELOG.md#version-005-2016-10-08",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "more"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Default values are now supported by the framework, allowing plugin developers to indicate what parameters are not required from the user."
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Improved importing of data. It is now possible for QIIME to consume data in more than one format via the use of "
+                  },
+                  {
+                    "type": "emphasis",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "transformers"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": ". This means we can expand the variety of file formats that QIIME 2 will be able to consume (and existing plugins will automatically benefit from it)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "This is also the first release to include an end-to-end microbiome analysis pipeline (from raw sequence data through diversity analysis statistics and interactive visualizations). The plugins that make this possible are:"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-demux",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-demux"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Demultiplex Illumina data"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/benjjneb/q2-dada2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-dada2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Apply DADA2 to denoise sequence data, including chimera filtering and phiX filtering"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-feature-table",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-feature-table"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Work with feature tables (QIIME 2’s equivalent of OTU Tables)"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/BenKaehler/q2-feature-classifier",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-feature-classifier"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Assign taxonomy to sequence reads using a variety of machine learning classifiers"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-taxa",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-taxa"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Generate interactive taxonomic composition plots"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-alignment",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-alignment"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Perform sequence alignment to support diversity analyses"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-phylogeny",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-phylogeny"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Perform phylogenetic reconstruction to support diversity analyses"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-diversity",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-diversity"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Compute alpha and beta diversity analysis, and generate statistics and interactive visualizations"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/qiime2/q2-emperor",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-emperor"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Generate interactive principal coordinate plots"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mortonjt/q2-composition",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "q2-composition"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " : Apply differential abundance testing using ANCOM"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re very grateful to all of the plugin developers who have contributed functionality to this pipeline."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Because our microbiome analysis functionality is still currently very new, "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 is not yet recommended as a replacement for QIIME 1"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", but we are very interested in having users test QIIME 2 and give us feedback."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "In addition to user testing, we’re also interested in working with developers who are interested in contributing new QIIME 2 plugins or interfaces. You should read our draft plugin developer documentation at https://2.qiime.org to get started. "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "While QIIME 2 is in its alpha release stage, backward incompatible interface changes that impact plugins and interfaces can and will occur."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " We will make every effort to minimize these, and we will always document these in the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/blob/master/CHANGELOG.md",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 ChangeLog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Finally, we’re wrapping up our initial version of the QIIME 2 documentation and tutorials. We expect the new site to go live by this Tuesday, 11 October 2016. That documentation will be at http://2.qiime.org, and you’ll see a placeholder at that page until the new site goes live."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "As always, thanks for your interest in QIIME!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2.0.2",
+      "html_url": "https://github.com/qiime2/qiime2/releases/tag/2.0.2",
+      "name": "qiime 2.0.2: Minor alpha release",
+      "published_at": "2016-08-08T21:32:08Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re excited to announce the 2.0.2 minor release of the QIIME 2 framework. This release has a few new features that will be useful for plugin developers, and which are detailed in the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/blob/master/CHANGELOG.md",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 ChangeLog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "One exciting new feature is the inclusion of a templating framework for creating new plugins based on "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/audreyr/cookiecutter",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "cookiecutter"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " ("
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/issues/4",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#4"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "). This allows a new plugin developer to rapidly create a working QIIME 2 plugin, which can then be adapted to add new functionality to QIIME. This should make it even easier to create new plugins. See "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/wiki/Creating-a-QIIME-2-plugin#initializing-a-plugin-package",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Initializing a QIIME 2 plugin"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " in the "
+              },
+              {
+                "type": "link",
+                "url": "http://2.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 wiki"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " to learn how to use this (or just call "
+              },
+              {
+                "type": "inlineCode",
+                "value": "qiime tools plugin-init"
+              },
+              {
+                "type": "text",
+                "value": " after installing this release and updating "
+              },
+              {
+                "type": "inlineCode",
+                "value": "q2cli"
+              },
+              {
+                "type": "text",
+                "value": ")."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Another important addition is the "
+              },
+              {
+                "type": "inlineCode",
+                "value": "citation_text"
+              },
+              {
+                "type": "text",
+                "value": " and "
+              },
+              {
+                "type": "inlineCode",
+                "value": "user_support_text"
+              },
+              {
+                "type": "text",
+                "value": " properties to "
+              },
+              {
+                "type": "inlineCode",
+                "value": "Plugin"
+              },
+              {
+                "type": "text",
+                "value": " objects. These allow plugin developers to communicate to users how they should cite the plugin they’re using, and how to request help with it. This information can then be presented to users by interfaces. For example, this is accessible through "
+              },
+              {
+                "type": "inlineCode",
+                "value": "q2cli"
+              },
+              {
+                "type": "text",
+                "value": " by calling "
+              },
+              {
+                "type": "inlineCode",
+                "value": "--help"
+              },
+              {
+                "type": "text",
+                "value": " on the plugin:"
+              }
+            ]
+          },
+          {
+            "type": "html",
+            "value": "<img width=\"544\" alt=\"qiime emperor --help\" src=\"https://cloud.githubusercontent.com/assets/192372/17534666/17615aa2-5e3f-11e6-84b4-b9ffdbe8a97e.png\">"
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "In our initial QIIME 2 development phase, most of our focus has been on building the underlying framework, and the microbiome analysis functionality is limited."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " During our alpha release phase (which we are currently in), we’ll be rapidly expanding the available microbiome analysis functionality through the development of new plugins. Because our microbiome analysis functionality is currently limited, "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 is not yet recommended as a replacement for QIIME 1"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", but we are very interested in having users test QIIME 2 and give us feedback. To see what QIIME 2 plugins are currently available or in development, see the "
+              },
+              {
+                "type": "link",
+                "url": "http://2.qiime.org/Plugins",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 Plugins page"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "In addition to user testing, we’re also interested in working with developers who are interested in contributing new QIIME 2 plugins or interfaces. You should read our "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/wiki/Creating-a-QIIME-2-plugin",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "draft plugin developer documentation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " to get started. "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "While QIIME 2 is in its alpha release stage, backward incompatible interface changes that impact plugins and interfaces can and will occur."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " We will make every effort to minimize these, and we will always document these in the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/blob/master/CHANGELOG.md",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 ChangeLog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "To get started with installing and using QIIME 2, see our wiki at "
+              },
+              {
+                "type": "link",
+                "url": "http://2.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2.qiime.org"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". The wiki is a temporary location for our documentation while we’re in alpha. Our documentation will move to "
+              },
+              {
+                "type": "link",
+                "url": "http://www.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "www.qiime.org"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " when we transition to our beta release phase."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "As always, thanks for your interest in QIIME!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2.0.1",
+      "html_url": "https://github.com/qiime2/qiime2/releases/tag/2.0.1",
+      "name": "First QIIME 2 alpha release at SciPy 2016!",
+      "published_at": "2016-07-15T05:14:49Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re extremely excited to announce the first alpha release of QIIME 2, occurring during "
+              },
+              {
+                "type": "link",
+                "url": "http://scipy2016.scipy.org/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "SciPy 2016"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", and approximately 6.5 years after the "
+              },
+              {
+                "type": "link",
+                "url": "https://qiime.wordpress.com/2010/01/26/qiime-0-9-released/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "initial release of QIIME (version 0.9.0)"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "! A lot has changed in that time, both in scientific computing and in microbiome bioinformatics, and as a result QIIME 2 is a complete rewrite of the "
+              },
+              {
+                "type": "link",
+                "url": "http://www.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " platform."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "In our initial QIIME 2 development phase, most of our focus has been on building the underlying framework, and the microbiome analysis functionality is limited."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " During our alpha release phase (beginning now), we’ll be rapidly expanding the available microbiome analysis functionality. Because our microbiome analysis functionality is currently limited, "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 is not yet recommended as a replacement for QIIME 1"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", but we are very interested in having users test QIIME 2 and give us feedback."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "The alpha version of the framework provides exciting new functionality that we think will revolutionize microbiome bioinformatics, including:"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "a plugin system for microbiome bioinformatics developers to add support for new methods and visualizations to QIIME,"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "decentralized provenance tracking of all data generated by QIIME to simplify methods reporting and reproducibility,"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "a semantic type system to help users use QIIME correctly,"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "and a software development kit (SDK) for interface developers that enables development of different types of interfaces, including "
+                  },
+                  {
+                    "type": "link",
+                    "url": "http://2.qiime.org/QIIME-studio",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "QIIME Studio"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": ", our "
+                  },
+                  {
+                    "type": "link",
+                    "url": "http://electron.atom.io",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Electron"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "-based graphical user interface."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "To get started with installing and using QIIME 2, see our wiki at "
+              },
+              {
+                "type": "link",
+                "url": "http://2.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2.qiime.org"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". The wiki is a temporary location for our documentation while we’re in alpha. Our documentation will move to "
+              },
+              {
+                "type": "link",
+                "url": "http://www.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "www.qiime.org"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " when we transition to our beta release phase."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "In addition to user testing, we’re also interested in working with developers who are interested in contributing new QIIME 2 plugins or interfaces. You should read our "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/wiki/Creating-a-QIIME-2-plugin",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "draft plugin developer documentation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " to get started. "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "While QIIME 2 is in its alpha release stage, backward incompatible interface changes that impact plugins and interfaces can and will occur."
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " We will make every effort to minimize these, and we will always document these in the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/blob/master/CHANGELOG.md",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 ChangeLog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We now have a dedicated "
+              },
+              {
+                "type": "link",
+                "url": "http://twitter.com/qiime_",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME twitter account"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", which you can follow for updates on QIIME 2. We’ll have a more official system for communication with our users and developers timed with an upcoming release. In the meantime, if you have questions, bug reports, or feature requests, please post them to the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/issues",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 issue tracker"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "As always, thanks for your interest in QIIME! We are very excited to work with our user community as we transition to QIIME 2, and to expand our development community through decentralized plugin and interface development."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Happy QIIME-ing!"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "qiime2",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "pathogenome-2024.10",
+    "tiny-2024.10",
+    "amplicon-2024.5",
+    "tiny-2024.5",
+    "amplicon-2024.2",
+    "tiny-2024.2",
+    "amplicon-2023.9",
+    "tiny-2023.9"
+  ],
+  "stars": 494,
+  "description": "Official repository for the QIIME 2 framework.",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "136693096f9791b0d357d357563a345cace09ef9",
+    "status": "passed",
+    "date": "2025-02-06T21:07:58Z"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fragment-insertion"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-fragment-insertion/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "0.1.0",
+      "html_url": "https://github.com/qiime2/q2-fragment-insertion/releases/tag/0.1.0",
+      "name": "Very first release",
+      "published_at": "2017-11-14T23:45:10Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-fragment-insertion",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "amplicon-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9"
+  ],
+  "stars": 13,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "a58b67b612da3883b9ccd13e8bd2812ea47f2282",
+    "status": "passed",
+    "date": "2025-01-18T21:07:05Z"
+  }
+}

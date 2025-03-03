@@ -1,7 +1,8 @@
 import fs from "node:fs";
 
 function roundRows(list, radix) {
-  let n = Math.min(3, Math.floor((list.length + 1) / radix)) * radix;
+  let n =
+    Math.min(3, Math.max(Math.floor((list.length + 1) / radix), 1)) * radix;
   return list.slice(0, n - 1);
 }
 
@@ -11,6 +12,9 @@ export async function main() {
     fs.readFileSync("./static/json/plugins.json", "utf-8"),
   );
   results["plugins"] = roundRows(plugins.plugins, 4);
+
+  let distros = fs.readFileSync("./static/json/distros.json", "utf-8");
+  results["distros"] = JSON.parse(distros).distros;
 
   let books = fs.readFileSync("./static/json/books.json", "utf-8");
   results["books"] = roundRows(JSON.parse(books), 6);

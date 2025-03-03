@@ -1,0 +1,157 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-viromics"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " Plugin for detecting viral genomes and assessing their quality."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-viromics"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " is available as part of the QIIME 2 pathogenome distribution. For installation and usage instructions please consult the official "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Start by downloading sample input "
+          },
+          {
+            "type": "link",
+            "url": "https://polybox.ethz.ch/index.php/s/9jlQ4oyDWvWyvpB",
+            "children": [
+              {
+                "type": "text",
+                "value": "datasets"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Fetch the checkV database:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "qiime viromics checkv-fetch-db --o-database checkV_db.qza --verbose"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Run the CheckV analysis:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "qiime viromics checkv-analysis --i-sequences input_sequences.qza --i-database checkV_db.qza --p-num-threads 4 --output-dir checkV_output --verbose"
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-viromics",
+  "docs": null,
+  "in_distro": true,
+  "distros": ["pathogenome-2024.10"],
+  "stars": 0,
+  "description": null,
+  "branch": "main",
+  "last_commit": {
+    "sha": "8e545024d1a41e50191b5b9a100208ebc4a268f1",
+    "status": "passed",
+    "date": "2025-01-18T21:30:29Z"
+  }
+}

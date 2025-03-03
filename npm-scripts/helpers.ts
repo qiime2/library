@@ -46,6 +46,65 @@ export async function getLibraryCatalog() {
   return workdir;
 }
 
+let EPOCH = /^20\d\d\.\d\d?$/;
+export async function getDistributionsData(distros) {
+  let workdir = await mkdtemp(join(tmpdir(), "q2-distributions-clone"));
+  try {
+    let { stdout, stderr } = await exec(
+      `git clone --depth=1 -- 'https://github.com/qiime2/distributions.git' '${workdir}'`,
+    );
+    console.log(stdout);
+    console.error(stderr);
+    const { packages } = await loadYamlPath(join(workdir, "data.yaml"));
+    let plugins: Record<string, any> = {};
+
+    for (const pkg of packages) {
+      let [owner, name] = pkg.repo.split("/");
+      let docs = null;
+      for (const distro of distros) {
+        if (distro.docs && pkg.distros.includes(distro.name)) {
+          docs = distro.docs;
+          break;
+        }
+      }
+      plugins[pkg.name] = { owner, name, docs, in_distro: true, distros: [] };
+    }
+
+    let epochs = (await promisify(fs.readdir)(workdir)).filter((dir) =>
+      EPOCH.exec(dir),
+    );
+    epochs.sort(sortEpochs);
+
+    for (const epoch of epochs) {
+      for (const distro of distros.map(({ name }) => name)) {
+        try {
+          let env = await loadYamlPath(
+            join(
+              workdir,
+              epoch,
+              distro,
+              "released",
+              "seed-environment-conda.yml",
+            ),
+          );
+          for (const dep of env.dependencies) {
+            let name = dep.split("=")[0];
+            if (Object.hasOwn(plugins, name)) {
+              plugins[name].distros.push(`${distro}-${epoch}`);
+            }
+          }
+        } catch {
+          continue;
+        }
+      }
+    }
+
+    return Object.values(plugins).filter(({ distros }) => distros.length > 0);
+  } finally {
+    await promisify(fs.rm)(workdir, { force: true, recursive: true });
+  }
+}
+
 export async function get_octokit() {
   let authenticationStrategy: any;
   let strategyOptions: any;

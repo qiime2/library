@@ -12,6 +12,7 @@ import {
   get_octokit,
   cleanup,
   loadYamlDir,
+  loadYamlPath,
 } from "./helpers.js";
 import type { Octokit } from "octokit";
 import { join } from "node:path";
@@ -27,11 +28,14 @@ export async function main(catalog: string, octokit: Octokit) {
 
   // A set containing all QIIME 2 releases represented by all plugins on the library
   let global_releases = new Set();
+  let directlyRegistered = new Set();
 
   for (const plugin of plugins) {
     const owner = plugin["owner"];
     const repo_name = plugin["name"];
     const branch = plugin["branch"];
+
+    directlyRegistered.add(repo_name);
 
     let repo_info: Record<string, any> = {};
 
@@ -90,6 +94,15 @@ export async function main(catalog: string, octokit: Octokit) {
       JSON.stringify(repo_info, null, 2),
     );
 
+    json_overview.plugins.push(plugin);
+  }
+
+  let distro_overview = await loadYamlPath("./static/json/distros.json");
+  for (const plugin of distro_overview.plugins) {
+    if (directlyRegistered.has(plugin.name)) {
+      continue;
+    }
+    global_releases = new Set([...global_releases, ...plugin.distros]);
     json_overview.plugins.push(plugin);
   }
 

@@ -1,6 +1,51 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-composition",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9"
+      ],
+      "stars": 6,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "5eb525b0a4f03f1e9c9c48044114aa3b14c9f05d",
+        "status": "passed",
+        "date": "2025-02-27T21:40:46Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-types",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "pathogenome-2024.10",
+        "tiny-2024.10",
+        "amplicon-2024.5",
+        "tiny-2024.5",
+        "amplicon-2024.2",
+        "tiny-2024.2",
+        "amplicon-2023.9",
+        "tiny-2023.9"
+      ],
+      "stars": 17,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "ff058fb6eeb413156b1a32ccdd502784003a5c70",
+        "status": "passed",
+        "date": "2025-02-27T17:35:34Z"
+      }
+    },
+    {
       "owner": "micom-dev",
       "name": "q2-micom",
       "branch": "main",
@@ -34,6 +79,27 @@
       "stars": 0,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": ["pathogenome-2024.10"]
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-feature-classifier",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9"
+      ],
+      "stars": 19,
+      "description": "QIIME 2 plugin supporting taxonomic classification",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "0ba5389b90f4c2d70d5f6955450318831433bc66",
+        "status": "passed",
+        "date": "2025-02-20T18:43:52Z"
+      }
     },
     {
       "owner": "caporaso-lab",
@@ -78,32 +144,90 @@
       "distros": ["metagenome-2024.10"]
     },
     {
-      "owner": "PlanesLab",
-      "name": "q2-metnet",
-      "branch": "main",
-      "docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
+      "owner": "qiime2",
+      "name": "q2-vsearch",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9"
+      ],
+      "stars": 6,
+      "description": "vsearch plugin for QIIME 2",
+      "branch": "dev",
       "last_commit": {
-        "sha": "575fe8da6f9de8c66cdd8248a60df3fae922f540",
+        "sha": "5942dae311c0ade6589a3598225cd6edbf11ff8c",
         "status": "passed",
-        "date": "2025-02-03T17:38:01Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
-      "distros": ["amplicon-2024.10"]
+        "date": "2025-02-13T13:22:37Z"
+      }
     },
     {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "branch": "main",
-      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "owner": "qiime2",
+      "name": "q2-dada2",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9"
+      ],
+      "stars": 20,
+      "description": "QIIME 2 plugin wrapping DADA2",
+      "branch": "dev",
       "last_commit": {
-        "sha": "95b247b03c2aca837fb60d6d9fdf90188dda8bcd",
+        "sha": "29e0e4e7dcad5b18478ff7e9548d90fb2879b015",
         "status": "passed",
-        "date": "2025-01-24T01:34:39Z"
-      },
+        "date": "2025-02-11T17:24:31Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-cutadapt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9"
+      ],
       "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "74874e664aedb009f4bba1a00e16a6fccb2e5005",
+        "status": "passed",
+        "date": "2025-02-10T17:35:21Z"
+      }
+    }
+  ],
+  "distros": [
+    {
+      "name": "amplicon",
+      "title": "Amplicon",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "description": "A suite of plugins that provide broad analytic functionality to support microbiome marker gene analysis from raw sequencing data through publication quality visualizations and statistics.\n"
+    },
+    {
+      "name": "moshpit",
+      "title": "MOSHPIT",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "description": "MOSHPIT (MOdular SHotgun metagenome Pipelines with Integrated provenance Tracking) is a toolkit of plugins for whole metagenome assembly, annotation, and analysis.\n"
+    },
+    {
+      "name": "pathogenome",
+      "title": "Pathogenome",
+      "docs": null,
+      "description": "A suite of plugins to detect viral genomes and protein sequences from MAGs and contigs for antimicrobial-resistance.\n"
+    },
+    {
+      "name": "tiny",
+      "title": "Tiny",
+      "docs": null,
+      "description": "A minimal installation of the QIIME 2 Framework for developers that is intended to be extended with custom functionality and plugins.\n"
     }
   ],
   "books": [
@@ -126,6 +250,11 @@
     {
       "url": "https://amplicon-docs.readthedocs.io/en/latest/",
       "source": "https://github.com/qiime2/amplicon-docs",
+      "type": "book"
+    },
+    {
+      "url": "https://bokulich-lab.github.io/moshpit-docs/",
+      "source": "https://github.com/bokulich-lab/moshpit-docs/",
       "type": "book"
     }
   ],

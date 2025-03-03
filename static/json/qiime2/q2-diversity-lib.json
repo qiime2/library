@@ -1,0 +1,49 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-diversity-lib"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-diversity-lib/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "qiime2",
+  "name": "q2-diversity-lib",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "amplicon-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9"
+  ],
+  "stars": 0,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "6fb26913d07c96ee182bc418f15bdab356d60ea8",
+    "status": "passed",
+    "date": "2025-01-18T21:05:03Z"
+  }
+}

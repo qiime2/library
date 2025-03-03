@@ -46,39 +46,19 @@
       }
     },
     {
-      "owner": "micom-dev",
-      "name": "q2-micom",
-      "branch": "main",
-      "docs": "https://micom-dev.github.io/q2-micom/",
-      "last_commit": {
-        "sha": "2970f8d9fe89874a1330e3b9172a725b33f585cb",
-        "status": "passed",
-        "date": "2025-02-25T01:39:46Z"
-      },
-      "stars": 10,
-      "description": "A Qiime plugin for MICOM.",
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "tiny-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "tiny-2024.10"
-      ]
-    },
-    {
       "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
+      "docs": null,
+      "in_distro": true,
+      "distros": ["pathogenome-2024.10"],
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
       "last_commit": {
         "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
         "status": "failed",
         "date": "2025-02-21T14:34:59Z"
-      },
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": ["pathogenome-2024.10"]
+      }
     },
     {
       "owner": "qiime2",
@@ -100,48 +80,6 @@
         "status": "passed",
         "date": "2025-02-20T18:43:52Z"
       }
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
-      "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "48f92d95ed614e45186b09d802b3f3c7da451eec",
-        "status": "passed",
-        "date": "2025-02-20T17:24:28Z"
-      },
-      "stars": 6,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": ["amplicon-2024.10"]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io",
-      "last_commit": {
-        "sha": "454b3e4614789c03ca59c584152d4a60e1ac6edd",
-        "status": "passed",
-        "date": "2025-02-18T16:27:00Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": ["amplicon-2024.10"]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs",
-      "last_commit": {
-        "sha": "aaccacac04bfeee987d4c9109e3ca9c59b660452",
-        "status": "passed",
-        "date": "2025-02-18T14:37:23Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": ["metagenome-2024.10"]
     },
     {
       "owner": "qiime2",
@@ -311,20 +249,6 @@
       }
     },
     {
-      "owner": "PlanesLab",
-      "name": "q2-metnet",
-      "branch": "main",
-      "docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
-      "last_commit": {
-        "sha": "575fe8da6f9de8c66cdd8248a60df3fae922f540",
-        "status": "passed",
-        "date": "2025-02-03T17:38:01Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
-      "distros": ["amplicon-2024.10"]
-    },
-    {
       "owner": "qiime2",
       "name": "q2-quality-filter",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -345,20 +269,6 @@
       }
     },
     {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "branch": "main",
-      "docs": "https://q2-boots.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "95b247b03c2aca837fb60d6d9fdf90188dda8bcd",
-        "status": "passed",
-        "date": "2025-01-24T01:34:39Z"
-      },
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
-    },
-    {
       "owner": "bokulich-lab",
       "name": "q2-viromics",
       "docs": null,
@@ -376,16 +286,17 @@
     {
       "owner": "bokulich-lab",
       "name": "q2-assembly",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": ["pathogenome-2024.10"],
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
       "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs",
       "last_commit": {
         "sha": "a124882a861acaab65252c565e44d34dee2a43c4",
         "status": "passed",
         "date": "2025-01-18T21:21:29Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": ["metagenome-2024.10"]
+      }
     },
     {
       "owner": "qiime2",
@@ -737,19 +648,30 @@
     }
   ],
   "distros": [
-    "amplicon-2025.4",
-    "moshpit-2025.4",
-    "tiny-2025.4",
-    "amplicon-2024.10",
-    "metagenome-2024.10",
-    "pathogenome-2024.10",
-    "tiny-2024.10",
-    "amplicon-2024.5",
-    "tiny-2024.5",
-    "amplicon-2024.2",
-    "tiny-2024.2",
-    "amplicon-2023.9",
-    "tiny-2023.9"
+    {
+      "name": "amplicon",
+      "title": "Amplicon",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "description": "A suite of plugins that provide broad analytic functionality to support microbiome marker gene analysis from raw sequencing data through publication quality visualizations and statistics.\n"
+    },
+    {
+      "name": "moshpit",
+      "title": "MOSHPIT",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "description": "MOSHPIT (MOdular SHotgun metagenome Pipelines with Integrated provenance Tracking) is a toolkit of plugins for whole metagenome assembly, annotation, and analysis.\n"
+    },
+    {
+      "name": "pathogenome",
+      "title": "Pathogenome",
+      "docs": null,
+      "description": "A suite of plugins to detect viral genomes and protein sequences from MAGs and contigs for antimicrobial-resistance.\n"
+    },
+    {
+      "name": "tiny",
+      "title": "Tiny",
+      "docs": null,
+      "description": "A minimal installation of the QIIME 2 Framework for developers that is intended to be extended with custom functionality and plugins.\n"
+    }
   ],
-  "last_updated": "2025-03-03T20:37:18.580Z"
+  "last_updated": "2025-03-03T20:37:02.701Z"
 }
