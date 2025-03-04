@@ -1,23 +1,121 @@
 <script lang="ts">
+    import { onDestroy } from "svelte";
+
     import RepoCard from "$lib/components/RepoCard.svelte";
     import SortButtons from "$lib/components/SortButtons.svelte";
     import SearchBar from "$lib/components/SearchBar.svelte";
+    import { overview } from "$lib/scripts/OverviewStore";
+    import { cards } from "$lib/scripts/CardsStore";
+    import { sort_info } from "$lib/scripts/SortStore.ts";
+    import { sortOverviews, formatDate } from "$lib/scripts/util";
     import FilterButton from "$lib/components/FilterButton.svelte";
-    import type { PageProps } from "./$types";
-    import { getFilterContext } from "$lib/contexts";
-    import FilterCheckbox from "$lib/components/FilterCheckbox.svelte";
+    import type { Column } from "$lib/scripts/Column";
 
-    let { data }: PageProps = $props();
+    let repo_overviews: Array<Object>;
+    let filtered_overviews: Array<Object>;
+    let date_fetched: string;
+    let releases: Array<string> = [];
+    let filter_releases: Array<string> = [];
 
-    let state = getFilterContext();
-    const releases = data.distros.map((x: string) => x.split('-'))
-    const distros: Set<string> = new Set();
-    const epochs: Set<string> = new Set();
-    for (const [distro, epoch] of releases) {
-        distros.add(distro);
-        epochs.add(epoch);
+    overview.subscribe((value) => {
+        repo_overviews = value.repo_overviews;
+        filtered_overviews = value.filtered_overviews;
+        date_fetched = value.date_fetched;
+        releases = value.releases,
+        filter_releases = value.filter_releases
+    });
+
+    let cards_per_page: number;
+    let current_page: number;
+    let num_pages: number;
+
+    cards.subscribe((value) => {
+        cards_per_page = value.cards_per_page;
+        current_page = value.current_page;
+        num_pages = value.num_pages;
+    })
+
+    let sort_col: Column;
+    let sort_descending: boolean;
+
+    sort_info.subscribe((sort_values) => {
+        sort_col = sort_values.sort_col;
+        sort_descending = sort_values.sort_descending;
+    });
+
+    // Update our info when we leave so we can snag it when we come back
+    onDestroy(() => {
+        cards.set({
+            cards_per_page: cards_per_page,
+            current_page: current_page,
+            num_pages: num_pages
+        })
+    });
+
+    async function getOverview() {
+        // Check if we already got it
+        if (repo_overviews.length !== 0) {
+            return;
+        }
+
+        const response = await fetch("/json/plugins.json");
+        const json = await response.json();
+
+        repo_overviews = json.plugins
+        date_fetched = json.last_updated;
+        releases = json.distros;
+
+        repo_overviews = sortOverviews(repo_overviews, sort_col, sort_descending);
+        overview.set({
+            repo_overviews: repo_overviews,
+            search_filter: "",
+            filtered_overviews: repo_overviews,
+            date_fetched: date_fetched,
+            releases: releases,
+            filter_releases: filter_releases
+        });
+
+        num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
     }
 
+    function getCurrentPage() {
+        return filtered_overviews.slice(
+            (current_page - 1) * cards_per_page,
+            current_page * cards_per_page,
+        );
+    }
+
+    function handleChange(event: Event) {
+        const inputElement = document.getElementById(
+            "setCardsPerPage",
+        ) as HTMLInputElement;
+
+        const currentVal = parseInt(inputElement.value);
+
+        // If we have something less than 1 (should only ever be 0) or a NaN
+        // then set this back to what it was before
+        if (currentVal < 1 || currentVal !== currentVal) {
+            inputElement.value = String(cards_per_page);
+        } else {
+            cards_per_page = currentVal;
+        }
+    }
+
+    $: {
+        const _num_pages = Math.ceil(filtered_overviews.length / cards_per_page);
+
+        if (_num_pages === 0) {
+            num_pages = 1;
+        } else {
+            num_pages = _num_pages;
+        }
+
+        // The num_pages could drop below the current page we're on. We don't
+        // want to leave ourselves on some weird empty non page
+        if (current_page > num_pages) {
+            current_page = num_pages;
+        }
+    }
 </script>
 
 <div class="max-width">
@@ -29,6 +127,9 @@
         Learn how to add your plugin <a href="https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html">here</a>.<br/>
         The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://old-library.qiime2.org/">here</a>.
     </div>
+    {#await getOverview()}
+        ...getting overview
+    {:then}
         <div id="topBar">
             <SearchBar />
             <SortButtons />
@@ -37,26 +138,29 @@
             <div class="prose">
                 <dl>
                     <dt>Epoch:</dt>
-                    {#each epochs as epoch}
-                    <dd><FilterCheckbox name={epoch} attr={state.filters.epochs}/></dd>
-                    {/each}
+                    <dd></dd>
                     <dt>Distro:</dt>
-                    {#each distros as distro}
-                    <dd><FilterCheckbox name={distro} attr={state.filters.distros}/></dd>
-                    {/each}
-                    <dt>Status:</dt>
-                    {#each ['passed', 'failed', 'pending'] as status}
-                    <dd><FilterCheckbox name={status} attr={state.filters.status}/></dd>
-                    {/each}
+                    <dd></dd>
                 </dl>
+                <span class="font-bold">
+                    Compatible Releases:
+                </span>
+                <br/>
+                <div id="filterButtons">
+                    {#each releases as release}
+                        <FilterButton this_filter={release}/>
+                    {/each}
+                </div>
             </div>
-            <div class="grid grid-cols-1">
-                {#each state.filtered as repo_overview}
-                    <RepoCard {repo_overview} />
-                {/each}
+            <div class="grid grid-cols-1" style="grid-template-rows: repeat({cards_per_page}, minmax(0, 1fr));">
+                {#key [cards_per_page, filtered_overviews, current_page]}
+                    {#each getCurrentPage() as repo_overview}
+                        <RepoCard {repo_overview} />
+                    {/each}
+                {/key}
             </div>
         </div>
-        <!-- <div id="pageControls">
+        <div id="pageControls">
             <div></div>
             <div class="mx-auto">
                 <button
@@ -115,7 +219,8 @@
                     error
                 {/if}
             </p>
-        </div> -->
+        </div>
+    {/await}
 </div>
 
 <style lang="postcss">

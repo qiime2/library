@@ -201,7 +201,7 @@ export async function getRunsStatusOfCommit(octokit, owner, repo_name, sha) {
 
   for (const run of runs["data"]["check_runs"]) {
     if (run["status"] !== "completed") {
-      build_status = "in progress";
+      build_status = "pending";
       break;
     }
 

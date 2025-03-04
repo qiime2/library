@@ -1,29 +1,18 @@
 <script lang="ts">
-    import "../../app.css";
+    import { getFilterContext } from "$lib/contexts";
 
-    import { overview } from "$lib/scripts/OverviewStore";
-    import { applyFilters } from "$lib/scripts/util";
 
-    let overview_store;
+    let state = getFilterContext();
 
-    overview.subscribe((value) => {
-        overview_store = value;
-    });
-
-    export function applySearchFilter () {
-        const searchBar = document.getElementById("searchInput") as HTMLInputElement;
+    export function applySearchFilter (event: Event) {
+        const searchBar = event.target as HTMLInputElement;
         const search_filter = searchBar.value;
 
-        overview_store.search_filter = search_filter;
-        overview.set({
-            ...overview_store
-        });
-
-        applyFilters();
+        state.filters.search = search_filter;
     }
 </script>
 
-<input id="searchInput" placeholder="search" value={overview_store.search_filter} on:input={applySearchFilter} />
+<input id="searchInput" placeholder="search" value={state.filters.search} oninput={applySearchFilter} />
 
 <style lang="postcss">
     @reference "tailwindcss/theme";
