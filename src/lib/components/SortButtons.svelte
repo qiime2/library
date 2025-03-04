@@ -22,11 +22,11 @@
     // Type refers to the whether this column is to be sorted in alphabetical
     // order or numerical order
     const columns = [
-        new Column("Plugin Owner", SortType.alphabetical),
-        new Column("Plugin Name", SortType.alphabetical),
-        new Column("Stars", SortType.numerical),
-        new Column("Commit Date", SortType.numerical),
-        new Column("Build Status", SortType.alphabetical)
+        new Column("Plugin Owner", "owner", SortType.alphabetical),
+        new Column("Plugin Name", "name", SortType.alphabetical),
+        new Column("Stars", "stars", SortType.numerical),
+        new Column("Commit Date", "last_commit.date", SortType.numerical),
+        new Column("Build Status", "last_commit.status", SortType.alphabetical)
     ];
 
     function sortButton(column: Column) {
