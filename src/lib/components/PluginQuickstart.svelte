@@ -2,9 +2,10 @@
     import { createSelect, melt } from '@melt-ui/svelte';
     import { fade } from 'svelte/transition';
     import InstallPlugin from './InstallPlugin.svelte';
+    import InstallDistro from './InstallDistro.svelte';
 
-    const { owner, plugin, branch, releases }: {
-        owner: string, plugin: string, branch: string, releases: string[]
+    const { owner, plugin, branch, releases, in_distro }: {
+        owner: string, plugin: string, branch: string, releases: string[], in_distro: boolean
     } = $props();
 
     let selected = $state(releases[0]);
@@ -60,5 +61,9 @@
             {/if}
         </div>
     </div>
-     <InstallPlugin env_url={env_filepath} env_name={env_name} base_env={selected}/>
+    {#if in_distro}
+        <InstallDistro env_url={env_filepath} />
+    {:else}
+        <InstallPlugin env_url={env_filepath} env_name={env_name} base_env={selected}/>
+    {/if}
 </section>

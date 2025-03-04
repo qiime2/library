@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 function roundRows(list, radix) {
   let n =
-    Math.min(3, Math.max(Math.floor((list.length + 1) / radix), 1)) * radix;
+    Math.min(2, Math.max(Math.floor((list.length + 1) / radix), 1)) * radix;
   return list.slice(0, n - 1);
 }
 

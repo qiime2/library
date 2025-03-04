@@ -7,9 +7,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 6,
       "description": null,
@@ -27,14 +30,17 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "tiny-2024.5",
         "amplicon-2024.2",
         "tiny-2024.2",
         "amplicon-2023.9",
-        "tiny-2023.9"
+        "tiny-2023.9",
+        "core-2023.7"
       ],
       "stars": 17,
       "description": null,
@@ -87,10 +93,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 19,
       "description": "QIIME 2 plugin supporting taxonomic classification",
@@ -150,9 +159,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 6,
       "description": "vsearch plugin for QIIME 2",
@@ -172,7 +184,8 @@
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 20,
       "description": "QIIME 2 plugin wrapping DADA2",
@@ -190,9 +203,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 3,
       "description": null,
@@ -210,8 +226,10 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2"
       ],
       "stars": 96,
@@ -230,10 +248,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 2,
       "description": "QIIME 2 plugin supporting operations on feature tables.",
@@ -253,7 +274,8 @@
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 2,
       "description": null,
@@ -271,10 +293,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 4,
       "description": "A QIIME 2 plugin for quality control of sequence and feature data",
@@ -292,14 +317,17 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "tiny-2024.5",
         "amplicon-2024.2",
         "tiny-2024.2",
         "amplicon-2023.9",
-        "tiny-2023.9"
+        "tiny-2023.9",
+        "core-2023.7"
       ],
       "stars": 494,
       "description": "Official repository for the QIIME 2 framework.",
@@ -331,9 +359,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 1,
       "description": "Quality filtering for QIIME2",
@@ -374,6 +405,36 @@
       }
     },
     {
+      "owner": "caporaso-lab",
+      "name": "q2-sapienns",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+      "stars": 1,
+      "description": null,
+      "branch": "main",
+      "last_commit": {
+        "sha": "41488a6a2139e25657e72cd5a3de4a9519225cbe",
+        "status": "passed",
+        "date": "2025-01-18T21:23:57Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-fondue",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+      "stars": 21,
+      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
+      "branch": "main",
+      "last_commit": {
+        "sha": "f8d805ba3a607f411b768b1ea0bc92da7768c5cf",
+        "status": "passed",
+        "date": "2025-01-18T21:22:41Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-assembly",
       "branch": "main",
@@ -394,11 +455,14 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 4,
       "description": "Design template package for QIIME 2 Plugins",
@@ -418,7 +482,8 @@
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 19,
       "description": "Generate Galaxy tool descriptions automatically from QIIME 2 actions.",
@@ -436,14 +501,17 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "tiny-2024.5",
         "amplicon-2024.2",
         "tiny-2024.2",
         "amplicon-2023.9",
-        "tiny-2023.9"
+        "tiny-2023.9",
+        "core-2023.7"
       ],
       "stars": 19,
       "description": "Command line interface for QIIME 2",
@@ -459,7 +527,11 @@
       "name": "q2-vizard",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
-      "distros": ["amplicon-2024.10", "pathogenome-2024.10"],
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10"
+      ],
       "stars": 1,
       "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
       "branch": "dev",
@@ -476,10 +548,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 3,
       "description": null,
@@ -512,10 +587,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 6,
       "description": "QIIME 2 plugin for machine learning prediction of sample data.",
@@ -535,7 +613,8 @@
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 4,
       "description": "Phylogenetic reconstruction, and operations on phylogenetic trees. ",
@@ -553,14 +632,17 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "tiny-2024.5",
         "amplicon-2024.2",
         "tiny-2024.2",
         "amplicon-2023.9",
-        "tiny-2023.9"
+        "tiny-2023.9",
+        "core-2023.7"
       ],
       "stars": 0,
       "description": "This plugin exists to define integration tests between interfaces and the framework.",
@@ -578,11 +660,14 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 3,
       "description": null,
@@ -600,10 +685,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 9,
       "description": "QIIME 2 plugin for paired sample comparisons",
@@ -623,7 +711,8 @@
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 13,
       "description": null,
@@ -641,9 +730,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 1,
       "description": null,
@@ -661,9 +753,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 0,
       "description": null,
@@ -681,9 +776,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 4,
       "description": null,
@@ -701,10 +799,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 0,
       "description": null,
@@ -724,7 +825,8 @@
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 2,
       "description": "Support for multiple sequence alignment in QIIME 2. ",
@@ -733,6 +835,21 @@
         "sha": "1df967b6a087d7ab01bdf5522c0ecad99a3fab14",
         "status": "passed",
         "date": "2025-01-18T21:01:57Z"
+      }
+    },
+    {
+      "owner": "dib-lab",
+      "name": "q2-sourmash",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": ["metagenome-2024.10"],
+      "stars": 6,
+      "description": "Qiime2 Sourmash Plugin",
+      "branch": "main",
+      "last_commit": {
+        "sha": "ed0fedc3162fa4256c5eeef11e84f908a6274b2c",
+        "status": "passed",
+        "date": "2024-12-23T19:20:49Z"
       }
     }
   ],
@@ -745,11 +862,13 @@
     "pathogenome-2024.10",
     "tiny-2024.10",
     "amplicon-2024.5",
+    "metagenome-2024.5",
     "tiny-2024.5",
     "amplicon-2024.2",
     "tiny-2024.2",
     "amplicon-2023.9",
-    "tiny-2023.9"
+    "tiny-2023.9",
+    "core-2023.7"
   ],
-  "last_updated": "2025-03-03T20:37:18.580Z"
+  "last_updated": "2025-03-04T01:48:02.896Z"
 }

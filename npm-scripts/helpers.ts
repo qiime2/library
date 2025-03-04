@@ -75,8 +75,15 @@ export async function getDistributionsData(distros) {
     );
     epochs.sort(sortEpochs);
 
+    let distro_names: string[] = [];
+    for (const distro of distros) {
+      distro_names.push(distro.name);
+      if (distro.alt) {
+        distro_names.push(distro.alt);
+      }
+    }
     for (const epoch of epochs) {
-      for (const distro of distros.map(({ name }) => name)) {
+      for (const distro of distro_names) {
         try {
           let env = await loadYamlPath(
             join(

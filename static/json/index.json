@@ -7,9 +7,12 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 6,
       "description": null,
@@ -27,14 +30,17 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "tiny-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "tiny-2024.5",
         "amplicon-2024.2",
         "tiny-2024.2",
         "amplicon-2023.9",
-        "tiny-2023.9"
+        "tiny-2023.9",
+        "core-2023.7"
       ],
       "stars": 17,
       "description": null,
@@ -87,10 +93,13 @@
       "in_distro": true,
       "distros": [
         "amplicon-2024.10",
+        "metagenome-2024.10",
         "pathogenome-2024.10",
         "amplicon-2024.5",
+        "metagenome-2024.5",
         "amplicon-2024.2",
-        "amplicon-2023.9"
+        "amplicon-2023.9",
+        "core-2023.7"
       ],
       "stars": 19,
       "description": "QIIME 2 plugin supporting taxonomic classification",
@@ -128,91 +137,19 @@
       "stars": 4,
       "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
       "distros": ["amplicon-2024.10"]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs",
-      "last_commit": {
-        "sha": "aaccacac04bfeee987d4c9109e3ca9c59b660452",
-        "status": "passed",
-        "date": "2025-02-18T14:37:23Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": ["metagenome-2024.10"]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-vsearch",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9"
-      ],
-      "stars": 6,
-      "description": "vsearch plugin for QIIME 2",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "5942dae311c0ade6589a3598225cd6edbf11ff8c",
-        "status": "passed",
-        "date": "2025-02-13T13:22:37Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-dada2",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9"
-      ],
-      "stars": 20,
-      "description": "QIIME 2 plugin wrapping DADA2",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "29e0e4e7dcad5b18478ff7e9548d90fb2879b015",
-        "status": "passed",
-        "date": "2025-02-11T17:24:31Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-cutadapt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9"
-      ],
-      "stars": 3,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "74874e664aedb009f4bba1a00e16a6fccb2e5005",
-        "status": "passed",
-        "date": "2025-02-10T17:35:21Z"
-      }
     }
   ],
   "distros": [
     {
       "name": "amplicon",
+      "alt": "core",
       "title": "Amplicon",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "description": "A suite of plugins that provide broad analytic functionality to support microbiome marker gene analysis from raw sequencing data through publication quality visualizations and statistics.\n"
     },
     {
       "name": "moshpit",
+      "alt": "metagenome",
       "title": "MOSHPIT",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "description": "MOSHPIT (MOdular SHotgun metagenome Pipelines with Integrated provenance Tracking) is a toolkit of plugins for whole metagenome assembly, annotation, and analysis.\n"
@@ -314,38 +251,6 @@
       "uploader": "QIIME 2",
       "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
       "timestamp": 1650549351
-    },
-    {
-      "id": "w_OBVFMUfps",
-      "title": "Reproducible Bioinformatics",
-      "description": "Slides: https://docs.google.com/presentation/d/e/2PACX-1vSpeE9-rcaoOfyD6FuX9CqkzWp7QkQpmxVtIHtXJd8SP5X4uOjKIxclOdXBvbdRUSotP6_F9i2iU8TJ/pub?start=false&loop=false&delayms=3000",
-      "uploader": "QIIME 2",
-      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
-      "timestamp": 1650549347
-    },
-    {
-      "id": "W1W9jcrMFHs",
-      "title": "Identifying an even sampling depth",
-      "description": "",
-      "uploader": "QIIME 2",
-      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
-      "timestamp": 1650384030
-    },
-    {
-      "id": "_SlnhQRhpIE",
-      "title": "Phylogenetic tree construction",
-      "description": "",
-      "uploader": "QIIME 2",
-      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
-      "timestamp": 1649779214
-    },
-    {
-      "id": "9YiRxPgxqAE",
-      "title": "Machine learning in bioinformatics (part 2)",
-      "description": "This lecture goes more in-depth on unsupervised learning, including a worked-example of polar ordination applied to an example human microbiome data set. The slides for this lecture are available at: https://docs.google.com/presentation/d/e/2PACX-1vTRMcgTspHpHZuzHvRIZtl9hnHuaA_FmDFskIJPIPQQOCuLpbcGugM4QfsDD8NA_uMQ9l2KEnUpRyXI/pub?start=false&loop=false&delayms=3000\n\nThe notes in this video can be found at: https://drive.google.com/file/d/1rArohwObOeVhAwO4hwLcyro9oqcPmCxy/view?usp=sharing",
-      "uploader": "QIIME 2",
-      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
-      "timestamp": 1649448326
     }
   ]
 }

@@ -1,0 +1,450 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 Sourmash Plugin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org. For details on sourmash, see http://sourmash.readthedocs.io/."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installing the QIIME 2 sourmash plugin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-sourmash is a QIIME 2 plugin for sourmash, a tool computing and comparing MinHash signatures for nucleotide sequences fast and effieciently. You can find out more about sourmash by reading the paper "
+          },
+          {
+            "type": "link",
+            "url": "http://joss.theoj.org/papers/10.21105/joss.00027",
+            "children": [
+              {
+                "type": "text",
+                "value": "(Brown and Irber, JOSS 2018)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " or checking out the "
+          },
+          {
+            "type": "link",
+            "url": "https://sourmash.readthedocs.io/en/latest/",
+            "children": [
+              {
+                "type": "text",
+                "value": "sourmash documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You need to have QIIME 2 version 2018.4 or later. Also, regardless of which way you install, you need to be in a QIIME 2 environment for this to work. "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2018.8/install/",
+            "children": [
+              {
+                "type": "text",
+                "value": "Install QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and activate the QIIME 2 virtual environment (e.g. "
+          },
+          {
+            "type": "inlineCode",
+            "value": "source activate qiime2-2018.8"
+          },
+          {
+            "type": "text",
+            "value": "), and then install sourmash by running:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "conda install -c bioconda sourmash"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You will also need to install q2-types-genomics (unless your environment already has it):"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda install -c conda-forge -c bioconda -c https://packages.qiime2.org/qiime2/2023.5/tested -c defaults \\\n    q2-types-genomics"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To install the plugin, run the following command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "pip install https://github.com/dib-lab/q2-sourmash/archive/master.zip"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To check that the installation worked, type "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime"
+          },
+          {
+            "type": "text",
+            "value": " on the command line. The sourmash plugin should show up in the list of available plugins."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using the QIIME2 sourmash plugin"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Currently there are two main methods for use in the QIIME 2 sourmash plugin: "
+          },
+          {
+            "type": "inlineCode",
+            "value": "compute"
+          },
+          {
+            "type": "text",
+            "value": " to calcualte MinHash signatures from nucleotide sequences and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "compare"
+          },
+          {
+            "type": "text",
+            "value": " to calculate a Jaccard distance between samples."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Computing signatures"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "compute"
+          },
+          {
+            "type": "text",
+            "value": " calcuates the minhash signatures for a given set of nucleotide sequences. To run, one must simply supply a "
+          },
+          {
+            "type": "inlineCode",
+            "value": ".qza"
+          },
+          {
+            "type": "text",
+            "value": " archive (directory) containing sequence file ending with ‘fastq.gz’."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "First download a test set of fastq.gz files already in the form of a qza archive and the associated metadata. Here we are using data from the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2018.8/tutorials/moving-pictures/",
+            "children": [
+              {
+                "type": "text",
+                "value": "Moving Pictures tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "wget -c -nc https://docs.qiime2.org/2018.4/data/tutorials/moving-pictures/demux.qza\nwget -c -nc https://data.qiime2.org/2018.8/tutorials/moving-pictures/sample_metadata.tsv "
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To calculate sourmash signatures for all sequence files within the archive use the following:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "qiime sourmash compute --i-sequence-file demux.qza --p-ksizes 21 --p-scaled 10000 --o-min-hash-signature sigs.qza"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The following flags are required:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--i-sequence-file"
+              },
+              {
+                "type": "text",
+                "value": " : the path to the qza directory"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-ksizes"
+              },
+              {
+                "type": "text",
+                "value": " : the k-size of the hash (integer)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-scaled"
+              },
+              {
+                "type": "text",
+                "value": " : the scaled value (integer)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-min-hash-signature"
+              },
+              {
+                "type": "text",
+                "value": " : the output qza file name"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The output archive, in this case "
+          },
+          {
+            "type": "inlineCode",
+            "value": "sigs.qza"
+          },
+          {
+            "type": "text",
+            "value": ", contains the signature files for each of the fastq.gz files that were input. They can be viewed using the "
+          },
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "qiime online viewer"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " or by unzipping the qza file."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime tools export --input-path sigs.qza --output-path sigs"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Comparing signatures"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Signatures that have been calculated as above can then be compared using "
+          },
+          {
+            "type": "inlineCode",
+            "value": "sourmash compare"
+          },
+          {
+            "type": "text",
+            "value": ". This will calculate a pair-wise Jaccard distance between each of the samples included in the provided qza archive:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime sourmash compare --i-min-hash-signature sigs.qza --p-ksize 21 --o-compare-output compare.mat.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The output, "
+          },
+          {
+            "type": "inlineCode",
+            "value": "compare.mat.qza"
+          },
+          {
+            "type": "text",
+            "value": ", can then be investigated as above by unzipping the qza archive or can be pushed through subsequent analyses (e.g. generate a PCoA plot):"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime diversity pcoa --i-distance-matrix compare.mat.qza  --o-pcoa pcoa.compare.mat.qza\nqiime emperor plot --i-pcoa pcoa.compare.mat.qza --o-visualization emperor.qzv --m-metadata-file sample_metadata.tsv"
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "dib-lab",
+  "name": "q2-sourmash",
+  "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+  "in_distro": true,
+  "distros": ["metagenome-2024.10"],
+  "stars": 6,
+  "description": "Qiime2 Sourmash Plugin",
+  "branch": "main",
+  "last_commit": {
+    "sha": "ed0fedc3162fa4256c5eeef11e84f908a6274b2c",
+    "status": "passed",
+    "date": "2024-12-23T19:20:49Z"
+  }
+}

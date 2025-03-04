@@ -1,0 +1,698 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-sapienns"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-sapienns is a set of tools that can be used for preparing "
+          },
+          {
+            "type": "link",
+            "url": "https://doi.org/10.7554/eLife.65088",
+            "children": [
+              {
+                "type": "text",
+                "value": "BioBakery3"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " data for use in "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". As QIIME 2 expands support for metagenomics data analysis, this will provide a framework for working with processed BioBakery3 data, and for comparing other methods to BioBakery3."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-sapienns is now included in the alpha QIIME 2 moshpit distribution, and this is the best way to install and use it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Basic usage examples are provided below."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Need help?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Please feel free to post questions to the "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Forum"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". This is a more reliable way to get help than posting to the project’s issue tracker or emailing the developers directly."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 Moshpit Distribution"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-sapienns is included in the QIIME 2 moshpit distribution. To find install instructions, see "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "Installing QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " at https://docs.qiime2.org."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install in other QIIME 2 environments (experts only!)"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can also directly install q2-sapienns in other QIIME 2 environments. First, create and/or activate a QIIME 2 environment by following the QIIME 2 install instructions (see "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "Installing QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " at https://docs.qiime2.org."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then, install q2-sapienns using "
+          },
+          {
+            "type": "inlineCode",
+            "value": "pip"
+          },
+          {
+            "type": "text",
+            "value": " as follows..."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "pip install git+https://github.com/gregcaporaso/q2-sapienns.git"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "... refresh your QIIME 2 environment..."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "qiime dev refresh-cache"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "... and you should now see "
+          },
+          {
+            "type": "inlineCode",
+            "value": "sapienns"
+          },
+          {
+            "type": "text",
+            "value": " in your list of available QIIME 2 plugins:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "$ qiime --help\nUsage: qiime [OPTIONS] COMMAND [ARGS]...\n...\n  sample-classifier   Plugin for machine learning prediction of sample metadata.\n  sapienns            Plugin for interacting with biobakery data.\n  taxa                Plugin for working with feature taxonomy annotations.\n..."
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage: HUMAnN 3"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There seem to have not been changes to the HUMAnN file formats used here between version 2-3.5 (and likely version 4), so these tools should work with all of those versions "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.biobakery.org/t/human-and-metaphlan-file-formats/4024/3?u=gregcaporaso",
+            "children": [
+              {
+                "type": "text",
+                "value": "(source)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". If you notice any issues, please let me know!"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Pathway abundance tables"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import a HUMANn 3 "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "Pathway abundance file"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". See the "
+          },
+          {
+            "type": "link",
+            "url": "https://huttenhower.sph.harvard.edu/humann",
+            "children": [
+              {
+                "type": "text",
+                "value": "HUMAnN 3 User Manual and Tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for details on this file and how to create it. There can be one or more samples in this file. If using default reference data with HUMANn 3, the pathway annotations will refer to "
+          },
+          {
+            "type": "link",
+            "url": "https://metacyc.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "MetaCyc pathways"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime tools import --input-path humann-pathabundance-2.tsv --output-path humann-pathabundance-2.qza --type HumannPathAbundanceTable"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Create "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureTable[Frequency]"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureData[Taxonomy]"
+          },
+          {
+            "type": "text",
+            "value": " artifacts from the imported table."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime sapienns humann-pathway --i-pathway-table humann-pathabundance-2.qza --o-table table.qza --o-taxonomy feature-data.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Create "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureTable[Frequency]"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureData[Taxonomy]"
+          },
+          {
+            "type": "text",
+            "value": " artifacts from the imported table, dropping pathway annotations with taxonomic information (destratified)."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime sapienns humann-pathway --i-pathway-table humann-pathabundance-2.qza --o-table table-destratified.qza --o-taxonomy feature-data-destratified.qza --p-destratify"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Summarize created artifacts for viewing."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime feature-table summarize --i-table table-destratified.qza --o-visualization table-destratified.qzv --m-sample-metadata-file sample-metadata.tsv\nqiime metadata tabulate --m-input-file feature-data-destratified.qza --o-visualization feature-data-destratified.qzv"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Gene family tables"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import a HUMANn 3 "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "Gene families file"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and create "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureTable[Frequency]"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureData[Taxonomy]"
+          },
+          {
+            "type": "text",
+            "value": " artifacts from the imported table. See the "
+          },
+          {
+            "type": "link",
+            "url": "https://huttenhower.sph.harvard.edu/humann",
+            "children": [
+              {
+                "type": "text",
+                "value": "HUMAnN 3 User Manual and Tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for details on this file and how to create it. There can be one or more samples in this file. If using the default reference with HUMANn 3, the gene family annotations will refer to "
+          },
+          {
+            "type": "link",
+            "url": "https://www.uniprot.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "UniRef50"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime tools import --input-path humann-genefamilies-2.tsv --output-path humann-genefamilies-2.qza --type HumannGeneFamilyTable"
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime sapienns humann-genefamily --i-genefamily-table humann-genefamilies-2.qza --o-table table.qza --o-taxonomy feature-data.qza\nqiime sapienns humann-genefamily --i-genefamily-table humann-genefamilies-2.qza --o-table table-destratified.qza --o-taxonomy feature-data-destratified.qza --p-destratify"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage: MetaPhlAn 3"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There may be relevant changes to the file formats used here between versions of MetaPhlAn, though those changes may not be relevant to the "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "Merged Abundance Table"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.biobakery.org/t/human-and-metaphlan-file-formats/4024/3?u=gregcaporaso",
+            "children": [
+              {
+                "type": "text",
+                "value": "(source)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". This functionality was developed for the MetaPhlAn format that contains exactly two columns ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "clade_name"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "NCBI_tax_id"
+          },
+          {
+            "type": "text",
+            "value": ") before the sample abundance columns, but should also work if the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "NCBI_tax_id"
+          },
+          {
+            "type": "text",
+            "value": " is not present (as is the case in MetaPhlAn 4 output). I recommend looking at the column headers for the first three columns in your input file before attempting to use this code. The file should look something like:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "$ head -5 metaphlan-merged-abundance.tsv\n#mpa_v30_CHOCOPhlAn_201901\nclade_name\tNCBI_tax_id\tsample1\tsample_2\nk__Archaea\t2157\t9.75907\t0.02352\nk__Archaea|p__Euryarchaeota\t2157|28890\t9.75907\t0.02352\nk__Archaea|p__Euryarchaeota|c__Methanobacteria\t2157|28890|183925\t9.75907\t0.02352"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "or"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "$ head -5 metaphlan-merged-abundance.tsv\n#mpa_vJan21_CHOCOPhlAnSGB_202103\nclade_name\tsample1\tsample_2\nk__Archaea\t9.75907\t0.02352\nk__Archaea|p__Euryarchaeota\t9.75907\t0.02352\nk__Archaea|p__Euryarchaeota|c__Methanobacteria\t9.75907\t0.02352"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-sapienns "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "should"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " fail if you try to import data in a format different than the one it’s expecting, but I can’t be sure that format validation will work in all cases. It won’t hurt to look at your data before using it with q2-sapienns."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Merged abundance table"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Import a MetaPhlAn 3 taxonomy file and create "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureTable[RelativeFrequency]"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "FeatureData[Taxonomy]"
+          },
+          {
+            "type": "text",
+            "value": " artifacts from the imported table. See the "
+          },
+          {
+            "type": "link",
+            "url": "https://huttenhower.sph.harvard.edu/metaphlan",
+            "children": [
+              {
+                "type": "text",
+                "value": "MetaPhlAn 3 documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for details on this file and how to create it. There can be one or more samples in this file. If using the default reference with MetaPhlAn 3, the taxonomic ids will refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://www.ncbi.nlm.nih.gov/taxonomy",
+            "children": [
+              {
+                "type": "text",
+                "value": "NCBI taxonomy"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime tools import --input-path metaphlan-merged-abundance-1.tsv --output-path metaphlan-merged-abundance-1.qza --type MetaphlanMergedAbundanceTable"
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime sapienns metaphlan-taxon --i-stratified-table metaphlan-merged-abundance-1.qza --p-level 7 --o-table species-table.qza --o-taxonomy taxonomy.qza"
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "caporaso-lab",
+  "name": "q2-sapienns",
+  "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+  "in_distro": true,
+  "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+  "stars": 1,
+  "description": null,
+  "branch": "main",
+  "last_commit": {
+    "sha": "41488a6a2139e25657e72cd5a3de4a9519225cbe",
+    "status": "passed",
+    "date": "2025-01-18T21:23:57Z"
+  }
+}

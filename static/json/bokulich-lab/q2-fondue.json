@@ -1,0 +1,4128 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fondue"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-fondue/actions/workflows/ci-dev.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-fondue",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-fondue/branch/main/graph/badge.svg?token=UTM4W4B1KW",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://doi.org/10.5281/zenodo.6388476",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://zenodo.org/badge/DOI/10.5281/zenodo.6388476.svg",
+                "alt": "DOI"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://doi.org/10.1093/bioinformatics/btac639",
+            "children": [
+              {
+                "type": "image",
+                "url": "http://img.shields.io/badge/DOI-10.1093/bioinformatics/btac639-B31B1B.svg",
+                "alt": "DOI"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "html",
+        "value": "<p>\n<img src=\"logo.png\" height=\"150\" align=\"left\"/>\n<span>\n<b>q2-fondue</b> is a <a href=\"https://qiime2.org/\">QIIME 2</a> plugin for programmatic access to sequences and metadata from NCBI Sequence Read Archive (SRA). It enables user-friendly acquisition, re-use, and management of public nucleotide sequence (meta)data while adhering to open data principles.\n</span>\n</p><br>"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There are multiple options to install q2-fondue ("
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "v2024.5"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " or higher) - each targeted towards different needs:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "(To install q2-fondue with a version <= 2023.7 see "
+          },
+          {
+            "type": "link",
+            "url": "#installing-q2-fondue-with-older-versions",
+            "children": [
+              {
+                "type": "text",
+                "value": "this"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " section.)"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Option 1: Install q2-fondue with QIIME 2 moshpit distribution"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fondue is a part of the QIIME 2 moshpit distribution and you can install it as outlined in the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 installation instructions"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nAfter that, don’t forget to run "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "link",
+                "url": "#mandatory-configuration-for-all-three-options",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the mandatory configuration step"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "!"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Option 2: Install q2-fondue within a QIIME 2 amplicon conda environment"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Install the QIIME 2 amplicon distribution within a conda environment as described in "
+              },
+              {
+                "type": "link",
+                "url": "https://docs.qiime2.org/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the official QIIME 2 documentation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Activate the QIIME 2 environment (v2024.5 or higher) and install q2-fondue within while making sure that the used conda channel matches the version of the QIIME 2 environment (replace below "
+              },
+              {
+                "type": "inlineCode",
+                "value": "{ENV_VERSION}"
+              },
+              {
+                "type": "text",
+                "value": " with the version number of your QIIME 2 environment):"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda activate qiime2-amplicon-{ENV_VERSION}\nmamba install -y \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2-fondue"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, don’t forget to run "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "#mandatory-configuration-for-all-three-options",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "the mandatory configuration step"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Option 3: Minimal fondue environment"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Start with installing "
+              },
+              {
+                "type": "link",
+                "url": "https://mamba.readthedocs.io/en/latest/index.html",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "mamba"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " in your base environment:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda install mamba -n base -c conda-forge"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Create and activate a conda environment with the required dependencies:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/2024.5/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Now, don’t forget to run "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "#mandatory-configuration-for-all-three-options",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "the mandatory configuration step"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note: You can replace the version number "
+          },
+          {
+            "type": "inlineCode",
+            "value": "2024.5"
+          },
+          {
+            "type": "text",
+            "value": " with later releases if they are already available."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Mandatory configuration for all three options"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Refresh the QIIME 2 CLI cache and see that everything worked:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime dev refresh-cache\nqiime fondue --help"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Run the "
+              },
+              {
+                "type": "inlineCode",
+                "value": "vdb-config"
+              },
+              {
+                "type": "text",
+                "value": " tool to make sure the wrapped SRA Toolkit is configured on your system.\nThe command below will open the configuration interface - everything should be already configured, so you\ncan directly exit by pressing "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "x"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " (this step is still required to ensure everything is working as expected).\nFeel free to adjust the configuration, if you need to change e.g. the cache location.\nFor more information see "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/ncbi/sra-tools/wiki/05.-Toolkit-Configuration",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "here"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "vdb-config -i"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "In case you need to configure a proxy server, run the following command\n(this can also be done using the graphical interface described above):"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "vdb-config --proxy <your proxy URL> --proxy-disable no"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installing q2-fondue with older versions"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To install fondue with a version <= 2023.7 in a minimal environment run the following command inserting the respective version number "
+          },
+          {
+            "type": "inlineCode",
+            "value": "{ENV_VERSION}"
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/tested/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Now, don’t forget to run "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "link",
+                "url": "#mandatory-configuration-for-all-three-options",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the mandatory configuration step"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "!"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Alternatively, a minimal Docker image is available to run q2-fondue==v2023.7:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Install "
+              },
+              {
+                "type": "link",
+                "url": "https://docs.docker.com/engine/install/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Docker"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " with the linked instructions"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Pull the "
+              },
+              {
+                "type": "link",
+                "url": "https://hub.docker.com/layers/linathekim/q2-fondue/2023.7/images/sha256-f5d26959ac035811a8f34e2a46f6cc381f9a4ce21b3604a196c1ee176ba708e7?context=repo",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "q2-fondue Docker image"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ":"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "docker pull linathekim/q2-fondue:2023.7"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Within the container, refresh the QIIME 2 CLI cache to see that everything worked:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime dev refresh-cache\nqiime fondue --help"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "If you need to configure a proxy server, run the following command:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "vdb-config --proxy <your proxy URL> --proxy-disable no"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Space requirements"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Running q2-fondue requires space in the temporary ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "TMPDIR"
+          },
+          {
+            "type": "text",
+            "value": ") and output directory. The space requirements for the output directory can be estimated by inserting the run or project IDs in the "
+          },
+          {
+            "type": "link",
+            "url": "https://www.ncbi.nlm.nih.gov/Traces/study/",
+            "children": [
+              {
+                "type": "text",
+                "value": "SRA Run Selector"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". To estimate the space requirements for the temporary directory, multiply the output directory space requirement by a factor of 10. The current implementation of q2-fondue requires you to have a minimum of 2 GB of available space in your temporary directory."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To find out which temporary directory is used by Qiime 2, you can run "
+          },
+          {
+            "type": "inlineCode",
+            "value": "echo $TMPDIR"
+          },
+          {
+            "type": "text",
+            "value": " in your terminal. If this command returns an empty string, the assigned temporary directory equals the OS’s default temporary directory (usually "
+          },
+          {
+            "type": "inlineCode",
+            "value": "/tmp"
+          },
+          {
+            "type": "text",
+            "value": ") . To re-assign your temporary directory to a location of choice, run "
+          },
+          {
+            "type": "inlineCode",
+            "value": "export TMPDIR=Location/of/choice"
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Available actions"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fondue provides a couple of actions to fetch and manipulate nucleotide sequencing data and related metadata from SRA as well as an action to scrape run, study, BioProject, experiment and sample IDs from a Zotero web library. Below you will find a list of available actions and their short descriptions."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Action"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Description"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "get-sequences"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fetch sequences by IDs[*] from the SRA repository."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "get-metadata"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fetch metadata by IDs[*] from the SRA repository."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "get-all"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fetch sequences and metadata by IDs[*] from the SRA repo."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "get-ids-from-query"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Find SRA run accession IDs based on a search query."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "merge-metadata"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Merge several metadata files into a single metadata object."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "combine-seqs"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Combine sequences from multiple artifacts into a single artifact."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "scrape-collection"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Scrape Zotero collection for IDs[*] and associated DOI names."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "[*]: Supported IDs include run, study, BioProject, experiment and study IDs."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The next sections give a brief introduction to the most important actions in q2-fondue. More detailed instructions, background information and examples can be found in the associated "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/bokulich-lab/q2-fondue/blob/main/tutorial/tutorial.md",
+            "children": [
+              {
+                "type": "text",
+                "value": "tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Import accession IDs"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "All "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-fondue"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " actions which fetch data from SRA require the list of run, study, BioProject, experiment or study IDs to be provided as a QIIME 2 artifact of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "NCBIAccessionIDs"
+          },
+          {
+            "type": "text",
+            "value": " semantic type. You can either import an existing list of IDs (1.) or scrape a Zotero web library collection to obtain these IDs (2.)."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "To import an existing list of IDs into a "
+              },
+              {
+                "type": "inlineCode",
+                "value": "NCBIAccessionIDs"
+              },
+              {
+                "type": "text",
+                "value": " artifact simply run:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime tools import \\\n              --type NCBIAccessionIDs \\\n              --input-path ids.tsv \\\n              --output-path ids.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "where:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--input-path"
+              },
+              {
+                "type": "text",
+                "value": " is a path to the TSV file containing run or project IDs."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--output-path"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Note:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " the input TSV file needs to consist of a single column named “ID”."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 2,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "To scrape all run, study, BioProject, experiment and sample IDs from an existing web Zotero library collection into a "
+              },
+              {
+                "type": "inlineCode",
+                "value": "NCBIAccessionIDs"
+              },
+              {
+                "type": "text",
+                "value": " artifact run, you can use the "
+              },
+              {
+                "type": "inlineCode",
+                "value": "scrape-collection"
+              },
+              {
+                "type": "text",
+                "value": " method. Before running it, you have to set three environment variables linked to your Zotero account:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "ZOTERO_TYPE"
+              },
+              {
+                "type": "text",
+                "value": " is the Zotero library type ‘user’ or ‘group’."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "ZOTERO_USERID"
+              },
+              {
+                "type": "text",
+                "value": " is a valid Zotero user ID. If "
+              },
+              {
+                "type": "inlineCode",
+                "value": "ZOTERO_TYPE"
+              },
+              {
+                "type": "text",
+                "value": " is ‘user’ it can be retrieved from section ‘your user_id for use in API calls’ in https://www.zotero.org/settings/keys. If "
+              },
+              {
+                "type": "inlineCode",
+                "value": "ZOTERO_TYPE"
+              },
+              {
+                "type": "text",
+                "value": " is ‘group’ it can be obtained by hovering over group name in https://www.zotero.org/groups/."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "ZOTERO_APIKEY"
+              },
+              {
+                "type": "text",
+                "value": " is a valid Zotero API user key created at https://www.zotero.org/settings/keys/new (checking “Allow library access” and for ‘group’ library “Read/Write” permissions)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To set these environment variables run the following commands in your terminal for each of the three required variables: "
+          },
+          {
+            "type": "inlineCode",
+            "value": "export ZOTERO_TYPE=<your library type>"
+          },
+          {
+            "type": "text",
+            "value": " or create a "
+          },
+          {
+            "type": "inlineCode",
+            "value": ".env"
+          },
+          {
+            "type": "text",
+            "value": " file with the environment variable assignment. For the latter option, make sure to ignore this file in version control (add to "
+          },
+          {
+            "type": "inlineCode",
+            "value": ".gitignore"
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Note:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " To retrieve all required entries from Zotero, you must be logged in. Also, to allow for the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "scrape-collection"
+          },
+          {
+            "type": "text",
+            "value": " action to work, make sure you enable file syncing on your Zotero account (see section “File Syncing” "
+          },
+          {
+            "type": "link",
+            "url": "https://www.zotero.org/support/sync",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ") and only attempt to use the action once all attachments were synchronized with your Web Library."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime fondue scrape-collection \\\n              --p-collection-name collection_name \\\n              --o-run-ids run_ids.qza \\\n              --o-study-ids study_ids.qza \\\n              --o-bioproject-ids bioproject_ids.qza \\\n              --o-experiment-ids experiment_ids.qza \\\n              --o-sample-ids sample_ids.qza --verbose"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "where:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-collection-name"
+              },
+              {
+                "type": "text",
+                "value": " is the name of the collection to be scraped."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-run-ids"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing the scraped run IDs."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-study-ids"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing the scraped study IDs."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-bioproject-ids"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing the scraped BioProject IDs."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-experiment-ids"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing the scraped experiment IDs."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-sample-ids"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing the scraped sample IDs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 3,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "To retrieve run accession IDs based on a text search query (performed on the BioSample database) you can use the "
+              },
+              {
+                "type": "inlineCode",
+                "value": "get-ids-from-query"
+              },
+              {
+                "type": "text",
+                "value": " method:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime fondue get-ids-from-query \\\n              --p-query \"txid410656[Organism] AND \\\"public\\\"[Filter] AND (chicken OR poultry)\" \\\n              --p-email your_email@somewhere.com \\\n              --p-n-jobs 2 \\\n              --o-ids run_ids.qza \\\n              --verbose"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "where:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-query"
+              },
+              {
+                "type": "text",
+                "value": " is the text search query to be executed on the BioSample database."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-email"
+              },
+              {
+                "type": "text",
+                "value": " is your email address (required by NCBI)."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-n-jobs"
+              },
+              {
+                "type": "text",
+                "value": " is the number of parallel download jobs (defaults to 1)."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-ids"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing the retrieved run IDs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fetching metadata"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To fetch metadata associated with a set of output IDs, execute the following command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime fondue get-metadata \\\n              --i-accession-ids ids.qza \\\n              --p-n-jobs 1 \\\n              --p-email your_email@somewhere.com \\\n              --o-metadata output_metadata.qza \\\n              --o-failed-runs failed_IDs.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "where:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--i-accession-ids"
+              },
+              {
+                "type": "text",
+                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-n-jobs"
+              },
+              {
+                "type": "text",
+                "value": " is a number of parallel download jobs (defaults to 1)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-email"
+              },
+              {
+                "type": "text",
+                "value": " is your email address (required by NCBI)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-metadata"
+              },
+              {
+                "type": "text",
+                "value": " is the output metadata artifact"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-failed-runs"
+              },
+              {
+                "type": "text",
+                "value": " is the list of all run IDs for which fetching metadata failed, with their corresponding error messages"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The resulting artifact "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--o-metadata "
+          },
+          {
+            "type": "text",
+            "value": " will contain a TSV file with all the available metadata fields for all of the requested runs. If metadata for some run IDs failed to download they are returned in the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--o-failed-runs"
+          },
+          {
+            "type": "text",
+            "value": " artifact, which can be directly inputted as "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--i-accession-ids"
+          },
+          {
+            "type": "text",
+            "value": " to a subsequent "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-metadata"
+          },
+          {
+            "type": "text",
+            "value": " command. To pass associated DOI names for the failed runs, provide the table of accession IDs with associated DOI names as "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--o-linked-doi"
+          },
+          {
+            "type": "text",
+            "value": " to the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-metadata"
+          },
+          {
+            "type": "text",
+            "value": " command."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fetching sequences"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To get openly accessible single- and paired-end sequences associated with a number of IDs, execute this command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime fondue get-sequences \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --o-single-reads output_dir_single \\\n              --o-paired-reads output_dir_paired \\\n              --o-failed-runs output_failed_ids"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "where:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--i-accession-ids"
+              },
+              {
+                "type": "text",
+                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-email"
+              },
+              {
+                "type": "text",
+                "value": " is your email address (required by NCBI)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-single-reads"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing single-read sequences"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-paired-reads"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing paired-end sequences"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--o-failed-runs"
+              },
+              {
+                "type": "text",
+                "value": " is the output artifact containing run IDs that failed to download"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The resulting sequence artifacts ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "--o-single-reads"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--o-paired-reads"
+          },
+          {
+            "type": "text",
+            "value": ") will contain the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "fastq.gz"
+          },
+          {
+            "type": "text",
+            "value": " files of the sequences, "
+          },
+          {
+            "type": "inlineCode",
+            "value": "metadata.yml"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "MANIFEST"
+          },
+          {
+            "type": "text",
+            "value": " files.\nIf one of the provided IDs only contains sequences of one type (e.g. single-read sequences) then the other artifact\n(e.g. artifact with paired-end sequences) contains empty sequence files with dummy ID starting with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "xxx_"
+          },
+          {
+            "type": "text",
+            "value": ". Similarly,\nif none of the requested sequences failed to download, the corresponding artifact will be empty."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If some run IDs failed to download they are returned in the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--o-failed-runs"
+          },
+          {
+            "type": "text",
+            "value": " artifact, which can be directly inputted as "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--i-accession-ids"
+          },
+          {
+            "type": "text",
+            "value": " to a subsequent "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-sequence"
+          },
+          {
+            "type": "text",
+            "value": " command."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "Special case: Fetching restricted access sequences with a dbGAP repository key"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To get access to the respective dbGaP repository key users must first apply for approval and then retrieve the key from dbGAP (see prerequisites described "
+          },
+          {
+            "type": "link",
+            "url": "https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbgap-download/",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To retrieve sequencing data using the acquired dbGAP repository key, without revealing the sensitive key, set the filepath to the stored key as an environment variable. You can either do this by running the following command in your terminal "
+          },
+          {
+            "type": "inlineCode",
+            "value": "export KEY_FILEPATH=<path to key>"
+          },
+          {
+            "type": "text",
+            "value": " or by adding the variable assignment to your "
+          },
+          {
+            "type": "inlineCode",
+            "value": ".env"
+          },
+          {
+            "type": "text",
+            "value": " file. For the latter option, make sure to ignore this file in version control (add to "
+          },
+          {
+            "type": "inlineCode",
+            "value": ".gitignore"
+          },
+          {
+            "type": "text",
+            "value": ").\nHaving set the filepath of the key as an environment variable you can fetch the sequencing data by running "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-sequences"
+          },
+          {
+            "type": "text",
+            "value": " with the parameter "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--p-restricted-access"
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime fondue get-sequences \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --p-restricted-access \\\n              --output-dir output_path"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Note:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " Fetching metadata with a dbGAP repository key is not supported. Hence, this flag is only available in the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-sequences"
+          },
+          {
+            "type": "text",
+            "value": " action (and not in the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-metadata"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-all"
+          },
+          {
+            "type": "text",
+            "value": " actions)."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fetching metadata and sequences"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To fetch both sequence-associated metadata and sequences associated with the provided IDs, execute this command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime fondue get-all \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --output-dir output-dir-name"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "where:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--i-accession-ids"
+              },
+              {
+                "type": "text",
+                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--p-email"
+              },
+              {
+                "type": "text",
+                "value": " is your email address (required by NCBI)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "--output-dir"
+              },
+              {
+                "type": "text",
+                "value": " directory where the downloaded metadata, sequences and IDs for failed downloads are stored as QIIME 2 artifacts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Downstream analysis in QIIME 2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For more information on how to use q2-fondue outputs within the QIIME 2 ecosystem see section "
+          },
+          {
+            "type": "link",
+            "url": "./tutorial/tutorial.md#downstream-analysis-in-qiime-2",
+            "children": [
+              {
+                "type": "text",
+                "value": "Downstream analysis in QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " in the tutorial."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Exporting data for downstream analyses outside of QIIME 2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Some downstream analyses may need to rely on tools outside of QIIME 2. Since q2-fondue outputs can be transformed directly into FASTQ and other interoperable formats, there are no restrictions for users when using these tools. Note that the exported files will no longer contain integrated provenance information (which is unique to QIIME 2 Artifacts), but this metadata can be exported also and the original artifacts will retain the provenance data for traceability purposes."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To learn more on how to prepare q2-fondue outputs for further analysis outside of QIIME 2 see tutorial section "
+          },
+          {
+            "type": "link",
+            "url": "./tutorial/tutorial.md#prepare-downstream-analysis-outside-of-qiime-2",
+            "children": [
+              {
+                "type": "text",
+                "value": "Prepare downstream analysis outside of QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Getting Help"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Problem? Suggestion? Technical errors and user support requests can be filed on the "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Forum"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Citation"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you use "
+          },
+          {
+            "type": "inlineCode",
+            "value": "fondue"
+          },
+          {
+            "type": "text",
+            "value": " in your research, please cite the following:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Michal Ziemski, Anja Adamov, Lina Kim, Lena Flörl, Nicholas A. Bokulich. 2022. Reproducible acquisition, management, and meta-analysis of nucleotide sequence (meta)data using q2-fondue.\n_Bioinformatics; doi: https://doi.org/10.1093/bioinformatics/btac639"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "License"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fondue is released under a BSD-3-Clause license. See LICENSE for more details."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2023.5.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2023.5.0.dev0",
+      "name": "2023.5.0.dev0",
+      "published_at": "2023-03-06T10:40:06Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: remove original sequences after gzipping by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/152",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#152"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/152",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "152"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Add scraper sync note by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/153",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#153"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/153",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "153"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-fondue/compare/2023.2.0.dev0...2023.5.0.dev0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2023.2.0.dev0...2023.5.0.dev0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-fondue/compare/2023.2.0.dev0...2023.5.0.dev0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-fondue",
+                  "issue_number": "2023.2.0.dev0...2023.5.0.dev0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2023.2.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2023.2.0.dev0",
+      "name": "2023.2.0.dev0",
+      "published_at": "2023-01-26T11:05:22Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: Sequences mismatch by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/149",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#149"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/149",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "149"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Update QIIME 2 versions in README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lina-kim",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lina-kim"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/150",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#150"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/150",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "150"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-fondue/compare/2022.11.0...2023.2.0.dev0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.11.0...2023.2.0.dev0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-fondue/compare/2022.11.0...2023.2.0.dev0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-fondue",
+                  "issue_number": "2022.11.0...2023.2.0.dev0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.11.0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2022.11.0",
+      "name": "2022.11.0",
+      "published_at": "2022-12-14T13:27:39Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add DOI badges by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/112",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#112"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/112",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "112"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Fetch metadata & sequences by StudyID by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/114",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#114"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/114",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "114"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Scraping DOI from library by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/113",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#113"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/113",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "113"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Add scraping of other IDs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/116",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#116"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/116",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "116"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: CI improvements by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/120",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#120"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/120",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "120"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: Hiding Zotero user info by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/121",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#121"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/121",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "121"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Full support sample and experiment IDs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/122",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#122"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/122",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "122"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: correctly install sra-toolkit during conda build by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/126",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#126"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/126",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "126"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Scrape hyphenated ID sequences by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/124",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#124"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/124",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "124"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Improved metadata fetching and error logging by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/125",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#125"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/125",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "125"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: add SRA Toolkit configuration step by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/131",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#131"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/131",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "131"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: Correctly scraping accessions with whitespace characters by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/133",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#133"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/133",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "133"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: correct E-Direct param setting when fetching metadata by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/135",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#135"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/135",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "135"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: simplify coverage testing in the CI by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/138",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#138"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/138",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "138"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Option to preserve DOI names when refetching with "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "failed_runs"
+                  },
+                  {
+                    "type": "text",
+                    "value": " by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/129",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#129"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/129",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "129"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add an action to search for run IDs using a text query by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/136",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#136"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/136",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "136"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update installation instructions to use conda by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/140",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#140"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/140",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "140"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: improve data copy/gzip process after fetching fastq sequences by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/139",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#139"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/139",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "139"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Highlight downstream analysis outside of Q2 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/141",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#141"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/141",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "141"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "unzip tutorial by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/nbokulich",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@nbokulich"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/142",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#142"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/142",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "142"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update citations by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/144",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#144"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/144",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "144"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update DOI badge by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/145",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#145"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/145",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "145"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add more installation instructions by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/146",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#146"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/146",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "146"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: metadata should only retain the runs that were requested by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/147",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#147"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/147",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "147"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-fondue/compare/2022.2.0...2022.11.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.2.0...2022.11.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-fondue/compare/2022.2.0...2022.11.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-fondue",
+                  "issue_number": "2022.2.0...2022.11.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.11.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2022.11.0.dev0",
+      "name": "2022.11.0.dev0",
+      "published_at": "2022-08-31T10:12:27Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "2022.4.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2022.4.0.dev0",
+      "name": "2022.4.0.dev0",
+      "published_at": "2022-05-19T16:48:57Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add DOI badges by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/112",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#112"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/112",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "112"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Fetch metadata & sequences by StudyID by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/114",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#114"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/114",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "114"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Scraping DOI from library by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/113",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#113"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/113",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "113"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Add scraping of other IDs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/116",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#116"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/116",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "116"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-fondue/compare/2022.2.0...2022.4.0.dev0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.2.0...2022.4.0.dev0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-fondue/compare/2022.2.0...2022.4.0.dev0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-fondue",
+                  "issue_number": "2022.2.0...2022.4.0.dev0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.2.0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2022.2.0",
+      "name": "2022.2: First release",
+      "published_at": "2022-03-28T06:10:15Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "This is the first public release of "
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "q2-fondue"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", accompanying the publication of "
+              },
+              {
+                "type": "link",
+                "url": "https://doi.org/10.1101/2022.03.22.485322",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Reproducible acquisition, management, and meta-analysis of nucleotide sequence (meta)data using q2-fondue"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "bokulich-lab",
+  "name": "q2-fondue",
+  "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+  "in_distro": true,
+  "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+  "stars": 21,
+  "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
+  "branch": "main",
+  "last_commit": {
+    "sha": "f8d805ba3a607f411b768b1ea0bc92da7768c5cf",
+    "status": "passed",
+    "date": "2025-01-18T21:22:41Z"
+  }
+}
