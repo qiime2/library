@@ -85,16 +85,16 @@
                         </dd>
                         <dt>Last Commit</dt>
                         <dd>
-                            <a class='font-mono text-sm' href={`https://github.com/${repo}/commit/${data.repo_info.last_commit.sha}`}>
+                            <a class='font-mono text-xs lg:text-sm' href={`https://github.com/${repo}/commit/${data.repo_info.last_commit.sha}`}>
                                 <div class="bg-gray-50 border border-gray-200 rounded py-1 px-3 flex gap-1 w-max items-center">
                                     {data.repo_info.last_commit.sha.slice(0, 7)}
                                     {#if data.repo_info.last_commit.status == "passed" }
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 text-green-600 -mr-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-3 lg:size-4 text-green-600 -mr-1">
                                         <title>Passed</title>
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                     </svg>
                                     {:else}
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4 text-red-600 -mr-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-3 lg:size-4 text-red-600 -mr-1">
                                         <title>Failed</title>
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                                     </svg>
