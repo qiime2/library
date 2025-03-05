@@ -35,29 +35,31 @@
       </button>
     </li>
 </ul>
-<ul {...popover.content} class='bg-white border border-gray-200 rounded-b-lg px-4 py-2 not-prose -mt-2 shadow-xl'>
-    {#if includeHome && page.url.pathname != '/'}
-    <li class='h-full'>
-        <a href="/" class='h-full px-2 pl-3 text-lg flex items-center' onclick={() => popover.open = false}>
-            <span class='inline-block border-y-4 border-transparent' title="Home">
-                Home
-            </span>
-        </a>
-    </li>
-    {/if}
-    {#each entries as [url, title]}
-    {@const active = isActive(page.url.pathname, url)}
-    {#if !active}
-    <li class='h-full'>
-        <a href={url} class='h-full px-2 pl-3 text-lg flex items-center' onclick={() => popover.open = false}>
-            <span class='inline-block border-y-4 border-transparent' title={title}>
-                {title}
-            </span>
-        </a>
-    </li>
-    {/if}
-    {/each}
-</ul>
+<div {...popover.content} class='-mt-2 shadow-xl'>
+  <ul class='bg-white border border-gray-200 rounded-b-lg px-4 py-2 not-prose'>
+      {#if includeHome && page.url.pathname != '/'}
+      <li>
+          <a href="/" class='px-2 pl-3 text-lg' onclick={() => popover.open = false}>
+              <span class='inline-block border-y-4 border-transparent' title="Home">
+                  Home
+              </span>
+          </a>
+      </li>
+      {/if}
+      {#each entries as [url, title]}
+      {@const active = isActive(page.url.pathname, url)}
+      {#if !active}
+      <li>
+          <a href={url} class='px-2 pl-3 text-lg' onclick={() => popover.open = false}>
+              <span class='inline-block border-y-4 border-transparent' title={title}>
+                  {title}
+              </span>
+          </a>
+      </li>
+      {/if}
+      {/each}
+  </ul>
+</div>
 
 <style lang='postcss'>
   @reference 'tailwindcss/theme';
