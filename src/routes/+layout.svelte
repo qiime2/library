@@ -23,7 +23,7 @@
     <a href='/' class='mr-auto'>
       <img id='navlogo' src='/q2library.svg' alt='QIIME 2 library logo' />
     </a>
-    <Navigation {entries} isActive={(path, url) => path.startsWith(url)}/>
+    <Navigation {entries} isActive={(path, url) => path.startsWith(url)} includeHome={true}/>
 </nav>
 <slot />
 <footer class='mt-10'></footer>

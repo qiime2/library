@@ -49,7 +49,7 @@
 
 <article class='pb-10 mb-5'>
     <header class='max-width'>
-        <div class='prose prose-sm sm:prose-lg pt-5 mt-5 -mb-4'>
+        <div class='prose prose-sm sm:prose-lg pt-5 mt-5 -mb-4 sm:mb-2'>
             <h2><a href='/plugin' class='text-[#2a414c]'>Base Distributions</a></h2>
         </div>
     </header>

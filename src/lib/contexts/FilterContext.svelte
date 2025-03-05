@@ -64,14 +64,22 @@
         }
     })
 
+    function contains(target: string | undefined, query: string) {
+        if (!target) {
+            return false
+        }
+        return target.toLowerCase().search(query.toLowerCase()) >= 0;
+    }
+
     $effect(() => {
         let filtered = unfiltered.slice();
 
         if (state.filters.search.length > 0) {
             filtered = filtered.filter((e) =>
-                String(e["name" as keyof Object].toLowerCase()).startsWith(
-                    state.filters.search.toLowerCase(),
-            ));
+                contains(e.name, state.filters.search)
+                || contains(e.owner, state.filters.search)
+                || contains(e.description, state.filters.search)
+            );
 
         }
 

@@ -40,12 +40,14 @@
     <div class="border-b border-gray-200 bg-gray-50 scroll-edge">
         <header class='max-width flex flex-wrap'>
             <div class='mr-auto flex flex-col pt-12'>
+                <a href="/plugin/{page.params.owner}/{page.params.plugin}" class='!no-underline'>
                 <div class='mb-2'>
-                    <div class="flex flex-col w-max">
-                        <h1 class='text-3xl lg:text-6xl text-[#1a414c] mb-0 mx-2 inline'>{page.params.plugin}</h1>
-                        <h2 class='text-lg lg:text-3xl text-gray-600 mt-1 mb-4 mx-2 inline place-self-end'>{page.params.owner}</h2>
-                    </div>
+                        <div class="flex flex-col w-max">
+                            <h1 class='text-3xl md:text-6xl text-[#1a414c] mb-0 mx-2 inline'>{page.params.plugin}</h1>
+                            <h2 class='text-lg md:text-3xl text-gray-600 mt-1 mb-4 mx-2 inline place-self-end'>{page.params.owner}</h2>
+                        </div>
                 </div>
+                </a>
                 <div class='h-[48px] mt-auto'>
                     <nav class='flex h-full'>
                         <div class="text-lg h-full flex mt-auto">
@@ -56,7 +58,7 @@
                 </div>
             </div>
             {#if !data.repo_info.in_distro}
-            <div class="px-2 max-w-xl py-3 self-center hidden sm:block">
+            <div class="px-2 max-w-xl py-3 self-center hidden md:block">
                 <PluginQuickstart owner={data.repo_info.owner} plugin={data.repo_info.name} branch={data.repo_info.branch} releases={data.repo_info.distros} in_distro={data.repo_info.in_distro || false} />
             </div>
             {/if}
@@ -64,9 +66,9 @@
     </div>
     <div class="scroll-edge">
         <div class="max-width">
-            <div class="mx-2 my-5 relative flex gap-6">
-                <div class='max-w-4xl grow min-h-screen'><slot/></div>
-                <div class='hidden md:block shrink-0 ml-auto p-4 text-xs lg:text-base'>
+            <div class="mx-2 my-5 relative flex w-auto gap-6">
+                <div class='max-w-5xl grow min-w-0 min-h-screen'><slot/></div>
+                <div class='hidden md:block shrink-0 w-max ml-auto p-4 text-sm lg:text-base'>
                     <dl>
                         <dt>Links</dt>
                         <dd>

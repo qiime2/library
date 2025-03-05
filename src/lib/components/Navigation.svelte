@@ -1,13 +1,17 @@
 <script lang='ts'>
     import { page } from '$app/state';
-    import { Collapsible } from 'melt/components';
+    import { Popover } from "melt/builders";
+
+    const popover = new Popover({computePositionOptions: {placement: "bottom-end"}});
 
     const {
         entries,
-        isActive
+        isActive,
+        includeHome = false
     }: {
         entries: [string, string][],
-        isActive: (arg0: string, arg1: string) => boolean
+        isActive: (arg0: string, arg1: string) => boolean,
+        includeHome?: boolean
     } = $props();
 </script>
 
@@ -22,9 +26,37 @@
         </a>
     </li>
     {/each}
-    <!-- <li class='h-full block sm:hidden'>
-      Menu
-    </li> -->
+    <li class='h-full block sm:hidden'>
+      <button type='button' class='h-full px-2 pl-3 text-gray-600 cursor-pointer hover:text-black' {...popover.trigger}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -3 24 24" fill="currentColor" class="size-8">
+          <title>Menu</title>
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </li>
+</ul>
+<ul {...popover.content} class='bg-white border border-gray-200 rounded-b-lg px-4 py-2 not-prose -mt-2 shadow-xl'>
+    {#if includeHome && page.url.pathname != '/'}
+    <li class='h-full'>
+        <a href="/" class='h-full px-2 pl-3 text-lg flex items-center' onclick={() => popover.open = false}>
+            <span class='inline-block border-y-4 border-transparent' title="Home">
+                Home
+            </span>
+        </a>
+    </li>
+    {/if}
+    {#each entries as [url, title]}
+    {@const active = isActive(page.url.pathname, url)}
+    {#if !active}
+    <li class='h-full'>
+        <a href={url} class='h-full px-2 pl-3 text-lg flex items-center' onclick={() => popover.open = false}>
+            <span class='inline-block border-y-4 border-transparent' title={title}>
+                {title}
+            </span>
+        </a>
+    </li>
+    {/if}
+    {/each}
 </ul>
 
 <style lang='postcss'>

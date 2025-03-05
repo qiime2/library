@@ -8,9 +8,7 @@
 {#await data.page}
     Loading content.
 {:then page}
-<div class="max-w-4xl">
-    <MySTDocument title={false} skipheading={true} {page} baseurl={data.baseurl}/>
-</div>
+<MySTDocument title={false} skipheading={true} {page} baseurl={data.baseurl}/>
 {:catch}
     <p class='prose prose-sm sm:prose-base lg:prose-xl'>Documentation available at: <br/><a target="_blank" rel="noopener noreferrer" href={data.baseurl}>{data.baseurl}</a></p>
 

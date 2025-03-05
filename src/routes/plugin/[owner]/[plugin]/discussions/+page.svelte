@@ -28,7 +28,7 @@
         <tr>
             <td class='text-lg align-middle pl-2'><a href={`https://forum.qiime2.org/t/${topic.slug}/${topic.id}`}>{topic.title}</a></td>
             <td class='align-middle text-center'>
-            <div class="flex gap-2 items-center">
+            <div class="hidden md:flex gap-2 items-center">
                 {#each topic.posters as poster}
                 {@const user = data.users[poster.user_id]}
                     <a href={`https://forum.qiime2.org/u/${user.username}`} title={user.username} class='size-6'><img class='rounded-full size-6 !my-0' src={user.avatar} alt={user.username}/></a>
