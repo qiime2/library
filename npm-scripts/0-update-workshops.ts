@@ -3,7 +3,7 @@ import { cleanup, getLibraryCatalog, loadYamlPath } from "./helpers";
 import { join } from "node:path";
 
 export async function main(catalog) {
-  let workshops = await loadYamlPath(join(catalog, "workshops", 'index.yml'));
+  let workshops = await loadYamlPath(join(catalog, "workshops", "index.yml"));
 
   fs.writeFileSync(
     `./static/json/workshops.json`,
@@ -19,4 +19,3 @@ if (process.argv[1] === import.meta.filename) {
     await cleanup(catalog);
   }
 }
-

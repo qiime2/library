@@ -22,7 +22,7 @@
     </div>
     <div class="sm:flex gap-4 md:gap-12 relative">
         <div class="prose shrink-0 lg:sticky top-[60px] self-start">
-            <dl class='grid grid-cols-3 sm:block'>
+            <dl class='grid grid-cols-3 gap-4 sm:grid-cols-1 sm:grid-rows-3'>
                 <div>
                     <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Epoch</dt>
                     {#each state.filtered_epochs as epoch (epoch)}
@@ -36,8 +36,8 @@
                     {/each}
                 </div>
                 <div>
-                    <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Last Commit</dt>
-                    {#each ['passed', 'failed', 'pending'] as status}
+                    <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Status</dt>
+                    {#each ['passed', 'failed'] as status}
                     <dd class='mt-0 ml-0 pl-1'><FilterCheckbox name={status} attr={state.filters.status}/></dd>
                     {/each}
                 </div>

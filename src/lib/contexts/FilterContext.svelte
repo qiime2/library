@@ -19,7 +19,7 @@
 
     let state: PluginFilter = $state({
         sort: {
-            sort_col: new Column("Commit Date", "last_commit.date", SortType.numerical),
+            sort_col: new Column("Updated", "last_commit.date", SortType.numerical),
             sort_descending: true,
         },
         filters: {

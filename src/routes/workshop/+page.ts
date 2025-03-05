@@ -6,4 +6,3 @@ export async function load({ fetch }) {
     workshops,
   };
 }
-
