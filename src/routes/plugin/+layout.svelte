@@ -7,6 +7,6 @@
 
 </script>
 
-<FilterContext {unfiltered}>
+<FilterContext {unfiltered} distro_epochs={data.distros}>
     {@render children()}
 </FilterContext>

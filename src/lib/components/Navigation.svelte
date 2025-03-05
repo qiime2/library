@@ -1,5 +1,7 @@
 <script lang='ts'>
     import { page } from '$app/state';
+    import { Collapsible } from 'melt/components';
+
     const {
         entries,
         isActive
@@ -11,14 +13,18 @@
 
 <ul class='not-prose grid grid-flow-col items-center -mx-1'>
     {#each entries as [url, title]}
-    <li class='h-full'>
-        <a href={url} class='h-full px-3 flex items-center'>
-            <span class='inline-block border-y-4 border-transparent' class:active={isActive(page.url.pathname, url)} title={title}>
+    {@const active = isActive(page.url.pathname, url)}
+    <li class='h-full sm:block' class:hidden={!active} class:block={active}>
+        <a href={url} class='h-full px-2 pl-3 text-sm md:px-3 md:text-base flex items-center'>
+            <span class='inline-block border-y-4 border-transparent' class:active title={title}>
                 {title}
             </span>
         </a>
     </li>
     {/each}
+    <!-- <li class='h-full block sm:hidden'>
+      Menu
+    </li> -->
 </ul>
 
 <style lang='postcss'>

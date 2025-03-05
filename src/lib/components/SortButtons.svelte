@@ -27,29 +27,29 @@
     }
 </script>
 
-<div id="buttons">
+<div class="flex gap-5">
     {#each columns as column}
-        <button class="sortButton" on:click={() => sortButton(column)}>
-            <div class="float-left">
+        <button class="flex items-center gap-1.5 hover:text-black hover:cursor-pointer"
+                class:text-black={state.sort.sort_col.name == column.name}
+                class:text-gray-600={state.sort.sort_col.name != column.name}
+                on:click={() => sortButton(column)}>
+            <div class="float-left text-xs md:text-sm lg:text-base">
                 {column.name}
             </div>
-            <svg fill="none" width="10" height="10" class="svg">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 10 10" class="size-2">
                 {#if state.sort.sort_col.name !== column.name}
                     <path
-                        stroke-width="3"
-                        stroke="rgb(119, 119, 119)"
+                        stroke-width="2.5"
                         d="M0 5L10 5"
                     />
                 {:else if state.sort.sort_descending}
                     <path
-                        stroke-width="3"
-                        stroke="rgb(119, 119, 119)"
+                        stroke-width="2.5"
                         d="M0 3L5 8a0,2 0 0 1 1,1M5 8L10 3"
                     />
                 {:else}
                     <path
-                        stroke-width="3"
-                        stroke="rgb(119, 119, 119)"
+                        stroke-width="2.5"
                         d="M0 8L5 3a0,2 0 0 1 1,1M5 3L10 8"
                     />
                 {/if}

@@ -11,6 +11,8 @@ export async function main() {
   let plugins = JSON.parse(
     fs.readFileSync("./static/json/plugins.json", "utf-8"),
   );
+
+  plugins.plugins.sort((a, b) => (a.in_distro || 0) - (b.in_distro || 0));
   results["plugins"] = roundRows(plugins.plugins, 4);
 
   let distros = fs.readFileSync("./static/json/distros.json", "utf-8");

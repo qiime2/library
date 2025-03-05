@@ -20,7 +20,7 @@
 
 <article class='bg-gray-50 border-y border-y-gray-200 pb-10 mb-5'>
     <header class='max-width'>
-        <div class='prose prose-lg pt-5 mt-5 -mb-4'>
+        <div class='prose prose-sm sm:prose-lg pt-5 mt-5 -mb-4'>
             <h2><a href='/plugin' class='text-[#2a414c]'>Recently Updated Plugins</a></h2>
         </div>
     </header>
@@ -49,7 +49,7 @@
 
 <article class='pb-10 mb-5'>
     <header class='max-width'>
-        <div class='prose prose-lg pt-5 mt-5 mb-2'>
+        <div class='prose prose-sm sm:prose-lg pt-5 mt-5 -mb-4'>
             <h2><a href='/plugin' class='text-[#2a414c]'>Base Distributions</a></h2>
         </div>
     </header>
@@ -65,7 +65,7 @@
 
 <article class='pb-10 mb-5'>
     <header class='max-width'>
-        <div class='prose prose-lg pt-5 mt-5 -mb-4'>
+        <div class='prose prose-sm sm:prose-lg pt-5 mt-5 -mb-4'>
             <h2><a href='/book' class='text-[#2a414c]'>Books and Tutorials</a></h2>
         </div>
     </header>
@@ -97,7 +97,7 @@
 
 <article class='pb-10'>
     <header class='max-width'>
-        <div class='prose prose-lg pt-5 -mb-4'>
+        <div class='prose prose-sm sm:prose-lg pt-5 -mb-4'>
             <h2><a href='/video' class='text-[#2a414c]'>Latest Videos</a></h2>
         </div>
     </header>

@@ -56,7 +56,7 @@
                 </div>
             </div>
             {#if !data.repo_info.in_distro}
-            <div class="px-2 max-w-xl py-3 self-center">
+            <div class="px-2 max-w-xl py-3 self-center hidden sm:block">
                 <PluginQuickstart owner={data.repo_info.owner} plugin={data.repo_info.name} branch={data.repo_info.branch} releases={data.repo_info.distros} in_distro={data.repo_info.in_distro || false} />
             </div>
             {/if}

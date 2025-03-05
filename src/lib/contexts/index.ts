@@ -15,8 +15,9 @@ export interface PluginFilter {
     distros: SvelteSet<string>;
     status: SvelteSet<"passed" | "failed" | "pending">;
   };
-  unfiltered: any[];
   filtered: any[];
+  filtered_epochs: string[];
+  filtered_distros: string[];
 }
 
 export function setFilterContext(state: PluginFilter) {

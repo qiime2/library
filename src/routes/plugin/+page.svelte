@@ -2,120 +2,58 @@
     import RepoCard from "$lib/components/RepoCard.svelte";
     import SortButtons from "$lib/components/SortButtons.svelte";
     import SearchBar from "$lib/components/SearchBar.svelte";
-    import FilterButton from "$lib/components/FilterButton.svelte";
-    import type { PageProps } from "./$types";
     import { getFilterContext } from "$lib/contexts";
     import FilterCheckbox from "$lib/components/FilterCheckbox.svelte";
+    import { fade } from "svelte/transition";
 
-    let { data }: PageProps = $props();
 
     let state = getFilterContext();
-    const releases = data.distros.map((x: string) => x.split('-'))
-    const distros: Set<string> = new Set();
-    const epochs: Set<string> = new Set();
-    for (const [distro, epoch] of releases) {
-        distros.add(distro);
-        epochs.add(epoch);
-    }
-
 </script>
 
 <div class="max-width">
-    <!-- Get a list of repos from somewhere and fetch this info about these repos
-     then make the list of data sortable by last commit date, last ci pass date,
-     and number of stars -->
-    <div id="banner">
+    <div id="banner" class='prose prose-sm sm:prose-md lg:prose-lg max-w-none'>
         This is a reimplementation of the QIIME 2 Library.
         Learn how to add your plugin <a href="https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html">here</a>.<br/>
         The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://old-library.qiime2.org/">here</a>.
     </div>
-        <div id="topBar">
-            <SearchBar />
-            <SortButtons />
-        </div>
-        <div id="gridContainer">
-            <div class="prose">
-                <dl>
-                    <dt>Epoch:</dt>
-                    {#each epochs as epoch}
-                    <dd><FilterCheckbox name={epoch} attr={state.filters.epochs}/></dd>
+    <div class='sm:flex items-end border-[#1a414c] border-b-4 pb-4 mb-4'>
+        <SearchBar />
+        <SortButtons />
+    </div>
+    <div class="sm:flex gap-4 md:gap-12 relative">
+        <div class="prose shrink-0 lg:sticky top-[60px] self-start">
+            <dl class='grid grid-cols-3 sm:block'>
+                <div>
+                    <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Epoch</dt>
+                    {#each state.filtered_epochs as epoch (epoch)}
+                    <dd class='mt-0 ml-0 pl-1' transition:fade><FilterCheckbox name={epoch} attr={state.filters.epochs}/></dd>
                     {/each}
-                    <dt>Distro:</dt>
-                    {#each distros as distro}
-                    <dd><FilterCheckbox name={distro} attr={state.filters.distros}/></dd>
+                </div>
+                <div>
+                    <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Base Distribution</dt>
+                    {#each state.filtered_distros as distro (distro)}
+                    <dd class='mt-0 ml-0 pl-1' transition:fade><FilterCheckbox name={distro} attr={state.filters.distros}/></dd>
                     {/each}
-                    <dt>Status:</dt>
+                </div>
+                <div>
+                    <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Last Commit</dt>
                     {#each ['passed', 'failed', 'pending'] as status}
-                    <dd><FilterCheckbox name={status} attr={state.filters.status}/></dd>
+                    <dd class='mt-0 ml-0 pl-1'><FilterCheckbox name={status} attr={state.filters.status}/></dd>
                     {/each}
-                </dl>
-            </div>
-            <div class="grid grid-cols-1">
-                {#each state.filtered as repo_overview}
-                    <RepoCard {repo_overview} />
-                {/each}
-            </div>
+                </div>
+            </dl>
         </div>
-        <!-- <div id="pageControls">
+        <div class="pt-7 mx-auto grid gap-6 auto-rows-fr max-h-min grid-cols-[auto_auto]">
+            {#each state.filtered as repo_overview (repo_overview.name)}
+                <RepoCard {repo_overview} />
+            {/each}
+            <!-- These are load-bearing divs, they keep the auto-row in check -->
             <div></div>
-            <div class="mx-auto">
-                <button
-                    on:click={() => {
-                        if (current_page > 1) {
-                            current_page--;
-                        }
-                    }}
-                    class="pageButton"
-                >
-                    <svg fill="none"
-                        width="10"
-                        height="10">
-                        <path
-                            stroke-width="3"
-                            stroke="rgb(119, 119, 119)"
-                            d="m8 0L3 5a0,2 0 0 1 1,1M3 5L8 10"/>
-                    </svg>
-                </button>
-                {current_page}/{num_pages}
-                <button
-                    on:click={() => {
-                        if (current_page < num_pages) {
-                            current_page++;
-                        }
-                    }}
-                    class="pageButton"
-                >
-                    <svg fill="none"
-                        width="10"
-                        height="10">
-                        <path
-                            stroke-width="3"
-                            stroke="rgb(119, 119, 119)"
-                            d="m3 0L8 5a0,2 0 0 1 1,1M8 5L3 10"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="ml-auto">
-                <span class="font-bold">Per Page:&nbsp;</span>
-                <input
-                    id="setCardsPerPage"
-                    type="number"
-                    value={cards_per_page}
-                    min="1"
-                    on:change={handleChange}
-                />
-            </div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div id="bottomBar">
-            <p id="date">
-                <span class="font-bold">Date Updated: </span>
-                {#if date_fetched !== ""}
-                    {formatDate(date_fetched)}
-                {:else}
-                    error
-                {/if}
-            </p>
-        </div> -->
+    </div>
 </div>
 
 <style lang="postcss">
@@ -128,10 +66,10 @@
         my-10
         border
         border-solid
-        border-gray-400
+        border-blue-200
         rounded-lg
-        text-xl
-        bg-blue-200;
+        text-gray-800
+        bg-blue-50;
     }
 
     #filterButtons {
@@ -143,14 +81,6 @@
 
     #date {
         @apply text-center;
-    }
-
-    #topBar {
-        display: flex;
-        border-bottom: 2px solid lightgrey;
-        @apply border-gray-400
-        pb-4
-        mb-4;
     }
 
     #pageControls {

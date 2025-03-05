@@ -5,8 +5,17 @@
     import { sortOverviews } from "$lib/scripts/util";
     import { SvelteSet } from "svelte/reactivity";
 
-    let { children, unfiltered }:
-        { children: Snippet, unfiltered: any[] } = $props();
+    let { children, unfiltered, distro_epochs }:
+        { children: Snippet, unfiltered: any[], distro_epochs: string[] } = $props();
+
+    const releases = distro_epochs.map((x: string) => x.split('-'))
+    const distros: Set<string> = new Set();
+    const epochs: Set<string> = new Set();
+    for (const [distro, epoch] of releases) {
+        distros.add(distro);
+        epochs.add(epoch);
+    }
+
 
     let state: PluginFilter = $state({
         sort: {
@@ -19,13 +28,44 @@
             distros: new SvelteSet(),
             status: new SvelteSet()
         },
-        unfiltered,
         filtered: unfiltered,
+        filtered_epochs: [...epochs],
+        filtered_distros: [...distros]
+    })
+    $effect(() => {
+        let new_distros: Set<string> = new Set()
+        if (state.filters.epochs.size > 0) {
+            for (const [distro, epoch] of releases) {
+                if (state.filters.epochs.has(epoch)) {
+                    new_distros.add(distro)
+                }
+            }
+            state.filtered_distros = [...new_distros];
+            for (const distro of state.filters.distros.difference(new_distros)) {
+                state.filters.distros.delete(distro)
+            }
+        } else {
+            state.filtered_distros = [...distros];
+        }
+
+        let new_epochs: Set<string> = new Set()
+        if (state.filters.distros.size > 0) {
+            for (const [distro, epoch] of releases) {
+                if (state.filters.distros.has(distro)) {
+                    new_epochs.add(epoch)
+                }
+            }
+            state.filtered_epochs = [...new_epochs];
+            for (const epoch of state.filters.epochs.difference(new_epochs)) {
+                state.filters.epochs.delete(epoch)
+            }
+        } else {
+            state.filtered_epochs = [...epochs];
+        }
     })
 
     $effect(() => {
-        let filtered = state.unfiltered;
-
+        let filtered = unfiltered.slice();
 
         if (state.filters.search.length > 0) {
             filtered = filtered.filter((e) =>

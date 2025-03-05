@@ -1,7 +1,6 @@
 <script lang="ts">
     import { getFilterContext } from "$lib/contexts";
 
-
     let state = getFilterContext();
 
     export function applySearchFilter (event: Event) {
@@ -12,17 +11,5 @@
     }
 </script>
 
-<input id="searchInput" placeholder="search" value={state.filters.search} oninput={applySearchFilter} />
-
-<style lang="postcss">
-    @reference "tailwindcss/theme";
-    #searchInput {
-        @apply border
-        border-solid
-        rounded
-        border-gray-300
-        mr-auto
-        mt-auto
-        pl-2;
-    }
-</style>
+<input class='border border-solid rounded border-gray-200 shadow-inner mr-auto mt-auto mb-4 sm:mb-0 px-4 py-1 text-sm md:text-lg block'
+    placeholder="search" value={state.filters.search} oninput={applySearchFilter} />
