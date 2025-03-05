@@ -35,8 +35,8 @@
       </button>
     </li>
 </ul>
-<div {...popover.content} class='-mt-2 shadow-xl'>
-  <ul class='bg-white border border-gray-200 rounded-b-lg px-4 py-2 not-prose'>
+<div {...popover.content} class='-mt-2 bg-white border border-gray-200 rounded-lg shadow-xl'>
+  <ul class='px-4 py-2 not-prose'>
       {#if includeHome && page.url.pathname != '/'}
       <li>
           <a href="/" class='px-2 pl-3 text-lg' onclick={() => popover.open = false}>
