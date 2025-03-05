@@ -42,11 +42,11 @@
             <div class='mr-auto flex flex-col pt-12'>
                 <div class='mb-2'>
                     <div class="flex flex-col w-max">
-                        <h1 class='text-6xl text-[#1a414c] mb-0 mx-2 inline'>{page.params.plugin}</h1>
-                        <h2 class='text-3xl text-gray-600 mt-1 mb-4 mx-2 inline place-self-end'>{page.params.owner}</h2>
+                        <h1 class='text-3xl lg:text-6xl text-[#1a414c] mb-0 mx-2 inline'>{page.params.plugin}</h1>
+                        <h2 class='text-lg lg:text-3xl text-gray-600 mt-1 mb-4 mx-2 inline place-self-end'>{page.params.owner}</h2>
                     </div>
                 </div>
-                <div class='h-[48px] bg-[#f8f8f8] mt-auto'>
+                <div class='h-[48px] mt-auto'>
                     <nav class='flex h-full'>
                         <div class="text-lg h-full flex mt-auto">
                             <Navigation {entries} isActive={(path, url) => path == url}/>

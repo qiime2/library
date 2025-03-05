@@ -1,14 +1,28 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "b998470b2f4e284faaf05a318e937efebed6ce9f",
+        "status": "passed",
+        "date": "2025-03-04T18:58:09Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": ["amplicon-2024.10"]
+    },
+    {
       "owner": "micom-dev",
       "name": "q2-micom",
       "branch": "main",
       "docs": "https://micom-dev.github.io/q2-micom/",
       "last_commit": {
-        "sha": "2970f8d9fe89874a1330e3b9172a725b33f585cb",
+        "sha": "f434b434968ae23ff8c1034f0110a74e60d5eef6",
         "status": "passed",
-        "date": "2025-02-25T01:39:46Z"
+        "date": "2025-03-04T07:32:49Z"
       },
       "stars": 10,
       "description": "A Qiime plugin for MICOM.",
@@ -50,24 +64,10 @@
       "distros": ["amplicon-2024.10"]
     },
     {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io",
-      "last_commit": {
-        "sha": "454b3e4614789c03ca59c584152d4a60e1ac6edd",
-        "status": "passed",
-        "date": "2025-02-18T16:27:00Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": ["amplicon-2024.10"]
-    },
-    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "last_commit": {
         "sha": "aaccacac04bfeee987d4c9109e3ca9c59b660452",
         "status": "passed",

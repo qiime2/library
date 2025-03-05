@@ -12,7 +12,7 @@
     <MySTDocument title={false} skipheading={true} {page} baseurl={data.baseurl}/>
 </div>
 {:catch}
-    <p class='prose lg:prose-xl'>Documentation available at: <br/><a target="_blank" rel="noopener noreferrer" href={data.baseurl}>{data.baseurl}</a></p>
+    <p class='prose prose-sm sm:prose-base lg:prose-xl'>Documentation available at: <br/><a target="_blank" rel="noopener noreferrer" href={data.baseurl}>{data.baseurl}</a></p>
 
     <p>(To generate automated references, the documentation must be built with MyST and q2doc.)</p>
 {/await}

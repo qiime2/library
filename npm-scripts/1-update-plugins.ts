@@ -35,6 +35,18 @@ export async function main(catalog: string, octokit: Octokit) {
     const repo_name = plugin["name"];
     const branch = plugin["branch"];
 
+    const given_docs = plugin["docs"];
+    plugin["docs"] = null;
+    try {
+      // follow any redirects and store that instead
+      const docs = await fetch(given_docs, { method: "HEAD" });
+      if (docs.ok) {
+        plugin["docs"] = docs.url;
+      }
+    } catch {
+      // do nothing
+    }
+
     directlyRegistered.add(repo_name);
 
     let repo_info: Record<string, any> = {};
