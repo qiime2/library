@@ -12,7 +12,7 @@
 
 
 <article class='max-width' bind:clientWidth>
-    <div class="prose mt-10 mb-5 pb-10">
+    <div class="prose lg:prose-lg max-w-4xl mt-10 mb-5 pb-10">
             <h1 class='text-[#1a414c]'>Welcome to the QIIME 2 Library</h1>
             <p>This site is the hub for community distributed software, tutorials, and resources.</p>
     </div>

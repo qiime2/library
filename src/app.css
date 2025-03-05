@@ -19,8 +19,7 @@ html {
 }
 
 div:has(> pre.hljs > code) {
-  @apply border border-gray-200 rounded-md;
-  background-color: #f8f8f8;
+  @apply border border-gray-200 rounded-md bg-gray-50;
 }
 
 @layer utilities {
@@ -37,6 +36,10 @@ div:has(> pre.hljs > code) {
     max-width: calc(1110px + 17em);
     margin: 0 auto;
     padding: 0 0.67em;
+  }
+
+  .prose h1 {
+    color: #1a414c;
   }
 
   .prose a {

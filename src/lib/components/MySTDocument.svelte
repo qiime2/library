@@ -24,7 +24,7 @@
         <react.ReferencesProvider
                 references={{ ...page.references, article: page.mdast }}
                 frontmatter={page.frontmatter}>
-                <article class='prose-sm md:prose lg:prose-lg max-w-none'>
+                <article class='prose prose-sm md:prose-base lg:prose-lg max-w-none'>
                     {#if title}
                     <h1>{page.frontmatter.title}</h1>
                     {/if}

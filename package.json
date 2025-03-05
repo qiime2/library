@@ -12,6 +12,7 @@
     "update:clean": "rm -rf ./static/json ; rm -rf ./static/myst; mkdir -p  ./static/json && mkdir -p ./static/myst",
     "update:distros": "npx tsx ./npm-scripts/0-update-distros.ts ${npm_config_catalog}",
     "update:videos": "npx tsx ./npm-scripts/0-update-videos.ts ${npm_config_catalog}",
+    "update:workshops": "npx tsx ./npm-scripts/0-update-workshops.ts ${npm_config_catalog}",
     "update:plugins": "npx tsx ./npm-scripts/1-update-plugins.ts ${npm_config_catalog}",
     "update:books": "npx tsx ./npm-scripts/2-update-books.ts ${npm_config_catalog}",
     "update:myst": "npx tsx ./npm-scripts/3-update-myst.ts",
