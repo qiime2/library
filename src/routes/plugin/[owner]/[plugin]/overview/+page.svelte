@@ -2,13 +2,15 @@
     import MySTDocument from "$lib/components/MySTDocument.svelte";
 	import type { PageProps } from './$types';
 
+    import { page as p } from '$app/state';
+
 	let { data }: PageProps = $props();
 </script>
 
 {#await data.page}
     Loading content.
 {:then page}
-<MySTDocument title={false} skipheading={true} {page} baseurl={data.baseurl}/>
+<MySTDocument title={false} skipheading={true} {page} baseurl={`/_/${p.params.plugin}`} />
 {:catch}
     <p class='prose prose-sm sm:prose-base lg:prose-xl'>Documentation available at: <br/><a target="_blank" rel="noopener noreferrer" href={data.baseurl}>{data.baseurl}</a></p>
 

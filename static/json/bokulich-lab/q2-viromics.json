@@ -3,21 +3,12 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-viromics"
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "A "
+            "value": "A ",
+            "key": "bcZQJkcyjI"
           },
           {
             "type": "link",
@@ -25,15 +16,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2"
+                "value": "QIIME 2",
+                "key": "d7LgcplZbu"
               }
-            ]
+            ],
+            "key": "oTMugOO6f8"
           },
           {
             "type": "text",
-            "value": " Plugin for detecting viral genomes and assessing their quality."
+            "value": " Plugin for detecting viral genomes and assessing their quality.",
+            "key": "sNWJfNt2jp"
           }
-        ]
+        ],
+        "key": "wGSHqdW25m"
       },
       {
         "type": "heading",
@@ -41,9 +36,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation"
+            "value": "Installation",
+            "key": "EVbZnN1o1F"
           }
-        ]
+        ],
+        "key": "kVRC2EAvtA",
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
       },
       {
         "type": "paragraph",
@@ -53,13 +54,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "q2-viromics"
+                "value": "q2-viromics",
+                "key": "TlhyFI5RkY"
               }
-            ]
+            ],
+            "key": "U8EwlifrPK"
           },
           {
             "type": "text",
-            "value": " is available as part of the QIIME 2 pathogenome distribution. For installation and usage instructions please consult the official "
+            "value": " is available as part of the QIIME 2 pathogenome distribution. For installation and usage instructions please consult the official ",
+            "key": "MGygAHH4aT"
           },
           {
             "type": "link",
@@ -67,15 +71,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 documentation"
+                "value": "QIIME 2 documentation",
+                "key": "aL674DOPGU"
               }
-            ]
+            ],
+            "key": "NlYJASANHm"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "LJoZnniXs0"
           }
-        ]
+        ],
+        "key": "AXlcl33Bqv"
       },
       {
         "type": "heading",
@@ -83,16 +91,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Usage"
+            "value": "Usage",
+            "key": "VklkLjsYkJ"
           }
-        ]
+        ],
+        "key": "FRicxm2neZ",
+        "identifier": "usage",
+        "label": "Usage",
+        "html_id": "usage",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Start by downloading sample input "
+            "value": "Start by downloading sample input ",
+            "key": "oS2NMjUBMz"
           },
           {
             "type": "link",
@@ -100,45 +115,56 @@
             "children": [
               {
                 "type": "text",
-                "value": "datasets"
+                "value": "datasets",
+                "key": "mkPfFWA4AV"
               }
-            ]
+            ],
+            "key": "exS3koVtIU"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "AlHEebfUdX"
           }
-        ]
+        ],
+        "key": "s9hLMfnK1z"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Fetch the checkV database:"
+            "value": "Fetch the checkV database:",
+            "key": "nThkvcuY27"
           }
-        ]
+        ],
+        "key": "E89rB2GoM2"
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "qiime viromics checkv-fetch-db --o-database checkV_db.qza --verbose"
+        "value": "qiime viromics checkv-fetch-db --o-database checkV_db.qza --verbose",
+        "key": "QRtktGNoX0"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Run the CheckV analysis:"
+            "value": "Run the CheckV analysis:",
+            "key": "UBe1dYLbOu"
           }
-        ]
+        ],
+        "key": "xnHLYL9Fyk"
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "qiime viromics checkv-analysis --i-sequences input_sequences.qza --i-database checkV_db.qza --p-num-threads 4 --output-dir checkV_output --verbose"
+        "value": "qiime viromics checkv-analysis --i-sequences input_sequences.qza --i-database checkV_db.qza --p-num-threads 4 --output-dir checkV_output --verbose",
+        "key": "Dm3FtYF6Ta"
       }
-    ]
+    ],
+    "key": "dHCtESuEr5"
   },
   "releases": [],
   "owner": "bokulich-lab",

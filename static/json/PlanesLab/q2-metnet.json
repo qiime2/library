@@ -3,21 +3,12 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-metnet"
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota.\nRead more about the method in our "
+            "value": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota.\nRead more about the method in our ",
+            "key": "nlF5WR5fWh"
           },
           {
             "type": "link",
@@ -25,15 +16,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "paper"
+                "value": "paper",
+                "key": "R8t4JyXDr7"
               }
-            ]
+            ],
+            "key": "HZUjwwqmyo"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "OBEpti0lvp"
           }
-        ]
+        ],
+        "key": "E5Cp139apv"
       },
       {
         "type": "heading",
@@ -41,9 +36,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Installing"
+            "value": "Installing",
+            "key": "r1OGjDhjep"
           }
-        ]
+        ],
+        "key": "YfKsfaTJMl",
+        "identifier": "installing",
+        "label": "Installing",
+        "html_id": "installing",
+        "implicit": true
       },
       {
         "type": "heading",
@@ -51,14 +52,21 @@
         "children": [
           {
             "type": "text",
-            "value": "Creating a conda environment with QIIME2 and q2-metnet"
+            "value": "Creating a conda environment with QIIME2 and q2-metnet",
+            "key": "yvqOrKg3EU"
           }
-        ]
+        ],
+        "key": "xMqnmJ9niH",
+        "identifier": "creating-a-conda-environment-with-qiime2-and-q2-metnet",
+        "label": "Creating a conda environment with QIIME2 and q2-metnet",
+        "html_id": "creating-a-conda-environment-with-qiime2-and-q2-metnet",
+        "implicit": true
       },
       {
         "type": "code",
         "lang": "",
-        "value": "conda env create \\\n -n q2-metnet \\\n -f https://raw.githubusercontent.com/PlanesLab/q2-metnet.git/main/environment-files/q2-metnet-qiime2-amplicon-2024.10.yml"
+        "value": "conda env create \\\n -n q2-metnet \\\n -f https://raw.githubusercontent.com/PlanesLab/q2-metnet.git/main/environment-files/q2-metnet-qiime2-amplicon-2024.10.yml",
+        "key": "MEh7XL7niZ"
       },
       {
         "type": "heading",
@@ -66,84 +74,107 @@
         "children": [
           {
             "type": "text",
-            "value": "Using an existing QIIME2 environment"
+            "value": "Using an existing QIIME2 environment",
+            "key": "mmYfmIXZcS"
           }
-        ]
+        ],
+        "key": "VdJ3XGSITD",
+        "identifier": "using-an-existing-qiime2-environment",
+        "label": "Using an existing QIIME2 environment",
+        "html_id": "using-an-existing-qiime2-environment",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Once you create your QIIME2 environment, you can install this plugin by cloning this repo and installing manually. To clone the repo:"
+            "value": "Once you create your QIIME2 environment, you can install this plugin by cloning this repo and installing manually. To clone the repo:",
+            "key": "Td0Gn7vcNA"
           }
-        ]
+        ],
+        "key": "y4zOtPZJk5"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "git clone https://github.com/PlanesLab/q2-metnet.git"
+        "value": "git clone https://github.com/PlanesLab/q2-metnet.git",
+        "key": "NWYbYWUZ7y"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To install from this repo, check to be into the main directory (running the "
+            "value": "To install from this repo, check to be into the main directory (running the ",
+            "key": "kTGmVHggXu"
           },
           {
             "type": "inlineCode",
-            "value": "ls"
+            "value": "ls",
+            "key": "q4v5WNcPQX"
           },
           {
             "type": "text",
-            "value": " command the setup.py file must be displayed), and run:"
+            "value": " command the setup.py file must be displayed), and run:",
+            "key": "lK6aKPMB77"
           }
-        ]
+        ],
+        "key": "XeCPIO1SFO"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "python setup.py install"
+        "value": "python setup.py install",
+        "key": "IeSP6jzag0"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Then, update the plugin cache by typing:"
+            "value": "Then, update the plugin cache by typing:",
+            "key": "Evs7RgIIhn"
           }
-        ]
+        ],
+        "key": "HYch6nmvj9"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime dev refresh-cache"
+        "value": "qiime dev refresh-cache",
+        "key": "wdxSurPhKF"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You can check that the installation worked by typing "
+            "value": "You can check that the installation worked by typing ",
+            "key": "h5ArghQg7O"
           },
           {
             "type": "inlineCode",
-            "value": "qiime"
+            "value": "qiime",
+            "key": "AtR7ahzWv1"
           },
           {
             "type": "text",
-            "value": " on the command line.\nThe "
+            "value": " on the command line.\nThe ",
+            "key": "ZEbYUVVffm"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "J62HqMHr7j"
           },
           {
             "type": "text",
-            "value": " plugin should show up in the list of available plugins."
+            "value": " plugin should show up in the list of available plugins.",
+            "key": "jc1dH7GmuC"
           }
-        ]
+        ],
+        "key": "PdQcsgZtWy"
       },
       {
         "type": "heading",
@@ -151,18 +182,26 @@
         "children": [
           {
             "type": "text",
-            "value": "Using the plugin"
+            "value": "Using the plugin",
+            "key": "Be7yWey8e8"
           }
-        ]
+        ],
+        "key": "Rig0XtcsDi",
+        "identifier": "using-the-plugin",
+        "label": "Using the plugin",
+        "html_id": "using-the-plugin",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "There are available four methods in this plugin:"
+            "value": "There are available four methods in this plugin:",
+            "key": "y20isnGZFm"
           }
-        ]
+        ],
+        "key": "ZqEdtQnwLv"
       },
       {
         "type": "list",
@@ -175,13 +214,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "generateFeatures"
+                "value": "generateFeatures",
+                "key": "K3Rchni2M2"
               },
               {
                 "type": "text",
-                "value": ", which creates the tables of normalized scores for any reaction and subsystem present in the selected metabolic reconstruction across the different samples under study;"
+                "value": ", which creates the tables of normalized scores for any reaction and subsystem present in the selected metabolic reconstruction across the different samples under study;",
+                "key": "F3qGghLJo7"
               }
-            ]
+            ],
+            "key": "nemMLruaGZ"
           },
           {
             "type": "listItem",
@@ -189,13 +231,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "differentialReactions"
+                "value": "differentialReactions",
+                "key": "QKQIOvUolM"
               },
               {
                 "type": "text",
-                "value": ", which computes a differential activity analysis about any kind of reaction for the different conditions under analysis;"
+                "value": ", which computes a differential activity analysis about any kind of reaction for the different conditions under analysis;",
+                "key": "eTC5Cxiwu5"
               }
-            ]
+            ],
+            "key": "UZ0Gi9G17x"
           },
           {
             "type": "listItem",
@@ -203,13 +248,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "differentialExchanges"
+                "value": "differentialExchanges",
+                "key": "XFkw3riIq9"
               },
               {
                 "type": "text",
-                "value": ", which computes a differential activity analysis about exchange reactions for the different conditions under analysis;"
+                "value": ", which computes a differential activity analysis about exchange reactions for the different conditions under analysis;",
+                "key": "KXjoy38cKR"
               }
-            ]
+            ],
+            "key": "ylG6o3Sacw"
           },
           {
             "type": "listItem",
@@ -217,13 +265,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "differentialSubSystems"
+                "value": "differentialSubSystems",
+                "key": "BPZXxKsVeK"
               },
               {
                 "type": "text",
-                "value": ", which computes a differential activity analysis about subsystems for the different conditions under analysis;"
+                "value": ", which computes a differential activity analysis about subsystems for the different conditions under analysis;",
+                "key": "rewFiaLi22"
               }
-            ]
+            ],
+            "key": "Q9FE9ZSNHO"
           },
           {
             "type": "listItem",
@@ -231,13 +282,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "plotClusteMap"
+                "value": "plotClusteMap",
+                "key": "hc9bxBvjim"
               },
               {
                 "type": "text",
-                "value": ", which permits to visualize different samples by a hierarchically-clustered heatmap;"
+                "value": ", which permits to visualize different samples by a hierarchically-clustered heatmap;",
+                "key": "wJlbAHiVYs"
               }
-            ]
+            ],
+            "key": "a6Wh5zU92X"
           },
           {
             "type": "listItem",
@@ -245,13 +299,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "plotPCA"
+                "value": "plotPCA",
+                "key": "foYwuTVQCN"
               },
               {
                 "type": "text",
-                "value": ", which allows to visualize different samples by conducting a Principal Component Analysis;"
+                "value": ", which allows to visualize different samples by conducting a Principal Component Analysis;",
+                "key": "GAXzHLdYEw"
               }
-            ]
+            ],
+            "key": "HL1mGDSG2F"
           },
           {
             "type": "listItem",
@@ -259,15 +316,19 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "plotBoxplot"
+                "value": "plotBoxplot",
+                "key": "lnZ0zKYATI"
               },
               {
                 "type": "text",
-                "value": ", which generates boxplot of both reaction or subsystem scores to visualize differences between conditions."
+                "value": ", which generates boxplot of both reaction or subsystem scores to visualize differences between conditions.",
+                "key": "GqvoK9eUt7"
               }
-            ]
+            ],
+            "key": "cXXBQtRfXF"
           }
-        ]
+        ],
+        "key": "LF7YbMArnj"
       },
       {
         "type": "heading",
@@ -275,16 +336,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Preparing your data"
+            "value": "Preparing your data",
+            "key": "NSIJLa2JFE"
           }
-        ]
+        ],
+        "key": "whERwGXIMd",
+        "identifier": "preparing-your-data",
+        "label": "Preparing your data",
+        "html_id": "preparing-your-data",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You’ll need to prepare your ASV (OTU) table, respective taxonomical assignation and metadata file for use with this plugin.\nYour ASV(OTU) table should be imported as a "
+            "value": "You’ll need to prepare your ASV (OTU) table, respective taxonomical assignation and metadata file for use with this plugin.\nYour ASV(OTU) table should be imported as a ",
+            "key": "vpz68e6E2Q"
           },
           {
             "type": "link",
@@ -292,39 +360,48 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 artifact"
+                "value": "QIIME 2 artifact",
+                "key": "a0yngZwUXB"
               }
-            ]
+            ],
+            "key": "BkeAkws04v"
           },
           {
             "type": "text",
-            "value": ", with "
+            "value": ", with ",
+            "key": "yoi4ZVlY7x"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "ASVs (OTUs) in rows"
+                "value": "ASVs (OTUs) in rows",
+                "key": "OPBoH4U55E"
               }
-            ]
+            ],
+            "key": "gJxY0sXyfN"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "hEfoomwXN5"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "samples in columns"
+                "value": "samples in columns",
+                "key": "lM3BLqvuZN"
               }
-            ]
+            ],
+            "key": "zgfiS4AZwm"
           },
           {
             "type": "text",
-            "value": ".\nSimilarly, the taxonomical assignation should be imported as "
+            "value": ".\nSimilarly, the taxonomical assignation should be imported as ",
+            "key": "nuMxnk630a"
           },
           {
             "type": "link",
@@ -332,49 +409,61 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 artifact"
+                "value": "QIIME 2 artifact",
+                "key": "bAzAqhJVIb"
               }
-            ]
+            ],
+            "key": "ataWir8h7R"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "Dgi7Jh5Tbc"
           }
-        ]
+        ],
+        "key": "ZFKvoKN2hS"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Metadata should be a tab-delimited file with a column that contains samples labeled depending on the type of samples they are (for example: "
+            "value": "Metadata should be a tab-delimited file with a column that contains samples labeled depending on the type of samples they are (for example: ",
+            "key": "timLmQ7UQg"
           },
           {
             "type": "inlineCode",
-            "value": "case"
+            "value": "case",
+            "key": "YggpH5vLoI"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "Ohw5waitgk"
           },
           {
             "type": "inlineCode",
-            "value": "control"
+            "value": "control",
+            "key": "rWLT5Z3pHs"
           },
           {
             "type": "text",
-            "value": ").\nThis column need to be defined to permit the plugin to compute the differential activity analysis."
+            "value": ").\nThis column need to be defined to permit the plugin to compute the differential activity analysis.",
+            "key": "XXNpAOPyDO"
           }
-        ]
+        ],
+        "key": "H0wYYEP0Y9"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "If your OTU table is already a QIIME 2 artifact, you can skip directly to running the code.\nOtherwise, follow the instructions on the QIIME 2 webpage to use your own tab-delimited OTU table."
+            "value": "If your OTU table is already a QIIME 2 artifact, you can skip directly to running the code.\nOtherwise, follow the instructions on the QIIME 2 webpage to use your own tab-delimited OTU table.",
+            "key": "f7XjElRtcH"
           }
-        ]
+        ],
+        "key": "Jp61NmFjOk"
       },
       {
         "type": "heading",
@@ -382,119 +471,152 @@
         "children": [
           {
             "type": "text",
-            "value": "Generate the normalized scores tables"
+            "value": "Generate the normalized scores tables",
+            "key": "Sh0SHwIwXu"
           }
-        ]
+        ],
+        "key": "ezLbRgnVJY",
+        "identifier": "generate-the-normalized-scores-tables",
+        "label": "Generate the normalized scores tables",
+        "html_id": "generate-the-normalized-scores-tables",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "W50i0N5RIN"
           },
           {
             "type": "inlineCode",
-            "value": "generateFeatures"
+            "value": "generateFeatures",
+            "key": "Vn1kMx3sey"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "i4DyAPE3z0"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "IjBKRrgHrF"
           },
           {
             "type": "text",
-            "value": " qiime plugin. The "
+            "value": " qiime plugin. The ",
+            "key": "FXRHfvYBo2"
           },
           {
             "type": "inlineCode",
-            "value": "AGREDA"
+            "value": "AGREDA",
+            "key": "DahATsTH9W"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "EVb0bhMy7b"
           },
           {
             "type": "inlineCode",
-            "value": "s"
+            "value": "s",
+            "key": "n8KDUAKFwv"
           },
           {
             "type": "text",
-            "value": " parameter of "
+            "value": " parameter of ",
+            "key": "duVfQElOlt"
           },
           {
             "type": "inlineCode",
-            "value": "--p-selection"
+            "value": "--p-selection",
+            "key": "tXY9xxfaej"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "Z1IIWKTz19"
           },
           {
             "type": "inlineCode",
-            "value": "--p-level"
+            "value": "--p-level",
+            "key": "Erahr9zn1u"
           },
           {
             "type": "text",
-            "value": " are the default parameters.\nThe parameter "
+            "value": " are the default parameters.\nThe parameter ",
+            "key": "WmXJVTOU1N"
           },
           {
             "type": "inlineCode",
-            "value": "--p-selection"
+            "value": "--p-selection",
+            "key": "rgTRKkZqoo"
           },
           {
             "type": "text",
-            "value": " can be chosen between "
+            "value": " can be chosen between ",
+            "key": "lHRsovFBXh"
           },
           {
             "type": "inlineCode",
-            "value": "AGREDA"
+            "value": "AGREDA",
+            "key": "CV85N8X5PJ"
           },
           {
             "type": "text",
-            "value": " (default) and "
+            "value": " (default) and ",
+            "key": "UGSu6hwTWI"
           },
           {
             "type": "inlineCode",
-            "value": "AGORAv103"
+            "value": "AGORAv103",
+            "key": "iqZAW9jFyq"
           },
           {
             "type": "text",
-            "value": ".\nThe parameter "
+            "value": ".\nThe parameter ",
+            "key": "qCrWf40Unm"
           },
           {
             "type": "inlineCode",
-            "value": "--p-level"
+            "value": "--p-level",
+            "key": "aH0yaqcKI3"
           },
           {
             "type": "text",
-            "value": " correspond to the taxonomic depth, ranging from kingdom ("
+            "value": " correspond to the taxonomic depth, ranging from kingdom (",
+            "key": "EQPtgSI9q7"
           },
           {
             "type": "inlineCode",
-            "value": "k"
+            "value": "k",
+            "key": "Qx15dfKb0f"
           },
           {
             "type": "text",
-            "value": ") to species ("
+            "value": ") to species (",
+            "key": "segyyiDFWE"
           },
           {
             "type": "inlineCode",
-            "value": "s"
+            "value": "s",
+            "key": "yhQswLGlst"
           },
           {
             "type": "text",
-            "value": ", default)."
+            "value": ", default).",
+            "key": "vB6DsLyF1o"
           }
-        ]
+        ],
+        "key": "s5vY3NuZnz"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet generateFeatures \\\n\t--i-frequency ../asv_table.asv.qza \\\n\t--i-taxa ../assigned_taxonomy.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ../output_reactions.qza \\\n\t--o-subsystems ../output_subsystems.qza \\\n\t--o-xmatrix ./output_X_matrix.qza"
+        "value": "qiime metnet generateFeatures \\\n\t--i-frequency ../asv_table.asv.qza \\\n\t--i-taxa ../assigned_taxonomy.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ../output_reactions.qza \\\n\t--o-subsystems ../output_subsystems.qza \\\n\t--o-xmatrix ./output_X_matrix.qza",
+        "key": "NeLTeDk8pN"
       },
       {
         "type": "heading",
@@ -502,87 +624,112 @@
         "children": [
           {
             "type": "text",
-            "value": "Calculate differential analysis scores for exchange reactions"
+            "value": "Calculate differential analysis scores for exchange reactions",
+            "key": "obnoBFIdKK"
           }
-        ]
+        ],
+        "key": "dxGdYCETyt",
+        "identifier": "calculate-differential-analysis-scores-for-exchange-reactions",
+        "label": "Calculate differential analysis scores for exchange reactions",
+        "html_id": "calculate-differential-analysis-scores-for-exchange-reactions",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "lcReCWgfxC"
           },
           {
             "type": "inlineCode",
-            "value": "differentialExchanges"
+            "value": "differentialExchanges",
+            "key": "JtBACRZ8mp"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "iNpSGLVz3Z"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "UNnVeKZ6vr"
           },
           {
             "type": "text",
-            "value": " qiime plugin.\nThe parameter "
+            "value": " qiime plugin.\nThe parameter ",
+            "key": "QPLfDLZ3Sh"
           },
           {
             "type": "inlineCode",
-            "value": "--p-condition-name"
+            "value": "--p-condition-name",
+            "key": "ETwJ34xTSl"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter ",
+            "key": "upJa9llJoX"
           },
           {
             "type": "inlineCode",
-            "value": "--p-control-name"
+            "value": "--p-control-name",
+            "key": "avwEq5kPns"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter ",
+            "key": "JN3fj3rUTZ"
           },
           {
             "type": "inlineCode",
-            "value": "--p-selection-model"
+            "value": "--p-selection-model",
+            "key": "fKVvzG2kGP"
           },
           {
             "type": "text",
-            "value": " corresponds to the same metabolic reconstruction used in the table generation ("
+            "value": " corresponds to the same metabolic reconstruction used in the table generation (",
+            "key": "koiCNzKO5K"
           },
           {
             "type": "inlineCode",
-            "value": "AGREDA"
+            "value": "AGREDA",
+            "key": "Ora6viBZ66"
           },
           {
             "type": "text",
-            "value": " (default), "
+            "value": " (default), ",
+            "key": "dNN4F2bi5l"
           },
           {
             "type": "inlineCode",
-            "value": "AGORAv103"
+            "value": "AGORAv103",
+            "key": "S6rny8V9K1"
           },
           {
             "type": "text",
-            "value": ").\nThe parameter "
+            "value": ").\nThe parameter ",
+            "key": "IT70dHtRTa"
           },
           {
             "type": "inlineCode",
-            "value": "--p-input-interest"
+            "value": "--p-input-interest",
+            "key": "TUqTJRFuX2"
           },
           {
             "type": "text",
-            "value": " defines if the focus is just on those exchange that can be input (and may be output as well) or just output (default = True)."
+            "value": " defines if the focus is just on those exchange that can be input (and may be output as well) or just output (default = True).",
+            "key": "I9LqD00VWO"
           }
-        ]
+        ],
+        "key": "xHXvPigYkQ"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet differentialExchanges \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--p-input-interest True \\\n\t--o-differential-analysis ../exchanges_differential.qza"
+        "value": "qiime metnet differentialExchanges \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--p-input-interest True \\\n\t--o-differential-analysis ../exchanges_differential.qza",
+        "key": "pdR0OVY2uH"
       },
       {
         "type": "heading",
@@ -590,79 +737,102 @@
         "children": [
           {
             "type": "text",
-            "value": "Calculate differential analysis scores for any kind of reactions"
+            "value": "Calculate differential analysis scores for any kind of reactions",
+            "key": "jomC5svaBC"
           }
-        ]
+        ],
+        "key": "c42klz9ALt",
+        "identifier": "calculate-differential-analysis-scores-for-any-kind-of-reactions",
+        "label": "Calculate differential analysis scores for any kind of reactions",
+        "html_id": "calculate-differential-analysis-scores-for-any-kind-of-reactions",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "wUoR7qZ9d3"
           },
           {
             "type": "inlineCode",
-            "value": "differentialReactions"
+            "value": "differentialReactions",
+            "key": "NceO8f9qJa"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "CMVBk5M0O0"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "TAqYXIAXMj"
           },
           {
             "type": "text",
-            "value": " qiime plugin.\nThe parameter "
+            "value": " qiime plugin.\nThe parameter ",
+            "key": "CRpkGEGwjS"
           },
           {
             "type": "inlineCode",
-            "value": "--p-condition-name"
+            "value": "--p-condition-name",
+            "key": "fgZ0mUISxZ"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter ",
+            "key": "TjWtRIzkuR"
           },
           {
             "type": "inlineCode",
-            "value": "--p-control-name"
+            "value": "--p-control-name",
+            "key": "SUIzkOiDP7"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter ",
+            "key": "vYlnaTaEv7"
           },
           {
             "type": "inlineCode",
-            "value": "--p-selection-model"
+            "value": "--p-selection-model",
+            "key": "NY4JZRwPiH"
           },
           {
             "type": "text",
-            "value": " corresponde to the same metabolic reconstruction used in the table generation ("
+            "value": " corresponde to the same metabolic reconstruction used in the table generation (",
+            "key": "ex4Ugmpf8r"
           },
           {
             "type": "inlineCode",
-            "value": "AGREDA"
+            "value": "AGREDA",
+            "key": "RYA3DAKy6i"
           },
           {
             "type": "text",
-            "value": " (default), "
+            "value": " (default), ",
+            "key": "EL25kBUeab"
           },
           {
             "type": "inlineCode",
-            "value": "AGORAv103"
+            "value": "AGORAv103",
+            "key": "D3SmV49x4r"
           },
           {
             "type": "text",
-            "value": ")."
+            "value": ").",
+            "key": "sMEv64vtjT"
           }
-        ]
+        ],
+        "key": "uSvecZBJQv"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet differentialReactions \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ../reactions_differential.qza"
+        "value": "qiime metnet differentialReactions \\\n\t--i-reactions ../output_reactions.qza \\\n\t--m-metadata-file ../metadata.tsv \\\n\t--m-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ../reactions_differential.qza",
+        "key": "gMi16qwlai"
       },
       {
         "type": "heading",
@@ -670,55 +840,72 @@
         "children": [
           {
             "type": "text",
-            "value": "Calculate differential analysis scores for subsystems"
+            "value": "Calculate differential analysis scores for subsystems",
+            "key": "drLvsdgETo"
           }
-        ]
+        ],
+        "key": "sJyKUTAQHP",
+        "identifier": "calculate-differential-analysis-scores-for-subsystems",
+        "label": "Calculate differential analysis scores for subsystems",
+        "html_id": "calculate-differential-analysis-scores-for-subsystems",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "t3hYTe21iN"
           },
           {
             "type": "inlineCode",
-            "value": "differentialSubSystems"
+            "value": "differentialSubSystems",
+            "key": "GHmq0eqWWp"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "SirzcZfk7Z"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "hOeGusM0Qv"
           },
           {
             "type": "text",
-            "value": " qiime plugin.\nThe parameter "
+            "value": " qiime plugin.\nThe parameter ",
+            "key": "gJ1YDXIdwA"
           },
           {
             "type": "inlineCode",
-            "value": "--p-condition-name"
+            "value": "--p-condition-name",
+            "key": "Zl1jFML5uz"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter ",
+            "key": "v0kAaZu1UX"
           },
           {
             "type": "inlineCode",
-            "value": "--p-control-name"
+            "value": "--p-control-name",
+            "key": "leZOKpwZZO"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the control state in the metadata column."
+            "value": " represents the category of the samples related to the control state in the metadata column.",
+            "key": "IELt1J4t0P"
           }
-        ]
+        ],
+        "key": "zxKFYO5d2Z"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet differentialSubSystems \\\n\t--i-subsystems ../output_subsystems.qza \t\n\t--m-metadata-file ../metadata.tsv \t\n\t--m-metadata-column columnLabel\\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--o-differential-analysis ../subsystems_differential.qza"
+        "value": "qiime metnet differentialSubSystems \\\n\t--i-subsystems ../output_subsystems.qza \t\n\t--m-metadata-file ../metadata.tsv \t\n\t--m-metadata-column columnLabel\\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--o-differential-analysis ../subsystems_differential.qza",
+        "key": "UPbKPhxWJ2"
       },
       {
         "type": "heading",
@@ -726,63 +913,82 @@
         "children": [
           {
             "type": "text",
-            "value": "Generate the hierarchically-clustered heatmap"
+            "value": "Generate the hierarchically-clustered heatmap",
+            "key": "b4E1QhEiKY"
           }
-        ]
+        ],
+        "key": "RjSU02Lu5I",
+        "identifier": "generate-the-hierarchically-clustered-heatmap",
+        "label": "Generate the hierarchically-clustered heatmap",
+        "html_id": "generate-the-hierarchically-clustered-heatmap",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "SG1dMrKo8u"
           },
           {
             "type": "inlineCode",
-            "value": "plotClusteMap"
+            "value": "plotClusteMap",
+            "key": "S8jvgqNOrp"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "OWfIhEMdn6"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "pGUwbT8LEj"
           },
           {
             "type": "text",
-            "value": " qiime plugin.\nThe "
+            "value": " qiime plugin.\nThe ",
+            "key": "GKay7GAw7I"
           },
           {
             "type": "inlineCode",
-            "value": "--i-table"
+            "value": "--i-table",
+            "key": "GVnrG9xnhj"
           },
           {
             "type": "text",
-            "value": " can be the normalized scores table for reactions or subsystems.\nThe input "
+            "value": " can be the normalized scores table for reactions or subsystems.\nThe input ",
+            "key": "EU5pkodsqZ"
           },
           {
             "type": "inlineCode",
-            "value": "--m-sample-metadata-file"
+            "value": "--m-sample-metadata-file",
+            "key": "oEh4YdLfUH"
           },
           {
             "type": "text",
-            "value": " and the specification of the "
+            "value": " and the specification of the ",
+            "key": "dGws211jAs"
           },
           {
             "type": "inlineCode",
-            "value": "--m-sample-metadata-column"
+            "value": "--m-sample-metadata-column",
+            "key": "Vwgiun1yRh"
           },
           {
             "type": "text",
-            "value": " define the label groups.\nIt is possible to introduce parameters such as metrics, methods, color_scheme, title etc, not present below."
+            "value": " define the label groups.\nIt is possible to introduce parameters such as metrics, methods, color_scheme, title etc, not present below.",
+            "key": "mEpcyi9xBb"
           }
-        ]
+        ],
+        "key": "eoYtHPGzf9"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet plotClusteMap \n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../clustermap.qzv"
+        "value": "qiime metnet plotClusteMap \n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../clustermap.qzv",
+        "key": "CMUvRhyCPk"
       },
       {
         "type": "heading",
@@ -790,63 +996,82 @@
         "children": [
           {
             "type": "text",
-            "value": "Compute and visualize the Principal Component Analysis"
+            "value": "Compute and visualize the Principal Component Analysis",
+            "key": "C9emtPCIsY"
           }
-        ]
+        ],
+        "key": "HITGHKZ7Nv",
+        "identifier": "compute-and-visualize-the-principal-component-analysis",
+        "label": "Compute and visualize the Principal Component Analysis",
+        "html_id": "compute-and-visualize-the-principal-component-analysis",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "Bwz8DTQQTY"
           },
           {
             "type": "inlineCode",
-            "value": "plotPCA"
+            "value": "plotPCA",
+            "key": "Is5LjXtkyV"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "JwqT55p5TR"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "YWnb5K1jfL"
           },
           {
             "type": "text",
-            "value": " qiime plugin.\nThe "
+            "value": " qiime plugin.\nThe ",
+            "key": "pjrijBQtC9"
           },
           {
             "type": "inlineCode",
-            "value": "--i-table"
+            "value": "--i-table",
+            "key": "zuLwmDSIGU"
           },
           {
             "type": "text",
-            "value": " can be the normalized scores table for reactions or subsystems.\nThe input "
+            "value": " can be the normalized scores table for reactions or subsystems.\nThe input ",
+            "key": "bH0DXy2PX3"
           },
           {
             "type": "inlineCode",
-            "value": "--m-sample-metadata-file"
+            "value": "--m-sample-metadata-file",
+            "key": "xFZN6m32Mw"
           },
           {
             "type": "text",
-            "value": " and the specification of the "
+            "value": " and the specification of the ",
+            "key": "CwYWVk5lRT"
           },
           {
             "type": "inlineCode",
-            "value": "--m-sample-metadata-column"
+            "value": "--m-sample-metadata-column",
+            "key": "SeRLqYwUBt"
           },
           {
             "type": "text",
-            "value": " define the label groups.\nIt is possible to introduce parameters such as color_scheme, title and individual point label (boolean, default = False) not present below."
+            "value": " define the label groups.\nIt is possible to introduce parameters such as color_scheme, title and individual point label (boolean, default = False) not present below.",
+            "key": "pc6mQOcBkL"
           }
-        ]
+        ],
+        "key": "m1QG4KTMe4"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet plotPCA \\\n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../pca.qzv"
+        "value": "qiime metnet plotPCA \\\n\t--i-table ../output_reactions.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--o-visualization ../pca.qzv",
+        "key": "DhQd6km44L"
       },
       {
         "type": "heading",
@@ -854,95 +1079,122 @@
         "children": [
           {
             "type": "text",
-            "value": "Generate the boxplots"
+            "value": "Generate the boxplots",
+            "key": "EVOfFr2V9m"
           }
-        ]
+        ],
+        "key": "H03hLepA9u",
+        "identifier": "generate-the-boxplots",
+        "label": "Generate the boxplots",
+        "html_id": "generate-the-boxplots",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You then run the "
+            "value": "You then run the ",
+            "key": "gdcj9yXSv1"
           },
           {
             "type": "inlineCode",
-            "value": "plotBoxplot"
+            "value": "plotBoxplot",
+            "key": "c39XuITvTk"
           },
           {
             "type": "text",
-            "value": " script from the "
+            "value": " script from the ",
+            "key": "OIXLUu55fn"
           },
           {
             "type": "inlineCode",
-            "value": "metnet"
+            "value": "metnet",
+            "key": "ineGjfwoCC"
           },
           {
             "type": "text",
-            "value": " qiime plugin.\nThe "
+            "value": " qiime plugin.\nThe ",
+            "key": "OfciSWicQP"
           },
           {
             "type": "inlineCode",
-            "value": "--i-table"
+            "value": "--i-table",
+            "key": "cNVBSWKw7L"
           },
           {
             "type": "text",
-            "value": " can be the normalized scores table for reactions or subsystems.\nThe "
+            "value": " can be the normalized scores table for reactions or subsystems.\nThe ",
+            "key": "vODMq0LF5t"
           },
           {
             "type": "inlineCode",
-            "value": "--i-differentialresults"
+            "value": "--i-differentialresults",
+            "key": "ehZHbCWGAh"
           },
           {
             "type": "text",
-            "value": " represents the differential activity analysis corresponding to exchanges, reactions or subsystems.\nThe input "
+            "value": " represents the differential activity analysis corresponding to exchanges, reactions or subsystems.\nThe input ",
+            "key": "jZB7i1tgcE"
           },
           {
             "type": "inlineCode",
-            "value": "--m-sample-metadata-file"
+            "value": "--m-sample-metadata-file",
+            "key": "SeOD0ii2yz"
           },
           {
             "type": "text",
-            "value": " and the specification of the "
+            "value": " and the specification of the ",
+            "key": "UJ8aRhs1cN"
           },
           {
             "type": "inlineCode",
-            "value": "--m-sample-metadata-column"
+            "value": "--m-sample-metadata-column",
+            "key": "bganlJ22MA"
           },
           {
             "type": "text",
-            "value": " define the label groups.\nThe parameter "
+            "value": " define the label groups.\nThe parameter ",
+            "key": "Xw2HgsJ05D"
           },
           {
             "type": "inlineCode",
-            "value": "--p-condition-name"
+            "value": "--p-condition-name",
+            "key": "IZYEUV7TXK"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the condition state in the metadata column.\nThe parameter ",
+            "key": "IT9oRPddAD"
           },
           {
             "type": "inlineCode",
-            "value": "--p-control-name"
+            "value": "--p-control-name",
+            "key": "P8QuT4TCkL"
           },
           {
             "type": "text",
-            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter "
+            "value": " represents the category of the samples related to the control state in the metadata column.\nThe parameter ",
+            "key": "vhysvggfGj"
           },
           {
             "type": "inlineCode",
-            "value": "--p-namefeature"
+            "value": "--p-namefeature",
+            "key": "IVpUoFrWN9"
           },
           {
             "type": "text",
-            "value": " represents the name of the exchange, reaction or subsystem for which we generate the boxplot. The name must be extracted exactly from the differential activity table.\nIt is possible to define a title."
+            "value": " represents the name of the exchange, reaction or subsystem for which we generate the boxplot. The name must be extracted exactly from the differential activity table.\nIt is possible to define a title.",
+            "key": "Rt3n2VCxZo"
           }
-        ]
+        ],
+        "key": "MvOZTGRRv2"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet plotBoxplot \\\n\t--i-table ../output_reactions.qza \\\n\t--i-differentialresults ../exchanges_differential.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-namefeature 'nameExchange' \\\n\t--o-visualization ../boxplot.qzv"
+        "value": "qiime metnet plotBoxplot \\\n\t--i-table ../output_reactions.qza \\\n\t--i-differentialresults ../exchanges_differential.qza \\\n\t--m-sample-metadata-file ../metadata.tsv \\\n\t--m-sample-metadata-column columnLabel \\\n\t--p-condition-name conditionLabel \\\n\t--p-control-name controlLabel \\\n\t--p-namefeature 'nameExchange' \\\n\t--o-visualization ../boxplot.qzv",
+        "key": "zOrPdnoFOf"
       },
       {
         "type": "heading",
@@ -950,31 +1202,42 @@
         "children": [
           {
             "type": "text",
-            "value": "Test files and application"
+            "value": "Test files and application",
+            "key": "CF665W0C9c"
           }
-        ]
+        ],
+        "key": "sv9En77PMb",
+        "identifier": "test-files-and-application",
+        "label": "Test files and application",
+        "html_id": "test-files-and-application",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "The "
+            "value": "The ",
+            "key": "Pmr8ac779i"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "test"
+                "value": "test",
+                "key": "XZb92rwL9m"
               }
-            ]
+            ],
+            "key": "EBrSuerNHm"
           },
           {
             "type": "text",
-            "value": " folder contains all the input data sources to replicate the manuscript results. To run the following tutorial, we will need the following files:"
+            "value": " folder contains all the input data sources to replicate the manuscript results. To run the following tutorial, we will need the following files:",
+            "key": "qzAYpyrn8N"
           }
-        ]
+        ],
+        "key": "ChuVPcjHYW"
       },
       {
         "type": "list",
@@ -990,41 +1253,51 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "asv_table.qza:"
+                    "value": "asv_table.qza:",
+                    "key": "KJ9Z7PQUzv"
                   }
-                ]
+                ],
+                "key": "fO32Oal6x3"
               },
               {
                 "type": "text",
-                "value": " feature table with microbial abundances, where rows correspond to each sequence and columns to the different samples. The column "
+                "value": " feature table with microbial abundances, where rows correspond to each sequence and columns to the different samples. The column ",
+                "key": "Y5D2XXIacC"
               },
               {
                 "type": "strong",
                 "children": [
                   {
                     "type": "text",
-                    "value": "ID"
+                    "value": "ID",
+                    "key": "TAZGsqfSHf"
                   }
-                ]
+                ],
+                "key": "V5qsKoeJQF"
               },
               {
                 "type": "text",
-                "value": " stores the identificators of each sequence ("
+                "value": " stores the identificators of each sequence (",
+                "key": "AFu0Zr2mHk"
               },
               {
                 "type": "emphasis",
                 "children": [
                   {
                     "type": "text",
-                    "value": "e.g."
+                    "value": "e.g.",
+                    "key": "vRx3Tgwq7Q"
                   }
-                ]
+                ],
+                "key": "B7HwS9vsCY"
               },
               {
                 "type": "text",
-                "value": " ASV_1)."
+                "value": " ASV_1).",
+                "key": "oVcpNkyUxT"
               }
-            ]
+            ],
+            "key": "y2nlmKc7XS"
           },
           {
             "type": "listItem",
@@ -1035,28 +1308,35 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "taxa.qza:"
+                    "value": "taxa.qza:",
+                    "key": "GgSdhv1dne"
                   }
-                ]
+                ],
+                "key": "ftVzEQRWHZ"
               },
               {
                 "type": "text",
-                "value": " contains the taxonomic lineage of each sequence. The column "
+                "value": " contains the taxonomic lineage of each sequence. The column ",
+                "key": "hDBTkMeGXK"
               },
               {
                 "type": "strong",
                 "children": [
                   {
                     "type": "text",
-                    "value": "ID"
+                    "value": "ID",
+                    "key": "lM3DBUnEsr"
                   }
-                ]
+                ],
+                "key": "gOI5OCRN4V"
               },
               {
                 "type": "text",
-                "value": " stores the identificators of each sequence, which are written in the same order as in the feature table rows."
+                "value": " stores the identificators of each sequence, which are written in the same order as in the feature table rows.",
+                "key": "PYuoAPktAn"
               }
-            ]
+            ],
+            "key": "w6IV2Urn4J"
           },
           {
             "type": "listItem",
@@ -1067,24 +1347,30 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "meta.tsv:"
+                    "value": "meta.tsv:",
+                    "key": "ifFni76e7r"
                   }
-                ]
+                ],
+                "key": "GypF8vfTAq"
               },
               {
                 "type": "text",
-                "value": " file including sample phenotype data. The rows correspond to each sample and are written in the same order as the feature table columns."
+                "value": " file including sample phenotype data. The rows correspond to each sample and are written in the same order as the feature table columns.",
+                "key": "dGuhfrVBaT"
               }
-            ]
+            ],
+            "key": "oQiYQjsjug"
           }
-        ]
+        ],
+        "key": "CBkNnMYymZ"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "In order to use your own data, please refer to "
+            "value": "In order to use your own data, please refer to ",
+            "key": "SWe8oMYadR"
           },
           {
             "type": "link",
@@ -1092,82 +1378,101 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME2 documentation"
+                "value": "QIIME2 documentation",
+                "key": "UmKHu9zLzf"
               }
-            ]
+            ],
+            "key": "XC7tl7P46O"
           },
           {
             "type": "text",
-            "value": " to check allowed column headers. In any case, you can use the same columnn headers as in this tutorial files. Once QIIME2 and q2-metnet have been successfully installed, the first step is to generate the reactions and subsystem normalized activity scores of our data. This step may take a couple of minutes to be performed."
+            "value": " to check allowed column headers. In any case, you can use the same columnn headers as in this tutorial files. Once QIIME2 and q2-metnet have been successfully installed, the first step is to generate the reactions and subsystem normalized activity scores of our data. This step may take a couple of minutes to be performed.",
+            "key": "Z7qJLTwAYX"
           }
-        ]
+        ],
+        "key": "EGI8AK7IyI"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet generateFeatures \\\n\t--i-frequency ./test/asv_table.qza \\\n\t--i-taxa ./test/taxa.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ./rxns_scores.qza \\\n\t--o-subsystems ./subs_scores.qza \\\n\t--o-xmatrix ./Xmatrix.qza"
+        "value": "qiime metnet generateFeatures \\\n\t--i-frequency ./test/asv_table.qza \\\n\t--i-taxa ./test/taxa.qza \\\n\t--p-selection AGREDA \\\n\t--p-level s \\\n\t--o-reactions ./rxns_scores.qza \\\n\t--o-subsystems ./subs_scores.qza \\\n\t--o-xmatrix ./Xmatrix.qza",
+        "key": "UPOQvdEXz9"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "By the selection of parameters "
+            "value": "By the selection of parameters ",
+            "key": "Uj3Oul7vBU"
           },
           {
             "type": "inlineCode",
-            "value": "--p-selection"
+            "value": "--p-selection",
+            "key": "fbd58tLu0r"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "fQXPFlP6Sc"
           },
           {
             "type": "inlineCode",
-            "value": "--p-level"
+            "value": "--p-level",
+            "key": "QF8ndTY5Mn"
           },
           {
             "type": "text",
-            "value": " we decided to map our different taxonomies to the AGREDA database, until the species level. At this point, the normalized activity scores can be applied to perform a PCA and classify samples. As shown in the "
+            "value": " we decided to map our different taxonomies to the AGREDA database, until the species level. At this point, the normalized activity scores can be applied to perform a PCA and classify samples. As shown in the ",
+            "key": "c7T920oTP5"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "meta.tsv"
+                "value": "meta.tsv",
+                "key": "s3GuHxXnzz"
               }
-            ]
+            ],
+            "key": "B3xaxacjDs"
           },
           {
             "type": "text",
-            "value": " file, the different clinical conditions are stored in the "
+            "value": " file, the different clinical conditions are stored in the ",
+            "key": "ImTp7ituIR"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Condition"
+                "value": "Condition",
+                "key": "vADFoB0WK3"
               }
-            ]
+            ],
+            "key": "XQoPcCIZbu"
           },
           {
             "type": "text",
-            "value": " column. Then, we can generate a PCA of our samples and all the reactions scores by the following command. Below is displayed the correspondent figure. Remember that any "
+            "value": " column. Then, we can generate a PCA of our samples and all the reactions scores by the following command. Below is displayed the correspondent figure. Remember that any ",
+            "key": "pLpuJuQBLg"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "qzv"
+                "value": "qzv",
+                "key": "VVL5FcbV5v"
               }
-            ]
+            ],
+            "key": "FNUsPc53ss"
           },
           {
             "type": "text",
-            "value": " file can be displayed at "
+            "value": " file can be displayed at ",
+            "key": "FmS5NGf1wy"
           },
           {
             "type": "link",
@@ -1175,237 +1480,288 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME2 View"
+                "value": "QIIME2 View",
+                "key": "S7pKVJ62yn"
               }
-            ]
+            ],
+            "key": "Li8Si56Ir7"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "ln77w18uws"
           }
-        ]
+        ],
+        "key": "iWSNj0OSY7"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet plotPCA \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_pca.qzv"
+        "value": "qiime metnet plotPCA \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_pca.qzv",
+        "key": "RWXBMTSJaG"
       },
       {
-        "type": "html",
-        "value": "<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/pca.png\">"
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/pca.png"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Additionally, a hierarchically-clustered heatmap can be generated by running the "
+            "value": "Additionally, a hierarchically-clustered heatmap can be generated by running the ",
+            "key": "W6IrHFunea"
           },
           {
             "type": "inlineCode",
-            "value": "plotClusteMap"
+            "value": "plotClusteMap",
+            "key": "UbK4cllA3R"
           },
           {
             "type": "text",
-            "value": "function. In the following example, we are going to generate the heatmap of the reaction scores across samples. Following, the generated figure is shown."
+            "value": "function. In the following example, we are going to generate the heatmap of the reaction scores across samples. Following, the generated figure is shown.",
+            "key": "MU1eCnQBAw"
           }
-        ]
+        ],
+        "key": "vveyBSp9h8"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet plotClusteMap \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_hclust.qzv"
+        "value": "qiime metnet plotClusteMap \\\n\t--i-table ./rxns_scores.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--o-visualization ./rxns_hclust.qzv",
+        "key": "xNQuMkjTBt"
       },
       {
-        "type": "html",
-        "value": "<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/clustermap.png\">"
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/clustermap.png"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "We are able to show that the normalized activity scores for some of these reactions are altered through the different clinical conditions of our dataset. We are now going to investigate deeper these differences. The different clinical conditions of our data are "
+            "value": "We are able to show that the normalized activity scores for some of these reactions are altered through the different clinical conditions of our dataset. We are now going to investigate deeper these differences. The different clinical conditions of our data are ",
+            "key": "e7NCasWKaN"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Allergic"
+                "value": "Allergic",
+                "key": "SmUu7lo2Kz"
               }
-            ]
+            ],
+            "key": "wpS9TVlcpN"
           },
           {
             "type": "text",
-            "value": ", "
+            "value": ", ",
+            "key": "IcZLia7WzF"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Celiac"
+                "value": "Celiac",
+                "key": "UfmGmZMNBA"
               }
-            ]
+            ],
+            "key": "UlShTajHX1"
           },
           {
             "type": "text",
-            "value": ", "
+            "value": ", ",
+            "key": "bGcGRvHKZa"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Lean"
+                "value": "Lean",
+                "key": "mg6zTeUdd1"
               }
-            ]
+            ],
+            "key": "tFWGZgQzDF"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "AcvAU6bCI7"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Obese"
+                "value": "Obese",
+                "key": "w0WaARw0es"
               }
-            ]
+            ],
+            "key": "cnWdAbm5li"
           },
           {
             "type": "text",
-            "value": ", where "
+            "value": ", where ",
+            "key": "O3abLg7nXe"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Lean"
+                "value": "Lean",
+                "key": "FFSAJhyc0B"
               }
-            ]
+            ],
+            "key": "KLXERv3ZUq"
           },
           {
             "type": "text",
-            "value": " can be considered as the control state. In this example, we are now going to check the differentially expressed reactions and subsystems between "
+            "value": " can be considered as the control state. In this example, we are now going to check the differentially expressed reactions and subsystems between ",
+            "key": "Xgj0FoqW67"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Celiac"
+                "value": "Celiac",
+                "key": "Qsqxm8IEJi"
               }
-            ]
+            ],
+            "key": "ywJ3Kd5vcW"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "eIMz8tkiJY"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Lean"
+                "value": "Lean",
+                "key": "kaTfbmjFsk"
               }
-            ]
+            ],
+            "key": "mzCs51iaH2"
           },
           {
             "type": "text",
-            "value": " samples."
+            "value": " samples.",
+            "key": "BmC0H22KNl"
           }
-        ]
+        ],
+        "key": "afhfJL77s2"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet differentialReactions \\\n\t--i-reactions ./rxns_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ./diff_reactions.qza"
+        "value": "qiime metnet differentialReactions \\\n\t--i-reactions ./rxns_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-selection-model AGREDA \\\n\t--o-differential-analysis ./diff_reactions.qza",
+        "key": "YRQOExmGVb"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet differentialSubSystems \\\n\t--i-subsystems ./subs_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--o-differential-analysis ./diff_subs.qza"
+        "value": "qiime metnet differentialSubSystems \\\n\t--i-subsystems ./subs_scores.qza \\\n\t--m-metadata-file ./test/meta.tsv \\\n\t--m-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--o-differential-analysis ./diff_subs.qza",
+        "key": "a6xXTbGUDL"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet differentialExchanges \\\n\t--i-reactions ./rxns_scores.qza \\\n \t--m-metadata-file ./test/meta.tsv \\\n  \t--m-metadata-column Condition \\\n   \t--p-condition-name Celiac \\\n    \t--p-control-name Lean \\\n       \t--o-differential-analysis ./diff_ex.qza"
+        "value": "qiime metnet differentialExchanges \\\n\t--i-reactions ./rxns_scores.qza \\\n \t--m-metadata-file ./test/meta.tsv \\\n  \t--m-metadata-column Condition \\\n   \t--p-condition-name Celiac \\\n    \t--p-control-name Lean \\\n       \t--o-differential-analysis ./diff_ex.qza",
+        "key": "rFhegu0yH6"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Finally, the differential activity score of a given feature (reaction or subsystem) can be displayed by means of the "
+            "value": "Finally, the differential activity score of a given feature (reaction or subsystem) can be displayed by means of the ",
+            "key": "Zk3z4xBdPv"
           },
           {
             "type": "inlineCode",
-            "value": "plotBoxplot"
+            "value": "plotBoxplot",
+            "key": "KGs4fetsGS"
           },
           {
             "type": "text",
-            "value": "function. In the following example, we are going to generate the boxplot of the "
+            "value": "function. In the following example, we are going to generate the boxplot of the ",
+            "key": "SVojsx7GUZ"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Bile acid metabolism"
+                "value": "Bile acid metabolism",
+                "key": "YKoUNViYfb"
               }
-            ]
+            ],
+            "key": "u9TzPj05W7"
           },
           {
             "type": "text",
-            "value": " subsytem across samples of the "
+            "value": " subsytem across samples of the ",
+            "key": "CiS6yl8ogg"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Celiac"
+                "value": "Celiac",
+                "key": "LMW6y6IW3J"
               }
-            ]
+            ],
+            "key": "TrZcXmRKcW"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "pn3vZJBVyy"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "Lean"
+                "value": "Lean",
+                "key": "ISX7oknXOg"
               }
-            ]
+            ],
+            "key": "kPtTKHQLpG"
           },
           {
             "type": "text",
-            "value": " condition."
+            "value": " condition.",
+            "key": "tbbHbTUaot"
           }
-        ]
+        ],
+        "key": "ftptniQIGF"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metnet plotBoxplot \\\n\t--i-table ./subs_scores.qza \\\n\t--i-differentialresults ./diff_subs.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-namefeature \"S144 | Bile acid metabolism\" \\\n\t--o-visualization ./sub_boxplot.qzv"
+        "value": "qiime metnet plotBoxplot \\\n\t--i-table ./subs_scores.qza \\\n\t--i-differentialresults ./diff_subs.qza \\\n\t--m-sample-metadata-file ./test/meta.tsv \\\n\t--m-sample-metadata-column Condition \\\n\t--p-condition-name Celiac \\\n\t--p-control-name Lean \\\n\t--p-namefeature \"S144 | Bile acid metabolism\" \\\n\t--o-visualization ./sub_boxplot.qzv",
+        "key": "D56rQt5kAB"
       },
       {
-        "type": "html",
-        "value": "<img src=\"https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/boxplot.PNG\">"
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/PlanesLab/q2-metnet/refs/heads/main/Figure/boxplot.PNG"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Remember that you can run the following command and visualize the output file "
+            "value": "Remember that you can run the following command and visualize the output file ",
+            "key": "cPu9KvUxJ5"
           },
           {
             "type": "link",
@@ -1413,22 +1769,28 @@
             "children": [
               {
                 "type": "text",
-                "value": "here"
+                "value": "here",
+                "key": "PZjpP8E6Y6"
               }
-            ]
+            ],
+            "key": "oHbNtRVbqw"
           },
           {
             "type": "text",
-            "value": " to select the different values for ‘--p-name-feature’."
+            "value": " to select the different values for ‘--p-name-feature’.",
+            "key": "cv1WNI3KQH"
           }
-        ]
+        ],
+        "key": "EHqDFB1zLI"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime metadata tabulate \\\n    --m-input-file ./diff_subs.qza \\\n    --o-visualization ./diff_subs.qzv"
+        "value": "qiime metadata tabulate \\\n    --m-input-file ./diff_subs.qza \\\n    --o-visualization ./diff_subs.qzv",
+        "key": "UH5gE9t4NQ"
       }
-    ]
+    ],
+    "key": "EcwKsy8Sq7"
   },
   "releases": [],
   "owner": "PlanesLab",

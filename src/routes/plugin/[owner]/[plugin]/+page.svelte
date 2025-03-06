@@ -8,6 +8,6 @@
 
 </script>
 
-<article class="prose prose-sm sm:prose-base lg:prose-lg max-w-[calc(100vw_-_2rem)]">
+<article class="prose prose-sm sm:prose-base lg:prose-lg max-w-3xl">
     <MyStMinimal ast={data.ast}></MyStMinimal>
 </article>

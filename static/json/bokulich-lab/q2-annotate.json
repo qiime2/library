@@ -3,26 +3,18 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-annotate"
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
             "type": "image",
             "url": "https://github.com/bokulich-lab/q2-annotate/actions/workflows/ci.yaml/badge.svg",
-            "alt": "CI"
+            "alt": "CI",
+            "key": "EBzut4v335"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "cAQkSUVReC"
           },
           {
             "type": "link",
@@ -31,20 +23,25 @@
               {
                 "type": "image",
                 "url": "https://codecov.io/gh/bokulich-lab/q2-annotate/graph/badge.svg?token=PSCAYJUP01",
-                "alt": "codecov"
+                "alt": "codecov",
+                "key": "o8MPgWKkyj"
               }
-            ]
+            ],
+            "key": "P4a2PbTWWe"
           }
-        ]
+        ],
+        "key": "QXVVuYjh9O"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes."
+            "value": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+            "key": "VheylXRtxX"
           }
-        ]
+        ],
+        "key": "YKqQmklyms"
       },
       {
         "type": "heading",
@@ -52,9 +49,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation"
+            "value": "Installation",
+            "key": "PQVsGqe7sM"
           }
-        ]
+        ],
+        "key": "Ek4Du04Ppy",
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
       },
       {
         "type": "paragraph",
@@ -64,13 +67,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "q2-annotate"
+                "value": "q2-annotate",
+                "key": "cZiDmccdJn"
               }
-            ]
+            ],
+            "key": "XwVer70Mkr"
           },
           {
             "type": "text",
-            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official "
+            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official ",
+            "key": "uneUKF2hCH"
           },
           {
             "type": "link",
@@ -78,15 +84,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 documentation"
+                "value": "QIIME 2 documentation",
+                "key": "cbK3rZCIKj"
               }
-            ]
+            ],
+            "key": "t7lfiOvqbA"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "zLfuaaPVhe"
           }
-        ]
+        ],
+        "key": "umNwmXVeh3"
       },
       {
         "type": "heading",
@@ -94,18 +104,26 @@
         "children": [
           {
             "type": "text",
-            "value": "Functionality"
+            "value": "Functionality",
+            "key": "xmSRhb7RwE"
           }
-        ]
+        ],
+        "key": "XlWQxOgP8u",
+        "identifier": "functionality",
+        "label": "Functionality",
+        "html_id": "functionality",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This QIIME 2 plugin contains actions used to annotate and classify (meta)genomes:"
+            "value": "This QIIME 2 plugin contains actions used to annotate and classify (meta)genomes:",
+            "key": "qlYxiRQwq0"
           }
-        ]
+        ],
+        "key": "ZyGOCT80NG"
       },
       {
         "type": "table",
@@ -119,9 +137,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Action"
+                    "value": "Action",
+                    "key": "wHKI6QtVj7"
                   }
-                ]
+                ],
+                "key": "DpheEGM9cf"
               },
               {
                 "type": "tableCell",
@@ -129,9 +149,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Description"
+                    "value": "Description",
+                    "key": "vJgoNSNaq8"
                   }
-                ]
+                ],
+                "key": "pSR8xZKPRs"
               },
               {
                 "type": "tableCell",
@@ -139,11 +161,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Underlying tool"
+                    "value": "Underlying tool",
+                    "key": "nQfpwpNu5p"
                   }
-                ]
+                ],
+                "key": "OTJFsgAJkT"
               }
-            ]
+            ],
+            "key": "MiF49vOoVZ"
           },
           {
             "type": "tableRow",
@@ -153,18 +178,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "bin-contigs-metabat"
+                    "value": "bin-contigs-metabat",
+                    "key": "uQiZMv2YhC"
                   }
-                ]
+                ],
+                "key": "xIsCmyjl36"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Bin contigs into MAGs using MetaBat 2."
+                    "value": "Bin contigs into MAGs using MetaBat 2.",
+                    "key": "Ckcjp2tGs4"
                   }
-                ]
+                ],
+                "key": "RxNZhma65c"
               },
               {
                 "type": "tableCell",
@@ -175,13 +204,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "MetaBat 2"
+                        "value": "MetaBat 2",
+                        "key": "dizRqsrWT5"
                       }
-                    ]
+                    ],
+                    "key": "ANpEW4J7WO"
                   }
-                ]
+                ],
+                "key": "Jit7U7E7Wo"
               }
-            ]
+            ],
+            "key": "Ne54IYO7fQ"
           },
           {
             "type": "tableRow",
@@ -191,18 +224,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "build-custom-diamond-db"
+                    "value": "build-custom-diamond-db",
+                    "key": "v1qw4l5YVK"
                   }
-                ]
+                ],
+                "key": "vjxxPHtgxS"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Create a DIAMOND reference database from a FASTA input file."
+                    "value": "Create a DIAMOND reference database from a FASTA input file.",
+                    "key": "KzTi24Y6XN"
                   }
-                ]
+                ],
+                "key": "qDdRZH9ldk"
               },
               {
                 "type": "tableCell",
@@ -213,13 +250,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Diamond"
+                        "value": "Diamond",
+                        "key": "aAgbaZGnVh"
                       }
-                    ]
+                    ],
+                    "key": "TIaCHBhQT2"
                   }
-                ]
+                ],
+                "key": "tkBXyD6Co2"
               }
-            ]
+            ],
+            "key": "ELWB4BqHKe"
           },
           {
             "type": "tableRow",
@@ -229,18 +270,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "build-eggnog-diamond-db"
+                    "value": "build-eggnog-diamond-db",
+                    "key": "DtpmQDDYxN"
                   }
-                ]
+                ],
+                "key": "vBL4r2vXXQ"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Create a DIAMOND reference database for the specified taxon."
+                    "value": "Create a DIAMOND reference database for the specified taxon.",
+                    "key": "nticUObsZ4"
                   }
-                ]
+                ],
+                "key": "A9BMXEG66r"
               },
               {
                 "type": "tableCell",
@@ -251,13 +296,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Diamond"
+                        "value": "Diamond",
+                        "key": "awcdSff8M3"
                       }
-                    ]
+                    ],
+                    "key": "q1iKtJtqIi"
                   }
-                ]
+                ],
+                "key": "eBw25IPoKd"
               }
-            ]
+            ],
+            "key": "VGaTIa7bEQ"
           },
           {
             "type": "tableRow",
@@ -267,18 +316,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "build-kraken-db"
+                    "value": "build-kraken-db",
+                    "key": "Zkzv5DMKlE"
                   }
-                ]
+                ],
+                "key": "Np7oRiZ83g"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch an existing or build a custom Kraken 2 database."
+                    "value": "Fetch an existing or build a custom Kraken 2 database.",
+                    "key": "RPah2O3RB2"
                   }
-                ]
+                ],
+                "key": "XMEZSwZCN4"
               },
               {
                 "type": "tableCell",
@@ -289,13 +342,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Kraken 2"
+                        "value": "Kraken 2",
+                        "key": "QwQlkqK7OI"
                       }
-                    ]
+                    ],
+                    "key": "soxNgY8LLK"
                   }
-                ]
+                ],
+                "key": "sKQaTDqg8G"
               }
-            ]
+            ],
+            "key": "BW5bhVqs7I"
           },
           {
             "type": "tableRow",
@@ -305,18 +362,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "classify-kaiju"
+                    "value": "classify-kaiju",
+                    "key": "jSAbGNlV1t"
                   }
-                ]
+                ],
+                "key": "DnGJzggBnf"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Classify reads using Kaiju."
+                    "value": "Classify reads using Kaiju.",
+                    "key": "Ad9XaAnNAK"
                   }
-                ]
+                ],
+                "key": "WQ0cDd6OXj"
               },
               {
                 "type": "tableCell",
@@ -327,13 +388,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Kaiju"
+                        "value": "Kaiju",
+                        "key": "K4ttcKxPaI"
                       }
-                    ]
+                    ],
+                    "key": "JliMDHyWwF"
                   }
-                ]
+                ],
+                "key": "qH3sFi8Zpo"
               }
-            ]
+            ],
+            "key": "MrGOxoKbYP"
           },
           {
             "type": "tableRow",
@@ -343,18 +408,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "classify-kraken2"
+                    "value": "classify-kraken2",
+                    "key": "yg68EgV9Nz"
                   }
-                ]
+                ],
+                "key": "zgTSVzrOuE"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Classify reads/MAGs using Kraken 2."
+                    "value": "Classify reads/MAGs using Kraken 2.",
+                    "key": "TssNSvEMn2"
                   }
-                ]
+                ],
+                "key": "B6mSiexGVm"
               },
               {
                 "type": "tableCell",
@@ -365,13 +434,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Kraken 2"
+                        "value": "Kraken 2",
+                        "key": "sZ5IsCVws9"
                       }
-                    ]
+                    ],
+                    "key": "hkp9SeIXQY"
                   }
-                ]
+                ],
+                "key": "KjigRQSSpw"
               }
-            ]
+            ],
+            "key": "CZyyxlZKta"
           },
           {
             "type": "tableRow",
@@ -381,29 +454,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "dereplicate-mags"
+                    "value": "dereplicate-mags",
+                    "key": "p4m8F2Qjzc"
                   }
-                ]
+                ],
+                "key": "KhFu4yZoGZ"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Dereplicate MAGs from multiple samples."
+                    "value": "Dereplicate MAGs from multiple samples.",
+                    "key": "fgCipU6Xip"
                   }
-                ]
+                ],
+                "key": "qSTPDibSXh"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "w2jYRXVr0I"
                   }
-                ]
+                ],
+                "key": "FViIzVw3EB"
               }
-            ]
+            ],
+            "key": "kczMQUdkgk"
           },
           {
             "type": "tableRow",
@@ -413,18 +493,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "map-eggnog"
+                    "value": "map-eggnog",
+                    "key": "FsQrctOKgI"
                   }
-                ]
+                ],
+                "key": "yBsvIy65yP"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Annotate orthologs against eggNOG database."
+                    "value": "Annotate orthologs against eggNOG database.",
+                    "key": "vRWQ9lX2OK"
                   }
-                ]
+                ],
+                "key": "TV9DxC3JAj"
               },
               {
                 "type": "tableCell",
@@ -435,13 +519,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "sKoyKwmvtz"
                       }
-                    ]
+                    ],
+                    "key": "Ap9wsrHRSj"
                   }
-                ]
+                ],
+                "key": "TXkfFDtMkt"
               }
-            ]
+            ],
+            "key": "m7PsmpvGMr"
           },
           {
             "type": "tableRow",
@@ -451,18 +539,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "search-orthologs-diamond"
+                    "value": "search-orthologs-diamond",
+                    "key": "rvkTGpmIsh"
                   }
-                ]
+                ],
+                "key": "AIoDHsBtnw"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Run eggNOG search using Diamond aligner."
+                    "value": "Run eggNOG search using Diamond aligner.",
+                    "key": "lraFnG9JEL"
                   }
-                ]
+                ],
+                "key": "GRYenLoYrv"
               },
               {
                 "type": "tableCell",
@@ -473,13 +565,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "efoA5lSovR"
                       }
-                    ]
+                    ],
+                    "key": "KUAu1BWBvg"
                   }
-                ]
+                ],
+                "key": "V3m2m5d8Iq"
               }
-            ]
+            ],
+            "key": "bgIE7dvWY5"
           },
           {
             "type": "tableRow",
@@ -489,18 +585,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "search-orthologs-hmmer"
+                    "value": "search-orthologs-hmmer",
+                    "key": "iyUCklolbr"
                   }
-                ]
+                ],
+                "key": "OMZfbs23f1"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Run eggNOG search using HMMER aligner."
+                    "value": "Run eggNOG search using HMMER aligner.",
+                    "key": "p9KrhTd81X"
                   }
-                ]
+                ],
+                "key": "tP6shtkCcg"
               },
               {
                 "type": "tableCell",
@@ -511,13 +611,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "nIhN4eEtHo"
                       }
-                    ]
+                    ],
+                    "key": "SpA1pHkphn"
                   }
-                ]
+                ],
+                "key": "tskip38KyT"
               }
-            ]
+            ],
+            "key": "gn0TSjeeyJ"
           },
           {
             "type": "tableRow",
@@ -527,18 +631,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "estimate-bracken"
+                    "value": "estimate-bracken",
+                    "key": "asWgN4tAZm"
                   }
-                ]
+                ],
+                "key": "gAL0cCk6Wu"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Perform read abundance re-estimation using Bracken."
+                    "value": "Perform read abundance re-estimation using Bracken.",
+                    "key": "CGOjUVKhrw"
                   }
-                ]
+                ],
+                "key": "SJ6tt8B7kF"
               },
               {
                 "type": "tableCell",
@@ -549,13 +657,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Kraken 2"
+                        "value": "Kraken 2",
+                        "key": "aQTjNHSoJB"
                       }
-                    ]
+                    ],
+                    "key": "v6vtL3ubxa"
                   }
-                ]
+                ],
+                "key": "GGLac9alyb"
               }
-            ]
+            ],
+            "key": "aMRtAH0bkl"
           },
           {
             "type": "tableRow",
@@ -565,29 +677,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "estimate-mag-abundance"
+                    "value": "estimate-mag-abundance",
+                    "key": "ZjnhzCOWYP"
                   }
-                ]
+                ],
+                "key": "qlrnxte4RG"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Estimate MAG abundance."
+                    "value": "Estimate MAG abundance.",
+                    "key": "pfajvsfobD"
                   }
-                ]
+                ],
+                "key": "imEdhkREHj"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "Hp1p0Au33f"
                   }
-                ]
+                ],
+                "key": "nLFEsdCwn7"
               }
-            ]
+            ],
+            "key": "qzAIOCoZwp"
           },
           {
             "type": "tableRow",
@@ -597,18 +716,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "evaluate-busco"
+                    "value": "evaluate-busco",
+                    "key": "hhvE8w4WeL"
                   }
-                ]
+                ],
+                "key": "D0SUoUe3QZ"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Evaluate quality of the generated MAGs using BUSCO."
+                    "value": "Evaluate quality of the generated MAGs using BUSCO.",
+                    "key": "rPaPmcJ2HF"
                   }
-                ]
+                ],
+                "key": "u2RRsWkuyN"
               },
               {
                 "type": "tableCell",
@@ -619,13 +742,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "BUSCO"
+                        "value": "BUSCO",
+                        "key": "KL3nafOGrX"
                       }
-                    ]
+                    ],
+                    "key": "PzACNjF7w6"
                   }
-                ]
+                ],
+                "key": "hGv2DaTDKj"
               }
-            ]
+            ],
+            "key": "CAxCCpua5k"
           },
           {
             "type": "tableRow",
@@ -635,29 +762,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "extract-annotations"
+                    "value": "extract-annotations",
+                    "key": "t7ndCdswOY"
                   }
-                ]
+                ],
+                "key": "DJZ7zrWp77"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Extract annotation frequencies from all annotations."
+                    "value": "Extract annotation frequencies from all annotations.",
+                    "key": "YoRAkUS6Dz"
                   }
-                ]
+                ],
+                "key": "vPnUF185Ss"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "IEUYu8EeBK"
                   }
-                ]
+                ],
+                "key": "MAHFI7VAM9"
               }
-            ]
+            ],
+            "key": "xmTXwSb78V"
           },
           {
             "type": "tableRow",
@@ -667,18 +801,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-busco-db"
+                    "value": "fetch-busco-db",
+                    "key": "IVmZp5cWRa"
                   }
-                ]
+                ],
+                "key": "OFCN98DgId"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Download BUSCO database."
+                    "value": "Download BUSCO database.",
+                    "key": "KP4LYhspLw"
                   }
-                ]
+                ],
+                "key": "FYKMSAXvDO"
               },
               {
                 "type": "tableCell",
@@ -689,13 +827,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "BUSCO"
+                        "value": "BUSCO",
+                        "key": "zWRMhYZEvO"
                       }
-                    ]
+                    ],
+                    "key": "bgEysiupz2"
                   }
-                ]
+                ],
+                "key": "OOzv9NAfcw"
               }
-            ]
+            ],
+            "key": "LrFmGw1P7T"
           },
           {
             "type": "tableRow",
@@ -705,18 +847,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-diamond-db"
+                    "value": "fetch-diamond-db",
+                    "key": "N9mpuhC2A1"
                   }
-                ]
+                ],
+                "key": "mJobEW6pvk"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch the complete Diamond database necessary to run the eggnog-diamond-search action."
+                    "value": "Fetch the complete Diamond database necessary to run the eggnog-diamond-search action.",
+                    "key": "xvTYDO5WKJ"
                   }
-                ]
+                ],
+                "key": "QyMCkJmy6C"
               },
               {
                 "type": "tableCell",
@@ -727,13 +873,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "UZwAD82L00"
                       }
-                    ]
+                    ],
+                    "key": "w2KRdie83b"
                   }
-                ]
+                ],
+                "key": "d5RXh2HpYd"
               }
-            ]
+            ],
+            "key": "cowR0syAj8"
           },
           {
             "type": "tableRow",
@@ -743,18 +893,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-eggnog-db"
+                    "value": "fetch-eggnog-db",
+                    "key": "hBKhyMwTFH"
                   }
-                ]
+                ],
+                "key": "vCaGMqZaxB"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch the databases necessary to run the eggnog-annotate action."
+                    "value": "Fetch the databases necessary to run the eggnog-annotate action.",
+                    "key": "pG7HqCg7NQ"
                   }
-                ]
+                ],
+                "key": "pAiA4xiO31"
               },
               {
                 "type": "tableCell",
@@ -765,13 +919,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "EgAu8xTMJf"
                       }
-                    ]
+                    ],
+                    "key": "QnuvFK2kpk"
                   }
-                ]
+                ],
+                "key": "x8PPlzpiI8"
               }
-            ]
+            ],
+            "key": "bg9MT83kIJ"
           },
           {
             "type": "tableRow",
@@ -781,18 +939,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-eggnog-hmmer-db"
+                    "value": "fetch-eggnog-hmmer-db",
+                    "key": "ZfDM7YP6J0"
                   }
-                ]
+                ],
+                "key": "TYWAi8Q1VS"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch the taxon specific database necessary to run the eggnog-hmmer-search action."
+                    "value": "Fetch the taxon specific database necessary to run the eggnog-hmmer-search action.",
+                    "key": "SQS9Ihq5RP"
                   }
-                ]
+                ],
+                "key": "kL6rnJhLgj"
               },
               {
                 "type": "tableCell",
@@ -803,13 +965,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "ogx5xyrF9B"
                       }
-                    ]
+                    ],
+                    "key": "KKY6gI5OpR"
                   }
-                ]
+                ],
+                "key": "ENYQAdHTJR"
               }
-            ]
+            ],
+            "key": "T9r4KpddHH"
           },
           {
             "type": "tableRow",
@@ -819,18 +985,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-eggnog-proteins"
+                    "value": "fetch-eggnog-proteins",
+                    "key": "OmXEKIlFet"
                   }
-                ]
+                ],
+                "key": "LmfGZL61hJ"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch the databases necessary to run the build-eggnog-diamond-db action."
+                    "value": "Fetch the databases necessary to run the build-eggnog-diamond-db action.",
+                    "key": "nztQWOBno5"
                   }
-                ]
+                ],
+                "key": "ZrGSrDX8lu"
               },
               {
                 "type": "tableCell",
@@ -841,13 +1011,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "hCjATUt14o"
                       }
-                    ]
+                    ],
+                    "key": "D9khXrFbEc"
                   }
-                ]
+                ],
+                "key": "YXtKw1xeyh"
               }
-            ]
+            ],
+            "key": "C11A8bYsAQ"
           },
           {
             "type": "tableRow",
@@ -857,18 +1031,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-kaiju-db"
+                    "value": "fetch-kaiju-db",
+                    "key": "JA5RTmS4D5"
                   }
-                ]
+                ],
+                "key": "yiOq5jO4QM"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch Kaiju database."
+                    "value": "Fetch Kaiju database.",
+                    "key": "KN26Zxr47I"
                   }
-                ]
+                ],
+                "key": "YDMqdrpNM1"
               },
               {
                 "type": "tableCell",
@@ -879,13 +1057,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Kaiju"
+                        "value": "Kaiju",
+                        "key": "MawktNfr7g"
                       }
-                    ]
+                    ],
+                    "key": "Yk4VnIsEVn"
                   }
-                ]
+                ],
+                "key": "hFK04HinfR"
               }
-            ]
+            ],
+            "key": "fqHnxWfDOt"
           },
           {
             "type": "tableRow",
@@ -895,18 +1077,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-ncbi-taxonomy"
+                    "value": "fetch-ncbi-taxonomy",
+                    "key": "YZVv0ryHZK"
                   }
-                ]
+                ],
+                "key": "oRFJmZ5Ig1"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch NCBI reference taxonomy."
+                    "value": "Fetch NCBI reference taxonomy.",
+                    "key": "wqjpMEJEld"
                   }
-                ]
+                ],
+                "key": "ScaZFcwwuH"
               },
               {
                 "type": "tableCell",
@@ -917,13 +1103,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "EggNOG mapper"
+                        "value": "EggNOG mapper",
+                        "key": "gp0wGgMenD"
                       }
-                    ]
+                    ],
+                    "key": "OsE6NFjFSN"
                   }
-                ]
+                ],
+                "key": "gVVCvkyoQk"
               }
-            ]
+            ],
+            "key": "FfP2GEq6Vz"
           },
           {
             "type": "tableRow",
@@ -933,29 +1123,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "filter-derep-mags"
+                    "value": "filter-derep-mags",
+                    "key": "s0Wyql9tbG"
                   }
-                ]
+                ],
+                "key": "QFT5BXC0VP"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Filter dereplicated MAGs."
+                    "value": "Filter dereplicated MAGs.",
+                    "key": "We4MZ02TZh"
                   }
-                ]
+                ],
+                "key": "B7xKb7LTLm"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "Vv3F7wzdyu"
                   }
-                ]
+                ],
+                "key": "RVYncV4U2z"
               }
-            ]
+            ],
+            "key": "lwkpIzqca9"
           },
           {
             "type": "tableRow",
@@ -965,29 +1162,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "filter-mags"
+                    "value": "filter-mags",
+                    "key": "UuKCrzaPW6"
                   }
-                ]
+                ],
+                "key": "wMoiwIy2aC"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Filter MAGs."
+                    "value": "Filter MAGs.",
+                    "key": "rWJtSqlpO3"
                   }
-                ]
+                ],
+                "key": "J05YCgNdIY"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "EIxIjUVOzH"
                   }
-                ]
+                ],
+                "key": "eypy2ioNks"
               }
-            ]
+            ],
+            "key": "PvTWXZx7rj"
           },
           {
             "type": "tableRow",
@@ -997,18 +1201,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "filter-reads-pangenome"
+                    "value": "filter-reads-pangenome",
+                    "key": "WNVZeLE1eN"
                   }
-                ]
+                ],
+                "key": "BRIHyoqvH8"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Remove contaminating human reads."
+                    "value": "Remove contaminating human reads.",
+                    "key": "dU376VUXaN"
                   }
-                ]
+                ],
+                "key": "jAMdScyWKc"
               },
               {
                 "type": "tableCell",
@@ -1019,13 +1227,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2"
+                        "value": "Bowtie 2",
+                        "key": "Yltbudnkw7"
                       }
-                    ]
+                    ],
+                    "key": "EI6137nDuU"
                   }
-                ]
+                ],
+                "key": "SJkJ18hoq8"
               }
-            ]
+            ],
+            "key": "MWpVE2PjyZ"
           },
           {
             "type": "tableRow",
@@ -1035,29 +1247,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "get-feature-lengths"
+                    "value": "get-feature-lengths",
+                    "key": "zNCJnB1XCb"
                   }
-                ]
+                ],
+                "key": "XreF8eHmeQ"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Get feature lengths."
+                    "value": "Get feature lengths.",
+                    "key": "vbmdofR5im"
                   }
-                ]
+                ],
+                "key": "X5wBRZshry"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "Ep8k8UpJem"
                   }
-                ]
+                ],
+                "key": "jqVlcHAnfB"
               }
-            ]
+            ],
+            "key": "lCDBjvHaZg"
           },
           {
             "type": "tableRow",
@@ -1067,29 +1286,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "inspect-kraken2-db"
+                    "value": "inspect-kraken2-db",
+                    "key": "t7lXg8iRxn"
                   }
-                ]
+                ],
+                "key": "mX2FU291yO"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Inspect a Kraken 2 database."
+                    "value": "Inspect a Kraken 2 database.",
+                    "key": "rWNGPcvaI4"
                   }
-                ]
+                ],
+                "key": "Yk5NoKu2VG"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "hoVqKDaqUY"
                   }
-                ]
+                ],
+                "key": "ZXHwCkXT8l"
               }
-            ]
+            ],
+            "key": "imMb8eTlPQ"
           },
           {
             "type": "tableRow",
@@ -1099,29 +1325,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "kraken2-to-features"
+                    "value": "kraken2-to-features",
+                    "key": "hq6kauhzYM"
                   }
-                ]
+                ],
+                "key": "yHDSP5Lfse"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Select downstream features from Kraken 2."
+                    "value": "Select downstream features from Kraken 2.",
+                    "key": "Iqj6f8sA7u"
                   }
-                ]
+                ],
+                "key": "DCYxEeND8c"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "cg5GIBv8WU"
                   }
-                ]
+                ],
+                "key": "BzzPIbYJ9P"
               }
-            ]
+            ],
+            "key": "YJEJqyIVtp"
           },
           {
             "type": "tableRow",
@@ -1131,29 +1364,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "kraken2-to-mag-features"
+                    "value": "kraken2-to-mag-features",
+                    "key": "YQbNR90sFj"
                   }
-                ]
+                ],
+                "key": "qbnfRQ9ro9"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Select downstream MAG features from Kraken 2."
+                    "value": "Select downstream MAG features from Kraken 2.",
+                    "key": "ZxqMovGAiO"
                   }
-                ]
+                ],
+                "key": "ieNz1qlPlQ"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "JIzy8bjIhX"
                   }
-                ]
+                ],
+                "key": "tGSK8b3FKD"
               }
-            ]
+            ],
+            "key": "ZsM7ZwUDEe"
           },
           {
             "type": "tableRow",
@@ -1163,29 +1403,36 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "multiply-tables"
+                    "value": "multiply-tables",
+                    "key": "NLDxRqqrds"
                   }
-                ]
+                ],
+                "key": "Ataegpb2NE"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Multiply two feature tables."
+                    "value": "Multiply two feature tables.",
+                    "key": "nhdpTqm9Os"
                   }
-                ]
+                ],
+                "key": "HdLXuzpbYj"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "Q2e1iE4QI8"
                   }
-                ]
+                ],
+                "key": "pzRtubDwul"
               }
-            ]
+            ],
+            "key": "vtCbZ7ScvU"
           },
           {
             "type": "tableRow",
@@ -1195,18 +1442,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "predict-genes-prodigal"
+                    "value": "predict-genes-prodigal",
+                    "key": "vNkG0TSSzZ"
                   }
-                ]
+                ],
+                "key": "lWMtdvh2DX"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Predict gene sequences from MAGs using Prodigal."
+                    "value": "Predict gene sequences from MAGs using Prodigal.",
+                    "key": "rAktGhjNPf"
                   }
-                ]
+                ],
+                "key": "q853pSE4QM"
               },
               {
                 "type": "tableCell",
@@ -1217,17 +1468,23 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Prodigal"
+                        "value": "Prodigal",
+                        "key": "ZAdUiA3Up1"
                       }
-                    ]
+                    ],
+                    "key": "CjjA0kiRzR"
                   }
-                ]
+                ],
+                "key": "ZkWldFnglc"
               }
-            ]
+            ],
+            "key": "UCLeERMW2R"
           }
-        ]
+        ],
+        "key": "efHEunKmKL"
       }
-    ]
+    ],
+    "key": "OgOZ34IsT0"
   },
   "releases": [
     {

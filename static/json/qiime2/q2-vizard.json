@@ -3,31 +3,25 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-vizard"
-          }
-        ]
-      },
-      {
         "type": "image",
-        "url": "https://github.com/qiime2/q2-vizard/workflows/ci-dev/badge.svg"
+        "url": "https://github.com/qiime2/q2-vizard/workflows/ci-dev/badge.svg",
+        "key": "lYc5wyCjEb"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!\n"
+            "value": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!\n",
+            "key": "igg1ZEgCOp"
           },
           {
             "type": "image",
-            "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/vizarded-lizard-wizard.png"
+            "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/vizarded-lizard-wizard.png",
+            "key": "tLP3TUMffJ"
           }
-        ]
+        ],
+        "key": "B3gnC1BXaI"
       },
       {
         "type": "heading",
@@ -35,20 +29,28 @@
         "children": [
           {
             "type": "text",
-            "value": "Installing q2-vizard"
+            "value": "Installing q2-vizard",
+            "key": "HjLkqSzCJE"
           }
-        ]
+        ],
+        "key": "UHnLff8dPT",
+        "identifier": "installing-q2-vizard",
+        "label": "Installing q2-vizard",
+        "html_id": "installing-q2-vizard",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "inlineCode",
-            "value": "q2-vizard"
+            "value": "q2-vizard",
+            "key": "CZir5GvNwM"
           },
           {
             "type": "text",
-            "value": " is included in the "
+            "value": " is included in the ",
+            "key": "x9sMpG6ZzW"
           },
           {
             "type": "link",
@@ -56,15 +58,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 Amplicon Distribution"
+                "value": "QIIME 2 Amplicon Distribution",
+                "key": "mjziuKN6d3"
               }
-            ]
+            ],
+            "key": "BhZGosXpnL"
           },
           {
             "type": "text",
-            "value": " as of 2024.10!\nIf you’d like to install it separately (within a QIIME 2 Tiny Distribution), please follow the instructions below."
+            "value": " as of 2024.10!\nIf you’d like to install it separately (within a QIIME 2 Tiny Distribution), please follow the instructions below.",
+            "key": "jANDTbyW7A"
           }
-        ]
+        ],
+        "key": "gGytA4Xger"
       },
       {
         "type": "list",
@@ -81,7 +87,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Start by installing conda using the same instructions provided in the "
+                    "value": "Start by installing conda using the same instructions provided in the ",
+                    "key": "AoqDv7nbpe"
                   },
                   {
                     "type": "link",
@@ -89,17 +96,22 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "QIIME 2 User Docs"
+                        "value": "QIIME 2 User Docs",
+                        "key": "q1Mm7rzkw2"
                       }
-                    ]
+                    ],
+                    "key": "jnhynL2Got"
                   },
                   {
                     "type": "text",
-                    "value": "."
+                    "value": ".",
+                    "key": "V31pG3K254"
                   }
-                ]
+                ],
+                "key": "Gu6zSzlthw"
               }
-            ]
+            ],
+            "key": "CgBuIu4Vda"
           },
           {
             "type": "listItem",
@@ -110,18 +122,23 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Contained in this plugin is an environment file for easy installation within the QIIME 2 Tiny Distribution. You can use the following command to create this environment:"
+                    "value": "Contained in this plugin is an environment file for easy installation within the QIIME 2 Tiny Distribution. You can use the following command to create this environment:",
+                    "key": "LTuksP5LDA"
                   }
-                ]
+                ],
+                "key": "UvrAUsZq6G"
               }
-            ]
+            ],
+            "key": "wM6zFcB1Y6"
           }
-        ]
+        ],
+        "key": "yw1E6OKPuN"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "conda env create -n q2vizard-2024.10 -f https://raw.githubusercontent.com/qiime2/q2-vizard/dev/environment-files/2024.10-vizard-environment.yml"
+        "value": "conda env create -n q2vizard-2024.10 -f https://raw.githubusercontent.com/qiime2/q2-vizard/dev/environment-files/2024.10-vizard-environment.yml",
+        "key": "UAfSznk95x"
       },
       {
         "type": "list",
@@ -135,16 +152,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "Activate your new environment and enjoy!"
+                "value": "Activate your new environment and enjoy!",
+                "key": "XkRxDeRIt4"
               }
-            ]
+            ],
+            "key": "rG96b00RZk"
           }
-        ]
+        ],
+        "key": "xurfYXtPo7"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "conda activate q2vizard-2024.10"
+        "value": "conda activate q2vizard-2024.10",
+        "key": "F27Z8gLc1N"
       },
       {
         "type": "heading",
@@ -152,18 +173,26 @@
         "children": [
           {
             "type": "text",
-            "value": "Using q2-vizard"
+            "value": "Using q2-vizard",
+            "key": "BKKDbD3Nh0"
           }
-        ]
+        ],
+        "key": "i2Dfe3IdzD",
+        "identifier": "using-q2-vizard",
+        "label": "Using q2-vizard",
+        "html_id": "using-q2-vizard",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "The following Metadata vizualizations are available for use, with examples below!"
+            "value": "The following Metadata vizualizations are available for use, with examples below!",
+            "key": "H6EtD60pmR"
           }
-        ]
+        ],
+        "key": "PPozaSizCz"
       },
       {
         "type": "heading",
@@ -171,18 +200,26 @@
         "children": [
           {
             "type": "text",
-            "value": "scatterplot_2d"
+            "value": "scatterplot_2d",
+            "key": "gGcm3B9NjS"
           }
-        ]
+        ],
+        "key": "v5c18IAsyR",
+        "identifier": "scatterplot-2d",
+        "label": "scatterplot_2d",
+        "html_id": "scatterplot-2d",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This visualizer provides an exploratory view of your Metadata - allowing for any two numeric measures to be plotted against each other, with an optional third categorical measure used for color-coding. You can easily toggle between different measures using the drop downs for X, Y, and colorBy."
+            "value": "This visualizer provides an exploratory view of your Metadata - allowing for any two numeric measures to be plotted against each other, with an optional third categorical measure used for color-coding. You can easily toggle between different measures using the drop downs for X, Y, and colorBy.",
+            "key": "qsjjXkOQyd"
           }
-        ]
+        ],
+        "key": "sIHmP0Y4k0"
       },
       {
         "type": "heading",
@@ -190,13 +227,20 @@
         "children": [
           {
             "type": "text",
-            "value": "Demo"
+            "value": "Demo",
+            "key": "pdmbUrUACJ"
           }
-        ]
+        ],
+        "key": "KXn2orEgVJ",
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
       },
       {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/scatterplot_example.png"
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/scatterplot_example.png",
+        "key": "ErbsIh6Bwf"
       },
       {
         "type": "paragraph",
@@ -210,13 +254,17 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Interactive Link"
+                    "value": "Interactive Link",
+                    "key": "D1Gsuc0rSx"
                   }
-                ]
+                ],
+                "key": "IA5s9E0TVE"
               }
-            ]
+            ],
+            "key": "vLW9bsRTXC"
           }
-        ]
+        ],
+        "key": "ZkxJ6tStgI"
       },
       {
         "type": "heading",
@@ -224,18 +272,26 @@
         "children": [
           {
             "type": "text",
-            "value": "lineplot"
+            "value": "lineplot",
+            "key": "AdW7DvtiH4"
           }
-        ]
+        ],
+        "key": "JnFOgItX2d",
+        "identifier": "lineplot",
+        "label": "lineplot",
+        "html_id": "lineplot",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This visualizer generates a lineplot displaying relationships between two numeric Metadata measures, with an optional third categorical measure for grouping your data into separate lines. If replicates are present within your first numeric measure (plotted on the X-axis), you can select either ‘median’ or ‘mean’ for replicate handling, which will create line(s) with the average at each point where replicates are present. All numeric columns present within your Metadata will be available as drop-down options on the Y-axis, but the chosen measure for the X-axis will remain fixed."
+            "value": "This visualizer generates a lineplot displaying relationships between two numeric Metadata measures, with an optional third categorical measure for grouping your data into separate lines. If replicates are present within your first numeric measure (plotted on the X-axis), you can select either ‘median’ or ‘mean’ for replicate handling, which will create line(s) with the average at each point where replicates are present. All numeric columns present within your Metadata will be available as drop-down options on the Y-axis, but the chosen measure for the X-axis will remain fixed.",
+            "key": "M6kcJBYJXL"
           }
-        ]
+        ],
+        "key": "pBEmCIUjc9"
       },
       {
         "type": "heading",
@@ -243,13 +299,20 @@
         "children": [
           {
             "type": "text",
-            "value": "Demo"
+            "value": "Demo",
+            "key": "ZqYalpcLhX"
           }
-        ]
+        ],
+        "key": "RpubREmnel",
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
       },
       {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/lineplot_example.png"
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/lineplot_example.png",
+        "key": "nNgTLEilYz"
       },
       {
         "type": "paragraph",
@@ -263,13 +326,17 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Interactive Link"
+                    "value": "Interactive Link",
+                    "key": "pco36rp68B"
                   }
-                ]
+                ],
+                "key": "QVKwvlB6Av"
               }
-            ]
+            ],
+            "key": "B6yVV30cPl"
           }
-        ]
+        ],
+        "key": "s8MqoLTo6Q"
       },
       {
         "type": "heading",
@@ -277,18 +344,26 @@
         "children": [
           {
             "type": "text",
-            "value": "heatmap"
+            "value": "heatmap",
+            "key": "hXTlVRsxKg"
           }
-        ]
+        ],
+        "key": "MaQoYMd2hu",
+        "identifier": "heatmap",
+        "label": "heatmap",
+        "html_id": "heatmap",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This visualizer generates a heatmap displaying relationships between three Metadata measures. Two of the measures (which can be either categorical or numeric) are mapped to the x and y axes. The third measure (which must be numeric) defines the color gradient of the heatmap, illustrating the intensity or distribution of values across the grid."
+            "value": "This visualizer generates a heatmap displaying relationships between three Metadata measures. Two of the measures (which can be either categorical or numeric) are mapped to the x and y axes. The third measure (which must be numeric) defines the color gradient of the heatmap, illustrating the intensity or distribution of values across the grid.",
+            "key": "wk7hhM4XTV"
           }
-        ]
+        ],
+        "key": "GMfB1WjycS"
       },
       {
         "type": "heading",
@@ -296,13 +371,20 @@
         "children": [
           {
             "type": "text",
-            "value": "Demo"
+            "value": "Demo",
+            "key": "QqyGyUwbq4"
           }
-        ]
+        ],
+        "key": "Hr5sx0al6H",
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
       },
       {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/heatmap_example.png"
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/heatmap_example.png",
+        "key": "l3GDuQIrgE"
       },
       {
         "type": "paragraph",
@@ -316,13 +398,17 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Interactive Link"
+                    "value": "Interactive Link",
+                    "key": "OQDuzmcndb"
                   }
-                ]
+                ],
+                "key": "fGNLG11Zo8"
               }
-            ]
+            ],
+            "key": "bnAcwuJfis"
           }
-        ]
+        ],
+        "key": "h6xZvAxYj1"
       },
       {
         "type": "heading",
@@ -330,18 +416,26 @@
         "children": [
           {
             "type": "text",
-            "value": "boxplot"
+            "value": "boxplot",
+            "key": "dLfzW0H95k"
           }
-        ]
+        ],
+        "key": "Qvt1QhJq3O",
+        "identifier": "boxplot",
+        "label": "boxplot",
+        "html_id": "boxplot",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This visualizer generates boxplot(s) displaying relationships between a numerical Metadata measure and a categorical Metadata measure. Users can choose from three whisker calculation methods: percentile-based (9th/91st), min-max, and Tukey’s Interquartile Range (IQR)."
+            "value": "This visualizer generates boxplot(s) displaying relationships between a numerical Metadata measure and a categorical Metadata measure. Users can choose from three whisker calculation methods: percentile-based (9th/91st), min-max, and Tukey’s Interquartile Range (IQR).",
+            "key": "TGzouzyNNU"
           }
-        ]
+        ],
+        "key": "qDaMQqSiqZ"
       },
       {
         "type": "heading",
@@ -349,13 +443,20 @@
         "children": [
           {
             "type": "text",
-            "value": "Demo"
+            "value": "Demo",
+            "key": "gNHDGxbtAF"
           }
-        ]
+        ],
+        "key": "rydXpBQ0Es",
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
       },
       {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/boxplot_example.png"
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/boxplot_example.png",
+        "key": "fKHRcHjr23"
       },
       {
         "type": "paragraph",
@@ -369,15 +470,20 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Interactive Link"
+                    "value": "Interactive Link",
+                    "key": "uKBSP4leVs"
                   }
-                ]
+                ],
+                "key": "HnOiDGYO6E"
               }
-            ]
+            ],
+            "key": "glWuACMDKP"
           }
-        ]
+        ],
+        "key": "vYBJqTLHEG"
       }
-    ]
+    ],
+    "key": "a4WF561nWe"
   },
   "releases": [
     {

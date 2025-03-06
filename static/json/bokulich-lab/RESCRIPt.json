@@ -3,16 +3,6 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "RESCRIPt"
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
@@ -22,22 +12,27 @@
               {
                 "type": "image",
                 "url": "https://zenodo.org/badge/DOI/10.5281/zenodo.3891931.svg",
-                "alt": "Zenodo"
+                "alt": "Zenodo",
+                "key": "HKSYx1ZPca"
               }
-            ]
+            ],
+            "key": "bQBOLc5bgA"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "EuzgBDHF7P"
           },
           {
             "type": "image",
             "url": "https://github.com/bokulich-lab/RESCRIPt/actions/workflows/ci-dev.yaml/badge.svg",
-            "alt": "CI"
+            "alt": "CI",
+            "key": "R2TJiHbF8W"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "INLMSN31ry"
           },
           {
             "type": "link",
@@ -46,24 +41,34 @@
               {
                 "type": "image",
                 "url": "https://img.shields.io/badge/DOI-10.1371/journal.pcbi.1009581-B31B1B",
-                "alt": "DOI"
+                "alt": "DOI",
+                "key": "wY225hdEFi"
               }
-            ]
+            ],
+            "key": "y0db6QSez7"
           }
-        ]
+        ],
+        "key": "yAQrUojt16"
       },
       {
-        "type": "html",
-        "value": " <p align=\"left\"><img src=\"logo.png\" height=\"150\" /></p>"
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "logo.png"
+          }
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "RESCRIPt is a python 3 package to support a variety of operations for managing and curating reference sequence databases, DNA/RNA sequence data, and taxonomic data. See citation information below for a full benchmark and description."
+            "value": "RESCRIPt is a python 3 package to support a variety of operations for managing and curating reference sequence databases, DNA/RNA sequence data, and taxonomic data. See citation information below for a full benchmark and description.",
+            "key": "J7VH9MW6XS"
           }
-        ]
+        ],
+        "key": "Yu6yPMAzeI"
       },
       {
         "type": "heading",
@@ -71,16 +76,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Install via QIIME 2."
+            "value": "Install via QIIME 2.",
+            "key": "IqYoLKuony"
           }
-        ]
+        ],
+        "key": "MhgMpPGw4R",
+        "identifier": "install-via-qiime-2",
+        "label": "Install via QIIME 2.",
+        "html_id": "install-via-qiime-2",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "RESCRIPt is now installed as part of "
+            "value": "RESCRIPt is now installed as part of ",
+            "key": "vY96F0yvj9"
           },
           {
             "type": "link",
@@ -88,13 +100,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2"
+                "value": "QIIME 2",
+                "key": "UuH9xiJ720"
               }
-            ]
+            ],
+            "key": "Hx2dgLbcqo"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "bWS78QB4cx"
           },
           {
             "type": "link",
@@ -102,13 +117,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "MOSHPIT"
+                "value": "MOSHPIT",
+                "key": "CF3dAR2CKo"
               }
-            ]
+            ],
+            "key": "UHWFPL1Vo4"
           },
           {
             "type": "text",
-            "value": ", and you can install as outlined in the "
+            "value": ", and you can install as outlined in the ",
+            "key": "mka8U4s4mH"
           },
           {
             "type": "link",
@@ -116,15 +134,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 Documentation"
+                "value": "QIIME 2 Documentation",
+                "key": "Q2G4XGKVcJ"
               }
-            ]
+            ],
+            "key": "qfW4ZVqAfC"
           },
           {
             "type": "text",
-            "value": ", for:"
+            "value": ", for:",
+            "key": "G7bSQAla5i"
           }
-        ]
+        ],
+        "key": "UPEObpy0bc"
       },
       {
         "type": "list",
@@ -137,17 +159,21 @@
             "children": [
               {
                 "type": "text",
-                "value": "“Amplicon Distrubtion” version "
+                "value": "“Amplicon Distrubtion” version ",
+                "key": "Ln6mH676tE"
               },
               {
                 "type": "inlineCode",
-                "value": "2024.2"
+                "value": "2024.2",
+                "key": "nwvP58q3ZO"
               },
               {
                 "type": "text",
-                "value": " and later."
+                "value": " and later.",
+                "key": "RaxkVtTR2U"
               }
-            ]
+            ],
+            "key": "VCkD3NuDmF"
           },
           {
             "type": "listItem",
@@ -155,19 +181,24 @@
             "children": [
               {
                 "type": "text",
-                "value": "“Metagenome Distribution” (MOSHPIT) version "
+                "value": "“Metagenome Distribution” (MOSHPIT) version ",
+                "key": "YU1dtHdErF"
               },
               {
                 "type": "inlineCode",
-                "value": "2023.9"
+                "value": "2023.9",
+                "key": "RtIwXvhyUT"
               },
               {
                 "type": "text",
-                "value": " and later."
+                "value": " and later.",
+                "key": "om3GT7P1hw"
               }
-            ]
+            ],
+            "key": "Rs46jd1RWG"
           }
-        ]
+        ],
+        "key": "EyWxq5FXDl"
       },
       {
         "type": "heading",
@@ -175,26 +206,36 @@
         "children": [
           {
             "type": "text",
-            "value": "Prior versions of RESCRIPt / QIIME 2."
+            "value": "Prior versions of RESCRIPt / QIIME 2.",
+            "key": "wZ7GhCyK8i"
           }
-        ]
+        ],
+        "key": "umm6C5Snir",
+        "identifier": "prior-versions-of-rescript-qiime-2",
+        "label": "Prior versions of RESCRIPt / QIIME 2.",
+        "html_id": "prior-versions-of-rescript-qiime-2",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "For details on how to install prior and minimal versions of RESCRIPt for the various versions of QIIME 2, please see the "
+            "value": "For details on how to install prior and minimal versions of RESCRIPt for the various versions of QIIME 2, please see the ",
+            "key": "inF0JsiAYH"
           },
           {
             "type": "inlineCode",
-            "value": "install-prior-versions.md"
+            "value": "install-prior-versions.md",
+            "key": "qagh5iQLIs"
           },
           {
             "type": "text",
-            "value": " document."
+            "value": " document.",
+            "key": "mUX6JjiMpV"
           }
-        ]
+        ],
+        "key": "qjTWq0x2G3"
       },
       {
         "type": "heading",
@@ -202,23 +243,32 @@
         "children": [
           {
             "type": "text",
-            "value": "Read help documentation"
+            "value": "Read help documentation",
+            "key": "JLRH6675fB"
           }
-        ]
+        ],
+        "key": "IvpXESfV9a",
+        "identifier": "read-help-documentation",
+        "label": "Read help documentation",
+        "html_id": "read-help-documentation",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To view a help menu for using RESCRIPt via the QIIME 2 CLI:"
+            "value": "To view a help menu for using RESCRIPt via the QIIME 2 CLI:",
+            "key": "sGsMKA27mg"
           }
-        ]
+        ],
+        "key": "kefxKtl3Gx"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime dev refresh-cache\nqiime rescript --help"
+        "value": "qiime dev refresh-cache\nqiime rescript --help",
+        "key": "hT0Yc5sfLJ"
       },
       {
         "type": "heading",
@@ -226,18 +276,26 @@
         "children": [
           {
             "type": "text",
-            "value": "Using RESCRIPt"
+            "value": "Using RESCRIPt",
+            "key": "LUbeKxIELJ"
           }
-        ]
+        ],
+        "key": "C3N1LW6xtA",
+        "identifier": "using-rescript",
+        "label": "Using RESCRIPt",
+        "html_id": "using-rescript",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "These tutorials demonstrate some of the basic functionality of RESCRIPt, via the q2CLI (QIIME 2 command-line interface):"
+            "value": "These tutorials demonstrate some of the basic functionality of RESCRIPt, via the q2CLI (QIIME 2 command-line interface):",
+            "key": "bA9lGHmI6H"
           }
-        ]
+        ],
+        "key": "kD2JtpmD82"
       },
       {
         "type": "list",
@@ -254,11 +312,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "General Overview and working with SILVA data"
+                    "value": "General Overview and working with SILVA data",
+                    "key": "HuAeieN5DZ"
                   }
-                ]
+                ],
+                "key": "ExeY9x6ZYi"
               }
-            ]
+            ],
+            "key": "UM8JeMVfRa"
           },
           {
             "type": "listItem",
@@ -270,11 +331,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Getting sequences and taxonomy with get-ncbi-data"
+                    "value": "Getting sequences and taxonomy with get-ncbi-data",
+                    "key": "kE5PCaHvvy"
                   }
-                ]
+                ],
+                "key": "jKe2ftGhBL"
               }
-            ]
+            ],
+            "key": "nnDXAx6MGy"
           },
           {
             "type": "listItem",
@@ -286,11 +350,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Building a COI database with BOLD sequences"
+                    "value": "Building a COI database with BOLD sequences",
+                    "key": "rox3b8CFpK"
                   }
-                ]
+                ],
+                "key": "clk9ulZ3Jr"
               }
-            ]
+            ],
+            "key": "Lj6bXIOCth"
           },
           {
             "type": "listItem",
@@ -302,11 +369,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Building a COI database with NCBI sequences"
+                    "value": "Building a COI database with NCBI sequences",
+                    "key": "nRKMg4IhnR"
                   }
-                ]
+                ],
+                "key": "HTIzD685Xx"
               }
-            ]
+            ],
+            "key": "OnvAPDL6aV"
           },
           {
             "type": "listItem",
@@ -318,11 +388,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Using RESCRIPt’s ‘extract-seq-segments’ to extract reference sequences without PCR primer pairs"
+                    "value": "Using RESCRIPt’s ‘extract-seq-segments’ to extract reference sequences without PCR primer pairs",
+                    "key": "TMZ13EHGCq"
                   }
-                ]
+                ],
+                "key": "wFtggNogWh"
               }
-            ]
+            ],
+            "key": "qnQciV6TTp"
           },
           {
             "type": "listItem",
@@ -334,11 +407,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "How to train a GTDB SSU classifier using RESCRIPt"
+                    "value": "How to train a GTDB SSU classifier using RESCRIPt",
+                    "key": "N2GfblPaO0"
                   }
-                ]
+                ],
+                "key": "yVGH8JWD8x"
               }
-            ]
+            ],
+            "key": "ZdmVr2DbNq"
           },
           {
             "type": "listItem",
@@ -350,11 +426,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Constructing an RDP classifier"
+                    "value": "Constructing an RDP classifier",
+                    "key": "DKyElP9vU2"
                   }
-                ]
+                ],
+                "key": "IOGffbNN2W"
               }
-            ]
+            ],
+            "key": "Eo7WAYeZ0b"
           },
           {
             "type": "listItem",
@@ -366,20 +445,25 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "How to train a UNITE classifier using RESCRIPt"
+                    "value": "How to train a UNITE classifier using RESCRIPt",
+                    "key": "xt4yKszFVr"
                   }
-                ]
+                ],
+                "key": "r8ujwXHwPB"
               }
-            ]
+            ],
+            "key": "lO4FfUEksE"
           }
-        ]
+        ],
+        "key": "bRBVhmsvJy"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Examples of visualizations produced by RESCRIPt actions can be found in this "
+            "value": "Examples of visualizations produced by RESCRIPt actions can be found in this ",
+            "key": "XeKmOIZyme"
           },
           {
             "type": "link",
@@ -387,13 +471,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "Visualization Gallery"
+                "value": "Visualization Gallery",
+                "key": "wChhBcG24t"
               }
-            ]
+            ],
+            "key": "DR01KP2itT"
           },
           {
             "type": "text",
-            "value": ". Other code examples can be found "
+            "value": ". Other code examples can be found ",
+            "key": "jkMfdC2wvU"
           },
           {
             "type": "link",
@@ -401,15 +488,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "here"
+                "value": "here",
+                "key": "Ealy5ZfeFH"
               }
-            ]
+            ],
+            "key": "Xpd1Gg2PdV"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "iug1EGOQu9"
           }
-        ]
+        ],
+        "key": "ivwrGMbZ36"
       },
       {
         "type": "heading",
@@ -417,16 +508,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Getting Help"
+            "value": "Getting Help",
+            "key": "Zz11JMQvbX"
           }
-        ]
+        ],
+        "key": "Sg9eWHrvPe",
+        "identifier": "getting-help",
+        "label": "Getting Help",
+        "html_id": "getting-help",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Problem? Suggestion? Technical errors and user support requests can be filed on the "
+            "value": "Problem? Suggestion? Technical errors and user support requests can be filed on the ",
+            "key": "kJH1mtbyNg"
           },
           {
             "type": "link",
@@ -434,15 +532,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 Forum"
+                "value": "QIIME 2 Forum",
+                "key": "MhJCLwlRoU"
               }
-            ]
+            ],
+            "key": "Ow2Kzc2oSG"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "ufxElK8fB8"
           }
-        ]
+        ],
+        "key": "B65jFdSC9q"
       },
       {
         "type": "heading",
@@ -450,38 +552,50 @@
         "children": [
           {
             "type": "text",
-            "value": "Citation"
+            "value": "Citation",
+            "key": "hCX0g9PmvI"
           }
-        ]
+        ],
+        "key": "AVgOaAlAUW",
+        "identifier": "citation",
+        "label": "Citation",
+        "html_id": "citation",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "If you use RESCRIPt in your research, please cite the following:"
+            "value": "If you use RESCRIPt in your research, please cite the following:",
+            "key": "sMiixdtySS"
           }
-        ]
+        ],
+        "key": "AyaDHzvGtB"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Michael S Robeson II, Devon R O’Rourke, Benjamin D Kaehler, Michal Ziemski, Matthew R Dillon, Jeffrey T Foster, Nicholas A Bokulich. (2021) "
+            "value": "Michael S Robeson II, Devon R O’Rourke, Benjamin D Kaehler, Michal Ziemski, Matthew R Dillon, Jeffrey T Foster, Nicholas A Bokulich. (2021) ",
+            "key": "fKJTw6mpQ7"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "RESCRIPt: Reproducible sequence taxonomy reference database management"
+                "value": "RESCRIPt: Reproducible sequence taxonomy reference database management",
+                "key": "w1le1zUfbq"
               }
-            ]
+            ],
+            "key": "hYKLgfv44R"
           },
           {
             "type": "text",
-            "value": ". PLoS Computational Biology 17 (11): e1009581. doi: "
+            "value": ". PLoS Computational Biology 17 (11): e1009581. doi: ",
+            "key": "GlQR7gf2E7"
           },
           {
             "type": "link",
@@ -489,15 +603,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "10.1371/journal.pcbi.1009581"
+                "value": "10.1371/journal.pcbi.1009581",
+                "key": "smsMrB6Qfw"
               }
-            ]
+            ],
+            "key": "Rep5c2Hkm7"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "PZaKc49owC"
           }
-        ]
+        ],
+        "key": "V9rCqmmNOY"
       },
       {
         "type": "heading",
@@ -505,27 +623,37 @@
         "children": [
           {
             "type": "text",
-            "value": "License"
+            "value": "License",
+            "key": "rIvIwmVIgn"
           }
-        ]
+        ],
+        "key": "KIgSLQe8Ly",
+        "identifier": "license",
+        "label": "License",
+        "html_id": "license",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "RESCRIPt is released under a BSD-3-Clause license. See LICENSE for more details."
+            "value": "RESCRIPt is released under a BSD-3-Clause license. See LICENSE for more details.",
+            "key": "EYmmcnbTx0"
           }
-        ]
+        ],
+        "key": "ZymerGKaFl"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "However, other resources accessible via RESCRIPt are released under different licenses, as detailed below."
+            "value": "However, other resources accessible via RESCRIPt are released under different licenses, as detailed below.",
+            "key": "AbXKdp1KoU"
           }
-        ]
+        ],
+        "key": "vj0RCY9B9q"
       },
       {
         "type": "paragraph",
@@ -535,34 +663,42 @@
             "children": [
               {
                 "type": "text",
-                "value": "If using the SILVA database"
+                "value": "If using the SILVA database",
+                "key": "TqM9AqkCnP"
               }
-            ]
+            ],
+            "key": "UC9T5Lmv99"
           },
           {
             "type": "text",
-            "value": " ("
+            "value": " (",
+            "key": "C8kplU1ElC"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "e.g."
+                "value": "e.g.",
+                "key": "MGdlX6qhYR"
               }
-            ]
+            ],
+            "key": "LEGoUswVAq"
           },
           {
             "type": "text",
-            "value": ", with "
+            "value": ", with ",
+            "key": "jBJ0ZNwCnD"
           },
           {
             "type": "inlineCode",
-            "value": "get-silva-data"
+            "value": "get-silva-data",
+            "key": "zdWYdjZBY0"
           },
           {
             "type": "text",
-            "value": "): Versions are released under different licenses. Refer to the "
+            "value": "): Versions are released under different licenses. Refer to the ",
+            "key": "mBA7X78I8u"
           },
           {
             "type": "link",
@@ -570,13 +706,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "current SILVA release license information"
+                "value": "current SILVA release license information",
+                "key": "nlgzJzpkRh"
               }
-            ]
+            ],
+            "key": "ouRW6mejnF"
           },
           {
             "type": "text",
-            "value": " for more details. "
+            "value": " for more details. ",
+            "key": "nOAUHHUJNB"
           },
           {
             "type": "link",
@@ -584,15 +723,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "How to cite SILVA"
+                "value": "How to cite SILVA",
+                "key": "CyRCpLfRF8"
               }
-            ]
+            ],
+            "key": "PBfD8nq0Xw"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "DeugkYoZbd"
           }
-        ]
+        ],
+        "key": "AXXDUcgPzq"
       },
       {
         "type": "paragraph",
@@ -602,34 +745,42 @@
             "children": [
               {
                 "type": "text",
-                "value": "If using NCBI Genbank data"
+                "value": "If using NCBI Genbank data",
+                "key": "wABqlk1ddJ"
               }
-            ]
+            ],
+            "key": "cRGlnqyfjr"
           },
           {
             "type": "text",
-            "value": " ("
+            "value": " (",
+            "key": "SSqjPCB84W"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "e.g."
+                "value": "e.g.",
+                "key": "jiT0baJQLl"
               }
-            ]
+            ],
+            "key": "hm9j8rRqjK"
           },
           {
             "type": "text",
-            "value": ", with "
+            "value": ", with ",
+            "key": "yUOQvD1PPo"
           },
           {
             "type": "inlineCode",
-            "value": "get-ncbi-data"
+            "value": "get-ncbi-data",
+            "key": "F12O2emACS"
           },
           {
             "type": "text",
-            "value": "): See the "
+            "value": "): See the ",
+            "key": "KEixlpgfjg"
           },
           {
             "type": "link",
@@ -637,13 +788,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "NCBI disclaimer and copyright notice"
+                "value": "NCBI disclaimer and copyright notice",
+                "key": "DDqSPt98PL"
               }
-            ]
+            ],
+            "key": "m8pdWbb6VA"
           },
           {
             "type": "text",
-            "value": " for more details. "
+            "value": " for more details. ",
+            "key": "BDMttfpMmQ"
           },
           {
             "type": "link",
@@ -651,15 +805,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "How to cite NCBI"
+                "value": "How to cite NCBI",
+                "key": "ZiG5OSZ8AF"
               }
-            ]
+            ],
+            "key": "nrzS30edQM"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "wB4qFaJTug"
           }
-        ]
+        ],
+        "key": "j7Z2rIehQT"
       },
       {
         "type": "paragraph",
@@ -669,34 +827,42 @@
             "children": [
               {
                 "type": "text",
-                "value": "If using GTDB data"
+                "value": "If using GTDB data",
+                "key": "b1kTE2NE41"
               }
-            ]
+            ],
+            "key": "hDdJB4cdtz"
           },
           {
             "type": "text",
-            "value": " ("
+            "value": " (",
+            "key": "ZHeUtHmo4r"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "e.g."
+                "value": "e.g.",
+                "key": "UTV8Uhiq8a"
               }
-            ]
+            ],
+            "key": "HrgTNY50iZ"
           },
           {
             "type": "text",
-            "value": ", with "
+            "value": ", with ",
+            "key": "QWc5Tj7t6Z"
           },
           {
             "type": "inlineCode",
-            "value": "get-gtdb-data"
+            "value": "get-gtdb-data",
+            "key": "J1Jlgf7qLF"
           },
           {
             "type": "text",
-            "value": "): See the "
+            "value": "): See the ",
+            "key": "suNiPrfDSI"
           },
           {
             "type": "link",
@@ -704,13 +870,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "GTDB “about” page"
+                "value": "GTDB “about” page",
+                "key": "uv9glWambu"
               }
-            ]
+            ],
+            "key": "ooXRPz8rkA"
           },
           {
             "type": "text",
-            "value": " for more details. "
+            "value": " for more details. ",
+            "key": "hTgUW9l8R5"
           },
           {
             "type": "link",
@@ -718,15 +887,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "How to cite GTDB"
+                "value": "How to cite GTDB",
+                "key": "XN9pi5FA62"
               }
-            ]
+            ],
+            "key": "PKJucezHZD"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "kC6wtHpGxQ"
           }
-        ]
+        ],
+        "key": "aj9vKe1gcf"
       },
       {
         "type": "paragraph",
@@ -736,34 +909,42 @@
             "children": [
               {
                 "type": "text",
-                "value": "If using UNITE data"
+                "value": "If using UNITE data",
+                "key": "OdEXB0xeMV"
               }
-            ]
+            ],
+            "key": "nXCbMo1HyY"
           },
           {
             "type": "text",
-            "value": " ("
+            "value": " (",
+            "key": "NgVP5cU66q"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "e.g."
+                "value": "e.g.",
+                "key": "vQiTzB3WMr"
               }
-            ]
+            ],
+            "key": "RD8TljbZ93"
           },
           {
             "type": "text",
-            "value": ", with "
+            "value": ", with ",
+            "key": "dS028WnFmS"
           },
           {
             "type": "inlineCode",
-            "value": "get-unite-data"
+            "value": "get-unite-data",
+            "key": "izoz4V7yIu"
           },
           {
             "type": "text",
-            "value": "): See the "
+            "value": "): See the ",
+            "key": "YIRrYCoU75"
           },
           {
             "type": "link",
@@ -771,13 +952,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "UNITE citation page"
+                "value": "UNITE citation page",
+                "key": "jd5G7qTpuS"
               }
-            ]
+            ],
+            "key": "hHTTEfkP9x"
           },
           {
             "type": "text",
-            "value": " for more details. "
+            "value": " for more details. ",
+            "key": "o69wo9zTBw"
           },
           {
             "type": "link",
@@ -785,17 +969,22 @@
             "children": [
               {
                 "type": "text",
-                "value": "How to cite UNITE"
+                "value": "How to cite UNITE",
+                "key": "PYwz756dYy"
               }
-            ]
+            ],
+            "key": "CiZOzrNEvb"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "mtJ3DZjaxo"
           }
-        ]
+        ],
+        "key": "aXK4AKUfzO"
       }
-    ]
+    ],
+    "key": "Fgat2ssabw"
   },
   "releases": [
     {

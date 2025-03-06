@@ -3,7 +3,7 @@
 
 	let { data }: PageProps = $props();
 </script>
-<article class="prose max-w-4xl pt-5">
+<article class="prose max-w-none pt-5">
     {#if data.hits.length > 0}
     <p class='font-bold mb-0 pl-2'>
         Showing the last 30 topics from:

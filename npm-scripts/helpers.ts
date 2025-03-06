@@ -1,5 +1,11 @@
 import yaml from "js-yaml";
 import { mystParse } from "myst-parser";
+import {
+  headingLabelTransform,
+  keysTransform,
+  htmlTransform,
+} from "myst-transforms";
+
 import { visit } from "unist-util-visit";
 
 import { createOAuthDeviceAuth } from "@octokit/auth-oauth-device";
@@ -253,6 +259,14 @@ export async function getReadme(octokit, owner, repo_name, branch) {
     // no reason to store all of this
     delete node["position"];
   });
+  keysTransform(ast);
+  htmlTransform(ast);
+  headingLabelTransform(ast);
+
+  if (ast.children && ast.children[0].type == "heading") {
+    // Drop the redundant title
+    ast.children = ast.children.slice(1);
+  }
   return ast;
 }
 
@@ -308,6 +322,9 @@ export async function getGithubReleases(octokit, owner, repo_name) {
   for (const release of releases.data) {
     let { tag_name, html_url, name, published_at, body } = release;
     let ast = mystParse(body);
+    keysTransform(ast);
+    htmlTransform(ast);
+    headingLabelTransform(ast);
     reviseReleaseMarkdown(ast, owner, repo_name);
     result.push({ tag_name, html_url, name, published_at, ast });
   }

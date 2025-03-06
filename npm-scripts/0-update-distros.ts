@@ -17,9 +17,15 @@ import {
 const ROOT_PATH = "./static/json";
 
 export async function main(catalog, octokit) {
-  let { index }: { index: { name: string; source: string; docs?: string }[] } =
-    await loadYamlPath(join(catalog, "distros", "index.yml"));
+  let {
+    index,
+    ignore,
+  }: {
+    index: { name: string; source: string; docs?: string }[];
+    ignore: string[];
+  } = await loadYamlPath(join(catalog, "distros", "index.yml"));
   let plugins = await getDistributionsData(index);
+  plugins = plugins.filter(({ name }) => !ignore.includes(name));
 
   let distro_overview: Record<string, any> = { plugins: [] };
   let global_releases = new Set();

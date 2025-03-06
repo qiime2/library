@@ -3,26 +3,18 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-assembly"
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
             "type": "image",
             "url": "https://github.com/bokulich-lab/q2-assembly/actions/workflows/ci-dev.yaml/badge.svg",
-            "alt": "CI"
+            "alt": "CI",
+            "key": "zFE6s0TlWE"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "ReyhawP2SL"
           },
           {
             "type": "link",
@@ -31,13 +23,16 @@
               {
                 "type": "image",
                 "url": "https://codecov.io/gh/bokulich-lab/q2-assembly/branch/main/graph/badge.svg?token=THMBOFUZR0",
-                "alt": "codecov"
+                "alt": "codecov",
+                "key": "FJ0uZtD32F"
               }
-            ]
+            ],
+            "key": "cOc0w20Rxx"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "DamgENucuR"
           },
           {
             "type": "link",
@@ -46,20 +41,25 @@
               {
                 "type": "image",
                 "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
-                "alt": "Code style: black"
+                "alt": "Code style: black",
+                "key": "KxoW7OnlbC"
               }
-            ]
+            ],
+            "key": "CztNcKpq7E"
           }
-        ]
+        ],
+        "key": "wqqCq2GzaM"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "QIIME 2 plugin for (meta)genome assembly."
+            "value": "QIIME 2 plugin for (meta)genome assembly.",
+            "key": "F44C1SZO0P"
           }
-        ]
+        ],
+        "key": "TwaatNtJGw"
       },
       {
         "type": "heading",
@@ -67,9 +67,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation"
+            "value": "Installation",
+            "key": "IAXmKG4bDc"
           }
-        ]
+        ],
+        "key": "xR2wmRAGze",
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
       },
       {
         "type": "paragraph",
@@ -79,13 +85,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "q2-assembly"
+                "value": "q2-assembly",
+                "key": "QnlJAVaa7b"
               }
-            ]
+            ],
+            "key": "gFk9uklrNz"
           },
           {
             "type": "text",
-            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official "
+            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official ",
+            "key": "KYHZbbLUbX"
           },
           {
             "type": "link",
@@ -93,15 +102,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 documentation"
+                "value": "QIIME 2 documentation",
+                "key": "BMcS0d8grE"
               }
-            ]
+            ],
+            "key": "Z9liFVpxu7"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "lrRhU2eo15"
           }
-        ]
+        ],
+        "key": "lbZXsKK44m"
       },
       {
         "type": "heading",
@@ -109,18 +122,26 @@
         "children": [
           {
             "type": "text",
-            "value": "Functionality"
+            "value": "Functionality",
+            "key": "xr09J941Ek"
           }
-        ]
+        ],
+        "key": "j2kvhP71fW",
+        "identifier": "functionality",
+        "label": "Functionality",
+        "html_id": "functionality",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This QIIME 2 plugin contains actions used to assemble (meta)genomes from short single/paired-end\nsequencing reads:"
+            "value": "This QIIME 2 plugin contains actions used to assemble (meta)genomes from short single/paired-end\nsequencing reads:",
+            "key": "pqKYp5353k"
           }
-        ]
+        ],
+        "key": "kttMZ4o8GM"
       },
       {
         "type": "table",
@@ -134,9 +155,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Action"
+                    "value": "Action",
+                    "key": "E3aDakGayU"
                   }
-                ]
+                ],
+                "key": "hTMnnOgBJm"
               },
               {
                 "type": "tableCell",
@@ -144,9 +167,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Description"
+                    "value": "Description",
+                    "key": "O9fqBMxyQO"
                   }
-                ]
+                ],
+                "key": "RI3vFLcUA7"
               },
               {
                 "type": "tableCell",
@@ -154,11 +179,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Underlying tool"
+                    "value": "Underlying tool",
+                    "key": "I5rnC85fe8"
                   }
-                ]
+                ],
+                "key": "fOdVyJ372P"
               }
-            ]
+            ],
+            "key": "rpNGCINSlc"
           },
           {
             "type": "tableRow",
@@ -168,18 +196,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "assemble-megahit"
+                    "value": "assemble-megahit",
+                    "key": "QYmDeNBygx"
                   }
-                ]
+                ],
+                "key": "X1IeMRRbev"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Assemble contigs using MEGAHIT."
+                    "value": "Assemble contigs using MEGAHIT.",
+                    "key": "U9SSthBIE8"
                   }
-                ]
+                ],
+                "key": "l1dSaEXuid"
               },
               {
                 "type": "tableCell",
@@ -190,13 +222,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "MEGAHIT"
+                        "value": "MEGAHIT",
+                        "key": "d97Iqp4GuM"
                       }
-                    ]
+                    ],
+                    "key": "k82jrhYdF1"
                   }
-                ]
+                ],
+                "key": "bYWvn9bWmN"
               }
-            ]
+            ],
+            "key": "zegxieQsgA"
           },
           {
             "type": "tableRow",
@@ -206,18 +242,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "assemble-spades"
+                    "value": "assemble-spades",
+                    "key": "RnpWap3KaA"
                   }
-                ]
+                ],
+                "key": "bpTUIetXl7"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Assemble contigs using SPAdes."
+                    "value": "Assemble contigs using SPAdes.",
+                    "key": "nxIbYF6Ekg"
                   }
-                ]
+                ],
+                "key": "Dz4fM7oEbL"
               },
               {
                 "type": "tableCell",
@@ -228,13 +268,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "SPAdes"
+                        "value": "SPAdes",
+                        "key": "DwFAieEqKx"
                       }
-                    ]
+                    ],
+                    "key": "l3AdWJRjSW"
                   }
-                ]
+                ],
+                "key": "p0rxzm1xE5"
               }
-            ]
+            ],
+            "key": "G8NgINACM8"
           },
           {
             "type": "tableRow",
@@ -244,18 +288,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "evaluate-contigs"
+                    "value": "evaluate-contigs",
+                    "key": "dshb1xLPPw"
                   }
-                ]
+                ],
+                "key": "tItkHW4h96"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Evaluate quality of the assembled contigs using metaQUAST."
+                    "value": "Evaluate quality of the assembled contigs using metaQUAST.",
+                    "key": "Ufx4ziplvi"
                   }
-                ]
+                ],
+                "key": "DGqz5iKLRr"
               },
               {
                 "type": "tableCell",
@@ -266,13 +314,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "QUAST"
+                        "value": "QUAST",
+                        "key": "R1B5tuBZ7X"
                       }
-                    ]
+                    ],
+                    "key": "SvAc7dsghg"
                   }
-                ]
+                ],
+                "key": "wOgcnocHux"
               }
-            ]
+            ],
+            "key": "blYZQT4frw"
           },
           {
             "type": "tableRow",
@@ -282,18 +334,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "generate-reads"
+                    "value": "generate-reads",
+                    "key": "Ixye8LtSnk"
                   }
-                ]
+                ],
+                "key": "byXWWUwmF7"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Simulate NGS reads using InSilicoSeq."
+                    "value": "Simulate NGS reads using InSilicoSeq.",
+                    "key": "AEOLGTFN1B"
                   }
-                ]
+                ],
+                "key": "is8pae30pI"
               },
               {
                 "type": "tableCell",
@@ -304,13 +360,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "InSilicoSeq"
+                        "value": "InSilicoSeq",
+                        "key": "Qh6dQSTlEu"
                       }
-                    ]
+                    ],
+                    "key": "nxEvgoO3ZO"
                   }
-                ]
+                ],
+                "key": "RyV27WD5Va"
               }
-            ]
+            ],
+            "key": "GyfkVunSEZ"
           },
           {
             "type": "tableRow",
@@ -320,18 +380,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "index-contigs"
+                    "value": "index-contigs",
+                    "key": "PkciKCq9qb"
                   }
-                ]
+                ],
+                "key": "KhoJ96xNQr"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Index contigs using Bowtie 2."
+                    "value": "Index contigs using Bowtie 2.",
+                    "key": "ebL15XD3UP"
                   }
-                ]
+                ],
+                "key": "ObFp7gfB81"
               },
               {
                 "type": "tableCell",
@@ -342,13 +406,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2"
+                        "value": "Bowtie 2",
+                        "key": "EgATgls4lB"
                       }
-                    ]
+                    ],
+                    "key": "btmarpvm82"
                   }
-                ]
+                ],
+                "key": "ZaHxgm1feP"
               }
-            ]
+            ],
+            "key": "VkSnIUOxCD"
           },
           {
             "type": "tableRow",
@@ -358,18 +426,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "index-derep-mags"
+                    "value": "index-derep-mags",
+                    "key": "wSn6fXp7fG"
                   }
-                ]
+                ],
+                "key": "MEZxngu6fV"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Index dereplicated MAGs using Bowtie2."
+                    "value": "Index dereplicated MAGs using Bowtie2.",
+                    "key": "QIawtBkrYW"
                   }
-                ]
+                ],
+                "key": "GUfIVM1yFf"
               },
               {
                 "type": "tableCell",
@@ -380,13 +452,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2"
+                        "value": "Bowtie 2",
+                        "key": "CRYBGDj2BO"
                       }
-                    ]
+                    ],
+                    "key": "nYOFSnMo9D"
                   }
-                ]
+                ],
+                "key": "bfUXQvYMoA"
               }
-            ]
+            ],
+            "key": "y5PKXB5rTn"
           },
           {
             "type": "tableRow",
@@ -396,18 +472,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "index-mags"
+                    "value": "index-mags",
+                    "key": "WC8aQAAluq"
                   }
-                ]
+                ],
+                "key": "d8vcsfbGS2"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Index MAGs using Bowtie 2."
+                    "value": "Index MAGs using Bowtie 2.",
+                    "key": "VVXi3IZdjc"
                   }
-                ]
+                ],
+                "key": "rHTKf43PJW"
               },
               {
                 "type": "tableCell",
@@ -418,13 +498,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2"
+                        "value": "Bowtie 2",
+                        "key": "zV46XnsJDr"
                       }
-                    ]
+                    ],
+                    "key": "logqxtGFAq"
                   }
-                ]
+                ],
+                "key": "lboLhHRAYb"
               }
-            ]
+            ],
+            "key": "T6IblL9l7A"
           },
           {
             "type": "tableRow",
@@ -434,18 +518,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "map-reads"
+                    "value": "map-reads",
+                    "key": "seGMlGe3pg"
                   }
-                ]
+                ],
+                "key": "A9vlo5SGyY"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Map reads to contigs/MAGs using Bowtie 2."
+                    "value": "Map reads to contigs/MAGs using Bowtie 2.",
+                    "key": "Qx1Jxc23g7"
                   }
-                ]
+                ],
+                "key": "mtGeGml1nA"
               },
               {
                 "type": "tableCell",
@@ -456,13 +544,17 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2"
+                        "value": "Bowtie 2",
+                        "key": "Nk178wT7Xy"
                       }
-                    ]
+                    ],
+                    "key": "oxol8jGsD4"
                   }
-                ]
+                ],
+                "key": "ZImeBOQrKo"
               }
-            ]
+            ],
+            "key": "Iz64fndGSD"
           },
           {
             "type": "tableRow",
@@ -472,31 +564,39 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "rename-contigs"
+                    "value": "rename-contigs",
+                    "key": "KAbtxN39qt"
                   }
-                ]
+                ],
+                "key": "OTcBw64b1V"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Rename contigs using unique IDs."
+                    "value": "Rename contigs using unique IDs.",
+                    "key": "X1QAVM7ow0"
                   }
-                ]
+                ],
+                "key": "jL8j6RsbvS"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-"
+                    "value": "-",
+                    "key": "g6aNzyEq3u"
                   }
-                ]
+                ],
+                "key": "O1HwYoVfD5"
               }
-            ]
+            ],
+            "key": "RLD5t6LJMT"
           }
-        ]
+        ],
+        "key": "AdxjJx4Vq7"
       },
       {
         "type": "heading",
@@ -504,41 +604,55 @@
         "children": [
           {
             "type": "text",
-            "value": "Dev environment"
+            "value": "Dev environment",
+            "key": "fSUwtl27b3"
           }
-        ]
+        ],
+        "key": "GSrJh28BXs",
+        "identifier": "dev-environment",
+        "label": "Dev environment",
+        "html_id": "dev-environment",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "This repository follows the "
+            "value": "This repository follows the ",
+            "key": "bcBoReF3do"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "black"
+                "value": "black",
+                "key": "CkVULmld7q"
               }
-            ]
+            ],
+            "key": "E0Y5WlchNk"
           },
           {
             "type": "text",
-            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing "
+            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing ",
+            "key": "x5NPD9A5Wp"
           },
           {
             "type": "inlineCode",
-            "value": "make dev"
+            "value": "make dev",
+            "key": "nFszO86HRU"
           },
           {
             "type": "text",
-            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes."
+            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes.",
+            "key": "QYO0JYVSMI"
           }
-        ]
+        ],
+        "key": "hFTJ8ejrtH"
       }
-    ]
+    ],
+    "key": "upaneC1kU9"
   },
   "releases": [
     {

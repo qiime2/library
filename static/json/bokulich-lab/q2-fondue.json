@@ -3,26 +3,18 @@
     "type": "root",
     "children": [
       {
-        "type": "heading",
-        "depth": 1,
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-fondue"
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
             "type": "image",
             "url": "https://github.com/bokulich-lab/q2-fondue/actions/workflows/ci-dev.yaml/badge.svg",
-            "alt": "CI"
+            "alt": "CI",
+            "key": "oFqdxmbh2I"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "cnnAoUNCw2"
           },
           {
             "type": "link",
@@ -31,13 +23,16 @@
               {
                 "type": "image",
                 "url": "https://codecov.io/gh/bokulich-lab/q2-fondue/branch/main/graph/badge.svg?token=UTM4W4B1KW",
-                "alt": "codecov"
+                "alt": "codecov",
+                "key": "JUOat2GBPT"
               }
-            ]
+            ],
+            "key": "VY5SFcYTer"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "KHEwlnNZ1c"
           },
           {
             "type": "link",
@@ -46,13 +41,16 @@
               {
                 "type": "image",
                 "url": "https://zenodo.org/badge/DOI/10.5281/zenodo.6388476.svg",
-                "alt": "DOI"
+                "alt": "DOI",
+                "key": "mb5bEQdDv8"
               }
-            ]
+            ],
+            "key": "hk5Wur8SDh"
           },
           {
             "type": "text",
-            "value": "\n"
+            "value": "\n",
+            "key": "dXV30UO6Pf"
           },
           {
             "type": "link",
@@ -61,15 +59,62 @@
               {
                 "type": "image",
                 "url": "http://img.shields.io/badge/DOI-10.1093/bioinformatics/btac639-B31B1B.svg",
-                "alt": "DOI"
+                "alt": "DOI",
+                "key": "ww9ntiWwuM"
+              }
+            ],
+            "key": "lSrscHIXJm"
+          }
+        ],
+        "key": "LvXAhp3IBs"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "logo.png"
+          },
+          {
+            "type": "text",
+            "value": " "
+          },
+          {
+            "type": "span",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "q2-fondue"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " is a "
+              },
+              {
+                "type": "link",
+                "url": "https://qiime2.org/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " plugin for programmatic access to sequences and metadata from NCBI Sequence Read Archive (SRA). It enables user-friendly acquisition, re-use, and management of public nucleotide sequence (meta)data while adhering to open data principles."
               }
             ]
           }
         ]
       },
       {
-        "type": "html",
-        "value": "<p>\n<img src=\"logo.png\" height=\"150\" align=\"left\"/>\n<span>\n<b>q2-fondue</b> is a <a href=\"https://qiime2.org/\">QIIME 2</a> plugin for programmatic access to sequences and metadata from NCBI Sequence Read Archive (SRA). It enables user-friendly acquisition, re-use, and management of public nucleotide sequence (meta)data while adhering to open data principles.\n</span>\n</p><br>"
+        "type": "break"
       },
       {
         "type": "heading",
@@ -77,38 +122,50 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation"
+            "value": "Installation",
+            "key": "EeO69kt003"
           }
-        ]
+        ],
+        "key": "gXGR2SMDe2",
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "There are multiple options to install q2-fondue ("
+            "value": "There are multiple options to install q2-fondue (",
+            "key": "ImlhdqXwmW"
           },
           {
             "type": "strong",
             "children": [
               {
                 "type": "text",
-                "value": "v2024.5"
+                "value": "v2024.5",
+                "key": "Jf9neXXFgW"
               }
-            ]
+            ],
+            "key": "hvvhNeHtPY"
           },
           {
             "type": "text",
-            "value": " or higher) - each targeted towards different needs:"
+            "value": " or higher) - each targeted towards different needs:",
+            "key": "YU92ZXuHFn"
           }
-        ]
+        ],
+        "key": "gJxjUWUlkr"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "(To install q2-fondue with a version <= 2023.7 see "
+            "value": "(To install q2-fondue with a version <= 2023.7 see ",
+            "key": "X23i7oJDIg"
           },
           {
             "type": "link",
@@ -116,15 +173,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "this"
+                "value": "this",
+                "key": "FNTf0tDksd"
               }
-            ]
+            ],
+            "key": "oTK0XuCznm"
           },
           {
             "type": "text",
-            "value": " section.)"
+            "value": " section.)",
+            "key": "tG39YCWABf"
           }
-        ]
+        ],
+        "key": "eQQGHpqXry"
       },
       {
         "type": "heading",
@@ -132,16 +193,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Option 1: Install q2-fondue with QIIME 2 moshpit distribution"
+            "value": "Option 1: Install q2-fondue with QIIME 2 moshpit distribution",
+            "key": "VHcvEmxxgc"
           }
-        ]
+        ],
+        "key": "Y7dG7Rlqnu",
+        "identifier": "option-1-install-q2-fondue-with-qiime-2-moshpit-distribution",
+        "label": "Option 1: Install q2-fondue with QIIME 2 moshpit distribution",
+        "html_id": "option-1-install-q2-fondue-with-qiime-2-moshpit-distribution",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "q2-fondue is a part of the QIIME 2 moshpit distribution and you can install it as outlined in the "
+            "value": "q2-fondue is a part of the QIIME 2 moshpit distribution and you can install it as outlined in the ",
+            "key": "DMMMlqG1iO"
           },
           {
             "type": "link",
@@ -149,13 +217,16 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 installation instructions"
+                "value": "QIIME 2 installation instructions",
+                "key": "ra9DS7UyOe"
               }
-            ]
+            ],
+            "key": "jFdYVdZm0z"
           },
           {
             "type": "text",
-            "value": ".\nAfter that, don’t forget to run "
+            "value": ".\nAfter that, don’t forget to run ",
+            "key": "gNJ6loOT7j"
           },
           {
             "type": "strong",
@@ -166,17 +237,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "the mandatory configuration step"
+                    "value": "the mandatory configuration step",
+                    "key": "oklmMWHHLJ"
                   }
-                ]
+                ],
+                "key": "D8JbUcc9iU"
               }
-            ]
+            ],
+            "key": "LiLRamqgb3"
           },
           {
             "type": "text",
-            "value": "!"
+            "value": "!",
+            "key": "QwKhUYkkyj"
           }
-        ]
+        ],
+        "key": "IRnEQHEjua"
       },
       {
         "type": "heading",
@@ -184,9 +260,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Option 2: Install q2-fondue within a QIIME 2 amplicon conda environment"
+            "value": "Option 2: Install q2-fondue within a QIIME 2 amplicon conda environment",
+            "key": "u8V3yytGYx"
           }
-        ]
+        ],
+        "key": "tZfZPP3EPQ",
+        "identifier": "option-2-install-q2-fondue-within-a-qiime-2-amplicon-conda-environment",
+        "label": "Option 2: Install q2-fondue within a QIIME 2 amplicon conda environment",
+        "html_id": "option-2-install-q2-fondue-within-a-qiime-2-amplicon-conda-environment",
+        "implicit": true
       },
       {
         "type": "list",
@@ -199,7 +281,8 @@
             "children": [
               {
                 "type": "text",
-                "value": "Install the QIIME 2 amplicon distribution within a conda environment as described in "
+                "value": "Install the QIIME 2 amplicon distribution within a conda environment as described in ",
+                "key": "GQAM1rFgeM"
               },
               {
                 "type": "link",
@@ -207,15 +290,19 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "the official QIIME 2 documentation"
+                    "value": "the official QIIME 2 documentation",
+                    "key": "FxT5pZqfOy"
                   }
-                ]
+                ],
+                "key": "PvpisOPBqX"
               },
               {
                 "type": "text",
-                "value": "."
+                "value": ".",
+                "key": "ri88cSRUYT"
               }
-            ]
+            ],
+            "key": "w1CfNszuuL"
           },
           {
             "type": "listItem",
@@ -223,24 +310,30 @@
             "children": [
               {
                 "type": "text",
-                "value": "Activate the QIIME 2 environment (v2024.5 or higher) and install q2-fondue within while making sure that the used conda channel matches the version of the QIIME 2 environment (replace below "
+                "value": "Activate the QIIME 2 environment (v2024.5 or higher) and install q2-fondue within while making sure that the used conda channel matches the version of the QIIME 2 environment (replace below ",
+                "key": "PSrxa5lfaO"
               },
               {
                 "type": "inlineCode",
-                "value": "{ENV_VERSION}"
+                "value": "{ENV_VERSION}",
+                "key": "sEeqqzRU8z"
               },
               {
                 "type": "text",
-                "value": " with the version number of your QIIME 2 environment):"
+                "value": " with the version number of your QIIME 2 environment):",
+                "key": "I9p6xoYSt6"
               }
-            ]
+            ],
+            "key": "FUg7gS1Bfd"
           }
-        ]
+        ],
+        "key": "OxW1tj5pl6"
       },
       {
         "type": "code",
         "lang": "",
-        "value": "conda activate qiime2-amplicon-{ENV_VERSION}\nmamba install -y \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2-fondue"
+        "value": "conda activate qiime2-amplicon-{ENV_VERSION}\nmamba install -y \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2-fondue",
+        "key": "ttmn2V3LXa"
       },
       {
         "type": "list",
@@ -253,7 +346,8 @@
             "children": [
               {
                 "type": "text",
-                "value": "Now, don’t forget to run "
+                "value": "Now, don’t forget to run ",
+                "key": "XHvhvKy2XQ"
               },
               {
                 "type": "strong",
@@ -264,19 +358,25 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "the mandatory configuration step"
+                        "value": "the mandatory configuration step",
+                        "key": "U4PxDP19XH"
                       }
-                    ]
+                    ],
+                    "key": "azBay5WQaD"
                   }
-                ]
+                ],
+                "key": "AaBdLSXgJN"
               },
               {
                 "type": "text",
-                "value": "!"
+                "value": "!",
+                "key": "idYSAMle8c"
               }
-            ]
+            ],
+            "key": "JbyuSyIKTb"
           }
-        ]
+        ],
+        "key": "BN0QZrR4jr"
       },
       {
         "type": "heading",
@@ -284,9 +384,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Option 3: Minimal fondue environment"
+            "value": "Option 3: Minimal fondue environment",
+            "key": "ViEH2aizow"
           }
-        ]
+        ],
+        "key": "yuY2wubXLN",
+        "identifier": "option-3-minimal-fondue-environment",
+        "label": "Option 3: Minimal fondue environment",
+        "html_id": "option-3-minimal-fondue-environment",
+        "implicit": true
       },
       {
         "type": "list",
@@ -299,7 +405,8 @@
             "children": [
               {
                 "type": "text",
-                "value": "Start with installing "
+                "value": "Start with installing ",
+                "key": "Gen0086Kzt"
               },
               {
                 "type": "link",
@@ -307,22 +414,28 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "mamba"
+                    "value": "mamba",
+                    "key": "KroZz9cXtj"
                   }
-                ]
+                ],
+                "key": "MPtxsjMOaE"
               },
               {
                 "type": "text",
-                "value": " in your base environment:"
+                "value": " in your base environment:",
+                "key": "MKw06yzhxZ"
               }
-            ]
+            ],
+            "key": "totEuyfwOZ"
           }
-        ]
+        ],
+        "key": "b0SM4sy6k4"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "conda install mamba -n base -c conda-forge"
+        "value": "conda install mamba -n base -c conda-forge",
+        "key": "zE5w211z5y"
       },
       {
         "type": "list",
@@ -335,16 +448,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "Create and activate a conda environment with the required dependencies:"
+                "value": "Create and activate a conda environment with the required dependencies:",
+                "key": "eIbd2IxN2t"
               }
-            ]
+            ],
+            "key": "BEL2LMilC2"
           }
-        ]
+        ],
+        "key": "cD56JVucUN"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/2024.5/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue"
+        "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/2024.5/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue",
+        "key": "rpk9HCwHi2"
       },
       {
         "type": "list",
@@ -357,7 +474,8 @@
             "children": [
               {
                 "type": "text",
-                "value": "Now, don’t forget to run "
+                "value": "Now, don’t forget to run ",
+                "key": "RDuGDdJud7"
               },
               {
                 "type": "strong",
@@ -368,36 +486,46 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "the mandatory configuration step"
+                        "value": "the mandatory configuration step",
+                        "key": "vU9FY0v6Bn"
                       }
-                    ]
+                    ],
+                    "key": "ClJuFS765v"
                   }
-                ]
+                ],
+                "key": "dqBHByd6Ps"
               },
               {
                 "type": "text",
-                "value": "!"
+                "value": "!",
+                "key": "b2TMoDw9fA"
               }
-            ]
+            ],
+            "key": "e58hszyayD"
           }
-        ]
+        ],
+        "key": "JkcHPYImUE"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Note: You can replace the version number "
+            "value": "Note: You can replace the version number ",
+            "key": "Ps8IHi7N5y"
           },
           {
             "type": "inlineCode",
-            "value": "2024.5"
+            "value": "2024.5",
+            "key": "E98njif8mY"
           },
           {
             "type": "text",
-            "value": " with later releases if they are already available."
+            "value": " with later releases if they are already available.",
+            "key": "AmheqEBcHw"
           }
-        ]
+        ],
+        "key": "mz8mAviG2B"
       },
       {
         "type": "heading",
@@ -405,9 +533,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Mandatory configuration for all three options"
+            "value": "Mandatory configuration for all three options",
+            "key": "vZCsDsxzAC"
           }
-        ]
+        ],
+        "key": "PfvdC9oZly",
+        "identifier": "mandatory-configuration-for-all-three-options",
+        "label": "Mandatory configuration for all three options",
+        "html_id": "mandatory-configuration-for-all-three-options",
+        "implicit": true
       },
       {
         "type": "list",
@@ -420,16 +554,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "Refresh the QIIME 2 CLI cache and see that everything worked:"
+                "value": "Refresh the QIIME 2 CLI cache and see that everything worked:",
+                "key": "Wf2jatKqGx"
               }
-            ]
+            ],
+            "key": "NsDFZ4ouEp"
           }
-        ]
+        ],
+        "key": "jkfDVJb6dk"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime dev refresh-cache\nqiime fondue --help"
+        "value": "qiime dev refresh-cache\nqiime fondue --help",
+        "key": "hpviZ3T4nf"
       },
       {
         "type": "list",
@@ -442,28 +580,34 @@
             "children": [
               {
                 "type": "text",
-                "value": "Run the "
+                "value": "Run the ",
+                "key": "BZyhVhl6Gs"
               },
               {
                 "type": "inlineCode",
-                "value": "vdb-config"
+                "value": "vdb-config",
+                "key": "op1m5S3qTG"
               },
               {
                 "type": "text",
-                "value": " tool to make sure the wrapped SRA Toolkit is configured on your system.\nThe command below will open the configuration interface - everything should be already configured, so you\ncan directly exit by pressing "
+                "value": " tool to make sure the wrapped SRA Toolkit is configured on your system.\nThe command below will open the configuration interface - everything should be already configured, so you\ncan directly exit by pressing ",
+                "key": "oUVMzodhXP"
               },
               {
                 "type": "strong",
                 "children": [
                   {
                     "type": "text",
-                    "value": "x"
+                    "value": "x",
+                    "key": "s7OlVI2qmZ"
                   }
-                ]
+                ],
+                "key": "QEJA0BlQjd"
               },
               {
                 "type": "text",
-                "value": " (this step is still required to ensure everything is working as expected).\nFeel free to adjust the configuration, if you need to change e.g. the cache location.\nFor more information see "
+                "value": " (this step is still required to ensure everything is working as expected).\nFeel free to adjust the configuration, if you need to change e.g. the cache location.\nFor more information see ",
+                "key": "K0GLcalsjS"
               },
               {
                 "type": "link",
@@ -471,22 +615,28 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "here"
+                    "value": "here",
+                    "key": "jZE4em9OzX"
                   }
-                ]
+                ],
+                "key": "LXjQi6HhfJ"
               },
               {
                 "type": "text",
-                "value": "."
+                "value": ".",
+                "key": "ksDo7Rmxy0"
               }
-            ]
+            ],
+            "key": "F7PWlsUx2c"
           }
-        ]
+        ],
+        "key": "dwXuXDaSky"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "vdb-config -i"
+        "value": "vdb-config -i",
+        "key": "gvSeyYiHmF"
       },
       {
         "type": "list",
@@ -499,16 +649,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "In case you need to configure a proxy server, run the following command\n(this can also be done using the graphical interface described above):"
+                "value": "In case you need to configure a proxy server, run the following command\n(this can also be done using the graphical interface described above):",
+                "key": "Gop7alUlX5"
               }
-            ]
+            ],
+            "key": "Okdm3kCSh9"
           }
-        ]
+        ],
+        "key": "PljEm9e7sB"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "vdb-config --proxy <your proxy URL> --proxy-disable no"
+        "value": "vdb-config --proxy <your proxy URL> --proxy-disable no",
+        "key": "CUwli8r7ya"
       },
       {
         "type": "heading",
@@ -516,38 +670,50 @@
         "children": [
           {
             "type": "text",
-            "value": "Installing q2-fondue with older versions"
+            "value": "Installing q2-fondue with older versions",
+            "key": "bBGhSRr6Mp"
           }
-        ]
+        ],
+        "key": "ufws6ia5fx",
+        "identifier": "installing-q2-fondue-with-older-versions",
+        "label": "Installing q2-fondue with older versions",
+        "html_id": "installing-q2-fondue-with-older-versions",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To install fondue with a version <= 2023.7 in a minimal environment run the following command inserting the respective version number "
+            "value": "To install fondue with a version <= 2023.7 in a minimal environment run the following command inserting the respective version number ",
+            "key": "AK1cBZGdO0"
           },
           {
             "type": "inlineCode",
-            "value": "{ENV_VERSION}"
+            "value": "{ENV_VERSION}",
+            "key": "dIqV0fBzZD"
           },
           {
             "type": "text",
-            "value": ":"
+            "value": ":",
+            "key": "GD854zmc34"
           }
-        ]
+        ],
+        "key": "vGTEZe6Vsw"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/tested/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue"
+        "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/tested/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue",
+        "key": "WswCp5uLcf"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Now, don’t forget to run "
+            "value": "Now, don’t forget to run ",
+            "key": "zc3A7vCnOp"
           },
           {
             "type": "strong",
@@ -558,26 +724,33 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "the mandatory configuration step"
+                    "value": "the mandatory configuration step",
+                    "key": "JwzUQkmkzd"
                   }
-                ]
+                ],
+                "key": "Y9hfqxeRck"
               }
-            ]
+            ],
+            "key": "AEqHwWSCrQ"
           },
           {
             "type": "text",
-            "value": "!"
+            "value": "!",
+            "key": "e02z4F1bm7"
           }
-        ]
+        ],
+        "key": "jHloYJYWZo"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Alternatively, a minimal Docker image is available to run q2-fondue==v2023.7:"
+            "value": "Alternatively, a minimal Docker image is available to run q2-fondue==v2023.7:",
+            "key": "OGkXZgg6CC"
           }
-        ]
+        ],
+        "key": "rCKoxpFU7y"
       },
       {
         "type": "list",
@@ -590,7 +763,8 @@
             "children": [
               {
                 "type": "text",
-                "value": "Install "
+                "value": "Install ",
+                "key": "fofUTvCK4h"
               },
               {
                 "type": "link",
@@ -598,15 +772,19 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Docker"
+                    "value": "Docker",
+                    "key": "tueTpqXQyg"
                   }
-                ]
+                ],
+                "key": "fqGhafB9ZM"
               },
               {
                 "type": "text",
-                "value": " with the linked instructions"
+                "value": " with the linked instructions",
+                "key": "Gn2TB8wmqh"
               }
-            ]
+            ],
+            "key": "laaDtCp0VN"
           },
           {
             "type": "listItem",
@@ -614,7 +792,8 @@
             "children": [
               {
                 "type": "text",
-                "value": "Pull the "
+                "value": "Pull the ",
+                "key": "FgelkGllQI"
               },
               {
                 "type": "link",
@@ -622,22 +801,28 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "q2-fondue Docker image"
+                    "value": "q2-fondue Docker image",
+                    "key": "Y42zc3jECz"
                   }
-                ]
+                ],
+                "key": "iJJBWOpDZC"
               },
               {
                 "type": "text",
-                "value": ":"
+                "value": ":",
+                "key": "pVy6rjzE4P"
               }
-            ]
+            ],
+            "key": "V6N6FvI6M9"
           }
-        ]
+        ],
+        "key": "YlwdS6gNtl"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "docker pull linathekim/q2-fondue:2023.7"
+        "value": "docker pull linathekim/q2-fondue:2023.7",
+        "key": "MNEadMIF8b"
       },
       {
         "type": "list",
@@ -650,16 +835,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "Within the container, refresh the QIIME 2 CLI cache to see that everything worked:"
+                "value": "Within the container, refresh the QIIME 2 CLI cache to see that everything worked:",
+                "key": "jPEoCIYgag"
               }
-            ]
+            ],
+            "key": "D3gFgBqz6c"
           }
-        ]
+        ],
+        "key": "CZR1AtvWHn"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime dev refresh-cache\nqiime fondue --help"
+        "value": "qiime dev refresh-cache\nqiime fondue --help",
+        "key": "v6ZlUCREr1"
       },
       {
         "type": "list",
@@ -672,16 +861,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "If you need to configure a proxy server, run the following command:"
+                "value": "If you need to configure a proxy server, run the following command:",
+                "key": "vFCp4et5D9"
               }
-            ]
+            ],
+            "key": "sM2NVMCa76"
           }
-        ]
+        ],
+        "key": "giMLB9JfC3"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "vdb-config --proxy <your proxy URL> --proxy-disable no"
+        "value": "vdb-config --proxy <your proxy URL> --proxy-disable no",
+        "key": "jtrELAA7CP"
       },
       {
         "type": "heading",
@@ -689,24 +882,33 @@
         "children": [
           {
             "type": "text",
-            "value": "Space requirements"
+            "value": "Space requirements",
+            "key": "i42d2rz8Jz"
           }
-        ]
+        ],
+        "key": "hdgfnSAG2Q",
+        "identifier": "space-requirements",
+        "label": "Space requirements",
+        "html_id": "space-requirements",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Running q2-fondue requires space in the temporary ("
+            "value": "Running q2-fondue requires space in the temporary (",
+            "key": "GkQDKCuc5o"
           },
           {
             "type": "inlineCode",
-            "value": "TMPDIR"
+            "value": "TMPDIR",
+            "key": "vQsLykpcTP"
           },
           {
             "type": "text",
-            "value": ") and output directory. The space requirements for the output directory can be estimated by inserting the run or project IDs in the "
+            "value": ") and output directory. The space requirements for the output directory can be estimated by inserting the run or project IDs in the ",
+            "key": "eRabzE3aB8"
           },
           {
             "type": "link",
@@ -714,48 +916,60 @@
             "children": [
               {
                 "type": "text",
-                "value": "SRA Run Selector"
+                "value": "SRA Run Selector",
+                "key": "JxGIlMuEpo"
               }
-            ]
+            ],
+            "key": "C7ssnfjEni"
           },
           {
             "type": "text",
-            "value": ". To estimate the space requirements for the temporary directory, multiply the output directory space requirement by a factor of 10. The current implementation of q2-fondue requires you to have a minimum of 2 GB of available space in your temporary directory."
+            "value": ". To estimate the space requirements for the temporary directory, multiply the output directory space requirement by a factor of 10. The current implementation of q2-fondue requires you to have a minimum of 2 GB of available space in your temporary directory.",
+            "key": "W3cBUR3wJR"
           }
-        ]
+        ],
+        "key": "kjp4ApEtOt"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To find out which temporary directory is used by Qiime 2, you can run "
+            "value": "To find out which temporary directory is used by Qiime 2, you can run ",
+            "key": "EhQk2h64P0"
           },
           {
             "type": "inlineCode",
-            "value": "echo $TMPDIR"
+            "value": "echo $TMPDIR",
+            "key": "RRHAXcqXJY"
           },
           {
             "type": "text",
-            "value": " in your terminal. If this command returns an empty string, the assigned temporary directory equals the OS’s default temporary directory (usually "
+            "value": " in your terminal. If this command returns an empty string, the assigned temporary directory equals the OS’s default temporary directory (usually ",
+            "key": "GxfhxI1tli"
           },
           {
             "type": "inlineCode",
-            "value": "/tmp"
+            "value": "/tmp",
+            "key": "YNH7MRpQ1B"
           },
           {
             "type": "text",
-            "value": ") . To re-assign your temporary directory to a location of choice, run "
+            "value": ") . To re-assign your temporary directory to a location of choice, run ",
+            "key": "GuxVAPnLuI"
           },
           {
             "type": "inlineCode",
-            "value": "export TMPDIR=Location/of/choice"
+            "value": "export TMPDIR=Location/of/choice",
+            "key": "OO7AoHdrap"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "ntU2LBQZkS"
           }
-        ]
+        ],
+        "key": "uI3H10oUrJ"
       },
       {
         "type": "heading",
@@ -763,9 +977,15 @@
         "children": [
           {
             "type": "text",
-            "value": "Usage"
+            "value": "Usage",
+            "key": "mEWtqBkQzg"
           }
-        ]
+        ],
+        "key": "NBB5ocLkSc",
+        "identifier": "usage",
+        "label": "Usage",
+        "html_id": "usage",
+        "implicit": true
       },
       {
         "type": "heading",
@@ -773,18 +993,26 @@
         "children": [
           {
             "type": "text",
-            "value": "Available actions"
+            "value": "Available actions",
+            "key": "qNxypAaA3x"
           }
-        ]
+        ],
+        "key": "GzcKZ5HB8J",
+        "identifier": "available-actions",
+        "label": "Available actions",
+        "html_id": "available-actions",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "q2-fondue provides a couple of actions to fetch and manipulate nucleotide sequencing data and related metadata from SRA as well as an action to scrape run, study, BioProject, experiment and sample IDs from a Zotero web library. Below you will find a list of available actions and their short descriptions."
+            "value": "q2-fondue provides a couple of actions to fetch and manipulate nucleotide sequencing data and related metadata from SRA as well as an action to scrape run, study, BioProject, experiment and sample IDs from a Zotero web library. Below you will find a list of available actions and their short descriptions.",
+            "key": "CnBmVqnOSf"
           }
-        ]
+        ],
+        "key": "pLCprMr7Zv"
       },
       {
         "type": "table",
@@ -798,9 +1026,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Action"
+                    "value": "Action",
+                    "key": "PJgLxQLd8w"
                   }
-                ]
+                ],
+                "key": "PcUxNesjWd"
               },
               {
                 "type": "tableCell",
@@ -808,11 +1038,14 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Description"
+                    "value": "Description",
+                    "key": "qD8zRtuYaq"
                   }
-                ]
+                ],
+                "key": "J3gJZjHVx5"
               }
-            ]
+            ],
+            "key": "mNZeFCbEFq"
           },
           {
             "type": "tableRow",
@@ -822,20 +1055,25 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "get-sequences"
+                    "value": "get-sequences",
+                    "key": "fZiKKpff3O"
                   }
-                ]
+                ],
+                "key": "gQBtW6pydr"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch sequences by IDs[*] from the SRA repository."
+                    "value": "Fetch sequences by IDs[*] from the SRA repository.",
+                    "key": "pL2ym6htoj"
                   }
-                ]
+                ],
+                "key": "l5kZtr20Os"
               }
-            ]
+            ],
+            "key": "ckpKujxF4r"
           },
           {
             "type": "tableRow",
@@ -845,20 +1083,25 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "get-metadata"
+                    "value": "get-metadata",
+                    "key": "MloHda2LMr"
                   }
-                ]
+                ],
+                "key": "c17vjTeALl"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch metadata by IDs[*] from the SRA repository."
+                    "value": "Fetch metadata by IDs[*] from the SRA repository.",
+                    "key": "gzesrHcgd0"
                   }
-                ]
+                ],
+                "key": "pQTnHjES86"
               }
-            ]
+            ],
+            "key": "mXJukTOA4j"
           },
           {
             "type": "tableRow",
@@ -868,20 +1111,25 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "get-all"
+                    "value": "get-all",
+                    "key": "KGr3r8aJ2L"
                   }
-                ]
+                ],
+                "key": "Ytq81ppCRA"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Fetch sequences and metadata by IDs[*] from the SRA repo."
+                    "value": "Fetch sequences and metadata by IDs[*] from the SRA repo.",
+                    "key": "wjRzf9ozF4"
                   }
-                ]
+                ],
+                "key": "LX1h1veYi1"
               }
-            ]
+            ],
+            "key": "VMvQkNKzqO"
           },
           {
             "type": "tableRow",
@@ -891,20 +1139,25 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "get-ids-from-query"
+                    "value": "get-ids-from-query",
+                    "key": "UBX29y5r8l"
                   }
-                ]
+                ],
+                "key": "xHnPIv4MlH"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Find SRA run accession IDs based on a search query."
+                    "value": "Find SRA run accession IDs based on a search query.",
+                    "key": "w2xjLu4kXE"
                   }
-                ]
+                ],
+                "key": "IiVMh00k7a"
               }
-            ]
+            ],
+            "key": "OxghEQCIDm"
           },
           {
             "type": "tableRow",
@@ -914,20 +1167,25 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "merge-metadata"
+                    "value": "merge-metadata",
+                    "key": "MlOI9EcJjG"
                   }
-                ]
+                ],
+                "key": "VlFxAQ1oZa"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Merge several metadata files into a single metadata object."
+                    "value": "Merge several metadata files into a single metadata object.",
+                    "key": "y7P02b0kbu"
                   }
-                ]
+                ],
+                "key": "wpZDVw9Gav"
               }
-            ]
+            ],
+            "key": "CKeTwXaOZr"
           },
           {
             "type": "tableRow",
@@ -937,20 +1195,25 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "combine-seqs"
+                    "value": "combine-seqs",
+                    "key": "RBgnpdmNaf"
                   }
-                ]
+                ],
+                "key": "DCzGo0g1zl"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Combine sequences from multiple artifacts into a single artifact."
+                    "value": "Combine sequences from multiple artifacts into a single artifact.",
+                    "key": "BpbSNUrSvL"
                   }
-                ]
+                ],
+                "key": "DLhHHd6I0p"
               }
-            ]
+            ],
+            "key": "ySIj6OAUOF"
           },
           {
             "type": "tableRow",
@@ -960,38 +1223,47 @@
                 "children": [
                   {
                     "type": "inlineCode",
-                    "value": "scrape-collection"
+                    "value": "scrape-collection",
+                    "key": "TfZ6Cg3P9i"
                   }
-                ]
+                ],
+                "key": "I3gPsJL1dM"
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Scrape Zotero collection for IDs[*] and associated DOI names."
+                    "value": "Scrape Zotero collection for IDs[*] and associated DOI names.",
+                    "key": "mNS2SRD8es"
                   }
-                ]
+                ],
+                "key": "tUvhYLrklK"
               }
-            ]
+            ],
+            "key": "eI0437AY1y"
           }
-        ]
+        ],
+        "key": "Xod35YChEI"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "[*]: Supported IDs include run, study, BioProject, experiment and study IDs."
+            "value": "[*]: Supported IDs include run, study, BioProject, experiment and study IDs.",
+            "key": "hHRbLwXO7L"
           }
-        ]
+        ],
+        "key": "BcSs8mmzvz"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "The next sections give a brief introduction to the most important actions in q2-fondue. More detailed instructions, background information and examples can be found in the associated "
+            "value": "The next sections give a brief introduction to the most important actions in q2-fondue. More detailed instructions, background information and examples can be found in the associated ",
+            "key": "mivS1qaQDL"
           },
           {
             "type": "link",
@@ -999,15 +1271,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "tutorial"
+                "value": "tutorial",
+                "key": "R6obKo99pH"
               }
-            ]
+            ],
+            "key": "GBTbbHUzmc"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "k1HfunowyL"
           }
-        ]
+        ],
+        "key": "gQHs9B85uv"
       },
       {
         "type": "heading",
@@ -1015,39 +1291,52 @@
         "children": [
           {
             "type": "text",
-            "value": "Import accession IDs"
+            "value": "Import accession IDs",
+            "key": "s28WOOBEBA"
           }
-        ]
+        ],
+        "key": "RQrLMaYtjR",
+        "identifier": "import-accession-ids",
+        "label": "Import accession IDs",
+        "html_id": "import-accession-ids",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "All "
+            "value": "All ",
+            "key": "m8exM9ucUm"
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "q2-fondue"
+                "value": "q2-fondue",
+                "key": "SunZa9s47m"
               }
-            ]
+            ],
+            "key": "EduBJ7upnI"
           },
           {
             "type": "text",
-            "value": " actions which fetch data from SRA require the list of run, study, BioProject, experiment or study IDs to be provided as a QIIME 2 artifact of "
+            "value": " actions which fetch data from SRA require the list of run, study, BioProject, experiment or study IDs to be provided as a QIIME 2 artifact of ",
+            "key": "kgIRRfdOnn"
           },
           {
             "type": "inlineCode",
-            "value": "NCBIAccessionIDs"
+            "value": "NCBIAccessionIDs",
+            "key": "fP55QniqHr"
           },
           {
             "type": "text",
-            "value": " semantic type. You can either import an existing list of IDs (1.) or scrape a Zotero web library collection to obtain these IDs (2.)."
+            "value": " semantic type. You can either import an existing list of IDs (1.) or scrape a Zotero web library collection to obtain these IDs (2.).",
+            "key": "HGDV63EzWP"
           }
-        ]
+        ],
+        "key": "VblGsu2v5D"
       },
       {
         "type": "list",
@@ -1061,33 +1350,41 @@
             "children": [
               {
                 "type": "text",
-                "value": "To import an existing list of IDs into a "
+                "value": "To import an existing list of IDs into a ",
+                "key": "SSJcFY8HjM"
               },
               {
                 "type": "inlineCode",
-                "value": "NCBIAccessionIDs"
+                "value": "NCBIAccessionIDs",
+                "key": "OF60lw6cWw"
               },
               {
                 "type": "text",
-                "value": " artifact simply run:"
+                "value": " artifact simply run:",
+                "key": "kK4KPsDzAy"
               }
-            ]
+            ],
+            "key": "Qw8OYjkCaO"
           }
-        ]
+        ],
+        "key": "x9OididvWQ"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime tools import \\\n              --type NCBIAccessionIDs \\\n              --input-path ids.tsv \\\n              --output-path ids.qza"
+        "value": "qiime tools import \\\n              --type NCBIAccessionIDs \\\n              --input-path ids.tsv \\\n              --output-path ids.qza",
+        "key": "S4mz4TKgDv"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "where:"
+            "value": "where:",
+            "key": "rijym0BQZw"
           }
-        ]
+        ],
+        "key": "PYik2YAdsZ"
       },
       {
         "type": "list",
@@ -1100,13 +1397,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--input-path"
+                "value": "--input-path",
+                "key": "f0u5YabYmH"
               },
               {
                 "type": "text",
-                "value": " is a path to the TSV file containing run or project IDs."
+                "value": " is a path to the TSV file containing run or project IDs.",
+                "key": "MyZsarS3b4"
               }
-            ]
+            ],
+            "key": "hIdrTMdEvj"
           },
           {
             "type": "listItem",
@@ -1114,15 +1414,19 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--output-path"
+                "value": "--output-path",
+                "key": "kAPCmQ9TJn"
               },
               {
                 "type": "text",
-                "value": " is the output artifact."
+                "value": " is the output artifact.",
+                "key": "AmUp47xzF9"
               }
-            ]
+            ],
+            "key": "pqoepTHLue"
           }
-        ]
+        ],
+        "key": "kzMtaEtwr8"
       },
       {
         "type": "paragraph",
@@ -1132,15 +1436,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "Note:"
+                "value": "Note:",
+                "key": "K57zmWXeZk"
               }
-            ]
+            ],
+            "key": "lMpB4H9kBH"
           },
           {
             "type": "text",
-            "value": " the input TSV file needs to consist of a single column named “ID”."
+            "value": " the input TSV file needs to consist of a single column named “ID”.",
+            "key": "KqpwqwssOT"
           }
-        ]
+        ],
+        "key": "nANbfHCFDw"
       },
       {
         "type": "list",
@@ -1154,27 +1462,34 @@
             "children": [
               {
                 "type": "text",
-                "value": "To scrape all run, study, BioProject, experiment and sample IDs from an existing web Zotero library collection into a "
+                "value": "To scrape all run, study, BioProject, experiment and sample IDs from an existing web Zotero library collection into a ",
+                "key": "SEd5ltCHQF"
               },
               {
                 "type": "inlineCode",
-                "value": "NCBIAccessionIDs"
+                "value": "NCBIAccessionIDs",
+                "key": "Vk4vhuJpzL"
               },
               {
                 "type": "text",
-                "value": " artifact run, you can use the "
+                "value": " artifact run, you can use the ",
+                "key": "ZkNGQTRzhd"
               },
               {
                 "type": "inlineCode",
-                "value": "scrape-collection"
+                "value": "scrape-collection",
+                "key": "qtzaWjd1sm"
               },
               {
                 "type": "text",
-                "value": " method. Before running it, you have to set three environment variables linked to your Zotero account:"
+                "value": " method. Before running it, you have to set three environment variables linked to your Zotero account:",
+                "key": "usxRphG0gc"
               }
-            ]
+            ],
+            "key": "J1ORgQB2tb"
           }
-        ]
+        ],
+        "key": "bveuKpbg0Y"
       },
       {
         "type": "list",
@@ -1187,13 +1502,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "ZOTERO_TYPE"
+                "value": "ZOTERO_TYPE",
+                "key": "FJw1GFquaN"
               },
               {
                 "type": "text",
-                "value": " is the Zotero library type ‘user’ or ‘group’."
+                "value": " is the Zotero library type ‘user’ or ‘group’.",
+                "key": "MShgVbmakd"
               }
-            ]
+            ],
+            "key": "RFJjZKLAEt"
           },
           {
             "type": "listItem",
@@ -1201,29 +1519,36 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "ZOTERO_USERID"
+                "value": "ZOTERO_USERID",
+                "key": "naytnAl2UA"
               },
               {
                 "type": "text",
-                "value": " is a valid Zotero user ID. If "
+                "value": " is a valid Zotero user ID. If ",
+                "key": "HsOgcY6kkQ"
               },
               {
                 "type": "inlineCode",
-                "value": "ZOTERO_TYPE"
+                "value": "ZOTERO_TYPE",
+                "key": "lVsnASp271"
               },
               {
                 "type": "text",
-                "value": " is ‘user’ it can be retrieved from section ‘your user_id for use in API calls’ in https://www.zotero.org/settings/keys. If "
+                "value": " is ‘user’ it can be retrieved from section ‘your user_id for use in API calls’ in https://www.zotero.org/settings/keys. If ",
+                "key": "Wkl0OPKaq0"
               },
               {
                 "type": "inlineCode",
-                "value": "ZOTERO_TYPE"
+                "value": "ZOTERO_TYPE",
+                "key": "VcSt6dR3BG"
               },
               {
                 "type": "text",
-                "value": " is ‘group’ it can be obtained by hovering over group name in https://www.zotero.org/groups/."
+                "value": " is ‘group’ it can be obtained by hovering over group name in https://www.zotero.org/groups/.",
+                "key": "hHzHntcorz"
               }
-            ]
+            ],
+            "key": "Xv2TSbknrD"
           },
           {
             "type": "listItem",
@@ -1231,48 +1556,60 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "ZOTERO_APIKEY"
+                "value": "ZOTERO_APIKEY",
+                "key": "QIQtq5Np6o"
               },
               {
                 "type": "text",
-                "value": " is a valid Zotero API user key created at https://www.zotero.org/settings/keys/new (checking “Allow library access” and for ‘group’ library “Read/Write” permissions)."
+                "value": " is a valid Zotero API user key created at https://www.zotero.org/settings/keys/new (checking “Allow library access” and for ‘group’ library “Read/Write” permissions).",
+                "key": "uNND3f1j6m"
               }
-            ]
+            ],
+            "key": "E0hmoQJisv"
           }
-        ]
+        ],
+        "key": "tv0aFsWQ9H"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To set these environment variables run the following commands in your terminal for each of the three required variables: "
+            "value": "To set these environment variables run the following commands in your terminal for each of the three required variables: ",
+            "key": "qTqy9mkXPT"
           },
           {
             "type": "inlineCode",
-            "value": "export ZOTERO_TYPE=<your library type>"
+            "value": "export ZOTERO_TYPE=<your library type>",
+            "key": "eLYC5QwrrZ"
           },
           {
             "type": "text",
-            "value": " or create a "
+            "value": " or create a ",
+            "key": "vDmnT42gNS"
           },
           {
             "type": "inlineCode",
-            "value": ".env"
+            "value": ".env",
+            "key": "fFSEIJxGgv"
           },
           {
             "type": "text",
-            "value": " file with the environment variable assignment. For the latter option, make sure to ignore this file in version control (add to "
+            "value": " file with the environment variable assignment. For the latter option, make sure to ignore this file in version control (add to ",
+            "key": "W3HxAlWzJb"
           },
           {
             "type": "inlineCode",
-            "value": ".gitignore"
+            "value": ".gitignore",
+            "key": "LCr0XnC1IN"
           },
           {
             "type": "text",
-            "value": ")."
+            "value": ").",
+            "key": "ukOriobllM"
           }
-        ]
+        ],
+        "key": "syi7R9V7Q0"
       },
       {
         "type": "paragraph",
@@ -1282,21 +1619,26 @@
             "children": [
               {
                 "type": "text",
-                "value": "Note:"
+                "value": "Note:",
+                "key": "oNl7KN4MeV"
               }
-            ]
+            ],
+            "key": "s5wV8SmPCs"
           },
           {
             "type": "text",
-            "value": " To retrieve all required entries from Zotero, you must be logged in. Also, to allow for the "
+            "value": " To retrieve all required entries from Zotero, you must be logged in. Also, to allow for the ",
+            "key": "CLkeRDubti"
           },
           {
             "type": "inlineCode",
-            "value": "scrape-collection"
+            "value": "scrape-collection",
+            "key": "VnshO6OSSC"
           },
           {
             "type": "text",
-            "value": " action to work, make sure you enable file syncing on your Zotero account (see section “File Syncing” "
+            "value": " action to work, make sure you enable file syncing on your Zotero account (see section “File Syncing” ",
+            "key": "HVuQULaiNQ"
           },
           {
             "type": "link",
@@ -1304,29 +1646,36 @@
             "children": [
               {
                 "type": "text",
-                "value": "here"
+                "value": "here",
+                "key": "rHCXEM5BvT"
               }
-            ]
+            ],
+            "key": "EpZF1wlE5z"
           },
           {
             "type": "text",
-            "value": ") and only attempt to use the action once all attachments were synchronized with your Web Library."
+            "value": ") and only attempt to use the action once all attachments were synchronized with your Web Library.",
+            "key": "AFv8MRVkf4"
           }
-        ]
+        ],
+        "key": "uhgrJPFSSa"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue scrape-collection \\\n              --p-collection-name collection_name \\\n              --o-run-ids run_ids.qza \\\n              --o-study-ids study_ids.qza \\\n              --o-bioproject-ids bioproject_ids.qza \\\n              --o-experiment-ids experiment_ids.qza \\\n              --o-sample-ids sample_ids.qza --verbose"
+        "value": "qiime fondue scrape-collection \\\n              --p-collection-name collection_name \\\n              --o-run-ids run_ids.qza \\\n              --o-study-ids study_ids.qza \\\n              --o-bioproject-ids bioproject_ids.qza \\\n              --o-experiment-ids experiment_ids.qza \\\n              --o-sample-ids sample_ids.qza --verbose",
+        "key": "LkcLYYsXbR"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "where:"
+            "value": "where:",
+            "key": "YajgJYJejb"
           }
-        ]
+        ],
+        "key": "zphczk7oRt"
       },
       {
         "type": "list",
@@ -1339,13 +1688,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-collection-name"
+                "value": "--p-collection-name",
+                "key": "fAI42JNoAw"
               },
               {
                 "type": "text",
-                "value": " is the name of the collection to be scraped."
+                "value": " is the name of the collection to be scraped.",
+                "key": "vPpjNDxrGH"
               }
-            ]
+            ],
+            "key": "eQX0WyftmA"
           },
           {
             "type": "listItem",
@@ -1353,13 +1705,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-run-ids"
+                "value": "--o-run-ids",
+                "key": "L5p0iCx6yh"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing the scraped run IDs."
+                "value": " is the output artifact containing the scraped run IDs.",
+                "key": "pHjYP69qZj"
               }
-            ]
+            ],
+            "key": "BW5Mv5wr5r"
           },
           {
             "type": "listItem",
@@ -1367,13 +1722,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-study-ids"
+                "value": "--o-study-ids",
+                "key": "cHZCjgohRe"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing the scraped study IDs."
+                "value": " is the output artifact containing the scraped study IDs.",
+                "key": "l3mYe4Yxxy"
               }
-            ]
+            ],
+            "key": "gpb71xpaNx"
           },
           {
             "type": "listItem",
@@ -1381,13 +1739,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-bioproject-ids"
+                "value": "--o-bioproject-ids",
+                "key": "hu7Hdp6vU5"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing the scraped BioProject IDs."
+                "value": " is the output artifact containing the scraped BioProject IDs.",
+                "key": "au1TNSU9hS"
               }
-            ]
+            ],
+            "key": "mY0vQ5mOJZ"
           },
           {
             "type": "listItem",
@@ -1395,13 +1756,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-experiment-ids"
+                "value": "--o-experiment-ids",
+                "key": "VmHoT5KhIw"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing the scraped experiment IDs."
+                "value": " is the output artifact containing the scraped experiment IDs.",
+                "key": "rU8Hfut5F3"
               }
-            ]
+            ],
+            "key": "NaS9jcRxx7"
           },
           {
             "type": "listItem",
@@ -1409,15 +1773,19 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-sample-ids"
+                "value": "--o-sample-ids",
+                "key": "cfIw8EwdSz"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing the scraped sample IDs."
+                "value": " is the output artifact containing the scraped sample IDs.",
+                "key": "lXCT1QDKAg"
               }
-            ]
+            ],
+            "key": "cuiciBi4GT"
           }
-        ]
+        ],
+        "key": "KJIvcHV2tL"
       },
       {
         "type": "list",
@@ -1431,33 +1799,41 @@
             "children": [
               {
                 "type": "text",
-                "value": "To retrieve run accession IDs based on a text search query (performed on the BioSample database) you can use the "
+                "value": "To retrieve run accession IDs based on a text search query (performed on the BioSample database) you can use the ",
+                "key": "Nw2QsgFHyp"
               },
               {
                 "type": "inlineCode",
-                "value": "get-ids-from-query"
+                "value": "get-ids-from-query",
+                "key": "HRYF4doHAd"
               },
               {
                 "type": "text",
-                "value": " method:"
+                "value": " method:",
+                "key": "FaorUeU6Hr"
               }
-            ]
+            ],
+            "key": "sUg5HMcTtA"
           }
-        ]
+        ],
+        "key": "cBYfWoHi7I"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-ids-from-query \\\n              --p-query \"txid410656[Organism] AND \\\"public\\\"[Filter] AND (chicken OR poultry)\" \\\n              --p-email your_email@somewhere.com \\\n              --p-n-jobs 2 \\\n              --o-ids run_ids.qza \\\n              --verbose"
+        "value": "qiime fondue get-ids-from-query \\\n              --p-query \"txid410656[Organism] AND \\\"public\\\"[Filter] AND (chicken OR poultry)\" \\\n              --p-email your_email@somewhere.com \\\n              --p-n-jobs 2 \\\n              --o-ids run_ids.qza \\\n              --verbose",
+        "key": "Lw76UZV3h7"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "where:"
+            "value": "where:",
+            "key": "ByTbqlKmKh"
           }
-        ]
+        ],
+        "key": "wrKGCSd6Sr"
       },
       {
         "type": "list",
@@ -1470,13 +1846,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-query"
+                "value": "--p-query",
+                "key": "cQmy7gU45X"
               },
               {
                 "type": "text",
-                "value": " is the text search query to be executed on the BioSample database."
+                "value": " is the text search query to be executed on the BioSample database.",
+                "key": "LyfjIduNBX"
               }
-            ]
+            ],
+            "key": "K2amN64c7q"
           },
           {
             "type": "listItem",
@@ -1484,13 +1863,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-email"
+                "value": "--p-email",
+                "key": "Ad0rrsY0qE"
               },
               {
                 "type": "text",
-                "value": " is your email address (required by NCBI)."
+                "value": " is your email address (required by NCBI).",
+                "key": "OOPYX498be"
               }
-            ]
+            ],
+            "key": "Yboc7w2QTX"
           },
           {
             "type": "listItem",
@@ -1498,13 +1880,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-n-jobs"
+                "value": "--p-n-jobs",
+                "key": "CM0gWQf6VD"
               },
               {
                 "type": "text",
-                "value": " is the number of parallel download jobs (defaults to 1)."
+                "value": " is the number of parallel download jobs (defaults to 1).",
+                "key": "BU6W7ISaTJ"
               }
-            ]
+            ],
+            "key": "A9WBnth6tU"
           },
           {
             "type": "listItem",
@@ -1512,15 +1897,19 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-ids"
+                "value": "--o-ids",
+                "key": "toKDroJtWO"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing the retrieved run IDs."
+                "value": " is the output artifact containing the retrieved run IDs.",
+                "key": "Ea7ans0iE3"
               }
-            ]
+            ],
+            "key": "eEaogacmDO"
           }
-        ]
+        ],
+        "key": "jnxwSRhzOL"
       },
       {
         "type": "heading",
@@ -1528,32 +1917,43 @@
         "children": [
           {
             "type": "text",
-            "value": "Fetching metadata"
+            "value": "Fetching metadata",
+            "key": "HRV9ychpZB"
           }
-        ]
+        ],
+        "key": "V4uLcmRDKp",
+        "identifier": "fetching-metadata",
+        "label": "Fetching metadata",
+        "html_id": "fetching-metadata",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To fetch metadata associated with a set of output IDs, execute the following command:"
+            "value": "To fetch metadata associated with a set of output IDs, execute the following command:",
+            "key": "sfduQzJXHN"
           }
-        ]
+        ],
+        "key": "y2WcdpgFCt"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-metadata \\\n              --i-accession-ids ids.qza \\\n              --p-n-jobs 1 \\\n              --p-email your_email@somewhere.com \\\n              --o-metadata output_metadata.qza \\\n              --o-failed-runs failed_IDs.qza"
+        "value": "qiime fondue get-metadata \\\n              --i-accession-ids ids.qza \\\n              --p-n-jobs 1 \\\n              --p-email your_email@somewhere.com \\\n              --o-metadata output_metadata.qza \\\n              --o-failed-runs failed_IDs.qza",
+        "key": "gvmtoXpAyT"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "where:"
+            "value": "where:",
+            "key": "Unh3C8NXhz"
           }
-        ]
+        ],
+        "key": "xIwnlxbw64"
       },
       {
         "type": "list",
@@ -1566,13 +1966,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--i-accession-ids"
+                "value": "--i-accession-ids",
+                "key": "CVchNOBKXx"
               },
               {
                 "type": "text",
-                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs"
+                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs",
+                "key": "qiavLVBS4f"
               }
-            ]
+            ],
+            "key": "lECN2MPbWS"
           },
           {
             "type": "listItem",
@@ -1580,13 +1983,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-n-jobs"
+                "value": "--p-n-jobs",
+                "key": "QGcsj616MC"
               },
               {
                 "type": "text",
-                "value": " is a number of parallel download jobs (defaults to 1)"
+                "value": " is a number of parallel download jobs (defaults to 1)",
+                "key": "Jj7hPbjfqi"
               }
-            ]
+            ],
+            "key": "VrG56Dh8qT"
           },
           {
             "type": "listItem",
@@ -1594,13 +2000,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-email"
+                "value": "--p-email",
+                "key": "dHrZPmkfWP"
               },
               {
                 "type": "text",
-                "value": " is your email address (required by NCBI)"
+                "value": " is your email address (required by NCBI)",
+                "key": "m42Yr6ViRt"
               }
-            ]
+            ],
+            "key": "BttlHJON6Y"
           },
           {
             "type": "listItem",
@@ -1608,13 +2017,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-metadata"
+                "value": "--o-metadata",
+                "key": "PivQ47kAAE"
               },
               {
                 "type": "text",
-                "value": " is the output metadata artifact"
+                "value": " is the output metadata artifact",
+                "key": "N7pptchgzq"
               }
-            ]
+            ],
+            "key": "OiWeSoTYr5"
           },
           {
             "type": "listItem",
@@ -1622,72 +2034,90 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-failed-runs"
+                "value": "--o-failed-runs",
+                "key": "gbmTwL4YKz"
               },
               {
                 "type": "text",
-                "value": " is the list of all run IDs for which fetching metadata failed, with their corresponding error messages"
+                "value": " is the list of all run IDs for which fetching metadata failed, with their corresponding error messages",
+                "key": "WpcoC7rl8j"
               }
-            ]
+            ],
+            "key": "UINj41dQHh"
           }
-        ]
+        ],
+        "key": "WBF42tLPWO"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "The resulting artifact "
+            "value": "The resulting artifact ",
+            "key": "Af0XLwOGpJ"
           },
           {
             "type": "inlineCode",
-            "value": "--o-metadata "
+            "value": "--o-metadata ",
+            "key": "MDGAF6O4Uw"
           },
           {
             "type": "text",
-            "value": " will contain a TSV file with all the available metadata fields for all of the requested runs. If metadata for some run IDs failed to download they are returned in the "
+            "value": " will contain a TSV file with all the available metadata fields for all of the requested runs. If metadata for some run IDs failed to download they are returned in the ",
+            "key": "YHXrW5bA7S"
           },
           {
             "type": "inlineCode",
-            "value": "--o-failed-runs"
+            "value": "--o-failed-runs",
+            "key": "bmbNz2l6Kq"
           },
           {
             "type": "text",
-            "value": " artifact, which can be directly inputted as "
+            "value": " artifact, which can be directly inputted as ",
+            "key": "FQO8prQ0Qo"
           },
           {
             "type": "inlineCode",
-            "value": "--i-accession-ids"
+            "value": "--i-accession-ids",
+            "key": "oLmy5a3i5s"
           },
           {
             "type": "text",
-            "value": " to a subsequent "
+            "value": " to a subsequent ",
+            "key": "vMuayyshNH"
           },
           {
             "type": "inlineCode",
-            "value": "get-metadata"
+            "value": "get-metadata",
+            "key": "tHORiO4qov"
           },
           {
             "type": "text",
-            "value": " command. To pass associated DOI names for the failed runs, provide the table of accession IDs with associated DOI names as "
+            "value": " command. To pass associated DOI names for the failed runs, provide the table of accession IDs with associated DOI names as ",
+            "key": "NrAhijXXgC"
           },
           {
             "type": "inlineCode",
-            "value": "--o-linked-doi"
+            "value": "--o-linked-doi",
+            "key": "Lhl3fW5ShG"
           },
           {
             "type": "text",
-            "value": " to the "
+            "value": " to the ",
+            "key": "fYg4VhEoxT"
           },
           {
             "type": "inlineCode",
-            "value": "get-metadata"
+            "value": "get-metadata",
+            "key": "ycvpbdyc3u"
           },
           {
             "type": "text",
-            "value": " command."
+            "value": " command.",
+            "key": "fSLh1voEQP"
           }
-        ]
+        ],
+        "key": "xEosQihoPQ"
       },
       {
         "type": "heading",
@@ -1695,32 +2125,43 @@
         "children": [
           {
             "type": "text",
-            "value": "Fetching sequences"
+            "value": "Fetching sequences",
+            "key": "JcNLqNJjxZ"
           }
-        ]
+        ],
+        "key": "m0TQ2RRusW",
+        "identifier": "fetching-sequences",
+        "label": "Fetching sequences",
+        "html_id": "fetching-sequences",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To get openly accessible single- and paired-end sequences associated with a number of IDs, execute this command:"
+            "value": "To get openly accessible single- and paired-end sequences associated with a number of IDs, execute this command:",
+            "key": "vFaOJk3NK2"
           }
-        ]
+        ],
+        "key": "gRLUhHCMSs"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-sequences \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --o-single-reads output_dir_single \\\n              --o-paired-reads output_dir_paired \\\n              --o-failed-runs output_failed_ids"
+        "value": "qiime fondue get-sequences \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --o-single-reads output_dir_single \\\n              --o-paired-reads output_dir_paired \\\n              --o-failed-runs output_failed_ids",
+        "key": "U5ItDsudot"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "where:"
+            "value": "where:",
+            "key": "G0kwboOA65"
           }
-        ]
+        ],
+        "key": "FxCDEmFF0l"
       },
       {
         "type": "list",
@@ -1733,13 +2174,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--i-accession-ids"
+                "value": "--i-accession-ids",
+                "key": "RBROQfXIx1"
               },
               {
                 "type": "text",
-                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs"
+                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs",
+                "key": "c7jfgEUfvu"
               }
-            ]
+            ],
+            "key": "vPuD5k3ITC"
           },
           {
             "type": "listItem",
@@ -1747,13 +2191,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-email"
+                "value": "--p-email",
+                "key": "CjhpRAQ4Iu"
               },
               {
                 "type": "text",
-                "value": " is your email address (required by NCBI)"
+                "value": " is your email address (required by NCBI)",
+                "key": "eFG5iXB43C"
               }
-            ]
+            ],
+            "key": "Xss13QUwb4"
           },
           {
             "type": "listItem",
@@ -1761,13 +2208,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-single-reads"
+                "value": "--o-single-reads",
+                "key": "LNKX0QFtkM"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing single-read sequences"
+                "value": " is the output artifact containing single-read sequences",
+                "key": "kJWddnEqP6"
               }
-            ]
+            ],
+            "key": "GmDzdmUz2O"
           },
           {
             "type": "listItem",
@@ -1775,13 +2225,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-paired-reads"
+                "value": "--o-paired-reads",
+                "key": "CkfkQhZFcY"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing paired-end sequences"
+                "value": " is the output artifact containing paired-end sequences",
+                "key": "QBKV2BAgbY"
               }
-            ]
+            ],
+            "key": "PVvVp1pmCZ"
           },
           {
             "type": "listItem",
@@ -1789,105 +2242,131 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--o-failed-runs"
+                "value": "--o-failed-runs",
+                "key": "awiaXTPnGN"
               },
               {
                 "type": "text",
-                "value": " is the output artifact containing run IDs that failed to download"
+                "value": " is the output artifact containing run IDs that failed to download",
+                "key": "nu1dtf56iu"
               }
-            ]
+            ],
+            "key": "CtFuE4184J"
           }
-        ]
+        ],
+        "key": "StDtpE2BaK"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "The resulting sequence artifacts ("
+            "value": "The resulting sequence artifacts (",
+            "key": "iNXkjF8Tkr"
           },
           {
             "type": "inlineCode",
-            "value": "--o-single-reads"
+            "value": "--o-single-reads",
+            "key": "Z27dY64ODe"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "EwQevK3C5g"
           },
           {
             "type": "inlineCode",
-            "value": "--o-paired-reads"
+            "value": "--o-paired-reads",
+            "key": "xMMB4BSrdS"
           },
           {
             "type": "text",
-            "value": ") will contain the "
+            "value": ") will contain the ",
+            "key": "k0Skw2XJ7w"
           },
           {
             "type": "inlineCode",
-            "value": "fastq.gz"
+            "value": "fastq.gz",
+            "key": "SuXr2h753U"
           },
           {
             "type": "text",
-            "value": " files of the sequences, "
+            "value": " files of the sequences, ",
+            "key": "EHb4Q5cMgn"
           },
           {
             "type": "inlineCode",
-            "value": "metadata.yml"
+            "value": "metadata.yml",
+            "key": "WttLzsGy2O"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "zfGFJA5Mvh"
           },
           {
             "type": "inlineCode",
-            "value": "MANIFEST"
+            "value": "MANIFEST",
+            "key": "hciFSPAexm"
           },
           {
             "type": "text",
-            "value": " files.\nIf one of the provided IDs only contains sequences of one type (e.g. single-read sequences) then the other artifact\n(e.g. artifact with paired-end sequences) contains empty sequence files with dummy ID starting with "
+            "value": " files.\nIf one of the provided IDs only contains sequences of one type (e.g. single-read sequences) then the other artifact\n(e.g. artifact with paired-end sequences) contains empty sequence files with dummy ID starting with ",
+            "key": "v1jhUu6fQO"
           },
           {
             "type": "inlineCode",
-            "value": "xxx_"
+            "value": "xxx_",
+            "key": "UjxIwvdAwE"
           },
           {
             "type": "text",
-            "value": ". Similarly,\nif none of the requested sequences failed to download, the corresponding artifact will be empty."
+            "value": ". Similarly,\nif none of the requested sequences failed to download, the corresponding artifact will be empty.",
+            "key": "wUUCHrVN54"
           }
-        ]
+        ],
+        "key": "Xhd71zZCFD"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "If some run IDs failed to download they are returned in the "
+            "value": "If some run IDs failed to download they are returned in the ",
+            "key": "ixbopapjDd"
           },
           {
             "type": "inlineCode",
-            "value": "--o-failed-runs"
+            "value": "--o-failed-runs",
+            "key": "JP4YnhgwQ1"
           },
           {
             "type": "text",
-            "value": " artifact, which can be directly inputted as "
+            "value": " artifact, which can be directly inputted as ",
+            "key": "P8ezjQZMFt"
           },
           {
             "type": "inlineCode",
-            "value": "--i-accession-ids"
+            "value": "--i-accession-ids",
+            "key": "L2JT2pAbib"
           },
           {
             "type": "text",
-            "value": " to a subsequent "
+            "value": " to a subsequent ",
+            "key": "p9Fu2EPABc"
           },
           {
             "type": "inlineCode",
-            "value": "get-sequence"
+            "value": "get-sequence",
+            "key": "vwzjwOwfJS"
           },
           {
             "type": "text",
-            "value": " command."
+            "value": " command.",
+            "key": "ekoI8josW5"
           }
-        ]
+        ],
+        "key": "r18f9pybZf"
       },
       {
         "type": "heading",
@@ -1895,16 +2374,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Special case: Fetching restricted access sequences with a dbGAP repository key"
+            "value": "Special case: Fetching restricted access sequences with a dbGAP repository key",
+            "key": "YodxQF7o9T"
           }
-        ]
+        ],
+        "key": "IHZOnYNDzk",
+        "identifier": "special-case-fetching-restricted-access-sequences-with-a-dbgap-repository-key",
+        "label": "Special case: Fetching restricted access sequences with a dbGAP repository key",
+        "html_id": "special-case-fetching-restricted-access-sequences-with-a-dbgap-repository-key",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To get access to the respective dbGaP repository key users must first apply for approval and then retrieve the key from dbGAP (see prerequisites described "
+            "value": "To get access to the respective dbGaP repository key users must first apply for approval and then retrieve the key from dbGAP (see prerequisites described ",
+            "key": "TNMTJHAlmT"
           },
           {
             "type": "link",
@@ -1912,69 +2398,86 @@
             "children": [
               {
                 "type": "text",
-                "value": "here"
+                "value": "here",
+                "key": "oitBu0rbAa"
               }
-            ]
+            ],
+            "key": "N0xdXNaMQn"
           },
           {
             "type": "text",
-            "value": ")."
+            "value": ").",
+            "key": "TErNTQayQY"
           }
-        ]
+        ],
+        "key": "KSS9C72yBa"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To retrieve sequencing data using the acquired dbGAP repository key, without revealing the sensitive key, set the filepath to the stored key as an environment variable. You can either do this by running the following command in your terminal "
+            "value": "To retrieve sequencing data using the acquired dbGAP repository key, without revealing the sensitive key, set the filepath to the stored key as an environment variable. You can either do this by running the following command in your terminal ",
+            "key": "WG8QkvAL8K"
           },
           {
             "type": "inlineCode",
-            "value": "export KEY_FILEPATH=<path to key>"
+            "value": "export KEY_FILEPATH=<path to key>",
+            "key": "z7RvOg7hmJ"
           },
           {
             "type": "text",
-            "value": " or by adding the variable assignment to your "
+            "value": " or by adding the variable assignment to your ",
+            "key": "pXMVzZ2iwR"
           },
           {
             "type": "inlineCode",
-            "value": ".env"
+            "value": ".env",
+            "key": "TVCtBIA5eS"
           },
           {
             "type": "text",
-            "value": " file. For the latter option, make sure to ignore this file in version control (add to "
+            "value": " file. For the latter option, make sure to ignore this file in version control (add to ",
+            "key": "a3nrlfT7Cm"
           },
           {
             "type": "inlineCode",
-            "value": ".gitignore"
+            "value": ".gitignore",
+            "key": "BxNeElbdZd"
           },
           {
             "type": "text",
-            "value": ").\nHaving set the filepath of the key as an environment variable you can fetch the sequencing data by running "
+            "value": ").\nHaving set the filepath of the key as an environment variable you can fetch the sequencing data by running ",
+            "key": "pMkWgbW04p"
           },
           {
             "type": "inlineCode",
-            "value": "get-sequences"
+            "value": "get-sequences",
+            "key": "udaxWcdQBv"
           },
           {
             "type": "text",
-            "value": " with the parameter "
+            "value": " with the parameter ",
+            "key": "Osx2c9JDWQ"
           },
           {
             "type": "inlineCode",
-            "value": "--p-restricted-access"
+            "value": "--p-restricted-access",
+            "key": "rkMO2CMxy0"
           },
           {
             "type": "text",
-            "value": ":"
+            "value": ":",
+            "key": "NWXmmthQON"
           }
-        ]
+        ],
+        "key": "jgbSaU1I6y"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-sequences \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --p-restricted-access \\\n              --output-dir output_path"
+        "value": "qiime fondue get-sequences \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --p-restricted-access \\\n              --output-dir output_path",
+        "key": "o7rf60H4Tn"
       },
       {
         "type": "paragraph",
@@ -1984,39 +2487,49 @@
             "children": [
               {
                 "type": "text",
-                "value": "Note:"
+                "value": "Note:",
+                "key": "v0xL6QEEQp"
               }
-            ]
+            ],
+            "key": "pmC640T8Fo"
           },
           {
             "type": "text",
-            "value": " Fetching metadata with a dbGAP repository key is not supported. Hence, this flag is only available in the "
+            "value": " Fetching metadata with a dbGAP repository key is not supported. Hence, this flag is only available in the ",
+            "key": "A6DJprv0bs"
           },
           {
             "type": "inlineCode",
-            "value": "get-sequences"
+            "value": "get-sequences",
+            "key": "TUEBHVcNaW"
           },
           {
             "type": "text",
-            "value": " action (and not in the "
+            "value": " action (and not in the ",
+            "key": "zOjVs5Zsi5"
           },
           {
             "type": "inlineCode",
-            "value": "get-metadata"
+            "value": "get-metadata",
+            "key": "Kq5EGKucyy"
           },
           {
             "type": "text",
-            "value": " and "
+            "value": " and ",
+            "key": "b6DADiwjtK"
           },
           {
             "type": "inlineCode",
-            "value": "get-all"
+            "value": "get-all",
+            "key": "Jn4I3QGVGc"
           },
           {
             "type": "text",
-            "value": " actions)."
+            "value": " actions).",
+            "key": "O9qsatavJ4"
           }
-        ]
+        ],
+        "key": "Zx5IzgtZyu"
       },
       {
         "type": "heading",
@@ -2024,32 +2537,43 @@
         "children": [
           {
             "type": "text",
-            "value": "Fetching metadata and sequences"
+            "value": "Fetching metadata and sequences",
+            "key": "KSKn5YW89A"
           }
-        ]
+        ],
+        "key": "un2kIYVoAJ",
+        "identifier": "fetching-metadata-and-sequences",
+        "label": "Fetching metadata and sequences",
+        "html_id": "fetching-metadata-and-sequences",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To fetch both sequence-associated metadata and sequences associated with the provided IDs, execute this command:"
+            "value": "To fetch both sequence-associated metadata and sequences associated with the provided IDs, execute this command:",
+            "key": "mLjc6rkXTM"
           }
-        ]
+        ],
+        "key": "z8f1OAA44a"
       },
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-all \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --output-dir output-dir-name"
+        "value": "qiime fondue get-all \\\n              --i-accession-ids ids.qza \\\n              --p-email your_email@somewhere.com \\\n              --output-dir output-dir-name",
+        "key": "kQtk8LwM4y"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "where:"
+            "value": "where:",
+            "key": "hgfszAvLlM"
           }
-        ]
+        ],
+        "key": "XNIGAoedZt"
       },
       {
         "type": "list",
@@ -2062,13 +2586,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--i-accession-ids"
+                "value": "--i-accession-ids",
+                "key": "v4DfMUbhLp"
               },
               {
                 "type": "text",
-                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs"
+                "value": " is an artifact containing run, study, BioProject, experiment or sample IDs",
+                "key": "NkxKuLrxrF"
               }
-            ]
+            ],
+            "key": "qnJQVpSINu"
           },
           {
             "type": "listItem",
@@ -2076,13 +2603,16 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-email"
+                "value": "--p-email",
+                "key": "M53Jw2mSTT"
               },
               {
                 "type": "text",
-                "value": " is your email address (required by NCBI)"
+                "value": " is your email address (required by NCBI)",
+                "key": "WX32iIdUb0"
               }
-            ]
+            ],
+            "key": "MU9F7UhXLl"
           },
           {
             "type": "listItem",
@@ -2090,15 +2620,19 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--output-dir"
+                "value": "--output-dir",
+                "key": "oFUm1SzQzW"
               },
               {
                 "type": "text",
-                "value": " directory where the downloaded metadata, sequences and IDs for failed downloads are stored as QIIME 2 artifacts"
+                "value": " directory where the downloaded metadata, sequences and IDs for failed downloads are stored as QIIME 2 artifacts",
+                "key": "Qd1iVpdfm7"
               }
-            ]
+            ],
+            "key": "aswuIRZ4ZN"
           }
-        ]
+        ],
+        "key": "BMxsyhhMBc"
       },
       {
         "type": "heading",
@@ -2106,16 +2640,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Downstream analysis in QIIME 2"
+            "value": "Downstream analysis in QIIME 2",
+            "key": "cuWdpTgkOV"
           }
-        ]
+        ],
+        "key": "rQ0SEyQbuw",
+        "identifier": "downstream-analysis-in-qiime-2",
+        "label": "Downstream analysis in QIIME 2",
+        "html_id": "downstream-analysis-in-qiime-2",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "For more information on how to use q2-fondue outputs within the QIIME 2 ecosystem see section "
+            "value": "For more information on how to use q2-fondue outputs within the QIIME 2 ecosystem see section ",
+            "key": "iUu2fDuhop"
           },
           {
             "type": "link",
@@ -2123,15 +2664,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "Downstream analysis in QIIME 2"
+                "value": "Downstream analysis in QIIME 2",
+                "key": "QFdaeEnMsz"
               }
-            ]
+            ],
+            "key": "lGJZiOTie3"
           },
           {
             "type": "text",
-            "value": " in the tutorial."
+            "value": " in the tutorial.",
+            "key": "a002D02ja8"
           }
-        ]
+        ],
+        "key": "jAt2xAr12s"
       },
       {
         "type": "heading",
@@ -2139,25 +2684,34 @@
         "children": [
           {
             "type": "text",
-            "value": "Exporting data for downstream analyses outside of QIIME 2"
+            "value": "Exporting data for downstream analyses outside of QIIME 2",
+            "key": "tCgf5b2kVm"
           }
-        ]
+        ],
+        "key": "rvTMfwwTVb",
+        "identifier": "exporting-data-for-downstream-analyses-outside-of-qiime-2",
+        "label": "Exporting data for downstream analyses outside of QIIME 2",
+        "html_id": "exporting-data-for-downstream-analyses-outside-of-qiime-2",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Some downstream analyses may need to rely on tools outside of QIIME 2. Since q2-fondue outputs can be transformed directly into FASTQ and other interoperable formats, there are no restrictions for users when using these tools. Note that the exported files will no longer contain integrated provenance information (which is unique to QIIME 2 Artifacts), but this metadata can be exported also and the original artifacts will retain the provenance data for traceability purposes."
+            "value": "Some downstream analyses may need to rely on tools outside of QIIME 2. Since q2-fondue outputs can be transformed directly into FASTQ and other interoperable formats, there are no restrictions for users when using these tools. Note that the exported files will no longer contain integrated provenance information (which is unique to QIIME 2 Artifacts), but this metadata can be exported also and the original artifacts will retain the provenance data for traceability purposes.",
+            "key": "JHMm7FTerG"
           }
-        ]
+        ],
+        "key": "qa1yHliuZu"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "To learn more on how to prepare q2-fondue outputs for further analysis outside of QIIME 2 see tutorial section "
+            "value": "To learn more on how to prepare q2-fondue outputs for further analysis outside of QIIME 2 see tutorial section ",
+            "key": "Ova1peTPdp"
           },
           {
             "type": "link",
@@ -2165,15 +2719,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "Prepare downstream analysis outside of QIIME 2"
+                "value": "Prepare downstream analysis outside of QIIME 2",
+                "key": "pKeWGpr3aV"
               }
-            ]
+            ],
+            "key": "tPBY9ZsCD7"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "DpZLv0Cx9Z"
           }
-        ]
+        ],
+        "key": "JRBnSjAxzT"
       },
       {
         "type": "heading",
@@ -2181,16 +2739,23 @@
         "children": [
           {
             "type": "text",
-            "value": "Getting Help"
+            "value": "Getting Help",
+            "key": "A0rLnVu7HO"
           }
-        ]
+        ],
+        "key": "E4cl6fGaZx",
+        "identifier": "getting-help",
+        "label": "Getting Help",
+        "html_id": "getting-help",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Problem? Suggestion? Technical errors and user support requests can be filed on the "
+            "value": "Problem? Suggestion? Technical errors and user support requests can be filed on the ",
+            "key": "Rll8zSJOjs"
           },
           {
             "type": "link",
@@ -2198,15 +2763,19 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 Forum"
+                "value": "QIIME 2 Forum",
+                "key": "Z9xnAU3lV5"
               }
-            ]
+            ],
+            "key": "dcabKq0yUM"
           },
           {
             "type": "text",
-            "value": "."
+            "value": ".",
+            "key": "ge1nf3sx7v"
           }
-        ]
+        ],
+        "key": "BbqygvBtP7"
       },
       {
         "type": "heading",
@@ -2214,35 +2783,47 @@
         "children": [
           {
             "type": "text",
-            "value": "Citation"
+            "value": "Citation",
+            "key": "NaGCp13ScJ"
           }
-        ]
+        ],
+        "key": "eJ5bphYY18",
+        "identifier": "citation",
+        "label": "Citation",
+        "html_id": "citation",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "If you use "
+            "value": "If you use ",
+            "key": "v8w3JcXZW5"
           },
           {
             "type": "inlineCode",
-            "value": "fondue"
+            "value": "fondue",
+            "key": "sauqQQlYoT"
           },
           {
             "type": "text",
-            "value": " in your research, please cite the following:"
+            "value": " in your research, please cite the following:",
+            "key": "WS1uwWor4D"
           }
-        ]
+        ],
+        "key": "VmIRBNaZrD"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Michal Ziemski, Anja Adamov, Lina Kim, Lena Flörl, Nicholas A. Bokulich. 2022. Reproducible acquisition, management, and meta-analysis of nucleotide sequence (meta)data using q2-fondue.\n_Bioinformatics; doi: https://doi.org/10.1093/bioinformatics/btac639"
+            "value": "Michal Ziemski, Anja Adamov, Lina Kim, Lena Flörl, Nicholas A. Bokulich. 2022. Reproducible acquisition, management, and meta-analysis of nucleotide sequence (meta)data using q2-fondue.\n_Bioinformatics; doi: https://doi.org/10.1093/bioinformatics/btac639",
+            "key": "ezQ9ic7gde"
           }
-        ]
+        ],
+        "key": "r0VHSNbl5b"
       },
       {
         "type": "heading",
@@ -2250,20 +2831,29 @@
         "children": [
           {
             "type": "text",
-            "value": "License"
+            "value": "License",
+            "key": "ZbSHnPEolI"
           }
-        ]
+        ],
+        "key": "nEuDlVgKjE",
+        "identifier": "license",
+        "label": "License",
+        "html_id": "license",
+        "implicit": true
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "q2-fondue is released under a BSD-3-Clause license. See LICENSE for more details."
+            "value": "q2-fondue is released under a BSD-3-Clause license. See LICENSE for more details.",
+            "key": "wPqTfF7j1g"
           }
-        ]
+        ],
+        "key": "r92trEKfqp"
       }
-    ]
+    ],
+    "key": "iBQmOfczyS"
   },
   "releases": [
     {
