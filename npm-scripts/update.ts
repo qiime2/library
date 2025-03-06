@@ -19,7 +19,7 @@ if (process.argv[1] === import.meta.filename) {
     ]);
     await update_plugins(catalog, octokit);
     await update_books(catalog);
-    await update_myst(catalog);
+    await update_myst();
     await update_index();
   } finally {
     cleanup(catalog);

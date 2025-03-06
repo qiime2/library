@@ -1,11 +1,19 @@
 {
+  "amplicon": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "moshpit": {
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
+  },
   "q2-fmt": {
     "base": "https://q2-fmt.readthedocs.io/en/latest/",
     "pretty": false
   },
   "q2-micom": {
-    "base": "",
-    "pretty": false
+    "base": "https://micom-dev.github.io/q2-micom/",
+    "pretty": true
   },
   "q2-composition": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -16,8 +24,8 @@
     "pretty": false
   },
   "q2-amrfinderplus": {
-    "base": "",
-    "pretty": false
+    "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+    "pretty": true
   },
   "q2-feature-classifier": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -28,8 +36,8 @@
     "pretty": false
   },
   "q2-annotate": {
-    "base": "",
-    "pretty": false
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
   },
   "q2-vsearch": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -60,32 +68,28 @@
     "pretty": false
   },
   "q2-metnet": {
-    "base": "",
-    "pretty": false
+    "base": "https://github.com/PlanesLab/q2-metnet/tree/main",
+    "pretty": true
   },
   "q2-quality-filter": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
   "q2-boots": {
-    "base": "",
-    "pretty": false
-  },
-  "q2-viromics": {
-    "base": "",
-    "pretty": false
+    "base": "https://q2-boots.readthedocs.io/en/latest/",
+    "pretty": true
   },
   "q2-sapienns": {
-    "base": "",
-    "pretty": false
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
   },
   "q2-fondue": {
-    "base": "",
-    "pretty": false
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
   },
   "q2-assembly": {
-    "base": "",
-    "pretty": false
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
   },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -144,7 +148,7 @@
     "pretty": false
   },
   "q2-sourmash": {
-    "base": "",
-    "pretty": false
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
   }
 }
