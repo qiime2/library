@@ -1,7 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
-import lookup from "../../../../../static/json/_.json";
+import lookup from "../../../../../../../static/json/_.json";
 
 export const GET: RequestHandler = async ({ params }) => {
   const { base, pretty } = lookup[params.plugin as keyof typeof lookup];
