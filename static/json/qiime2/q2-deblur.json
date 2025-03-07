@@ -5,7 +5,7 @@
       {
         "type": "image",
         "url": "https://github.com/qiime2/q2-deblur/workflows/ci-dev/badge.svg",
-        "key": "dMWBJvDi1R"
+        "key": "N2FvAQK4kU"
       },
       {
         "type": "paragraph",
@@ -13,13 +13,13 @@
           {
             "type": "text",
             "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org.",
-            "key": "kqknriiO41"
+            "key": "OhN5RXC9Jd"
           }
         ],
-        "key": "xvulktaqMg"
+        "key": "cMMzHbFsVq"
       }
     ],
-    "key": "nbX9VhPI83"
+    "key": "fdmx0GE899"
   },
   "releases": [
     {
@@ -36,13 +36,13 @@
               {
                 "type": "text",
                 "value": "Bump deblur micro version dependency to 1.0.2",
-                "key": "igk6lAM8rf"
+                "key": "LpOah8vY7p"
               }
             ],
-            "key": "kfBRIu9GpC"
+            "key": "UZIk1Dzub4"
           }
         ],
-        "key": "rYCBEF4qdR"
+        "key": "zoZdujhz1X"
       }
     },
     {
@@ -59,13 +59,13 @@
               {
                 "type": "text",
                 "value": "This microrelease sets its minimal Deblur dependency at version 1.0.1. Additionally, we’re excited to now include per-sample statistics about the Deblur process. The stats are not automatically collected, and must be enabled with --p-sample-stats; they are not enabled automatically as their collection will come at a runtime cost. We may revisit whether to make them automatic in the future. For the time being, even if sample stats are not requested, an empty .qza file will be produced as there isn’t a means at the moment for optional QIIME2 method outputs.",
-                "key": "XD2NapdJkW"
+                "key": "Vuo9UpxTy7"
               }
             ],
-            "key": "M0Mu3M1zLu"
+            "key": "EmN4Clukj2"
           }
         ],
-        "key": "EkoRVtivEj"
+        "key": "UDoFBB4wUG"
       }
     },
     {
@@ -82,13 +82,13 @@
               {
                 "type": "text",
                 "value": "Identical to 2017.2.1, except the version string is accurate.",
-                "key": "ZXQPxRW7K9"
+                "key": "st9ZUviNQZ"
               }
             ],
-            "key": "Lg6jqyuTVG"
+            "key": "c9tfHK1GsR"
           }
         ],
-        "key": "GqEO0nw47N"
+        "key": "txPBFEO5TK"
       }
     },
     {
@@ -105,13 +105,13 @@
               {
                 "type": "text",
                 "value": "Bug fix: threading was not working",
-                "key": "fUscP550k7"
+                "key": "XD4lVGZ00W"
               }
             ],
-            "key": "bjiw9Xrhhd"
+            "key": "xp9Rz2j4fL"
           }
         ],
-        "key": "wNi2vVhbeP"
+        "key": "AWOPQjTahj"
       }
     },
     {
@@ -128,13 +128,13 @@
               {
                 "type": "text",
                 "value": "REL: 2017.2.0",
-                "key": "X8JOjDjEll"
+                "key": "UDyet6zWBw"
               }
             ],
-            "key": "dxPsFOBrjZ"
+            "key": "f48yzdg9QO"
           }
         ],
-        "key": "OShsDzNIJb"
+        "key": "z0mYneTYhl"
       }
     }
   ],

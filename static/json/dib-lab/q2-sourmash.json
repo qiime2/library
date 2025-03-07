@@ -8,10 +8,10 @@
           {
             "type": "text",
             "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org. For details on sourmash, see http://sourmash.readthedocs.io/.",
-            "key": "sWFvKJcneJ"
+            "key": "p7caX0eyfG"
           }
         ],
-        "key": "mQZ892ncKu"
+        "key": "ZugRJLhzTV"
       },
       {
         "type": "heading",
@@ -20,10 +20,10 @@
           {
             "type": "text",
             "value": "Installing the QIIME 2 sourmash plugin",
-            "key": "srrvAn1aC9"
+            "key": "uF5z5C5Fpb"
           }
         ],
-        "key": "SMCbiqEKKK",
+        "key": "fMesnrggt4",
         "identifier": "installing-the-qiime-2-sourmash-plugin",
         "label": "Installing the QIIME 2 sourmash plugin",
         "html_id": "installing-the-qiime-2-sourmash-plugin",
@@ -35,7 +35,7 @@
           {
             "type": "text",
             "value": "q2-sourmash is a QIIME 2 plugin for sourmash, a tool computing and comparing MinHash signatures for nucleotide sequences fast and effieciently. You can find out more about sourmash by reading the paper ",
-            "key": "fAdPinyf6P"
+            "key": "I4MG8WCWZe"
           },
           {
             "type": "link",
@@ -44,15 +44,15 @@
               {
                 "type": "text",
                 "value": "(Brown and Irber, JOSS 2018)",
-                "key": "SPUWw98e94"
+                "key": "YigPKbvN2i"
               }
             ],
-            "key": "TbcFz52Kos"
+            "key": "fA7wcwmzQX"
           },
           {
             "type": "text",
             "value": " or checking out the ",
-            "key": "suVKL4SPpS"
+            "key": "Gn0BkJlXwR"
           },
           {
             "type": "link",
@@ -61,18 +61,18 @@
               {
                 "type": "text",
                 "value": "sourmash documentation",
-                "key": "qFA349jIMj"
+                "key": "KNi9p0jgA3"
               }
             ],
-            "key": "ottPruFLpE"
+            "key": "WL9GkjKULW"
           },
           {
             "type": "text",
             "value": ".",
-            "key": "ZL8KGOKZN4"
+            "key": "oXLvNcWs5E"
           }
         ],
-        "key": "vkxgor7isx"
+        "key": "wcRPdTchI5"
       },
       {
         "type": "paragraph",
@@ -80,7 +80,7 @@
           {
             "type": "text",
             "value": "You need to have QIIME 2 version 2018.4 or later. Also, regardless of which way you install, you need to be in a QIIME 2 environment for this to work. ",
-            "key": "LT0O7MIWBA"
+            "key": "WTmsV4esrn"
           },
           {
             "type": "link",
@@ -89,28 +89,28 @@
               {
                 "type": "text",
                 "value": "Install QIIME 2",
-                "key": "a8NSJ6pcqR"
+                "key": "tbKWVwjPbh"
               }
             ],
-            "key": "nr9NmV8R6h"
+            "key": "yXF7GwEFcV"
           },
           {
             "type": "text",
             "value": " and activate the QIIME 2 virtual environment (e.g. ",
-            "key": "kO9UrkWKen"
+            "key": "P6W4bDbKV1"
           },
           {
             "type": "inlineCode",
             "value": "source activate qiime2-2018.8",
-            "key": "nZPSGLUC1R"
+            "key": "xKMXFgKLuy"
           },
           {
             "type": "text",
             "value": "), and then install sourmash by running:",
-            "key": "YCsAzXp9YU"
+            "key": "ar5hKWN4zo"
           }
         ],
-        "key": "lA3hGzyFD0"
+        "key": "y15xlQStkq"
       },
       {
         "type": "paragraph",
@@ -118,10 +118,10 @@
           {
             "type": "inlineCode",
             "value": "conda install -c bioconda sourmash",
-            "key": "SnEHKVmbqC"
+            "key": "iKJPsoRzg6"
           }
         ],
-        "key": "m8adQlD7jF"
+        "key": "oOvHyypKSE"
       },
       {
         "type": "paragraph",
@@ -129,16 +129,16 @@
           {
             "type": "text",
             "value": "You will also need to install q2-types-genomics (unless your environment already has it):",
-            "key": "m4gQw5EzU1"
+            "key": "fWlA1UkwJM"
           }
         ],
-        "key": "kUhEZHCIdf"
+        "key": "v44RZ1YIRY"
       },
       {
         "type": "code",
         "lang": "",
         "value": "conda install -c conda-forge -c bioconda -c https://packages.qiime2.org/qiime2/2023.5/tested -c defaults \\\n    q2-types-genomics",
-        "key": "G3K59UI8pZ"
+        "key": "igpiXNlO3X"
       },
       {
         "type": "paragraph",
@@ -146,16 +146,16 @@
           {
             "type": "text",
             "value": "To install the plugin, run the following command:",
-            "key": "OYYEG0n1DE"
+            "key": "mRyW9Ch72n"
           }
         ],
-        "key": "LO7uGRb7ou"
+        "key": "QLvHdt4U7N"
       },
       {
         "type": "code",
         "lang": "",
         "value": "pip install https://github.com/dib-lab/q2-sourmash/archive/master.zip",
-        "key": "SLeXO3TDgf"
+        "key": "vdIZLpoEnL"
       },
       {
         "type": "paragraph",
@@ -163,20 +163,20 @@
           {
             "type": "text",
             "value": "To check that the installation worked, type ",
-            "key": "gKNLLKCTn3"
+            "key": "QK9V2bNy8b"
           },
           {
             "type": "inlineCode",
             "value": "qiime",
-            "key": "zNoTII46ZO"
+            "key": "ZM8CKsP34U"
           },
           {
             "type": "text",
             "value": " on the command line. The sourmash plugin should show up in the list of available plugins.",
-            "key": "w5I3lvA3Lu"
+            "key": "Qb8D1dvG1X"
           }
         ],
-        "key": "kIj7n5kL5b"
+        "key": "tzVp9bzskg"
       },
       {
         "type": "heading",
@@ -185,10 +185,10 @@
           {
             "type": "text",
             "value": "Using the QIIME2 sourmash plugin",
-            "key": "T1yfOOD44b"
+            "key": "x82YiHXIkQ"
           }
         ],
-        "key": "Gn0g4fV4Zy",
+        "key": "teFYcOCEAS",
         "identifier": "using-the-qiime2-sourmash-plugin",
         "label": "Using the QIIME2 sourmash plugin",
         "html_id": "using-the-qiime2-sourmash-plugin",
@@ -200,30 +200,30 @@
           {
             "type": "text",
             "value": "Currently there are two main methods for use in the QIIME 2 sourmash plugin: ",
-            "key": "qdt42eZnWl"
+            "key": "hmE4DFNoRq"
           },
           {
             "type": "inlineCode",
             "value": "compute",
-            "key": "rn2KA2VnXQ"
+            "key": "JiewW82lhY"
           },
           {
             "type": "text",
             "value": " to calcualte MinHash signatures from nucleotide sequences and ",
-            "key": "r0XZE4o0UM"
+            "key": "HzTBiQCBlh"
           },
           {
             "type": "inlineCode",
             "value": "compare",
-            "key": "PrMFmXnWzi"
+            "key": "i2JCmQ9LfN"
           },
           {
             "type": "text",
             "value": " to calculate a Jaccard distance between samples.",
-            "key": "qR71pLwMRz"
+            "key": "ckH2htKFuQ"
           }
         ],
-        "key": "w5pb34vmRi"
+        "key": "K7JoTgnw6B"
       },
       {
         "type": "heading",
@@ -232,10 +232,10 @@
           {
             "type": "text",
             "value": "Computing signatures",
-            "key": "qIARCt9508"
+            "key": "T1OQZu3pTP"
           }
         ],
-        "key": "NMYAOVzxcI",
+        "key": "aNsJ7cI4LZ",
         "identifier": "computing-signatures",
         "label": "Computing signatures",
         "html_id": "computing-signatures",
@@ -247,30 +247,30 @@
           {
             "type": "text",
             "value": "The ",
-            "key": "rGCZBpM7q3"
+            "key": "dbMRjmhkGc"
           },
           {
             "type": "inlineCode",
             "value": "compute",
-            "key": "LyHjqO6SMc"
+            "key": "QxfTXQZbMY"
           },
           {
             "type": "text",
             "value": " calcuates the minhash signatures for a given set of nucleotide sequences. To run, one must simply supply a ",
-            "key": "qcJxzaB0XV"
+            "key": "hQGIy9h7dI"
           },
           {
             "type": "inlineCode",
             "value": ".qza",
-            "key": "NnP0tQ6ula"
+            "key": "SDxCvaUZ0g"
           },
           {
             "type": "text",
             "value": " archive (directory) containing sequence file ending with ‘fastq.gz’.",
-            "key": "LgXWdZCvFI"
+            "key": "WK7KgH6RGP"
           }
         ],
-        "key": "oO2zVLUCpt"
+        "key": "MBcGsRbREC"
       },
       {
         "type": "paragraph",
@@ -278,7 +278,7 @@
           {
             "type": "text",
             "value": "First download a test set of fastq.gz files already in the form of a qza archive and the associated metadata. Here we are using data from the ",
-            "key": "gXsyS2t1Ei"
+            "key": "OWj69z087r"
           },
           {
             "type": "link",
@@ -287,24 +287,24 @@
               {
                 "type": "text",
                 "value": "Moving Pictures tutorial",
-                "key": "SrQ3bNyKbs"
+                "key": "do685Jrfjb"
               }
             ],
-            "key": "uGvU0rkSF9"
+            "key": "IDulzioZP1"
           },
           {
             "type": "text",
             "value": ":",
-            "key": "FJHNbhl4Aq"
+            "key": "mavODhMuxf"
           }
         ],
-        "key": "rRjjeNfKcZ"
+        "key": "y2yDNnGk2H"
       },
       {
         "type": "code",
         "lang": "",
         "value": "wget -c -nc https://docs.qiime2.org/2018.4/data/tutorials/moving-pictures/demux.qza\nwget -c -nc https://data.qiime2.org/2018.8/tutorials/moving-pictures/sample_metadata.tsv ",
-        "key": "R6xNDiCoOM"
+        "key": "xFhcr22bSx"
       },
       {
         "type": "paragraph",
@@ -312,10 +312,10 @@
           {
             "type": "text",
             "value": "To calculate sourmash signatures for all sequence files within the archive use the following:",
-            "key": "ptCWzJG9Ki"
+            "key": "Mpa0JUoxnv"
           }
         ],
-        "key": "FH6pBeeSPV"
+        "key": "ch1otkSIEW"
       },
       {
         "type": "paragraph",
@@ -323,10 +323,10 @@
           {
             "type": "inlineCode",
             "value": "qiime sourmash compute --i-sequence-file demux.qza --p-ksizes 21 --p-scaled 10000 --o-min-hash-signature sigs.qza",
-            "key": "NoHfd3fQ79"
+            "key": "vRfOC969hX"
           }
         ],
-        "key": "X43STWmvxT"
+        "key": "ovVuVRVnyS"
       },
       {
         "type": "paragraph",
@@ -334,10 +334,10 @@
           {
             "type": "text",
             "value": "The following flags are required:",
-            "key": "FO2d6E2YMW"
+            "key": "gFNNylbdIO"
           }
         ],
-        "key": "DCCUl7ixJ0"
+        "key": "HiVUOZkHPl"
       },
       {
         "type": "list",
@@ -351,15 +351,15 @@
               {
                 "type": "inlineCode",
                 "value": "--i-sequence-file",
-                "key": "BlSsTmuddo"
+                "key": "iZyhYDbbsA"
               },
               {
                 "type": "text",
                 "value": " : the path to the qza directory",
-                "key": "rl2xDDQUPu"
+                "key": "u0XGfmVlTh"
               }
             ],
-            "key": "i1p7k8qcfj"
+            "key": "PG3FY7HFPA"
           },
           {
             "type": "listItem",
@@ -368,15 +368,15 @@
               {
                 "type": "inlineCode",
                 "value": "--p-ksizes",
-                "key": "GUsTLA1oTt"
+                "key": "VYiMfLqN8S"
               },
               {
                 "type": "text",
                 "value": " : the k-size of the hash (integer)",
-                "key": "bdfT8rI237"
+                "key": "qKryN9OArh"
               }
             ],
-            "key": "XGKxEA4zR8"
+            "key": "oKGGwuEZ90"
           },
           {
             "type": "listItem",
@@ -385,15 +385,15 @@
               {
                 "type": "inlineCode",
                 "value": "--p-scaled",
-                "key": "UOcV0mTrv4"
+                "key": "hkC2mwbCq1"
               },
               {
                 "type": "text",
                 "value": " : the scaled value (integer)",
-                "key": "K0VfeDxRXS"
+                "key": "E5kpR83ssK"
               }
             ],
-            "key": "tPsrHRHclm"
+            "key": "WtJwyQPAAb"
           },
           {
             "type": "listItem",
@@ -402,18 +402,18 @@
               {
                 "type": "inlineCode",
                 "value": "--o-min-hash-signature",
-                "key": "e1eIJYAnlU"
+                "key": "irAfLiksK2"
               },
               {
                 "type": "text",
                 "value": " : the output qza file name",
-                "key": "ZGOKTXFKok"
+                "key": "tSOVWVhrYf"
               }
             ],
-            "key": "PYBhOWyhM4"
+            "key": "EDoRI8rAo6"
           }
         ],
-        "key": "UodWw5hGiJ"
+        "key": "E1KJ9aX6mj"
       },
       {
         "type": "paragraph",
@@ -421,17 +421,17 @@
           {
             "type": "text",
             "value": "The output archive, in this case ",
-            "key": "b8C2ksorTK"
+            "key": "vqc3pixTam"
           },
           {
             "type": "inlineCode",
             "value": "sigs.qza",
-            "key": "tER8gIRJ06"
+            "key": "bAlAKsrfXR"
           },
           {
             "type": "text",
             "value": ", contains the signature files for each of the fastq.gz files that were input. They can be viewed using the ",
-            "key": "JjtqmxZrLH"
+            "key": "Oy0u066Rjw"
           },
           {
             "type": "link",
@@ -440,24 +440,24 @@
               {
                 "type": "text",
                 "value": "qiime online viewer",
-                "key": "ugzN7zyyJN"
+                "key": "F4YMFUhYjv"
               }
             ],
-            "key": "j3tOxzpfOq"
+            "key": "TVlKaIQqGH"
           },
           {
             "type": "text",
             "value": " or by unzipping the qza file.",
-            "key": "bk8mdpI2UB"
+            "key": "H2tkMdsxAG"
           }
         ],
-        "key": "du8NuuIrq0"
+        "key": "M9TXKjuvLV"
       },
       {
         "type": "code",
         "lang": "",
         "value": "qiime tools export --input-path sigs.qza --output-path sigs",
-        "key": "nqVMZhONYr"
+        "key": "StajfGm4di"
       },
       {
         "type": "heading",
@@ -466,10 +466,10 @@
           {
             "type": "text",
             "value": "Comparing signatures",
-            "key": "gOY8fQScmG"
+            "key": "N78JTMv4CC"
           }
         ],
-        "key": "mCtjFJqpZT",
+        "key": "rb4bdF5QfE",
         "identifier": "comparing-signatures",
         "label": "Comparing signatures",
         "html_id": "comparing-signatures",
@@ -481,26 +481,26 @@
           {
             "type": "text",
             "value": "Signatures that have been calculated as above can then be compared using ",
-            "key": "V9i5NtGYl5"
+            "key": "FQp2oLh0O6"
           },
           {
             "type": "inlineCode",
             "value": "sourmash compare",
-            "key": "zuIPSV8U2E"
+            "key": "kNa4sUJpJD"
           },
           {
             "type": "text",
             "value": ". This will calculate a pair-wise Jaccard distance between each of the samples included in the provided qza archive:",
-            "key": "eiT62SK9H7"
+            "key": "OGgBUIoRIV"
           }
         ],
-        "key": "iyM29WEEt4"
+        "key": "L5sAkpKTHc"
       },
       {
         "type": "code",
         "lang": "",
         "value": "qiime sourmash compare --i-min-hash-signature sigs.qza --p-ksize 21 --o-compare-output compare.mat.qza",
-        "key": "vpQY6Q4Wka"
+        "key": "WZFIgnckjv"
       },
       {
         "type": "paragraph",
@@ -508,38 +508,36 @@
           {
             "type": "text",
             "value": "The output, ",
-            "key": "hDDC520SVT"
+            "key": "TFT4XDNyug"
           },
           {
             "type": "inlineCode",
             "value": "compare.mat.qza",
-            "key": "HFguSeYVW3"
+            "key": "OxCmMPLV8v"
           },
           {
             "type": "text",
             "value": ", can then be investigated as above by unzipping the qza archive or can be pushed through subsequent analyses (e.g. generate a PCoA plot):",
-            "key": "AETrIhW1bW"
+            "key": "MA42d7aWCI"
           }
         ],
-        "key": "QysXVxbZGA"
+        "key": "DQTe3dzl8Z"
       },
       {
         "type": "code",
         "lang": "",
         "value": "qiime diversity pcoa --i-distance-matrix compare.mat.qza  --o-pcoa pcoa.compare.mat.qza\nqiime emperor plot --i-pcoa pcoa.compare.mat.qza --o-visualization emperor.qzv --m-metadata-file sample_metadata.tsv",
-        "key": "MzTndTbaeU"
+        "key": "RJtVqywT48"
       }
     ],
-    "key": "TPF59YCnGG"
+    "key": "x4vJzOQVcC"
   },
   "releases": [],
   "owner": "dib-lab",
   "name": "q2-sourmash",
   "docs": "https://bokulich-lab.github.io/moshpit-docs/",
   "in_distro": true,
-  "distros": [
-    "metagenome-2024.10"
-  ],
+  "distros": ["metagenome-2024.10"],
   "stars": 6,
   "description": "Qiime2 Sourmash Plugin",
   "branch": "main",
