@@ -1,12 +1,2061 @@
 {
-  "Readme": "# q2-assembly\n![CI](https://github.com/bokulich-lab/q2-assembly/actions/workflows/ci-dev.yaml/badge.svg)\n[![codecov](https://codecov.io/gh/bokulich-lab/q2-assembly/branch/main/graph/badge.svg?token=THMBOFUZR0)](https://codecov.io/gh/bokulich-lab/q2-assembly)\n[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)\n\nQIIME 2 plugin for (meta)genome assembly.\n\n## Installation\n_q2-assembly_ is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official [QIIME 2 documentation](https://docs.qiime2.org).\n\n## Functionality\nThis QIIME 2 plugin contains actions used to assemble (meta)genomes from short single/paired-end\nsequencing reads:\n\n| Action               | Description                                                | Underlying tool                                        |\n|----------------------|------------------------------------------------------------|--------------------------------------------------------|\n| assemble-megahit     | Assemble contigs using MEGAHIT.                            | [MEGAHIT](https://github.com/voutcn/megahit)           |\n| assemble-spades      | Assemble contigs using SPAdes.                             | [SPAdes](https://github.com/ablab/spades)              |\n| evaluate-contigs     | Evaluate quality of the assembled contigs using metaQUAST. | [QUAST](https://github.com/ablab/quast)                |\n| generate-reads       | Simulate NGS reads using InSilicoSeq.                      | [InSilicoSeq](https://github.com/HadrienG/InSilicoSeq) |\n| index-contigs        | Index contigs using Bowtie 2.                              | [Bowtie 2](https://github.com/BenLangmead/bowtie2)     |\n| index-derep-mags     | Index dereplicated MAGs using Bowtie2.                     | [Bowtie 2](https://github.com/BenLangmead/bowtie2)     |\n| index-mags           | Index MAGs using Bowtie 2.                                 | [Bowtie 2](https://github.com/BenLangmead/bowtie2)     |\n| map-reads            | Map reads to contigs/MAGs using Bowtie 2.                  | [Bowtie 2](https://github.com/BenLangmead/bowtie2)     |\n| rename-contigs       | Rename contigs using unique IDs.                           | -                                                      |\n\n## Dev environment\nThis repository follows the _black_ code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing `make dev` in your conda environment. From then on,\nthey will be run automatically every time you commit any changes.\n",
-  "Plugin Owner": "bokulich-lab",
-  "Plugin Name": "q2-assembly",
-  "Branch": "main",
-  "User Docs": "https://bokulich-lab.github.io/moshpit-docs",
-  "Build Status": "passed",
-  "Commit Date": "2025-01-18T21:21:29Z",
-  "Stars": 4,
-  "Description": "QIIME 2 plugin for (meta)genome assembly.",
-  "Releases": ["metagenome-2024.10"]
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-assembly/actions/workflows/ci-dev.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-assembly",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-assembly/branch/main/graph/badge.svg?token=THMBOFUZR0",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin for (meta)genome assembly."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-assembly"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Functionality"
+          }
+        ],
+        "identifier": "functionality",
+        "label": "Functionality",
+        "html_id": "functionality",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This QIIME 2 plugin contains actions used to assemble (meta)genomes from short single/paired-end\nsequencing reads:"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Action"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Description"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Underlying tool"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "assemble-megahit"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Assemble contigs using MEGAHIT."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/voutcn/megahit",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "MEGAHIT"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "assemble-spades"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Assemble contigs using SPAdes."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ablab/spades",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "SPAdes"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "evaluate-contigs"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Evaluate quality of the assembled contigs using metaQUAST."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ablab/quast",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "QUAST"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "generate-reads"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Simulate NGS reads using InSilicoSeq."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/HadrienG/InSilicoSeq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "InSilicoSeq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "index-contigs"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Index contigs using Bowtie 2."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/BenLangmead/bowtie2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Bowtie 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "index-derep-mags"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Index dereplicated MAGs using Bowtie2."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/BenLangmead/bowtie2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Bowtie 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "index-mags"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Index MAGs using Bowtie 2."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/BenLangmead/bowtie2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Bowtie 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "map-reads"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Map reads to contigs/MAGs using Bowtie 2."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/BenLangmead/bowtie2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Bowtie 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "rename-contigs"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Rename contigs using unique IDs."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "-"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Dev environment"
+          }
+        ],
+        "identifier": "dev-environment",
+        "label": "Dev environment",
+        "html_id": "dev-environment",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This repository follows the "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "black"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "make dev"
+          },
+          {
+            "type": "text",
+            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2023.5.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2023.5.0.dev0",
+      "name": "2023.5.0.dev0",
+      "published_at": "2023-03-06T10:41:59Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: enable multi-processing on Linux by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/33",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#33"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/33",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "33"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2022.11.0...2023.5.0.dev0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.11.0...2023.5.0.dev0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2022.11.0...2023.5.0.dev0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2022.11.0...2023.5.0.dev0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2023.2.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2023.2.0.dev0",
+      "name": "2023.2.0.dev0",
+      "published_at": "2023-02-13T14:39:06Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: enable multi-processing on Linux by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/33",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#33"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/33",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "33"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2022.11.0...2023.2.0.dev0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.11.0...2023.2.0.dev0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2022.11.0...2023.2.0.dev0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2022.11.0...2023.2.0.dev0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.11.0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2022.11.0",
+      "name": "2022.11.0",
+      "published_at": "2022-12-14T16:08:02Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: set the default thread count to 1 in all actions by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/30",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#30"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/30",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "30"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2022.8.0...2022.11.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.8.0...2022.11.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2022.8.0...2022.11.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2022.8.0...2022.11.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.11.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2022.11.0.dev0",
+      "name": "2022.11.0.dev0",
+      "published_at": "2022-11-11T15:57:57Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: readme and header updates by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/17",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#17"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/17",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "17"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add an independent test step to CI by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/18",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#18"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/18",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "18"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: more CI improvements by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/19",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#19"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/19",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "19"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI/DEP: update recipe and add quast by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#20"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "20"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: read mapping to contigs using Bowtie2 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/15",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#15"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/15",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "15"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: clean up CI tasks by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/24",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#24"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/24",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "24"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add better pre-commit hooks by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/25",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#25"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/25",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "25"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: Update README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/26",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#26"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/26",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "26"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update conda channel in the readme by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/28",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#28"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/28",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "28"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#20"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "20"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2022.4.0.dev0...2022.11.0.dev0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.4.0.dev0...2022.11.0.dev0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2022.4.0.dev0...2022.11.0.dev0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2022.4.0.dev0...2022.11.0.dev0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.8.0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2022.8.0",
+      "name": "2022.8.0",
+      "published_at": "2022-08-29T12:46:23Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: readme and header updates by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/17",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#17"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/17",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "17"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add an independent test step to CI by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/18",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#18"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/18",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "18"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: more CI improvements by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/19",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#19"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/19",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "19"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI/DEP: update recipe and add quast by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#20"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "20"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: read mapping to contigs using Bowtie2 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/15",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#15"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/15",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "15"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: clean up CI tasks by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/24",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#24"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/24",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "24"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add better pre-commit hooks by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/25",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#25"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/25",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "25"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: Update README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/26",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#26"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/26",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "26"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update conda channel in the readme by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/28",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#28"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/28",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "28"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ebolyen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ebolyen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#20"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/20",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "20"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2022.4.0.dev0...2022.8.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.4.0.dev0...2022.8.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2022.4.0.dev0...2022.8.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2022.4.0.dev0...2022.8.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.4.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2022.4.0.dev0",
+      "name": "2022.4.0.dev0",
+      "published_at": "2022-04-20T08:42:07Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "2021.8.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2021.8.0.dev0",
+      "name": "2021.8.0.dev0",
+      "published_at": "2021-06-16T08:55:03Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "bokulich-lab",
+  "name": "q2-assembly",
+  "branch": "main",
+  "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+  "last_commit": {
+    "sha": "a124882a861acaab65252c565e44d34dee2a43c4",
+    "status": "passed",
+    "date": "2025-01-18T21:21:29Z"
+  },
+  "stars": 4,
+  "description": "QIIME 2 plugin for (meta)genome assembly.",
+  "distros": [
+    "metagenome-2024.10"
+  ]
 }

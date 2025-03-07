@@ -1,0 +1,98 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-feature-classifier/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/q2-feature-classifier/releases/tag/2017.2.0",
+      "name": "q2-feature-classifier 2017.2.0",
+      "published_at": "2017-02-07T00:59:31Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "0.0.6",
+      "html_url": "https://github.com/qiime2/q2-feature-classifier/releases/tag/0.0.6",
+      "name": "q2-feature-classifier 0.0.6",
+      "published_at": "2016-11-03T00:07:48Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-feature-classifier 0.0.6 is a QIIME 2 plugin synchronized with the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/releases/tag/2.0.6",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2.0.6 release"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". See https://qiime2.org for details about QIIME 2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "0.0.5",
+      "html_url": "https://github.com/qiime2/q2-feature-classifier/releases/tag/0.0.5",
+      "name": "q2-feature-classifier 0.0.5",
+      "published_at": "2016-10-08T21:52:15Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-feature-classifier",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 19,
+  "description": "QIIME 2 plugin supporting taxonomic classification",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "0ba5389b90f4c2d70d5f6955450318831433bc66",
+    "status": "passed",
+    "date": "2025-02-20T18:43:52Z"
+  }
+}

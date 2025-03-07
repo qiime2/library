@@ -1,0 +1,451 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-vizard/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!\n"
+          },
+          {
+            "type": "image",
+            "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/vizarded-lizard-wizard.png"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installing q2-vizard"
+          }
+        ],
+        "identifier": "installing-q2-vizard",
+        "label": "Installing q2-vizard",
+        "html_id": "installing-q2-vizard",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "q2-vizard"
+          },
+          {
+            "type": "text",
+            "value": " is included in the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2024.10/install/native/#qiime-2-amplicon-distribution",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Amplicon Distribution"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " as of 2024.10!\nIf you’d like to install it separately (within a QIIME 2 Tiny Distribution), please follow the instructions below."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Start by installing conda using the same instructions provided in the "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://docs.qiime2.org/2024.5/install/native/#miniconda",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "QIIME 2 User Docs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Contained in this plugin is an environment file for easy installation within the QIIME 2 Tiny Distribution. You can use the following command to create this environment:"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda env create -n q2vizard-2024.10 -f https://raw.githubusercontent.com/qiime2/q2-vizard/dev/environment-files/2024.10-vizard-environment.yml"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 2,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Activate your new environment and enjoy!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda activate q2vizard-2024.10"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using q2-vizard"
+          }
+        ],
+        "identifier": "using-q2-vizard",
+        "label": "Using q2-vizard",
+        "html_id": "using-q2-vizard",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The following Metadata vizualizations are available for use, with examples below!"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "scatterplot_2d"
+          }
+        ],
+        "identifier": "scatterplot-2d",
+        "label": "scatterplot_2d",
+        "html_id": "scatterplot-2d",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This visualizer provides an exploratory view of your Metadata - allowing for any two numeric measures to be plotted against each other, with an optional third categorical measure used for color-coding. You can easily toggle between different measures using the drop downs for X, Y, and colorBy."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Demo"
+          }
+        ],
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
+      },
+      {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/scatterplot_example.png"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/visualization/?src=https://www.dropbox.com/scl/fi/566wegb3fvc10mtms93nk/scatterplot-demo.qzv?rlkey=aay1pjsbketne6sbei8x2luoe",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interactive Link"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "lineplot"
+          }
+        ],
+        "identifier": "lineplot",
+        "label": "lineplot",
+        "html_id": "lineplot",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This visualizer generates a lineplot displaying relationships between two numeric Metadata measures, with an optional third categorical measure for grouping your data into separate lines. If replicates are present within your first numeric measure (plotted on the X-axis), you can select either ‘median’ or ‘mean’ for replicate handling, which will create line(s) with the average at each point where replicates are present. All numeric columns present within your Metadata will be available as drop-down options on the Y-axis, but the chosen measure for the X-axis will remain fixed."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Demo"
+          }
+        ],
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
+      },
+      {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/lineplot_example.png"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/visualization/?src=https://www.dropbox.com/scl/fi/r044001aj22qr8b2jrmy7/lineplot-demo.qzv?rlkey=k9nfifazsorn9p51fcy7zsjk8",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interactive Link"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "heatmap"
+          }
+        ],
+        "identifier": "heatmap",
+        "label": "heatmap",
+        "html_id": "heatmap",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This visualizer generates a heatmap displaying relationships between three Metadata measures. Two of the measures (which can be either categorical or numeric) are mapped to the x and y axes. The third measure (which must be numeric) defines the color gradient of the heatmap, illustrating the intensity or distribution of values across the grid."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Demo"
+          }
+        ],
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
+      },
+      {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/heatmap_example.png"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/visualization/?src=https://www.dropbox.com/scl/fi/q6yrsg1pens7fhzlv14bv/demo-heatmap.qzv?rlkey=eoomz6gw8vcku7kbfjbqurulw",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interactive Link"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "boxplot"
+          }
+        ],
+        "identifier": "boxplot",
+        "label": "boxplot",
+        "html_id": "boxplot",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This visualizer generates boxplot(s) displaying relationships between a numerical Metadata measure and a categorical Metadata measure. Users can choose from three whisker calculation methods: percentile-based (9th/91st), min-max, and Tukey’s Interquartile Range (IQR)."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Demo"
+          }
+        ],
+        "identifier": "demo",
+        "label": "Demo",
+        "html_id": "demo",
+        "implicit": true
+      },
+      {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/boxplot_example.png"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/visualization/?src=https://www.dropbox.com/scl/fi/ua9m4ayplk19n1pndanpe/boxplot-demo.qzv?rlkey=7rtzze6jl4ryndi6ukullpg2k",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Interactive Link"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2025.4.0.dev1",
+      "html_url": "https://github.com/qiime2/q2-vizard/releases/tag/2025.4.0.dev1",
+      "name": "pyproject.toml migration",
+      "published_at": "2024-12-11T22:58:23Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "PLEASE IGNORE - this is for internal testing to confirm release behavior for pyproject.toml migration."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-vizard",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10"
+  ],
+  "stars": 1,
+  "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "10bef67010b46b626b10f6dfd303a59c9cf28715",
+    "status": "passed",
+    "date": "2025-01-18T21:11:47Z"
+  }
+}

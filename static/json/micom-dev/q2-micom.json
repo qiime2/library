@@ -1,14 +1,909 @@
 {
-  "Readme": "<img src=\"https://github.com/micom-dev/q2-micom/raw/main/docs/assets/logo.png\" width=\"75%\">\n\n[![Test and deploy](https://github.com/micom-dev/q2-micom/actions/workflows/test_package.yml/badge.svg)](https://github.com/micom-dev/q2-micom/actions/workflows/test_package.yml)\n[![codecov](https://codecov.io/gh/micom-dev/q2-micom/branch/main/graph/badge.svg)](https://codecov.io/gh/micom-dev/q2-micom)\n[![PyPI version](https://badge.fury.io/py/q2-micom.svg)](https://badge.fury.io/py/q2-micom)\n\n\nA QIIME 2 plugin for MICOM.\n\n## Installation\n\nYou will need an existing QIIME 2 environment. Follow the instructions on ([how to install QIIME 2](https://docs.qiime2.org/2024.2/install/native/#install-qiime-2-within-a-conda-environment)) otherwise. `q2-micom` is compatible with all QIIME 2 distributions.\nLet's assume that environment was called `qiime2-2024.2` for all further steps.\n\n### Add q2-micom to the QIIME 2 environment\n\nThis will be the same step for any supported QIIME 2 version but will vary depending on your operating system\n(similar to the normal QIIME 2 installation).\n\n```bash\nwget https://raw.githubusercontent.com/micom-dev/q2-micom/main/q2-micom.yml\nconda env update -n qiime2-2024.2 -f q2-micom.yml\n# OPTIONAL CLEANUP\nrm q2-micom-*.yml\n```\n\nFinally, you activate your environment.\n\n```bash\nconda activate qiime2-2024.2\n```\n\n`q2-micom` will now install an open source solver that can be used with MICOM. If you use MICOM\nregularly we do recommend to obtain an academic license for CPLEX or Gurobi which will be faster.\n\n### Install a faster solver (recommended but optional)\n\n*CPLEX*\n\n*QIIME 2 versions before 2021.4 are only compatible with CPLEX 12.10 or earlier (later version require at least Python 3.7).*\n\nAfter registering and downloading the CPLEX studio for your OS unpack it (by running the provided installer) to a directory of your choice (we will assume it's called `ibm`).\n\nNow install the CPLEX python package into your activated environment:\n\n```bash\npip install ibm/cplex/python/3.8/x86-64_linux\n```\n\nSubstitute `3.8` with the Python version in your QIIME 2 environment, `3.6` for QIIME 2 up to 2021.2 and `3.8` for QIIME 2 2021.4 and newer.\nSubstitute `x86-64_linux` with the folder corresponding to your system (there will only be one subfolder in that directory).\n\n***Gurobi***\n\nGurobi can be installed with conda.\n\n```bash\nconda install -c gurobi gurobi\n```\n\nYou will now have to register the installation using your license key.\n\n```bash\ngrbgetkey YOUR-LICENSE-KEY\n```\n\n### Finish your installation\n\nIf you installed `q2-micom` in an already existing QIIME 2 environment, update the plugin cache:\n\n```bash\nconda activate qiime2-2024.2  # or whatever you called your environment\nqiime dev refresh-cache\n```\n\nYou are now ready to run `q2-micom`!\n\n## Usage\n\nHere is a graphical overview of a `q2-micom` analysis.\n\n<img src=\"https://github.com/micom-dev/q2-micom/raw/main/docs/assets/overview.png\" width=\"100%\">\n\nThe best way to get started is to work through the [community tutorial](https://micom-dev.github.io/q2-micom).\n\n## Supported QIIME 2 versions\n\n`q2-micom` is tested against:\n\n1. the current [QIIME 2 version](https://docs.qiime2.org/)\n2. the previous version\n\nIt should also work with\n\n3. the [development version](https://dev.qiime2.org/latest/)<br>\n   However, this may occasionally break. Check [here for the current status](https://github.com/micom-dev/q2-micom/actions/workflows/qiime_dev.yml).\n\n\n## References\n\nMICOM: Metagenome-Scale Modeling To Infer Metabolic Interactions in the Gut Microbiota <br>\nChristian Diener, Sean M. Gibbons, Osbaldo Resendis-Antonio <br>\nmSystems 5:e00606-19 <br>\nhttps://doi.org/10.1128/mSystems.00606-19\n",
-  "Plugin Owner": "micom-dev",
-  "Plugin Name": "q2-micom",
-  "Branch": "main",
-  "User Docs": "https://micom-dev.github.io/q2-micom/",
-  "Build Status": "passed",
-  "Commit Date": "2025-03-04T07:32:49Z",
-  "Stars": 10,
-  "Description": "A Qiime plugin for MICOM.",
-  "Releases": [
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/micom-dev/q2-micom/raw/main/docs/assets/logo.png"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://github.com/micom-dev/q2-micom/actions/workflows/test_package.yml",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://github.com/micom-dev/q2-micom/actions/workflows/test_package.yml/badge.svg",
+                "alt": "Test and deploy"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/micom-dev/q2-micom",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/micom-dev/q2-micom/branch/main/graph/badge.svg",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://badge.fury.io/py/q2-micom",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://badge.fury.io/py/q2-micom.svg",
+                "alt": "PyPI version"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A QIIME 2 plugin for MICOM."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You will need an existing QIIME 2 environment. Follow the instructions on ("
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2024.2/install/native/#install-qiime-2-within-a-conda-environment",
+            "children": [
+              {
+                "type": "text",
+                "value": "how to install QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ") otherwise. "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-micom"
+          },
+          {
+            "type": "text",
+            "value": " is compatible with all QIIME 2 distributions.\nLet’s assume that environment was called "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime2-2024.2"
+          },
+          {
+            "type": "text",
+            "value": " for all further steps."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Add q2-micom to the QIIME 2 environment"
+          }
+        ],
+        "identifier": "add-q2-micom-to-the-qiime-2-environment",
+        "label": "Add q2-micom to the QIIME 2 environment",
+        "html_id": "add-q2-micom-to-the-qiime-2-environment",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This will be the same step for any supported QIIME 2 version but will vary depending on your operating system\n(similar to the normal QIIME 2 installation)."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "wget https://raw.githubusercontent.com/micom-dev/q2-micom/main/q2-micom.yml\nconda env update -n qiime2-2024.2 -f q2-micom.yml\n# OPTIONAL CLEANUP\nrm q2-micom-*.yml"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, you activate your environment."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda activate qiime2-2024.2"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "q2-micom"
+          },
+          {
+            "type": "text",
+            "value": " will now install an open source solver that can be used with MICOM. If you use MICOM\nregularly we do recommend to obtain an academic license for CPLEX or Gurobi which will be faster."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install a faster solver (recommended but optional)"
+          }
+        ],
+        "identifier": "install-a-faster-solver-recommended-but-optional",
+        "label": "Install a faster solver (recommended but optional)",
+        "html_id": "install-a-faster-solver-recommended-but-optional",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "CPLEX"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 versions before 2021.4 are only compatible with CPLEX 12.10 or earlier (later version require at least Python 3.7)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After registering and downloading the CPLEX studio for your OS unpack it (by running the provided installer) to a directory of your choice (we will assume it’s called "
+          },
+          {
+            "type": "inlineCode",
+            "value": "ibm"
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Now install the CPLEX python package into your activated environment:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "pip install ibm/cplex/python/3.8/x86-64_linux"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Substitute "
+          },
+          {
+            "type": "inlineCode",
+            "value": "3.8"
+          },
+          {
+            "type": "text",
+            "value": " with the Python version in your QIIME 2 environment, "
+          },
+          {
+            "type": "inlineCode",
+            "value": "3.6"
+          },
+          {
+            "type": "text",
+            "value": " for QIIME 2 up to 2021.2 and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "3.8"
+          },
+          {
+            "type": "text",
+            "value": " for QIIME 2 2021.4 and newer.\nSubstitute "
+          },
+          {
+            "type": "inlineCode",
+            "value": "x86-64_linux"
+          },
+          {
+            "type": "text",
+            "value": " with the folder corresponding to your system (there will only be one subfolder in that directory)."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Gurobi"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Gurobi can be installed with conda."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda install -c gurobi gurobi"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You will now have to register the installation using your license key."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "grbgetkey YOUR-LICENSE-KEY"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Finish your installation"
+          }
+        ],
+        "identifier": "finish-your-installation",
+        "label": "Finish your installation",
+        "html_id": "finish-your-installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you installed "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-micom"
+          },
+          {
+            "type": "text",
+            "value": " in an already existing QIIME 2 environment, update the plugin cache:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda activate qiime2-2024.2  # or whatever you called your environment\nqiime dev refresh-cache"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You are now ready to run "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-micom"
+          },
+          {
+            "type": "text",
+            "value": "!"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage"
+          }
+        ],
+        "identifier": "usage",
+        "label": "Usage",
+        "html_id": "usage",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Here is a graphical overview of a "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-micom"
+          },
+          {
+            "type": "text",
+            "value": " analysis."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://github.com/micom-dev/q2-micom/raw/main/docs/assets/overview.png"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The best way to get started is to work through the "
+          },
+          {
+            "type": "link",
+            "url": "https://micom-dev.github.io/q2-micom",
+            "children": [
+              {
+                "type": "text",
+                "value": "community tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Supported QIIME 2 versions"
+          }
+        ],
+        "identifier": "supported-qiime-2-versions",
+        "label": "Supported QIIME 2 versions",
+        "html_id": "supported-qiime-2-versions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "q2-micom"
+          },
+          {
+            "type": "text",
+            "value": " is tested against:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "the current "
+              },
+              {
+                "type": "link",
+                "url": "https://docs.qiime2.org/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2 version"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "the previous version"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "It should also work with"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 3,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "the "
+              },
+              {
+                "type": "link",
+                "url": "https://dev.qiime2.org/latest/",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "development version"
+                  }
+                ]
+              },
+              {
+                "type": "break"
+              },
+              {
+                "type": "text",
+                "value": "\nHowever, this may occasionally break. Check "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/micom-dev/q2-micom/actions/workflows/qiime_dev.yml",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "here for the current status"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "References"
+          }
+        ],
+        "identifier": "references",
+        "label": "References",
+        "html_id": "references",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "MICOM: Metagenome-Scale Modeling To Infer Metabolic Interactions in the Gut Microbiota "
+          },
+          {
+            "type": "break"
+          },
+          {
+            "type": "text",
+            "value": "\nChristian Diener, Sean M. Gibbons, Osbaldo Resendis-Antonio "
+          },
+          {
+            "type": "break"
+          },
+          {
+            "type": "text",
+            "value": "\nmSystems 5:e00606-19 "
+          },
+          {
+            "type": "break"
+          },
+          {
+            "type": "text",
+            "value": "\nhttps://doi.org/10.1128/mSystems.00606-19"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "v0.16.0",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.16.0",
+      "name": "v0.16.0",
+      "published_at": "2024-10-08T09:26:24Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.15.0",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.15.0",
+      "name": "v0.15.0",
+      "published_at": "2024-07-25T09:39:21Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.14.0",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.14.0",
+      "name": "v0.14.0",
+      "published_at": "2024-04-23T13:05:16Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.13.2",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.13.2",
+      "name": "v0.13.2",
+      "published_at": "2024-04-19T12:43:19Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.13.1",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.13.1",
+      "name": "v0.13.1",
+      "published_at": "2024-01-04T21:28:13Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.13.0",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.13.0",
+      "name": "v0.13.0",
+      "published_at": "2023-12-13T02:11:26Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.12.6",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.12.6",
+      "name": "v0.12.6",
+      "published_at": "2023-04-20T22:28:36Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.12.4",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.12.4",
+      "name": "v0.12.4",
+      "published_at": "2023-04-06T18:23:13Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.12.3",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.12.3",
+      "name": "v0.12.3",
+      "published_at": "2023-03-03T22:44:15Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.12.1",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.12.1",
+      "name": "v0.12.1",
+      "published_at": "2021-10-08T22:00:31Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.12.0",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.12.0",
+      "name": "v0.12.0",
+      "published_at": "2021-08-19T18:18:20Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.11.3",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.11.3",
+      "name": "v0.11.3",
+      "published_at": "2021-04-29T18:31:41Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.11.2",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.11.2",
+      "name": "v0.11.2",
+      "published_at": "2021-04-16T17:17:33Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.11.1",
+      "html_url": "https://github.com/micom-dev/q2-micom/releases/tag/v0.11.1",
+      "name": "v0.11.1",
+      "published_at": "2021-04-06T19:36:37Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "micom-dev",
+  "name": "q2-micom",
+  "branch": "main",
+  "docs": "https://micom-dev.github.io/q2-micom/",
+  "last_commit": {
+    "sha": "f434b434968ae23ff8c1034f0110a74e60d5eef6",
+    "status": "passed",
+    "date": "2025-03-04T07:32:49Z"
+  },
+  "stars": 10,
+  "description": "A Qiime plugin for MICOM.",
+  "distros": [
     "amplicon-2025.4",
     "moshpit-2025.4",
     "tiny-2025.4",

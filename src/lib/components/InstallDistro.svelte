@@ -1,0 +1,1 @@
+<div class='px-2 py-4'>Install this plugin by installing a base distribution.</div>

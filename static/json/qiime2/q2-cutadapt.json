@@ -1,0 +1,42 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-cutadapt/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "qiime2",
+  "name": "q2-cutadapt",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 3,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "74874e664aedb009f4bba1a00e16a6fccb2e5005",
+    "status": "passed",
+    "date": "2025-02-10T17:35:21Z"
+  }
+}

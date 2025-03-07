@@ -1,0 +1,43 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-longitudinal/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "qiime2",
+  "name": "q2-longitudinal",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 9,
+  "description": "QIIME 2 plugin for paired sample comparisons",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "dcf00f5380a334ff6ddddfb90abff34f8d0a4a4e",
+    "status": "passed",
+    "date": "2025-01-18T21:07:30Z"
+  }
+}

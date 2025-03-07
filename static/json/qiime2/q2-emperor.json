@@ -1,0 +1,179 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-emperor/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/q2-emperor/releases/tag/2017.2.0",
+      "name": "q2-emperor 2017.2.0",
+      "published_at": "2017-02-07T00:41:08Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "0.0.6",
+      "html_url": "https://github.com/qiime2/q2-emperor/releases/tag/0.0.6",
+      "name": "q2-emperor 0.0.6",
+      "published_at": "2016-11-03T00:01:43Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-emperor 0.0.6 is a QIIME 2 plugin synchronized with the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/releases/tag/2.0.6",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2.0.6 release"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". See https://qiime2.org for details about QIIME 2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "0.0.5",
+      "html_url": "https://github.com/qiime2/q2-emperor/releases/tag/0.0.5",
+      "name": "q2-emperor",
+      "published_at": "2016-10-08T21:21:42Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "0.0.2",
+      "html_url": "https://github.com/qiime2/q2-emperor/releases/tag/0.0.2",
+      "name": "q2-emperor 0.0.2: minor alpha release",
+      "published_at": "2016-08-09T16:20:48Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re pleased to announce the release of q2-emperor 0.0.2. q2-emperor is a QIIME 2 plugin; see "
+              },
+              {
+                "type": "link",
+                "url": "http://2.qiime.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2.qiime.org"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " for more details about QIIME 2. The changes since the last release are detailed in the project’s "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/q2-emperor/blob/master/CHANGELOG.md#version-002-2016-08-09",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CHANGELOG.md"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". This is an alpha release and major backwards-incompatible API changes are expected to happen."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "0.0.1",
+      "html_url": "https://github.com/qiime2/q2-emperor/releases/tag/0.0.1",
+      "name": "q2-emperor 0.0.1: initial alpha release",
+      "published_at": "2016-07-15T06:21:02Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "We’re pleased to announce the release of q2-emperor 0.0.1. q2-emperor is a QIIME 2 plugin; see "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/releases/tag/2.0.1",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "here"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " for more details about QIIME 2. This is an initial alpha release and major backwards-incompatible API changes are expected to happen."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-emperor",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 1,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "6c973cfe98a543e059def7e1bcca7a55abcfdbf8",
+    "status": "passed",
+    "date": "2025-01-18T21:05:51Z"
+  }
+}

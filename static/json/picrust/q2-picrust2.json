@@ -1,12 +1,425 @@
 {
-  "Readme": "# q2-picrust2\nQIIME 2 plugin for PICRUSt2\n\nFor descriptions of how to install and run this plugin, see [here](https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/).\n\nPlease first check our [FAQ](https://github.com/picrust/picrust2/wiki/Frequently-Asked-Questions) if you have any questions about PICRUSt2.\n\nFor other general questions and comments about PICRUSt2 please search the [PICRUSt Google group](https://groups.google.com/forum/#!forum/picrust-users). If the question has not been previously answered then please make a new thread there, rather than a new issue on this repository.\n",
-  "Plugin Owner": "picrust",
-  "Plugin Name": "q2-picrust2",
-  "Branch": "master",
-  "User Docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
-  "Build Status": "passed",
-  "Commit Date": "2025-03-04T18:19:15Z",
-  "Stars": 5,
-  "Description": "QIIME 2 plugin for PICRUSt2",
-  "Releases": ["amplicon-2024.5"]
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin for PICRUSt2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For descriptions of how to install and run this plugin, see "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Please first check our "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/picrust/picrust2/wiki/Frequently-Asked-Questions",
+            "children": [
+              {
+                "type": "text",
+                "value": "FAQ"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " if you have any questions about PICRUSt2."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For other general questions and comments about PICRUSt2 please search the "
+          },
+          {
+            "type": "link",
+            "url": "https://groups.google.com/forum/#!forum/picrust-users",
+            "children": [
+              {
+                "type": "text",
+                "value": "PICRUSt Google group"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". If the question has not been previously answered then please make a new thread there, rather than a new issue on this repository."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2024.5_1",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2024.5_1",
+      "name": "q2-picrust2 2024.5_1",
+      "published_at": "2025-03-04T18:22:53Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Update files for new QIIME2 library"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2024.5_0",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2024.5_0",
+      "name": "q2-picrust2 2024.5_0",
+      "published_at": "2024-08-09T12:37:24Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bumped for QIIME 2 amplicon-2024.5 version."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2023.2_0",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2023.2_0",
+      "name": "q2-picrust2 2023.2_0",
+      "published_at": "2023-04-07T17:16:54Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Version compatible with QIIME 2 v2023.2 (and PICRUSt2 2.5.2)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.11_0",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2021.11_0",
+      "name": "q2-picrust2 2021.11_0 ",
+      "published_at": "2022-01-10T00:16:23Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bump for latest version of PICRUSt2, which is now compatible with Python 3.8"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.2_0",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2021.2_0",
+      "name": "q2-picrust2 2021.2_0",
+      "published_at": "2021-04-07T20:46:19Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Updated plugin to work with most recent versions of QIIME 2 and PICRUSt2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2019.10_0",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2019.10_0",
+      "name": "q2-picrust2 2019.10_0",
+      "published_at": "2020-01-23T19:16:32Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Now compatible with QIIME 2 2019.10 and PICRUSt2 v2.3.0"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Added more options to the plugin (including "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "--skip_minpath"
+                      },
+                      {
+                        "type": "text",
+                        "value": ", "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "--no_gap_fill"
+                      },
+                      {
+                        "type": "text",
+                        "value": ", and "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "--skip_norm"
+                      },
+                      {
+                        "type": "text",
+                        "value": ")"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Also improved the verbosity of the command by adding the "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "--highly_verbose"
+                      },
+                      {
+                        "type": "text",
+                        "value": " option"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2019.7_0",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2019.7_0",
+      "name": "q2-picrust2 2019.7_0",
+      "published_at": "2019-08-08T15:25:32Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Updated version to work with qiime2 2019.7 and PICRUSt2 2.2.0-b."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2019.4",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2019.4",
+      "name": "q2-picrust2 2019.4",
+      "published_at": "2019-05-20T08:22:08Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Syntax changes to work with PICRUSt2 v2.1.4-b."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Changed versioning of plugin to match intended QIIME2 environments."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2019.4b",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2019.4b",
+      "name": "q2-picrust2 2019.4b",
+      "published_at": "2019-05-20T08:24:39Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Hot-fix to q2-picrust2 2019.4 to prevent unneeded computation of metagenome contributions."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.0.3",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/v0.0.3",
+      "name": "q2-picrust2 v0.0.3",
+      "published_at": "2019-04-03T09:05:56Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Works with PICRUSt2 version 2.1.2-b and latest QIIME2 version. Released to be used as source target for conda package."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.0.2",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/v0.0.2",
+      "name": "v0.0.2",
+      "published_at": "2018-11-21T18:01:11Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Fix to NSTI cut-off implementation."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "v0.0.1",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/v0.0.1",
+      "name": "v0.0.1",
+      "published_at": "2018-10-31T16:37:27Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Initial release."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "picrust",
+  "name": "q2-picrust2",
+  "branch": "master",
+  "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+  "last_commit": {
+    "sha": "56c7dcfc9ba73a4d7a0689798fda04058970b629",
+    "status": "passed",
+    "date": "2025-03-04T18:19:15Z"
+  },
+  "stars": 5,
+  "description": "QIIME 2 plugin for PICRUSt2",
+  "distros": [
+    "amplicon-2024.5"
+  ]
 }

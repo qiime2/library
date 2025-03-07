@@ -1,0 +1,98 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-demux/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/q2-demux/releases/tag/2017.2.0",
+      "name": "q2-demux 2017.2.0",
+      "published_at": "2017-02-07T01:04:42Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "0.0.6",
+      "html_url": "https://github.com/qiime2/q2-demux/releases/tag/0.0.6",
+      "name": "q2-demux 0.0.6",
+      "published_at": "2016-11-03T00:02:36Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-demux 0.0.6 is a QIIME 2 plugin synchronized with the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/releases/tag/2.0.6",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2.0.6 release"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". See https://qiime2.org for details about QIIME 2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "0.0.5",
+      "html_url": "https://github.com/qiime2/q2-demux/releases/tag/0.0.5",
+      "name": "q2-demux 0.0.5",
+      "published_at": "2016-10-08T21:25:38Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-demux",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 0,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "bdd4ad5e3b774f7651044e657f7e32ce20b2fd31",
+    "status": "failed",
+    "date": "2025-01-18T21:04:13Z"
+  }
+}

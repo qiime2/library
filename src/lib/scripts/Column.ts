@@ -5,10 +5,12 @@ export enum SortType {
 
 export class Column {
   name = "";
+  attr = "";
   sort_type = "alphabetical";
 
-  constructor(name: string, sort_type: SortType) {
+  constructor(name: string, attr: string, sort_type: SortType) {
     this.name = name;
+    this.attr = attr;
     this.sort_type = sort_type;
   }
 }
