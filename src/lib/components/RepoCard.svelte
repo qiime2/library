@@ -5,7 +5,7 @@
 <div class={`bg-white border border-gray-200 relative grid grid-cols-subgrid col-span-full rounded-lg
             shadow-[0_4px_10px_rgba(0,0,0,0.1)] backdrop-blur !my-0 p-4 sm:p-6 sm:my-6`}
      class:hover:shadow-[0_4px_10px_rgba(0,0,0,0.3)]={true}>
-        <a href="/plugin/{repo_overview.owner}/{repo_overview.name}" class="grid grid-cols-subgrid col-span-full md:col-span-1">
+        <a href="/plugins/{repo_overview.owner}/{repo_overview.name}" class="grid grid-cols-subgrid col-span-full md:col-span-1">
             <div class='my-auto grid col-span-full md:col-span-1 grid-cols-subgrid'>
                 <div class="flex flex-col w-max mx-auto md:mx-0 col-span-2 md:col-span-1">
                     <h1 class='text-2xl md:text-3xl font-bold text-[#1a414c] mb-0 inline'>{repo_overview.name}</h1>

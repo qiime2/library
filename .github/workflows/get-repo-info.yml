@@ -29,7 +29,6 @@ jobs:
       - name: Get Repo Info
         run: |
           npm run update
-          npm run format
 
       - name: Commit Repo Changes
         run: |

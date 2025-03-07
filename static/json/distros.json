@@ -56,7 +56,9 @@
       "name": "q2-amrfinderplus",
       "docs": null,
       "in_distro": true,
-      "distros": ["pathogenome-2024.10"],
+      "distros": [
+        "pathogenome-2024.10"
+      ],
       "stars": 0,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "branch": "main",
@@ -276,7 +278,9 @@
       "name": "q2-viromics",
       "docs": null,
       "in_distro": true,
-      "distros": ["pathogenome-2024.10"],
+      "distros": [
+        "pathogenome-2024.10"
+      ],
       "stars": 0,
       "description": null,
       "branch": "main",
@@ -291,7 +295,10 @@
       "name": "q2-sapienns",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
-      "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
       "stars": 1,
       "description": null,
       "branch": "main",
@@ -306,7 +313,10 @@
       "name": "q2-fondue",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
-      "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
       "stars": 21,
       "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
       "branch": "main",
@@ -383,7 +393,9 @@
       "name": "q2-stats",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
-      "distros": ["amplicon-2024.10"],
+      "distros": [
+        "amplicon-2024.10"
+      ],
       "stars": 1,
       "description": null,
       "branch": "dev",
@@ -655,7 +667,9 @@
       "name": "q2-sourmash",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
-      "distros": ["metagenome-2024.10"],
+      "distros": [
+        "metagenome-2024.10"
+      ],
       "stars": 6,
       "description": "Qiime2 Sourmash Plugin",
       "branch": "main",
@@ -693,6 +707,5 @@
       "docs": null,
       "description": "A minimal installation of the QIIME 2 Framework for developers that is intended to be extended with custom functionality and plugins.\n"
     }
-  ],
-  "last_updated": "2025-03-07T17:37:37.222Z"
+  ]
 }

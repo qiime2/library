@@ -12,25 +12,20 @@
               {
                 "type": "image",
                 "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
-                "alt": "Code style: black",
-                "key": "sfVGlzUihY"
+                "alt": "Code style: black"
               }
-            ],
-            "key": "yrEbUSWCMj"
+            ]
           }
-        ],
-        "key": "r8FzeyNGHC"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-            "key": "UImundLrKo"
+            "value": "QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus."
           }
-        ],
-        "key": "MZNU5r3LTm"
+        ]
       },
       {
         "type": "heading",
@@ -38,11 +33,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation",
-            "key": "c4SWVuDMWs"
+            "value": "Installation"
           }
         ],
-        "key": "fcD2hngDUb",
         "identifier": "installation",
         "label": "Installation",
         "html_id": "installation",
@@ -53,24 +46,20 @@
         "children": [
           {
             "type": "text",
-            "value": "To install ",
-            "key": "BZgflOvqcQ"
+            "value": "To install "
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "q2-amrfinderplus",
-                "key": "cNPibzlAvx"
+                "value": "q2-amrfinderplus"
               }
-            ],
-            "key": "DeDcxv8l4v"
+            ]
           },
           {
             "type": "text",
-            "value": ", follow the steps described in the ",
-            "key": "NSbnBRF6ue"
+            "value": ", follow the steps described in the "
           },
           {
             "type": "link",
@@ -78,19 +67,15 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 installation instructions",
-                "key": "l3h5vzcxiN"
+                "value": "QIIME 2 installation instructions"
               }
-            ],
-            "key": "mqVC2EA3Xl"
+            ]
           },
           {
             "type": "text",
-            "value": " for the pathogenome distribution .",
-            "key": "huvzwT9qgc"
+            "value": " for the pathogenome distribution ."
           }
-        ],
-        "key": "V5W8oG52O5"
+        ]
       },
       {
         "type": "heading",
@@ -98,11 +83,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Functionality",
-            "key": "WdlxOgAgNG"
+            "value": "Functionality"
           }
         ],
-        "key": "i72ANlpN23",
         "identifier": "functionality",
         "label": "Functionality",
         "html_id": "functionality",
@@ -113,8 +96,7 @@
         "children": [
           {
             "type": "text",
-            "value": "This QIIME 2 plugin contains actions used to annotate protein sequences MAGs and contigs with antimicrobial resistance genes. The underlying tool used is ",
-            "key": "Jb1BseWtqO"
+            "value": "This QIIME 2 plugin contains actions used to annotate protein sequences MAGs and contigs with antimicrobial resistance genes. The underlying tool used is "
           },
           {
             "type": "link",
@@ -122,16 +104,13 @@
             "children": [
               {
                 "type": "text",
-                "value": "AMRFinderPlus",
-                "key": "KIxo1wj7oV"
+                "value": "AMRFinderPlus"
               }
-            ],
-            "key": "aIr9WybwCt"
+            ]
           },
           {
             "type": "text",
-            "value": ", for details on\nthe package, please refer to the ",
-            "key": "IAfjcYc6lZ"
+            "value": ", for details on\nthe package, please refer to the "
           },
           {
             "type": "link",
@@ -139,16 +118,13 @@
             "children": [
               {
                 "type": "text",
-                "value": "AMRFinderPlus documentation",
-                "key": "bXSF4qPRLJ"
+                "value": "AMRFinderPlus documentation"
               }
-            ],
-            "key": "g6riw1nxuU"
+            ]
           },
           {
             "type": "text",
-            "value": "). Checkout the ",
-            "key": "UVGROkMPEQ"
+            "value": "). Checkout the "
           },
           {
             "type": "link",
@@ -156,35 +132,28 @@
             "children": [
               {
                 "type": "text",
-                "value": "wiki",
-                "key": "T2DMn8cBcm"
+                "value": "wiki"
               }
-            ],
-            "key": "JZ4nx8rAYa"
+            ]
           },
           {
             "type": "text",
-            "value": " for usage examples of ",
-            "key": "qzyBISPl1h"
+            "value": " for usage examples of "
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "q2-amrfinderplus",
-                "key": "VTjxMtPeEp"
+                "value": "q2-amrfinderplus"
               }
-            ],
-            "key": "O5dmPRPQCd"
+            ]
           },
           {
             "type": "text",
-            "value": ".",
-            "key": "g5h3PnRJxL"
+            "value": "."
           }
-        ],
-        "key": "kd5bDohI1H"
+        ]
       },
       {
         "type": "table",
@@ -198,11 +167,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Action",
-                    "key": "BEeqCcP6Ie"
+                    "value": "Action"
                   }
-                ],
-                "key": "zCm0M4fwyy"
+                ]
               },
               {
                 "type": "tableCell",
@@ -210,14 +177,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Description",
-                    "key": "DFI8j9w2YZ"
+                    "value": "Description"
                   }
-                ],
-                "key": "W4jkIlK38u"
+                ]
               }
-            ],
-            "key": "wB1rZAm2qh"
+            ]
           },
           {
             "type": "tableRow",
@@ -227,25 +191,20 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fetch-amrfinderplus-db",
-                    "key": "EeT7bjjWHO"
+                    "value": "fetch-amrfinderplus-db"
                   }
-                ],
-                "key": "oxdF4rmasJ"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Download AMRFinderPlus database.",
-                    "key": "ngtSTlb4xm"
+                    "value": "Download AMRFinderPlus database."
                   }
-                ],
-                "key": "fQ46EkrCn3"
+                ]
               }
-            ],
-            "key": "oe7RfMd63E"
+            ]
           },
           {
             "type": "tableRow",
@@ -255,28 +214,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "annotate",
-                    "key": "ydXQd6WCA7"
+                    "value": "annotate"
                   }
-                ],
-                "key": "yXV9tXoNIa"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Annotate protein sequences, MAGs or contigs with antimicrobial resistance gene information.",
-                    "key": "Kyeu9Gd4GM"
+                    "value": "Annotate protein sequences, MAGs or contigs with antimicrobial resistance gene information."
                   }
-                ],
-                "key": "Lgm3zLeKjW"
+                ]
               }
-            ],
-            "key": "VdPuqEelGu"
+            ]
           }
-        ],
-        "key": "fVDqKbI4qy"
+        ]
       },
       {
         "type": "heading",
@@ -284,11 +237,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Dev environment",
-            "key": "DZYlIwSUQW"
+            "value": "Dev environment"
           }
         ],
-        "key": "Oa1rXxQRQW",
         "identifier": "dev-environment",
         "label": "Dev environment",
         "html_id": "dev-environment",
@@ -299,40 +250,32 @@
         "children": [
           {
             "type": "text",
-            "value": "This repository follows the ",
-            "key": "q2IreAFQ5s"
+            "value": "This repository follows the "
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "black",
-                "key": "A04yiXKohy"
+                "value": "black"
               }
-            ],
-            "key": "XuCcE9P862"
+            ]
           },
           {
             "type": "text",
-            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing ",
-            "key": "tFTNNrmJu7"
+            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing "
           },
           {
             "type": "inlineCode",
-            "value": "make dev",
-            "key": "ai4OqUKubd"
+            "value": "make dev"
           },
           {
             "type": "text",
-            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes.",
-            "key": "a6oQ1xSFzn"
+            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes."
           }
-        ],
-        "key": "cJl7lkIGeA"
+        ]
       }
-    ],
-    "key": "s01zFsBNmi"
+    ]
   },
   "releases": [],
   "owner": "bokulich-lab",
@@ -346,5 +289,7 @@
   },
   "stars": 0,
   "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-  "distros": ["pathogenome-2024.10"]
+  "distros": [
+    "pathogenome-2024.10"
+  ]
 }

@@ -21,12 +21,12 @@
 <article class='bg-gray-50 border-y border-y-gray-200 pb-10 mb-5'>
     <header class='max-width'>
         <div class='prose prose-sm sm:prose-lg pt-5 mt-5 -mb-4'>
-            <h2><a href='/plugin' class='text-[#2a414c]'>Recently Updated Plugins</a></h2>
+            <h2><a href='/plugins' class='text-[#2a414c]'>Recently Updated Plugins</a></h2>
         </div>
     </header>
     <Carousel entries={data.plugins} expand={clientWidth > toExpand}>
         {#snippet card(plugin: any)}
-        <Card href={`/plugin/${plugin.owner}/${plugin.name}`}>
+        <Card href={`/plugins/${plugin.owner}/${plugin.name}`}>
                 <div class='mx-auto inline-block'>
                     <div class="flex flex-col w-max font-bold">
                         <h3 class='text-2xl text-[#1a414c] mx-2 inline'>{plugin.name}</h3>

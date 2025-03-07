@@ -1,10 +1,6 @@
 import yaml from "js-yaml";
 import { mystParse } from "myst-parser";
-import {
-  headingLabelTransform,
-  keysTransform,
-  htmlTransform,
-} from "myst-transforms";
+import { headingLabelTransform, htmlTransform } from "myst-transforms";
 
 import { visit } from "unist-util-visit";
 
@@ -259,7 +255,6 @@ export async function getReadme(octokit, owner, repo_name, branch) {
     // no reason to store all of this
     delete node["position"];
   });
-  keysTransform(ast);
   htmlTransform(ast);
   headingLabelTransform(ast);
 
@@ -322,7 +317,6 @@ export async function getGithubReleases(octokit, owner, repo_name) {
   for (const release of releases.data) {
     let { tag_name, html_url, name, published_at, body } = release;
     let ast = mystParse(body);
-    keysTransform(ast);
     htmlTransform(ast);
     headingLabelTransform(ast);
     reviseReleaseMarkdown(ast, owner, repo_name);

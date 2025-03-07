@@ -12,7 +12,9 @@
       },
       "stars": 4,
       "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": ["amplicon-2024.10"]
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "picrust",
@@ -26,7 +28,9 @@
       },
       "stars": 5,
       "description": "QIIME 2 plugin for PICRUSt2",
-      "distros": ["amplicon-2024.5"]
+      "distros": [
+        "amplicon-2024.5"
+      ]
     },
     {
       "owner": "micom-dev",
@@ -112,7 +116,9 @@
       },
       "stars": 0,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": ["pathogenome-2024.10"]
+      "distros": [
+        "pathogenome-2024.10"
+      ]
     },
     {
       "owner": "qiime2",
@@ -150,7 +156,9 @@
       },
       "stars": 6,
       "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": ["amplicon-2024.10"]
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "bokulich-lab",
@@ -164,7 +172,9 @@
       },
       "stars": 3,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": ["metagenome-2024.10"]
+      "distros": [
+        "metagenome-2024.10"
+      ]
     },
     {
       "owner": "qiime2",
@@ -336,7 +346,9 @@
       },
       "stars": 3,
       "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
-      "distros": ["amplicon-2024.10"]
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "qiime2",
@@ -373,14 +385,20 @@
       },
       "stars": 3,
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
+      "distros": [
+        "amplicon-2025.4",
+        "amplicon-2024.10",
+        "amplicon-2024.5"
+      ]
     },
     {
       "owner": "bokulich-lab",
       "name": "q2-viromics",
       "docs": null,
       "in_distro": true,
-      "distros": ["pathogenome-2024.10"],
+      "distros": [
+        "pathogenome-2024.10"
+      ],
       "stars": 0,
       "description": null,
       "branch": "main",
@@ -395,7 +413,10 @@
       "name": "q2-sapienns",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
-      "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
       "stars": 1,
       "description": null,
       "branch": "main",
@@ -410,7 +431,10 @@
       "name": "q2-fondue",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
-      "distros": ["metagenome-2024.10", "metagenome-2024.5"],
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
       "stars": 21,
       "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
       "branch": "main",
@@ -432,7 +456,9 @@
       },
       "stars": 4,
       "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": ["metagenome-2024.10"]
+      "distros": [
+        "metagenome-2024.10"
+      ]
     },
     {
       "owner": "qiime2",
@@ -482,7 +508,9 @@
       "name": "q2-stats",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
-      "distros": ["amplicon-2024.10"],
+      "distros": [
+        "amplicon-2024.10"
+      ],
       "stars": 1,
       "description": null,
       "branch": "dev",
@@ -754,7 +782,9 @@
       "name": "q2-sourmash",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
-      "distros": ["metagenome-2024.10"],
+      "distros": [
+        "metagenome-2024.10"
+      ],
       "stars": 6,
       "description": "Qiime2 Sourmash Plugin",
       "branch": "main",
@@ -781,6 +811,5 @@
     "amplicon-2023.9",
     "tiny-2023.9",
     "core-2023.7"
-  ],
-  "last_updated": "2025-03-07T17:37:53.469Z"
+  ]
 }

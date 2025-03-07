@@ -12,14 +12,11 @@
               {
                 "type": "image",
                 "url": "https://readthedocs.org/projects/q2-boots/badge/?version=latest",
-                "alt": "Documentation Status",
-                "key": "T1wEgaKGhz"
+                "alt": "Documentation Status"
               }
-            ],
-            "key": "yebl7W3R62"
+            ]
           }
-        ],
-        "key": "CJkniAxWZF"
+        ]
       },
       {
         "type": "image",
@@ -31,8 +28,7 @@
         "children": [
           {
             "type": "text",
-            "value": "q2-boots is a ",
-            "key": "tvuqqj7Jtv"
+            "value": "q2-boots is a "
           },
           {
             "type": "link",
@@ -40,16 +36,13 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2",
-                "key": "Cia4KMNsAV"
+                "value": "QIIME 2"
               }
-            ],
-            "key": "mI1FtnH4H2"
+            ]
           },
           {
             "type": "text",
-            "value": " plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.\nTo learn how to install, use, or get help with q2-boots, refer to the ",
-            "key": "tJL9JLXq3G"
+            "value": " plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.\nTo learn how to install, use, or get help with q2-boots, refer to the "
           },
           {
             "type": "link",
@@ -57,22 +50,17 @@
             "children": [
               {
                 "type": "text",
-                "value": "q2-boots documentation",
-                "key": "EVk4a7VGyK"
+                "value": "q2-boots documentation"
               }
-            ],
-            "key": "TN74SJ8TSJ"
+            ]
           },
           {
             "type": "text",
-            "value": ".",
-            "key": "IeXipo18mt"
+            "value": "."
           }
-        ],
-        "key": "dkqSpQxBpR"
+        ]
       }
-    ],
-    "key": "QXyU5PZGxs"
+    ]
   },
   "releases": [
     {
@@ -82,8 +70,7 @@
       "published_at": "2024-11-04T19:26:05Z",
       "ast": {
         "type": "root",
-        "children": [],
-        "key": "VHAhVzy26h"
+        "children": []
       }
     },
     {
@@ -93,8 +80,7 @@
       "published_at": "2024-08-12T00:19:50Z",
       "ast": {
         "type": "root",
-        "children": [],
-        "key": "BnAVXDtXlW"
+        "children": []
       }
     },
     {
@@ -110,14 +96,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Initial release of q2-boots",
-                "key": "tEQypHc0H4"
+                "value": "Initial release of q2-boots"
               }
-            ],
-            "key": "Ap6YMBkY5e"
+            ]
           }
-        ],
-        "key": "XU9SojvKDk"
+        ]
       }
     },
     {
@@ -133,14 +116,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Backwards compatible branch with no visualization collections.",
-                "key": "TFkbxpDbmD"
+                "value": "Backwards compatible branch with no visualization collections."
               }
-            ],
-            "key": "gDebNP5PiB"
+            ]
           }
-        ],
-        "key": "C5MAXqp8rw"
+        ]
       }
     }
   ],
@@ -155,5 +135,9 @@
   },
   "stars": 3,
   "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-  "distros": ["amplicon-2025.4", "amplicon-2024.10", "amplicon-2024.5"]
+  "distros": [
+    "amplicon-2025.4",
+    "amplicon-2024.10",
+    "amplicon-2024.5"
+  ]
 }

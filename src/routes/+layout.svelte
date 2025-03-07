@@ -4,10 +4,10 @@
     import Navigation from "$lib/components/Navigation.svelte";
     const entries: [string, string][] = [
       ['/quickstart', 'Quickstart'],
-      ['/plugin', 'Plugins'],
-      ['/book', 'Books'],
-      ['/video', 'Videos'],
-      ['/workshop', 'Workshops'],
+      ['/plugins', 'Plugins'],
+      ['/books', 'Books'],
+      ['/videos', 'Videos'],
+      ['/workshops', 'Workshops'],
       ['/data-resources', 'Resources'],
     ]
 </script>
@@ -45,23 +45,6 @@
     width: 125px;
     height: 40px;
     @apply my-1;
-  }
-
-  li a {
-    @apply text-gray-600 no-underline;
-  }
-
-  li a:hover {
-    @apply text-gray-950;
-  }
-
-  li a.active {
-    @apply text-gray-950 font-bold border-b-4 border-b-[#e39e54];
-  }
-
-  li a::before {
-    content: attr(title);
-    @apply font-bold block h-[1px] w-max text-transparent overflow-hidden invisible;
   }
 
 </style>

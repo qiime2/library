@@ -12,7 +12,9 @@
       },
       "stars": 4,
       "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": ["amplicon-2024.10"]
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "picrust",
@@ -26,7 +28,9 @@
       },
       "stars": 5,
       "description": "QIIME 2 plugin for PICRUSt2",
-      "distros": ["amplicon-2024.5"]
+      "distros": [
+        "amplicon-2024.5"
+      ]
     },
     {
       "owner": "micom-dev",
@@ -61,7 +65,9 @@
       },
       "stars": 0,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": ["pathogenome-2024.10"]
+      "distros": [
+        "pathogenome-2024.10"
+      ]
     },
     {
       "owner": "caporaso-lab",
@@ -75,7 +81,9 @@
       },
       "stars": 6,
       "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": ["amplicon-2024.10"]
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "bokulich-lab",
@@ -89,7 +97,9 @@
       },
       "stars": 3,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": ["metagenome-2024.10"]
+      "distros": [
+        "metagenome-2024.10"
+      ]
     },
     {
       "owner": "PlanesLab",
@@ -103,7 +113,9 @@
       },
       "stars": 3,
       "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
-      "distros": ["amplicon-2024.10"]
+      "distros": [
+        "amplicon-2024.10"
+      ]
     }
   ],
   "distros": [
@@ -150,16 +162,6 @@
       "description": "Your guide for writing, testing, and distributing QIIME 2 plugins, interfaces, and documentation.",
       "type": "book",
       "order": 1
-    },
-    {
-      "url": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "source": "https://github.com/qiime2/amplicon-docs",
-      "type": "book"
-    },
-    {
-      "url": "https://bokulich-lab.github.io/moshpit-docs/",
-      "source": "https://github.com/bokulich-lab/moshpit-docs/",
-      "type": "book"
     }
   ],
   "videos": [
@@ -219,5 +221,6 @@
       "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
       "timestamp": 1650549351
     }
-  ]
+  ],
+  "last_updated": "2025-03-07T18:52:09.699Z"
 }

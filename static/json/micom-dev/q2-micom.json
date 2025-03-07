@@ -16,16 +16,13 @@
               {
                 "type": "image",
                 "url": "https://github.com/micom-dev/q2-micom/actions/workflows/test_package.yml/badge.svg",
-                "alt": "Test and deploy",
-                "key": "cn2CiH9anp"
+                "alt": "Test and deploy"
               }
-            ],
-            "key": "QhwB7hqcIC"
+            ]
           },
           {
             "type": "text",
-            "value": "\n",
-            "key": "x5RrSblaLC"
+            "value": "\n"
           },
           {
             "type": "link",
@@ -34,16 +31,13 @@
               {
                 "type": "image",
                 "url": "https://codecov.io/gh/micom-dev/q2-micom/branch/main/graph/badge.svg",
-                "alt": "codecov",
-                "key": "ACt8BMWm1e"
+                "alt": "codecov"
               }
-            ],
-            "key": "y8rnlyvwyv"
+            ]
           },
           {
             "type": "text",
-            "value": "\n",
-            "key": "V9larYs0If"
+            "value": "\n"
           },
           {
             "type": "link",
@@ -52,25 +46,20 @@
               {
                 "type": "image",
                 "url": "https://badge.fury.io/py/q2-micom.svg",
-                "alt": "PyPI version",
-                "key": "PdyLTseKVh"
+                "alt": "PyPI version"
               }
-            ],
-            "key": "z0epCq4gUu"
+            ]
           }
-        ],
-        "key": "cvw2eTZqzc"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "A QIIME 2 plugin for MICOM.",
-            "key": "FlMIAMyHpZ"
+            "value": "A QIIME 2 plugin for MICOM."
           }
-        ],
-        "key": "QAkYHuWBZS"
+        ]
       },
       {
         "type": "heading",
@@ -78,11 +67,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation",
-            "key": "oQynQyuj86"
+            "value": "Installation"
           }
         ],
-        "key": "fpJGUHmpTx",
         "identifier": "installation",
         "label": "Installation",
         "html_id": "installation",
@@ -93,8 +80,7 @@
         "children": [
           {
             "type": "text",
-            "value": "You will need an existing QIIME 2 environment. Follow the instructions on (",
-            "key": "Digx5zEGSj"
+            "value": "You will need an existing QIIME 2 environment. Follow the instructions on ("
           },
           {
             "type": "link",
@@ -102,39 +88,31 @@
             "children": [
               {
                 "type": "text",
-                "value": "how to install QIIME 2",
-                "key": "lbhGY6btUo"
+                "value": "how to install QIIME 2"
               }
-            ],
-            "key": "BZn8OSE7nt"
+            ]
           },
           {
             "type": "text",
-            "value": ") otherwise. ",
-            "key": "SgHgP8Zjw6"
+            "value": ") otherwise. "
           },
           {
             "type": "inlineCode",
-            "value": "q2-micom",
-            "key": "uLphRVrPjQ"
+            "value": "q2-micom"
           },
           {
             "type": "text",
-            "value": " is compatible with all QIIME 2 distributions.\nLet’s assume that environment was called ",
-            "key": "N1aH7ng50J"
+            "value": " is compatible with all QIIME 2 distributions.\nLet’s assume that environment was called "
           },
           {
             "type": "inlineCode",
-            "value": "qiime2-2024.2",
-            "key": "XR4fwStF1K"
+            "value": "qiime2-2024.2"
           },
           {
             "type": "text",
-            "value": " for all further steps.",
-            "key": "AYf57JPhYp"
+            "value": " for all further steps."
           }
-        ],
-        "key": "Tf0fFYhN1Q"
+        ]
       },
       {
         "type": "heading",
@@ -142,11 +120,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Add q2-micom to the QIIME 2 environment",
-            "key": "KH0q7Pp5Sj"
+            "value": "Add q2-micom to the QIIME 2 environment"
           }
         ],
-        "key": "rDdA1BVlQn",
         "identifier": "add-q2-micom-to-the-qiime-2-environment",
         "label": "Add q2-micom to the QIIME 2 environment",
         "html_id": "add-q2-micom-to-the-qiime-2-environment",
@@ -157,50 +133,41 @@
         "children": [
           {
             "type": "text",
-            "value": "This will be the same step for any supported QIIME 2 version but will vary depending on your operating system\n(similar to the normal QIIME 2 installation).",
-            "key": "Qaw41fninG"
+            "value": "This will be the same step for any supported QIIME 2 version but will vary depending on your operating system\n(similar to the normal QIIME 2 installation)."
           }
-        ],
-        "key": "tW3M4uXA3F"
+        ]
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "wget https://raw.githubusercontent.com/micom-dev/q2-micom/main/q2-micom.yml\nconda env update -n qiime2-2024.2 -f q2-micom.yml\n# OPTIONAL CLEANUP\nrm q2-micom-*.yml",
-        "key": "QEjkvJK3mQ"
+        "value": "wget https://raw.githubusercontent.com/micom-dev/q2-micom/main/q2-micom.yml\nconda env update -n qiime2-2024.2 -f q2-micom.yml\n# OPTIONAL CLEANUP\nrm q2-micom-*.yml"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Finally, you activate your environment.",
-            "key": "F06IPZkeQL"
+            "value": "Finally, you activate your environment."
           }
-        ],
-        "key": "gS7Pd7X3v4"
+        ]
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "conda activate qiime2-2024.2",
-        "key": "Fd6VzMomX0"
+        "value": "conda activate qiime2-2024.2"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "inlineCode",
-            "value": "q2-micom",
-            "key": "KkHjrnsQx9"
+            "value": "q2-micom"
           },
           {
             "type": "text",
-            "value": " will now install an open source solver that can be used with MICOM. If you use MICOM\nregularly we do recommend to obtain an academic license for CPLEX or Gurobi which will be faster.",
-            "key": "f1CLNabHEa"
+            "value": " will now install an open source solver that can be used with MICOM. If you use MICOM\nregularly we do recommend to obtain an academic license for CPLEX or Gurobi which will be faster."
           }
-        ],
-        "key": "rFzwfoR989"
+        ]
       },
       {
         "type": "heading",
@@ -208,11 +175,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Install a faster solver (recommended but optional)",
-            "key": "N8uYKct29n"
+            "value": "Install a faster solver (recommended but optional)"
           }
         ],
-        "key": "zdR1ARl3dg",
         "identifier": "install-a-faster-solver-recommended-but-optional",
         "label": "Install a faster solver (recommended but optional)",
         "html_id": "install-a-faster-solver-recommended-but-optional",
@@ -226,14 +191,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "CPLEX",
-                "key": "ryebFoGiuS"
+                "value": "CPLEX"
               }
-            ],
-            "key": "urib4fsBHs"
+            ]
           }
-        ],
-        "key": "cNeZ1chHaj"
+        ]
       },
       {
         "type": "paragraph",
@@ -243,103 +205,83 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 versions before 2021.4 are only compatible with CPLEX 12.10 or earlier (later version require at least Python 3.7).",
-                "key": "Fph69SWieT"
+                "value": "QIIME 2 versions before 2021.4 are only compatible with CPLEX 12.10 or earlier (later version require at least Python 3.7)."
               }
-            ],
-            "key": "CLgtE1RbSa"
+            ]
           }
-        ],
-        "key": "hvY3i36dFi"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "After registering and downloading the CPLEX studio for your OS unpack it (by running the provided installer) to a directory of your choice (we will assume it’s called ",
-            "key": "xpWLlHvISW"
+            "value": "After registering and downloading the CPLEX studio for your OS unpack it (by running the provided installer) to a directory of your choice (we will assume it’s called "
           },
           {
             "type": "inlineCode",
-            "value": "ibm",
-            "key": "d2nUUeoqfU"
+            "value": "ibm"
           },
           {
             "type": "text",
-            "value": ").",
-            "key": "e8Dqe1VxXO"
+            "value": ")."
           }
-        ],
-        "key": "LC3f5nKRrN"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Now install the CPLEX python package into your activated environment:",
-            "key": "XCDVfHRd0K"
+            "value": "Now install the CPLEX python package into your activated environment:"
           }
-        ],
-        "key": "ZFnXlYKoeR"
+        ]
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "pip install ibm/cplex/python/3.8/x86-64_linux",
-        "key": "n9v3IkBxfV"
+        "value": "pip install ibm/cplex/python/3.8/x86-64_linux"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Substitute ",
-            "key": "VzQ6KAoRzp"
+            "value": "Substitute "
           },
           {
             "type": "inlineCode",
-            "value": "3.8",
-            "key": "EWKZyNOXlR"
+            "value": "3.8"
           },
           {
             "type": "text",
-            "value": " with the Python version in your QIIME 2 environment, ",
-            "key": "j2E8CnTC2V"
+            "value": " with the Python version in your QIIME 2 environment, "
           },
           {
             "type": "inlineCode",
-            "value": "3.6",
-            "key": "JRplqRvv4t"
+            "value": "3.6"
           },
           {
             "type": "text",
-            "value": " for QIIME 2 up to 2021.2 and ",
-            "key": "TrT2I9lsIZ"
+            "value": " for QIIME 2 up to 2021.2 and "
           },
           {
             "type": "inlineCode",
-            "value": "3.8",
-            "key": "Ww7SXhpRlK"
+            "value": "3.8"
           },
           {
             "type": "text",
-            "value": " for QIIME 2 2021.4 and newer.\nSubstitute ",
-            "key": "d2n5cGDiDy"
+            "value": " for QIIME 2 2021.4 and newer.\nSubstitute "
           },
           {
             "type": "inlineCode",
-            "value": "x86-64_linux",
-            "key": "wN9CatntBa"
+            "value": "x86-64_linux"
           },
           {
             "type": "text",
-            "value": " with the folder corresponding to your system (there will only be one subfolder in that directory).",
-            "key": "CTFnVtSCes"
+            "value": " with the folder corresponding to your system (there will only be one subfolder in that directory)."
           }
-        ],
-        "key": "ggmAMbiCQX"
+        ]
       },
       {
         "type": "paragraph",
@@ -352,51 +294,41 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Gurobi",
-                    "key": "ITyidjJAKW"
+                    "value": "Gurobi"
                   }
-                ],
-                "key": "pPjHcHBUCi"
+                ]
               }
-            ],
-            "key": "nFIhJjozXn"
+            ]
           }
-        ],
-        "key": "cg7GBs40bP"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "Gurobi can be installed with conda.",
-            "key": "HzRdF1Cjxl"
+            "value": "Gurobi can be installed with conda."
           }
-        ],
-        "key": "QLXduusYy3"
+        ]
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "conda install -c gurobi gurobi",
-        "key": "ZLatdKMGIW"
+        "value": "conda install -c gurobi gurobi"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You will now have to register the installation using your license key.",
-            "key": "EXADblweUj"
+            "value": "You will now have to register the installation using your license key."
           }
-        ],
-        "key": "p8vCfQx83h"
+        ]
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "grbgetkey YOUR-LICENSE-KEY",
-        "key": "huK4uzl7ln"
+        "value": "grbgetkey YOUR-LICENSE-KEY"
       },
       {
         "type": "heading",
@@ -404,11 +336,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Finish your installation",
-            "key": "ozGH1ok94Q"
+            "value": "Finish your installation"
           }
         ],
-        "key": "A2Sh9URTkS",
         "identifier": "finish-your-installation",
         "label": "Finish your installation",
         "html_id": "finish-your-installation",
@@ -419,48 +349,39 @@
         "children": [
           {
             "type": "text",
-            "value": "If you installed ",
-            "key": "SXdQ3LThYW"
+            "value": "If you installed "
           },
           {
             "type": "inlineCode",
-            "value": "q2-micom",
-            "key": "RuR6CIVziO"
+            "value": "q2-micom"
           },
           {
             "type": "text",
-            "value": " in an already existing QIIME 2 environment, update the plugin cache:",
-            "key": "qNJwaAFRL3"
+            "value": " in an already existing QIIME 2 environment, update the plugin cache:"
           }
-        ],
-        "key": "pQKeM7VAeb"
+        ]
       },
       {
         "type": "code",
         "lang": "bash",
-        "value": "conda activate qiime2-2024.2  # or whatever you called your environment\nqiime dev refresh-cache",
-        "key": "hqsviynCpS"
+        "value": "conda activate qiime2-2024.2  # or whatever you called your environment\nqiime dev refresh-cache"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "You are now ready to run ",
-            "key": "AABO22Rp9C"
+            "value": "You are now ready to run "
           },
           {
             "type": "inlineCode",
-            "value": "q2-micom",
-            "key": "ewpWbMPsYj"
+            "value": "q2-micom"
           },
           {
             "type": "text",
-            "value": "!",
-            "key": "fxXxDOTyQs"
+            "value": "!"
           }
-        ],
-        "key": "qPvCrQtz8L"
+        ]
       },
       {
         "type": "heading",
@@ -468,11 +389,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Usage",
-            "key": "B0L1dSbMQ8"
+            "value": "Usage"
           }
         ],
-        "key": "jZmjVEBH9U",
         "identifier": "usage",
         "label": "Usage",
         "html_id": "usage",
@@ -483,21 +402,17 @@
         "children": [
           {
             "type": "text",
-            "value": "Here is a graphical overview of a ",
-            "key": "Jiu6RxSjP0"
+            "value": "Here is a graphical overview of a "
           },
           {
             "type": "inlineCode",
-            "value": "q2-micom",
-            "key": "KsIPzxlLU9"
+            "value": "q2-micom"
           },
           {
             "type": "text",
-            "value": " analysis.",
-            "key": "cuRw6HH6DO"
+            "value": " analysis."
           }
-        ],
-        "key": "iyrmBsztds"
+        ]
       },
       {
         "type": "image",
@@ -508,8 +423,7 @@
         "children": [
           {
             "type": "text",
-            "value": "The best way to get started is to work through the ",
-            "key": "nH8lx5K5fF"
+            "value": "The best way to get started is to work through the "
           },
           {
             "type": "link",
@@ -517,19 +431,15 @@
             "children": [
               {
                 "type": "text",
-                "value": "community tutorial",
-                "key": "XlLmRrrj0I"
+                "value": "community tutorial"
               }
-            ],
-            "key": "iYvWJU1Pqx"
+            ]
           },
           {
             "type": "text",
-            "value": ".",
-            "key": "JMJkZIqUxy"
+            "value": "."
           }
-        ],
-        "key": "uhnm4GoVAq"
+        ]
       },
       {
         "type": "heading",
@@ -537,11 +447,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Supported QIIME 2 versions",
-            "key": "FaQtCB2wpu"
+            "value": "Supported QIIME 2 versions"
           }
         ],
-        "key": "C6fe9IpKGq",
         "identifier": "supported-qiime-2-versions",
         "label": "Supported QIIME 2 versions",
         "html_id": "supported-qiime-2-versions",
@@ -552,16 +460,13 @@
         "children": [
           {
             "type": "inlineCode",
-            "value": "q2-micom",
-            "key": "rm3zgfzJo8"
+            "value": "q2-micom"
           },
           {
             "type": "text",
-            "value": " is tested against:",
-            "key": "gzyzAdbyPK"
+            "value": " is tested against:"
           }
-        ],
-        "key": "NFepWdK2mB"
+        ]
       },
       {
         "type": "list",
@@ -575,8 +480,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "the current ",
-                "key": "kcla6Hrrvo"
+                "value": "the current "
               },
               {
                 "type": "link",
@@ -584,14 +488,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "QIIME 2 version",
-                    "key": "QreUR2kdlH"
+                    "value": "QIIME 2 version"
                   }
-                ],
-                "key": "CYSWTtCeez"
+                ]
               }
-            ],
-            "key": "yQ47dc2Cpi"
+            ]
           },
           {
             "type": "listItem",
@@ -599,25 +500,20 @@
             "children": [
               {
                 "type": "text",
-                "value": "the previous version",
-                "key": "mCw8dkaHox"
+                "value": "the previous version"
               }
-            ],
-            "key": "XCiKu52tbk"
+            ]
           }
-        ],
-        "key": "CSfq3KSOVX"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "It should also work with",
-            "key": "dgkzsf80RO"
+            "value": "It should also work with"
           }
-        ],
-        "key": "p8eUYQyqK5"
+        ]
       },
       {
         "type": "list",
@@ -631,8 +527,7 @@
             "children": [
               {
                 "type": "text",
-                "value": "the ",
-                "key": "d3rJLLsPFf"
+                "value": "the "
               },
               {
                 "type": "link",
@@ -640,19 +535,16 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "development version",
-                    "key": "gnRCqotByf"
+                    "value": "development version"
                   }
-                ],
-                "key": "pjDwgOIDxH"
+                ]
               },
               {
                 "type": "break"
               },
               {
                 "type": "text",
-                "value": "\nHowever, this may occasionally break. Check ",
-                "key": "F5pSQO3FD4"
+                "value": "\nHowever, this may occasionally break. Check "
               },
               {
                 "type": "link",
@@ -660,22 +552,17 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "here for the current status",
-                    "key": "OOLn6MFbjr"
+                    "value": "here for the current status"
                   }
-                ],
-                "key": "JZuJpqy6GX"
+                ]
               },
               {
                 "type": "text",
-                "value": ".",
-                "key": "YLWgDTzvU3"
+                "value": "."
               }
-            ],
-            "key": "eCAFqpKqfF"
+            ]
           }
-        ],
-        "key": "Nt58Sp5oQa"
+        ]
       },
       {
         "type": "heading",
@@ -683,11 +570,9 @@
         "children": [
           {
             "type": "text",
-            "value": "References",
-            "key": "vL6dk7AFBD"
+            "value": "References"
           }
         ],
-        "key": "TjIyyStJ2A",
         "identifier": "references",
         "label": "References",
         "html_id": "references",
@@ -698,38 +583,32 @@
         "children": [
           {
             "type": "text",
-            "value": "MICOM: Metagenome-Scale Modeling To Infer Metabolic Interactions in the Gut Microbiota ",
-            "key": "xlBRUKmTd1"
+            "value": "MICOM: Metagenome-Scale Modeling To Infer Metabolic Interactions in the Gut Microbiota "
           },
           {
             "type": "break"
           },
           {
             "type": "text",
-            "value": "\nChristian Diener, Sean M. Gibbons, Osbaldo Resendis-Antonio ",
-            "key": "QqEQzyPYY5"
+            "value": "\nChristian Diener, Sean M. Gibbons, Osbaldo Resendis-Antonio "
           },
           {
             "type": "break"
           },
           {
             "type": "text",
-            "value": "\nmSystems 5:e00606-19 ",
-            "key": "ipBje1zRBT"
+            "value": "\nmSystems 5:e00606-19 "
           },
           {
             "type": "break"
           },
           {
             "type": "text",
-            "value": "\nhttps://doi.org/10.1128/mSystems.00606-19",
-            "key": "OAg7LeNeVZ"
+            "value": "\nhttps://doi.org/10.1128/mSystems.00606-19"
           }
-        ],
-        "key": "QprASEih7f"
+        ]
       }
-    ],
-    "key": "pE2YmjCoEF"
+    ]
   },
   "releases": [
     {
@@ -745,14 +624,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes.",
-                "key": "YZJR4gUDRT"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
               }
-            ],
-            "key": "Octv6kLmOb"
+            ]
           }
-        ],
-        "key": "r6qPkcLuq3"
+        ]
       }
     },
     {
@@ -768,14 +644,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes.",
-                "key": "Hes3NxH1rU"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
               }
-            ],
-            "key": "l7fN249Qjh"
+            ]
           }
-        ],
-        "key": "bV6hqWodbJ"
+        ]
       }
     },
     {
@@ -791,14 +664,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes.",
-                "key": "LiwQ0Yx69w"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
               }
-            ],
-            "key": "Jo6idSeg29"
+            ]
           }
-        ],
-        "key": "Bq2fHcFywL"
+        ]
       }
     },
     {
@@ -814,14 +684,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes.",
-                "key": "O46IQxQdu3"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
               }
-            ],
-            "key": "hE7bqJIR8D"
+            ]
           }
-        ],
-        "key": "esZfq4NfWc"
+        ]
       }
     },
     {
@@ -837,14 +704,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes.",
-                "key": "ZZHMOr45V8"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
               }
-            ],
-            "key": "pLrQeK5gG9"
+            ]
           }
-        ],
-        "key": "y3wGYrTprX"
+        ]
       }
     },
     {
@@ -860,14 +724,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes.",
-                "key": "cy2VEoAeQZ"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/main/NEWS.md for the full release notes."
               }
-            ],
-            "key": "LbL3pyPrwj"
+            ]
           }
-        ],
-        "key": "lkRPfuxtrz"
+        ]
       }
     },
     {
@@ -883,14 +744,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "HJ0jAVCP4l"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "MuQeG5KRzs"
+            ]
           }
-        ],
-        "key": "eeGxaV1Mf4"
+        ]
       }
     },
     {
@@ -906,14 +764,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "JJySXFlKVh"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "UBZdc9Xije"
+            ]
           }
-        ],
-        "key": "HP919HUaCT"
+        ]
       }
     },
     {
@@ -929,14 +784,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "lfDbEuzVJ2"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "XMO3WNYcGk"
+            ]
           }
-        ],
-        "key": "h4W9LyWPCM"
+        ]
       }
     },
     {
@@ -952,14 +804,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "Ru1yQL98wE"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "JGoW2WRdui"
+            ]
           }
-        ],
-        "key": "Mxh47LcbYr"
+        ]
       }
     },
     {
@@ -975,14 +824,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "eWwLz9FH7b"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "elLwAB7mo7"
+            ]
           }
-        ],
-        "key": "yiMp0rsdBU"
+        ]
       }
     },
     {
@@ -998,14 +844,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "ncfszqREVS"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "AwG5bFa0eR"
+            ]
           }
-        ],
-        "key": "xqr6TGOXeE"
+        ]
       }
     },
     {
@@ -1021,14 +864,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "nL213bGPlC"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "HWMsdSr2y3"
+            ]
           }
-        ],
-        "key": "Nq7tk81tNe"
+        ]
       }
     },
     {
@@ -1044,14 +884,11 @@
             "children": [
               {
                 "type": "text",
-                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes.",
-                "key": "qTXgzYbF3N"
+                "value": "Please see https://github.com/micom-dev/q2-micom/blob/master/NEWS.md for the full release notes."
               }
-            ],
-            "key": "Yy91UjhZgW"
+            ]
           }
-        ],
-        "key": "jVhsauy5vd"
+        ]
       }
     }
   ],

@@ -8,13 +8,11 @@
           {
             "type": "image",
             "url": "https://github.com/bokulich-lab/q2-assembly/actions/workflows/ci-dev.yaml/badge.svg",
-            "alt": "CI",
-            "key": "YwSqCaFabJ"
+            "alt": "CI"
           },
           {
             "type": "text",
-            "value": "\n",
-            "key": "ZSJYHnR2DC"
+            "value": "\n"
           },
           {
             "type": "link",
@@ -23,16 +21,13 @@
               {
                 "type": "image",
                 "url": "https://codecov.io/gh/bokulich-lab/q2-assembly/branch/main/graph/badge.svg?token=THMBOFUZR0",
-                "alt": "codecov",
-                "key": "gr8euWiFc3"
+                "alt": "codecov"
               }
-            ],
-            "key": "implcypjDS"
+            ]
           },
           {
             "type": "text",
-            "value": "\n",
-            "key": "CDBDpPKzO2"
+            "value": "\n"
           },
           {
             "type": "link",
@@ -41,25 +36,20 @@
               {
                 "type": "image",
                 "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
-                "alt": "Code style: black",
-                "key": "TJyEkTuVgp"
+                "alt": "Code style: black"
               }
-            ],
-            "key": "wmip62wD7P"
+            ]
           }
-        ],
-        "key": "sC6mF4aURl"
+        ]
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "QIIME 2 plugin for (meta)genome assembly.",
-            "key": "YBRrizKoUn"
+            "value": "QIIME 2 plugin for (meta)genome assembly."
           }
-        ],
-        "key": "NsmyhPxCJa"
+        ]
       },
       {
         "type": "heading",
@@ -67,11 +57,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Installation",
-            "key": "vg9rY0PouZ"
+            "value": "Installation"
           }
         ],
-        "key": "SfHqcfCFo0",
         "identifier": "installation",
         "label": "Installation",
         "html_id": "installation",
@@ -85,16 +73,13 @@
             "children": [
               {
                 "type": "text",
-                "value": "q2-assembly",
-                "key": "QpQ6yatn8u"
+                "value": "q2-assembly"
               }
-            ],
-            "key": "nQJmjgdJvL"
+            ]
           },
           {
             "type": "text",
-            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official ",
-            "key": "iEYnZH8F2U"
+            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official "
           },
           {
             "type": "link",
@@ -102,19 +87,15 @@
             "children": [
               {
                 "type": "text",
-                "value": "QIIME 2 documentation",
-                "key": "M6nkyWe5uD"
+                "value": "QIIME 2 documentation"
               }
-            ],
-            "key": "sLN0UL13np"
+            ]
           },
           {
             "type": "text",
-            "value": ".",
-            "key": "yd60tIynHr"
+            "value": "."
           }
-        ],
-        "key": "M1PrBLssJK"
+        ]
       },
       {
         "type": "heading",
@@ -122,11 +103,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Functionality",
-            "key": "FdwkzuUfq1"
+            "value": "Functionality"
           }
         ],
-        "key": "maPQbEMcnZ",
         "identifier": "functionality",
         "label": "Functionality",
         "html_id": "functionality",
@@ -137,11 +116,9 @@
         "children": [
           {
             "type": "text",
-            "value": "This QIIME 2 plugin contains actions used to assemble (meta)genomes from short single/paired-end\nsequencing reads:",
-            "key": "CfkzApnFnx"
+            "value": "This QIIME 2 plugin contains actions used to assemble (meta)genomes from short single/paired-end\nsequencing reads:"
           }
-        ],
-        "key": "NVAFKETerd"
+        ]
       },
       {
         "type": "table",
@@ -155,11 +132,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Action",
-                    "key": "mFft3cLZCj"
+                    "value": "Action"
                   }
-                ],
-                "key": "AkHtXFUhHS"
+                ]
               },
               {
                 "type": "tableCell",
@@ -167,11 +142,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Description",
-                    "key": "XQ1SvAnOUx"
+                    "value": "Description"
                   }
-                ],
-                "key": "The8bCWa5v"
+                ]
               },
               {
                 "type": "tableCell",
@@ -179,14 +152,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Underlying tool",
-                    "key": "YxO3AqbMwR"
+                    "value": "Underlying tool"
                   }
-                ],
-                "key": "BxdYKT15L0"
+                ]
               }
-            ],
-            "key": "RGCK624JP4"
+            ]
           },
           {
             "type": "tableRow",
@@ -196,22 +166,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "assemble-megahit",
-                    "key": "QNqS2Ezvnc"
+                    "value": "assemble-megahit"
                   }
-                ],
-                "key": "MfHLDnkXTO"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Assemble contigs using MEGAHIT.",
-                    "key": "ztnSwgCvJc"
+                    "value": "Assemble contigs using MEGAHIT."
                   }
-                ],
-                "key": "PzxjhwVOjS"
+                ]
               },
               {
                 "type": "tableCell",
@@ -222,17 +188,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "MEGAHIT",
-                        "key": "zoVtGJmyxZ"
+                        "value": "MEGAHIT"
                       }
-                    ],
-                    "key": "lrRoanzdmi"
+                    ]
                   }
-                ],
-                "key": "KZouZhgw47"
+                ]
               }
-            ],
-            "key": "scHqXnzHH9"
+            ]
           },
           {
             "type": "tableRow",
@@ -242,22 +204,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "assemble-spades",
-                    "key": "PU3ZhEKkwT"
+                    "value": "assemble-spades"
                   }
-                ],
-                "key": "acLVIryytk"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Assemble contigs using SPAdes.",
-                    "key": "nLf1Z47KYf"
+                    "value": "Assemble contigs using SPAdes."
                   }
-                ],
-                "key": "yLbb4JKeQj"
+                ]
               },
               {
                 "type": "tableCell",
@@ -268,17 +226,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "SPAdes",
-                        "key": "Y7hZb9GNHt"
+                        "value": "SPAdes"
                       }
-                    ],
-                    "key": "zEr8R3mHvL"
+                    ]
                   }
-                ],
-                "key": "s0i5zopuC1"
+                ]
               }
-            ],
-            "key": "iVeOdbQMVD"
+            ]
           },
           {
             "type": "tableRow",
@@ -288,22 +242,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "evaluate-contigs",
-                    "key": "nTNr7FB12l"
+                    "value": "evaluate-contigs"
                   }
-                ],
-                "key": "uXtmAlp6u5"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Evaluate quality of the assembled contigs using metaQUAST.",
-                    "key": "PriwcjEHYa"
+                    "value": "Evaluate quality of the assembled contigs using metaQUAST."
                   }
-                ],
-                "key": "OI3EPTBpxn"
+                ]
               },
               {
                 "type": "tableCell",
@@ -314,17 +264,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "QUAST",
-                        "key": "KYNNatCEpU"
+                        "value": "QUAST"
                       }
-                    ],
-                    "key": "D9V6j8alNr"
+                    ]
                   }
-                ],
-                "key": "DUH3gVHSFd"
+                ]
               }
-            ],
-            "key": "P9bjkq6qLc"
+            ]
           },
           {
             "type": "tableRow",
@@ -334,22 +280,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "generate-reads",
-                    "key": "vP5ZZ3z83n"
+                    "value": "generate-reads"
                   }
-                ],
-                "key": "KXfGkUr40R"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Simulate NGS reads using InSilicoSeq.",
-                    "key": "AuXMh0pziX"
+                    "value": "Simulate NGS reads using InSilicoSeq."
                   }
-                ],
-                "key": "Mr0xH6p10V"
+                ]
               },
               {
                 "type": "tableCell",
@@ -360,17 +302,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "InSilicoSeq",
-                        "key": "S7Fs49flDU"
+                        "value": "InSilicoSeq"
                       }
-                    ],
-                    "key": "xYlxGkmOl4"
+                    ]
                   }
-                ],
-                "key": "rtWlcffzFJ"
+                ]
               }
-            ],
-            "key": "VA2XNV39eF"
+            ]
           },
           {
             "type": "tableRow",
@@ -380,22 +318,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "index-contigs",
-                    "key": "DMYiLKGUBu"
+                    "value": "index-contigs"
                   }
-                ],
-                "key": "rsAL36yM1K"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Index contigs using Bowtie 2.",
-                    "key": "KFNCASJuWw"
+                    "value": "Index contigs using Bowtie 2."
                   }
-                ],
-                "key": "O3LShov9Dr"
+                ]
               },
               {
                 "type": "tableCell",
@@ -406,17 +340,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2",
-                        "key": "ir9qbKpNdG"
+                        "value": "Bowtie 2"
                       }
-                    ],
-                    "key": "xMUzE4aymP"
+                    ]
                   }
-                ],
-                "key": "f02gYd3Df1"
+                ]
               }
-            ],
-            "key": "wz5NGUOG4U"
+            ]
           },
           {
             "type": "tableRow",
@@ -426,22 +356,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "index-derep-mags",
-                    "key": "BnYI9C96hs"
+                    "value": "index-derep-mags"
                   }
-                ],
-                "key": "x2yRgshY08"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Index dereplicated MAGs using Bowtie2.",
-                    "key": "YzAUg6Ha5v"
+                    "value": "Index dereplicated MAGs using Bowtie2."
                   }
-                ],
-                "key": "tKsq2ykkti"
+                ]
               },
               {
                 "type": "tableCell",
@@ -452,17 +378,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2",
-                        "key": "CdFnKUX6a3"
+                        "value": "Bowtie 2"
                       }
-                    ],
-                    "key": "S5wzNuRKeQ"
+                    ]
                   }
-                ],
-                "key": "nWECmebKPe"
+                ]
               }
-            ],
-            "key": "OHRaNqA0jz"
+            ]
           },
           {
             "type": "tableRow",
@@ -472,22 +394,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "index-mags",
-                    "key": "cAdiRY8F4k"
+                    "value": "index-mags"
                   }
-                ],
-                "key": "Y9X6QsJmWg"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Index MAGs using Bowtie 2.",
-                    "key": "W0aZaiKAoh"
+                    "value": "Index MAGs using Bowtie 2."
                   }
-                ],
-                "key": "fPJjEh4ogh"
+                ]
               },
               {
                 "type": "tableCell",
@@ -498,17 +416,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2",
-                        "key": "OdJFlRlMgq"
+                        "value": "Bowtie 2"
                       }
-                    ],
-                    "key": "PuLe93AgBv"
+                    ]
                   }
-                ],
-                "key": "OQFnjBFjBj"
+                ]
               }
-            ],
-            "key": "O1mj6lujlD"
+            ]
           },
           {
             "type": "tableRow",
@@ -518,22 +432,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "map-reads",
-                    "key": "aluPOAVieT"
+                    "value": "map-reads"
                   }
-                ],
-                "key": "BMzbj60RL9"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Map reads to contigs/MAGs using Bowtie 2.",
-                    "key": "ssIx8QamP3"
+                    "value": "Map reads to contigs/MAGs using Bowtie 2."
                   }
-                ],
-                "key": "uHRkQbJsfl"
+                ]
               },
               {
                 "type": "tableCell",
@@ -544,17 +454,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "Bowtie 2",
-                        "key": "C9P97BGZLo"
+                        "value": "Bowtie 2"
                       }
-                    ],
-                    "key": "REJRbtbLu2"
+                    ]
                   }
-                ],
-                "key": "V7uNC3ZVuW"
+                ]
               }
-            ],
-            "key": "T2TEynpIVa"
+            ]
           },
           {
             "type": "tableRow",
@@ -564,39 +470,31 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "rename-contigs",
-                    "key": "T3ZV9X5SpY"
+                    "value": "rename-contigs"
                   }
-                ],
-                "key": "ZvDpnAMERa"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "Rename contigs using unique IDs.",
-                    "key": "TgLSIqcpyQ"
+                    "value": "Rename contigs using unique IDs."
                   }
-                ],
-                "key": "td17DOTPTR"
+                ]
               },
               {
                 "type": "tableCell",
                 "children": [
                   {
                     "type": "text",
-                    "value": "-",
-                    "key": "XTmjK2mssB"
+                    "value": "-"
                   }
-                ],
-                "key": "OkL8uYH4mg"
+                ]
               }
-            ],
-            "key": "gvrbDu807m"
+            ]
           }
-        ],
-        "key": "GR40zGhzSR"
+        ]
       },
       {
         "type": "heading",
@@ -604,11 +502,9 @@
         "children": [
           {
             "type": "text",
-            "value": "Dev environment",
-            "key": "HYGnVpFZgp"
+            "value": "Dev environment"
           }
         ],
-        "key": "R4ehETn5HH",
         "identifier": "dev-environment",
         "label": "Dev environment",
         "html_id": "dev-environment",
@@ -619,40 +515,32 @@
         "children": [
           {
             "type": "text",
-            "value": "This repository follows the ",
-            "key": "eYw0SxiZsS"
+            "value": "This repository follows the "
           },
           {
             "type": "emphasis",
             "children": [
               {
                 "type": "text",
-                "value": "black",
-                "key": "QjYuBX9AMz"
+                "value": "black"
               }
-            ],
-            "key": "u4FmI1lFYj"
+            ]
           },
           {
             "type": "text",
-            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing ",
-            "key": "TV0oSkqWyr"
+            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing "
           },
           {
             "type": "inlineCode",
-            "value": "make dev",
-            "key": "hska7hefwT"
+            "value": "make dev"
           },
           {
             "type": "text",
-            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes.",
-            "key": "rvgeNQUm41"
+            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes."
           }
-        ],
-        "key": "IQUQfzXej8"
+        ]
       }
-    ],
-    "key": "EiHe5qBmBx"
+    ]
   },
   "releases": [
     {
@@ -669,11 +557,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed",
-                "key": "HJpMQYJnTG"
+                "value": "What’s Changed"
               }
             ],
-            "key": "FIlPF9kyiL",
             "identifier": "whats-changed",
             "label": "What’s Changed",
             "html_id": "whats-changed",
@@ -690,8 +576,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "FIX: enable multi-processing on Linux by ",
-                    "key": "yLaNYY8qJH"
+                    "value": "FIX: enable multi-processing on Linux by "
                   },
                   {
                     "type": "link",
@@ -730,11 +615,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "G1jMPmWXMw"
+                ]
               }
-            ],
-            "key": "JVQ7vC0ODz"
+            ]
           },
           {
             "type": "paragraph",
@@ -744,11 +627,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog",
-                    "key": "LxxpRIpdFH"
+                    "value": "Full Changelog"
                   }
-                ],
-                "key": "H8o3tFT467"
+                ]
               },
               {
                 "type": "text",
@@ -777,11 +658,9 @@
                 "type": "text",
                 "value": ""
               }
-            ],
-            "key": "djfabKuz8c"
+            ]
           }
-        ],
-        "key": "bQyix0Dgns"
+        ]
       }
     },
     {
@@ -798,11 +677,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed",
-                "key": "KVZmSJ3j97"
+                "value": "What’s Changed"
               }
             ],
-            "key": "FJRq6TTqmK",
             "identifier": "whats-changed",
             "label": "What’s Changed",
             "html_id": "whats-changed",
@@ -819,8 +696,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "FIX: enable multi-processing on Linux by ",
-                    "key": "c28qsCTfCb"
+                    "value": "FIX: enable multi-processing on Linux by "
                   },
                   {
                     "type": "link",
@@ -859,11 +735,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "mQFqfJobd0"
+                ]
               }
-            ],
-            "key": "sE5hXnJ4m9"
+            ]
           },
           {
             "type": "paragraph",
@@ -873,11 +747,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog",
-                    "key": "cgVDGzPiQS"
+                    "value": "Full Changelog"
                   }
-                ],
-                "key": "l9OjsM90Uw"
+                ]
               },
               {
                 "type": "text",
@@ -906,11 +778,9 @@
                 "type": "text",
                 "value": ""
               }
-            ],
-            "key": "y2aZ2zzkEG"
+            ]
           }
-        ],
-        "key": "O1dW5v091j"
+        ]
       }
     },
     {
@@ -927,11 +797,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed",
-                "key": "KnOOn4CiHy"
+                "value": "What’s Changed"
               }
             ],
-            "key": "vSdgyvqsIa",
             "identifier": "whats-changed",
             "label": "What’s Changed",
             "html_id": "whats-changed",
@@ -948,8 +816,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "FIX: set the default thread count to 1 in all actions by ",
-                    "key": "hbILCN9nVG"
+                    "value": "FIX: set the default thread count to 1 in all actions by "
                   },
                   {
                     "type": "link",
@@ -988,11 +855,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "JimOXWN59Z"
+                ]
               }
-            ],
-            "key": "jO8khaClRM"
+            ]
           },
           {
             "type": "paragraph",
@@ -1002,11 +867,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog",
-                    "key": "mE7HLfWVZk"
+                    "value": "Full Changelog"
                   }
-                ],
-                "key": "eDkRGYTjdR"
+                ]
               },
               {
                 "type": "text",
@@ -1035,11 +898,9 @@
                 "type": "text",
                 "value": ""
               }
-            ],
-            "key": "z0zYtNPLcA"
+            ]
           }
-        ],
-        "key": "A70kQg85dD"
+        ]
       }
     },
     {
@@ -1056,11 +917,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed",
-                "key": "dJvZRz0wMC"
+                "value": "What’s Changed"
               }
             ],
-            "key": "gn3qZnDK9u",
             "identifier": "whats-changed",
             "label": "What’s Changed",
             "html_id": "whats-changed",
@@ -1077,8 +936,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: readme and header updates by ",
-                    "key": "soezjLuKWd"
+                    "value": "MAINT: readme and header updates by "
                   },
                   {
                     "type": "link",
@@ -1117,8 +975,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "URikI8eRty"
+                ]
               },
               {
                 "type": "listItem",
@@ -1126,8 +983,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: add an independent test step to CI by ",
-                    "key": "V6uIqejTbl"
+                    "value": "MAINT: add an independent test step to CI by "
                   },
                   {
                     "type": "link",
@@ -1166,8 +1022,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "zjKi0blGCF"
+                ]
               },
               {
                 "type": "listItem",
@@ -1175,8 +1030,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: more CI improvements by ",
-                    "key": "V3J7YsFbeG"
+                    "value": "MAINT: more CI improvements by "
                   },
                   {
                     "type": "link",
@@ -1215,8 +1069,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "t1uW7MfVlX"
+                ]
               },
               {
                 "type": "listItem",
@@ -1224,8 +1077,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "CI/DEP: update recipe and add quast by ",
-                    "key": "XgevwsMu4a"
+                    "value": "CI/DEP: update recipe and add quast by "
                   },
                   {
                     "type": "link",
@@ -1264,8 +1116,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "Rfn9XMJlIf"
+                ]
               },
               {
                 "type": "listItem",
@@ -1273,8 +1124,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "ENH: read mapping to contigs using Bowtie2 by ",
-                    "key": "Fmwa4JZu0N"
+                    "value": "ENH: read mapping to contigs using Bowtie2 by "
                   },
                   {
                     "type": "link",
@@ -1313,8 +1163,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "bzoCSA9y43"
+                ]
               },
               {
                 "type": "listItem",
@@ -1322,8 +1171,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: clean up CI tasks by ",
-                    "key": "uuyjzx4LjH"
+                    "value": "MAINT: clean up CI tasks by "
                   },
                   {
                     "type": "link",
@@ -1362,8 +1210,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "aoRr6dHA3g"
+                ]
               },
               {
                 "type": "listItem",
@@ -1371,8 +1218,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "ENH: add better pre-commit hooks by ",
-                    "key": "N7YYucbMAu"
+                    "value": "ENH: add better pre-commit hooks by "
                   },
                   {
                     "type": "link",
@@ -1411,8 +1257,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "oj6jJWijo2"
+                ]
               },
               {
                 "type": "listItem",
@@ -1420,8 +1265,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: Update README by ",
-                    "key": "GkjEpehjKa"
+                    "value": "MAINT: Update README by "
                   },
                   {
                     "type": "link",
@@ -1460,8 +1304,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "CS36pLqIl5"
+                ]
               },
               {
                 "type": "listItem",
@@ -1469,8 +1312,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: update conda channel in the readme by ",
-                    "key": "QpbyPk2N2L"
+                    "value": "MAINT: update conda channel in the readme by "
                   },
                   {
                     "type": "link",
@@ -1509,11 +1351,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "OVV1ghTBXC"
+                ]
               }
-            ],
-            "key": "mv0CWpixuF"
+            ]
           },
           {
             "type": "heading",
@@ -1521,11 +1361,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "New Contributors",
-                "key": "TcTLISmpv3"
+                "value": "New Contributors"
               }
             ],
-            "key": "VQ1CE6OG5q",
             "identifier": "new-contributors",
             "label": "New Contributors",
             "html_id": "new-contributors",
@@ -1577,11 +1415,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "loXGopB4Ip"
+                ]
               }
-            ],
-            "key": "Iju5Xdpfzi"
+            ]
           },
           {
             "type": "paragraph",
@@ -1591,11 +1427,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog",
-                    "key": "vMeHKbeZUS"
+                    "value": "Full Changelog"
                   }
-                ],
-                "key": "wt34qL7Nt2"
+                ]
               },
               {
                 "type": "text",
@@ -1624,11 +1458,9 @@
                 "type": "text",
                 "value": ""
               }
-            ],
-            "key": "wcmWNOTWJR"
+            ]
           }
-        ],
-        "key": "mqHzDCjpFp"
+        ]
       }
     },
     {
@@ -1645,11 +1477,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed",
-                "key": "qoxfcXIRXJ"
+                "value": "What’s Changed"
               }
             ],
-            "key": "keALpvKCNy",
             "identifier": "whats-changed",
             "label": "What’s Changed",
             "html_id": "whats-changed",
@@ -1666,8 +1496,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: readme and header updates by ",
-                    "key": "hCcqU4ECpL"
+                    "value": "MAINT: readme and header updates by "
                   },
                   {
                     "type": "link",
@@ -1706,8 +1535,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "KwkwLKVx3V"
+                ]
               },
               {
                 "type": "listItem",
@@ -1715,8 +1543,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: add an independent test step to CI by ",
-                    "key": "EcdMmigLZ9"
+                    "value": "MAINT: add an independent test step to CI by "
                   },
                   {
                     "type": "link",
@@ -1755,8 +1582,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "JrNvTOGSCh"
+                ]
               },
               {
                 "type": "listItem",
@@ -1764,8 +1590,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: more CI improvements by ",
-                    "key": "QeYaRI4ZfB"
+                    "value": "MAINT: more CI improvements by "
                   },
                   {
                     "type": "link",
@@ -1804,8 +1629,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "epChibulZU"
+                ]
               },
               {
                 "type": "listItem",
@@ -1813,8 +1637,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "CI/DEP: update recipe and add quast by ",
-                    "key": "SZmxqlDVUk"
+                    "value": "CI/DEP: update recipe and add quast by "
                   },
                   {
                     "type": "link",
@@ -1853,8 +1676,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "lY3LSCbznz"
+                ]
               },
               {
                 "type": "listItem",
@@ -1862,8 +1684,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "ENH: read mapping to contigs using Bowtie2 by ",
-                    "key": "U51oaCaJMd"
+                    "value": "ENH: read mapping to contigs using Bowtie2 by "
                   },
                   {
                     "type": "link",
@@ -1902,8 +1723,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "zwcYUuyn9d"
+                ]
               },
               {
                 "type": "listItem",
@@ -1911,8 +1731,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: clean up CI tasks by ",
-                    "key": "ZGDeNhikNq"
+                    "value": "MAINT: clean up CI tasks by "
                   },
                   {
                     "type": "link",
@@ -1951,8 +1770,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "MGMHOzzkLm"
+                ]
               },
               {
                 "type": "listItem",
@@ -1960,8 +1778,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "ENH: add better pre-commit hooks by ",
-                    "key": "twneosQ9mV"
+                    "value": "ENH: add better pre-commit hooks by "
                   },
                   {
                     "type": "link",
@@ -2000,8 +1817,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "VjIHI3hybi"
+                ]
               },
               {
                 "type": "listItem",
@@ -2009,8 +1825,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: Update README by ",
-                    "key": "h7H6hPX2kS"
+                    "value": "MAINT: Update README by "
                   },
                   {
                     "type": "link",
@@ -2049,8 +1864,7 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "vHorafMjQe"
+                ]
               },
               {
                 "type": "listItem",
@@ -2058,8 +1872,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: update conda channel in the readme by ",
-                    "key": "G3awNRrYBV"
+                    "value": "MAINT: update conda channel in the readme by "
                   },
                   {
                     "type": "link",
@@ -2098,11 +1911,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "z9n45xKbRR"
+                ]
               }
-            ],
-            "key": "awFqJz4RGN"
+            ]
           },
           {
             "type": "heading",
@@ -2110,11 +1921,9 @@
             "children": [
               {
                 "type": "text",
-                "value": "New Contributors",
-                "key": "VDLoGhSqzn"
+                "value": "New Contributors"
               }
             ],
-            "key": "WrnpqhrCTt",
             "identifier": "new-contributors",
             "label": "New Contributors",
             "html_id": "new-contributors",
@@ -2166,11 +1975,9 @@
                     "type": "text",
                     "value": ""
                   }
-                ],
-                "key": "zVHNoyERnq"
+                ]
               }
-            ],
-            "key": "xZXVKL7q1p"
+            ]
           },
           {
             "type": "paragraph",
@@ -2180,11 +1987,9 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog",
-                    "key": "nQ9Vka46Fx"
+                    "value": "Full Changelog"
                   }
-                ],
-                "key": "T4xzVknKHS"
+                ]
               },
               {
                 "type": "text",
@@ -2213,11 +2018,9 @@
                 "type": "text",
                 "value": ""
               }
-            ],
-            "key": "AHhPMpdXLk"
+            ]
           }
-        ],
-        "key": "XgB0y1KKj2"
+        ]
       }
     },
     {
@@ -2227,8 +2030,7 @@
       "published_at": "2022-04-20T08:42:07Z",
       "ast": {
         "type": "root",
-        "children": [],
-        "key": "D0RfM70kaV"
+        "children": []
       }
     },
     {
@@ -2238,8 +2040,7 @@
       "published_at": "2021-06-16T08:55:03Z",
       "ast": {
         "type": "root",
-        "children": [],
-        "key": "cKFuJPvOO1"
+        "children": []
       }
     }
   ],
@@ -2254,5 +2055,7 @@
   },
   "stars": 4,
   "description": "QIIME 2 plugin for (meta)genome assembly.",
-  "distros": ["metagenome-2024.10"]
+  "distros": [
+    "metagenome-2024.10"
+  ]
 }

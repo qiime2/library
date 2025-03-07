@@ -24,6 +24,7 @@ export async function main() {
   let videos = fs.readFileSync("./static/json/videos.json", "utf-8");
   results["videos"] = roundRows(JSON.parse(videos)[0].entries, 4);
 
+  results["last_updated"] = new Date();
   fs.writeFileSync(
     "./static/json/index.json",
     JSON.stringify(results, null, 2),

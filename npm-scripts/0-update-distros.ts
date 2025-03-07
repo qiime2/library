@@ -96,7 +96,6 @@ export async function main(catalog, octokit) {
   let releases = Array.from(global_releases);
   releases.sort(sortReleases);
   distro_overview.distros = index;
-  distro_overview.last_updated = new Date();
 
   fs.writeFileSync(
     `${ROOT_PATH}/distros.json`,

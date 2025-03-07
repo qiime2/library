@@ -9,7 +9,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --plugin-search-dir . --write .",
-    "update:clean": "rm -rf ./static/json ; rm -rf ./static/myst; mkdir -p  ./static/json && mkdir -p ./static/myst",
+    "update:clean": "rm -rf ./static/json ; mkdir -p  ./static/json",
     "update:distros": "npx tsx ./npm-scripts/0-update-distros.ts ${npm_config_catalog}",
     "update:videos": "npx tsx ./npm-scripts/0-update-videos.ts ${npm_config_catalog}",
     "update:workshops": "npx tsx ./npm-scripts/0-update-workshops.ts ${npm_config_catalog}",

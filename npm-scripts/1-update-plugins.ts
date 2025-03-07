@@ -127,7 +127,6 @@ export async function main(catalog: string, octokit: Octokit) {
   let releases = Array.from(global_releases);
   releases.sort(sortReleases);
   json_overview.distros = releases;
-  json_overview.last_updated = new Date();
 
   fs.writeFileSync(
     `${ROOT_PATH}/plugins.json`,
