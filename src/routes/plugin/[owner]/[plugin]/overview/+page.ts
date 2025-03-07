@@ -11,7 +11,7 @@ export const load: PageLoad = async ({ fetch, parent }) => {
   }
   // q2-fmt would become
   // q2-plugin-fmt
-  xref_id = "q2-plugin-" + xref_id;
+  xref_id = "q2-plugin-" + xref_id.toLowerCase();
 
   try {
     let index = await fetch(docs + "/myst.xref.json");
