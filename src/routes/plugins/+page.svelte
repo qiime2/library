@@ -1,5 +1,5 @@
 <script lang="ts">
-    import RepoCard from "$lib/components/RepoCard.svelte";
+    import RepoCard from "$lib/components/cards/RepoCard.svelte";
     import SortButtons from "$lib/components/SortButtons.svelte";
     import SearchBar from "$lib/components/SearchBar.svelte";
     import { getFilterContext } from "$lib/contexts";

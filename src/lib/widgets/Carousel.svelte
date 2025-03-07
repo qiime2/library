@@ -6,7 +6,7 @@
         card: Snippet<[T]>,
         finalCard?: Snippet,
         title?: string,
-        url?: string,
+        href?: string,
         expand?: boolean,
         controls?: boolean,
         colsize?: string
@@ -16,14 +16,16 @@
         expand = !expand;
     }
 
-	let { entries, card, finalCard, title, url, expand = false, controls = true, colsize = '20rem' }: Props<T> = $props();
+	let { entries, card, finalCard, title, href, expand = false, controls = true, colsize = '20rem' }: Props<T> = $props();
 
 </script>
 
 <section>
-    <header class="max-width flex">
-        {#if title && url}
-        <h2 class='text-xl overflow-visible'><a href={url} class='bg-[#2a414c] text-white hover:text-white hover:underline pb-1 pt-2 px-3 rounded-t'>{title}</a></h2>
+    <header class="max-width flex items-baseline">
+        {#if title && href}
+        <div class='prose prose-sm md:prose-base lg:prose-lg max-w-none mb-0 md:mb-2'>
+            <h2><a href={href} class='text-[#2a414c]'>{title}</a></h2>
+        </div>
         {/if}
         {#if controls}
         <div class='ml-auto'><button type="button" class='font-bold text-gray-600 cursor-pointer flex items-center' onclick={toggleExpand}>
