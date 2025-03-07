@@ -8,7 +8,7 @@
           {
             "type": "text",
             "value": "Note: This software is in ",
-            "key": "Ow5mDC9cg8"
+            "key": "vTFz600oBQ"
           },
           {
             "type": "strong",
@@ -16,18 +16,18 @@
               {
                 "type": "text",
                 "value": "Beta release",
-                "key": "T2uahFQu3Z"
+                "key": "pbD0Iot0LB"
               }
             ],
-            "key": "gIn706BjrD"
+            "key": "SebCcnAV2k"
           },
           {
             "type": "text",
             "value": ". It is ready for users but interfaces are still subject to change.",
-            "key": "tg768tpGQp"
+            "key": "zkKCwnOEW4"
           }
         ],
-        "key": "s6PilPuwCI"
+        "key": "ZgA5AWldMH"
       },
       {
         "type": "paragraph",
@@ -35,7 +35,7 @@
           {
             "type": "text",
             "value": "q2-fmt is a ",
-            "key": "YTjcoKL5MQ"
+            "key": "ys3JgBtbeU"
           },
           {
             "type": "link",
@@ -44,18 +44,18 @@
               {
                 "type": "text",
                 "value": "QIIME2",
-                "key": "DVw6FFPQYr"
+                "key": "NT0GqDSElv"
               }
             ],
-            "key": "HFDjjzCpsh"
+            "key": "mjCmZQrBAb"
           },
           {
             "type": "text",
             "value": " plugin providing all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants!",
-            "key": "C61xR5gx3o"
+            "key": "UTWkkIWOug"
           }
         ],
-        "key": "IO8Mb88elU"
+        "key": "hxiKLojjn6"
       },
       {
         "type": "paragraph",
@@ -63,7 +63,7 @@
           {
             "type": "text",
             "value": "To learn more about installing and using q2-fmt, refer to the ",
-            "key": "WfzEdVgAOX"
+            "key": "QsrEw9tXrN"
           },
           {
             "type": "link",
@@ -72,13 +72,13 @@
               {
                 "type": "text",
                 "value": "q2-fmt documentation",
-                "key": "JdCceOptIL"
+                "key": "WMbnS8jago"
               }
             ],
-            "key": "pqaH23JSev"
+            "key": "aG9Tp02Tdk"
           }
         ],
-        "key": "iBkB7aiiF7"
+        "key": "momalhZRDS"
       },
       {
         "type": "heading",
@@ -87,10 +87,10 @@
           {
             "type": "text",
             "value": "Demo",
-            "key": "RrIreBPLzh"
+            "key": "IZTsbyYr2f"
           }
         ],
-        "key": "lrXr5XWCHc",
+        "key": "AII0GcUUGO",
         "identifier": "demo",
         "label": "Demo",
         "html_id": "demo",
@@ -106,12 +106,12 @@
               {
                 "type": "image",
                 "url": "https://raw.githubusercontent.com/qiime2/q2-fmt/master/demo/screenshot.png",
-                "key": "GFNSZxXzsm"
+                "key": "ueswTiJ6g8"
               },
               {
                 "type": "text",
                 "value": "\n",
-                "key": "IgTAhBRJ03"
+                "key": "CmPACxPLof"
               },
               {
                 "type": "strong",
@@ -119,19 +119,19 @@
                   {
                     "type": "text",
                     "value": "Interactive Link",
-                    "key": "WjeApifTOd"
+                    "key": "Ai7JfD6J9v"
                   }
                 ],
-                "key": "gbLvvSoYvF"
+                "key": "UzH1Em9Knb"
               }
             ],
-            "key": "YGZ9E4Tpyi"
+            "key": "PvJCZ5lflk"
           }
         ],
-        "key": "ujx0zPge8A"
+        "key": "pxVYYlNBym"
       }
     ],
-    "key": "ZdvWmxhFPH"
+    "key": "D5Pi5C334A"
   },
   "releases": [
     {
@@ -148,22 +148,31 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed"
+                "value": "What’s Changed",
+                "key": "hTZnYsMlEa"
               }
-            ]
+            ],
+            "key": "XIrpVc64dU",
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
           },
           {
             "type": "paragraph",
             "children": [
               {
                 "type": "text",
-                "value": "*We fixed a bug that caused an numpy error in "
+                "value": "*We fixed a bug that caused an numpy error in ",
+                "key": "cJSBe9oNxW"
               },
               {
                 "type": "inlineCode",
-                "value": "qiime fmt ped-permutation-test"
+                "value": "qiime fmt ped-permutation-test",
+                "key": "CE3BfGqA6z"
               }
-            ]
+            ],
+            "key": "oWb6nUEiQm"
           },
           {
             "type": "list",
@@ -176,7 +185,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "BUG: samples dropped by rarefying are in the table when mismatched pairs are made. by "
+                    "value": "BUG: samples dropped by rarefying are in the table when mismatched pairs are made. by ",
+                    "key": "OjJcoS9TFb"
                   },
                   {
                     "type": "link",
@@ -215,9 +225,11 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "yD1iNEZF0I"
               }
-            ]
+            ],
+            "key": "jmxm7brrNm"
           },
           {
             "type": "paragraph",
@@ -227,9 +239,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog"
+                    "value": "Full Changelog",
+                    "key": "nxD7JueMrY"
                   }
-                ]
+                ],
+                "key": "KNoTgm19M8"
               },
               {
                 "type": "text",
@@ -258,9 +272,11 @@
                 "type": "text",
                 "value": ""
               }
-            ]
+            ],
+            "key": "tFiMTR2rES"
           }
-        ]
+        ],
+        "key": "hMNy0PxDLd"
       }
     },
     {
@@ -276,18 +292,22 @@
             "children": [
               {
                 "type": "text",
-                "value": "This is q2-fmt’s official Beta Release!\nHere we present all the methods needed for assessing engraftment extent following FMT. 🎉"
+                "value": "This is q2-fmt’s official Beta Release!\nHere we present all the methods needed for assessing engraftment extent following FMT. 🎉",
+                "key": "Pu6hF0XaMg"
               }
-            ]
+            ],
+            "key": "NU9gT2nwg2"
           },
           {
             "type": "paragraph",
             "children": [
               {
                 "type": "text",
-                "value": "New Actions include:"
+                "value": "New Actions include:",
+                "key": "MRUJCMNThB"
               }
-            ]
+            ],
+            "key": "MbGmiuBhwU"
           },
           {
             "type": "list",
@@ -301,9 +321,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "PEDF (Proportional Engraftment of Donor Features)"
+                    "value": "PEDF (Proportional Engraftment of Donor Features)",
+                    "key": "Cf4VlTjCbX"
                   }
-                ]
+                ],
+                "key": "x9MGZixtdi"
               },
               {
                 "type": "listItem",
@@ -311,9 +333,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "PEDF-permutation-test"
+                    "value": "PEDF-permutation-test",
+                    "key": "awikKnX77G"
                   }
-                ]
+                ],
+                "key": "ELjPAsB7ar"
               },
               {
                 "type": "listItem",
@@ -321,9 +345,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "PPRF (Proportion of Persistent Recipient Features)"
+                    "value": "PPRF (Proportion of Persistent Recipient Features)",
+                    "key": "nYIdS1GBic"
                   }
-                ]
+                ],
+                "key": "ji3KzualCI"
               },
               {
                 "type": "listItem",
@@ -331,9 +357,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "PRDF (Proportion of Recipients with Donor Features)"
+                    "value": "PRDF (Proportion of Recipients with Donor Features)",
+                    "key": "W9om9EMXFj"
                   }
-                ]
+                ],
+                "key": "prORrjnCw0"
               },
               {
                 "type": "listItem",
@@ -341,9 +369,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Detect-donor-indicators"
+                    "value": "Detect-donor-indicators",
+                    "key": "w3jCwEgtAA"
                   }
-                ]
+                ],
+                "key": "FboLgAHWjN"
               },
               {
                 "type": "listItem",
@@ -351,20 +381,25 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "a heatmap Visualization!"
+                    "value": "a heatmap Visualization!",
+                    "key": "WVHY8lTu2i"
                   }
-                ]
+                ],
+                "key": "T2GPXbmlGW"
               }
-            ]
+            ],
+            "key": "Ypq6uPgW5k"
           },
           {
             "type": "paragraph",
             "children": [
               {
                 "type": "text",
-                "value": "For more info be sure to checkout our offical tutorial! https://q2-fmt.readthedocs.io/en/latest/intro.html\nIf you have any questions please reach out on the q2-forum! https://forum.qiime2.org/"
+                "value": "For more info be sure to checkout our offical tutorial! https://q2-fmt.readthedocs.io/en/latest/intro.html\nIf you have any questions please reach out on the q2-forum! https://forum.qiime2.org/",
+                "key": "kQjioRFED5"
               }
-            ]
+            ],
+            "key": "pTTriZo3FY"
           },
           {
             "type": "heading",
@@ -372,9 +407,15 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed"
+                "value": "What’s Changed",
+                "key": "C2OwCGsDZ7"
               }
-            ]
+            ],
+            "key": "HWtaH7cfI5",
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
           },
           {
             "type": "list",
@@ -387,7 +428,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: PEDS method, Heatmap VIZ and Associated Unit tests by "
+                    "value": "NEW: PEDS method, Heatmap VIZ and Associated Unit tests by ",
+                    "key": "TCArYN0AeL"
                   },
                   {
                     "type": "link",
@@ -426,7 +468,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "zYswf1mFf1"
               },
               {
                 "type": "listItem",
@@ -434,7 +477,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: refactor for sample peds for implementation of Feature peds by "
+                    "value": "NEW: refactor for sample peds for implementation of Feature peds by ",
+                    "key": "GHGaXHl7BD"
                   },
                   {
                     "type": "link",
@@ -473,7 +517,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "BLAk6CwSX2"
               },
               {
                 "type": "listItem",
@@ -481,7 +526,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: Refactoring peds-heatmap and the peds pipeline to split taxonomic labels by "
+                    "value": "REF: Refactoring peds-heatmap and the peds pipeline to split taxonomic labels by ",
+                    "key": "qE3WdFgdLo"
                   },
                   {
                     "type": "link",
@@ -520,7 +566,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "jhnaOcJjWy"
               },
               {
                 "type": "listItem",
@@ -528,7 +575,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Update: q2-fmt to py3.9 by "
+                    "value": "Update: q2-fmt to py3.9 by ",
+                    "key": "M9pIhHelQ7"
                   },
                   {
                     "type": "link",
@@ -567,7 +615,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "woQZ67UNcr"
               },
               {
                 "type": "listItem",
@@ -575,7 +624,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: group-timepoints/engraftment pipeline take to_baseline param by "
+                    "value": "REF: group-timepoints/engraftment pipeline take to_baseline param by ",
+                    "key": "DHoXq2Vrx2"
                   },
                   {
                     "type": "link",
@@ -614,7 +664,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "Q3T9ZIJh2H"
               },
               {
                 "type": "listItem",
@@ -622,7 +673,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: Adds 4th dimension of Sample_Size to Heatmap by "
+                    "value": "REF: Adds 4th dimension of Sample_Size to Heatmap by ",
+                    "key": "TLziy6QdWV"
                   },
                   {
                     "type": "link",
@@ -661,7 +713,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "GxaJNe97D3"
               },
               {
                 "type": "listItem",
@@ -669,7 +722,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: group-timepoints to create Dist1D[nestedOrdered] by "
+                    "value": "REF: group-timepoints to create Dist1D[nestedOrdered] by ",
+                    "key": "nl86F9SNf8"
                   },
                   {
                     "type": "link",
@@ -708,7 +762,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "F7IxOFOmIi"
               },
               {
                 "type": "listItem",
@@ -716,7 +771,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: Add choices to to_distance parameter  by "
+                    "value": "REF: Add choices to to_distance parameter  by ",
+                    "key": "xNIURXca83"
                   },
                   {
                     "type": "link",
@@ -755,7 +811,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "q8bTyVf1nc"
               },
               {
                 "type": "listItem",
@@ -763,7 +820,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: Added command descriptions to q2-fmt command  by "
+                    "value": "NEW: Added command descriptions to q2-fmt command  by ",
+                    "key": "r5rDUiq6ne"
                   },
                   {
                     "type": "link",
@@ -802,7 +860,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "jmzzzf3CCi"
               },
               {
                 "type": "listItem",
@@ -810,7 +869,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: engraftment to CC by "
+                    "value": "REF: engraftment to CC by ",
+                    "key": "za6bGRGWH7"
                   },
                   {
                     "type": "link",
@@ -849,7 +909,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "ABv68euIE6"
               },
               {
                 "type": "listItem",
@@ -857,7 +918,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: peds-simulation action by "
+                    "value": "NEW: peds-simulation action by ",
+                    "key": "iWWrjIbZkl"
                   },
                   {
                     "type": "link",
@@ -896,7 +958,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "b10rB21eQM"
               },
               {
                 "type": "listItem",
@@ -904,7 +967,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "BUG: Fixes bug were fdr correction was handed an float instead of a list. by "
+                    "value": "BUG: Fixes bug were fdr correction was handed an float instead of a list. by ",
+                    "key": "w7pOdP5hHl"
                   },
                   {
                     "type": "link",
@@ -943,7 +1007,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "HMkIirysy2"
               },
               {
                 "type": "listItem",
@@ -951,15 +1016,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: Add more bumpers and tests to cc "
+                    "value": "REF: Add more bumpers and tests to cc ",
+                    "key": "JfCmT2qhZe"
                   },
                   {
                     "type": "inlineCode",
-                    "value": "--to-baseline"
+                    "value": "--to-baseline",
+                    "key": "PqC3Wb48Rp"
                   },
                   {
                     "type": "text",
-                    "value": " by "
+                    "value": " by ",
+                    "key": "c2jFrMwPwS"
                   },
                   {
                     "type": "link",
@@ -998,7 +1066,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "UbdxUeJsTl"
               },
               {
                 "type": "listItem",
@@ -1006,7 +1075,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: minor fixes from working with Jeff by "
+                    "value": "REF: minor fixes from working with Jeff by ",
+                    "key": "wQsbLqcEqn"
                   },
                   {
                     "type": "link",
@@ -1045,7 +1115,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "vL4iROJLWE"
               },
               {
                 "type": "listItem",
@@ -1053,7 +1124,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: q2-fmt ci by "
+                    "value": "REF: q2-fmt ci by ",
+                    "key": "WNxdDvIHhX"
                   },
                   {
                     "type": "link",
@@ -1092,7 +1164,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "a1gGqrTfSY"
               },
               {
                 "type": "listItem",
@@ -1100,7 +1173,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: goodies for library by "
+                    "value": "NEW: goodies for library by ",
+                    "key": "CEis9nYVwG"
                   },
                   {
                     "type": "link",
@@ -1139,7 +1213,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "WByumhlY8X"
               },
               {
                 "type": "listItem",
@@ -1147,7 +1222,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: PPRS action by "
+                    "value": "NEW: PPRS action by ",
+                    "key": "lPb3wKozlb"
                   },
                   {
                     "type": "link",
@@ -1186,7 +1262,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "SI2IBxoz8R"
               },
               {
                 "type": "listItem",
@@ -1194,7 +1271,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: q2-fmt tutorial fixes by "
+                    "value": "REF: q2-fmt tutorial fixes by ",
+                    "key": "M1GuJA4biJ"
                   },
                   {
                     "type": "link",
@@ -1233,7 +1311,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "GuWKV1Q9k9"
               },
               {
                 "type": "listItem",
@@ -1241,7 +1320,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "BUG: title is metadata.index.name by "
+                    "value": "BUG: title is metadata.index.name by ",
+                    "key": "G589Wv8tXd"
                   },
                   {
                     "type": "link",
@@ -1280,7 +1360,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "DHFy4uPfM0"
               },
               {
                 "type": "listItem",
@@ -1288,7 +1369,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Reformat for new library spec by "
+                    "value": "Reformat for new library spec by ",
+                    "key": "eJtRZn8bCY"
                   },
                   {
                     "type": "link",
@@ -1327,7 +1409,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "rSSHaZOxLT"
               },
               {
                 "type": "listItem",
@@ -1335,7 +1418,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: updates to be compatible with q2-stats by "
+                    "value": "REF: updates to be compatible with q2-stats by ",
+                    "key": "ZNzmraaAU9"
                   },
                   {
                     "type": "link",
@@ -1374,7 +1458,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "a43lPZW8J1"
               },
               {
                 "type": "listItem",
@@ -1382,7 +1467,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "add content for readthedocs builds by "
+                    "value": "add content for readthedocs builds by ",
+                    "key": "lvVxrus45L"
                   },
                   {
                     "type": "link",
@@ -1421,7 +1507,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "RsTvz2CZBQ"
               },
               {
                 "type": "listItem",
@@ -1429,7 +1516,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "add templated Jupyter Book by "
+                    "value": "add templated Jupyter Book by ",
+                    "key": "J8TYKm8IuY"
                   },
                   {
                     "type": "link",
@@ -1468,7 +1556,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "o9mIeIWEgb"
               },
               {
                 "type": "listItem",
@@ -1476,7 +1565,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "ADD: detect donor indicators pipeline by "
+                    "value": "ADD: detect donor indicators pipeline by ",
+                    "key": "uXRzsVM3lF"
                   },
                   {
                     "type": "link",
@@ -1515,7 +1605,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "JAtuc3mYph"
               },
               {
                 "type": "listItem",
@@ -1523,7 +1614,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "REF: PEDs/PEDS Associated Methods  by "
+                    "value": "REF: PEDs/PEDS Associated Methods  by ",
+                    "key": "IpZs80CTuK"
                   },
                   {
                     "type": "link",
@@ -1562,7 +1654,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "egbc6GUOYR"
               },
               {
                 "type": "listItem",
@@ -1570,7 +1663,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Reformat example data away from frictionless by "
+                    "value": "Reformat example data away from frictionless by ",
+                    "key": "aTThcIv3VD"
                   },
                   {
                     "type": "link",
@@ -1609,7 +1703,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "K1EW80SOfC"
               },
               {
                 "type": "listItem",
@@ -1617,7 +1712,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "creating q2-Fmt tutorial by "
+                    "value": "creating q2-Fmt tutorial by ",
+                    "key": "iXStEJp7te"
                   },
                   {
                     "type": "link",
@@ -1656,7 +1752,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "inMRbMi0X5"
               },
               {
                 "type": "listItem",
@@ -1664,7 +1761,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "MAINT: Rename sample-peds, feature-peds, pprs and peds-simulation  by "
+                    "value": "MAINT: Rename sample-peds, feature-peds, pprs and peds-simulation  by ",
+                    "key": "WJEaAi4g4f"
                   },
                   {
                     "type": "link",
@@ -1703,7 +1801,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "jkAoU3U2yX"
               },
               {
                 "type": "listItem",
@@ -1711,7 +1810,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "fixes q2-fmt tutorial by "
+                    "value": "fixes q2-fmt tutorial by ",
+                    "key": "rGQncr3Yul"
                   },
                   {
                     "type": "link",
@@ -1750,7 +1850,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "MStx9YGnNy"
               },
               {
                 "type": "listItem",
@@ -1758,7 +1859,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Update _config.yml by "
+                    "value": "Update _config.yml by ",
+                    "key": "cPcWV7qOim"
                   },
                   {
                     "type": "link",
@@ -1797,9 +1899,11 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "ogKsPaPyWt"
               }
-            ]
+            ],
+            "key": "bL8I4uaKcb"
           },
           {
             "type": "paragraph",
@@ -1809,9 +1913,11 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog"
+                    "value": "Full Changelog",
+                    "key": "HdqczWOZZy"
                   }
-                ]
+                ],
+                "key": "YAWZjFlSir"
               },
               {
                 "type": "text",
@@ -1840,9 +1946,11 @@
                 "type": "text",
                 "value": ""
               }
-            ]
+            ],
+            "key": "L6a1NBuB9J"
           }
-        ]
+        ],
+        "key": "rxodEr6mFa"
       }
     },
     {
@@ -1859,9 +1967,15 @@
             "children": [
               {
                 "type": "text",
-                "value": "What’s Changed"
+                "value": "What’s Changed",
+                "key": "hGyXRsVla3"
               }
-            ]
+            ],
+            "key": "iJmSZjfBB4",
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
           },
           {
             "type": "list",
@@ -1874,7 +1988,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "FEAT/IMP: refactoring group_timepoints and adding mann-whitney & wilcoxon significance tests by "
+                    "value": "FEAT/IMP: refactoring group_timepoints and adding mann-whitney & wilcoxon significance tests by ",
+                    "key": "z6qX9mvzpS"
                   },
                   {
                     "type": "link",
@@ -1913,7 +2028,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "lAPs5QPLOq"
               },
               {
                 "type": "listItem",
@@ -1921,7 +2037,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "FEAT: adding raincloud plot viz by "
+                    "value": "FEAT: adding raincloud plot viz by ",
+                    "key": "EY8DSJIrHo"
                   },
                   {
                     "type": "link",
@@ -1960,7 +2077,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "G8eLomOL4G"
               },
               {
                 "type": "listItem",
@@ -1968,7 +2086,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "NEW: raincloud plots by "
+                    "value": "NEW: raincloud plots by ",
+                    "key": "kS4AlVuger"
                   },
                   {
                     "type": "link",
@@ -2007,7 +2126,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "rX7MpoMZzE"
               },
               {
                 "type": "listItem",
@@ -2015,7 +2135,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "IMP: adding engraftment pipeline by "
+                    "value": "IMP: adding engraftment pipeline by ",
+                    "key": "VOAI1zqnIg"
                   },
                   {
                     "type": "link",
@@ -2054,7 +2175,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "aTrXRRnVPT"
               },
               {
                 "type": "listItem",
@@ -2062,7 +2184,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "IMP: add stats table to rainclouds by "
+                    "value": "IMP: add stats table to rainclouds by ",
+                    "key": "IM5gUAF1kh"
                   },
                   {
                     "type": "link",
@@ -2101,7 +2224,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "ejDXigqIFG"
               },
               {
                 "type": "listItem",
@@ -2109,7 +2233,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "TEST: adding unit tests and usage examples for wilcoxon method and engraftment pipeline by "
+                    "value": "TEST: adding unit tests and usage examples for wilcoxon method and engraftment pipeline by ",
+                    "key": "QRfLaFuwk8"
                   },
                   {
                     "type": "link",
@@ -2148,7 +2273,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "tm1oOKoXCT"
               },
               {
                 "type": "listItem",
@@ -2156,7 +2282,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "ex: working usage example for mann-whitney-u by "
+                    "value": "ex: working usage example for mann-whitney-u by ",
+                    "key": "kFugfRMRtx"
                   },
                   {
                     "type": "link",
@@ -2195,7 +2322,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "R4gLMqN3Kx"
               },
               {
                 "type": "listItem",
@@ -2203,7 +2331,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "TEST: stats unit tests for mann-whitney-u and wilcoxon-srt by "
+                    "value": "TEST: stats unit tests for mann-whitney-u and wilcoxon-srt by ",
+                    "key": "DPBekNPHKe"
                   },
                   {
                     "type": "link",
@@ -2242,7 +2371,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "JSTkekx1Zk"
               },
               {
                 "type": "listItem",
@@ -2250,7 +2380,8 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "LINT/CI: adding ci and linting cleanup by "
+                    "value": "LINT/CI: adding ci and linting cleanup by ",
+                    "key": "nXZvNDFJnR"
                   },
                   {
                     "type": "link",
@@ -2289,9 +2420,11 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "Glhk0hRr6r"
               }
-            ]
+            ],
+            "key": "bNNkvjOfgd"
           },
           {
             "type": "heading",
@@ -2299,9 +2432,15 @@
             "children": [
               {
                 "type": "text",
-                "value": "New Contributors"
+                "value": "New Contributors",
+                "key": "hUZOTW0UKO"
               }
-            ]
+            ],
+            "key": "KR1SPZ64Vo",
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
           },
           {
             "type": "list",
@@ -2349,7 +2488,8 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "tEdj9ba4Ab"
               },
               {
                 "type": "listItem",
@@ -2392,9 +2532,11 @@
                     "type": "text",
                     "value": ""
                   }
-                ]
+                ],
+                "key": "oZVMOCVBT8"
               }
-            ]
+            ],
+            "key": "yfeFr6CWEE"
           },
           {
             "type": "paragraph",
@@ -2404,17 +2546,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog"
+                    "value": "Full Changelog",
+                    "key": "KEP5mRwpyZ"
                   }
-                ]
+                ],
+                "key": "PRPNQiWMzw"
               },
               {
                 "type": "text",
-                "value": ": https://github.com/qiime2/q2-fmt/commits/0.1.dev0"
+                "value": ": https://github.com/qiime2/q2-fmt/commits/0.1.dev0",
+                "key": "P2drYrhllv"
               }
-            ]
+            ],
+            "key": "EJZiPoKM4m"
           }
-        ]
+        ],
+        "key": "kbD47fSsvB"
       }
     }
   ],
@@ -2429,5 +2576,7 @@
   },
   "stars": 4,
   "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-  "distros": ["amplicon-2024.10"]
+  "distros": [
+    "amplicon-2024.10"
+  ]
 }

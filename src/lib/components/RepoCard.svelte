@@ -1,23 +1,5 @@
 <script lang="ts">
     export let repo_overview: any;
-
-    function getStatusColor() {
-        let text_format = "text-white rounded px-2 font-bold ";
-
-        if (repo_overview["Build Status"] === "passed") {
-            text_format += "bg-green-500";
-        } else if (repo_overview["Build Status"] === "failed") {
-            text_format += "bg-red-500";
-        } else if (repo_overview["Build Status"] === "in progress") {
-            text_format += "bg-yellow-500";
-        } else {
-            // If we get here then... Who knows what we have. Just display the
-            // text
-            return "";
-        }
-
-        return text_format;
-    }
 </script>
 
 <div class={`bg-white border border-gray-200 relative grid grid-cols-subgrid col-span-full rounded-lg

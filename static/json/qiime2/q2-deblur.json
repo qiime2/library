@@ -5,7 +5,7 @@
       {
         "type": "image",
         "url": "https://github.com/qiime2/q2-deblur/workflows/ci-dev/badge.svg",
-        "key": "UeldqaCP3j"
+        "key": "dMWBJvDi1R"
       },
       {
         "type": "paragraph",
@@ -13,13 +13,13 @@
           {
             "type": "text",
             "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org.",
-            "key": "ZZp4S9RLEk"
+            "key": "kqknriiO41"
           }
         ],
-        "key": "oJ1CQ4xoPG"
+        "key": "xvulktaqMg"
       }
     ],
-    "key": "nLVPuKSFA4"
+    "key": "nbX9VhPI83"
   },
   "releases": [
     {
@@ -35,11 +35,14 @@
             "children": [
               {
                 "type": "text",
-                "value": "Bump deblur micro version dependency to 1.0.2"
+                "value": "Bump deblur micro version dependency to 1.0.2",
+                "key": "igk6lAM8rf"
               }
-            ]
+            ],
+            "key": "kfBRIu9GpC"
           }
-        ]
+        ],
+        "key": "rYCBEF4qdR"
       }
     },
     {
@@ -55,11 +58,14 @@
             "children": [
               {
                 "type": "text",
-                "value": "This microrelease sets its minimal Deblur dependency at version 1.0.1. Additionally, we’re excited to now include per-sample statistics about the Deblur process. The stats are not automatically collected, and must be enabled with --p-sample-stats; they are not enabled automatically as their collection will come at a runtime cost. We may revisit whether to make them automatic in the future. For the time being, even if sample stats are not requested, an empty .qza file will be produced as there isn’t a means at the moment for optional QIIME2 method outputs."
+                "value": "This microrelease sets its minimal Deblur dependency at version 1.0.1. Additionally, we’re excited to now include per-sample statistics about the Deblur process. The stats are not automatically collected, and must be enabled with --p-sample-stats; they are not enabled automatically as their collection will come at a runtime cost. We may revisit whether to make them automatic in the future. For the time being, even if sample stats are not requested, an empty .qza file will be produced as there isn’t a means at the moment for optional QIIME2 method outputs.",
+                "key": "XD2NapdJkW"
               }
-            ]
+            ],
+            "key": "M0Mu3M1zLu"
           }
-        ]
+        ],
+        "key": "EkoRVtivEj"
       }
     },
     {
@@ -75,11 +81,14 @@
             "children": [
               {
                 "type": "text",
-                "value": "Identical to 2017.2.1, except the version string is accurate."
+                "value": "Identical to 2017.2.1, except the version string is accurate.",
+                "key": "ZXQPxRW7K9"
               }
-            ]
+            ],
+            "key": "Lg6jqyuTVG"
           }
-        ]
+        ],
+        "key": "GqEO0nw47N"
       }
     },
     {
@@ -95,11 +104,14 @@
             "children": [
               {
                 "type": "text",
-                "value": "Bug fix: threading was not working"
+                "value": "Bug fix: threading was not working",
+                "key": "fUscP550k7"
               }
-            ]
+            ],
+            "key": "bjiw9Xrhhd"
           }
-        ]
+        ],
+        "key": "wNi2vVhbeP"
       }
     },
     {
@@ -115,11 +127,14 @@
             "children": [
               {
                 "type": "text",
-                "value": "REL: 2017.2.0"
+                "value": "REL: 2017.2.0",
+                "key": "X8JOjDjEll"
               }
-            ]
+            ],
+            "key": "dxPsFOBrjZ"
           }
-        ]
+        ],
+        "key": "OShsDzNIJb"
       }
     }
   ],

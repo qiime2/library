@@ -5,7 +5,7 @@
       {
         "type": "image",
         "url": "https://github.com/qiime2/q2-vizard/workflows/ci-dev/badge.svg",
-        "key": "lYc5wyCjEb"
+        "key": "BF4ap9D3Ry"
       },
       {
         "type": "paragraph",
@@ -13,15 +13,15 @@
           {
             "type": "text",
             "value": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!\n",
-            "key": "igg1ZEgCOp"
+            "key": "rDW8MUVDp2"
           },
           {
             "type": "image",
             "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/vizarded-lizard-wizard.png",
-            "key": "tLP3TUMffJ"
+            "key": "QqtDKs2WSW"
           }
         ],
-        "key": "B3gnC1BXaI"
+        "key": "V22NZGim40"
       },
       {
         "type": "heading",
@@ -30,10 +30,10 @@
           {
             "type": "text",
             "value": "Installing q2-vizard",
-            "key": "HjLkqSzCJE"
+            "key": "UcL9O7nXct"
           }
         ],
-        "key": "UHnLff8dPT",
+        "key": "EX4Fm7AwRb",
         "identifier": "installing-q2-vizard",
         "label": "Installing q2-vizard",
         "html_id": "installing-q2-vizard",
@@ -45,12 +45,12 @@
           {
             "type": "inlineCode",
             "value": "q2-vizard",
-            "key": "CZir5GvNwM"
+            "key": "igtvOfUGUi"
           },
           {
             "type": "text",
             "value": " is included in the ",
-            "key": "x9sMpG6ZzW"
+            "key": "mxpwGeh7r6"
           },
           {
             "type": "link",
@@ -59,18 +59,18 @@
               {
                 "type": "text",
                 "value": "QIIME 2 Amplicon Distribution",
-                "key": "mjziuKN6d3"
+                "key": "XFE1rn4esm"
               }
             ],
-            "key": "BhZGosXpnL"
+            "key": "Q8Qw47vLdi"
           },
           {
             "type": "text",
             "value": " as of 2024.10!\nIf you’d like to install it separately (within a QIIME 2 Tiny Distribution), please follow the instructions below.",
-            "key": "jANDTbyW7A"
+            "key": "dTFyjf5wUX"
           }
         ],
-        "key": "gGytA4Xger"
+        "key": "uETTpe6Lnh"
       },
       {
         "type": "list",
@@ -88,7 +88,7 @@
                   {
                     "type": "text",
                     "value": "Start by installing conda using the same instructions provided in the ",
-                    "key": "AoqDv7nbpe"
+                    "key": "XcmeqApEnT"
                   },
                   {
                     "type": "link",
@@ -97,21 +97,21 @@
                       {
                         "type": "text",
                         "value": "QIIME 2 User Docs",
-                        "key": "q1Mm7rzkw2"
+                        "key": "rl13F97ukg"
                       }
                     ],
-                    "key": "jnhynL2Got"
+                    "key": "uvw4VUpyjm"
                   },
                   {
                     "type": "text",
                     "value": ".",
-                    "key": "V31pG3K254"
+                    "key": "jS9yngIz55"
                   }
                 ],
-                "key": "Gu6zSzlthw"
+                "key": "VYgGMSJWvk"
               }
             ],
-            "key": "CgBuIu4Vda"
+            "key": "EwnVFFNnx3"
           },
           {
             "type": "listItem",
@@ -123,22 +123,22 @@
                   {
                     "type": "text",
                     "value": "Contained in this plugin is an environment file for easy installation within the QIIME 2 Tiny Distribution. You can use the following command to create this environment:",
-                    "key": "LTuksP5LDA"
+                    "key": "oh22U4Kpa4"
                   }
                 ],
-                "key": "UvrAUsZq6G"
+                "key": "mB7JKjEpSY"
               }
             ],
-            "key": "wM6zFcB1Y6"
+            "key": "Bt4dPirOxL"
           }
         ],
-        "key": "yw1E6OKPuN"
+        "key": "Z8DFfwKni2"
       },
       {
         "type": "code",
         "lang": "",
         "value": "conda env create -n q2vizard-2024.10 -f https://raw.githubusercontent.com/qiime2/q2-vizard/dev/environment-files/2024.10-vizard-environment.yml",
-        "key": "UAfSznk95x"
+        "key": "EBzbJ03JNd"
       },
       {
         "type": "list",
@@ -153,19 +153,19 @@
               {
                 "type": "text",
                 "value": "Activate your new environment and enjoy!",
-                "key": "XkRxDeRIt4"
+                "key": "XgZvsxbnCi"
               }
             ],
-            "key": "rG96b00RZk"
+            "key": "tfZOJpqKWr"
           }
         ],
-        "key": "xurfYXtPo7"
+        "key": "mzefzbO8IW"
       },
       {
         "type": "code",
         "lang": "",
         "value": "conda activate q2vizard-2024.10",
-        "key": "F27Z8gLc1N"
+        "key": "xF7LW3udk9"
       },
       {
         "type": "heading",
@@ -174,10 +174,10 @@
           {
             "type": "text",
             "value": "Using q2-vizard",
-            "key": "BKKDbD3Nh0"
+            "key": "CjrYpofQtr"
           }
         ],
-        "key": "i2Dfe3IdzD",
+        "key": "MFHuPDOTeS",
         "identifier": "using-q2-vizard",
         "label": "Using q2-vizard",
         "html_id": "using-q2-vizard",
@@ -189,10 +189,10 @@
           {
             "type": "text",
             "value": "The following Metadata vizualizations are available for use, with examples below!",
-            "key": "H6EtD60pmR"
+            "key": "DAHOGvewvg"
           }
         ],
-        "key": "PPozaSizCz"
+        "key": "cv2BiOsT3p"
       },
       {
         "type": "heading",
@@ -201,10 +201,10 @@
           {
             "type": "text",
             "value": "scatterplot_2d",
-            "key": "gGcm3B9NjS"
+            "key": "XE49cjQLhz"
           }
         ],
-        "key": "v5c18IAsyR",
+        "key": "mtcPGEVGdl",
         "identifier": "scatterplot-2d",
         "label": "scatterplot_2d",
         "html_id": "scatterplot-2d",
@@ -216,10 +216,10 @@
           {
             "type": "text",
             "value": "This visualizer provides an exploratory view of your Metadata - allowing for any two numeric measures to be plotted against each other, with an optional third categorical measure used for color-coding. You can easily toggle between different measures using the drop downs for X, Y, and colorBy.",
-            "key": "qsjjXkOQyd"
+            "key": "R5ohk3GTAc"
           }
         ],
-        "key": "sIHmP0Y4k0"
+        "key": "aHIUwpoTog"
       },
       {
         "type": "heading",
@@ -228,10 +228,10 @@
           {
             "type": "text",
             "value": "Demo",
-            "key": "pdmbUrUACJ"
+            "key": "xOrKXPq9S8"
           }
         ],
-        "key": "KXn2orEgVJ",
+        "key": "Fziidp0rIz",
         "identifier": "demo",
         "label": "Demo",
         "html_id": "demo",
@@ -240,7 +240,7 @@
       {
         "type": "image",
         "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/scatterplot_example.png",
-        "key": "ErbsIh6Bwf"
+        "key": "TRomQmnQnN"
       },
       {
         "type": "paragraph",
@@ -255,16 +255,16 @@
                   {
                     "type": "text",
                     "value": "Interactive Link",
-                    "key": "D1Gsuc0rSx"
+                    "key": "hp0SYkYolh"
                   }
                 ],
-                "key": "IA5s9E0TVE"
+                "key": "NFx97fyN8b"
               }
             ],
-            "key": "vLW9bsRTXC"
+            "key": "x9HYuYTGRZ"
           }
         ],
-        "key": "ZkxJ6tStgI"
+        "key": "mhqFZyXAzO"
       },
       {
         "type": "heading",
@@ -273,10 +273,10 @@
           {
             "type": "text",
             "value": "lineplot",
-            "key": "AdW7DvtiH4"
+            "key": "i0CLpZMMVk"
           }
         ],
-        "key": "JnFOgItX2d",
+        "key": "hAIUQSjaUn",
         "identifier": "lineplot",
         "label": "lineplot",
         "html_id": "lineplot",
@@ -288,10 +288,10 @@
           {
             "type": "text",
             "value": "This visualizer generates a lineplot displaying relationships between two numeric Metadata measures, with an optional third categorical measure for grouping your data into separate lines. If replicates are present within your first numeric measure (plotted on the X-axis), you can select either ‘median’ or ‘mean’ for replicate handling, which will create line(s) with the average at each point where replicates are present. All numeric columns present within your Metadata will be available as drop-down options on the Y-axis, but the chosen measure for the X-axis will remain fixed.",
-            "key": "M6kcJBYJXL"
+            "key": "cVtn9JbX5E"
           }
         ],
-        "key": "pBEmCIUjc9"
+        "key": "E27mF2nojq"
       },
       {
         "type": "heading",
@@ -300,10 +300,10 @@
           {
             "type": "text",
             "value": "Demo",
-            "key": "ZqYalpcLhX"
+            "key": "VLV7Rs1lM8"
           }
         ],
-        "key": "RpubREmnel",
+        "key": "MxVx7ui1tV",
         "identifier": "demo",
         "label": "Demo",
         "html_id": "demo",
@@ -312,7 +312,7 @@
       {
         "type": "image",
         "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/lineplot_example.png",
-        "key": "nNgTLEilYz"
+        "key": "DMd2s9BOmy"
       },
       {
         "type": "paragraph",
@@ -327,16 +327,16 @@
                   {
                     "type": "text",
                     "value": "Interactive Link",
-                    "key": "pco36rp68B"
+                    "key": "GzhqLatB1f"
                   }
                 ],
-                "key": "QVKwvlB6Av"
+                "key": "qLgGXpkDDR"
               }
             ],
-            "key": "B6yVV30cPl"
+            "key": "yZ5eg7VEts"
           }
         ],
-        "key": "s8MqoLTo6Q"
+        "key": "hzHAS1UzxN"
       },
       {
         "type": "heading",
@@ -345,10 +345,10 @@
           {
             "type": "text",
             "value": "heatmap",
-            "key": "hXTlVRsxKg"
+            "key": "K7FtsystVZ"
           }
         ],
-        "key": "MaQoYMd2hu",
+        "key": "NtChYCBmxi",
         "identifier": "heatmap",
         "label": "heatmap",
         "html_id": "heatmap",
@@ -360,10 +360,10 @@
           {
             "type": "text",
             "value": "This visualizer generates a heatmap displaying relationships between three Metadata measures. Two of the measures (which can be either categorical or numeric) are mapped to the x and y axes. The third measure (which must be numeric) defines the color gradient of the heatmap, illustrating the intensity or distribution of values across the grid.",
-            "key": "wk7hhM4XTV"
+            "key": "AiCHTXgZqH"
           }
         ],
-        "key": "GMfB1WjycS"
+        "key": "D3jgv2yPbp"
       },
       {
         "type": "heading",
@@ -372,10 +372,10 @@
           {
             "type": "text",
             "value": "Demo",
-            "key": "QqyGyUwbq4"
+            "key": "EdSIicS4Y5"
           }
         ],
-        "key": "Hr5sx0al6H",
+        "key": "BIS9RzAnRr",
         "identifier": "demo",
         "label": "Demo",
         "html_id": "demo",
@@ -384,7 +384,7 @@
       {
         "type": "image",
         "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/heatmap_example.png",
-        "key": "l3GDuQIrgE"
+        "key": "QPYqzu03Qw"
       },
       {
         "type": "paragraph",
@@ -399,16 +399,16 @@
                   {
                     "type": "text",
                     "value": "Interactive Link",
-                    "key": "OQDuzmcndb"
+                    "key": "Ea8ptGZusQ"
                   }
                 ],
-                "key": "fGNLG11Zo8"
+                "key": "Lf6TD2Fzs4"
               }
             ],
-            "key": "bnAcwuJfis"
+            "key": "qHs4aXP53d"
           }
         ],
-        "key": "h6xZvAxYj1"
+        "key": "X2lPR7IeXQ"
       },
       {
         "type": "heading",
@@ -417,10 +417,10 @@
           {
             "type": "text",
             "value": "boxplot",
-            "key": "dLfzW0H95k"
+            "key": "IfnwaU78qE"
           }
         ],
-        "key": "Qvt1QhJq3O",
+        "key": "zw2Uxbv3QU",
         "identifier": "boxplot",
         "label": "boxplot",
         "html_id": "boxplot",
@@ -432,10 +432,10 @@
           {
             "type": "text",
             "value": "This visualizer generates boxplot(s) displaying relationships between a numerical Metadata measure and a categorical Metadata measure. Users can choose from three whisker calculation methods: percentile-based (9th/91st), min-max, and Tukey’s Interquartile Range (IQR).",
-            "key": "TGzouzyNNU"
+            "key": "aDR6NIPuZJ"
           }
         ],
-        "key": "qDaMQqSiqZ"
+        "key": "RrlY31D2ij"
       },
       {
         "type": "heading",
@@ -444,10 +444,10 @@
           {
             "type": "text",
             "value": "Demo",
-            "key": "gNHDGxbtAF"
+            "key": "JaMzU0phiH"
           }
         ],
-        "key": "rydXpBQ0Es",
+        "key": "mf9K0jVeFd",
         "identifier": "demo",
         "label": "Demo",
         "html_id": "demo",
@@ -456,7 +456,7 @@
       {
         "type": "image",
         "url": "https://raw.githubusercontent.com/qiime2/q2-vizard/dev/_assets/boxplot_example.png",
-        "key": "fKHRcHjr23"
+        "key": "DF79KCH7do"
       },
       {
         "type": "paragraph",
@@ -471,19 +471,19 @@
                   {
                     "type": "text",
                     "value": "Interactive Link",
-                    "key": "uKBSP4leVs"
+                    "key": "KjlvH8QhHT"
                   }
                 ],
-                "key": "HnOiDGYO6E"
+                "key": "b1ZcRp7NCw"
               }
             ],
-            "key": "glWuACMDKP"
+            "key": "XCNPCoL9WS"
           }
         ],
-        "key": "vYBJqTLHEG"
+        "key": "JEt7XDmVZL"
       }
     ],
-    "key": "a4WF561nWe"
+    "key": "m4Hx0XoRuN"
   },
   "releases": [
     {
@@ -499,11 +499,14 @@
             "children": [
               {
                 "type": "text",
-                "value": "PLEASE IGNORE - this is for internal testing to confirm release behavior for pyproject.toml migration."
+                "value": "PLEASE IGNORE - this is for internal testing to confirm release behavior for pyproject.toml migration.",
+                "key": "xwdol3sFzN"
               }
-            ]
+            ],
+            "key": "E0QfHQuHa6"
           }
-        ]
+        ],
+        "key": "X7G4MLADfr"
       }
     }
   ],
@@ -511,7 +514,11 @@
   "name": "q2-vizard",
   "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
   "in_distro": true,
-  "distros": ["amplicon-2024.10", "metagenome-2024.10", "pathogenome-2024.10"],
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10"
+  ],
   "stars": 1,
   "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
   "branch": "dev",

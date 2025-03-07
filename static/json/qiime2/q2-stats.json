@@ -5,10 +5,10 @@
       {
         "type": "image",
         "url": "https://github.com/qiime2/q2-stats/workflows/ci-dev/badge.svg",
-        "key": "sFOp9S5gHF"
+        "key": "mRq7EK0b5V"
       }
     ],
-    "key": "oMARXE9XUu"
+    "key": "SICLalBP6O"
   },
   "releases": [
     {
@@ -27,17 +27,22 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Full Changelog"
+                    "value": "Full Changelog",
+                    "key": "c75NBn8b6A"
                   }
-                ]
+                ],
+                "key": "LzPBAFZQAy"
               },
               {
                 "type": "text",
-                "value": ": https://github.com/qiime2/q2-stats/commits/0.1.dev0"
+                "value": ": https://github.com/qiime2/q2-stats/commits/0.1.dev0",
+                "key": "kUaf7dzFi4"
               }
-            ]
+            ],
+            "key": "TSCkKZ09uZ"
           }
-        ]
+        ],
+        "key": "lrDryJCREN"
       }
     }
   ],
@@ -45,7 +50,9 @@
   "name": "q2-stats",
   "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
   "in_distro": true,
-  "distros": ["amplicon-2024.10"],
+  "distros": [
+    "amplicon-2024.10"
+  ],
   "stars": 1,
   "description": null,
   "branch": "dev",
