@@ -11,12 +11,13 @@
 </script>
 
 <div class="max-width">
-    <div id="banner" class='prose prose-sm sm:prose-md lg:prose-lg max-w-none'>
-        This is a reimplementation of the QIIME 2 Library.
-        Learn how to add your plugin <a href="https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html">here</a>.<br/>
-        The old QIIME 2 Library has been deprecated and for the time being may be found <a href="https://old-library.qiime2.org/">here</a>.
-    </div>
-    <div class='sm:flex items-end border-[#1a414c] border-b-4 pb-4 mb-4'>
+    <header class="prose prose-sm md:prose-base lg:prose-lg mt-10">
+        <h1>Available Plugins</h1>
+        <div class="bg-blue-50 py-2 px-4 border border-blue-200 rounded-xl -mt-2">
+            <p class='!my-0 italic'>Plugins listed on the old library can be found at <a href="https://old-library.qiime2.org/plugins" target="_blank" class='whitespace-nowrap'>old-library.qiime2.org</a>.</p>
+        </div>
+    </header>
+    <div class='sm:flex items-end border-[#1a414c] border-b-4 pb-4 mb-4 mt-10'>
         <SearchBar />
         <SortButtons />
     </div>
