@@ -46,8 +46,8 @@
                 let value = node.value
                 value = value.replaceAll('((epoch))', selectedEpoch);
                 value = value.replaceAll('((distro))', distroName);
-                value = value.replaceAll('((linux_url))', `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${selectedEpoch}/${distroName}/released/qiime2-amplicon-ubuntu-latest-conda.yml`);
-                value = value.replaceAll('((macos_url))', `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${selectedEpoch}/${distroName}/released/qiime2-amplicon-macos-latest-conda.yml`);
+                value = value.replaceAll('((linux_url))', `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${selectedEpoch}/${distroName}/released/qiime2-${distroName}-ubuntu-latest-conda.yml`);
+                value = value.replaceAll('((macos_url))', `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${selectedEpoch}/${distroName}/released/qiime2-${distroName}-macos-latest-conda.yml`);
                 value = value.replaceAll('((env_name))', `qiime2-${distro.name}-${selectedEpoch}`);
                 node.value = value;
             }
