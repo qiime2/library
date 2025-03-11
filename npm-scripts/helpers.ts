@@ -124,7 +124,7 @@ export async function get_octokit() {
   let strategyOptions: any;
   let authOptions: any;
 
-  if (process.env.GITHUB_ACTION) {
+  if (process.env.GITHUB_TOKEN) {
     authenticationStrategy = createActionAuth;
     strategyOptions = {};
     authOptions = {};
