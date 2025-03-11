@@ -24,7 +24,7 @@ jobs:
 
       - name: Install deps
         run: |
-          npm intall
+          npm install
 
       - name: Get Repo Info
         run: |
