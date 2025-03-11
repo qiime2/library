@@ -6,9 +6,13 @@ export function sortOverviews(
   sort_col: Column,
   sort_descending: boolean,
 ) {
-  function compareElements(a: Object, b: Object) {
-    const A = a[sort_col.name as keyof Object];
-    const B = b[sort_col.name as keyof Object];
+  function compareElements(a: Record<string, any>, b: Record<string, any>) {
+    let A = a;
+    let B = b;
+    for (const attr of sort_col.attr.split(".")) {
+      A = A[attr];
+      B = B[attr];
+    }
 
     if (A < B) {
       return sort_descending === true ? 1 : -1;
@@ -40,14 +44,14 @@ export function applyFilters() {
   let filtered_overviews = [];
 
   filtered_overviews = overview_store.repo_overviews.filter((e) =>
-    String(e["Plugin Name" as keyof Object].toLowerCase()).startsWith(
+    String(e["name" as keyof Object].toLowerCase()).startsWith(
       overview_store.search_filter.toLowerCase(),
     ),
   );
 
   for (const release of overview_store.filter_releases) {
     filtered_overviews = filtered_overviews.filter((e) =>
-      e["Releases"].includes(release),
+      e["distros"].includes(release),
     );
   }
 

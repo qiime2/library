@@ -1,12 +1,295 @@
 {
-  "Readme": "# q2-amrfinderplus\n\n[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)\n\nQIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.\n\n## Installation\nTo install _q2-amrfinderplus_, follow the steps described in the [QIIME 2 installation instructions](https://docs.qiime2.org/2024.10/install/native/#qiime-2-pathogenome-distribution) for the pathogenome distribution .\n\n\n## Functionality\nThis QIIME 2 plugin contains actions used to annotate protein sequences MAGs and contigs with antimicrobial resistance genes. The underlying tool used is [AMRFinderPlus](https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/AMRFinder/), for details on\nthe package, please refer to the [AMRFinderPlus documentation](https://github.com/ncbi/amr/wiki)). Checkout the [wiki](https://github.com/bokulich-lab/q2-amrfinderplus/wiki) for usage examples of _q2-amrfinderplus_.\n\n| Action                 | Description                                                                                |\n|------------------------|--------------------------------------------------------------------------------------------|\n| fetch-amrfinderplus-db | Download AMRFinderPlus database.                                                           |\n| annotate               | Annotate protein sequences, MAGs or contigs with antimicrobial resistance gene information.|\n\n## Dev environment\nThis repository follows the _black_ code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing `make dev` in your conda environment. From then on,\nthey will be run automatically every time you commit any changes.\n",
-  "Plugin Owner": "bokulich-lab",
-  "Plugin Name": "q2-amrfinderplus",
-  "Branch": "main",
-  "User Docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-  "Build Status": "passed",
-  "Commit Date": "2025-02-21T14:34:59Z",
-  "Stars": 0,
-  "Description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-  "Releases": ["pathogenome-2024.10"]
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To install "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-amrfinderplus"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", follow the steps described in the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org/2024.10/install/native/#qiime-2-pathogenome-distribution",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 installation instructions"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for the pathogenome distribution ."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Functionality"
+          }
+        ],
+        "identifier": "functionality",
+        "label": "Functionality",
+        "html_id": "functionality",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This QIIME 2 plugin contains actions used to annotate protein sequences MAGs and contigs with antimicrobial resistance genes. The underlying tool used is "
+          },
+          {
+            "type": "link",
+            "url": "https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/AMRFinder/",
+            "children": [
+              {
+                "type": "text",
+                "value": "AMRFinderPlus"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", for details on\nthe package, please refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/ncbi/amr/wiki",
+            "children": [
+              {
+                "type": "text",
+                "value": "AMRFinderPlus documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "). Checkout the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+            "children": [
+              {
+                "type": "text",
+                "value": "wiki"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for usage examples of "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-amrfinderplus"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Action"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Description"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "fetch-amrfinderplus-db"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Download AMRFinderPlus database."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "annotate"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Annotate protein sequences, MAGs or contigs with antimicrobial resistance gene information."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Dev environment"
+          }
+        ],
+        "identifier": "dev-environment",
+        "label": "Dev environment",
+        "html_id": "dev-environment",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This repository follows the "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "black"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "make dev"
+          },
+          {
+            "type": "text",
+            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-amrfinderplus",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+  "last_commit": {
+    "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
+    "status": "passed",
+    "date": "2025-02-21T14:34:59Z"
+  },
+  "stars": 0,
+  "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+  "distros": [
+    "pathogenome-2024.10"
+  ]
 }

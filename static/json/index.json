@@ -1,0 +1,275 @@
+{
+  "plugins": [
+    {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "b998470b2f4e284faaf05a318e937efebed6ce9f",
+        "status": "passed",
+        "date": "2025-03-04T18:58:09Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "owner": "picrust",
+      "name": "q2-picrust2",
+      "branch": "master",
+      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+      "last_commit": {
+        "sha": "56c7dcfc9ba73a4d7a0689798fda04058970b629",
+        "status": "passed",
+        "date": "2025-03-04T18:19:15Z"
+      },
+      "stars": 5,
+      "description": "QIIME 2 plugin for PICRUSt2",
+      "distros": [
+        "amplicon-2024.5"
+      ]
+    },
+    {
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "f434b434968ae23ff8c1034f0110a74e60d5eef6",
+        "status": "passed",
+        "date": "2025-03-04T07:32:49Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "tiny-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "tiny-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
+        "status": "passed",
+        "date": "2025-02-21T14:34:59Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        "pathogenome-2024.10"
+      ]
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "48f92d95ed614e45186b09d802b3f3c7da451eec",
+        "status": "passed",
+        "date": "2025-02-20T17:24:28Z"
+      },
+      "stars": 6,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "aaccacac04bfeee987d4c9109e3ca9c59b660452",
+        "status": "passed",
+        "date": "2025-02-18T14:37:23Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "PlanesLab",
+      "name": "q2-metnet",
+      "branch": "main",
+      "docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
+      "last_commit": {
+        "sha": "575fe8da6f9de8c66cdd8248a60df3fae922f540",
+        "status": "passed",
+        "date": "2025-02-03T17:38:01Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    }
+  ],
+  "distros": [
+    {
+      "name": "amplicon",
+      "alt": "core",
+      "title": "Amplicon",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "description": "A suite of plugins that provide broad analytic functionality to support microbiome marker gene analysis from raw sequencing data through publication quality visualizations and statistics.\n"
+    },
+    {
+      "name": "moshpit",
+      "alt": "metagenome",
+      "title": "MOSHPIT",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "description": "MOSHPIT (MOdular SHotgun metagenome Pipelines with Integrated provenance Tracking) is a toolkit of plugins for whole metagenome assembly, annotation, and analysis.\n"
+    },
+    {
+      "name": "pathogenome",
+      "title": "Pathogenome",
+      "docs": null,
+      "description": "A suite of plugins to detect viral genomes and protein sequences from MAGs and contigs for antimicrobial-resistance.\n"
+    },
+    {
+      "name": "tiny",
+      "title": "Tiny",
+      "docs": null,
+      "description": "A minimal installation of the QIIME 2 Framework for developers that is intended to be extended with custom functionality and plugins.\n"
+    }
+  ],
+  "books": [
+    {
+      "url": "https://use.qiime2.org/en/latest/",
+      "source": "https://github.com/caporaso-lab/using-qiime2",
+      "title": "Using QIIME 2",
+      "description": "Your guide to becoming a QIIME 2 Framework power user.",
+      "order": 0
+    },
+    {
+      "url": "https://develop.qiime2.org/en/latest/",
+      "source": "https://github.com/caporaso-lab/developing-with-qiime2",
+      "title": "Developing with QIIME 2",
+      "description": "Your guide for writing, testing, and distributing QIIME 2 plugins, interfaces, and documentation.",
+      "order": 1
+    },
+    {
+      "url": "https://q2-fmt.readthedocs.io/en/latest/",
+      "title": "q2-fmt book",
+      "description": ""
+    },
+    {
+      "url": "https://genome-sampler.readthedocs.io/en/latest/",
+      "title": "genome-sampler documentation",
+      "source": "https://github.com/caporaso-lab/genome-sampler",
+      "description": ""
+    },
+    {
+      "url": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "title": "Microbiome marker gene analysis with QIIME 2",
+      "source": "https://github.com/qiime2/amplicon-docs",
+      "description": ""
+    },
+    {
+      "url": "https://bokulich-lab.github.io/moshpit-docs/",
+      "title": "Docs for MOSHPIT"
+    },
+    {
+      "url": "https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/",
+      "source": "https://github.com/qiime2/cancer-microbiome-intervention-tutorial",
+      "title": "QIIME 2 Cancer Microbiome Intervention Tutorial",
+      "description": "This tutorial was originally developed for the 2022 NIH Foundation for Advanced Education in the Sciences Microbiome Bioinformatics with QIIME 2 workshop, taught online January 31 - February 4, 2022."
+    },
+    {
+      "title": "The tutorials",
+      "description": "",
+      "thumbnail": "",
+      "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/intro.html"
+    },
+    {
+      "title": "Moving Pictures tutorial 🎥",
+      "description": "",
+      "thumbnail": "",
+      "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/moving-pictures.html"
+    },
+    {
+      "title": "Gut-to-soil axis tutorial 💩🌱",
+      "description": "",
+      "thumbnail": "",
+      "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
+    },
+    {
+      "title": "Assessing engraftment extent with q2-FMT",
+      "description": "Assessing Engraftment following an Auto-FMT using Amplicon Data. This tutorial was based on the publically available data from Taur et al. 2018.",
+      "thumbnail": "_images/engraftment-extent.png",
+      "url": "https://q2-fmt.readthedocs.io/en/latest//tutorial/tutorial.html"
+    }
+  ],
+  "videos": [
+    {
+      "id": "OynraTqK4gY",
+      "title": "Building a first QIIME 2 plugin",
+      "description": "A walk-through of creating a new QIIME 2 plugin from a template, and an introduction to the *Developing with QIIME 2* online book (develop.qiime2.org).",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1713378336
+    },
+    {
+      "id": "erklD1bofzE",
+      "title": "Expanding the impact of your microbiome study through metadata standardization",
+      "description": "This video by Chloe Herman was made in collaboration with the National Microbiome Data Collaborative (NMDC). The NMDC's mission is to provide a gateway to Findable Accessible Interoperable and Reusable (FAIR) multi-omics microbiome data by leveraging best practices for data curation and processing. For more information and community discussion check out the related QIIME2 Forum post: https://forum.qiime2.org/t/expand-the-impact-of-your-microbiome-data-through-metadata-standardization/23845",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1660066535
+    },
+    {
+      "id": "KMsacdbQ8hA",
+      "title": "Provenance replay demo (alpha software release)",
+      "description": "A video introduction to Provenance Replay, software that supports scientific reproducibility, attribution, and collaboration on the QIIME 2 platform.\n\nProvenance Replay (AKA `provenance_lib`) parses the computational history (or \"provenance\") of QIIME 2 Results, letting you:\n* generate executable scripts for your preferred QIIME 2 interface, allowing users to \"replay\" prior analyses\n* report all citations from a QIIME 2 analysis, so creating your reference section is easy\n* produce reproducibility supplements for publication or collaboration, supporting the reproducibility of your QIIME 2 analyses\n\n`provenance_lib` is available in alpha release on the QIIME 2 Library at https://library.qiime2.org/plugins/provenance_lib/43/\n\nA tutorial, including instructions for getting help with Provenance Replay, can be found on the QIIME 2 forum at: https://forum.qiime2.org/t/provenance-replay-alpha-release-and-tutorial/23279",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1655146105
+    },
+    {
+      "id": "cMRc2KiZZdk",
+      "title": "Longitudinal microbiome analysis",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1652803225
+    },
+    {
+      "id": "rdGSK51iaIM",
+      "title": "Beta diversity visualizations",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1652198435
+    },
+    {
+      "id": "NIGbYdGErLw",
+      "title": "Alpha diversity visualizations",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1651561206
+    },
+    {
+      "id": "gkXsnal4oLA",
+      "title": "Getting help with bioinformatics software",
+      "description": "",
+      "uploader": "QIIME 2",
+      "uploader_id": "channel/UCgjZXjHOjV-KbkXsnuMKoUA",
+      "timestamp": 1650549351
+    }
+  ],
+  "last_updated": "2025-03-10T23:55:08.149Z"
+}

@@ -1,0 +1,95 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-dada2/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/q2-dada2/releases/tag/2017.2.0",
+      "name": "q2-dada2 2017.2.0",
+      "published_at": "2017-02-07T01:06:23Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "0.0.6",
+      "html_url": "https://github.com/qiime2/q2-dada2/releases/tag/0.0.6",
+      "name": "q2-dada2 0.0.6",
+      "published_at": "2016-11-03T00:11:00Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-dada2 0.0.6 is a QIIME 2 plugin synchronized with the "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/qiime2/qiime2/releases/tag/2.0.6",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2.0.6 release"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". See https://qiime2.org for details about QIIME 2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "0.0.5",
+      "html_url": "https://github.com/qiime2/q2-dada2/releases/tag/0.0.5",
+      "name": "q2-dada2 0.0.5",
+      "published_at": "2016-10-08T21:52:56Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-dada2",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "amplicon-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 20,
+  "description": "QIIME 2 plugin wrapping DADA2",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "29e0e4e7dcad5b18478ff7e9548d90fb2879b015",
+    "status": "passed",
+    "date": "2025-02-11T17:24:31Z"
+  }
+}

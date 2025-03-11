@@ -55,6 +55,7 @@
 >
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
     .filterButton {
         @apply my-1
         mr-1

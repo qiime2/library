@@ -1,0 +1,43 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-quality-control/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "qiime2",
+  "name": "q2-quality-control",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 4,
+  "description": "A QIIME 2 plugin for quality control of sequence and feature data",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "858e21598a0c27bcb20760db77ee2ac93b8353e5",
+    "status": "passed",
+    "date": "2025-02-07T16:39:59Z"
+  }
+}

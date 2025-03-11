@@ -1,38 +1,15 @@
 <script lang="ts">
-    import "../../app.css";
+    import { getFilterContext } from "$lib/contexts";
 
-    import { overview } from "$lib/scripts/OverviewStore";
-    import { applyFilters } from "$lib/scripts/util";
+    let state = getFilterContext();
 
-    let overview_store;
-
-    overview.subscribe((value) => {
-        overview_store = value;
-    });
-
-    export function applySearchFilter () {
-        const searchBar = document.getElementById("searchInput") as HTMLInputElement;
+    export function applySearchFilter (event: Event) {
+        const searchBar = event.target as HTMLInputElement;
         const search_filter = searchBar.value;
 
-        overview_store.search_filter = search_filter;
-        overview.set({
-            ...overview_store
-        });
-
-        applyFilters();
+        state.filters.search = search_filter;
     }
 </script>
 
-<input id="searchInput" placeholder="search" value={overview_store.search_filter} on:input={applySearchFilter} />
-
-<style lang="postcss">
-    #searchInput {
-        @apply border
-        border-solid
-        rounded
-        border-gray-300
-        mr-auto
-        mt-auto
-        pl-2;
-    }
-</style>
+<input class='border border-solid rounded border-gray-200 shadow-inner mr-auto mt-auto mb-4 sm:mb-0 px-4 py-1 text-sm md:text-lg block'
+    placeholder="search" value={state.filters.search} oninput={applySearchFilter} />

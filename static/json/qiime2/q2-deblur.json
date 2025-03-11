@@ -1,0 +1,141 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-deblur/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2017.2.4",
+      "html_url": "https://github.com/qiime2/q2-deblur/releases/tag/2017.2.4",
+      "name": "2017.2.4",
+      "published_at": "2017-04-13T16:36:51Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bump deblur micro version dependency to 1.0.2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2017.2.3",
+      "html_url": "https://github.com/qiime2/q2-deblur/releases/tag/2017.2.3",
+      "name": "Bump to Deblur == 1.0.1",
+      "published_at": "2017-03-07T23:37:43Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "This microrelease sets its minimal Deblur dependency at version 1.0.1. Additionally, we’re excited to now include per-sample statistics about the Deblur process. The stats are not automatically collected, and must be enabled with --p-sample-stats; they are not enabled automatically as their collection will come at a runtime cost. We may revisit whether to make them automatic in the future. For the time being, even if sample stats are not requested, an empty .qza file will be produced as there isn’t a means at the moment for optional QIIME2 method outputs."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2017.2.2",
+      "html_url": "https://github.com/qiime2/q2-deblur/releases/tag/2017.2.2",
+      "name": "",
+      "published_at": "2017-02-20T16:53:32Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Identical to 2017.2.1, except the version string is accurate."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2017.2.1",
+      "html_url": "https://github.com/qiime2/q2-deblur/releases/tag/2017.2.1",
+      "name": "2017.2.1",
+      "published_at": "2017-02-16T19:33:13Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bug fix: threading was not working"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2017.2.0",
+      "html_url": "https://github.com/qiime2/q2-deblur/releases/tag/2017.2.0",
+      "name": "q2-deblur 2017.2.0",
+      "published_at": "2017-02-14T18:30:43Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "REL: 2017.2.0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-deblur",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "amplicon-2024.5",
+    "amplicon-2024.2",
+    "amplicon-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 2,
+  "description": null,
+  "branch": "dev",
+  "last_commit": {
+    "sha": "0120a74413643a39e7cf4a8f2427a16430413652",
+    "status": "passed",
+    "date": "2025-02-07T16:41:55Z"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "image",
+        "url": "https://github.com/qiime2/q2-mystery-stew/workflows/ci-dev/badge.svg"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a QIIME 2 plugin. For details on QIIME 2, see https://qiime2.org."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This plugin exists to define integration tests between interfaces and the\nframework."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2021.4.0.dev0",
+      "html_url": "https://github.com/qiime2/q2-mystery-stew/releases/tag/2021.4.0.dev0",
+      "name": "",
+      "published_at": "2021-03-23T21:56:13Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "qiime2",
+  "name": "q2-mystery-stew",
+  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "in_distro": true,
+  "distros": [
+    "amplicon-2024.10",
+    "metagenome-2024.10",
+    "pathogenome-2024.10",
+    "tiny-2024.10",
+    "amplicon-2024.5",
+    "metagenome-2024.5",
+    "tiny-2024.5",
+    "amplicon-2024.2",
+    "tiny-2024.2",
+    "amplicon-2023.9",
+    "tiny-2023.9",
+    "core-2023.7"
+  ],
+  "stars": 0,
+  "description": "This plugin exists to define integration tests between interfaces and the framework.",
+  "branch": "dev",
+  "last_commit": {
+    "sha": "ef2bd4cea91418d0ab99cea5272f6df2f036fc75",
+    "status": "passed",
+    "date": "2025-01-18T21:08:19Z"
+  }
+}
