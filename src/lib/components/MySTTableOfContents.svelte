@@ -1,5 +1,6 @@
 <script lang="ts">
     import { pushState } from '$app/navigation';
+    import { toText } from 'myst-common';
 
     type MDAST = {
         type: string
@@ -11,6 +12,7 @@
 
     function scan(ast: MDAST, maxdepth: number) {
         if (ast.type == 'heading' && ast.depth <= maxdepth) {
+            ast.label = toText(ast)
             return [ast]
         }
         let headers: MDAST[] = [];
@@ -47,7 +49,6 @@
     <dd class='pl-0 !ps-0 !-mt-4'>
         <ol class='list-none flex flex-col'>
             {#each headers as header}
-            {@debug header}
             <li class='!my-0'><a class='block' href={`#${header.html_id}`} onclick={(e) => scrollTo(e, header.html_id)}>
                 {#if header.depth <= 1}
                 <div class='indent-0'>{header.label}</div>

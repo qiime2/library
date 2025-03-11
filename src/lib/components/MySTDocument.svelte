@@ -4,8 +4,8 @@
     import { MyST, DEFAULT_RENDERERS } from 'myst-to-react';
     import MyStTableOfContents from "./MySTTableOfContents.svelte";
 
-    let {page, baseurl, title = true, skipheading = false}: {
-        page: any, baseurl: string, title?: boolean, skipheading?: boolean} = $props();
+    let {page, baseurl, title = true, skipheading = false, skiptoc = false}: {
+        page: any, baseurl: string, title?: boolean, skipheading?: boolean, skiptoc?: boolean} = $props();
     let ast = page.mdast;
 
     if (skipheading) {
@@ -29,7 +29,9 @@
                     {#if title}
                     <h1>{page.frontmatter.title}</h1>
                     {/if}
+                    {#if !skiptoc}
                     <MyStTableOfContents {ast} />
+                    {/if}
                     <react.MyST {ast}></react.MyST>
                 </article>
         </react.ReferencesProvider>

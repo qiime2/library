@@ -1,7 +1,6 @@
 <script lang="ts">
     import { page } from '$app/state';
     import MyStMinimal from "$lib/components/MySTMinimal.svelte";
-    import MyStTableOfContents from '$lib/components/MySTTableOfContents.svelte';
 
     // This data comes from +layout.ts
     let data = page.data;

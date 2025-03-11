@@ -9,7 +9,7 @@
 {#await data.page}
     Loading content.
 {:then page}
-<MySTDocument title={false} skipheading={true} {page} baseurl={`/myst/${params.params.plugin}/_`} />
+<MySTDocument title={false} skipheading={true} skiptoc={true} {page} baseurl={`/myst/${params.params.plugin}/_`} />
 {:catch}
     <p class='prose prose-sm sm:prose-base lg:prose-xl'>
         {#if data.baseurl}
