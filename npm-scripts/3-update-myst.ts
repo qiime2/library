@@ -9,7 +9,7 @@ async function add_xrefs(key, baseurl, references, seenRefs) {
       .map((ref) => ({
         ...ref,
         data: `/myst/${key}/_${ref.data}`,
-        url: `/myst/${key}/_${ref.data}`,
+        url: `/myst/${key}/_${ref.url}`,
       }));
 
     for (const ref of q2) {
