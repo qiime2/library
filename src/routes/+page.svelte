@@ -45,7 +45,7 @@
     <Carousel entries={data.distros} expand={clientWidth > toExpand} controls={clientWidth <= toExpand}
         title="Base Distributions" href="/quickstart">
         {#snippet card(distro: any)}
-        <DistroCard {...distro} />
+        <DistroCard href="/quickstart/{distro.name}" {...distro} />
         {/snippet}
     </Carousel>
 </article>

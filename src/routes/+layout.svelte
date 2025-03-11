@@ -18,7 +18,7 @@
 </svelte:head>
 
 <NavBanner/>
-<nav id='navbar' class='pl-2 scroll-edge z-50'>
+<nav class='pl-2 scroll-edge z-50'>
   <div class='flex max-width'>
     <a href='/' class='mr-auto'>
       <img id='navlogo' src='/q2library.svg' alt='QIIME 2 library logo' />
@@ -30,7 +30,7 @@
 
 <style lang='postcss'>
   @reference 'tailwindcss/theme';
-  #navbar {
+  nav {
     box-shadow: rgb(153, 153, 153) 0px 1px 5px;
     background-color: #f8f8f8;
     @apply sticky

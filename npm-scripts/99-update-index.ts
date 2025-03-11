@@ -21,10 +21,10 @@ export async function main() {
   let books = JSON.parse(fs.readFileSync("./static/json/books.json", "utf-8"));
   let list = books.books;
   for (const distro of books.distros) {
-    list.push(distro.book)
+    list.push(distro.book);
   }
   for (const tutorial of books.tutorials) {
-    list.push(tutorial)
+    list.push(tutorial);
   }
   results["books"] = roundRows(list, 6);
 

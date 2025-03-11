@@ -1,5 +1,6 @@
 <script lang='ts'>
     import MySTDocument from "$lib/components/MySTDocument.svelte";
+    import MyStTableOfContents from "$lib/components/MySTTableOfContents.svelte";
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();

@@ -1,8 +1,5 @@
 <script lang="ts">
-    import { createSelect, melt } from '@melt-ui/svelte';
-    import { fade } from 'svelte/transition';
     import InstallPlugin from './InstallPlugin.svelte';
-    import InstallDistro from './InstallDistro.svelte';
 
     const { owner, plugin, branch, releases, in_distro }: {
         owner: string, plugin: string, branch: string, releases: string[], in_distro: boolean
@@ -12,28 +9,30 @@
     let env_name = $derived(`${plugin}-${selected}`);
     let env_filepath = $derived(`https://raw.githubusercontent.com/${owner}/${plugin}/refs/heads/${branch}/environment-files/${plugin}-qiime2-${selected}.yml`);
 
-    const {
-        elements: { trigger, menu, option, label },
-        states: { open },
-        helpers: { isSelected },
-    } = createSelect<string>({
-        forceVisible: true,
-        defaultSelected: releases[0] as any,
-        positioning: {
-            placement: 'bottom',
-            fitViewport: true,
-            sameWidth: true,
-        },
-    });
-
+    let grouped_releases: Record<string, string[]> = {};
+    for (const [distro, epoch] of releases.map(x => x.split('-'))) {
+        if (!grouped_releases[epoch]) {
+            grouped_releases[epoch] = [];
+        }
+        grouped_releases[epoch].push(distro)
+    }
 
 </script>
 
 <section class='border-l-violet-500 bg-white border-l-4 rounded overflow-clip shadow-md prose-sm'>
     <div class='px-2 py-1 bg-violet-100 not-prose text-base flex items-center'>
         <div class="flex flex-row gap-2 items-center">
-            <span class="mt-1 mb-1 font-bold" use:melt={$label}>Quickstart install for:</span>
-            <button class="flex min-w-[220px] items-center justify-between rounded-lg bg-white px-3 shadow-inner transition-opacity hover:opacity-90 border border-gray-200"
+            <span class="mt-1 mb-1 font-bold">Quickstart install for:</span>
+            <select class='bg-white px-4 py-1 rounded border-gray-200 border shadow-inner' bind:value={selected}>
+                {#each Object.keys(grouped_releases) as epoch}
+                <optgroup label={epoch}>
+                    {#each grouped_releases[epoch] as distro}
+                    <option value="{distro}-{epoch}">{epoch}/{distro}</option>
+                    {/each}
+                </optgroup>
+                {/each}
+            </select>
+            <!-- <button class="flex min-w-[220px] items-center justify-between rounded-lg bg-white px-3 shadow-inner transition-opacity hover:opacity-90 border border-gray-200"
                     use:melt={$trigger}
                     aria-label="Releases">
                 {selected}
@@ -58,12 +57,8 @@
                 </div>
                 {/each}
             </div>
-            {/if}
+            {/if} -->
         </div>
     </div>
-    {#if in_distro}
-        <InstallDistro env_url={env_filepath} />
-    {:else}
-        <InstallPlugin env_url={env_filepath} env_name={env_name} base_env={selected}/>
-    {/if}
+    <InstallPlugin env_url={env_filepath} env_name={env_name} base_env={selected}/>
 </section>

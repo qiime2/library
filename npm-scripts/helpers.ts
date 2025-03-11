@@ -1,6 +1,11 @@
 import yaml from "js-yaml";
 import { mystParse } from "myst-parser";
-import { headingLabelTransform, htmlTransform } from "myst-transforms";
+import { tabDirectives } from "myst-ext-tabs";
+import {
+  headingLabelTransform,
+  htmlTransform,
+  liftMystDirectivesAndRolesTransform,
+} from "myst-transforms";
 
 import { visit } from "unist-util-visit";
 
@@ -233,6 +238,18 @@ export async function getHighLevelRepoOverview(
   });
 }
 
+export function parseMystMarkdown(string) {
+  let ast = mystParse(string, { directives: [...tabDirectives] });
+  visit(ast, (node) => {
+    // no reason to store all of this
+    delete node["position"];
+  });
+  htmlTransform(ast);
+  headingLabelTransform(ast);
+  liftMystDirectivesAndRolesTransform(ast);
+  return ast;
+}
+
 // Get the README then convert it to a utf string
 export async function getReadme(octokit, owner, repo_name, branch) {
   const readme = await octokit.request(
@@ -248,15 +265,9 @@ export async function getReadme(octokit, owner, repo_name, branch) {
   );
 
   // Convert the README to a normal utf8 string
-  let ast = mystParse(
+  let ast = parseMystMarkdown(
     Buffer.from(readme["data"]["content"], "base64").toString("utf-8"),
   );
-  visit(ast, (node) => {
-    // no reason to store all of this
-    delete node["position"];
-  });
-  htmlTransform(ast);
-  headingLabelTransform(ast);
 
   if (ast.children && ast.children[0].type == "heading") {
     // Drop the redundant title
@@ -316,9 +327,7 @@ export async function getGithubReleases(octokit, owner, repo_name) {
   let result: any[] = [];
   for (const release of releases.data) {
     let { tag_name, html_url, name, published_at, body } = release;
-    let ast = mystParse(body);
-    htmlTransform(ast);
-    headingLabelTransform(ast);
+    let ast = parseMystMarkdown(body);
     reviseReleaseMarkdown(ast, owner, repo_name);
     result.push({ tag_name, html_url, name, published_at, ast });
   }

@@ -11,6 +11,7 @@ import {
   getReadme,
   getRunsStatusOfCommit,
   loadYamlPath,
+  parseMystMarkdown,
   sortReleases,
 } from "./helpers";
 
@@ -96,6 +97,12 @@ export async function main(catalog, octokit) {
   let releases = Array.from(global_releases);
   releases.sort(sortReleases);
   distro_overview.distros = index;
+
+  let install = fs.readFileSync(
+    "./npm-scripts/install-distro.myst.md",
+    "utf-8",
+  );
+  distro_overview.install = parseMystMarkdown(install);
 
   fs.writeFileSync(
     `${ROOT_PATH}/distros.json`,

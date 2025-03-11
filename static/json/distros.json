@@ -64,7 +64,7 @@
       "branch": "main",
       "last_commit": {
         "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
-        "status": "failed",
+        "status": "passed",
         "date": "2025-02-21T14:34:59Z"
       }
     },
@@ -707,5 +707,552 @@
       "docs": null,
       "description": "A minimal installation of the QIIME 2 Framework for developers that is intended to be extended with custom functionality and plugins.\n"
     }
-  ]
+  ],
+  "install": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using Conda"
+          }
+        ],
+        "identifier": "using-conda",
+        "label": "Using Conda",
+        "html_id": "using-conda",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Steps 1-4 will guide you through installing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": " and your selected "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "base distribution"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "1. Installing Miniconda"
+          }
+        ],
+        "identifier": "id-1-installing-miniconda",
+        "label": "1. Installing Miniconda",
+        "html_id": "id-1-installing-miniconda",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://www.anaconda.com/docs/getting-started/miniconda/main",
+            "children": [
+              {
+                "type": "text",
+                "value": "Miniconda"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\nprovides the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": " environment and package manager, and is the recommended way to install QIIME 2.\nFollow the "
+          },
+          {
+            "type": "link",
+            "url": "https://www.anaconda.com/docs/getting-started/miniconda/install",
+            "children": [
+              {
+                "type": "text",
+                "value": "Miniconda instructions"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\nfor downloading and installing Miniconda.\nIt is important to follow all of the directions provided in the\n"
+          },
+          {
+            "type": "link",
+            "url": "https://www.anaconda.com/docs/getting-started/miniconda/install",
+            "children": [
+              {
+                "type": "text",
+                "value": "Miniconda instructions"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ",\nparticularly ensuring that you run "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda init"
+          },
+          {
+            "type": "text",
+            "value": " at the end of the installation process (via installer or manual command),\nto ensure that your Miniconda installation is fully installed and available for the following commands."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "2. Updating Miniconda"
+          }
+        ],
+        "identifier": "id-2-updating-miniconda",
+        "label": "2. Updating Miniconda",
+        "html_id": "id-2-updating-miniconda",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After installing Miniconda and opening a new terminal, make sure you’re\nrunning the latest version of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "   conda update conda"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "3. Install the base distribution’s "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": " environment"
+          }
+        ],
+        "identifier": "id-3-install-the-base-distributions-conda-environment",
+        "label": "3. Install the base distribution’s conda environment",
+        "html_id": "id-3-install-the-base-distributions-conda-environment",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "highly"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " recommend creating a "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "new"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " environment specifically for the\nQIIME 2 distribution and release being installed, as there are many required\ndependencies that you may not want added to an existing environment."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can choose whatever name you’d like for the environment.\nIn this example, we’ll name the environments "
+          },
+          {
+            "type": "inlineCode",
+            "value": "((env_name))"
+          },
+          {
+            "type": "text",
+            "value": "\nto indicate what QIIME 2 release is installed (i.e. "
+          },
+          {
+            "type": "inlineCode",
+            "value": "((epoch))"
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      },
+      {
+        "type": "tabSet",
+        "children": [
+          {
+            "type": "tabItem",
+            "title": "Instructions",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Select the tab that fits the operating system that you want QIIME 2 to run on."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "(To install an older version, use the dropdown in the distribution details above.)"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tabItem",
+            "title": "Linux / Windows WSL",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "These instructions are for users running on Linux or the Windows Subsystem for Linux (WSL v2)."
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "bash",
+                "value": "conda env create \\\n  --name ((env_name)) \\\n  --file ((linux_url))"
+              }
+            ]
+          },
+          {
+            "type": "tabItem",
+            "title": "macOS (Apple Silicon)",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "These instructions are for users with Apple Silicon chips (M1, M2, etc), and configures the installation of QIIME 2 in Rosetta 2 emulation mode (as ARM builds are not yet available)."
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "bash",
+                "value": "CONDA_SUBDIR=osx-64 conda env create \\\n  --name ((env_name)) \\\n  --file ((macos_url))\nconda activate ((env_name))\nconda config --env --set subdir osx-64"
+              }
+            ]
+          },
+          {
+            "type": "tabItem",
+            "title": "macOS (Intel)",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "These instructions are for users older Intel-based Apple hardware (NOT M1, M2, etc)."
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "bash",
+                "value": "conda env create \\\n  --name ((env_name)) \\\n  --file ((macos_url))"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "4. Test your install"
+          }
+        ],
+        "identifier": "id-4-test-your-install",
+        "label": "4. Test your install",
+        "html_id": "id-4-test-your-install",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, to verify things are working, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda deactivate\nconda activate ((env_name))\nqiime info"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using Docker"
+          }
+        ],
+        "identifier": "using-docker",
+        "label": "Using Docker",
+        "html_id": "using-docker",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Steps 1-3 will guide you through installing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "docker"
+          },
+          {
+            "type": "text",
+            "value": " and pulling the image for your selected "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "base distribution"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "1. Install docker"
+          }
+        ],
+        "identifier": "id-1-install-docker",
+        "label": "1. Install docker",
+        "html_id": "id-1-install-docker",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "See "
+          },
+          {
+            "type": "link",
+            "url": "https://www.docker.com",
+            "children": [
+              {
+                "type": "text",
+                "value": "https://www.docker.com"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for instructions for your platform."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "2. Download base image"
+          }
+        ],
+        "identifier": "id-2-download-base-image",
+        "label": "2. Download base image",
+        "html_id": "id-2-download-base-image",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Run the following command to pull the selected image:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "docker pull quay.io/qiime2/((distro)):((epoch))"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "3. Test your install"
+          }
+        ],
+        "identifier": "id-3-test-your-install",
+        "label": "3. Test your install",
+        "html_id": "id-3-test-your-install",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, to verify things are working, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "docker run \\\n  -v $(pwd):/data \\\n  -it quay.io/qiime2/((distro)):((epoch)) \\\n  qiime info"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This command mounts your current working directory as a volume to "
+          },
+          {
+            "type": "inlineCode",
+            "value": "/data"
+          },
+          {
+            "type": "text",
+            "value": " inside the container, then starts an interactive session ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "-i"
+          },
+          {
+            "type": "text",
+            "value": ") with the command "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime info"
+          },
+          {
+            "type": "text",
+            "value": " using the image "
+          },
+          {
+            "type": "inlineCode",
+            "value": "quay.io/qiime2/((distro)):((epoch))"
+          },
+          {
+            "type": "text",
+            "value": " ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "-t"
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      }
+    ]
+  }
 }

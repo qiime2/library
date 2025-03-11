@@ -5,6 +5,11 @@
     let { data } = $props();
 </script>
 
+<div class="max-width">
+<header class="prose prose-sm md:prose-base lg:prose-lg mt-10 mx-2">
+    <h1>Books & Tutorials</h1>
+</header>
+</div>
 <article class='pt-10 mb-5'>
     <Carousel entries={data.books} colsize='12.88rem' expand={true} controls={false}
         title='Books' href='/books'>
