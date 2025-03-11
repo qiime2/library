@@ -29,6 +29,9 @@ jobs:
       - name: Get Repo Info
         run: |
           npm run update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTION: ${{ env.GITHUB_ACTION }}
 
       - name: Commit Repo Changes
         run: |
