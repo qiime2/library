@@ -44,7 +44,7 @@
                 </div>
             </dl>
         </div>
-        <div class="pt-7 mx-auto grid gap-6 auto-rows-fr max-h-min grid-cols-[auto_auto]">
+        <div class="pt-7 mx-auto grid gap-6 auto-rows-fr max-h-min grid-cols-1 w-full max-w-4xl">
             {#each state.filtered as repo_overview (repo_overview.name)}
                 <RepoCard {repo_overview} />
             {/each}

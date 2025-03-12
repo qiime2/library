@@ -2,23 +2,24 @@
     export let repo_overview: any;
 </script>
 
-<div class={`bg-white border border-gray-200 relative grid grid-cols-subgrid col-span-full rounded-lg
+<div class={`bg-white border border-gray-200 relative rounded-lg
+            flex flex-col md:flex-row
             shadow-[0_4px_10px_rgba(0,0,0,0.1)] backdrop-blur !my-0 p-4 sm:p-6 sm:my-6`}
      class:hover:shadow-[0_4px_10px_rgba(0,0,0,0.3)]={true}>
-        <a href="/plugins/{repo_overview.owner}/{repo_overview.name}" class="grid grid-cols-subgrid col-span-full md:col-span-1">
-            <div class='my-auto grid col-span-full md:col-span-1 grid-cols-subgrid'>
+        <a href="/plugins/{repo_overview.owner}/{repo_overview.name}" class="grow">
+            <div class='my-auto'>
                 <div class="flex flex-col w-max mx-auto md:mx-0 col-span-2 md:col-span-1">
                     <h1 class='text-2xl md:text-3xl font-bold text-[#1a414c] mb-0 inline'>{repo_overview.name}</h1>
                     <h2 class='font-bold md:text-lg text-gray-600 mt-1 mb-4 inline place-self-center md:place-self-end'>{repo_overview.owner}</h2>
                 </div>
-                <p class="text-sm lg:text-base max-w-2xl text-gray-600 col-span-2 mb-1 md:mb-0 md:col-end-1">
+                <p class="text-sm lg:text-base max-w-2xl text-gray-600 col-span-2 mb-2 md:mb-0">
                     {repo_overview.description}
                 </p>
                 <p class='text-xs text-gray-600 mt-2'>Last updated: {(new Date(repo_overview.last_commit.date)).toDateString()}</p>
             </div>
         </a>
 
-        <div class='prose prose-sm col-span-2 md:col-start-2 my-auto flex flex-wrap md:flex-col gap-4 md:gap-1 items-center md:items-start md:border-l border-l-gray-200 md:pl-6 md:ml-6 md:py-4'>
+        <div class='prose prose-sm flex flex-wrap md:flex-col gap-4 md:gap-1 items-center md:items-start md:border-l border-l-gray-200 mt-auto md:mt-0 md:pl-6 md:ml-6 md:py-4 place-self-center'>
             <a href={repo_overview.docs} class='flex min-w-max items-center gap-1'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class='size-4' fill='currentColor'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><title>Documentation</title><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
                 Documentation
