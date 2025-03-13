@@ -1,6 +1,23 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        "pathogenome-2024.10"
+      ],
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "3490cd05b2976f58e078f0de4c79c0234db5087d",
+        "status": "failed",
+        "date": "2025-03-12T13:16:55Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-types",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -49,23 +66,6 @@
         "sha": "5eb525b0a4f03f1e9c9c48044114aa3b14c9f05d",
         "status": "passed",
         "date": "2025-02-27T21:40:46Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "docs": null,
-      "in_distro": true,
-      "distros": [
-        "pathogenome-2024.10"
-      ],
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "4515a2c8acfe0b830be70c1cf2cdbb587c5ddbc4",
-        "status": "passed",
-        "date": "2025-02-21T14:34:59Z"
       }
     },
     {
