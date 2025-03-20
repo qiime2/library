@@ -1,6 +1,22 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "status": "failed",
+        "date": "2025-03-19T10:01:02Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        "pathogenome-2024.10"
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-fmt",
       "branch": "dev",
@@ -33,22 +49,6 @@
       ]
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "last_commit": {
-        "sha": "3490cd05b2976f58e078f0de4c79c0234db5087d",
-        "status": "failed",
-        "date": "2025-03-12T13:16:55Z"
-      },
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        "pathogenome-2024.10"
-      ]
-    },
-    {
       "owner": "qiime2",
       "name": "q2-types",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -75,6 +75,22 @@
         "status": "passed",
         "date": "2025-03-11T20:35:54Z"
       }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "b64bddf03a20f6a96ad2b521926b89a15c2948b0",
+        "status": "passed",
+        "date": "2025-03-07T07:03:02Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "picrust",

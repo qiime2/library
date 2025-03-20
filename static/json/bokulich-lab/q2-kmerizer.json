@@ -1,0 +1,585 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " plugin for generating and working with kmers from biological sequence information."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The easiest way to install q2-kmerizer is to install it directly into an existing installation of "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " (amplicon distribution version 2024.10 or later). If you have the QIIME 2 amplicon distribution installed, activate your environment and run the following to install q2-kmerizer into this environment:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "pip install q2_kmerizer@git+https://github.com/bokulich-lab/q2-kmerizer.git@main"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "And refresh your cache:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime dev refresh-cache"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If the installation worked correctly, the following command should display a description of the plugin in your terminal:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime kmerizer --help"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation of stable release"
+          }
+        ],
+        "identifier": "installation-of-stable-release",
+        "label": "Installation of stable release",
+        "html_id": "installation-of-stable-release",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you do not already have QIIME 2 installed, you can follow these instructions to install the QIIME 2 amplicon distribution as well as the latest stable version of q2-kmerizer."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://conda.io/miniconda.html",
+            "children": [
+              {
+                "type": "text",
+                "value": "Miniconda"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " provides the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": " environment and package manager, and is currently the only supported way to install QIIME 2.\nFollow the instructions for downloading and installing Miniconda."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After installing Miniconda and opening a new terminal, make sure you’re running the latest version of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda update conda"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Now use conda to install q2-kmerizer and QIIME 2:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n kmerizer-stable --file https://raw.githubusercontent.com/bokulich-lab/q2-kmerizer/main/environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After this completes, activate the new environment you created by running:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda activate kmerizer-stable"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then refresh your cache and test as shown above."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install development version of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-kmerizer"
+          }
+        ],
+        "identifier": "install-development-version-of-q2-kmerizer",
+        "label": "Install development version of q2-kmerizer",
+        "html_id": "install-development-version-of-q2-kmerizer",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you wish to use the development version of q2-kmerizer, e.g., to develop new features in your fork or to contribute to the main branch, follow these instructions."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "First, you must have conda installed, as described above."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Next, clone the repository and move into the top-level "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-kmerizer"
+          },
+          {
+            "type": "text",
+            "value": " directory. NOTE: make sure your current working directory is a location where you want to install this plugin!"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "git clone https://github.com/bokulich-lab/q2-kmerizer.git\ncd q2-kmerizer"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n q2-kmerizer-dev --file ./environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After this completes, activate the new environment you created by running:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda activate q2-kmerizer-dev"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "make install"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then refresh your cache and test as shown above."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples"
+          }
+        ],
+        "identifier": "examples",
+        "label": "Examples",
+        "html_id": "examples",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "As an example test, we will use data from "
+          },
+          {
+            "type": "link",
+            "url": "https://www.ncbi.nlm.nih.gov/pubmed/27912057",
+            "children": [
+              {
+                "type": "text",
+                "value": "Sampson et al, 2016"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", a study testing whether the fecal microbiome contributed to the development of Parkinson’s Disease (PD)."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "First we will download the test data:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "wget https://data.qiime2.org/2024.10/tutorials/pd-mice/sample_metadata.tsv\nwget https://docs.qiime2.org/2024.10/data/tutorials/pd-mice/dada2_table.qza\nwget https://docs.qiime2.org/2024.10/data/tutorials/pd-mice/dada2_rep_set.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We can count kmer frequencies per sample with this command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime kmerizer seqs-to-kmers \\\n    --i-sequences dada2_rep_set.qza \\\n    --i-table dada2_table.qza \\\n    --o-kmer-table kmer_table.qza \\\n    --p-max-features 5000"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Or run this pipeline to count kmer frequencies, calculate diversity metrics, and create an interactive scatterplot with the results:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime kmerizer core-metrics \\\n    --i-sequences dada2_rep_set.qza \\\n    --i-table dada2_table.qza \\\n    --p-sampling-depth 1000 \\\n    --m-metadata-file sample_metadata.tsv \\\n    --p-color-by-group donor \\\n    --p-max-features 5000 \\\n    --output-dir core-metrics/"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Both of these actions output a frequency table that contains kmer counts per sample. This can be used like any other frequency table and passed to any action in QIIME 2 that accepts a frequency table (except for those that also require additional inputs that must match the features in the table, e.g., that require a taxonomy). For example, we can run a pipeline to train a Random Forest classifier and test on a hold-out subset of the dataset (note: this analysis is done purely for demonstrative purposes; the sample size in this test dataset is much smaller than would be required for a robust supervised learning analysis, and proper replicate handling should be done to avoid data leakage)."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime sample-classifier classify-samples \\\n    --i-table kmer_table.qza \\\n    --m-metadata-file sample_metadata.tsv \\\n    --m-metadata-column donor \\\n    --output-dir sample-classifier/"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "About"
+          }
+        ],
+        "identifier": "about",
+        "label": "About",
+        "html_id": "about",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-kmerizer"
+          },
+          {
+            "type": "text",
+            "value": " Python package was "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org/en/latest/plugins/tutorials/create-from-template.html",
+            "children": [
+              {
+                "type": "text",
+                "value": "created from a template"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn more about "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-kmerizer"
+          },
+          {
+            "type": "text",
+            "value": ", refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/bokulich-lab/q2-kmerizer",
+            "children": [
+              {
+                "type": "text",
+                "value": "project website"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn how to use QIIME 2, refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 User Documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn QIIME 2 plugin development, refer to "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org",
+            "children": [
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Developing with QIIME 2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "q2-kmerizer"
+          },
+          {
+            "type": "text",
+            "value": " is a QIIME 2 plugin. For questions, comments, or feature requests about this plugin, please post in the "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.qiime2.org/c/community-contributions/community-plugins/14",
+            "children": [
+              {
+                "type": "text",
+                "value": "Community Plugins category"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " on the QIIME 2 Forum. The issue tracker on the GitHub repository is intended for use by the plugin developers and maintainers, not as a help forum."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Citation"
+          }
+        ],
+        "identifier": "citation",
+        "label": "Citation",
+        "html_id": "citation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you use q2-kmerizer in your work, please cite the following article:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Bokulich NA. 2024. Integrating sequence composition information into microbial diversity analyses with k-mer frequency counting. mSystems:e01550-24. https://doi.org/10.1128/msystems.01550-24"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-kmerizer",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+  "last_commit": {
+    "sha": "b64bddf03a20f6a96ad2b521926b89a15c2948b0",
+    "status": "passed",
+    "date": "2025-03-07T07:03:02Z"
+  },
+  "stars": 0,
+  "description": "QIIME 2 plugin for generating kmers from biological sequences",
+  "distros": [
+    "amplicon-2024.10"
+  ]
+}

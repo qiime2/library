@@ -1,6 +1,22 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "status": "failed",
+        "date": "2025-03-19T10:01:02Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        "pathogenome-2024.10"
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-fmt",
       "branch": "dev",
@@ -34,18 +50,18 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
+      "name": "q2-kmerizer",
       "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
       "last_commit": {
-        "sha": "3490cd05b2976f58e078f0de4c79c0234db5087d",
-        "status": "failed",
-        "date": "2025-03-12T13:16:55Z"
+        "sha": "b64bddf03a20f6a96ad2b521926b89a15c2948b0",
+        "status": "passed",
+        "date": "2025-03-07T07:03:02Z"
       },
       "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
       "distros": [
-        "pathogenome-2024.10"
+        "amplicon-2024.10"
       ]
     },
     {
@@ -97,22 +113,6 @@
       },
       "stars": 6,
       "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": [
-        "amplicon-2024.10"
-      ]
-    },
-    {
-      "owner": "PlanesLab",
-      "name": "q2-metnet",
-      "branch": "main",
-      "docs": "https://github.com/PlanesLab/q2-metnet/tree/main",
-      "last_commit": {
-        "sha": "575fe8da6f9de8c66cdd8248a60df3fae922f540",
-        "status": "passed",
-        "date": "2025-02-03T17:38:01Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
       "distros": [
         "amplicon-2024.10"
       ]
@@ -271,5 +271,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-03-19T01:27:32.439Z"
+  "last_updated": "2025-03-20T01:26:05.171Z"
 }
