@@ -1,30 +1,14 @@
 {
   "plugins": [
     {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "last_commit": {
-        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
-        "status": "failed",
-        "date": "2025-03-19T10:01:02Z"
-      },
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        "pathogenome-2024.10"
-      ]
-    },
-    {
       "owner": "qiime2",
       "name": "q2-fmt",
       "branch": "dev",
       "docs": "https://q2-fmt.readthedocs.io/en/latest/",
       "last_commit": {
-        "sha": "8ff6ad718eefea75877dd81590b4d3badb39e1ec",
+        "sha": "e76d2d5476defa7ed53f875ef3dbb37697599a72",
         "status": "passed",
-        "date": "2025-03-13T17:26:20Z"
+        "date": "2025-03-20T16:47:08Z"
       },
       "stars": 4,
       "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
@@ -38,14 +22,30 @@
       "branch": "main",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "last_commit": {
-        "sha": "3cc6b61794cc0f45812d7d4f567a5db94744d5de",
+        "sha": "b79322205d09dfc0ffd1a1a30126a15b119cdb80",
         "status": "failed",
-        "date": "2025-03-12T16:22:01Z"
+        "date": "2025-03-20T13:31:05Z"
       },
       "stars": 3,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
       "distros": [
         "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "status": "failed",
+        "date": "2025-03-19T10:01:02Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        "pathogenome-2024.10"
       ]
     },
     {
@@ -271,5 +271,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-03-20T01:26:05.171Z"
+  "last_updated": "2025-03-21T01:28:08.170Z"
 }

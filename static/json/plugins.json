@@ -1,52 +1,21 @@
 {
   "plugins": [
     {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "last_commit": {
-        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
-        "status": "failed",
-        "date": "2025-03-19T10:01:02Z"
-      },
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        "pathogenome-2024.10"
-      ]
-    },
-    {
       "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "8ff6ad718eefea75877dd81590b4d3badb39e1ec",
-        "status": "passed",
-        "date": "2025-03-13T17:26:20Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "name": "q2-stats",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
       "distros": [
         "amplicon-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      ],
+      "stars": 1,
+      "description": null,
+      "branch": "dev",
       "last_commit": {
-        "sha": "3cc6b61794cc0f45812d7d4f567a5db94744d5de",
+        "sha": "a078b9969b1fdd19a50b923566453ddc9a110a60",
         "status": "failed",
-        "date": "2025-03-12T16:22:01Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        "metagenome-2024.10"
-      ]
+        "date": "2025-03-20T23:33:18Z"
+      }
     },
     {
       "owner": "qiime2",
@@ -71,10 +40,82 @@
       "description": null,
       "branch": "dev",
       "last_commit": {
-        "sha": "43773d9a80071a2a7cb11b2385efb27470d33328",
+        "sha": "00c879434850d770e7d94ed59bc55dcfa4f0dc7f",
         "status": "passed",
-        "date": "2025-03-11T20:35:54Z"
+        "date": "2025-03-20T21:13:41Z"
       }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-feature-classifier",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 19,
+      "description": "QIIME 2 plugin supporting taxonomic classification",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "40e181530c28b54a6fd514b6042c222c31af778e",
+        "status": "passed",
+        "date": "2025-03-20T18:48:05Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "e76d2d5476defa7ed53f875ef3dbb37697599a72",
+        "status": "passed",
+        "date": "2025-03-20T16:47:08Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "b79322205d09dfc0ffd1a1a30126a15b119cdb80",
+        "status": "failed",
+        "date": "2025-03-20T13:31:05Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "status": "failed",
+        "date": "2025-03-19T10:01:02Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        "pathogenome-2024.10"
+      ]
     },
     {
       "owner": "bokulich-lab",
@@ -150,30 +191,6 @@
         "sha": "5eb525b0a4f03f1e9c9c48044114aa3b14c9f05d",
         "status": "passed",
         "date": "2025-02-27T21:40:46Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-feature-classifier",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 19,
-      "description": "QIIME 2 plugin supporting taxonomic classification",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "0ba5389b90f4c2d70d5f6955450318831433bc66",
-        "status": "passed",
-        "date": "2025-02-20T18:43:52Z"
       }
     },
     {
@@ -517,23 +534,6 @@
         "sha": "490886048b6611728d05b66f8646193a8127fcf6",
         "status": "passed",
         "date": "2025-01-18T21:10:58Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-stats",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10"
-      ],
-      "stars": 1,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "294b0dcbae4169a5c639543e53fc62c689a61d3f",
-        "status": "passed",
-        "date": "2025-01-18T21:10:36Z"
       }
     },
     {

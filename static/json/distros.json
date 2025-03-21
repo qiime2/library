@@ -1,20 +1,20 @@
 {
   "plugins": [
     {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "docs": null,
+      "owner": "qiime2",
+      "name": "q2-stats",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
-        "pathogenome-2024.10"
+        "amplicon-2024.10"
       ],
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "branch": "main",
+      "stars": 1,
+      "description": null,
+      "branch": "dev",
       "last_commit": {
-        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "sha": "a078b9969b1fdd19a50b923566453ddc9a110a60",
         "status": "failed",
-        "date": "2025-03-19T10:01:02Z"
+        "date": "2025-03-20T23:33:18Z"
       }
     },
     {
@@ -40,9 +40,50 @@
       "description": null,
       "branch": "dev",
       "last_commit": {
-        "sha": "43773d9a80071a2a7cb11b2385efb27470d33328",
+        "sha": "00c879434850d770e7d94ed59bc55dcfa4f0dc7f",
         "status": "passed",
-        "date": "2025-03-11T20:35:54Z"
+        "date": "2025-03-20T21:13:41Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-feature-classifier",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 19,
+      "description": "QIIME 2 plugin supporting taxonomic classification",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "40e181530c28b54a6fd514b6042c222c31af778e",
+        "status": "passed",
+        "date": "2025-03-20T18:48:05Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        "pathogenome-2024.10"
+      ],
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "status": "failed",
+        "date": "2025-03-19T10:01:02Z"
       }
     },
     {
@@ -66,30 +107,6 @@
         "sha": "5eb525b0a4f03f1e9c9c48044114aa3b14c9f05d",
         "status": "passed",
         "date": "2025-02-27T21:40:46Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-feature-classifier",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 19,
-      "description": "QIIME 2 plugin supporting taxonomic classification",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "0ba5389b90f4c2d70d5f6955450318831433bc66",
-        "status": "passed",
-        "date": "2025-02-20T18:43:52Z"
       }
     },
     {
@@ -386,23 +403,6 @@
         "sha": "490886048b6611728d05b66f8646193a8127fcf6",
         "status": "passed",
         "date": "2025-01-18T21:10:58Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-stats",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10"
-      ],
-      "stars": 1,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "294b0dcbae4169a5c639543e53fc62c689a61d3f",
-        "status": "passed",
-        "date": "2025-01-18T21:10:36Z"
       }
     },
     {
