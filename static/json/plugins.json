@@ -2,6 +2,72 @@
   "plugins": [
     {
       "owner": "qiime2",
+      "name": "q2-vsearch",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 6,
+      "description": "vsearch plugin for QIIME 2",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "5cbe88860db562885f2cbe153bc619003bc7bd38",
+        "status": "passed",
+        "date": "2025-03-21T20:14:21Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-vizard",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10"
+      ],
+      "stars": 1,
+      "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "6243fd2f08d1ea9d711749d68acaa80e2e6f73c2",
+        "status": "passed",
+        "date": "2025-03-21T20:13:52Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-taxa",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 3,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "a033512b4f8d7f03d328d53ee9c76f0ca203e523",
+        "status": "passed",
+        "date": "2025-03-21T20:13:10Z"
+      }
+    },
+    {
+      "owner": "qiime2",
       "name": "q2-stats",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -12,9 +78,264 @@
       "description": null,
       "branch": "dev",
       "last_commit": {
-        "sha": "a078b9969b1fdd19a50b923566453ddc9a110a60",
-        "status": "failed",
-        "date": "2025-03-20T23:33:18Z"
+        "sha": "a85863f583880fc8258fd4d4a7d6f0f47092d3cc",
+        "status": "passed",
+        "date": "2025-03-21T20:12:41Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-sample-classifier",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 6,
+      "description": "QIIME 2 plugin for machine learning prediction of sample data.",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "d0eb7f516b59ea3ada6747d4c5c16c83fbf161a0",
+        "status": "passed",
+        "date": "2025-03-21T20:12:02Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-quality-control",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 4,
+      "description": "A QIIME 2 plugin for quality control of sequence and feature data",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "b6a03da384aa26e5ca9ad70f30bb21cd3a90a462",
+        "status": "passed",
+        "date": "2025-03-21T20:11:31Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-phylogeny",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 4,
+      "description": "Phylogenetic reconstruction, and operations on phylogenetic trees. ",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "ff368ec3faae69321a522b53a8b2b8dbbaf26cd1",
+        "status": "passed",
+        "date": "2025-03-21T20:10:58Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-metadata",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "tiny-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 3,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "77a9c55d6e1db11d4b9470e40bb16cf4e3209942",
+        "status": "passed",
+        "date": "2025-03-21T20:10:33Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-longitudinal",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 9,
+      "description": "QIIME 2 plugin for paired sample comparisons",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "5c9b236a1a72e38437396f6e9306c76f5a2db548",
+        "status": "passed",
+        "date": "2025-03-21T20:10:04Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-feature-table",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 2,
+      "description": "QIIME 2 plugin supporting operations on feature tables.",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "f2c3fec50159c7768bc72a4af41f2a6bf6895335",
+        "status": "passed",
+        "date": "2025-03-21T20:09:38Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-emperor",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 1,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "bfadb1e64268b965ea05dde38e5fca7ae8405791",
+        "status": "passed",
+        "date": "2025-03-21T20:09:08Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-diversity-lib",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 0,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "1e0339f28098c88e337891abe29c5048fb8244ad",
+        "status": "passed",
+        "date": "2025-03-21T20:08:39Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-diversity",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 4,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "72457dc2602dc361153589a5761b77090d05248c",
+        "status": "passed",
+        "date": "2025-03-21T20:08:08Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-deblur",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 2,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "5df1e9e6bc1a3375d7db79e26ac65d91c5d125de",
+        "status": "passed",
+        "date": "2025-03-21T20:07:43Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-composition",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 6,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "5f3555521201bc1dee95a10722e7da4397479ca6",
+        "status": "passed",
+        "date": "2025-03-21T20:07:18Z"
       }
     },
     {
@@ -40,9 +361,9 @@
       "description": null,
       "branch": "dev",
       "last_commit": {
-        "sha": "00c879434850d770e7d94ed59bc55dcfa4f0dc7f",
+        "sha": "72cfd4309b8c908315c3cf67b2d686cdddc6b03f",
         "status": "passed",
-        "date": "2025-03-20T21:13:41Z"
+        "date": "2025-03-21T19:19:57Z"
       }
     },
     {
@@ -171,29 +492,6 @@
       ]
     },
     {
-      "owner": "qiime2",
-      "name": "q2-composition",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 6,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "5eb525b0a4f03f1e9c9c48044114aa3b14c9f05d",
-        "status": "passed",
-        "date": "2025-02-27T21:40:46Z"
-      }
-    },
-    {
       "owner": "caporaso-lab",
       "name": "genome-sampler",
       "branch": "dev",
@@ -208,29 +506,6 @@
       "distros": [
         "amplicon-2024.10"
       ]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-vsearch",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 6,
-      "description": "vsearch plugin for QIIME 2",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "5942dae311c0ade6589a3598225cd6edbf11ff8c",
-        "status": "passed",
-        "date": "2025-02-13T13:22:37Z"
-      }
     },
     {
       "owner": "qiime2",
@@ -296,75 +571,6 @@
         "sha": "c28682c1202a0bc517c345b0a0a91b29b7cb1cec",
         "status": "failed",
         "date": "2025-02-10T15:45:41Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-feature-table",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 2,
-      "description": "QIIME 2 plugin supporting operations on feature tables.",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "fd3001c71f3a9ab78150de67c091e1708cd92d51",
-        "status": "passed",
-        "date": "2025-02-07T21:03:44Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-deblur",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 2,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "0120a74413643a39e7cf4a8f2427a16430413652",
-        "status": "passed",
-        "date": "2025-02-07T16:41:55Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-quality-control",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 4,
-      "description": "A QIIME 2 plugin for quality control of sequence and feature data",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "858e21598a0c27bcb20760db77ee2ac93b8353e5",
-        "status": "passed",
-        "date": "2025-02-07T16:39:59Z"
       }
     },
     {
@@ -495,94 +701,6 @@
     },
     {
       "owner": "qiime2",
-      "name": "q2-vizard",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10"
-      ],
-      "stars": 1,
-      "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "10bef67010b46b626b10f6dfd303a59c9cf28715",
-        "status": "passed",
-        "date": "2025-01-18T21:11:47Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-taxa",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 3,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "490886048b6611728d05b66f8646193a8127fcf6",
-        "status": "passed",
-        "date": "2025-01-18T21:10:58Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-sample-classifier",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 6,
-      "description": "QIIME 2 plugin for machine learning prediction of sample data.",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "f880f13b9edf044b11f9eaaf3dacd5f0976dbd85",
-        "status": "passed",
-        "date": "2025-01-18T21:10:03Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-phylogeny",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 4,
-      "description": "Phylogenetic reconstruction, and operations on phylogenetic trees. ",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "ad6b1f4d42ecbbf544707aca024da11a7db0da76",
-        "status": "passed",
-        "date": "2025-01-18T21:08:48Z"
-      }
-    },
-    {
-      "owner": "qiime2",
       "name": "q2-mystery-stew",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -611,55 +729,6 @@
     },
     {
       "owner": "qiime2",
-      "name": "q2-metadata",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "tiny-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 3,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "60634cbb07299f2d88837c816a90ec289e702c6e",
-        "status": "passed",
-        "date": "2025-01-18T21:07:53Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-longitudinal",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 9,
-      "description": "QIIME 2 plugin for paired sample comparisons",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "dcf00f5380a334ff6ddddfb90abff34f8d0a4a4e",
-        "status": "passed",
-        "date": "2025-01-18T21:07:30Z"
-      }
-    },
-    {
-      "owner": "qiime2",
       "name": "q2-fragment-insertion",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -677,75 +746,6 @@
         "sha": "a58b67b612da3883b9ccd13e8bd2812ea47f2282",
         "status": "passed",
         "date": "2025-01-18T21:07:05Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-emperor",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 1,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "6c973cfe98a543e059def7e1bcca7a55abcfdbf8",
-        "status": "passed",
-        "date": "2025-01-18T21:05:51Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-diversity-lib",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 0,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "6fb26913d07c96ee182bc418f15bdab356d60ea8",
-        "status": "passed",
-        "date": "2025-01-18T21:05:03Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-diversity",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 4,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "da384c7b2ef76c83ab522b25df5f749d7feeefe8",
-        "status": "passed",
-        "date": "2025-01-18T21:04:37Z"
       }
     },
     {
