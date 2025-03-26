@@ -1,19 +1,19 @@
 {
   "plugins": [
     {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "last_commit": {
-        "sha": "e76d2d5476defa7ed53f875ef3dbb37697599a72",
-        "status": "failed",
-        "date": "2025-03-20T16:47:08Z"
+        "sha": "1543468dbba4dac56f3ed4a46ffbace8f119b6fe",
+        "status": "passed",
+        "date": "2025-03-25T21:27:28Z"
       },
       "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
       "distros": [
-        "amplicon-2024.10"
+        "metagenome-2024.10"
       ]
     },
     {
@@ -22,9 +22,9 @@
       "branch": "main",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "last_commit": {
-        "sha": "b79322205d09dfc0ffd1a1a30126a15b119cdb80",
+        "sha": "9218327cb124d7f1a5fdf93dd06c0c511d841fd2",
         "status": "failed",
-        "date": "2025-03-20T13:31:05Z"
+        "date": "2025-03-25T21:26:49Z"
       },
       "stars": 3,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
@@ -38,14 +38,30 @@
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
       "last_commit": {
-        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
+        "sha": "2de602bdaca45583211eb82e917cd8470859711a",
         "status": "failed",
-        "date": "2025-03-19T10:01:02Z"
+        "date": "2025-03-25T05:14:38Z"
       },
       "stars": 0,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         "pathogenome-2024.10"
+      ]
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "e76d2d5476defa7ed53f875ef3dbb37697599a72",
+        "status": "failed",
+        "date": "2025-03-20T16:47:08Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": [
+        "amplicon-2024.10"
       ]
     },
     {
@@ -99,22 +115,6 @@
         "amplicon-2024.10",
         "metagenome-2024.10",
         "tiny-2024.10"
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
-      "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "48f92d95ed614e45186b09d802b3f3c7da451eec",
-        "status": "passed",
-        "date": "2025-02-20T17:24:28Z"
-      },
-      "stars": 6,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": [
-        "amplicon-2024.10"
       ]
     }
   ],
@@ -271,5 +271,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-03-25T01:28:39.762Z"
+  "last_updated": "2025-03-26T01:27:47.713Z"
 }

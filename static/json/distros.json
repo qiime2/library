@@ -1,6 +1,71 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-types",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "tiny-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "tiny-2024.5",
+        "amplicon-2024.2",
+        "tiny-2024.2",
+        "amplicon-2023.9",
+        "tiny-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 17,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "fa6c5794c5ec5144d3fabd9ca7aaf78ef32822c7",
+        "status": "passed",
+        "date": "2025-03-25T23:57:32Z"
+      }
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "q2-sapienns",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 1,
+      "description": null,
+      "branch": "main",
+      "last_commit": {
+        "sha": "c25e495fd6da392b64d8b4f546b18b3a472b75e5",
+        "status": "passed",
+        "date": "2025-03-25T21:27:53Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "1543468dbba4dac56f3ed4a46ffbace8f119b6fe",
+        "status": "passed",
+        "date": "2025-03-25T21:27:28Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -17,9 +82,61 @@
       "description": "REference Sequence annotation and CuRatIon Pipeline",
       "branch": "master",
       "last_commit": {
-        "sha": "9d266d672fa33675cc91e04f95b982425f93c3ac",
+        "sha": "c0b13896b2c46b7ea0a35af6191a4ed55752d627",
         "status": "passed",
-        "date": "2025-03-24T22:23:43Z"
+        "date": "2025-03-25T18:38:20Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-fondue",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 21,
+      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
+      "branch": "main",
+      "last_commit": {
+        "sha": "c2adf63e3a12f94756e9d0cd168988e893416030",
+        "status": "passed",
+        "date": "2025-03-25T05:16:58Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        "pathogenome-2024.10"
+      ],
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "2de602bdaca45583211eb82e917cd8470859711a",
+        "status": "failed",
+        "date": "2025-03-25T05:14:38Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-viromics",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        "pathogenome-2024.10"
+      ],
+      "stars": 0,
+      "description": null,
+      "branch": "main",
+      "last_commit": {
+        "sha": "046919131e1f2179d370d0b7f25b49027e56bf15",
+        "status": "failed",
+        "date": "2025-03-25T05:14:08Z"
       }
     },
     {
@@ -62,34 +179,6 @@
         "sha": "a641e5cb20d66a652e1354f5be0d7e0827f04d84",
         "status": "passed",
         "date": "2025-03-24T22:21:56Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-types",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "tiny-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "tiny-2024.5",
-        "amplicon-2024.2",
-        "tiny-2024.2",
-        "amplicon-2023.9",
-        "tiny-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 17,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "4f2a231d9ecf7b5f8d98700f66743c4d0358cecd",
-        "status": "passed",
-        "date": "2025-03-24T22:21:34Z"
       }
     },
     {
@@ -550,95 +639,6 @@
         "sha": "40e181530c28b54a6fd514b6042c222c31af778e",
         "status": "passed",
         "date": "2025-03-20T18:48:05Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "docs": null,
-      "in_distro": true,
-      "distros": [
-        "pathogenome-2024.10"
-      ],
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "1165791a734437ab6fff5b8dd8488ec5323f8339",
-        "status": "failed",
-        "date": "2025-03-19T10:01:02Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-viromics",
-      "docs": null,
-      "in_distro": true,
-      "distros": [
-        "pathogenome-2024.10"
-      ],
-      "stars": 0,
-      "description": null,
-      "branch": "main",
-      "last_commit": {
-        "sha": "8e545024d1a41e50191b5b9a100208ebc4a268f1",
-        "status": "passed",
-        "date": "2025-01-18T21:30:29Z"
-      }
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "q2-sapienns",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "metagenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 1,
-      "description": null,
-      "branch": "main",
-      "last_commit": {
-        "sha": "41488a6a2139e25657e72cd5a3de4a9519225cbe",
-        "status": "passed",
-        "date": "2025-01-18T21:23:57Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-fondue",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "metagenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 21,
-      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
-      "branch": "main",
-      "last_commit": {
-        "sha": "f8d805ba3a607f411b768b1ea0bc92da7768c5cf",
-        "status": "passed",
-        "date": "2025-01-18T21:22:41Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "a124882a861acaab65252c565e44d34dee2a43c4",
-        "status": "passed",
-        "date": "2025-01-18T21:21:29Z"
       }
     },
     {
