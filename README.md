@@ -40,6 +40,8 @@ npm run update --catalog=<path to library-plugins repo>
 ```
 It is important that the `=` sign is present otherwise `--catalog` becomes a boolean instead of a path.
 
+**Important**: The local checkout of the catalog WILL ONLY respect the HEAD commit, it will not consider any dirty (non-committed) changes to the working-tree.
+
 You can also run
 ```
 npm run update
