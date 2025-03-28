@@ -38,7 +38,9 @@ The most common invocation will be:
 ```
 npm run update --catalog=<path to library-plugins repo>
 ```
-It is important that the `=` sign is present otherwise `--catalog` becomes a boolean instead of a path.
+ - It is important that the `=` sign is present otherwise `--catalog` becomes a boolean instead of a path.
+ - Your path should be relative to your CWD or absolute, it should not contain shortcuts like `~`.
+ - In order for the scripts to execute, you will need Node v22.2.0 or greater as it uses `import.meta.filename` to determine if it is running as a script.
 
 **Important**: The local checkout of the catalog WILL ONLY respect the HEAD commit, it will not consider any dirty (non-committed) changes to the working-tree.
 
