@@ -1,6 +1,38 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "2b6f7265c338e4830e0e89073a79192108c999b4",
+        "status": "passed",
+        "date": "2025-04-02T22:58:16Z"
+      },
+      "stars": 6,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "129a2e2fa09006e0951ffabea3ceaaa294cb4b7e",
+        "status": "passed",
+        "date": "2025-04-02T09:47:16Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-assembly",
       "branch": "main",
@@ -12,22 +44,6 @@
       },
       "stars": 4,
       "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "9218327cb124d7f1a5fdf93dd06c0c511d841fd2",
-        "status": "failed",
-        "date": "2025-03-25T21:26:49Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
       "distros": [
         "metagenome-2024.10"
       ]
@@ -95,27 +111,6 @@
       "distros": [
         "amplicon-2024.5"
       ]
-    },
-    {
-      "owner": "micom-dev",
-      "name": "q2-micom",
-      "branch": "main",
-      "docs": "https://micom-dev.github.io/q2-micom/",
-      "last_commit": {
-        "sha": "f434b434968ae23ff8c1034f0110a74e60d5eef6",
-        "status": "passed",
-        "date": "2025-03-04T07:32:49Z"
-      },
-      "stars": 10,
-      "description": "A Qiime plugin for MICOM.",
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "tiny-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "tiny-2024.10"
-      ]
     }
   ],
   "distros": [
@@ -162,14 +157,14 @@
       "order": 1
     },
     {
-      "url": "https://q2-fmt.readthedocs.io/en/latest/",
-      "title": "q2-fmt book",
-      "description": ""
-    },
-    {
       "url": "https://genome-sampler.readthedocs.io/en/latest/",
       "title": "genome-sampler documentation",
       "source": "https://github.com/caporaso-lab/genome-sampler",
+      "description": ""
+    },
+    {
+      "url": "https://q2-fmt.readthedocs.io/en/latest/",
+      "title": "q2-fmt book",
       "description": ""
     },
     {
@@ -207,10 +202,10 @@
       "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
     },
     {
-      "title": "Assessing engraftment extent with q2-FMT",
-      "description": "Assessing Engraftment following an Auto-FMT using Amplicon Data. This tutorial was based on the publically available data from Taur et al. 2018.",
-      "thumbnail": "_images/engraftment-extent.png",
-      "url": "https://q2-fmt.readthedocs.io/en/latest//tutorial/tutorial.html"
+      "title": "Step-by-step tutorial",
+      "description": "",
+      "thumbnail": "",
+      "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial.html"
     }
   ],
   "videos": [
@@ -271,5 +266,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-04-02T01:37:36.998Z"
+  "last_updated": "2025-04-03T01:28:19.317Z"
 }

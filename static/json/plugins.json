@@ -1,6 +1,22 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "2b6f7265c338e4830e0e89073a79192108c999b4",
+        "status": "passed",
+        "date": "2025-04-02T22:58:16Z"
+      },
+      "stars": 6,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -17,10 +33,26 @@
       "description": "REference Sequence annotation and CuRatIon Pipeline",
       "branch": "master",
       "last_commit": {
-        "sha": "0db7b28252cc95dfa2fb3ee58eae0be25db99912",
+        "sha": "009611c48b54d11c98adcf20d5fe5753a6d49fef",
         "status": "passed",
-        "date": "2025-04-01T18:12:43Z"
+        "date": "2025-04-02T21:20:34Z"
       }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "129a2e2fa09006e0951ffabea3ceaaa294cb4b7e",
+        "status": "passed",
+        "date": "2025-04-02T09:47:16Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
     },
     {
       "owner": "qiime2",
@@ -104,22 +136,6 @@
       },
       "stars": 4,
       "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "9218327cb124d7f1a5fdf93dd06c0c511d841fd2",
-        "status": "failed",
-        "date": "2025-03-25T21:26:49Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
       "distros": [
         "metagenome-2024.10"
       ]
@@ -720,22 +736,6 @@
         "amplicon-2024.10",
         "metagenome-2024.10",
         "tiny-2024.10"
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
-      "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "48f92d95ed614e45186b09d802b3f3c7da451eec",
-        "status": "passed",
-        "date": "2025-02-20T17:24:28Z"
-      },
-      "stars": 6,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": [
-        "amplicon-2024.10"
       ]
     },
     {
