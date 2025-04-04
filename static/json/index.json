@@ -1,6 +1,22 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "f6a3bb94e7020cd92493d5b52fad41d70b1eb4b9",
+        "status": "passed",
+        "date": "2025-04-03T15:44:58Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": [
+        "amplicon-2024.10"
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "genome-sampler",
       "branch": "dev",
@@ -62,22 +78,6 @@
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         "pathogenome-2024.10"
-      ]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "e76d2d5476defa7ed53f875ef3dbb37697599a72",
-        "status": "failed",
-        "date": "2025-03-20T16:47:08Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": [
-        "amplicon-2024.10"
       ]
     },
     {
@@ -157,14 +157,14 @@
       "order": 1
     },
     {
-      "url": "https://genome-sampler.readthedocs.io/en/latest/",
-      "title": "genome-sampler documentation",
-      "source": "https://github.com/caporaso-lab/genome-sampler",
+      "url": "https://q2-fmt.readthedocs.io/en/latest/",
+      "title": "q2-fmt book",
       "description": ""
     },
     {
-      "url": "https://q2-fmt.readthedocs.io/en/latest/",
-      "title": "q2-fmt book",
+      "url": "https://genome-sampler.readthedocs.io/en/latest/",
+      "title": "genome-sampler documentation",
+      "source": "https://github.com/caporaso-lab/genome-sampler",
       "description": ""
     },
     {
@@ -202,10 +202,10 @@
       "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
     },
     {
-      "title": "Step-by-step tutorial",
-      "description": "",
-      "thumbnail": "",
-      "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial.html"
+      "title": "Assessing engraftment extent with q2-FMT",
+      "description": "Assessing Engraftment following an Auto-FMT using Amplicon Data. This tutorial was based on the publically available data from Taur et al. 2018.",
+      "thumbnail": "_images/engraftment-extent.png",
+      "url": "https://q2-fmt.readthedocs.io/en/latest//tutorial/tutorial.html"
     }
   ],
   "videos": [
@@ -266,5 +266,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-04-03T01:28:19.317Z"
+  "last_updated": "2025-04-04T01:28:16.720Z"
 }

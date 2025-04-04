@@ -15,14 +15,14 @@
       "order": 1
     },
     {
-      "url": "https://genome-sampler.readthedocs.io/en/latest/",
-      "title": "genome-sampler documentation",
-      "source": "https://github.com/caporaso-lab/genome-sampler",
+      "url": "https://q2-fmt.readthedocs.io/en/latest/",
+      "title": "q2-fmt book",
       "description": ""
     },
     {
-      "url": "https://q2-fmt.readthedocs.io/en/latest/",
-      "title": "q2-fmt book",
+      "url": "https://genome-sampler.readthedocs.io/en/latest/",
+      "title": "genome-sampler documentation",
+      "source": "https://github.com/caporaso-lab/genome-sampler",
       "description": ""
     }
   ],
@@ -52,6 +52,12 @@
       "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
     },
     {
+      "title": "Assessing engraftment extent with q2-FMT",
+      "description": "Assessing Engraftment following an Auto-FMT using Amplicon Data. This tutorial was based on the publically available data from Taur et al. 2018.",
+      "thumbnail": "_images/engraftment-extent.png",
+      "url": "https://q2-fmt.readthedocs.io/en/latest//tutorial/tutorial.html"
+    },
+    {
       "title": "Step-by-step tutorial",
       "description": "",
       "thumbnail": "",
@@ -62,12 +68,6 @@
       "description": "",
       "thumbnail": "",
       "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial-snakemake.html"
-    },
-    {
-      "title": "Assessing engraftment extent with q2-FMT",
-      "description": "Assessing Engraftment following an Auto-FMT using Amplicon Data. This tutorial was based on the publically available data from Taur et al. 2018.",
-      "thumbnail": "_images/engraftment-extent.png",
-      "url": "https://q2-fmt.readthedocs.io/en/latest//tutorial/tutorial.html"
     }
   ],
   "distros": [

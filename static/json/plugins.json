@@ -1,17 +1,85 @@
 {
   "plugins": [
     {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
+      "owner": "qiime2",
+      "name": "q2-alignment",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 2,
+      "description": "Support for multiple sequence alignment in QIIME 2. ",
       "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
       "last_commit": {
-        "sha": "2b6f7265c338e4830e0e89073a79192108c999b4",
+        "sha": "5073163149ee1e70204905cfb0a2972480d195c6",
         "status": "passed",
-        "date": "2025-04-02T22:58:16Z"
-      },
+        "date": "2025-04-03T21:54:16Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-composition",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
       "stars": 6,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "7c877dfe25258ef93fdb7447d478c7f1f9644764",
+        "status": "passed",
+        "date": "2025-04-03T21:54:02Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-quality-control",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 4,
+      "description": "A QIIME 2 plugin for quality control of sequence and feature data",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "3c60c1f7d5906749cc95a8f87cc358e82f88ff06",
+        "status": "passed",
+        "date": "2025-04-03T17:46:05Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "f6a3bb94e7020cd92493d5b52fad41d70b1eb4b9",
+        "status": "passed",
+        "date": "2025-04-03T15:44:58Z"
+      },
+      "stars": 4,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
       "distros": [
         "amplicon-2024.10"
       ]
@@ -33,10 +101,26 @@
       "description": "REference Sequence annotation and CuRatIon Pipeline",
       "branch": "master",
       "last_commit": {
-        "sha": "009611c48b54d11c98adcf20d5fe5753a6d49fef",
+        "sha": "35a55e6fab1a3c1ac57b42d970140dd0d9208646",
         "status": "passed",
-        "date": "2025-04-02T21:20:34Z"
+        "date": "2025-04-03T14:55:52Z"
       }
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "2b6f7265c338e4830e0e89073a79192108c999b4",
+        "status": "passed",
+        "date": "2025-04-02T22:58:16Z"
+      },
+      "stars": 6,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": [
+        "amplicon-2024.10"
+      ]
     },
     {
       "owner": "bokulich-lab",
@@ -319,30 +403,6 @@
         "sha": "86cb430283c94d675bc2e38e22b22e36c1b9aad4",
         "status": "passed",
         "date": "2025-03-24T22:20:24Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-quality-control",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 4,
-      "description": "A QIIME 2 plugin for quality control of sequence and feature data",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "0cd079da52b1b7869d9e3996ace946ac8d38cdb0",
-        "status": "passed",
-        "date": "2025-03-24T22:20:08Z"
       }
     },
     {
@@ -647,45 +707,6 @@
       }
     },
     {
-      "owner": "qiime2",
-      "name": "q2-composition",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 6,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "5f3555521201bc1dee95a10722e7da4397479ca6",
-        "status": "passed",
-        "date": "2025-03-21T20:07:18Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "e76d2d5476defa7ed53f875ef3dbb37697599a72",
-        "status": "failed",
-        "date": "2025-03-20T16:47:08Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": [
-        "amplicon-2024.10"
-      ]
-    },
-    {
       "owner": "bokulich-lab",
       "name": "q2-kmerizer",
       "branch": "main",
@@ -771,27 +792,6 @@
         "amplicon-2024.10",
         "amplicon-2024.5"
       ]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-alignment",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 2,
-      "description": "Support for multiple sequence alignment in QIIME 2. ",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "1df967b6a087d7ab01bdf5522c0ecad99a3fab14",
-        "status": "passed",
-        "date": "2025-01-18T21:01:57Z"
-      }
     },
     {
       "owner": "dib-lab",
