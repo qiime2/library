@@ -1,6 +1,28 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "RESCRIPt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2"
+      ],
+      "stars": 98,
+      "description": "REference Sequence annotation and CuRatIon Pipeline",
+      "branch": "master",
+      "last_commit": {
+        "sha": "aeb7832f62208ccacdebb0ee6c950cd1d05fde93",
+        "status": "passed",
+        "date": "2025-04-04T18:46:33Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-alignment",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -66,28 +88,6 @@
         "sha": "3c60c1f7d5906749cc95a8f87cc358e82f88ff06",
         "status": "passed",
         "date": "2025-04-03T17:46:05Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "RESCRIPt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2"
-      ],
-      "stars": 98,
-      "description": "REference Sequence annotation and CuRatIon Pipeline",
-      "branch": "master",
-      "last_commit": {
-        "sha": "35a55e6fab1a3c1ac57b42d970140dd0d9208646",
-        "status": "passed",
-        "date": "2025-04-03T14:55:52Z"
       }
     },
     {
