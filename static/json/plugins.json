@@ -2,6 +2,23 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "9adf748c216ee5e27dd1b0a1537baa91acba9689",
+        "status": "passed",
+        "date": "2025-04-05T15:37:09Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        "amplicon-2025.4",
+        "amplicon-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -705,22 +722,6 @@
         "status": "passed",
         "date": "2025-03-24T22:16:12Z"
       }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-kmerizer",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
-      "last_commit": {
-        "sha": "b64bddf03a20f6a96ad2b521926b89a15c2948b0",
-        "status": "passed",
-        "date": "2025-03-07T07:03:02Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for generating kmers from biological sequences",
-      "distros": [
-        "amplicon-2024.10"
-      ]
     },
     {
       "owner": "picrust",
