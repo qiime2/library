@@ -2,6 +2,22 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "d551bbb9d224433e99105405f59e2dcc9a884edf",
+        "status": "passed",
+        "date": "2025-04-09T09:49:27Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
@@ -67,22 +83,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "1543468dbba4dac56f3ed4a46ffbace8f119b6fe",
-        "status": "passed",
-        "date": "2025-03-25T21:27:28Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
@@ -107,7 +107,7 @@
         "status": "passed",
         "date": "2025-03-04T18:19:15Z"
       },
-      "stars": 5,
+      "stars": 6,
       "description": "QIIME 2 plugin for PICRUSt2",
       "distros": [
         "amplicon-2024.5"
@@ -267,5 +267,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-04-09T01:37:30.911Z"
+  "last_updated": "2025-04-10T01:36:57.105Z"
 }

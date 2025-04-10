@@ -1522,7 +1522,7 @@
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-ids-from-query \\\n              --p-query \"txid410656[Organism] AND \\\"public\\\"[Filter] AND (chicken OR poultry)\" \\\n              --p-email your_email@somewhere.com \\\n              --p-n-jobs 2 \\\n              --o-ids run_ids.qza \\\n              --verbose"
+        "value": "qiime fondue get-ids-from-query \\\n              --p-query \"txid410656[Organism] AND \\\"public\\\"[Filter] AND (chicken OR poultry)\" \\\n              --p-email your_email@somewhere.com \\\n              --p-threads 2 \\\n              --o-ids run_ids.qza \\\n              --verbose"
       },
       {
         "type": "paragraph",
@@ -1572,7 +1572,7 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-n-jobs"
+                "value": "--p-threads"
               },
               {
                 "type": "text",
@@ -1622,7 +1622,7 @@
       {
         "type": "code",
         "lang": "shell",
-        "value": "qiime fondue get-metadata \\\n              --i-accession-ids ids.qza \\\n              --p-n-jobs 1 \\\n              --p-email your_email@somewhere.com \\\n              --o-metadata output_metadata.qza \\\n              --o-failed-runs failed_IDs.qza"
+        "value": "qiime fondue get-metadata \\\n              --i-accession-ids ids.qza \\\n              --p-threads 1 \\\n              --p-email your_email@somewhere.com \\\n              --o-metadata output_metadata.qza \\\n              --o-failed-runs failed_IDs.qza"
       },
       {
         "type": "paragraph",
@@ -1658,7 +1658,7 @@
             "children": [
               {
                 "type": "inlineCode",
-                "value": "--p-n-jobs"
+                "value": "--p-threads"
               },
               {
                 "type": "text",
@@ -2187,6 +2187,126 @@
                 "value": " directory where the downloaded metadata, sequences and IDs for failed downloads are stored as QIIME 2 artifacts"
               }
             ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Parallelization"
+          }
+        ],
+        "identifier": "parallelization",
+        "label": "Parallelization",
+        "html_id": "parallelization",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "q2-fondue makes use of the powerful parsl-based parallelization provided by the Q2 framework. By default, if no additional options are provided, all the data will be fetched sequentially, run by run.\nTo speed up the process, you can configure the actions to use multiple workers with each worker processing one run. Here is an example of the parsl config which will allow you to spin up 4 workers\non your "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "local"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " machine:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "[parsl]\n\n[[parsl.executors]]\nclass = \"HighThroughputExecutor\"\nlabel = \"default\"\nmax_workers = 1\n\n[parsl.executors.provider]\nclass = \"LocalProvider\"\nmax_blocks = 4"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can also find this sample config file "
+          },
+          {
+            "type": "link",
+            "url": "parallel.config",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ". You can pass this config file to the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-sequences"
+          },
+          {
+            "type": "text",
+            "value": " and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-all"
+          },
+          {
+            "type": "text",
+            "value": " actions using the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--parallel-config"
+          },
+          {
+            "type": "text",
+            "value": " flag.\nFor more information on parsl-based parallelization in QIIME 2, please refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://use.qiime2.org/en/latest/references/parallel-configuration.html#parallel-configuration",
+            "children": [
+              {
+                "type": "text",
+                "value": "documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Note:"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " Do not request more than 1 CPU per parsl worker - each worker will only process one run at a time so requesting more than 1 CPU will not speed up the process."
           }
         ]
       },
@@ -4250,8 +4370,8 @@
   "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
   "branch": "main",
   "last_commit": {
-    "sha": "c2adf63e3a12f94756e9d0cd168988e893416030",
+    "sha": "525c45b152839ab1f3b3da6d8b003e0570b75808",
     "status": "passed",
-    "date": "2025-03-25T05:16:58Z"
+    "date": "2025-04-09T10:00:02Z"
   }
 }

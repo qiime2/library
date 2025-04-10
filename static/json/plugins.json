@@ -1,6 +1,63 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-vsearch",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 6,
+      "description": "vsearch plugin for QIIME 2",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "f376287169cded274f5781e3fb499154fd8bdd4e",
+        "status": "passed",
+        "date": "2025-04-09T19:16:31Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-fondue",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 21,
+      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
+      "branch": "main",
+      "last_commit": {
+        "sha": "525c45b152839ab1f3b3da6d8b003e0570b75808",
+        "status": "passed",
+        "date": "2025-04-09T10:00:02Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "d551bbb9d224433e99105405f59e2dcc9a884edf",
+        "status": "passed",
+        "date": "2025-04-09T09:49:27Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
@@ -227,40 +284,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "1543468dbba4dac56f3ed4a46ffbace8f119b6fe",
-        "status": "passed",
-        "date": "2025-03-25T21:27:28Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-fondue",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "metagenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 21,
-      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
-      "branch": "main",
-      "last_commit": {
-        "sha": "c2adf63e3a12f94756e9d0cd168988e893416030",
-        "status": "passed",
-        "date": "2025-03-25T05:16:58Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
@@ -290,29 +313,6 @@
         "sha": "046919131e1f2179d370d0b7f25b49027e56bf15",
         "status": "failed",
         "date": "2025-03-25T05:14:08Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-vsearch",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 6,
-      "description": "vsearch plugin for QIIME 2",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "b8074e3f8a4ce0dd0d5c317d4ee7203d03e8ec81",
-        "status": "passed",
-        "date": "2025-03-24T22:22:22Z"
       }
     },
     {
@@ -733,7 +733,7 @@
         "status": "passed",
         "date": "2025-03-04T18:19:15Z"
       },
-      "stars": 5,
+      "stars": 6,
       "description": "QIIME 2 plugin for PICRUSt2",
       "distros": [
         "amplicon-2024.5"
