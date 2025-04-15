@@ -2,6 +2,53 @@
   "plugins": [
     {
       "owner": "qiime2",
+      "name": "q2-types",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "tiny-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "tiny-2024.5",
+        "amplicon-2024.2",
+        "tiny-2024.2",
+        "amplicon-2023.9",
+        "tiny-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 17,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "229da69c2c0619a6f1741ef8ae5afecf59a50def",
+        "status": "passed",
+        "date": "2025-04-14T17:52:57Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "b2b08fa29e163033ba64c29f88a353421111658a",
+        "status": "passed",
+        "date": "2025-04-14T13:03:54Z"
+      }
+    },
+    {
+      "owner": "qiime2",
       "name": "q2-vsearch",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -39,25 +86,6 @@
         "sha": "525c45b152839ab1f3b3da6d8b003e0570b75808",
         "status": "passed",
         "date": "2025-04-09T10:00:02Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "d551bbb9d224433e99105405f59e2dcc9a884edf",
-        "status": "passed",
-        "date": "2025-04-09T09:49:27Z"
       }
     },
     {
@@ -148,34 +176,6 @@
         "sha": "3c60c1f7d5906749cc95a8f87cc358e82f88ff06",
         "status": "passed",
         "date": "2025-04-03T17:46:05Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-types",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "tiny-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "tiny-2024.5",
-        "amplicon-2024.2",
-        "tiny-2024.2",
-        "amplicon-2023.9",
-        "tiny-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 17,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "0e41949c6352f0bd7e0223fb055bc8d65a45b8d1",
-        "status": "passed",
-        "date": "2025-03-31T20:46:15Z"
       }
     },
     {
