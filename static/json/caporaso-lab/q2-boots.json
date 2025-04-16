@@ -42,15 +42,29 @@
           },
           {
             "type": "text",
-            "value": " plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.\nTo learn how to install, use, or get help with q2-boots, refer to the "
+            "value": " plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.\nInformation on q2-boots, including installation instructions, tutorials, and discussions, can be found on its "
           },
           {
             "type": "link",
-            "url": "https://q2-boots.readthedocs.io/en/latest/",
+            "url": "https://library.qiime2.org/plugins/caporaso-lab/q2-boots",
             "children": [
               {
                 "type": "text",
-                "value": "q2-boots documentation"
+                "value": "QIIME 2 library page"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nIt’s usage is also highlighted in the "
+          },
+          {
+            "type": "link",
+            "url": "https://gut-to-soil-tutorial.readthedocs.io/en/latest/",
+            "children": [
+              {
+                "type": "text",
+                "value": "gut-to-soil microbiome axis tutorial"
               }
             ]
           },
@@ -129,9 +143,9 @@
   "branch": "main",
   "docs": "https://q2-boots.readthedocs.io/en/latest/",
   "last_commit": {
-    "sha": "95b247b03c2aca837fb60d6d9fdf90188dda8bcd",
+    "sha": "5b0fdda90054a04f6308950e15d7b9c511e366da",
     "status": "passed",
-    "date": "2025-01-24T01:34:39Z"
+    "date": "2025-04-15T23:36:52Z"
   },
   "stars": 3,
   "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",

@@ -1,6 +1,24 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "5b0fdda90054a04f6308950e15d7b9c511e366da",
+        "status": "passed",
+        "date": "2025-04-15T23:36:52Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        "amplicon-2025.4",
+        "amplicon-2024.10",
+        "amplicon-2024.5"
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
@@ -96,22 +114,6 @@
       "distros": [
         "pathogenome-2024.10"
       ]
-    },
-    {
-      "owner": "picrust",
-      "name": "q2-picrust2",
-      "branch": "master",
-      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
-      "last_commit": {
-        "sha": "56c7dcfc9ba73a4d7a0689798fda04058970b629",
-        "status": "passed",
-        "date": "2025-03-04T18:19:15Z"
-      },
-      "stars": 6,
-      "description": "QIIME 2 plugin for PICRUSt2",
-      "distros": [
-        "amplicon-2024.5"
-      ]
     }
   ],
   "distros": [
@@ -158,6 +160,11 @@
       "order": 1
     },
     {
+      "url": "https://q2-boots.readthedocs.io/en/latest/",
+      "title": "q2-boots Documentation",
+      "description": ""
+    },
+    {
       "url": "https://genome-sampler.readthedocs.io/en/latest/",
       "title": "genome-sampler documentation",
       "source": "https://github.com/caporaso-lab/genome-sampler",
@@ -197,16 +204,10 @@
       "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
     },
     {
-      "title": "genome-sampler: step-by-step tutorial",
+      "title": "Gut-to-soil axis tutorial 💩🌱",
       "description": "",
       "thumbnail": "",
-      "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial.html"
-    },
-    {
-      "title": "genome-sampler: Snakemake tutorial",
-      "description": "",
-      "thumbnail": "",
-      "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial-snakemake.html"
+      "url": "https://q2-boots.readthedocs.io/en/latest//tutorial.html"
     }
   ],
   "videos": [
@@ -267,5 +268,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-04-15T01:40:28.185Z"
+  "last_updated": "2025-04-16T01:39:45.460Z"
 }
