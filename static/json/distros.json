@@ -1,6 +1,30 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-feature-table",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 2,
+      "description": "QIIME 2 plugin supporting operations on feature tables.",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "3b548ad6b1ee77de525b362d169dbf1c6f5a5177",
+        "status": "passed",
+        "date": "2025-04-25T18:35:23Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -478,30 +502,6 @@
         "sha": "80ee74309920c9c429b8ef61a7fa6ba3dac350a2",
         "status": "passed",
         "date": "2025-03-24T22:18:39Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-feature-table",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 2,
-      "description": "QIIME 2 plugin supporting operations on feature tables.",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "0ed9a0070ac11d8e0f8000fe7472ce2ac2f40bbf",
-        "status": "passed",
-        "date": "2025-03-24T22:18:24Z"
       }
     },
     {
