@@ -1,6 +1,29 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-composition",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 6,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "c409b65abe1b8a4e8f898770afe7579763ada6c7",
+        "status": "passed",
+        "date": "2025-05-01T00:42:33Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
@@ -238,29 +261,6 @@
         "sha": "5073163149ee1e70204905cfb0a2972480d195c6",
         "status": "passed",
         "date": "2025-04-03T21:54:16Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-composition",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 6,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "7c877dfe25258ef93fdb7447d478c7f1f9644764",
-        "status": "passed",
-        "date": "2025-04-03T21:54:02Z"
       }
     },
     {
