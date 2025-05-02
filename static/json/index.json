@@ -2,18 +2,50 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "486b1a392176fc164ab71ace8f2376ae226f7b1d",
+        "status": "passed",
+        "date": "2025-05-01T21:16:58Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "last_commit": {
-        "sha": "0756f1befb6b7c1f4d7b45e654798c03ffc6737b",
+        "sha": "a1842e756ac323222969e67e61ac5b3d6bea2d78",
         "status": "passed",
-        "date": "2025-04-28T21:00:17Z"
+        "date": "2025-05-01T21:16:49Z"
       },
       "stars": 4,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
       "distros": [
         "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "6557fc11f17feebc3c5a9cd43b396b59eab4e1d1",
+        "status": "passed",
+        "date": "2025-05-01T21:16:43Z"
+      },
+      "stars": 0,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        "pathogenome-2024.10"
       ]
     },
     {
@@ -56,22 +88,6 @@
       ]
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "b2b08fa29e163033ba64c29f88a353421111658a",
-        "status": "passed",
-        "date": "2025-04-14T13:03:54Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
-      ]
-    },
-    {
       "owner": "caporaso-lab",
       "name": "genome-sampler",
       "branch": "dev",
@@ -101,22 +117,6 @@
       "description": "QIIME 2 plugin for generating kmers from biological sequences",
       "distros": [
         "amplicon-2025.4",
-        "amplicon-2024.10"
-      ]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "f6a3bb94e7020cd92493d5b52fad41d70b1eb4b9",
-        "status": "passed",
-        "date": "2025-04-03T15:44:58Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": [
         "amplicon-2024.10"
       ]
     }
@@ -273,5 +273,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-05-01T01:48:28.447Z"
+  "last_updated": "2025-05-02T01:40:53.630Z"
 }
