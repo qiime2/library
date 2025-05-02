@@ -6,6 +6,7 @@
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
       "distros": [
+        "moshpit-2025.4",
         "metagenome-2024.10"
       ],
       "stars": 6,
@@ -23,6 +24,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "tiny-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
@@ -52,6 +56,8 @@
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
       "distros": [
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "metagenome-2024.10",
         "pathogenome-2024.10",
         "metagenome-2024.5"
@@ -71,6 +77,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -95,6 +104,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -119,6 +131,7 @@
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
       "distros": [
+        "moshpit-2025.4",
         "metagenome-2024.10",
         "metagenome-2024.5"
       ],
@@ -137,6 +150,7 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
         "amplicon-2024.10"
       ],
       "stars": 1,
@@ -154,6 +168,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "tiny-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
@@ -180,6 +197,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -204,6 +224,8 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -227,6 +249,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -249,6 +274,8 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -272,6 +299,7 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
@@ -288,11 +316,30 @@
       }
     },
     {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "a1842e756ac323222969e67e61ac5b3d6bea2d78",
+        "status": "passed",
+        "date": "2025-05-01T21:16:49Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-composition",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -316,6 +363,7 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
@@ -337,6 +385,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -361,6 +412,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "tiny-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
@@ -390,6 +444,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
@@ -411,6 +468,7 @@
       "docs": null,
       "in_distro": true,
       "distros": [
+        "pathogenome-2025.4",
         "pathogenome-2024.10"
       ],
       "stars": 0,
@@ -428,6 +486,8 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -451,6 +511,7 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
@@ -472,6 +533,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -496,6 +560,8 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -519,6 +585,7 @@
       "docs": null,
       "in_distro": true,
       "distros": [
+        "pathogenome-2025.4",
         "pathogenome-2024.10"
       ],
       "stars": 0,
@@ -536,6 +603,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10"
@@ -555,6 +625,8 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -578,6 +650,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -602,6 +677,7 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
         "amplicon-2024.10",
         "amplicon-2024.5",
         "amplicon-2024.2",
@@ -623,6 +699,8 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "amplicon-2024.5",
@@ -646,6 +724,9 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
         "amplicon-2024.10",
         "metagenome-2024.10",
         "pathogenome-2024.10",
@@ -670,6 +751,7 @@
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
       "distros": [
+        "moshpit-2025.4",
         "metagenome-2024.10",
         "metagenome-2024.5"
       ],
