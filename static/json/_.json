@@ -7,21 +7,101 @@
     "base": "https://bokulich-lab.github.io/moshpit-docs/",
     "pretty": true
   },
-  "RESCRIPt": {
+  "q2-boots": {
+    "base": "https://q2-boots.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-fondue": {
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
+  },
+  "q2-mystery-stew": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
+  },
+  "q2-quality-filter": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-annotate": {
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
   },
   "q2-sourmash": {
     "base": "https://bokulich-lab.github.io/moshpit-docs/",
     "pretty": true
   },
+  "q2-stats": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
   "q2-types": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-vizard": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-vsearch": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-sample-classifier": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "RESCRIPt": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-emperor": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-sapienns": {
+    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "pretty": true
+  },
+  "q2-longitudinal": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-alignment": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-demux": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
   "q2-assembly": {
     "base": "https://bokulich-lab.github.io/moshpit-docs/",
     "pretty": true
+  },
+  "q2-cutadapt": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-diversity": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-diversity-lib": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-feature-table": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-metadata": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-phylogeny": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
   },
   "q2-quality-control": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -31,63 +111,11 @@
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
-  "q2-sapienns": {
-    "base": "https://bokulich-lab.github.io/moshpit-docs/",
-    "pretty": true
-  },
-  "q2-stats": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-metadata": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-sample-classifier": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-vsearch": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-quality-filter": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-fragment-insertion": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-annotate": {
-    "base": "https://bokulich-lab.github.io/moshpit-docs/",
-    "pretty": true
-  },
-  "q2-composition": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-deblur": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-longitudinal": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-mystery-stew": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
   "q2-amrfinderplus": {
     "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
     "pretty": true
   },
-  "q2-alignment": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-cutadapt": {
+  "q2-composition": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
@@ -95,49 +123,21 @@
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
-  "q2-demux": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-diversity-lib": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-vizard": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-diversity": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-feature-table": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-phylogeny": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-emperor": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
   "q2-feature-classifier": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
-  "q2-fondue": {
-    "base": "https://bokulich-lab.github.io/moshpit-docs/",
-    "pretty": true
+  "q2-deblur": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-fragment-insertion": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
   },
   "q2-micom": {
     "base": "https://micom-dev.github.io/q2-micom/",
     "pretty": true
-  },
-  "q2-boots": {
-    "base": "https://q2-boots.readthedocs.io/en/latest/",
-    "pretty": false
   },
   "genome-sampler": {
     "base": "https://genome-sampler.readthedocs.io/en/latest/",
