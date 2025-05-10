@@ -2,6 +2,27 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "3dcd6f6aed09cf5f68ce8a0ffbe8f71ef1024bbc",
+        "status": "failed",
+        "date": "2025-05-09T10:55:11Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-fondue",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
@@ -398,27 +419,6 @@
         "sha": "24d6424ecf8c0709f6bfea37150962921a8a37e8",
         "status": "passed",
         "date": "2025-05-08T22:11:54Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "6ae88224219767593727cc597d17b77189cc3aba",
-        "status": "passed",
-        "date": "2025-05-08T22:11:53Z"
       }
     },
     {
