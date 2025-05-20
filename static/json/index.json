@@ -1,6 +1,27 @@
 {
   "plugins": [
     {
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "2e3b0e8e873ef8d497bda19e96391ab14e69f639",
+        "status": "passed",
+        "date": "2025-05-19T16:52:08Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "tiny-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "tiny-2024.10"
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-assembly",
       "branch": "main",
@@ -64,27 +85,6 @@
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         "pathogenome-2024.10"
-      ]
-    },
-    {
-      "owner": "micom-dev",
-      "name": "q2-micom",
-      "branch": "main",
-      "docs": "https://micom-dev.github.io/q2-micom/",
-      "last_commit": {
-        "sha": "f111ec68d25084bdcdbb2cc14998997b501877be",
-        "status": "passed",
-        "date": "2025-04-21T15:28:05Z"
-      },
-      "stars": 10,
-      "description": "A Qiime plugin for MICOM.",
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "tiny-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "tiny-2024.10"
       ]
     },
     {
@@ -273,5 +273,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-05-19T01:47:56.435Z"
+  "last_updated": "2025-05-20T01:44:06.799Z"
 }
