@@ -1,6 +1,33 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-quality-control",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 4,
+      "description": "A QIIME 2 plugin for quality control of sequence and feature data",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "0bb5f6a1418ba064448292bff2e6d413a303126b",
+        "status": "passed",
+        "date": "2025-05-27T17:42:18Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
@@ -46,33 +73,6 @@
         "sha": "553bf8ea60904e692b78d87cbc795beeb0acdccf",
         "status": "passed",
         "date": "2025-05-22T16:52:30Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-quality-control",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 4,
-      "description": "A QIIME 2 plugin for quality control of sequence and feature data",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "60bb96ba412edbaefd3db034fdaab63ad6bff821",
-        "status": "passed",
-        "date": "2025-05-22T16:09:59Z"
       }
     },
     {
