@@ -2,6 +2,28 @@
   "plugins": [
     {
       "owner": "qiime2",
+      "name": "q2-vizard",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10"
+      ],
+      "stars": 1,
+      "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "79ca694150fcb8aa2d1638f6cc7498202d593fff",
+        "status": "passed",
+        "date": "2025-06-04T23:12:54Z"
+      }
+    },
+    {
+      "owner": "qiime2",
       "name": "q2-feature-table",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -232,28 +254,6 @@
       "branch": "dev",
       "last_commit": {
         "sha": "d4f5525978749dd241f74bb80014477752dcc07d",
-        "status": "passed",
-        "date": "2025-05-08T22:12:02Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-vizard",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10"
-      ],
-      "stars": 1,
-      "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "eff058266eca1193ad11e17a2ab6456ecbe306a3",
         "status": "passed",
         "date": "2025-05-08T22:12:02Z"
       }
