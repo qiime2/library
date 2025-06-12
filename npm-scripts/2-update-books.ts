@@ -37,6 +37,8 @@ async function get_tutorials(docs) {
 export async function main(catalog) {
   let books = await loadYamlPath(join(catalog, "books", "index.yml"));
   books.distros = [];
+  books.plugins = []
+
   if (!books.tutorials) {
     books.tutorials = [];
   }
@@ -76,11 +78,15 @@ export async function main(catalog) {
 
     const { myst, book, tutorials } = await get_tutorials(plugin.docs);
     if (myst) {
-      books.books.push(book);
+      books.plugins.push(book);
     }
-    for (const tutorial of tutorials) {
-      books.tutorials.push(tutorial);
-    }
+  }
+
+  books = {
+    distros: books.distros,
+    plugins: books.plugins,
+    books: books.books,
+    tutorials: books.tutorials
   }
 
   fs.writeFileSync(`./static/json/books.json`, JSON.stringify(books, null, 2));

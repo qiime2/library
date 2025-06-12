@@ -19,13 +19,7 @@ export async function main() {
   results["distros"] = JSON.parse(distros).distros;
 
   let books = JSON.parse(fs.readFileSync("./static/json/books.json", "utf-8"));
-  let list = books.books;
-  for (const distro of books.distros) {
-    list.push(distro.book);
-  }
-  for (const tutorial of books.tutorials) {
-    list.push(tutorial);
-  }
+  let list = [ ...books.distros.map((d) => d.book), ...books.plugins, ...books.books]
   results["books"] = roundRows(list, 6);
 
   let videos = fs.readFileSync("./static/json/videos.json", "utf-8");

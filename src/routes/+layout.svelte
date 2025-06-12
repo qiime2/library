@@ -5,7 +5,7 @@
     const entries: [string, string][] = [
       ['/quickstart', 'Quickstart'],
       ['/plugins', 'Plugins'],
-      ['/books', 'Books'],
+      ['/docs', 'Docs'],
       ['/videos', 'Videos'],
       ['/workshops', 'Workshops'],
       ['/data-resources', 'Resources'],

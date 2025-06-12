@@ -1,19 +1,23 @@
 {
-  "books": [
+  "distros": [
     {
-      "url": "https://use.qiime2.org/en/latest/",
-      "source": "https://github.com/caporaso-lab/using-qiime2",
-      "title": "Using QIIME 2",
-      "description": "Your guide to becoming a QIIME 2 Framework power user.",
-      "order": 0
+      "book": {
+        "url": "https://amplicon-docs.readthedocs.io/en/latest/",
+        "title": "Microbiome marker gene analysis with QIIME 2",
+        "source": "https://github.com/qiime2/amplicon-docs",
+        "description": ""
+      },
+      "distro": "amplicon"
     },
     {
-      "url": "https://develop.qiime2.org/en/latest/",
-      "source": "https://github.com/caporaso-lab/developing-with-qiime2",
-      "title": "Developing with QIIME 2",
-      "description": "Your guide for writing, testing, and distributing QIIME 2 plugins, interfaces, and documentation.",
-      "order": 1
-    },
+      "book": {
+        "url": "https://bokulich-lab.github.io/moshpit-docs/",
+        "title": "Docs for MOSHPIT"
+      },
+      "distro": "moshpit"
+    }
+  ],
+  "plugins": [
     {
       "url": "https://q2-boots.readthedocs.io/en/latest/",
       "title": "q2-boots Documentation",
@@ -29,6 +33,22 @@
       "url": "https://q2-fmt.readthedocs.io/en/latest/",
       "title": "q2-fmt book",
       "description": ""
+    }
+  ],
+  "books": [
+    {
+      "url": "https://use.qiime2.org/en/latest/",
+      "source": "https://github.com/caporaso-lab/using-qiime2",
+      "title": "Using QIIME 2",
+      "description": "Your guide to becoming a QIIME 2 Framework power user.",
+      "order": 0
+    },
+    {
+      "url": "https://develop.qiime2.org/en/latest/",
+      "source": "https://github.com/caporaso-lab/developing-with-qiime2",
+      "title": "Developing with QIIME 2",
+      "description": "Your guide for writing, testing, and distributing QIIME 2 plugins, interfaces, and documentation.",
+      "order": 1
     }
   ],
   "tutorials": [
@@ -49,48 +69,6 @@
       "description": "",
       "thumbnail": "",
       "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
-    },
-    {
-      "title": "Gut-to-soil axis tutorial 💩🌱",
-      "description": "",
-      "thumbnail": "",
-      "url": "https://q2-boots.readthedocs.io/en/latest//tutorial.html"
-    },
-    {
-      "title": "genome-sampler: step-by-step tutorial",
-      "description": "",
-      "thumbnail": "",
-      "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial.html"
-    },
-    {
-      "title": "genome-sampler: Snakemake tutorial",
-      "description": "",
-      "thumbnail": "",
-      "url": "https://genome-sampler.readthedocs.io/en/latest//tutorial-snakemake.html"
-    },
-    {
-      "title": "Assessing engraftment extent with q2-FMT",
-      "description": "Assessing Engraftment following an Auto-FMT using Amplicon Data. This tutorial was based on the publically available data from Taur et al. 2018.",
-      "thumbnail": "_images/engraftment-extent.png",
-      "url": "https://q2-fmt.readthedocs.io/en/latest//tutorial/tutorial.html"
-    }
-  ],
-  "distros": [
-    {
-      "book": {
-        "url": "https://amplicon-docs.readthedocs.io/en/latest/",
-        "title": "Microbiome marker gene analysis with QIIME 2",
-        "source": "https://github.com/qiime2/amplicon-docs",
-        "description": ""
-      },
-      "distro": "amplicon"
-    },
-    {
-      "book": {
-        "url": "https://bokulich-lab.github.io/moshpit-docs/",
-        "title": "Docs for MOSHPIT"
-      },
-      "distro": "moshpit"
     }
   ]
 }

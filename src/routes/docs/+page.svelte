@@ -7,21 +7,13 @@
 
 <div class="max-width">
 <header class="prose prose-sm md:prose-base lg:prose-lg mt-10 mx-2">
-    <h1>Books & Tutorials</h1>
+    <h1>The Stacks</h1>
 </header>
 </div>
-<article class='pt-10 mb-5'>
-    <Carousel entries={data.books} colsize='12.88rem' expand={true} controls={false}
-        title='Books' href='/books'>
-        {#snippet card(book: any)}
-        <BookCard {...book} />
-        {/snippet}
-    </Carousel>
-</article>
 
 <article class='pt-10 mb-5'>
     <Carousel entries={data.distros} colsize='12.88rem' expand={true} controls={false}
-        title='Base Distribution Documentation' href='/books'>
+        title='Distribution Documentation' href='/books'>
         {#snippet card(distro: any)}
         <BookCard {...distro.book} />
         {/snippet}
@@ -29,8 +21,27 @@
 </article>
 
 <article class='pt-10 mb-5'>
+    <Carousel entries={data.plugins} colsize='12.88rem' expand={true} controls={false}
+        title='Plugin Documentation' href='/books'>
+        {#snippet card(book: any)}
+        <BookCard {...book} />
+        {/snippet}
+    </Carousel>
+</article>
+
+<article class='pt-10 mb-5'>
+    <Carousel entries={data.books} colsize='12.88rem' expand={true} controls={false}
+        title='Framework Documentation' href='/books'>
+        {#snippet card(book: any)}
+        <BookCard {...book} />
+        {/snippet}
+    </Carousel>
+</article>
+
+
+<article class='pt-10 mb-5'>
     <Carousel entries={data.tutorials} colsize='12.88rem' expand={true} controls={false}
-        title='Tutorials' href='/books'>
+        title='Dataset-focused Tutorials' href='/books'>
         {#snippet card(book: any)}
         <BookCard {...book} />
         {/snippet}
