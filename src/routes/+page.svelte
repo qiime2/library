@@ -52,15 +52,15 @@
 
 <article class='pb-10 mb-5'>
     <Carousel entries={data.books} expand={clientWidth > toExpand} colsize='12.88rem'
-        title='Books and Tutorials' href='/books'>
+        title='Documentation' href='/docs'>
         {#snippet card(book: any)}
         <BookCard {...book} />
         {/snippet}
         {#snippet finalCard()}
-        <Card href='/books' classes='!p-0 !border-gray-200 !w-[12.75rem] !rounded-sm !bg-gray-50 hover:!bg-white more-anchor transition-colors'>
+        <Card href='/docs' classes='!p-0 !border-gray-200 !w-[12.75rem] !rounded-sm !bg-gray-50 hover:!bg-white more-anchor transition-colors'>
                 <div class='m-auto px-2'>
                     <h3 class='text-2xl text-[#2a414c] font-bold text-right'><span class="more px-4 py-1.5">Read more</span></h3>
-                    <p class='prose prose-sm mt-2 text-gray-600 pb-5 text-right pr-4'>Find books and tutorials.</p>
+                    <p class='prose prose-sm mt-2 text-gray-600 pb-5 text-right pr-4'>Find docs and tutorials.</p>
                 </div>
         </Card>
         {/snippet}
