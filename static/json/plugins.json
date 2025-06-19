@@ -1,6 +1,22 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "bd7ff6b1102f7b41def3c50a3b19fe05bd5b9d3f",
+        "status": "failed",
+        "date": "2025-06-18T14:30:20Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        "metagenome-2024.10"
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-vizard",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -143,22 +159,6 @@
         "amplicon-2024.10",
         "metagenome-2024.10",
         "tiny-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "3dcd6f6aed09cf5f68ce8a0ffbe8f71ef1024bbc",
-        "status": "passed",
-        "date": "2025-05-09T10:55:11Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
       ]
     },
     {
