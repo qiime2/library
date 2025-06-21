@@ -2,6 +2,48 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "RESCRIPt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "amplicon-2024.2"
+      ],
+      "stars": 99,
+      "description": "REference Sequence annotation and CuRatIon Pipeline",
+      "branch": "master",
+      "last_commit": {
+        "sha": "7801f702e7e608f4725ab1195499432c225ddfdf",
+        "status": "passed",
+        "date": "2025-06-20T18:47:23Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "100de18bc3d6d586c0d0b348d0455105b77811c1",
+        "status": "failed",
+        "date": "2025-06-20T11:09:12Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-assembly",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "in_distro": true,
@@ -95,23 +137,6 @@
         "sha": "0bb5f6a1418ba064448292bff2e6d413a303126b",
         "status": "passed",
         "date": "2025-05-27T17:42:18Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "7cef03462252d3e66ea89d6c87a7864a52e959c9",
-        "status": "passed",
-        "date": "2025-05-26T14:23:33Z"
       }
     },
     {
@@ -324,31 +349,6 @@
       "branch": "main",
       "last_commit": {
         "sha": "f51ebc055e1ea39ed5f866007e85b47d870c2599",
-        "status": "passed",
-        "date": "2025-05-08T22:12:01Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "RESCRIPt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "amplicon-2024.2"
-      ],
-      "stars": 99,
-      "description": "REference Sequence annotation and CuRatIon Pipeline",
-      "branch": "master",
-      "last_commit": {
-        "sha": "ae5041468694a4bc2c809bc43baa70ce0ae43bf6",
         "status": "passed",
         "date": "2025-05-08T22:12:01Z"
       }
