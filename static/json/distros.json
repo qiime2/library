@@ -1,6 +1,45 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-dada2",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 21,
+      "description": "QIIME 2 plugin wrapping DADA2",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "599ac4022fb8845e85173e1d1a1dace0556ce8b6",
+        "status": "passed",
+        "date": "2025-06-23T21:04:08Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "3bd00a3558ba19b498916e913d94120fc801f8e1",
+        "status": "failed",
+        "date": "2025-06-23T14:56:07Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -23,23 +62,6 @@
         "sha": "7801f702e7e608f4725ab1195499432c225ddfdf",
         "status": "passed",
         "date": "2025-06-20T18:47:23Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "100de18bc3d6d586c0d0b348d0455105b77811c1",
-        "status": "failed",
-        "date": "2025-06-20T11:09:12Z"
       }
     },
     {
@@ -667,28 +689,6 @@
       "branch": "dev",
       "last_commit": {
         "sha": "cda9f8e66e2d814a42054d7d7b2a4cc9f9d1411a",
-        "status": "passed",
-        "date": "2025-05-08T22:11:52Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-dada2",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 21,
-      "description": "QIIME 2 plugin wrapping DADA2",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "426dbf01e3506c67e3a9be881aa4f2dd3bc80b68",
         "status": "passed",
         "date": "2025-05-08T22:11:52Z"
       }
