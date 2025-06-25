@@ -1,6 +1,23 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "94b45a7f4b63d12d5f0cca722e476e0782e0a9c2",
+        "status": "passed",
+        "date": "2025-06-24T08:53:27Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-dada2",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -20,23 +37,6 @@
         "sha": "599ac4022fb8845e85173e1d1a1dace0556ce8b6",
         "status": "passed",
         "date": "2025-06-23T21:04:08Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "3bd00a3558ba19b498916e913d94120fc801f8e1",
-        "status": "failed",
-        "date": "2025-06-23T14:56:07Z"
       }
     },
     {
