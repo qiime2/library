@@ -1,0 +1,657 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-rgi/actions/workflows/ci-dev.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-rgi",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-rgi/branch/main/graph/badge.svg?token=THMBOFUZR0",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin for antimicrobial resistance gene annotation of MAGs and metagenomic reads."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To install "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-rgi"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", follow the steps described below."
+          }
+        ]
+      },
+      {
+        "type": "details",
+        "children": [
+          {
+            "type": "summary",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "macOS (intel) / Linux"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "mamba create -yn q2-rgi \\\n  -c https://packages.qiime2.org/qiime2/2024.2/shotgun/released/ \\\n  -c qiime2 -c conda-forge -c bioconda -c defaults \\\n  qiime2 q2cli q2templates q2-types q2-feature-table q2-demux rgi tqdm\n\nconda activate q2-rgi\n\npip install --no-deps --force-reinstall \\\n  git+https://github.com/misialq/rgi.git@py38-fix \\\n  git+https://github.com/bokulich-lab/q2-rgi.git"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Refresh cache and check that everything worked:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime dev refresh-cache\nqiime info"
+      },
+      {
+        "type": "details",
+        "children": [
+          {
+            "type": "summary",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "macOS (apple silicon)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "CONDA_SUBDIR=osx-64 mamba create -yn q2-rgi \\\n  -c https://packages.qiime2.org/qiime2/2024.2/shotgun/released/ \\\n  -c qiime2 -c conda-forge -c bioconda -c defaults \\\n  qiime2 q2cli q2templates q2-types q2-feature-table q2-demux rgi tqdm\n\nconda activate q2-rgi\nconda config --env --set subdir osx-64\n\npip install --no-deps --force-reinstall \\\n  git+https://github.com/misialq/rgi.git@py38-fix \\\n  git+https://github.com/bokulich-lab/q2-rgi.git"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Refresh cache and check that everything worked:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime dev refresh-cache\nqiime info"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Functionality"
+          }
+        ],
+        "identifier": "functionality",
+        "label": "Functionality",
+        "html_id": "functionality",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This QIIME 2 plugin contains actions used to annotate short single/paired-end\nsequencing reads and MAGs with antimicrobial resistance genes. Currently, the "
+          },
+          {
+            "type": "link",
+            "url": "https://card.mcmaster.ca",
+            "children": [
+              {
+                "type": "text",
+                "value": "CARD"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " database is supported  (for details on\nthe implementation and usage, please refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/arpcard/rgi",
+            "children": [
+              {
+                "type": "text",
+                "value": "rgi"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " documentation). Below you will\nfind an overview of actions available in the plugin."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Action"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Description"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Underlying tool"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Used function"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "fetch-card-db"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Download and preprocess CARD and WildCARD data."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "card_annotation, wildcard_annotation"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "annotate-mags-card"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Annotate MAGs with antimicrobial resistance gene information from CARD."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "main, load"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "annotate-reads-card"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Annotate metagenomic reads with antimicrobial resistance gene information from CARD."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "bwt, load"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "heatmap"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Create a heatmap from annotate-mags-card output files."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "heatmap"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kmer-query-mags-card"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pathogen-of-origin prediction for ARGs in MAGs."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kmer-query, load"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kmer-query-reads-card"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pathogen-of-origin prediction for ARGs in reads."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kmer-query, load"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kmer-build-card"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Build a kmer database with a custom kmer length."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/arpcard/rgi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "rgi"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kmer-build"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Dev environment"
+          }
+        ],
+        "identifier": "dev-environment",
+        "label": "Dev environment",
+        "html_id": "dev-environment",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This repository follows the "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "black"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " code style. To make the development slightly easier\nthere are a couple of pre-commit hooks included here that will ensure that your changes\nfollow that formatting style. Before you start working on the code, please\ninstall the hooks by executing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "make dev"
+          },
+          {
+            "type": "text",
+            "value": " in your conda environment. From then on,\nthey will be run automatically every time you commit any changes."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-rgi",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+  "last_commit": {
+    "sha": "8d5b7585f18ffc7981d288f10623520758a3ca9d",
+    "status": "passed",
+    "date": "2025-05-30T07:42:54Z"
+  },
+  "stars": 3,
+  "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+  "distros": [
+    "amplicon-2025.4"
+  ]
+}
