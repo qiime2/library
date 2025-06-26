@@ -27,7 +27,7 @@ const ENV_FILE_REGEX = new RegExp(
   `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
 );
 
-const DEFAULT_CATALOG_REPO = "https://github.com/qiime2/library-plugins.git";
+const DEFAULT_CATALOG_REPO = "https://github.com/qiime2/library-catalog.git";
 
 export async function cleanup(catalog) {
   await promisify(fs.rm)(catalog, { force: true, recursive: true });
