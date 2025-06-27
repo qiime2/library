@@ -24,6 +24,21 @@
                 "alt": "codecov"
               }
             ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
           }
         ]
       },
@@ -379,6 +394,44 @@
                 "children": [
                   {
                     "type": "text",
+                    "value": "construct-pangenome-index"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Construct the human pangenome Bowtie 2 index."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Bowtie 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
                     "value": "dereplicate-mags"
                   }
                 ]
@@ -411,7 +464,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "map-eggnog"
+                    "value": "estimate-abundance"
                   }
                 ]
               },
@@ -420,36 +473,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Annotate orthologs against eggNOG database."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://github.com/eggnogdb/eggnog-mapper",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "EggNOG mapper"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "search-orthologs-diamond"
+                    "value": "Estimate contig/MAG abundance."
                   }
                 ]
               },
@@ -458,60 +482,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Run eggNOG search using Diamond aligner."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://github.com/eggnogdb/eggnog-mapper",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "EggNOG mapper"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "search-orthologs-hmmer"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Run eggNOG search using HMMER aligner."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://github.com/eggnogdb/eggnog-mapper",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "EggNOG mapper"
-                      }
-                    ]
+                    "value": "-"
                   }
                 ]
               }
@@ -550,38 +521,6 @@
                         "value": "Kraken 2"
                       }
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "estimate-mag-abundance"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Estimate MAG abundance."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "-"
                   }
                 ]
               }
@@ -963,6 +902,38 @@
                 "children": [
                   {
                     "type": "text",
+                    "value": "filter-kraken2-results"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Filter Kraken 2 reports and outputs by metadata and/or abundance"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "-"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
                     "value": "filter-mags"
                   }
                 ]
@@ -1161,6 +1132,44 @@
                 "children": [
                   {
                     "type": "text",
+                    "value": "map-eggnog"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Annotate orthologs against eggNOG database."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/eggnogdb/eggnog-mapper",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "EggNOG mapper"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
                     "value": "multiply-tables"
                   }
                 ]
@@ -1216,6 +1225,82 @@
                       {
                         "type": "text",
                         "value": "Prodigal"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "search-orthologs-diamond"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Run eggNOG search using Diamond aligner."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/eggnogdb/eggnog-mapper",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "EggNOG mapper"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "search-orthologs-hmmer"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Run eggNOG search using HMMER aligner."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/eggnogdb/eggnog-mapper",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "EggNOG mapper"
                       }
                     ]
                   }
@@ -1960,13 +2045,14 @@
   "branch": "main",
   "docs": "https://bokulich-lab.github.io/moshpit-docs/",
   "last_commit": {
-    "sha": "b8e6648155d85bbaee623cf1e9aeb8f7e4a81b8d",
+    "sha": "cd9c071a08e57d76c4de5827a8e5c1890ddd6339",
     "status": "passed",
-    "date": "2025-06-25T18:37:43Z"
+    "date": "2025-06-26T10:11:58Z"
   },
   "stars": 4,
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
   "distros": [
+    "moshpit-2025.4",
     "metagenome-2024.10"
   ]
 }

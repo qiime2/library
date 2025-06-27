@@ -6,13 +6,31 @@
       "branch": "main",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
       "last_commit": {
-        "sha": "b8e6648155d85bbaee623cf1e9aeb8f7e4a81b8d",
+        "sha": "cd9c071a08e57d76c4de5827a8e5c1890ddd6339",
         "status": "passed",
-        "date": "2025-06-25T18:37:43Z"
+        "date": "2025-06-26T10:11:58Z"
       },
       "stars": 4,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
       "distros": [
+        "moshpit-2025.4",
+        "metagenome-2024.10"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "last_commit": {
+        "sha": "2411efab2c5fec90c1a929eb85486a48d467875e",
+        "status": "passed",
+        "date": "2025-06-26T10:11:10Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        "moshpit-2025.4",
         "metagenome-2024.10"
       ]
     },
@@ -30,22 +48,6 @@
       "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
       "distros": [
         "tiny-2025.4"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "last_commit": {
-        "sha": "bd7ff6b1102f7b41def3c50a3b19fe05bd5b9d3f",
-        "status": "failed",
-        "date": "2025-06-18T14:30:20Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        "metagenome-2024.10"
       ]
     },
     {
@@ -234,5 +236,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-06-26T01:46:25.882Z"
+  "last_updated": "2025-06-27T01:47:28.507Z"
 }

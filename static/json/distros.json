@@ -1,6 +1,38 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-types",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "tiny-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "tiny-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "tiny-2024.5",
+        "amplicon-2024.2",
+        "tiny-2024.2",
+        "amplicon-2023.9",
+        "tiny-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 17,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "f5b166f88209be46694cef5b4957d294810ebbd1",
+        "status": "passed",
+        "date": "2025-06-26T22:56:30Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
@@ -12,9 +44,30 @@
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
       "branch": "main",
       "last_commit": {
-        "sha": "b8e6648155d85bbaee623cf1e9aeb8f7e4a81b8d",
+        "sha": "cd9c071a08e57d76c4de5827a8e5c1890ddd6339",
         "status": "passed",
-        "date": "2025-06-25T18:37:43Z"
+        "date": "2025-06-26T10:11:58Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 3,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "2411efab2c5fec90c1a929eb85486a48d467875e",
+        "status": "passed",
+        "date": "2025-06-26T10:11:10Z"
       }
     },
     {
@@ -62,27 +115,6 @@
         "sha": "7801f702e7e608f4725ab1195499432c225ddfdf",
         "status": "passed",
         "date": "2025-06-20T18:47:23Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 3,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "bd7ff6b1102f7b41def3c50a3b19fe05bd5b9d3f",
-        "status": "failed",
-        "date": "2025-06-18T14:30:20Z"
       }
     },
     {
@@ -159,38 +191,6 @@
         "sha": "0bb5f6a1418ba064448292bff2e6d413a303126b",
         "status": "passed",
         "date": "2025-05-27T17:42:18Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-types",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "tiny-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "tiny-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "tiny-2024.5",
-        "amplicon-2024.2",
-        "tiny-2024.2",
-        "amplicon-2023.9",
-        "tiny-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 17,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "553bf8ea60904e692b78d87cbc795beeb0acdccf",
-        "status": "passed",
-        "date": "2025-05-22T16:52:30Z"
       }
     },
     {

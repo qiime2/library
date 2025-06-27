@@ -7,7 +7,7 @@
         "children": [
           {
             "type": "image",
-            "url": "https://github.com/bokulich-lab/q2-assembly/actions/workflows/ci-dev.yaml/badge.svg",
+            "url": "https://github.com/bokulich-lab/q2-assembly/actions/workflows/ci.yaml/badge.svg",
             "alt": "CI"
           },
           {
@@ -242,7 +242,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "evaluate-contigs"
+                    "value": "evaluate-quast"
                   }
                 ]
               },
@@ -267,6 +267,38 @@
                         "value": "QUAST"
                       }
                     ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "filter-contigs"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Filter contigs by length and/or metadata."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "-"
                   }
                 ]
               }
@@ -489,6 +521,44 @@
                   {
                     "type": "text",
                     "value": "-"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "simulate-reads-mason"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Simulate short reads using Mason."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://www.seqan.de/apps/mason.html",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Mason"
+                      }
+                    ]
                   }
                 ]
               }
@@ -2049,13 +2119,14 @@
   "branch": "main",
   "docs": "https://bokulich-lab.github.io/moshpit-docs/",
   "last_commit": {
-    "sha": "bd7ff6b1102f7b41def3c50a3b19fe05bd5b9d3f",
-    "status": "failed",
-    "date": "2025-06-18T14:30:20Z"
+    "sha": "2411efab2c5fec90c1a929eb85486a48d467875e",
+    "status": "passed",
+    "date": "2025-06-26T10:11:10Z"
   },
   "stars": 3,
   "description": "QIIME 2 plugin for (meta)genome assembly.",
   "distros": [
+    "moshpit-2025.4",
     "metagenome-2024.10"
   ]
 }
