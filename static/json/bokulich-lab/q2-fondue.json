@@ -7,7 +7,7 @@
         "children": [
           {
             "type": "image",
-            "url": "https://github.com/bokulich-lab/q2-fondue/actions/workflows/ci-dev.yaml/badge.svg",
+            "url": "https://github.com/bokulich-lab/q2-fondue/actions/workflows/ci.yaml/badge.svg",
             "alt": "CI"
           },
           {
@@ -22,6 +22,21 @@
                 "type": "image",
                 "url": "https://codecov.io/gh/bokulich-lab/q2-fondue/branch/main/graph/badge.svg?token=UTM4W4B1KW",
                 "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
               }
             ]
           },
@@ -4371,8 +4386,8 @@
   "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
   "branch": "main",
   "last_commit": {
-    "sha": "53370bb9a3af91dd7ff41b2039f2474dd6da6b81",
+    "sha": "48e1664c2dc768c620ddd9298c02fb40b78bee17",
     "status": "passed",
-    "date": "2025-05-08T22:12:05Z"
+    "date": "2025-06-27T12:00:19Z"
   }
 }

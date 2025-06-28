@@ -1,6 +1,63 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-fondue",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4",
+        "metagenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 22,
+      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
+      "branch": "main",
+      "last_commit": {
+        "sha": "48e1664c2dc768c620ddd9298c02fb40b78bee17",
+        "status": "passed",
+        "date": "2025-06-27T12:00:19Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4"
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "37844c5fc09ee542981212d9a1859858d42ce3c5",
+        "status": "passed",
+        "date": "2025-06-27T08:31:00Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "in_distro": true,
+      "distros": [
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "metagenome-2024.5"
+      ],
+      "stars": 3,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "8a5821c7c1d53fed7386983109d774ed73926642",
+        "status": "passed",
+        "date": "2025-06-27T08:28:38Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-types",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -30,44 +87,6 @@
         "sha": "f5b166f88209be46694cef5b4957d294810ebbd1",
         "status": "passed",
         "date": "2025-06-26T22:56:30Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4"
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "cd9c071a08e57d76c4de5827a8e5c1890ddd6339",
-        "status": "passed",
-        "date": "2025-06-26T10:11:58Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 3,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "2411efab2c5fec90c1a929eb85486a48d467875e",
-        "status": "passed",
-        "date": "2025-06-26T10:11:10Z"
       }
     },
     {
@@ -191,25 +210,6 @@
         "sha": "0bb5f6a1418ba064448292bff2e6d413a303126b",
         "status": "passed",
         "date": "2025-05-27T17:42:18Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-fondue",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
-      "in_distro": true,
-      "distros": [
-        "moshpit-2025.4",
-        "metagenome-2024.10",
-        "metagenome-2024.5"
-      ],
-      "stars": 22,
-      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
-      "branch": "main",
-      "last_commit": {
-        "sha": "53370bb9a3af91dd7ff41b2039f2474dd6da6b81",
-        "status": "passed",
-        "date": "2025-05-08T22:12:05Z"
       }
     },
     {
