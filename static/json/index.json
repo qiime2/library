@@ -2,6 +2,22 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "29c2f70db0c167e1e4e44401f0cfb95b81471134",
+        "status": "failed",
+        "date": "2025-06-30T09:38:40Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        "tiny-2025.4"
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
       "docs": "https://bokulich-lab.github.io/moshpit-docs/",
@@ -32,22 +48,6 @@
       "distros": [
         "moshpit-2025.4",
         "metagenome-2024.10"
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "b67811d651aa51ca3b2a2d0a84b63b1896263274",
-        "status": "passed",
-        "date": "2025-06-20T14:18:11Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        "tiny-2025.4"
       ]
     },
     {
@@ -236,5 +236,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-06-30T01:52:08.810Z"
+  "last_updated": "2025-07-01T01:57:54.798Z"
 }

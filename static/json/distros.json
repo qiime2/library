@@ -2,6 +2,84 @@
   "plugins": [
     {
       "owner": "qiime2",
+      "name": "q2-types",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "tiny-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10",
+        "tiny-2024.10",
+        "amplicon-2024.5",
+        "metagenome-2024.5",
+        "tiny-2024.5",
+        "amplicon-2024.2",
+        "tiny-2024.2",
+        "amplicon-2023.9",
+        "tiny-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 17,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "a1ed473388b53b0cfa460b285a7fa4edbb7daf34",
+        "status": "passed",
+        "date": "2025-06-30T23:34:57Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-alignment",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "amplicon-2024.10",
+        "amplicon-2024.5",
+        "amplicon-2024.2",
+        "amplicon-2023.9",
+        "core-2023.7"
+      ],
+      "stars": 2,
+      "description": "Support for multiple sequence alignment in QIIME 2. ",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "351a9ccaef8cce168fbeb7580949a15574ed6566",
+        "status": "passed",
+        "date": "2025-06-30T18:44:49Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-vizard",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        "amplicon-2025.4",
+        "moshpit-2025.4",
+        "pathogenome-2025.4",
+        "amplicon-2024.10",
+        "metagenome-2024.10",
+        "pathogenome-2024.10"
+      ],
+      "stars": 1,
+      "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "63872e928ed4d44cb70280375b45879f78f50246",
+        "status": "passed",
+        "date": "2025-06-30T18:02:38Z"
+      }
+    },
+    {
+      "owner": "qiime2",
       "name": "q2-feature-table",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -22,9 +100,9 @@
       "description": "QIIME 2 plugin supporting operations on feature tables.",
       "branch": "dev",
       "last_commit": {
-        "sha": "846f0e925bbb390cb2323caedbe58425c1937330",
+        "sha": "67602349a075f658e8190c15031b8cf43e75d537",
         "status": "passed",
-        "date": "2025-06-28T19:05:11Z"
+        "date": "2025-06-30T17:24:54Z"
       }
     },
     {
@@ -111,38 +189,6 @@
     },
     {
       "owner": "qiime2",
-      "name": "q2-types",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "tiny-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10",
-        "tiny-2024.10",
-        "amplicon-2024.5",
-        "metagenome-2024.5",
-        "tiny-2024.5",
-        "amplicon-2024.2",
-        "tiny-2024.2",
-        "amplicon-2023.9",
-        "tiny-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 17,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "f5b166f88209be46694cef5b4957d294810ebbd1",
-        "status": "passed",
-        "date": "2025-06-26T22:56:30Z"
-      }
-    },
-    {
-      "owner": "qiime2",
       "name": "q2-dada2",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -186,28 +232,6 @@
         "sha": "7801f702e7e608f4725ab1195499432c225ddfdf",
         "status": "passed",
         "date": "2025-06-20T18:47:23Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-vizard",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "amplicon-2024.10",
-        "metagenome-2024.10",
-        "pathogenome-2024.10"
-      ],
-      "stars": 1,
-      "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "5776cc28adae1833acd5bfc731d9b088e5067d38",
-        "status": "passed",
-        "date": "2025-06-11T15:24:35Z"
       }
     },
     {
@@ -469,30 +493,6 @@
         "sha": "dd6e4464ebef24d37b51c20b045881c9667b4281",
         "status": "passed",
         "date": "2025-05-08T22:11:56Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-alignment",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        "amplicon-2025.4",
-        "moshpit-2025.4",
-        "pathogenome-2025.4",
-        "amplicon-2024.10",
-        "amplicon-2024.5",
-        "amplicon-2024.2",
-        "amplicon-2023.9",
-        "core-2023.7"
-      ],
-      "stars": 2,
-      "description": "Support for multiple sequence alignment in QIIME 2. ",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "2eff336fb150077c9e983fc4e3ecf5c40581f4ec",
-        "status": "passed",
-        "date": "2025-05-08T22:11:54Z"
       }
     },
     {

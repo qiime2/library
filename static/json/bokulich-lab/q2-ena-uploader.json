@@ -39,6 +39,15 @@
                 "alt": "Code style: black"
               }
             ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "image",
+            "url": "https://img.shields.io/badge/ENA%20Studies-6-blue",
+            "alt": "ENA Studies"
           }
         ]
       },
@@ -1881,9 +1890,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "b67811d651aa51ca3b2a2d0a84b63b1896263274",
-    "status": "passed",
-    "date": "2025-06-20T14:18:11Z"
+    "sha": "29c2f70db0c167e1e4e44401f0cfb95b81471134",
+    "status": "failed",
+    "date": "2025-06-30T09:38:40Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
