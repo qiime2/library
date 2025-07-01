@@ -355,7 +355,10 @@ export async function getEnvironmentFiles(octokit, owner, repo_name, branch) {
   for (const env of envs["data"]) {
     if (ENV_FILE_REGEX.test(env["name"])) {
       // Strip the extension off the end of the name
-      const name = env["name"].substring(0, env["name"].indexOf(".yml"));
+      let name = env["name"].substring(0, env["name"].indexOf(".yml"));
+      if (name.includes('-release-')) {
+        name = name.split('-release-')[0]
+      }
       const split = name.split("-");
 
       // If the name matched the regex this ought to be the locations of this
