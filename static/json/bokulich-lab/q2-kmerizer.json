@@ -580,7 +580,15 @@
   "stars": 0,
   "description": "QIIME 2 plugin for generating kmers from biological sequences",
   "distros": [
-    "amplicon-2025.4",
-    "amplicon-2024.10"
+    [
+      "2025.4",
+      "amplicon",
+      "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+    ],
+    [
+      "2024.10",
+      "amplicon",
+      "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+    ]
   ]
 }

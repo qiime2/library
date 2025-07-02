@@ -1485,6 +1485,10 @@
   "stars": 3,
   "description": "QIIME 2 plugin to contextualize taxonomic abundance data into high-quality metabolic reconstruction of the human gut microbiota",
   "distros": [
-    "amplicon-2024.10"
+    [
+      "2024.10",
+      "amplicon",
+      "environment-files/q2-metnet-qiime2-amplicon-2024.10.yml"
+    ]
   ]
 }

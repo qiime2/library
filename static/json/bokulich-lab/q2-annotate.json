@@ -2062,7 +2062,15 @@
   "stars": 4,
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
   "distros": [
-    "moshpit-2025.4",
-    "metagenome-2024.10"
+    [
+      "2025.4",
+      "moshpit",
+      "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+    ],
+    [
+      "2024.10",
+      "metagenome",
+      "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+    ]
   ]
 }

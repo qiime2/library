@@ -713,9 +713,21 @@
   "docs": "https://bokulich-lab.github.io/moshpit-docs/",
   "in_distro": true,
   "distros": [
-    "moshpit-2025.4",
-    "metagenome-2024.10",
-    "metagenome-2024.5"
+    [
+      "2025.4",
+      "moshpit",
+      "2025.4/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2024.10",
+      "metagenome",
+      "2024.10/metagenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2024.5",
+      "metagenome",
+      "2024.5/metagenome/released/seed-environment-conda.yml"
+    ]
   ],
   "stars": 1,
   "description": null,

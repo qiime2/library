@@ -1897,6 +1897,10 @@
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
   "distros": [
-    "tiny-2025.4"
+    [
+      "2025.4",
+      "tiny",
+      "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+    ]
   ]
 }

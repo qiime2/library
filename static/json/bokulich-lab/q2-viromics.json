@@ -144,8 +144,16 @@
   "docs": null,
   "in_distro": true,
   "distros": [
-    "pathogenome-2025.4",
-    "pathogenome-2024.10"
+    [
+      "2025.4",
+      "pathogenome",
+      "2025.4/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2024.10",
+      "pathogenome",
+      "2024.10/pathogenome/released/seed-environment-conda.yml"
+    ]
   ],
   "stars": 0,
   "description": null,

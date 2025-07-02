@@ -1974,6 +1974,10 @@
   "stars": 6,
   "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
   "distros": [
-    "amplicon-2024.10"
+    [
+      "2024.10",
+      "amplicon",
+      "environment-files/genome-sampler-qiime2-amplicon-2024.10.yml"
+    ]
   ]
 }

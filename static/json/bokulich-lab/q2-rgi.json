@@ -652,6 +652,10 @@
   "stars": 3,
   "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
   "distros": [
-    "amplicon-2025.4"
+    [
+      "2025.4",
+      "amplicon",
+      "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+    ]
   ]
 }

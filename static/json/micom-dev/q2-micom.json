@@ -904,11 +904,35 @@
   "stars": 10,
   "description": "A Qiime plugin for MICOM.",
   "distros": [
-    "amplicon-2025.4",
-    "moshpit-2025.4",
-    "tiny-2025.4",
-    "amplicon-2024.10",
-    "metagenome-2024.10",
-    "tiny-2024.10"
+    [
+      "2025.4",
+      "amplicon",
+      "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
+    ],
+    [
+      "2025.4",
+      "moshpit",
+      "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
+    ],
+    [
+      "2025.4",
+      "tiny",
+      "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
+    ],
+    [
+      "2024.10",
+      "amplicon",
+      "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
+    ],
+    [
+      "2024.10",
+      "metagenome",
+      "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
+    ],
+    [
+      "2024.10",
+      "tiny",
+      "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
+    ]
   ]
 }

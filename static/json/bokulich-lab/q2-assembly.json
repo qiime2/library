@@ -2136,7 +2136,15 @@
   "stars": 3,
   "description": "QIIME 2 plugin for (meta)genome assembly.",
   "distros": [
-    "moshpit-2025.4",
-    "metagenome-2024.10"
+    [
+      "2025.4",
+      "moshpit",
+      "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+    ],
+    [
+      "2024.10",
+      "metagenome",
+      "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+    ]
   ]
 }

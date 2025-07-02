@@ -3038,7 +3038,15 @@
   "stars": 4,
   "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
   "distros": [
-    "amplicon-2025.4",
-    "amplicon-2024.10"
+    [
+      "2025.4",
+      "amplicon",
+      "environment-files/q2-fmt-qiime2-amplicon-2025.4-release-2025.7.yml"
+    ],
+    [
+      "2024.10",
+      "amplicon",
+      "environment-files/q2-fmt-qiime2-amplicon-2024.10.yml"
+    ]
   ]
 }

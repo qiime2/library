@@ -44,8 +44,16 @@
   "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
   "in_distro": true,
   "distros": [
-    "amplicon-2025.4",
-    "amplicon-2024.10"
+    [
+      "2025.4",
+      "amplicon",
+      "2025.4/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2024.10",
+      "amplicon",
+      "2024.10/amplicon/released/seed-environment-conda.yml"
+    ]
   ],
   "stars": 1,
   "description": null,
