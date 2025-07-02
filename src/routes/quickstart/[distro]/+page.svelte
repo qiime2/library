@@ -13,7 +13,7 @@
 
     for (const plugin of data.plugins) {
         for (const depoch of plugin.distros) {
-            const [distro, epoch] = depoch.split('-');
+            const [epoch, distro, env] = depoch;
             if (!distroPlugins[distro]) {
                 distroPlugins[distro] = {};
             }

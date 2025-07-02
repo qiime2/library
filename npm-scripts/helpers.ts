@@ -92,19 +92,17 @@ export async function getDistributionsData(distros) {
     for (const epoch of epochs) {
       for (const distro of distro_names) {
         try {
-          let env = await loadYamlPath(
-            join(
-              workdir,
-              epoch,
-              distro,
-              "released",
-              "seed-environment-conda.yml",
-            ),
-          );
+          let envPath = join(
+            epoch,
+            distro,
+            "released",
+            "seed-environment-conda.yml",
+          )
+          let env = await loadYamlPath(join(workdir, envPath));
           for (const dep of env.dependencies) {
             let name = dep.split("=")[0];
             if (Object.hasOwn(plugins, name)) {
-              plugins[name].distros.push(`${distro}-${epoch}`);
+              plugins[name].distros.push([epoch, distro, envPath]);
             }
           }
         } catch {
@@ -357,7 +355,8 @@ export async function getEnvironmentFiles(octokit, owner, repo_name, branch) {
       // Strip the extension off the end of the name
       let name = env["name"].substring(0, env["name"].indexOf(".yml"));
       if (name.includes('-release-')) {
-        name = name.split('-release-')[0]
+        let x = name.split('-release-')
+        name = x[0]
       }
       const split = name.split("-");
 
@@ -365,9 +364,8 @@ export async function getEnvironmentFiles(octokit, owner, repo_name, branch) {
       // information
       const distro = split[split.length - 2];
       const epoch = split[split.length - 1];
-      const release = `${distro}-${epoch}`;
 
-      releases.push(release);
+      releases.push([epoch, distro, join('environment-files', env["name"])]);
     }
   }
 
@@ -376,14 +374,11 @@ export async function getEnvironmentFiles(octokit, owner, repo_name, branch) {
 
 // Sort QIIME 2 releases newest to oldest by epoch first then distro
 export function sortReleases(a, b) {
-  const A = a.split("-");
-  const B = b.split("-");
+  const epochA = a[0];
+  const distroA = a[1];
 
-  const distroA = A[0];
-  const epochA = A[1];
-
-  const distroB = B[0];
-  const epochB = B[1];
+  const epochB = b[0];
+  const distroB = b[1];
 
   const byEpoch = sortEpochs(epochA, epochB);
 

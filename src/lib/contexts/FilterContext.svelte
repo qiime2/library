@@ -8,10 +8,10 @@
     let { children, unfiltered, distro_epochs }:
         { children: Snippet, unfiltered: any[], distro_epochs: string[] } = $props();
 
-    const releases = distro_epochs.map((x: string) => x.split('-'))
+    const releases = distro_epochs.map((x) => x.slice(0, 2))
     const distros: Set<string> = new Set();
     const epochs: Set<string> = new Set();
-    for (const [distro, epoch] of releases) {
+    for (const [epoch, distro, _] of releases) {
         distros.add(distro);
         epochs.add(epoch);
     }
@@ -35,7 +35,7 @@
     $effect(() => {
         let new_distros: Set<string> = new Set()
         if (state.filters.epochs.size > 0) {
-            for (const [distro, epoch] of releases) {
+            for (const [epoch, distro] of releases) {
                 if (state.filters.epochs.has(epoch)) {
                     new_distros.add(distro)
                 }
@@ -50,7 +50,7 @@
 
         let new_epochs: Set<string> = new Set()
         if (state.filters.distros.size > 0) {
-            for (const [distro, epoch] of releases) {
+            for (const [epoch, distro] of releases) {
                 if (state.filters.distros.has(distro)) {
                     new_epochs.add(epoch)
                 }
@@ -86,8 +86,8 @@
         if (state.filters.epochs.size > 0) {
             filtered = filtered.filter(({distros}) => {
                 return distros
-                    .map((d: string) => d.split('-'))
-                    .filter(([distro, epoch]: any) => state.filters.epochs.has(epoch))
+                    .map((d: string) => d.slice(0, 2))
+                    .filter(([epoch, distro]: any) => state.filters.epochs.has(epoch))
                     .length > 0
             })
         }
@@ -95,8 +95,8 @@
         if (state.filters.distros.size > 0) {
             filtered = filtered.filter(({distros}) => {
                 return distros
-                    .map((d: string) => d.split('-'))
-                    .filter(([distro, epoch]: any) => state.filters.distros.has(distro))
+                    .map((d: string) => d.slice(0, 2))
+                    .filter(([epoch, distro]: any) => state.filters.distros.has(distro))
                     .length > 0
             })
         }

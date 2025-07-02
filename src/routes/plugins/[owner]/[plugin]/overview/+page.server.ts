@@ -1,6 +1,6 @@
-import type { PageLoad } from "./$types";
+import type { PageServerLoad } from "./$types";
 
-export const load: PageLoad = async ({ fetch, parent }) => {
+export const load: PageServerLoad = async ({ fetch, parent }) => {
   let data = await parent();
   let docs = data.repo_info.docs;
   docs = docs && docs.endsWith("/") ? docs.slice(0, docs.length - 1) : docs;

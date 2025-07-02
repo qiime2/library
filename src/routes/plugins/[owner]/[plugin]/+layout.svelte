@@ -18,20 +18,20 @@
     // This data comes from +layout.ts
     let data = page.data;
     const repo = `${data.repo_info.owner}/${data.repo_info.name}`;
-    const releases = data.repo_info.distros.map((x: string) => x.split('-'))
-    let grouped_releases: Record<string, string[]> = {};
-    for (const [distro, epoch] of releases) {
+    const releases = data.repo_info.distros
+    let grouped_releases: Record<string, [string, string, string][]> = {};
+    for (const [epoch, distro, env] of releases) {
         if (!grouped_releases[epoch]) {
             grouped_releases[epoch] = [];
         }
-        grouped_releases[epoch].push(distro)
+        grouped_releases[epoch].push([epoch, distro, env])
     }
 
-    function environmentLink(epoch: string, distro: string) {
+    function environmentLink(epoch: string, distro: string, env: string = '') {
         if (data.repo_info.in_distro) {
             return `https://github.com/qiime2/distributions/blob/dev/${epoch}/${distro}/released/seed-environment-conda.yml`
         }
-        return `https://github.com/${owner}/${plugin}/blob/${data.repo_info.branch}/environment-files/${plugin}-qiime2-${distro}-${epoch}.yml`
+        return `https://github.com/${owner}/${plugin}/blob/${data.repo_info.branch}/${env}`
     }
 </script>
 
@@ -112,8 +112,8 @@
                             <dl class=''>
                                 {#each Object.keys(grouped_releases) as epoch}
                                 <dt class='text-[#1a414c] mt-0'>{epoch}</dt>
-                                {#each grouped_releases[epoch] as distro}
-                                <dd class='py-0 mt-0 border-l-2 border-l-gray-200 pl-7 ml-7'><a href={environmentLink(epoch, distro)}>{epoch}/{distro}</a></dd>
+                                {#each grouped_releases[epoch] as [_, distro, env]}
+                                <dd class='py-0 mt-0 border-l-2 border-l-gray-200 pl-7 ml-7'><a href={environmentLink(epoch, distro, env)}>{epoch}/{distro}</a></dd>
                                 {/each}
                                 {/each}
                             </dl>
