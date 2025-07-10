@@ -11,9 +11,9 @@
   const create = $derived(`conda env create --name ${env_name} --file ${env_url}`);
   const create_silicon = $derived(
     [
-      "CONDA_SUBDIR=osx-64 conda env create",
-      `--name ${env_name}`,
-      `--file ${env_url}`,
+      "CONDA_SUBDIR=osx-64 conda env create \\",
+      `  --name ${env_name} \\`,
+      `  --file ${env_url}`,
       `conda activate ${env_name}`,
       "conda config --env --set subdir osx-64"
     ].join('\n')
