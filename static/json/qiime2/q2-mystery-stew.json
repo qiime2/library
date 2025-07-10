@@ -44,6 +44,16 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "tiny",
+      "2025.7/tiny/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -128,8 +138,8 @@
   "description": "This plugin exists to define integration tests between interfaces and the framework.",
   "branch": "dev",
   "last_commit": {
-    "sha": "1d41ceb7e81997d8ffde75ebe4845e6446768def",
+    "sha": "bff35e0da2cf4e7601c3d58b30d0cbc87b207734",
     "status": "passed",
-    "date": "2025-05-08T22:12:05Z"
+    "date": "2025-07-09T19:02:00Z"
   }
 }

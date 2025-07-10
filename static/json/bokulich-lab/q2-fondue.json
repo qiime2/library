@@ -4379,6 +4379,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "moshpit",
       "2025.4/moshpit/released/seed-environment-conda.yml"
@@ -4398,8 +4403,8 @@
   "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
   "branch": "main",
   "last_commit": {
-    "sha": "48e1664c2dc768c620ddd9298c02fb40b78bee17",
+    "sha": "939e3695f440fbd0764d7136614be0b519364929",
     "status": "passed",
-    "date": "2025-06-27T12:00:19Z"
+    "date": "2025-07-09T19:01:51Z"
   }
 }

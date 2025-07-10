@@ -79,6 +79,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -138,8 +143,8 @@
   "description": "QIIME 2 plugin supporting taxonomic classification",
   "branch": "dev",
   "last_commit": {
-    "sha": "be2c2df4aef7fd2b5b9044e3e64a987faaeecdf7",
+    "sha": "f8e4ae1f8ab800380cf27309fafe35b64de6e126",
     "status": "passed",
-    "date": "2025-07-05T01:34:23Z"
+    "date": "2025-07-09T19:01:50Z"
   }
 }

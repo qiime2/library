@@ -24,6 +24,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -83,8 +88,8 @@
   "description": "QIIME 2 plugin for paired sample comparisons",
   "branch": "dev",
   "last_commit": {
-    "sha": "dd6e4464ebef24d37b51c20b045881c9667b4281",
+    "sha": "b44ccad4c92be832fa446f9b96e7ba695a1743e2",
     "status": "passed",
-    "date": "2025-05-08T22:11:56Z"
+    "date": "2025-07-09T19:01:52Z"
   }
 }

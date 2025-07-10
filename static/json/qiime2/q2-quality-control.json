@@ -24,6 +24,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -83,8 +88,8 @@
   "description": "A QIIME 2 plugin for quality control of sequence and feature data",
   "branch": "dev",
   "last_commit": {
-    "sha": "0bb5f6a1418ba064448292bff2e6d413a303126b",
+    "sha": "d7f695dd95a132cdd0fcd9d33cf84e35c52f580d",
     "status": "passed",
-    "date": "2025-05-27T17:42:18Z"
+    "date": "2025-07-09T19:01:50Z"
   }
 }

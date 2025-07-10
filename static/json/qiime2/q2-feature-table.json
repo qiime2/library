@@ -113,6 +113,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -172,8 +177,8 @@
   "description": "QIIME 2 plugin supporting operations on feature tables.",
   "branch": "dev",
   "last_commit": {
-    "sha": "77c0ee11aff545daa14e76f271bd0937b3ebba8f",
+    "sha": "4e502b9bc565e495d7341e07de66843d3680aae6",
     "status": "passed",
-    "date": "2025-07-01T17:52:30Z"
+    "date": "2025-07-09T19:01:49Z"
   }
 }

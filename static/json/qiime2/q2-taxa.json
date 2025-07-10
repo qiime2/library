@@ -79,6 +79,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -138,8 +143,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "d7f81bf2582322448f8a9e7dc714225013bcfb7a",
-    "status": "failed",
-    "date": "2025-05-08T22:11:53Z"
+    "sha": "db2f7f5d4332e15f770986b2232f21129fb711d7",
+    "status": "passed",
+    "date": "2025-07-09T19:02:05Z"
   }
 }

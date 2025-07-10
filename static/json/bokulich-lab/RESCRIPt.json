@@ -2833,6 +2833,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.4",
       "amplicon",
       "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -2882,8 +2887,8 @@
   "description": "REference Sequence annotation and CuRatIon Pipeline",
   "branch": "master",
   "last_commit": {
-    "sha": "7801f702e7e608f4725ab1195499432c225ddfdf",
+    "sha": "4bfe903a6a9775f939117dbd85b23f654f39971c",
     "status": "passed",
-    "date": "2025-06-20T18:47:23Z"
+    "date": "2025-07-09T19:01:51Z"
   }
 }
