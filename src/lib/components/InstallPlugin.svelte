@@ -9,13 +9,15 @@
   }
 
   const create = $derived(`conda env create --name ${env_name} --file ${env_url}`);
-  const create_silicon = $derived(`
-    CONDA_SUBDIR=osx-64 conda env create \
-    --name ${env_name} \
-    --file ${env_url} \
-    conda activate ${env_name} \
-    conda config --env --set subdir osx-64
-  `);
+  const create_silicon = $derived(
+    [
+      "CONDA_SUBDIR=osx-64 conda env create",
+      `--name ${env_name}`,
+      `--file ${env_url}`,
+      `conda activate ${env_name}`,
+      "conda config --env --set subdir osx-64"
+    ].join('\n')
+  );
   const update = $derived(`conda env update --file ${env_url}`);
 
   const ast = $derived(u('div', key({class: '-my-5'}), [u('tabSet', key(), [
