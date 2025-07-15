@@ -1,6 +1,57 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-fragment-insertion",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "amplicon",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "core",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 13,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "09bdeadb3b75ebcd1bfa4d33b7aadb3e62cde063",
+        "status": "passed",
+        "date": "2025-07-14T17:56:27Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-viromics",
       "docs": null,
@@ -37,6 +88,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -120,6 +176,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -184,6 +245,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -252,6 +318,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -317,6 +388,11 @@
       "in_distro": true,
       "distros": [
         [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
           "2025.4",
           "amplicon",
           "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -362,6 +438,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -428,6 +509,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -562,6 +648,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -642,6 +733,11 @@
       "in_distro": true,
       "distros": [
         [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
           "2025.4",
           "amplicon",
           "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -687,6 +783,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -768,6 +869,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -880,6 +986,11 @@
       "in_distro": true,
       "distros": [
         [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
           "2025.4",
           "amplicon",
           "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -950,6 +1061,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -1068,56 +1184,15 @@
     },
     {
       "owner": "qiime2",
-      "name": "q2-fragment-insertion",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "amplicon",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "core",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 13,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "4cd12a0e8b1919bc28f314a24dc38b9ce8384fb8",
-        "status": "passed",
-        "date": "2025-07-09T19:01:51Z"
-      }
-    },
-    {
-      "owner": "qiime2",
       "name": "q2-types",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -1231,6 +1306,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -1302,6 +1382,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -1368,6 +1453,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -1432,6 +1522,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -1515,6 +1610,11 @@
       "distros": [
         [
           "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
           "moshpit",
           "2025.7/moshpit/released/seed-environment-conda.yml"
         ],
@@ -1595,6 +1695,11 @@
       "in_distro": true,
       "distros": [
         [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
           "2025.4",
           "amplicon",
           "2025.4/amplicon/released/seed-environment-conda.yml"
@@ -1640,6 +1745,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -1706,6 +1816,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -1787,6 +1902,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -1899,6 +2019,11 @@
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
         [
           "2025.7",
           "moshpit",
@@ -2186,6 +2311,131 @@
     }
   ],
   "distros": [
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "2025.7/amplicon/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "moshpit",
