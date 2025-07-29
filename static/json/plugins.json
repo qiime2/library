@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "231749abc71ced0a3bb0c06c3793d39fd352f30e",
+        "status": "passed",
+        "date": "2025-07-25T11:18:36Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-composition",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -2625,6 +2645,11 @@
       "2025.7",
       "pathogenome",
       "2025.7/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "tiny",
+      "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
     ],
     [
       "2025.7",

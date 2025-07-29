@@ -1,0 +1,128 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-gunc/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-gunc",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-gunc/graph/badge.svg?token=hE1Qmv0tzQ",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can install q2-gunc using the provided conda environment files, for example:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n q2-gunc --file  https://raw.githubusercontent.com/bokulich-lab/q2-gunc/main/environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For more information head to the "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins/caporaso-lab/q2-gunc",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Library"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2025.10.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2025.10.0.dev0",
+      "name": "2025.10.0.dev0",
+      "published_at": "2025-07-23T15:33:09Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "bokulich-lab",
+  "name": "q2-gunc",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-gunc",
+  "last_commit": {
+    "sha": "231749abc71ced0a3bb0c06c3793d39fd352f30e",
+    "status": "passed",
+    "date": "2025-07-25T11:18:36Z"
+  },
+  "stars": 0,
+  "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+  "distros": [
+    [
+      "2025.7",
+      "tiny",
+      "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+    ]
+  ]
+}

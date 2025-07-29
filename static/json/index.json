@@ -2,6 +2,26 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "231749abc71ced0a3bb0c06c3793d39fd352f30e",
+        "status": "passed",
+        "date": "2025-07-25T11:18:36Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -144,26 +164,6 @@
           "environment-files/q2-fmt-qiime2-amplicon-2024.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "8d5b7585f18ffc7981d288f10623520758a3ca9d",
-        "status": "passed",
-        "date": "2025-05-30T07:42:54Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -280,5 +280,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-07-28T02:00:43.098Z"
+  "last_updated": "2025-07-29T02:06:20.758Z"
 }
