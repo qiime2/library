@@ -1,34 +1,14 @@
 {
   "plugins": [
     {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "f622928ad7f89510578f11952941556d0419f59b",
-        "status": "passed",
-        "date": "2025-08-03T00:33:41Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
       "docs": "https://q2-boots.readthedocs.io/en/latest/",
       "last_commit": {
-        "sha": "0b72b8d6f47c7acd09f10b5e0151843174de1df9",
-        "status": "failed",
-        "date": "2025-07-31T23:54:42Z"
+        "sha": "eb584d79ca6bd3bfa860be433800d5fab13c01ad",
+        "status": "passed",
+        "date": "2025-08-03T02:37:30Z"
       },
       "stars": 3,
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
@@ -47,6 +27,26 @@
           "2024.5",
           "amplicon",
           "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "f622928ad7f89510578f11952941556d0419f59b",
+        "status": "passed",
+        "date": "2025-08-03T00:33:41Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     },
