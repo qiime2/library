@@ -1,6 +1,31 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "fd404f7e8c29d645d3da4d8bb0465251af381cee",
+        "status": "passed",
+        "date": "2025-08-05T05:32:18Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
@@ -139,31 +164,6 @@
           "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-fmt",
-      "branch": "dev",
-      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "1d62376808ba6f991b70b904e542c8200eced5ba",
-        "status": "passed",
-        "date": "2025-07-01T23:00:23Z"
-      },
-      "stars": 4,
-      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-fmt-qiime2-amplicon-2025.4-release-2025.7.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "environment-files/q2-fmt-qiime2-amplicon-2024.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -280,5 +280,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-08-05T01:58:39.572Z"
+  "last_updated": "2025-08-06T01:57:03.013Z"
 }
