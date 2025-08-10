@@ -2,6 +2,26 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "4abad2f8a64ae3d824a8f6b8d30666131287cc88",
+        "status": "passed",
+        "date": "2025-08-10T00:46:42Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-kmerizer",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
@@ -52,26 +72,6 @@
           "2024.5",
           "amplicon",
           "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "f622928ad7f89510578f11952941556d0419f59b",
-        "status": "passed",
-        "date": "2025-08-03T00:33:41Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     },
@@ -280,5 +280,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-08-09T01:46:34.534Z"
+  "last_updated": "2025-08-10T02:00:37.466Z"
 }
