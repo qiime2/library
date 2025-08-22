@@ -24,7 +24,7 @@ const mkdtemp = promisify(fs.mkdtemp);
 
 // Env files are ignored if they do not match this regex
 const ENV_FILE_REGEX = new RegExp(
-  `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])\.yml`,
+  `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])(?:-release-.*)?\.yml`,
 );
 
 const DEFAULT_CATALOG_REPO = "https://github.com/qiime2/library-catalog.git";
