@@ -92,7 +92,7 @@
         "children": [
           {
             "type": "image",
-            "url": "img/ena_submission.webp",
+            "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/img/ena_submission.webp",
             "alt": "ENA Submission",
             "width": 700
           }
@@ -117,7 +117,7 @@
           },
           {
             "type": "text",
-            "value": ". The submission process is depicted in the image above."
+            "value": ". The submission process is depicted in the image above (courtesy of the ENA)."
           }
         ]
       },
@@ -235,7 +235,7 @@
       {
         "type": "code",
         "lang": "shell",
-        "value": "conda env create -n uploader-env --file  https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        "value": "conda env create -n uploader-env --file https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
       },
       {
         "type": "heading",
@@ -694,7 +694,7 @@
                 "children": [
                   {
                     "type": "link",
-                    "url": "./templates/study-minimal.tsv",
+                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/study-minimal.tsv",
                     "children": [
                       {
                         "type": "text",
@@ -710,7 +710,7 @@
                 "children": [
                   {
                     "type": "link",
-                    "url": "./templates/study-extended.tsv",
+                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/study-extended.tsv",
                     "children": [
                       {
                         "type": "text",
@@ -891,7 +891,7 @@
                 "children": [
                   {
                     "type": "link",
-                    "url": "./templates/sample-minimal.tsv",
+                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/sample-minimal.tsv",
                     "children": [
                       {
                         "type": "text",
@@ -907,7 +907,7 @@
                 "children": [
                   {
                     "type": "link",
-                    "url": "./templates/sample-extended.tsv",
+                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/sample-extended.tsv",
                     "children": [
                       {
                         "type": "text",
@@ -1159,7 +1159,7 @@
                 "children": [
                   {
                     "type": "link",
-                    "url": "./templates/experiment-minimal.tsv",
+                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/experiment-minimal.tsv",
                     "children": [
                       {
                         "type": "text",
@@ -1175,7 +1175,7 @@
                 "children": [
                   {
                     "type": "link",
-                    "url": "./templates/experiment-extended.tsv",
+                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/experiment-extended.tsv",
                     "children": [
                       {
                         "type": "text",
@@ -1892,13 +1892,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "d533d504922b37613fcd9ca23e8a24d739c0cb27",
+    "sha": "afd80975ca3a2747f1386b7b20a39d9633a480d3",
     "status": "passed",
-    "date": "2025-08-17T00:36:19Z"
+    "date": "2025-08-22T14:47:59Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
   "distros": [
+    [
+      "2025.7",
+      "tiny",
+      "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+    ],
     [
       "2025.4",
       "tiny",

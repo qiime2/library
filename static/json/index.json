@@ -1,6 +1,31 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "afd80975ca3a2747f1386b7b20a39d9633a480d3",
+        "status": "passed",
+        "date": "2025-08-22T14:47:59Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "biocore",
       "name": "q2-conduit",
       "branch": "main",
@@ -26,26 +51,6 @@
       ]
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "d533d504922b37613fcd9ca23e8a24d739c0cb27",
-        "status": "passed",
-        "date": "2025-08-17T00:36:19Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
@@ -58,6 +63,11 @@
       "stars": 3,
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
       "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
         [
           "2025.4",
           "amplicon",
@@ -124,7 +134,7 @@
       "owner": "bokulich-lab",
       "name": "q2-assembly",
       "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "docs": null,
       "last_commit": {
         "sha": "e4c2e8722123e28df118c2c73365be2eb3bb692b",
         "status": "passed",
@@ -149,7 +159,7 @@
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
-      "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+      "docs": null,
       "last_commit": {
         "sha": "6f6ed60781147e32c4b6413416cfde9bf6478ae1",
         "status": "passed",
@@ -285,5 +295,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-08-22T01:42:22.311Z"
+  "last_updated": "2025-08-22T21:55:05.101Z"
 }
