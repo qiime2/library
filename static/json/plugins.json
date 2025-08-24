@@ -6,9 +6,9 @@
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
       "last_commit": {
-        "sha": "afd80975ca3a2747f1386b7b20a39d9633a480d3",
+        "sha": "2945e50f9d30338fe769d8a9e8fc6b555950fba5",
         "status": "passed",
-        "date": "2025-08-22T14:47:59Z"
+        "date": "2025-08-24T00:28:48Z"
       },
       "stars": 0,
       "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
@@ -22,6 +22,56 @@
           "2025.4",
           "tiny",
           "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "cduvallet",
+      "name": "q2-dbotu",
+      "branch": "master",
+      "docs": "https://github.com/cduvallet/q2-dbotu",
+      "last_commit": {
+        "sha": "2da1e7cb508443bf4200cbf3c584fd986e8baa12",
+        "status": "passed",
+        "date": "2025-08-22T21:49:07Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for distribution-based clustering",
+      "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "environment-files/q2-dbotu-qiime2-amplicon-2025.7.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-dbotu-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "cduvallet",
+      "name": "q2-perc-norm",
+      "branch": "master",
+      "docs": "https://github.com/cduvallet/q2-perc-norm",
+      "last_commit": {
+        "sha": "f8492bc57378e381cd9558787cba751c4122084a",
+        "status": "passed",
+        "date": "2025-08-22T21:48:46Z"
+      },
+      "stars": 10,
+      "description": "QIIME2 plugin for percentile normalization to correct for batch effects in microbiome case-control studies",
+      "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "environment-files/q2-perc-norm-qiime2-amplicon-2025.7.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-perc-norm-qiime2-tiny-2025.7.yml"
         ]
       ]
     },
@@ -2379,6 +2429,16 @@
     [
       "2025.7",
       "amplicon",
+      "environment-files/q2-dbotu-qiime2-amplicon-2025.7.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
+      "environment-files/q2-perc-norm-qiime2-amplicon-2025.7.yml"
+    ],
+    [
+      "2025.7",
+      "amplicon",
       "2025.7/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -2699,12 +2759,22 @@
     [
       "2025.7",
       "tiny",
+      "environment-files/q2-dbotu-qiime2-tiny-2025.7.yml"
+    ],
+    [
+      "2025.7",
+      "tiny",
       "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
     ],
     [
       "2025.7",
       "tiny",
       "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+    ],
+    [
+      "2025.7",
+      "tiny",
+      "environment-files/q2-perc-norm-qiime2-tiny-2025.7.yml"
     ],
     [
       "2025.7",

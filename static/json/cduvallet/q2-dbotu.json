@@ -1,0 +1,498 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin for distribution-based clustering."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To learn more about distribution-based clustering, check out the "
+          },
+          {
+            "type": "link",
+            "url": "http://dx.doi.org/10.1128/AEM.00342-13",
+            "children": [
+              {
+                "type": "text",
+                "value": "original publication"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " or the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/swo/dbotu3",
+            "children": [
+              {
+                "type": "text",
+                "value": "python implementation, dbOTU3"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " (and its "
+          },
+          {
+            "type": "link",
+            "url": "https://doi.org/10.1371/journal.pone.0176335",
+            "children": [
+              {
+                "type": "text",
+                "value": "associated publication"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "). This plugin is essentially a QIIME 2 wrapper around this new implementation."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To install this plugin, clone this repo, activate your qiime environment, and run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "pip install ."
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To test that it works, run "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime"
+          },
+          {
+            "type": "text",
+            "value": " and make sure that "
+          },
+          {
+            "type": "inlineCode",
+            "value": "dbotu"
+          },
+          {
+            "type": "text",
+            "value": " is one of the commands listed."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Once you install this plugin, it becomes part of the qiime distribution in the environment you’re in (so you don’t need to re-install it every time you re-activate the environment).\nIf you install a new version of qiime, however, you’ll need to re-install the plugin in that new environment.\nNote that you need a 2019 QIIME 2 release (version "
+          },
+          {
+            "type": "inlineCode",
+            "value": "2019.1"
+          },
+          {
+            "type": "text",
+            "value": ") or later for this plugin to work."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage"
+          }
+        ],
+        "identifier": "usage",
+        "label": "Usage",
+        "html_id": "usage",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Currently, the dbOTU plugin has only one function, the distribution-based OTU caller in "
+          },
+          {
+            "type": "inlineCode",
+            "value": "call-otus"
+          },
+          {
+            "type": "text",
+            "value": ".\nFrom within a QIIME 2 environment, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime dbotu call-otus \\\n\t--i-table test_data/counts.qza \\\n\t--i-sequences test_data/seq.qza \\\n\t--o-representative-sequences dbotu_seqs.qza \\\n\t--o-dbotu-table dbotu_table.qza"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Genetic, abundance, and p-value criteria parameters"
+          }
+        ],
+        "identifier": "genetic-abundance-and-p-value-criteria-parameters",
+        "label": "Genetic, abundance, and p-value criteria parameters",
+        "html_id": "genetic-abundance-and-p-value-criteria-parameters",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "There are optional parameters that you can change to improve the performance of clustering.\nYou can see these parameters by typing "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime dbotu call-otus --help"
+          },
+          {
+            "type": "text",
+            "value": ", and you can learn more about how to choose them by reading the "
+          },
+          {
+            "type": "link",
+            "url": "http://dx.doi.org/10.1128/AEM.00342-13",
+            "children": [
+              {
+                "type": "text",
+                "value": "original  publication"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " and the "
+          },
+          {
+            "type": "link",
+            "url": "https://doi.org/10.1371/journal.pone.0176335",
+            "children": [
+              {
+                "type": "text",
+                "value": "dbotu3 update"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Note that this plugin wraps the dbotu3 version of distribution-based clustering, which recommends using slightly different parameters than the original version."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Membership file"
+          }
+        ],
+        "identifier": "membership-file",
+        "label": "Membership file",
+        "html_id": "membership-file",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Currently, the membership information can be printed using the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--verbose"
+          },
+          {
+            "type": "text",
+            "value": " flag.\nThe first column of the membership file has the representative sequence for each OTU, and all subsequent columns have the sequences which are grouped into that OTU.\nIf you want to see the membership file (which shows which sequences are grouped into which “OTU”), use the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "--verbose"
+          },
+          {
+            "type": "text",
+            "value": " flag (and optionally pipe the output to a separate file):"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime dbotu call-otus \\\n    ...\n    --verbose > membership_file.txt"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Data"
+          }
+        ],
+        "identifier": "data",
+        "label": "Data",
+        "html_id": "data",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To run distribution-based clustering, you need (1) some dereplicated sequences and (2) a table of counts indicating how many times each of those sequences is in each of your samples.\nDereplicated sequences can be:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "exact sequence variants output by DADA2 or deblur’s denoise commands,"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "dereplicated sequences, which you can get by clustering at 100% identity with vsearch,"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "some other set of representative sequences, perhaps output from clustering with vsearch at a different identity threshold (e.g. 97% OTUs)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The important thing is that the input sequence file contains only non-duplicated sequences (i.e. it is "
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "not"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " just all the raw reads present in your dataset).\nThe sequence IDs in the counts table should match the IDs in the input sequences file, and every sequence ID in your dereplicated sequences file must be present in the table."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Using non-QIIME 2 artifact data"
+          }
+        ],
+        "identifier": "using-non-qiime-2-artifact-data",
+        "label": "Using non-QIIME 2 artifact data",
+        "html_id": "using-non-qiime-2-artifact-data",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you want to use this plugin but you’re not using QIIME 2 for any of your other steps, you’ll need to first import your data (a feature table of counts and a fasta file of dereplicated sequences) into qiime.\nFrom within the qiime environment, you can do:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime tools import \\\n  --input-path your_sequence_file.fasta \\\n  --output-path your_sequence_file.qza \\\n  --type 'FeatureData[Sequence]'\n\n  qiime tools import \\\n    --input-path your_table.biom \\\n    --output-path your_table.qza \\\n    --type 'FeatureTable[Frequency]'"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Versions"
+          }
+        ],
+        "identifier": "versions",
+        "label": "Versions",
+        "html_id": "versions",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "2019.2 - update package to use QIIME 2 plugin template"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "2019.1 - re-build package with Python 3.6 for newer versions of QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "2018.4.2 - output membership info with the "
+              },
+              {
+                "type": "inlineCode",
+                "value": "--verbose"
+              },
+              {
+                "type": "text",
+                "value": " flag"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "2018.4.1 - fixed bug: transpose table before and after calling dbotu3, so that dbotu3 gets data in expected format (sequences in rows) despite input qiime2 format (sequences in columns)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "2018.4.0 - original “working” plugin, uploaded to conda"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "cduvallet",
+  "name": "q2-dbotu",
+  "branch": "master",
+  "docs": "https://github.com/cduvallet/q2-dbotu",
+  "last_commit": {
+    "sha": "2da1e7cb508443bf4200cbf3c584fd986e8baa12",
+    "status": "passed",
+    "date": "2025-08-22T21:49:07Z"
+  },
+  "stars": 4,
+  "description": "QIIME 2 plugin for distribution-based clustering",
+  "distros": [
+    [
+      "2025.7",
+      "amplicon",
+      "environment-files/q2-dbotu-qiime2-amplicon-2025.7.yml"
+    ],
+    [
+      "2025.7",
+      "tiny",
+      "environment-files/q2-dbotu-qiime2-tiny-2025.7.yml"
+    ]
+  ]
+}
