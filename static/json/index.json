@@ -6,9 +6,9 @@
       "branch": "main",
       "docs": "https://q2-boots.readthedocs.io/en/latest/",
       "last_commit": {
-        "sha": "c347dcfff7b025912364a927dc544b2891e30949",
+        "sha": "946b12ea7915cb006b62307fd3698cea05ad829b",
         "status": "passed",
-        "date": "2025-08-25T22:58:51Z"
+        "date": "2025-08-27T22:37:28Z"
       },
       "stars": 3,
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
@@ -32,6 +32,56 @@
           "2024.5",
           "amplicon",
           "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "c4a2208c883e71c0d86c6d77c6603e1cbafc4bea",
+        "status": "passed",
+        "date": "2025-08-27T20:04:25Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "869a38aaa8503dbf5588039f002309a55e45de5e",
+        "status": "failed",
+        "date": "2025-08-27T20:04:00Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
         ]
       ]
     },
@@ -132,51 +182,6 @@
           "2025.7",
           "moshpit",
           "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-kmerizer",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
-      "last_commit": {
-        "sha": "fd404f7e8c29d645d3da4d8bb0465251af381cee",
-        "status": "passed",
-        "date": "2025-08-05T05:32:18Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for generating kmers from biological sequences",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "231749abc71ced0a3bb0c06c3793d39fd352f30e",
-        "status": "passed",
-        "date": "2025-07-25T11:18:36Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
-      "distros": [
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
         ]
       ]
     }
@@ -295,5 +300,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-08-27T01:38:36.684Z"
+  "last_updated": "2025-08-28T01:38:18.309Z"
 }
