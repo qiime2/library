@@ -9,11 +9,23 @@
   }
 
   const create = $derived(`conda env create --name ${env_name} --file ${env_url}`);
+  const create_silicon = $derived(
+    [
+      "CONDA_SUBDIR=osx-64 conda env create \\",
+      `  --name ${env_name} \\`,
+      `  --file ${env_url}`,
+      `conda activate ${env_name}`,
+      "conda config --env --set subdir osx-64"
+    ].join('\n')
+  );
   const update = $derived(`conda env update --file ${env_url}`);
 
   const ast = $derived(u('div', key({class: '-my-5'}), [u('tabSet', key(), [
       u('tabItem', key({title: '[Fresh Install]'}), [
           u('code', key({lang: 'bash', class: '!my-3'}), create),
+      ]),
+      u('tabItem', key({title: '[Fresh Install (Apple Silicon)]'}), [
+          u('code', key({lang: 'bash', class: '!my-3'}), create_silicon),
       ]),
       u('tabItem', key({title: '[Update Existing]'}), [
           u('paragraph', key(), [u('text', key(), `Activate your environment (${base_env}) and run:`)]),
