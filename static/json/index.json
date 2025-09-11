@@ -2,6 +2,26 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "bae0a4667774df81b48dc146314ac0a096e3d8f2",
+        "status": "passed",
+        "date": "2025-09-10T13:54:43Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -159,31 +179,6 @@
           "environment-files/q2-perc-norm-qiime2-tiny-2025.7.yml"
         ]
       ]
-    },
-    {
-      "owner": "biocore",
-      "name": "q2-conduit",
-      "branch": "main",
-      "docs": "https://github.com/biocore/q2-conduit",
-      "last_commit": {
-        "sha": "afdbcbf475d342978c3eec805708bf1af6b9f418",
-        "status": "passed",
-        "date": "2025-08-19T19:37:09Z"
-      },
-      "stars": 0,
-      "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts usable in downstream analyses",
-      "distros": [
-        [
-          "2025.7",
-          "amplicon",
-          "environment-files/q2-conduit-qiime2-amplicon-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -300,5 +295,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-09-10T01:26:54.672Z"
+  "last_updated": "2025-09-11T01:28:46.416Z"
 }
