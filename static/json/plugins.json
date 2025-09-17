@@ -2,6 +2,31 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "543baf82d897a01e29e986e6e13ed86c08c8ec2f",
+        "status": "passed",
+        "date": "2025-09-16T08:06:01Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -641,31 +666,6 @@
         "status": "passed",
         "date": "2025-08-27T22:12:37Z"
       }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "c4a2208c883e71c0d86c6d77c6603e1cbafc4bea",
-        "status": "passed",
-        "date": "2025-08-27T20:04:25Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
     },
     {
       "owner": "bokulich-lab",
