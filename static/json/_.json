@@ -7,6 +7,22 @@
     "base": "https://bokulich-lab.github.io/moshpit-docs/",
     "pretty": true
   },
+  "q2-composition": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-diversity": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-taxa": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-demux": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
@@ -14,10 +30,6 @@
   "q2-ena-uploader": {
     "base": "https://github.com/bokulich-lab/q2-ena-uploader",
     "pretty": true
-  },
-  "q2-demux": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
   },
   "q2-dada2": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -99,10 +111,6 @@
     "base": "https://github.com/cduvallet/q2-perc-norm",
     "pretty": true
   },
-  "q2-diversity": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
   "q2-conduit": {
     "base": "https://github.com/biocore/q2-conduit",
     "pretty": true
@@ -123,15 +131,7 @@
     "base": "https://github.com/bokulich-lab/q2-gunc",
     "pretty": true
   },
-  "q2-composition": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
   "q2-fragment-insertion": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-taxa": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
