@@ -1,0 +1,572 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/License-BSD%203--Clause-blue.svg",
+                "alt": "BSD License"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://www.python.org/",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/python-%3E3.6-blue",
+                "alt": "Python version"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "A "
+              },
+              {
+                "type": "link",
+                "url": "https://qiime2.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " plugin for solving "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "constrained sparse regression and classification"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " problems with microbiome data including:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Lasso regression with taxonomic constraints"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Cross-validation for hyperparameter selection"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Stability selection for feature selection"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Classification and regression tasks"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Tree-aggregated predictive modeling"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Interactive visualizations with model diagnostics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "📂 "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/Vlasovets/q2-hdstats-docs",
+            "children": [
+              {
+                "type": "text",
+                "value": "Tutorial & Examples"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "First, make sure you have the required dependencies installed:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda install -c conda-forge zarr plotly"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "OR"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "pip install zarr plotly c-lasso"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Next to install the plugin:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "pip install git+https://github.com/bio-datascience/q2-classo-latest.git\nqiime dev refresh-cache"
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage Tutorial"
+          }
+        ],
+        "identifier": "usage-tutorial",
+        "label": "Usage Tutorial",
+        "html_id": "usage-tutorial",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A complete tutorial on using "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-classo"
+          },
+          {
+            "type": "text",
+            "value": " for microbiome data analysis — including preprocessing, CLR transformation, constrained regression, and visualization — is available in the repository examples."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "👉 "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "link",
+                "url": "https://github.com/Vlasovets/q2-hdstats-docs",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Quick Start Guide"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This tutorial includes:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Random data generation and basic workflow"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "CLR transformation and taxonomic aggregation"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Constrained lasso regression with cross-validation"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Stability selection for robust feature selection"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "HIV sCD14 prediction case study"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Interactive visualization of model results"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Citation"
+          }
+        ],
+        "identifier": "citation",
+        "label": "Citation",
+        "html_id": "citation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you use "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-classo"
+          },
+          {
+            "type": "text",
+            "value": ", please cite:"
+          }
+        ]
+      },
+      {
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Bien, J., Yan, X., Simpson, L. and Müller, C. L. (2020). "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Tree-Aggregated Predictive Modeling of Microbiome Data"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". "
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "arXiv preprint arXiv:2002.08698"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Related Projects"
+          }
+        ],
+        "identifier": "related-projects",
+        "label": "Related Projects",
+        "html_id": "related-projects",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://github.com/Leo-Simpson/c-lasso",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "c-lasso"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": Python solvers for constrained lasso problems"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://github.com/Vlasovets/q2-gglasso",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "q2-gglasso"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": QIIME 2 plugin for graphical lasso problems"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://qiime2.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": Extensible microbiome analysis platform"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "License"
+          }
+        ],
+        "identifier": "license",
+        "label": "License",
+        "html_id": "license",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "BSD 3-Clause License. See "
+          },
+          {
+            "type": "link",
+            "url": "./LICENSE",
+            "children": [
+              {
+                "type": "text",
+                "value": "LICENSE"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for details."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bio-datascience",
+  "name": "q2-classo-latest",
+  "branch": "main",
+  "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+  "last_commit": {
+    "sha": "881aaf1ddd27a29be2abf9f1b5872a5c13583673",
+    "status": "passed",
+    "date": "2025-09-22T09:11:05Z"
+  },
+  "stars": 0,
+  "description": "Constrained sparse regression and classification",
+  "distros": [
+    [
+      "2025.4",
+      "amplicon",
+      "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
+    ]
+  ]
+}

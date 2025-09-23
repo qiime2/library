@@ -1,0 +1,601 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/License-BSD%203--Clause-blue.svg",
+                "alt": "BSD License"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://www.python.org/",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/python-%3E3.6-blue",
+                "alt": "Python version"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "http://gglasso.readthedocs.io/?badge=latest",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://readthedocs.org/projects/gglasso/badge/?version=latest",
+                "alt": "Documentation Status"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/Vlasovets/q2-gglasso/actions/workflows/ci.yml",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://github.com/Vlasovets/q2-gglasso/actions/workflows/ci.yml/badge.svg?branch=main&event=push",
+                "alt": "CI"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "A "
+              },
+              {
+                "type": "link",
+                "url": "https://qiime2.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " plugin for solving "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "General Graphical Lasso (GGLasso)"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " problems with microbiome data including:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Single Graphical Lasso (SGL)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Adaptive SGL"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "SGL with latent variables"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Multiple Graphical Lasso (MGL)"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "MGL with latent variables"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "GGL in the nonconforming case"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "📚 "
+          },
+          {
+            "type": "link",
+            "url": "https://gglasso.readthedocs.io/en/latest/",
+            "children": [
+              {
+                "type": "text",
+                "value": "Documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " |\n📂 "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/Vlasovets/atacama-soil-microbiome-tutorial",
+            "children": [
+              {
+                "type": "text",
+                "value": "Tutorial & Examples"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "First, make sure you have GGLasso is installed:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda install -q gglasso"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "OR"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "pip install gglasso"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Next to install the plugin:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "pip install git+https://github.com/bio-datascience/q2-gglasso.git\nqiime dev refresh-cache"
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage Tutorial"
+          }
+        ],
+        "identifier": "usage-tutorial",
+        "label": "Usage Tutorial",
+        "html_id": "usage-tutorial",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A complete tutorial on using "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-gglasso"
+          },
+          {
+            "type": "text",
+            "value": " for microbiome data analysis — including preprocessing, CLR transformation, model fitting, and visualization — is available at:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "👉 "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "link",
+                "url": "https://github.com/Vlasovets/atacama-soil-microbiome-tutorial",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Atacama Soil Microbiome Tutorial"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This tutorial includes:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Input formatting and CLR transformation"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Applications of SGL, adaptive SGL, and SGL with latent variables"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Network visualizations of ASV associations"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Covariate analysis and interpretation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Citation"
+          }
+        ],
+        "identifier": "citation",
+        "label": "Citation",
+        "html_id": "citation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you use "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-gglasso"
+          },
+          {
+            "type": "text",
+            "value": ", please cite:"
+          }
+        ]
+      },
+      {
+        "type": "blockquote",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Schaipp, F., Vlasovets, O., & Müller, C. L. (2021). "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "GGLasso – a Python package for General Graphical Lasso computation"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ". "
+              },
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Journal of Open Source Software, 6"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "(68), 3865. "
+              },
+              {
+                "type": "link",
+                "url": "https://doi.org/10.21105/joss.03865",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "https://doi.org/10.21105/joss.03865"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Related Projects"
+          }
+        ],
+        "identifier": "related-projects",
+        "label": "Related Projects",
+        "html_id": "related-projects",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://github.com/Vlasovets/gglasso",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "gglasso"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": Python solvers for graphical lasso problems"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://github.com/Vlasovets/atacama-soil-microbiome-tutorial",
+                "children": [
+                  {
+                    "type": "inlineCode",
+                    "value": "atacama-soil-microbiome-tutorial"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": Full tutorial and example analyses"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "License"
+          }
+        ],
+        "identifier": "license",
+        "label": "License",
+        "html_id": "license",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "BSD 3-Clause License. See "
+          },
+          {
+            "type": "link",
+            "url": "./LICENSE",
+            "children": [
+              {
+                "type": "text",
+                "value": "LICENSE"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for details."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bio-datascience",
+  "name": "q2-gglasso",
+  "branch": "main",
+  "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+  "last_commit": {
+    "sha": "5aebb7ebe94d9b5e220c8132de34c5f4db292928",
+    "status": "passed",
+    "date": "2025-09-22T10:10:02Z"
+  },
+  "stars": 1,
+  "description": "QIIME 2 plugin which contains algorithms for solving General Graphical Lasso (GGLasso) problems",
+  "distros": [
+    [
+      "2025.4",
+      "amplicon",
+      "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
+    ]
+  ]
+}

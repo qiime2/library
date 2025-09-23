@@ -1,6 +1,46 @@
 {
   "plugins": [
     {
+      "owner": "bio-datascience",
+      "name": "q2-gglasso",
+      "branch": "main",
+      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+      "last_commit": {
+        "sha": "5aebb7ebe94d9b5e220c8132de34c5f4db292928",
+        "status": "passed",
+        "date": "2025-09-22T10:10:02Z"
+      },
+      "stars": 1,
+      "description": "QIIME 2 plugin which contains algorithms for solving General Graphical Lasso (GGLasso) problems",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bio-datascience",
+      "name": "q2-classo-latest",
+      "branch": "main",
+      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+      "last_commit": {
+        "sha": "881aaf1ddd27a29be2abf9f1b5872a5c13583673",
+        "status": "passed",
+        "date": "2025-09-22T09:11:05Z"
+      },
+      "stars": 0,
+      "description": "Constrained sparse regression and classification",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
@@ -112,66 +152,6 @@
           "2025.4",
           "amplicon",
           "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "branch": "main",
-      "docs": "https://q2-boots.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "946b12ea7915cb006b62307fd3698cea05ad829b",
-        "status": "passed",
-        "date": "2025-08-27T22:37:28Z"
-      },
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": [
-        [
-          "2025.7",
-          "amplicon",
-          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "cduvallet",
-      "name": "q2-dbotu",
-      "branch": "master",
-      "docs": "https://github.com/cduvallet/q2-dbotu",
-      "last_commit": {
-        "sha": "2da1e7cb508443bf4200cbf3c584fd986e8baa12",
-        "status": "passed",
-        "date": "2025-08-22T21:49:07Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for distribution-based clustering",
-      "distros": [
-        [
-          "2025.7",
-          "amplicon",
-          "environment-files/q2-dbotu-qiime2-amplicon-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-dbotu-qiime2-tiny-2025.7.yml"
         ]
       ]
     }
@@ -290,5 +270,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-09-22T01:43:03.149Z"
+  "last_updated": "2025-09-23T01:27:15.312Z"
 }
