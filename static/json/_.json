@@ -7,11 +7,15 @@
     "base": "https://bokulich-lab.github.io/moshpit-docs/",
     "pretty": true
   },
-  "q2-gglasso": {
+  "q2-demux": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
+  },
+  "q2-classo-latest": {
     "base": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
     "pretty": true
   },
-  "q2-classo-latest": {
+  "q2-gglasso": {
     "base": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
     "pretty": true
   },
@@ -31,10 +35,6 @@
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
-  "q2-demux": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
@@ -45,6 +45,10 @@
   },
   "q2-amrfinderplus": {
     "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+    "pretty": true
+  },
+  "q2-rgi": {
+    "base": "https://github.com/bokulich-lab/q2-rgi/wiki",
     "pretty": true
   },
   "q2-types": {
@@ -173,6 +177,10 @@
   },
   "q2-picrust2": {
     "base": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+    "pretty": true
+  },
+  "q2-metnet": {
+    "base": "https://github.com/PlanesLab/q2-metnet/tree/main",
     "pretty": true
   }
 }

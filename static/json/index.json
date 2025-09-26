@@ -1,6 +1,51 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "0867f118aac83afc5624bc4d4e576ee5fc1917c0",
+        "status": "passed",
+        "date": "2025-09-25T13:45:12Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bio-datascience",
+      "name": "q2-classo-latest",
+      "branch": "main",
+      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+      "last_commit": {
+        "sha": "f7056e0d3615553dac0e03922ad4e82aca6f02cc",
+        "status": "passed",
+        "date": "2025-09-25T12:03:35Z"
+      },
+      "stars": 0,
+      "description": "Constrained sparse regression and classification",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bio-datascience",
       "name": "q2-gglasso",
       "branch": "main",
@@ -17,26 +62,6 @@
           "2025.4",
           "amplicon",
           "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bio-datascience",
-      "name": "q2-classo-latest",
-      "branch": "main",
-      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
-      "last_commit": {
-        "sha": "881aaf1ddd27a29be2abf9f1b5872a5c13583673",
-        "status": "passed",
-        "date": "2025-09-22T09:11:05Z"
-      },
-      "stars": 0,
-      "description": "Constrained sparse regression and classification",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
         ]
       ]
     },
@@ -92,31 +117,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "ae7ade073f77702d9d2427728a717f1d117bf6a8",
-        "status": "passed",
-        "date": "2025-09-12T11:17:20Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
@@ -139,7 +139,7 @@
       "owner": "bokulich-lab",
       "name": "q2-rgi",
       "branch": "main",
-      "docs": null,
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
       "last_commit": {
         "sha": "c7621e19ca10a5e191fb942e5079495b3fa442be",
         "status": "passed",
@@ -270,5 +270,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-09-25T01:29:20.462Z"
+  "last_updated": "2025-09-26T01:28:19.556Z"
 }
