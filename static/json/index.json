@@ -2,6 +2,51 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "a84d4573bce224772ab2a2de24a86e00de260dea",
+        "status": "passed",
+        "date": "2025-09-26T09:53:50Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "53fce62edfdadb22ed606114841df741ce8fb3a3",
+        "status": "passed",
+        "date": "2025-09-26T09:24:21Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
       "docs": null,
@@ -92,31 +137,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "543baf82d897a01e29e986e6e13ed86c08c8ec2f",
-        "status": "passed",
-        "date": "2025-09-16T08:06:01Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
@@ -132,26 +152,6 @@
           "2024.10",
           "pathogenome",
           "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "c7621e19ca10a5e191fb942e5079495b3fa442be",
-        "status": "passed",
-        "date": "2025-09-11T10:04:16Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
         ]
       ]
     }
@@ -270,5 +270,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-09-26T01:28:19.556Z"
+  "last_updated": "2025-09-27T01:24:42.830Z"
 }
