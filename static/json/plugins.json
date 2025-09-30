@@ -2,6 +2,127 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "0e6d6cf71a5affe2178ab693d2b4cc3733c7e633",
+        "status": "passed",
+        "date": "2025-09-29T20:36:39Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "RESCRIPt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 97,
+      "description": "REference Sequence annotation and CuRatIon Pipeline",
+      "branch": "master",
+      "last_commit": {
+        "sha": "3625f2ad47105afd8e92c0dadfc2c5996cc52a8d",
+        "status": "passed",
+        "date": "2025-09-29T17:03:05Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "137a03a9202dd30d11e93d5cd72280b1701a33fa",
+        "status": "passed",
+        "date": "2025-09-29T11:53:45Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -47,26 +168,6 @@
           "2024.10",
           "metagenome",
           "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "53fce62edfdadb22ed606114841df741ce8fb3a3",
-        "status": "passed",
-        "date": "2025-09-26T09:24:21Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
-      "distros": [
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
         ]
       ]
     },
@@ -155,31 +256,6 @@
         "status": "passed",
         "date": "2025-09-25T17:51:11Z"
       }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "0867f118aac83afc5624bc4d4e576ee5fc1917c0",
-        "status": "passed",
-        "date": "2025-09-25T13:45:12Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
     },
     {
       "owner": "bio-datascience",
@@ -1014,82 +1090,6 @@
         "sha": "4e5baf7cd71ab440bf3b03089d545d52bebbad97",
         "status": "passed",
         "date": "2025-08-27T22:12:37Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "RESCRIPt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2025.7",
-          "amplicon",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 97,
-      "description": "REference Sequence annotation and CuRatIon Pipeline",
-      "branch": "master",
-      "last_commit": {
-        "sha": "925436a067d95b69d96a2b62c07885b0980a380f",
-        "status": "passed",
-        "date": "2025-08-27T20:03:31Z"
       }
     },
     {
