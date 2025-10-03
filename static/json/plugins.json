@@ -2,6 +2,26 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "ca76f4d4cd2555054500b0a048e787d89178bb97",
+        "status": "passed",
+        "date": "2025-10-02T14:44:31Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
       "docs": null,
@@ -654,26 +674,6 @@
           "2024.10",
           "pathogenome",
           "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "c7621e19ca10a5e191fb942e5079495b3fa442be",
-        "status": "passed",
-        "date": "2025-09-11T10:04:16Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
         ]
       ]
     },

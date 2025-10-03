@@ -2,6 +2,26 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "ca76f4d4cd2555054500b0a048e787d89178bb97",
+        "status": "passed",
+        "date": "2025-10-02T14:44:31Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
       "docs": null,
@@ -134,26 +154,6 @@
           "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "last_commit": {
-        "sha": "894ba71d2252de3b33310e63f916254c9abc05d1",
-        "status": "passed",
-        "date": "2025-09-11T14:34:51Z"
-      },
-      "stars": 0,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        [
-          "2024.10",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -270,5 +270,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-10-02T01:26:39.817Z"
+  "last_updated": "2025-10-03T01:26:08.191Z"
 }
