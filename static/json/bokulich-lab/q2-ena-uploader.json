@@ -46,8 +46,17 @@
           },
           {
             "type": "image",
-            "url": "https://img.shields.io/badge/ENA%20Studies-5-blue",
+            "url": "https://img.shields.io/badge/ENA%20Studies-9-blue",
             "alt": "ENA Studies"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "image",
+            "url": "https://img.shields.io/badge/ENA%20Samples-5638-blue",
+            "alt": "ENA Samples"
           }
         ]
       },
@@ -1857,6 +1866,16 @@
   },
   "releases": [
     {
+      "tag_name": "2025.10.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2025.10.0.dev0",
+      "name": "2025.10.0.dev0",
+      "published_at": "2025-10-03T12:11:03Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
       "tag_name": "2025.4.0.dev1",
       "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2025.4.0.dev1",
       "name": "2025.4.0.dev1",
@@ -1892,9 +1911,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "72b95eed6450213e4cc620676235aeeeacebd9ec",
+    "sha": "ba6174ceedbf91055b881eb9c7192027d0806b33",
     "status": "passed",
-    "date": "2025-09-28T00:28:45Z"
+    "date": "2025-10-03T12:09:47Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",

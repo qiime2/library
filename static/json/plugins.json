@@ -2,13 +2,38 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "5a28a3c271cd6b9972040d6b0610dc18eb37e990",
+        "status": "failed",
+        "date": "2025-10-03T12:19:55Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-rgi",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
       "last_commit": {
-        "sha": "ca76f4d4cd2555054500b0a048e787d89178bb97",
+        "sha": "ea9f607d77f6b41a2ce59a5e7e9f949de9e11006",
         "status": "passed",
-        "date": "2025-10-02T14:44:31Z"
+        "date": "2025-10-03T12:12:05Z"
       },
       "stars": 3,
       "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
@@ -17,6 +42,31 @@
           "2025.4",
           "amplicon",
           "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "ba6174ceedbf91055b881eb9c7192027d0806b33",
+        "status": "passed",
+        "date": "2025-10-03T12:09:47Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     },
@@ -138,56 +188,6 @@
           "2025.7",
           "tiny",
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "72b95eed6450213e4cc620676235aeeeacebd9ec",
-        "status": "passed",
-        "date": "2025-09-28T00:28:45Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "a84d4573bce224772ab2a2de24a86e00de260dea",
-        "status": "passed",
-        "date": "2025-09-26T09:53:50Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
         ]
       ]
     },
