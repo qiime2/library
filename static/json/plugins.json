@@ -1,6 +1,31 @@
 {
   "plugins": [
     {
+      "owner": "biocore",
+      "name": "q2-conduit",
+      "branch": "main",
+      "docs": "https://github.com/biocore/q2-conduit",
+      "last_commit": {
+        "sha": "0a4a7eee677b5fec780efb90f6caebabbec64030",
+        "status": "passed",
+        "date": "2025-10-08T21:17:26Z"
+      },
+      "stars": 0,
+      "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts usable in downstream analyses",
+      "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "environment-files/q2-conduit-qiime2-amplicon-2025.7.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-rgi",
       "branch": "main",
@@ -1752,31 +1777,6 @@
           "2025.7",
           "tiny",
           "environment-files/q2-perc-norm-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "biocore",
-      "name": "q2-conduit",
-      "branch": "main",
-      "docs": "https://github.com/biocore/q2-conduit",
-      "last_commit": {
-        "sha": "afdbcbf475d342978c3eec805708bf1af6b9f418",
-        "status": "passed",
-        "date": "2025-08-19T19:37:09Z"
-      },
-      "stars": 0,
-      "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts usable in downstream analyses",
-      "distros": [
-        [
-          "2025.7",
-          "amplicon",
-          "environment-files/q2-conduit-qiime2-amplicon-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
         ]
       ]
     },
