@@ -1,6 +1,51 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "e48c2fa8865b0909fc5b8d13bcf310563eca19ca",
+        "status": "passed",
+        "date": "2025-10-10T10:08:23Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "e585f2a35b105541cfca38bdfd24e4cf0b901b37",
+        "status": "failed",
+        "date": "2025-10-10T05:30:42Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "biocore",
       "name": "q2-conduit",
       "branch": "main",
@@ -22,51 +67,6 @@
           "2025.7",
           "moshpit",
           "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "c3df4e50ca3e9982830b7ac4bd6bc93fd37c933a",
-        "status": "passed",
-        "date": "2025-10-07T17:44:51Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "5a28a3c271cd6b9972040d6b0610dc18eb37e990",
-        "status": "failed",
-        "date": "2025-10-03T12:19:55Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
         ]
       ]
     },
@@ -275,5 +275,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-10-10T01:28:58.013Z"
+  "last_updated": "2025-10-11T01:25:32.432Z"
 }
