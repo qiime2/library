@@ -1,6 +1,51 @@
 {
   "plugins": [
     {
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "6c7bebf2de07b2dd1e7aab578b4bdde288872d8c",
+        "status": "passed",
+        "date": "2025-10-16T12:48:15Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-annotate",
       "branch": "main",
@@ -139,26 +184,6 @@
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
         ]
       ]
-    },
-    {
-      "owner": "bio-datascience",
-      "name": "q2-classo-latest",
-      "branch": "main",
-      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
-      "last_commit": {
-        "sha": "f7056e0d3615553dac0e03922ad4e82aca6f02cc",
-        "status": "passed",
-        "date": "2025-09-25T12:03:35Z"
-      },
-      "stars": 0,
-      "description": "Constrained sparse regression and classification",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -275,5 +300,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-10-16T01:38:51.654Z"
+  "last_updated": "2025-10-17T01:37:17.952Z"
 }
