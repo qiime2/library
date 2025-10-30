@@ -24,6 +24,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.10",
+      "tiny",
+      "2025.10/tiny/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.7",
       "amplicon",
       "2025.7/amplicon/released/seed-environment-conda.yml"
@@ -113,8 +118,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "61b847b406d1f923d21d975f1da89f0bc8ae2c0c",
+    "sha": "7f66dc28201d6c6f6fc284b8c6f0e7c10f1d3792",
     "status": "passed",
-    "date": "2025-08-26T21:53:41Z"
+    "date": "2025-10-29T18:31:04Z"
   }
 }
