@@ -1,0 +1,113 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-fastp/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-fastp",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-fastp/graph/badge.svg?token=QFSOA2xc7K",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "q2-fastp"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official "
+          },
+          {
+            "type": "link",
+            "url": "https://moshpit.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "MOSHPIT documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-fastp",
+  "docs": "https://moshpit.qiime2.org/",
+  "in_distro": true,
+  "distros": [
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ]
+  ],
+  "stars": 2,
+  "description": null,
+  "branch": "main",
+  "last_commit": {
+    "sha": "01beef705516c0a2b169ad05311c4d29be63810d",
+    "status": "failed",
+    "date": "2025-09-12T10:08:48Z"
+  }
+}

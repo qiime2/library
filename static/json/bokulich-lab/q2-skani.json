@@ -1,0 +1,118 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-skani/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/github/bokulich-lab/q2-skani",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/github/bokulich-lab/q2-skani/graph/badge.svg?token=721mYiVDPM",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For installation instructions head to the "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-skani",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Library"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-skani",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-skani",
+  "last_commit": {
+    "sha": "2067b57442c6146167b24d89bb06923f6a810806",
+    "status": "passed",
+    "date": "2025-09-29T11:00:03Z"
+  },
+  "stars": 0,
+  "description": "QIIME 2 plugin for ANI analysis using skani.",
+  "distros": [
+    [
+      "2025.7",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
+    ],
+    [
+      "2025.7",
+      "tiny",
+      "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
+    ],
+    [
+      "2025.4",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
+    ],
+    [
+      "2025.4",
+      "tiny",
+      "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
+    ]
+  ]
+}

@@ -442,9 +442,14 @@
   "releases": [],
   "owner": "dib-lab",
   "name": "q2-sourmash",
-  "docs": "https://bokulich-lab.github.io/moshpit-docs/",
+  "docs": "https://moshpit.qiime2.org/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "moshpit",

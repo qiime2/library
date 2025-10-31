@@ -4,8 +4,12 @@
     "pretty": false
   },
   "moshpit": {
-    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "base": "https://moshpit.qiime2.org/",
     "pretty": true
+  },
+  "q2-composition": {
+    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
+    "pretty": false
   },
   "q2-dada2": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -24,7 +28,7 @@
     "pretty": false
   },
   "q2-sourmash": {
-    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "base": "https://moshpit.qiime2.org/",
     "pretty": true
   },
   "q2-vsearch": {
@@ -99,10 +103,6 @@
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
   },
-  "q2-composition": {
-    "base": "https://amplicon-docs.readthedocs.io/en/latest/",
-    "pretty": false
-  },
   "q2-fondue": {
     "base": "https://amplicon-docs.readthedocs.io/en/latest/",
     "pretty": false
@@ -120,7 +120,7 @@
     "pretty": false
   },
   "q2-sapienns": {
-    "base": "https://bokulich-lab.github.io/moshpit-docs/",
+    "base": "https://moshpit.qiime2.org/",
     "pretty": true
   },
   "q2-micom": {
@@ -143,12 +143,20 @@
     "base": "https://github.com/bokulich-lab/q2-gunc",
     "pretty": true
   },
+  "q2-skani": {
+    "base": "https://github.com/bokulich-lab/q2-skani",
+    "pretty": true
+  },
   "q2-classo-latest": {
     "base": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
     "pretty": true
   },
   "q2-gglasso": {
     "base": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+    "pretty": true
+  },
+  "q2-fastp": {
+    "base": "https://moshpit.qiime2.org/",
     "pretty": true
   },
   "q2-boots": {
