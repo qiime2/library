@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "f6d10551c8a716be9dfc8123fabae964f490ef81",
+        "status": "pending",
+        "date": "2025-11-07T16:34:52Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2025.10",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
@@ -151,26 +171,6 @@
       ]
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "e48c2fa8865b0909fc5b8d13bcf310563eca19ca",
-        "status": "passed",
-        "date": "2025-10-10T10:08:23Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
       "owner": "biocore",
       "name": "q2-conduit",
       "branch": "main",
@@ -310,5 +310,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-11-07T01:42:10.211Z"
+  "last_updated": "2025-11-07T16:36:23.548Z"
 }
