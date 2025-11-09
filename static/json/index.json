@@ -2,6 +2,31 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "df9310266ee34156704765352203d776ce197823",
+        "status": "passed",
+        "date": "2025-11-09T00:42:18Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-rgi",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
@@ -169,31 +194,6 @@
           "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "biocore",
-      "name": "q2-conduit",
-      "branch": "main",
-      "docs": "https://github.com/biocore/q2-conduit",
-      "last_commit": {
-        "sha": "0a4a7eee677b5fec780efb90f6caebabbec64030",
-        "status": "passed",
-        "date": "2025-10-08T21:17:26Z"
-      },
-      "stars": 0,
-      "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts usable in downstream analyses",
-      "distros": [
-        [
-          "2025.7",
-          "amplicon",
-          "environment-files/q2-conduit-qiime2-amplicon-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -310,5 +310,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2025-11-08T01:36:53.969Z"
+  "last_updated": "2025-11-09T01:45:54.929Z"
 }
