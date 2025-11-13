@@ -2,6 +2,27 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-fastp",
+      "docs": "https://moshpit.qiime2.org/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 2,
+      "description": null,
+      "branch": "main",
+      "last_commit": {
+        "sha": "2144513369106c7899571d5a8dd2717dbc538a09",
+        "status": "failed",
+        "date": "2025-11-12T09:44:11Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
       "in_distro": true,
@@ -2663,27 +2684,6 @@
           "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-fastp",
-      "docs": "https://moshpit.qiime2.org/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 2,
-      "description": null,
-      "branch": "main",
-      "last_commit": {
-        "sha": "01beef705516c0a2b169ad05311c4d29be63810d",
-        "status": "failed",
-        "date": "2025-09-12T10:08:48Z"
-      }
     },
     {
       "owner": "cduvallet",
