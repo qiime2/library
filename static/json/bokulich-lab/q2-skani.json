@@ -87,13 +87,23 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-skani",
   "last_commit": {
-    "sha": "2067b57442c6146167b24d89bb06923f6a810806",
+    "sha": "828b21616b81893577eb9cc5fc1fd57917707dfd",
     "status": "passed",
-    "date": "2025-09-29T11:00:03Z"
+    "date": "2025-11-13T15:54:58Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for ANI analysis using skani.",
   "distros": [
+    [
+      "2025.10",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "tiny",
+      "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
+    ],
     [
       "2025.7",
       "moshpit",
