@@ -2,6 +2,37 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "05b45ea0ed5185bb2e3708be2bdb185ae902c8c2",
+        "status": "passed",
+        "date": "2025-11-14T07:23:49Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-assembly",
       "docs": "https://moshpit.qiime2.org/",
       "in_distro": true,
@@ -1432,37 +1463,6 @@
         "sha": "616a9cc2adf9c477f4a83e23931f5230beac2c0e",
         "status": "passed",
         "date": "2025-10-29T18:30:58Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "84336651e2ac267df48dae78a5e281cacda4f1cb",
-        "status": "passed",
-        "date": "2025-10-29T18:30:55Z"
       }
     },
     {

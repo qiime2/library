@@ -2,6 +2,61 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "fffd3604dc637ca6c4f1e9e591743f5dd57cbeff",
+        "status": "passed",
+        "date": "2025-11-14T07:24:25Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "05b45ea0ed5185bb2e3708be2bdb185ae902c8c2",
+        "status": "passed",
+        "date": "2025-11-14T07:23:49Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-skani",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-skani",
@@ -1508,31 +1563,6 @@
       }
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "84336651e2ac267df48dae78a5e281cacda4f1cb",
-        "status": "passed",
-        "date": "2025-10-29T18:30:55Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
-    },
-    {
       "owner": "qiime2",
       "name": "q2-demux",
       "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
@@ -2641,26 +2671,6 @@
       ]
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "137a03a9202dd30d11e93d5cd72280b1701a33fa",
-        "status": "passed",
-        "date": "2025-09-29T11:53:45Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
-      "distros": [
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
       "owner": "bio-datascience",
       "name": "q2-classo-latest",
       "branch": "main",
@@ -3000,6 +3010,11 @@
     [
       "2025.10",
       "moshpit",
+      "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
       "environment-files/q2-assembly-qiime2-moshpit-2025.10.yml"
     ],
     [
@@ -3201,6 +3216,11 @@
       "2025.10",
       "pathogenome",
       "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "tiny",
+      "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
     ],
     [
       "2025.10",

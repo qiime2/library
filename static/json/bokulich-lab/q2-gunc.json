@@ -108,13 +108,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-gunc",
   "last_commit": {
-    "sha": "137a03a9202dd30d11e93d5cd72280b1701a33fa",
+    "sha": "fffd3604dc637ca6c4f1e9e591743f5dd57cbeff",
     "status": "passed",
-    "date": "2025-09-29T11:53:45Z"
+    "date": "2025-11-14T07:24:25Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
   "distros": [
+    [
+      "2025.10",
+      "tiny",
+      "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
+    ],
     [
       "2025.7",
       "tiny",
