@@ -45,6 +45,21 @@
             "value": "\n"
           },
           {
+            "type": "link",
+            "url": "https://doi.org/10.5281/zenodo.17642489",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://zenodo.org/badge/814667937.svg",
+                "alt": "DOI"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
             "type": "image",
             "url": "https://img.shields.io/badge/ENA%20Studies-9-blue",
             "alt": "ENA Studies"
@@ -100,1771 +115,809 @@
         "type": "paragraph",
         "children": [
           {
-            "type": "image",
-            "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/img/ena_submission.webp",
-            "alt": "ENA Submission",
-            "width": 700
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
             "type": "text",
-            "value": "To develop this plugin, we followed the "
-          },
-          {
-            "type": "link",
-            "url": "https://ena-docs.readthedocs.io/en/latest/index.html",
-            "children": [
-              {
-                "type": "text",
-                "value": "ENA documentation"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": ". The submission process is depicted in the image above (courtesy of the ENA)."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 2,
-        "children": [
-          {
-            "type": "text",
-            "value": "Installation"
-          }
-        ],
-        "identifier": "installation",
-        "label": "Installation",
-        "html_id": "installation",
-        "implicit": true
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Existing QIIME 2 environment"
-          }
-        ],
-        "identifier": "existing-qiime-2-environment",
-        "label": "Existing QIIME 2 environment",
-        "html_id": "existing-qiime-2-environment",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "The "
-          },
-          {
-            "type": "emphasis",
-            "children": [
-              {
-                "type": "text",
-                "value": "q2-ena-uploader"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": " plugin can be installed into any QIIME 2 conda environment (see "
-          },
-          {
-            "type": "link",
-            "url": "https://docs.qiime2.org",
-            "children": [
-              {
-                "type": "text",
-                "value": "here"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": " for\nmore specific installation instructions). To install the plugin, run the following commands:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "conda activate <your QIIME 2 environment>"
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "pip install git+https://github.com/bokulich-lab/q2-ena-uploader.git"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Refresh the QIIME 2 cache and check if the plugin is available:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime dev refresh-cache\nqiime ena-uploader --help"
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "New QIIME 2 environment"
-          }
-        ],
-        "identifier": "new-qiime-2-environment",
-        "label": "New QIIME 2 environment",
-        "html_id": "new-qiime-2-environment",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Alternatively, you can also create a dedicated environment by executing:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "conda env create -n uploader-env --file https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-      },
-      {
-        "type": "heading",
-        "depth": 2,
-        "children": [
-          {
-            "type": "text",
-            "value": "Available actions"
-          }
-        ],
-        "identifier": "available-actions",
-        "label": "Available actions",
-        "html_id": "available-actions",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "The ena-uploader offers several actions for adding, deleting, and modifying your submission. See the list below for details:"
-          }
-        ]
-      },
-      {
-        "type": "table",
-        "children": [
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "header": true,
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Action"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "header": true,
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Description"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "submit-metadata-samples"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Upload sample and/or study metadata to ENA."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "submit-metadata-reads"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Upload experiment/runs metadata to ENA."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "transfer-files-to-ena"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Upload raw read files to the ENA FTP server."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "cancel-submission"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Cancel ENA metadata submission."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "submit-all"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Submit metadata and raw reads to ENA."
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "For a more detailed description of each action, refer to the sections below."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 2,
-        "children": [
-          {
-            "type": "text",
-            "value": "Submission workflow"
-          }
-        ],
-        "identifier": "submission-workflow",
-        "label": "Submission workflow",
-        "html_id": "submission-workflow",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "image",
-            "url": "img/workflow.png",
-            "alt": "Submission workflow",
-            "width": 700
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "The submission process using the "
-          },
-          {
-            "type": "emphasis",
-            "children": [
-              {
-                "type": "text",
-                "value": "q2-ena-uploader"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": " consists of several steps:"
-          }
-        ]
-      },
-      {
-        "type": "list",
-        "ordered": true,
-        "start": 0,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Create an "
-              },
-              {
-                "type": "link",
-                "url": "https://www.ebi.ac.uk/ena/submit/webin/login",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "ENA account"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " and obtain credentials - this should be done 24h before the actual submission."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Import metadata into QIIME artifacts."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Upload sample and study metadata to ENA."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Transfer raw reads to the ENA FTP server."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Upload experiment metadata to ENA."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Steps 2-4 should be performed in the specified order. Alternatively, the "
-          },
-          {
-            "type": "inlineCode",
-            "value": "submit-all"
-          },
-          {
-            "type": "text",
-            "value": " action can be used to\nsubmit metadata and raw reads in a single step. To jump to the section on simplified submission, click "
-          },
-          {
-            "type": "link",
-            "url": "#simplified-submission-workflow",
-            "children": [
-              {
-                "type": "text",
-                "value": "here"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": "."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Step 1: Import metadata"
-          }
-        ],
-        "identifier": "step-1-import-metadata",
-        "label": "Step 1: Import metadata",
-        "html_id": "step-1-import-metadata",
-        "implicit": true
-      },
-      {
-        "type": "heading",
-        "depth": 4,
-        "children": [
-          {
-            "type": "text",
-            "value": "Study"
-          }
-        ],
-        "identifier": "study",
-        "label": "Study",
-        "html_id": "study",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "To import the metadata of a study into the corresponding QIIME artifacts, run:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime tools import \\\n  --type ENAMetadataStudy \\\n  --input-path study_metadata.tsv \\\n  --output-path study_metadata.qza"
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!TIP]\nTo create a valid study TSV file, two mandatory parameters are required: "
-              },
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "alias"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " and "
-              },
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "title"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": ". All other parameters are optional."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "For fields such as URL links, both the description and the link should be combined into a single field in the TSV file, separated by a "
-              },
-              {
-                "type": "inlineCode",
-                "value": "|"
-              },
-              {
-                "type": "text",
-                "value": " symbol.\nThe name of the filed should start with the "
-              },
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "project_attribute_"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " prefix."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "When constructing a valid study metadata TSV file, consider consulting one of the provided examples:"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "spread": false,
-            "children": [
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/study-minimal.tsv",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "minimal"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/study-extended.tsv",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "extended"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 4,
-        "children": [
-          {
-            "type": "text",
-            "value": "Samples"
-          }
-        ],
-        "identifier": "samples",
-        "label": "Samples",
-        "html_id": "samples",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "To import the sample metadata into the corresponding QIIME artifacts, run:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime tools import \\\n  --type ENAMetadataSamples \\\n  --input-path sample_metadata.tsv \\\n  --output-path sample_metadata.qza"
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!TIP]\nFor sample submission, ENA provides metadata checklists detailing the minimal attributes required for different sample types.\nPlease review the full range of checklists "
-              },
-              {
-                "type": "link",
-                "url": "https://www.ebi.ac.uk/ena/browser/checklists",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "here"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " before submitting your samples."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!NOTE]\nWhen using the default checklist for all your samples, you don’t need to specify the default code "
-              },
-              {
-                "type": "link",
-                "url": "https://www.ebi.ac.uk/ena/browser/view/ERC000011",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "ERC000011"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": ".\nHowever, if you apply multiple checklists for different samples, you must include all relevant codes in the metadata column checklist."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!IMPORTANT]\nMinimal sample structure refers to the default data checklist. To create a valid TSV file, four mandatory parameters are needed for each sample:"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "spread": false,
-            "children": [
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "alias"
-                  },
-                  {
-                    "type": "text",
-                    "value": " (sample ID)"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "taxon_id"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "geographic location (country and/or sea)"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "collection date"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "When constructing a valid study metadata TSV file, consider consulting one of the provided examples:"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "spread": false,
-            "children": [
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/sample-minimal.tsv",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "minimal"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/sample-extended.tsv",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "extended"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 4,
-        "children": [
-          {
-            "type": "text",
-            "value": "Experiments"
-          }
-        ],
-        "identifier": "experiments",
-        "label": "Experiments",
-        "html_id": "experiments",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "To import the experiment metadata into the corresponding QIIME artifacts, run:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime tools import \\\n  --type ENAMetadataExperiment \\\n  --input-path experiment_metadata.tsv \\\n  --output-path experiment_metadata.qza"
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!IMPORTANT]\nFor experiment submission, ENA supports controlled vocabulary in the metadata fields, which can be accessed "
-              },
-              {
-                "type": "link",
-                "url": "https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "here"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": "."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!IMPORTANT]\nThe minimal experiment structure requires the following mandatory fields:"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "spread": false,
-            "children": [
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "title"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "study_ref"
-                  },
-                  {
-                    "type": "text",
-                    "value": " (study alias or accession number - should correspond to the alias indicated in the study metadata)"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "sample_description"
-                  },
-                  {
-                    "type": "text",
-                    "value": " (sample id)"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "platform"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "instrument_model"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "library_strategy"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "library_source"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "library_selection"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "library_layout"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "library_nominal_length"
-                  },
-                  {
-                    "type": "text",
-                    "value": " (only for paired reads)"
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "inlineCode",
-                    "value": "library_nominal_sdev"
-                  },
-                  {
-                    "type": "text",
-                    "value": " (only for paired reads)"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "The field "
-              },
-              {
-                "type": "inlineCode",
-                "value": "library_construction_protocol"
-              },
-              {
-                "type": "text",
-                "value": " is optional."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "When constructing a valid experiment metadata TSV file, consider consulting one of the provided examples:"
-              }
-            ]
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "spread": false,
-            "children": [
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/experiment-minimal.tsv",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "minimal"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://raw.githubusercontent.com/bokulich-lab/q2-ena-uploader/main/templates/experiment-extended.tsv",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "extended"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Step 2: Upload sample/study metadata"
-          }
-        ],
-        "identifier": "step-2-upload-sample-study-metadata",
-        "label": "Step 2: Upload sample/study metadata",
-        "html_id": "step-2-upload-sample-study-metadata",
-        "implicit": true
-      },
-      {
-        "type": "list",
-        "ordered": true,
-        "start": 1,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Before uploading to ENA, you need to set two environmental variables containing your ENA credentials:"
-                  }
-                ]
-              },
-              {
-                "type": "code",
-                "lang": "shell",
-                "value": "export ENA_USERNAME=<Webin-XXXXXX>\nexport ENA_PASSWORD=<password>"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!WARNING]\nPlease ensure that your credentials are set at least 24 hours before your first submission to the ENA server."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "list",
-        "ordered": true,
-        "start": 2,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Execute the following QIIME 2 action to submit study and sample metadata to perform a test submission to the ENA "
-                  },
-                  {
-                    "type": "emphasis",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "dev"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "value": " server:"
-                  }
-                ]
-              },
-              {
-                "type": "code",
-                "lang": "shell",
-                "value": "qiime ena-uploader submit-metadata-samples \\\n  --i-study study_metadata.qza \\\n  --i-samples sample_metadata.qza \\\n  --p-action ADD \\\n  --p-dev \\\n  --p-submission-hold-date <hold date> \\\n  --o-submission-receipt samples_receipt.qza"
-              },
-              {
-                "type": "list",
-                "ordered": false,
-                "spread": false,
-                "children": [
-                  {
-                    "type": "listItem",
-                    "spread": true,
-                    "children": [
-                      {
-                        "type": "inlineCode",
-                        "value": "--i-study"
-                      },
-                      {
-                        "type": "text",
-                        "value": ": Artifact containing metadata of the study."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "listItem",
-                    "spread": true,
-                    "children": [
-                      {
-                        "type": "inlineCode",
-                        "value": "--i-samples"
-                      },
-                      {
-                        "type": "text",
-                        "value": ": Artifact containing metadata of the samples."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "listItem",
-                    "spread": true,
-                    "children": [
-                      {
-                        "type": "inlineCode",
-                        "value": "--p-action-type"
-                      },
-                      {
-                        "type": "text",
-                        "value": ": 2 action types are supported: ADD (default) and MODIFY."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "listItem",
-                    "spread": true,
-                    "children": [
-                      {
-                        "type": "inlineCode",
-                        "value": "--p-dev"
-                      },
-                      {
-                        "type": "text",
-                        "value": ": A boolean parameter indicating whether the submission is a test."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "listItem",
-                    "spread": true,
-                    "children": [
-                      {
-                        "type": "inlineCode",
-                        "value": "--p-submission-hold-date"
-                      },
-                      {
-                        "type": "text",
-                        "value": ": The release date of the study, on which it will become public along with all submitted data. By default, this date is set to two months after the date of submission. Users can specify any date within two years of the current date. Accepted date format is "
-                      },
-                      {
-                        "type": "inlineCode",
-                        "value": "YYYY-MM-DD"
-                      },
-                      {
-                        "type": "text",
-                        "value": "."
-                      }
-                    ]
-                  },
-                  {
-                    "type": "listItem",
-                    "spread": true,
-                    "children": [
-                      {
-                        "type": "inlineCode",
-                        "value": "--o-submission-receipt"
-                      },
-                      {
-                        "type": "text",
-                        "value": ": The output artifact containing the assigned ENA accession numbers for the submitted objects."
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!NOTE]\nYou can submit a study and metadata either separately or together; only one of the corresponding artifacts is required for submission. However, please note that to submit raw reads later, both the study and samples must already exist on the ENA server."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!IMPORTANT]\nTo perform a test submission, set the "
-              },
-              {
-                "type": "inlineCode",
-                "value": "--p-dev"
-              },
-              {
-                "type": "text",
-                "value": " parameter to "
-              },
-              {
-                "type": "inlineCode",
-                "value": "True"
-              },
-              {
-                "type": "text",
-                "value": " (this is also the default). This will submit the data to the ENA "
-              },
-              {
-                "type": "emphasis",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "dev"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " server\n(this data will be removed automatically after 24h). To submit the data to the production server, set the parameter to "
-              },
-              {
-                "type": "inlineCode",
-                "value": "False"
-              },
-              {
-                "type": "text",
-                "value": " or use the "
-              },
-              {
-                "type": "inlineCode",
-                "value": "--p-no-dev"
-              },
-              {
-                "type": "text",
-                "value": " flag."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Step 3: Upload raw reads"
-          }
-        ],
-        "identifier": "step-3-upload-raw-reads",
-        "label": "Step 3: Upload raw reads",
-        "html_id": "step-3-upload-raw-reads",
-        "implicit": true
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!NOTE]\nBefore submitting the experiment, you must first transfer your files to the ENA FTP server.\nEnsure again that your environment variables ENA_USERNAME and ENA_PASSWORD are properly set."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Execute the following QIIME 2 action to transfer the FASTQ files to the ENA FTP server."
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime ena-uploader transfer-files-to-ena \\\n  --i-demux <your reads artifact> \\\n  --p-action ADD \\\n  --o-metadata transfer_metadata.qza"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--i-demux"
-              },
-              {
-                "type": "text",
-                "value": ": The demultiplexed sequencing data, either single-end or paired-end."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--p-action"
-              },
-              {
-                "type": "text",
-                "value": ": Specifies the action to take. The default is ADD, but you can use DELETE to remove files from the ENA FTP server."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--o-metadata"
-              },
-              {
-                "type": "text",
-                "value": ": This is the output artifact containing information about the transfer or deletion status of files on the ENA FTP server."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Step 4: Upload experiment/run metadata"
-          }
-        ],
-        "identifier": "step-4-upload-experiment-run-metadata",
-        "label": "Step 4: Upload experiment/run metadata",
-        "html_id": "step-4-upload-experiment-run-metadata",
-        "implicit": true
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!IMPORTANT]\nMake sure that your credentials are configured through the environment variables "
-              },
-              {
-                "type": "inlineCode",
-                "value": "ENA_USERNAME"
-              },
-              {
-                "type": "text",
-                "value": " and "
-              },
-              {
-                "type": "inlineCode",
-                "value": "ENA_PASSWORD"
-              },
-              {
-                "type": "text",
-                "value": "."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Execute the following QIIME 2 action to submit experiment/run metadata to ENA:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime ena-uploader submit-metadata-reads \\\n  --i-demux <your reads artifact> \\\n  --i-experiment experiment_metadata.qza \\\n  --i-samples-submission-receipt samples_receipt.qza \\\n  --i-file-transfer-metadata transfer_metadata.qza \\\n  --p-submission-hold-date <hold date> \\\n  --p-action ADD \\\n  --p-dev \\\n  --o-submission-receipt receipt.qza"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--i-demux"
-              },
-              {
-                "type": "text",
-                "value": ": The demultiplexed sequencing data, either single-end or paired-end."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--i-experiment"
-              },
-              {
-                "type": "text",
-                "value": ": Artifact containing experiments submission parameters."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--i-samples-submission-receipt"
-              },
-              {
-                "type": "text",
-                "value": ": Artifact containing the submission receipt of the study and samples."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--i-file-transfer-metadata"
-              },
-              {
-                "type": "text",
-                "value": ": Artifact containing the metadata of the file transfer to the ENA FTP server."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--p-action"
-              },
-              {
-                "type": "text",
-                "value": ": 2 action types are supported: ADD (default) and MODIFY."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--p-dev"
-              },
-              {
-                "type": "text",
-                "value": ": A boolean parameter indicating whether the submission is a test."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--p-submission-hold-date"
-              },
-              {
-                "type": "text",
-                "value": ": The release date for the data submission, determining when it will become public. The accepted date format is YYYY-MM-DD."
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "inlineCode",
-                "value": "--submission-receipt"
-              },
-              {
-                "type": "text",
-                "value": ": The output artifact containing the assigned ENA accession numbers for the submitted objects."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "blockquote",
-        "children": [
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "text",
-                "value": "[!IMPORTANT]\nTo perform a test submission, set the "
-              },
-              {
-                "type": "inlineCode",
-                "value": "--p-dev"
-              },
-              {
-                "type": "text",
-                "value": " parameter to "
-              },
-              {
-                "type": "inlineCode",
-                "value": "True"
-              },
-              {
-                "type": "text",
-                "value": " (this is also the default). This will submit the data to the ENA "
-              },
-              {
-                "type": "emphasis",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "dev"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " server\n(this data will be removed automatically after 24h). To submit the data to the production server, set the parameter to "
-              },
-              {
-                "type": "inlineCode",
-                "value": "False"
-              },
-              {
-                "type": "text",
-                "value": " or use the "
-              },
-              {
-                "type": "inlineCode",
-                "value": "--p-no-dev"
-              },
-              {
-                "type": "text",
-                "value": " flag."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 2,
-        "children": [
-          {
-            "type": "text",
-            "value": "Simplified submission workflow"
-          }
-        ],
-        "identifier": "simplified-submission-workflow",
-        "label": "Simplified submission workflow",
-        "html_id": "simplified-submission-workflow",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "To submit all the metadata and raw reads in a single step, use the "
-          },
-          {
-            "type": "inlineCode",
-            "value": "submit-all"
-          },
-          {
-            "type": "text",
-            "value": " action. This action will perform all\nthe steps which are required for the submission in the correct order. To see details about the individual steps and\nrequired inputs please have a look at respective sections above."
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "To submit using the simplified procedure, execute the following command:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime ena-uploader submit-all \\\n  --i-study study_metadata.qza \\\n  --i-samples sample_metadata.qza \\\n  --i-experiment experiment_metadata.qza \\\n  --i-demux <your reads artifact> \\\n  --p-submission-hold-date <hold date> \\\n  --p-dev \\\n  --p-action ADD \\\n  --o-sample-submission-receipt samples_receipt.qza \\\n  --o-read-submission-receipt reads_receipt.qza \\\n  --o-file-upload-metadata upload_metadata.qza"
-      },
-      {
-        "type": "heading",
-        "depth": 2,
-        "children": [
-          {
-            "type": "text",
-            "value": "License"
-          }
-        ],
-        "identifier": "license",
-        "label": "License",
-        "html_id": "license",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "q2-ena-uploader is released under a BSD-3-Clause license. See LICENSE for more details."
+            "value": "The documentation and tutorials are available at https://bokulich-lab.github.io/q2-ena-uploader/."
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag_name": "2025.10.0",
+      "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2025.10.0",
+      "name": "2025.10.0",
+      "published_at": "2025-11-18T16:51:52Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: inject QIIME-related metadata into study attributes by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/3",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/3",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "3"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: add updated workflows by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/5",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#5"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/5",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "5"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add environment file by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/6",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#6"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/6",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "6"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: correct the path to the env file by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/7",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#7"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/7",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "7"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: trigger workflow on tag push by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/8",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#8"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/8",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "8"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: improve Docker image tags by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/9",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#9"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/9",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "9"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: add study workflow by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/10",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#10"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/10",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "10"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: update the study count workflow by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/11",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#11"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/11",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "11"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: adjust the address of the git remote repo by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/12",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#12"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/12",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "12"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: make the README links absolute by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/13",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#13"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/13",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "13"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: study count workflow updates by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/14",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#14"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/14",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "14"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: only commit study/sample counts if changed by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/15",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#15"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/15",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "15"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ADD: MyST documentation by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/16",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#16"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/16",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "16"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env file for QIIME 2 2025.10 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/17",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#17"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/17",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "17"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/16",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#16"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/16",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "16"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-ena-uploader/compare/2024.10.0...2025.10.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2024.10.0...2025.10.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/compare/2024.10.0...2025.10.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-ena-uploader",
+                  "issue_number": "2024.10.0...2025.10.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "tag_name": "2025.10.0.dev0",
       "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2025.10.0.dev0",
@@ -1911,13 +964,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "442c4ba268d93c1d216902b68141e6eab9a59a3b",
+    "sha": "36c13dda1c04216458b308771cf266a50310e6c5",
     "status": "passed",
-    "date": "2025-11-16T00:28:59Z"
+    "date": "2025-11-18T17:27:12Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
   "distros": [
+    [
+      "2025.10",
+      "tiny",
+      "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+    ],
     [
       "2025.7",
       "tiny",
