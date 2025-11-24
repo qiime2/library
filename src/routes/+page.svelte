@@ -19,7 +19,7 @@
         <h1 class='text-[#1a414c]'>Welcome to the QIIME 2 Library</h1>
         <p>
             This site is the hub for community distributed software, tutorials, and resources.<br/>
-            You can learn how to add your own plugins to this site <a href="https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html">here</a>.
+            You can learn how to add your own plugins to this site <a href="https://develop.qiime2.org/en/stable/plugins/how-to-guides/distribute-on-library.html">here</a>.
         </p>
     </div>
 </article>
