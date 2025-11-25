@@ -19,6 +19,12 @@
   ],
   "plugins": [
     {
+      "url": "https://genome-sampler.readthedocs.io/en/latest/",
+      "title": "genome-sampler documentation",
+      "source": "https://github.com/caporaso-lab/genome-sampler",
+      "description": ""
+    },
+    {
       "url": "https://q2-boots.readthedocs.io/en/latest/",
       "title": "q2-boots Documentation",
       "description": ""
@@ -26,12 +32,6 @@
     {
       "url": "https://q2-fmt.readthedocs.io/en/latest/",
       "title": "q2-fmt book",
-      "description": ""
-    },
-    {
-      "url": "https://genome-sampler.readthedocs.io/en/latest/",
-      "title": "genome-sampler documentation",
-      "source": "https://github.com/caporaso-lab/genome-sampler",
       "description": ""
     }
   ],
@@ -68,13 +68,13 @@
       "title": "Moving Pictures tutorial 🎥",
       "description": "",
       "thumbnail": "",
-      "url": "https://amplicon-docs.readthedocs.io/en/stable/tutorials/moving-pictures.html"
+      "url": "https://amplicon-docs.readthedocs.io/en/stable//tutorials/moving-pictures.html"
     },
     {
       "title": "Gut-to-soil axis tutorial 💩🌱",
       "description": "",
       "thumbnail": "",
-      "url": "https://amplicon-docs.readthedocs.io/en/stable/tutorials/gut-to-soil.html"
+      "url": "https://amplicon-docs.readthedocs.io/en/stable//tutorials/gut-to-soil.html"
     }
   ]
 }

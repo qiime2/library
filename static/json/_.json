@@ -7,13 +7,21 @@
     "base": "https://moshpit.qiime2.org/",
     "pretty": true
   },
-  "q2-ena-uploader": {
-    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
-    "pretty": true
+  "q2-fondue": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "genome-sampler": {
+    "base": "https://genome-sampler.readthedocs.io/en/latest/",
+    "pretty": false
   },
   "q2-feature-table": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
+  },
+  "q2-ena-uploader": {
+    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
+    "pretty": true
   },
   "q2-boots": {
     "base": "https://q2-boots.readthedocs.io/en/latest/",
@@ -127,10 +135,6 @@
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
-  "q2-fondue": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
   "q2-phylogeny": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
@@ -177,10 +181,6 @@
   },
   "q2-fmt": {
     "base": "https://q2-fmt.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "genome-sampler": {
-    "base": "https://genome-sampler.readthedocs.io/en/latest/",
     "pretty": false
   },
   "q2-picrust2": {

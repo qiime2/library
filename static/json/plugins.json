@@ -2,31 +2,77 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "c236f2248788895289acb7ceb5bfed13e8713e38",
-        "status": "passed",
-        "date": "2025-11-23T00:30:48Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "name": "q2-fondue",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
       "distros": [
         [
           "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
         ],
         [
           "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
         ],
         [
           "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 24,
+      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
+      "branch": "main",
+      "last_commit": {
+        "sha": "71797cbd7857cf5e4c3de496999c6e3c01431f52",
+        "status": "passed",
+        "date": "2025-11-24T21:43:11Z"
+      }
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "da619ed52037a3762f3dd540a0e1963de0ffa2c0",
+        "status": "passed",
+        "date": "2025-11-24T21:05:42Z"
+      },
+      "stars": 6,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": [
+        [
+          "2024.10",
+          "amplicon",
+          "environment-files/genome-sampler-qiime2-amplicon-2024.10.yml"
         ]
       ]
     },
@@ -126,10 +172,40 @@
       "description": "QIIME 2 plugin supporting operations on feature tables.",
       "branch": "dev",
       "last_commit": {
-        "sha": "830149532222c78f13307b848a6a3c1ea80def52",
+        "sha": "103a7a33d2ae8c63de3c2f47adf5c8fcae6eb717",
         "status": "passed",
-        "date": "2025-11-20T19:47:54Z"
+        "date": "2025-11-24T17:44:35Z"
       }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "c236f2248788895289acb7ceb5bfed13e8713e38",
+        "status": "passed",
+        "date": "2025-11-23T00:30:48Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
     },
     {
       "owner": "caporaso-lab",
@@ -2271,62 +2347,6 @@
       }
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-fondue",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 24,
-      "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
-      "branch": "main",
-      "last_commit": {
-        "sha": "2d6a60d35a12e801cf1f752dce531c728b24be1f",
-        "status": "passed",
-        "date": "2025-10-29T18:30:49Z"
-      }
-    },
-    {
       "owner": "qiime2",
       "name": "q2-phylogeny",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -2812,26 +2832,6 @@
           "2024.10",
           "amplicon",
           "environment-files/q2-fmt-qiime2-amplicon-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
-      "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "2021e22a418c5d82f3a323737d3063b43161103d",
-        "status": "passed",
-        "date": "2025-04-07T17:14:40Z"
-      },
-      "stars": 6,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": [
-        [
-          "2024.10",
-          "amplicon",
-          "environment-files/genome-sampler-qiime2-amplicon-2024.10.yml"
         ]
       ]
     },

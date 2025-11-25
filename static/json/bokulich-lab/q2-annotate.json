@@ -1314,6 +1314,574 @@
   },
   "releases": [
     {
+      "tag_name": "2025.10.0",
+      "html_url": "https://github.com/bokulich-lab/q2-annotate/releases/tag/2025.10.0",
+      "name": "2025.10.0",
+      "published_at": "2025-11-24T19:40:23Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: expose more parameters in the predict-genes-prodigal action by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Copilot",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Copilot"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/295",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#295"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/295",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "295"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add flag remove_empty to "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "filter-derep-mags"
+                  },
+                  {
+                    "type": "text",
+                    "value": " and "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "filter-mags"
+                  },
+                  {
+                    "type": "text",
+                    "value": " by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/VinzentRisch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@VinzentRisch"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/293",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#293"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/293",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "293"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DEP: template out version pins by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/303",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#303"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/303",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "303"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: expand the BUSCO visualization by including unbinned contigs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adsapountzi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adsapountzi"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/277",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#277"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/277",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "277"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: Update broken URL to download DIAMOND database for EggNOG by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/fethalen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@fethalen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/308",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#308"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/308",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "308"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: fix kraken2 classification failing because of empty fastq files by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/VinzentRisch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@VinzentRisch"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/288",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#288"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/288",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "288"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update pipelines that use the action partition_contigs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/VinzentRisch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@VinzentRisch"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/310",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#310"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/310",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "310"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Copilot",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Copilot"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/295",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#295"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/295",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "295"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adsapountzi",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adsapountzi"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/277",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#277"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/277",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "277"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/fethalen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@fethalen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/308",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#308"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/308",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "308"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-annotate/compare/2025.7.0.dev1...2025.10.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2025.7.0.dev1...2025.10.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-annotate/compare/2025.7.0.dev1...2025.10.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-annotate",
+                  "issue_number": "2025.7.0.dev1...2025.10.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2025.7.0.dev1",
       "html_url": "https://github.com/bokulich-lab/q2-annotate/releases/tag/2025.7.0.dev1",
       "name": "",
