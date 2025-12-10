@@ -20,9 +20,24 @@
   "releases": [],
   "owner": "qiime2",
   "name": "q2-quality-control",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -98,8 +113,8 @@
   "description": "A QIIME 2 plugin for quality control of sequence and feature data",
   "branch": "dev",
   "last_commit": {
-    "sha": "1d6e788f27c15c1f8308441cf6343884cf23838e",
+    "sha": "4a6e1826b31494e45d853ce99949d178037bdc0e",
     "status": "passed",
-    "date": "2025-08-27T20:02:44Z"
+    "date": "2025-10-29T18:30:50Z"
   }
 }

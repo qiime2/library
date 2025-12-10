@@ -7,7 +7,7 @@
         "children": [
           {
             "type": "image",
-            "url": "https://github.com/bokulich-lab/q2-gunc/actions/workflows/ci.yaml/badge.svg",
+            "url": "https://github.com/bokulich-lab/q2-skani/actions/workflows/ci.yaml/badge.svg",
             "alt": "CI"
           },
           {
@@ -16,11 +16,11 @@
           },
           {
             "type": "link",
-            "url": "https://codecov.io/gh/bokulich-lab/q2-gunc",
+            "url": "https://codecov.io/github/bokulich-lab/q2-skani",
             "children": [
               {
                 "type": "image",
-                "url": "https://codecov.io/gh/bokulich-lab/q2-gunc/graph/badge.svg?token=hE1Qmv0tzQ",
+                "url": "https://codecov.io/github/bokulich-lab/q2-skani/graph/badge.svg?token=721mYiVDPM",
                 "alt": "codecov"
               }
             ]
@@ -65,7 +65,7 @@
           },
           {
             "type": "link",
-            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-gunc",
+            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-skani",
             "children": [
               {
                 "type": "text",
@@ -81,49 +81,48 @@
       }
     ]
   },
-  "releases": [
-    {
-      "tag_name": "2025.10.0.dev1",
-      "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2025.10.0.dev1",
-      "name": "2025.10.0.dev1",
-      "published_at": "2025-09-29T09:59:37Z",
-      "ast": {
-        "type": "root",
-        "children": []
-      }
-    },
-    {
-      "tag_name": "2025.10.0.dev0",
-      "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2025.10.0.dev0",
-      "name": "2025.10.0.dev0",
-      "published_at": "2025-07-23T15:33:09Z",
-      "ast": {
-        "type": "root",
-        "children": []
-      }
-    }
-  ],
+  "releases": [],
   "owner": "bokulich-lab",
-  "name": "q2-gunc",
+  "name": "q2-skani",
   "branch": "main",
-  "docs": "https://github.com/bokulich-lab/q2-gunc",
+  "docs": "https://github.com/bokulich-lab/q2-skani",
   "last_commit": {
-    "sha": "fffd3604dc637ca6c4f1e9e591743f5dd57cbeff",
+    "sha": "828b21616b81893577eb9cc5fc1fd57917707dfd",
     "status": "passed",
-    "date": "2025-11-14T07:24:25Z"
+    "date": "2025-11-13T15:54:58Z"
   },
   "stars": 0,
-  "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+  "description": "QIIME 2 plugin for ANI analysis using skani.",
   "distros": [
     [
       "2025.10",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
+    ],
+    [
+      "2025.10",
       "tiny",
-      "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
+      "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
+    ],
+    [
+      "2025.7",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
     ],
     [
       "2025.7",
       "tiny",
-      "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+      "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
+    ],
+    [
+      "2025.4",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
+    ],
+    [
+      "2025.4",
+      "tiny",
+      "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
     ]
   ]
 }

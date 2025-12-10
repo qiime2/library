@@ -40,9 +40,29 @@
   ],
   "owner": "qiime2",
   "name": "q2-mystery-stew",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "tiny",
+      "2025.10/tiny/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -148,8 +168,8 @@
   "description": "This plugin exists to define integration tests between interfaces and the framework.",
   "branch": "dev",
   "last_commit": {
-    "sha": "25270e3185d8f9107cccbb9320eb3d1c619e63a5",
+    "sha": "5b4bf484812bec79623878eeb28c0bf04860f195",
     "status": "passed",
-    "date": "2025-08-26T21:52:46Z"
+    "date": "2025-10-29T18:31:00Z"
   }
 }

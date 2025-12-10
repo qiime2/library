@@ -75,9 +75,24 @@
   ],
   "owner": "qiime2",
   "name": "q2-taxa",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -153,8 +168,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "db2f7f5d4332e15f770986b2232f21129fb711d7",
+    "sha": "0cd980e87d8328276cb951d470317adf9fe3f9f2",
     "status": "passed",
-    "date": "2025-07-09T19:02:05Z"
+    "date": "2025-10-29T18:31:00Z"
   }
 }

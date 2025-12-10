@@ -6,7 +6,7 @@ The [QIIME 2 Library](https://library.qiime2.org) provides a means for QIIME 2 d
 
 ## Adding a plugin to the library
 
-To add to the library, please consult the docs [here](https://develop.qiime2.org/en/latest/plugins/how-to-guides/distribute-on-library.html).
+To add to the library, please consult the docs [here](https://develop.qiime2.org/en/stable/plugins/how-to-guides/distribute-on-library.html).
 
 ## Source of data for the library
 

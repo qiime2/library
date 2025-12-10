@@ -121,9 +121,14 @@
   ],
   "owner": "qiime2",
   "name": "q2-deblur",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -164,8 +169,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "71e17c2572ce13af87906ef81a63913749daa2c9",
+    "sha": "c2eea97b4ca6626857b8163a7fa35ff62c8f4712",
     "status": "passed",
-    "date": "2025-08-27T20:01:50Z"
+    "date": "2025-10-29T18:30:50Z"
   }
 }

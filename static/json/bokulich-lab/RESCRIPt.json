@@ -2830,9 +2830,24 @@
   ],
   "owner": "bokulich-lab",
   "name": "RESCRIPt",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -2898,8 +2913,8 @@
   "description": "REference Sequence annotation and CuRatIon Pipeline",
   "branch": "master",
   "last_commit": {
-    "sha": "925436a067d95b69d96a2b62c07885b0980a380f",
+    "sha": "e264ea82e20516cd55e8c16166acd41260cbfd12",
     "status": "passed",
-    "date": "2025-08-27T20:03:31Z"
+    "date": "2025-11-09T02:43:05Z"
   }
 }

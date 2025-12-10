@@ -75,9 +75,14 @@
   ],
   "owner": "qiime2",
   "name": "q2-dada2",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -114,12 +119,12 @@
       "2023.7/core/released/seed-environment-conda.yml"
     ]
   ],
-  "stars": 21,
+  "stars": 22,
   "description": "QIIME 2 plugin wrapping DADA2",
   "branch": "dev",
   "last_commit": {
-    "sha": "5ebd800e47b5ec72240a48ce6025007be0e0b675",
+    "sha": "0bb9323ad8eb54bcd0daf8ecd2ad68a02db102f8",
     "status": "passed",
-    "date": "2025-09-11T17:15:28Z"
+    "date": "2025-10-29T18:31:06Z"
   }
 }

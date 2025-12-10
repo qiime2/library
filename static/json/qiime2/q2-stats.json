@@ -41,9 +41,14 @@
   ],
   "owner": "qiime2",
   "name": "q2-stats",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -64,8 +69,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "0e345b989002e8af40ee3df61f9d7d94b345a080",
+    "sha": "d2a7eb984393d65ddba828c4067f1616c7c9ae44",
     "status": "passed",
-    "date": "2025-08-27T20:03:11Z"
+    "date": "2025-10-29T18:30:59Z"
   }
 }

@@ -20,9 +20,19 @@
   "releases": [],
   "owner": "qiime2",
   "name": "q2-vsearch",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -83,8 +93,8 @@
   "description": "vsearch plugin for QIIME 2",
   "branch": "dev",
   "last_commit": {
-    "sha": "e44795cddcfe5d6862e78ae8d728e0060773f1b0",
+    "sha": "73d7f2e674cb47741ce305c8834d64594d515102",
     "status": "passed",
-    "date": "2025-07-09T19:02:03Z"
+    "date": "2025-10-29T18:31:01Z"
   }
 }

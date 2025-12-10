@@ -145,6 +145,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
       "2025.7",
       "pathogenome",
       "2025.7/pathogenome/released/seed-environment-conda.yml"
@@ -164,8 +169,8 @@
   "description": null,
   "branch": "main",
   "last_commit": {
-    "sha": "47845d6fe554749f7971d0d6f1dec269c66fd32a",
+    "sha": "285252c8cd0014c8ed01ea3144f9e0aec752d0ba",
     "status": "passed",
-    "date": "2025-07-09T19:32:22Z"
+    "date": "2025-10-29T18:30:59Z"
   }
 }

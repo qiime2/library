@@ -2,7 +2,7 @@
   "distros": [
     {
       "book": {
-        "url": "https://amplicon-docs.readthedocs.io/en/latest/",
+        "url": "https://amplicon-docs.readthedocs.io/en/stable/",
         "title": "Microbiome marker gene analysis with QIIME 2",
         "source": "https://github.com/qiime2/amplicon-docs",
         "description": ""
@@ -20,6 +20,12 @@
   ],
   "plugins": [
     {
+      "url": "https://genome-sampler.readthedocs.io/en/latest/",
+      "title": "genome-sampler documentation",
+      "source": "https://github.com/caporaso-lab/genome-sampler",
+      "description": ""
+    },
+    {
       "url": "https://q2-boots.readthedocs.io/en/latest/",
       "title": "q2-boots Documentation",
       "description": ""
@@ -28,24 +34,18 @@
       "url": "https://q2-fmt.readthedocs.io/en/latest/",
       "title": "q2-fmt book",
       "description": ""
-    },
-    {
-      "url": "https://genome-sampler.readthedocs.io/en/latest/",
-      "title": "genome-sampler documentation",
-      "source": "https://github.com/caporaso-lab/genome-sampler",
-      "description": ""
     }
   ],
   "books": [
     {
-      "url": "https://use.qiime2.org/en/latest/",
+      "url": "https://use.qiime2.org/en/stable/",
       "source": "https://github.com/caporaso-lab/using-qiime2",
       "title": "Using QIIME 2",
       "description": "Your guide to becoming a QIIME 2 Framework power user.",
       "order": 0
     },
     {
-      "url": "https://develop.qiime2.org/en/latest/",
+      "url": "https://develop.qiime2.org/en/stable/",
       "source": "https://github.com/caporaso-lab/developing-with-qiime2",
       "title": "Developing with QIIME 2",
       "description": "Your guide for writing, testing, and distributing QIIME 2 plugins, interfaces, and documentation.",
@@ -69,13 +69,13 @@
       "title": "Moving Pictures tutorial 🎥",
       "description": "",
       "thumbnail": "",
-      "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/moving-pictures.html"
+      "url": "https://amplicon-docs.readthedocs.io/en/stable//tutorials/moving-pictures.html"
     },
     {
       "title": "Gut-to-soil axis tutorial 💩🌱",
       "description": "",
       "thumbnail": "",
-      "url": "https://amplicon-docs.readthedocs.io/en/latest//tutorials/gut-to-soil.html"
+      "url": "https://amplicon-docs.readthedocs.io/en/stable//tutorials/gut-to-soil.html"
     }
   ]
 }

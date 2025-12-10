@@ -157,9 +157,19 @@
   ],
   "owner": "qiime2",
   "name": "q2-emperor",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -220,8 +230,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "f3712a13bfbcdee380c00a5f31e8679eeaa6f906",
+    "sha": "f3598135a6e1a5cef19b005e91172eeb4f3cae56",
     "status": "passed",
-    "date": "2025-08-27T20:02:07Z"
+    "date": "2025-10-29T18:30:51Z"
   }
 }

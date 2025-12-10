@@ -433,9 +433,24 @@
   ],
   "owner": "qiime2",
   "name": "q2-vizard",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -486,8 +501,8 @@
   "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
   "branch": "dev",
   "last_commit": {
-    "sha": "7d02f87f6ac8ad013f1c322cd7a43eb4bb21bd50",
-    "status": "failed",
-    "date": "2025-08-19T22:35:55Z"
+    "sha": "6730060b48b47248cd1524f5ae4b08dcd0b96c21",
+    "status": "passed",
+    "date": "2025-10-29T18:30:50Z"
   }
 }

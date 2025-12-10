@@ -157,9 +157,19 @@
   ],
   "owner": "qiime2",
   "name": "q2-diversity",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -220,8 +230,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "7d790d3f2ea2c88718c338cd0431d628f04ec420",
+    "sha": "9477c04b43070d1af11daa1df2e06f6f6b3d7ca7",
     "status": "passed",
-    "date": "2025-08-20T17:41:38Z"
+    "date": "2025-11-06T18:10:31Z"
   }
 }

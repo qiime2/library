@@ -7,7 +7,7 @@
         "children": [
           {
             "type": "image",
-            "url": "https://github.com/bokulich-lab/q2-rgi/actions/workflows/ci-dev.yaml/badge.svg",
+            "url": "https://github.com/bokulich-lab/q2-rgi/actions/workflows/ci.yaml/badge.svg",
             "alt": "CI"
           },
           {
@@ -83,85 +83,23 @@
           },
           {
             "type": "text",
-            "value": ", follow the steps described below."
-          }
-        ]
-      },
-      {
-        "type": "details",
-        "children": [
+            "value": ", follow the steps described in the "
+          },
           {
-            "type": "summary",
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-rgi",
             "children": [
               {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "macOS (intel) / Linux"
-                  }
-                ]
+                "type": "text",
+                "value": "QIIME2 library"
               }
             ]
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "mamba create -yn q2-rgi \\\n  -c https://packages.qiime2.org/qiime2/2024.2/shotgun/released/ \\\n  -c qiime2 -c conda-forge -c bioconda -c defaults \\\n  qiime2 q2cli q2templates q2-types q2-feature-table q2-demux rgi tqdm\n\nconda activate q2-rgi\n\npip install --no-deps --force-reinstall \\\n  git+https://github.com/misialq/rgi.git@py38-fix \\\n  git+https://github.com/bokulich-lab/q2-rgi.git"
-      },
-      {
-        "type": "paragraph",
-        "children": [
+          },
           {
             "type": "text",
-            "value": "Refresh cache and check that everything worked:"
+            "value": "."
           }
         ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime dev refresh-cache\nqiime info"
-      },
-      {
-        "type": "details",
-        "children": [
-          {
-            "type": "summary",
-            "children": [
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "macOS (apple silicon)"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "CONDA_SUBDIR=osx-64 mamba create -yn q2-rgi \\\n  -c https://packages.qiime2.org/qiime2/2024.2/shotgun/released/ \\\n  -c qiime2 -c conda-forge -c bioconda -c defaults \\\n  qiime2 q2cli q2templates q2-types q2-feature-table q2-demux rgi tqdm\n\nconda activate q2-rgi\nconda config --env --set subdir osx-64\n\npip install --no-deps --force-reinstall \\\n  git+https://github.com/misialq/rgi.git@py38-fix \\\n  git+https://github.com/bokulich-lab/q2-rgi.git"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Refresh cache and check that everything worked:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "qiime dev refresh-cache\nqiime info"
       },
       {
         "type": "heading",
@@ -639,23 +577,34 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "2025.10",
+      "html_url": "https://github.com/bokulich-lab/q2-rgi/releases/tag/2025.10",
+      "name": "Release 2025.10",
+      "published_at": "2025-11-07T16:24:44Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
   "owner": "bokulich-lab",
   "name": "q2-rgi",
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
   "last_commit": {
-    "sha": "c7621e19ca10a5e191fb942e5079495b3fa442be",
-    "status": "passed",
-    "date": "2025-09-11T10:04:16Z"
+    "sha": "f6d10551c8a716be9dfc8123fabae964f490ef81",
+    "status": "failed",
+    "date": "2025-11-07T16:34:52Z"
   },
   "stars": 3,
   "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
   "distros": [
     [
-      "2025.4",
+      "2025.10",
       "amplicon",
-      "environment-files/q2-rgi-qiime2-amplicon-2025.4.yml"
+      "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
     ]
   ]
 }

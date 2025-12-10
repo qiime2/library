@@ -75,9 +75,19 @@
   ],
   "owner": "qiime2",
   "name": "q2-composition",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -138,8 +148,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "71010c7bcb247137ebf4dc030d33dfdb65b72e40",
-    "status": "failed",
-    "date": "2025-07-23T21:00:00Z"
+    "sha": "4d3e47cf032669bb47a93a4c27a854f49f2dbce3",
+    "status": "passed",
+    "date": "2025-10-30T18:27:02Z"
   }
 }

@@ -2294,7 +2294,7 @@
           },
           {
             "type": "link",
-            "url": "https://use.qiime2.org/en/latest/references/parallel-configuration.html#parallel-configuration",
+            "url": "https://use.qiime2.org/en/stable/references/parallel-configuration.html#parallel-configuration",
             "children": [
               {
                 "type": "text",
@@ -4376,9 +4376,24 @@
   ],
   "owner": "bokulich-lab",
   "name": "q2-fondue",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "moshpit",
@@ -4409,8 +4424,8 @@
   "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
   "branch": "main",
   "last_commit": {
-    "sha": "4e5baf7cd71ab440bf3b03089d545d52bebbad97",
+    "sha": "71797cbd7857cf5e4c3de496999c6e3c01431f52",
     "status": "passed",
-    "date": "2025-08-27T22:12:37Z"
+    "date": "2025-11-24T21:43:11Z"
   }
 }

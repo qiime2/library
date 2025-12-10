@@ -38,13 +38,13 @@
             "children": [
               {
                 "type": "text",
-                "value": "Dr. Charles Bayne"
+                "value": "Charlie Bayne"
               }
             ]
           },
           {
             "type": "text",
-            "value": " in the lab of "
+            "value": "\nin the lab of "
           },
           {
             "type": "link",
@@ -58,7 +58,7 @@
           },
           {
             "type": "text",
-            "value": ") provides a comprehensive metaproteomics workflow that combines peptide/protein identification and quantitation via "
+            "value": ") provides a\ncomprehensive metaproteomics workflow that combines peptide/protein\nidentification and quantitation via\n"
           },
           {
             "type": "link",
@@ -72,7 +72,16 @@
           },
           {
             "type": "text",
-            "value": " with extensive protein annotation support, as well as data integration and GUI features.  Protein quantitation and taxonomic identification outputs from Conduit can be imported into the "
+            "value": "\nwith extensive protein annotation support, as well as data integration and\nGUI features designed specifically for metaproteomics."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Protein quantitation and taxonomic identification outputs from Conduit can be\nimported into "
           },
           {
             "type": "link",
@@ -86,7 +95,7 @@
           },
           {
             "type": "text",
-            "value": " software to enable instant integration with that platform’s extensive analysis features.  q2-conduit is a QIIME 2 plugin that enables this import step."
+            "value": ", enabling seamless integration\nwith the platform’s extensive microbiome analysis tools. q2-conduit is a QIIME 2\nplugin that enables this import step."
           }
         ]
       },
@@ -263,9 +272,9 @@
   "branch": "main",
   "docs": "https://github.com/biocore/q2-conduit",
   "last_commit": {
-    "sha": "afdbcbf475d342978c3eec805708bf1af6b9f418",
+    "sha": "0a4a7eee677b5fec780efb90f6caebabbec64030",
     "status": "passed",
-    "date": "2025-08-19T19:37:09Z"
+    "date": "2025-10-08T21:17:26Z"
   },
   "stars": 0,
   "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts usable in downstream analyses",

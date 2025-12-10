@@ -20,9 +20,24 @@
   "releases": [],
   "owner": "qiime2",
   "name": "q2-sample-classifier",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -98,8 +113,8 @@
   "description": "QIIME 2 plugin for machine learning prediction of sample data.",
   "branch": "dev",
   "last_commit": {
-    "sha": "0ce9769676039946ba6d1611391746289e17a78e",
+    "sha": "f058c0d1d091e240e498f896198fa2d59155c041",
     "status": "passed",
-    "date": "2025-08-27T22:51:25Z"
+    "date": "2025-10-29T18:30:49Z"
   }
 }

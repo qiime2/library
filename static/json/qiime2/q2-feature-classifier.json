@@ -75,9 +75,24 @@
   ],
   "owner": "qiime2",
   "name": "q2-feature-classifier",
-  "docs": "https://amplicon-docs.readthedocs.io/en/latest/",
+  "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
   "in_distro": true,
   "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "2025.10/amplicon/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.7",
       "amplicon",
@@ -149,12 +164,12 @@
       "2023.7/core/released/seed-environment-conda.yml"
     ]
   ],
-  "stars": 19,
+  "stars": 21,
   "description": "QIIME 2 plugin supporting taxonomic classification",
   "branch": "dev",
   "last_commit": {
-    "sha": "04099b2092702dabd04b727424632d787db9d9aa",
+    "sha": "9c14b13e3519fd5c40e2e8929776717f4d357594",
     "status": "passed",
-    "date": "2025-08-27T20:02:25Z"
+    "date": "2025-10-29T18:30:51Z"
   }
 }
