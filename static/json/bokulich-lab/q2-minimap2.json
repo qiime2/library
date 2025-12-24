@@ -1,0 +1,730 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-minimap2/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-minimap2",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-minimap2/graph/badge.svg?token=PSCAYJUP01",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME 2 plugin for sequence alignment using minimap2."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We provide two options for installing q2-minimap2 via conda environment files, depending on your preferred QIIME2 distribution:"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "1: Amplicon distribution"
+          }
+        ],
+        "identifier": "id-1-amplicon-distribution",
+        "label": "1: Amplicon distribution",
+        "html_id": "id-1-amplicon-distribution",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the environment file "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-minimap2-qiime2-amplicon-2025.10.yml"
+          },
+          {
+            "type": "text",
+            "value": " to create a new conda environment."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -f q2-minimap2-qiime2-amplicon-2025.10.yml\nconda activate q2-minimap2-amplicon"
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "2: Moshpit distribution"
+          }
+        ],
+        "identifier": "id-2-moshpit-distribution",
+        "label": "2: Moshpit distribution",
+        "html_id": "id-2-moshpit-distribution",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the environment file "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-minimap2-qiime2-moshpit-2025.10.yml"
+          },
+          {
+            "type": "text",
+            "value": " to create a new conda environment based on the MOSHPIT distro."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -f q2-minimap2-qiime2-moshpit-2025.10.yml\nconda activate q2-minimap2-moshpit"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Provided Actions"
+          }
+        ],
+        "identifier": "provided-actions",
+        "label": "Provided Actions",
+        "html_id": "provided-actions",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "build-index"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Build a Minimap2 index database from reference sequences."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "minimap2-search"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Search for top hits in a reference database using alignment between the query sequences and reference database sequences using Minimap2. Returns a report of the top M hits for each query (where M=maxaccepts)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "filter-reads"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "This method aligns long-read sequencing data (from a FASTQ file) to a set of reference sequences, identifying sequences that match or do not match the reference within a specified identity percentage. The alignment is performed using Minimap2, and the results are processed using Samtools."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "extract-reads"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "This method aligns long-read sequencing data (from a FASTA file) to a set of reference sequences, identifying sequences that match or do not match the reference within a specified identity percentage. The alignment is performed using Minimap2, and the results are processed using Samtools."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "classify-consensus-minimap2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Assign taxonomy to query sequences using Minimap2. Performs alignment between query and reference reads, then assigns consensus taxonomy to each query sequence."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Examples"
+          }
+        ],
+        "identifier": "examples",
+        "label": "Examples",
+        "html_id": "examples",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "build-index"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Build Minimap2 index database"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 build-index --i-reference reference.qza --o-index index.qza --verbose"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "minimap2-search"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Generate both hits and no hits for each query. Keep a maximum of one hit per query (primary)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 minimap2-search --i-query fasta_reads.qza --i-index index.qza --o-search-results paf.qza --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Generate only hits for each query. Keep a maximum of one hit per query (primary mappings)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 minimap2-search --i-query fasta_reads.qza --i-index index.qza --o-search-results paf_only_hits.qza --p-output-no-hits false --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Generate only hits for each query, limiting the number of hits to a maximum of 3 per query. Ensure that each hit has a minimum similarity percentage of 90% to be considered valid."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 minimap2-search --i-query fasta_reads.qza --i-index index.qza --o-search-results paf_only_hits_ma3.qza --p-maxaccepts 3 --p-output-no-hits false --verbose"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "filter-reads"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keep mapped (single-end reads)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 filter-reads --i-query single-end-reads.qza --i-index index.qza --o-filtered-query mapped_se.qza --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keep unmapped (single-end reads)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 filter-reads --i-query single-end-reads.qza --i-index index.qza --p-keep unmapped --o-filtered-query unmapped_se.qza --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keep mapped (paired-end reads)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 filter-reads --i-query paired-end-reads.qza --i-index index.qza --o-filtered-query mapped_pe.qza --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Keep mapped reads with mapping percentage >= 98% (paired-end reads)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 filter-reads --i-query paired-end-reads.qza --i-index index.qza --p-min-per-identity 0.98  --o-filtered-query mapped_pe_over_98p_id.qza --verbose"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "extract-reads"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Extract mapped"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 extract-reads --i-sequences fasta_reads.qza --i-index index.qza --o-extracted-reads mapped_fasta.qza --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Extract unmapped"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 extract-reads --i-sequences fasta_reads.qza --i-index index.qza --p-extract unmapped --o-extracted-reads unmapped_fasta.qza --verbose"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Extract mapped reads with mapping percentage >= 87%"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 extract-reads --i-sequences fasta_reads.qza --i-index index.qza --p-min-per-identity 0.87 --o-extracted-reads mapped_fasta_ido_ver_87.qza --verbose"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "classify-consensus-minimap2"
+              },
+              {
+                "type": "list",
+                "ordered": false,
+                "spread": false,
+                "children": [
+                  {
+                    "type": "listItem",
+                    "spread": true,
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Assign taxonomy to query sequences using Minimap2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "code",
+                "lang": "shell",
+                "value": "qiime minimap2 classify-consensus-minimap2 --i-query n1K_initial_reads_SILVA132.fna.qza --i-index ccm_index.qza --i-reference-taxonomy raw_taxonomy.qza --p-n-threads 8 --output-dir classification_output --verbose"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-minimap2",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-minimap2",
+  "last_commit": {
+    "sha": "f4d283572673b4e835e054d6a995163edccd4d86",
+    "status": "passed",
+    "date": "2025-12-23T11:13:35Z"
+  },
+  "stars": 2,
+  "description": "QIIME 2 plugin for sequence alignment using minimap2.",
+  "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "environment-files/q2-minimap2-qiime2-amplicon-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
+    ]
+  ]
+}
