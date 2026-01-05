@@ -7,6 +7,18 @@
     "base": "https://moshpit.qiime2.org/",
     "pretty": true
   },
+  "q2-vsearch": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "q2-mystery-stew": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "q2-composition": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
   "q2-quality-filter": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
@@ -135,21 +147,9 @@
     "base": "https://github.com/bokulich-lab/q2-rgi/wiki",
     "pretty": true
   },
-  "q2-composition": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
   "q2-sourmash": {
     "base": "https://moshpit.qiime2.org/",
     "pretty": true
-  },
-  "q2-vsearch": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
-  "q2-mystery-stew": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
   },
   "q2-amrfinderplus": {
     "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
