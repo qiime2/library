@@ -1,6 +1,36 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "35a8e4faf1652c67c10a63ece5087dc71da1e62a",
+        "status": "failed",
+        "date": "2026-01-08T16:36:23Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-feature-table",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -2308,6 +2338,36 @@
     },
     {
       "owner": "bokulich-lab",
+      "name": "q2-long-reads-qc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
+      "last_commit": {
+        "sha": "2ff8b848e9015f46859dfa3c2522bee35c6de38f",
+        "status": "passed",
+        "date": "2025-12-23T06:44:50Z"
+      },
+      "stars": 2,
+      "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
+      "distros": [
+        [
+          "2025.10",
+          "amplicon",
+          "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -2413,36 +2473,6 @@
           "2025.7",
           "tiny",
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "05b45ea0ed5185bb2e3708be2bdb185ae902c8c2",
-        "status": "passed",
-        "date": "2025-11-14T07:23:49Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
         ]
       ]
     },
@@ -2905,6 +2935,11 @@
     [
       "2025.10",
       "amplicon",
+      "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "amplicon",
       "environment-files/q2-minimap2-qiime2-amplicon-2025.10.yml"
     ],
     [
@@ -3051,6 +3086,11 @@
       "2025.10",
       "moshpit",
       "environment-files/q2-assembly-qiime2-moshpit-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
     ],
     [
       "2025.10",
@@ -3266,6 +3306,11 @@
       "2025.10",
       "tiny",
       "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "tiny",
+      "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
     ],
     [
       "2025.10",

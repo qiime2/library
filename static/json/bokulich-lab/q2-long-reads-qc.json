@@ -1,0 +1,333 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-long-reads-qc/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "QIIME2 plugin that utilizes Chopper and NanoPlot for quality control analysis of long sequences, generating easy-to-interpret stats as QIIME2 vizualization and allows trimming based on various filters."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We provide three options for installing q2-long-reads-qc via conda environment files, depending on your preferred QIIME2 distribution. The environment files can be found in the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "environment-files/"
+          },
+          {
+            "type": "text",
+            "value": " directory of this repository:"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "1: Tiny distribution"
+          }
+        ],
+        "identifier": "id-1-tiny-distribution",
+        "label": "1: Tiny distribution",
+        "html_id": "id-1-tiny-distribution",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the environment file "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-long-reads-qc-qiime2-tiny-2025.10.yml"
+          },
+          {
+            "type": "text",
+            "value": " to create a new conda environment based on the tiny distro."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n long-reads-env -f q2-long-reads-qc-qiime2-tiny-2025.10.yml\nconda activate q2-long-reads-tiny"
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "2: Amplicon distribution"
+          }
+        ],
+        "identifier": "id-2-amplicon-distribution",
+        "label": "2: Amplicon distribution",
+        "html_id": "id-2-amplicon-distribution",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the environment file "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
+          },
+          {
+            "type": "text",
+            "value": " to create a new conda environment."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n long-reads-env -f q2-long-reads-qc-qiime2-amplicon-2025.10.yml\nconda activate q2-long-reads-amplicon"
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "3: Moshpit distribution"
+          }
+        ],
+        "identifier": "id-3-moshpit-distribution",
+        "label": "3: Moshpit distribution",
+        "html_id": "id-3-moshpit-distribution",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Use the environment file "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
+          },
+          {
+            "type": "text",
+            "value": " to create a new conda environment based on the moshpit distro."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n long-reads-env -f q2-long-reads-qc-qiime2-moshpit-2025.10.yml\nconda activate q2-long-reads-moshpit"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Execute"
+          }
+        ],
+        "identifier": "execute",
+        "label": "Execute",
+        "html_id": "execute",
+        "implicit": true
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "trime-single"
+          }
+        ],
+        "identifier": "trime-single",
+        "label": "trime-single",
+        "html_id": "trime-single",
+        "implicit": true
+      },
+      {
+        "type": "heading",
+        "depth": 5,
+        "children": [
+          {
+            "type": "text",
+            "value": "Trim 20 nucleotides from the start of each read"
+          }
+        ],
+        "identifier": "trim-20-nucleotides-from-the-start-of-each-read",
+        "label": "Trim 20 nucleotides from the start of each read",
+        "html_id": "trim-20-nucleotides-from-the-start-of-each-read",
+        "implicit": true
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime long-reads-qc trim --i-query-reads reads.qza --p-headcrop 20 --verbose --o-filtered-query-reads filtered.qza"
+      },
+      {
+        "type": "heading",
+        "depth": 4,
+        "children": [
+          {
+            "type": "text",
+            "value": "stat"
+          }
+        ],
+        "identifier": "stat",
+        "label": "stat",
+        "html_id": "stat",
+        "implicit": true
+      },
+      {
+        "type": "heading",
+        "depth": 5,
+        "children": [
+          {
+            "type": "text",
+            "value": "Generate a visualization of statistics for the input sequences"
+          }
+        ],
+        "identifier": "generate-a-visualization-of-statistics-for-the-input-sequences",
+        "label": "Generate a visualization of statistics for the input sequences",
+        "html_id": "generate-a-visualization-of-statistics-for-the-input-sequences",
+        "implicit": true
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime long-reads-qc stats --i-sequences paired_reads.qza --o-visualization viz.qzv"
+      },
+      {
+        "type": "heading",
+        "depth": 5,
+        "children": [
+          {
+            "type": "link",
+            "url": "https://view.qiime2.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "Qiime2 view"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " can be used to view the result visualization"
+          }
+        ],
+        "identifier": "qiime2-view-can-be-used-to-view-the-result-visualization",
+        "label": "Qiime2 view can be used to view the result visualization",
+        "html_id": "qiime2-view-can-be-used-to-view-the-result-visualization",
+        "implicit": true
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "break"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "We have added a new semantic type for the cutadapt log files named “CutadaptLogs”."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "qiime tools import --type 'CutadaptLogs' --input-path dir_with_cutadapt_log_files --output-path cutadapt_logs.qza"
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-long-reads-qc",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
+  "last_commit": {
+    "sha": "2ff8b848e9015f46859dfa3c2522bee35c6de38f",
+    "status": "passed",
+    "date": "2025-12-23T06:44:50Z"
+  },
+  "stars": 2,
+  "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
+  "distros": [
+    [
+      "2025.10",
+      "amplicon",
+      "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "moshpit",
+      "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
+    ],
+    [
+      "2025.10",
+      "tiny",
+      "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
+    ]
+  ]
+}
