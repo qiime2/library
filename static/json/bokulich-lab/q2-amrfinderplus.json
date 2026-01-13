@@ -59,11 +59,11 @@
           },
           {
             "type": "text",
-            "value": ", follow the steps described in the "
+            "value": ", follow the steps described in the\n"
           },
           {
             "type": "link",
-            "url": "https://docs.qiime2.org/2024.10/install/native/#qiime-2-pathogenome-distribution",
+            "url": "https://library.qiime2.org/quickstart/pathogenome",
             "children": [
               {
                 "type": "text",
@@ -73,7 +73,7 @@
           },
           {
             "type": "text",
-            "value": " for the pathogenome distribution ."
+            "value": "\nfor the pathogenome distribution."
           }
         ]
       },
@@ -96,7 +96,7 @@
         "children": [
           {
             "type": "text",
-            "value": "This QIIME 2 plugin contains actions used to annotate protein sequences MAGs and contigs with antimicrobial resistance genes. The underlying tool used is "
+            "value": "This QIIME 2 plugin contains actions used to annotate protein sequences MAGs and\ncontigs with antimicrobial resistance genes. The underlying tool used is\n"
           },
           {
             "type": "link",
@@ -110,7 +110,7 @@
           },
           {
             "type": "text",
-            "value": ", for details on\nthe package, please refer to the "
+            "value": ".\nFor details on the package, please refer to the\n"
           },
           {
             "type": "link",
@@ -124,21 +124,21 @@
           },
           {
             "type": "text",
-            "value": "). Checkout the "
+            "value": ").\nCheckout the "
           },
           {
             "type": "link",
-            "url": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+            "url": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
             "children": [
               {
                 "type": "text",
-                "value": "wiki"
+                "value": "MOSHPIT docs"
               }
             ]
           },
           {
             "type": "text",
-            "value": " for usage examples of "
+            "value": "\nfor a tutorial of "
           },
           {
             "type": "emphasis",
@@ -228,6 +228,29 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "create-feature-table"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Create a gene per contig frequency table from annotations."
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -283,9 +306,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
   "last_commit": {
-    "sha": "a6a9e1bebfb9dd095f33c585a3eafc5ba327a21a",
+    "sha": "34ecafac7718f98d91740d372dc8adfc9d16a55b",
     "status": "passed",
-    "date": "2025-10-29T18:30:49Z"
+    "date": "2026-01-12T16:05:27Z"
   },
   "stars": 0,
   "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
