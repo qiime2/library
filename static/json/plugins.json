@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bio-datascience",
+      "name": "q2-classo-latest",
+      "branch": "main",
+      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+      "last_commit": {
+        "sha": "8c2bf10d26b3065c0d446220b65e3632b8a2e834",
+        "status": "passed",
+        "date": "2026-01-15T13:16:35Z"
+      },
+      "stars": 0,
+      "description": "Constrained sparse regression and classification",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-alignment",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -288,7 +308,7 @@
         "status": "passed",
         "date": "2026-01-12T16:05:27Z"
       },
-      "stars": 0,
+      "stars": 1,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         [
@@ -305,7 +325,7 @@
       "docs": null,
       "last_commit": {
         "sha": "35a8e4faf1652c67c10a63ece5087dc71da1e62a",
-        "status": "failed",
+        "status": "passed",
         "date": "2026-01-08T16:36:23Z"
       },
       "stars": 4,
@@ -2747,26 +2767,6 @@
           "2025.7",
           "moshpit",
           "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bio-datascience",
-      "name": "q2-classo-latest",
-      "branch": "main",
-      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
-      "last_commit": {
-        "sha": "f7056e0d3615553dac0e03922ad4e82aca6f02cc",
-        "status": "passed",
-        "date": "2025-09-25T12:03:35Z"
-      },
-      "stars": 0,
-      "description": "Constrained sparse regression and classification",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
         ]
       ]
     },

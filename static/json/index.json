@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bio-datascience",
+      "name": "q2-classo-latest",
+      "branch": "main",
+      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
+      "last_commit": {
+        "sha": "8c2bf10d26b3065c0d446220b65e3632b8a2e834",
+        "status": "passed",
+        "date": "2026-01-15T13:16:35Z"
+      },
+      "stars": 0,
+      "description": "Constrained sparse regression and classification",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
@@ -10,7 +30,7 @@
         "status": "passed",
         "date": "2026-01-12T16:05:27Z"
       },
-      "stars": 0,
+      "stars": 1,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         [
@@ -27,7 +47,7 @@
       "docs": null,
       "last_commit": {
         "sha": "35a8e4faf1652c67c10a63ece5087dc71da1e62a",
-        "status": "failed",
+        "status": "passed",
         "date": "2026-01-08T16:36:23Z"
       },
       "stars": 4,
@@ -179,26 +199,6 @@
           "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
-      "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "da619ed52037a3762f3dd540a0e1963de0ffa2c0",
-        "status": "passed",
-        "date": "2025-11-24T21:05:42Z"
-      },
-      "stars": 6,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": [
-        [
-          "2024.10",
-          "amplicon",
-          "environment-files/genome-sampler-qiime2-amplicon-2024.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -315,5 +315,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-01-15T01:52:42.986Z"
+  "last_updated": "2026-01-16T01:54:29.989Z"
 }
