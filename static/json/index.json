@@ -2,6 +2,86 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "ba8dae81dad58c1bc148d612c174c1a3b5b84913",
+        "status": "passed",
+        "date": "2026-01-21T16:27:03Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "3e8558457c3f7756415ad03ea4521c29912ed3d6",
+        "status": "failed",
+        "date": "2026-01-21T13:06:13Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "8e51252574b654e84df32e3dc5d4f3315166d5c0",
+        "status": "passed",
+        "date": "2026-01-21T09:39:28Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2025.10",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
@@ -37,36 +117,6 @@
           "2025.4",
           "amplicon",
           "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "35a8e4faf1652c67c10a63ece5087dc71da1e62a",
-        "status": "passed",
-        "date": "2026-01-08T16:36:23Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
         ]
       ]
     },
@@ -137,66 +187,6 @@
           "2025.10",
           "moshpit",
           "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-long-reads-qc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
-      "last_commit": {
-        "sha": "2ff8b848e9015f46859dfa3c2522bee35c6de38f",
-        "status": "passed",
-        "date": "2025-12-23T06:44:50Z"
-      },
-      "stars": 2,
-      "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
-      "distros": [
-        [
-          "2025.10",
-          "amplicon",
-          "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "bc6878884bd34d7a173f914a29a0dd70ba963f9d",
-        "status": "passed",
-        "date": "2025-12-05T08:41:01Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     }
@@ -315,5 +305,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-01-21T01:57:59.439Z"
+  "last_updated": "2026-01-22T01:58:15.747Z"
 }
