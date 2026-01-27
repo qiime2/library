@@ -2,6 +2,87 @@
   "plugins": [
     {
       "owner": "qiime2",
+      "name": "q2-cutadapt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2025.10",
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "amplicon",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "core",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "d88631251ff7cd69f9d246b81111cfcc0e3ad54d",
+        "status": "passed",
+        "date": "2026-01-26T15:20:37Z"
+      }
+    },
+    {
+      "owner": "qiime2",
       "name": "q2",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
       "in_distro": true,
@@ -131,9 +212,9 @@
       "description": null,
       "branch": "dev",
       "last_commit": {
-        "sha": "3c3dd75ce32764858b6957c5ebdde8a9cf74c64a",
+        "sha": "f16fb430ea2a473470d74d14169ebd7293674591",
         "status": "passed",
-        "date": "2026-01-23T10:24:50Z"
+        "date": "2026-01-26T14:08:43Z"
       }
     },
     {
@@ -2353,87 +2434,6 @@
         "sha": "380374d537b338a55ca1f1b3efc97b730857f0ef",
         "status": "passed",
         "date": "2026-01-04T01:13:13Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-cutadapt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "amplicon",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "amplicon",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "core",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "3215e5950bbfe33a3810855194c9b447e7e49a84",
-        "status": "passed",
-        "date": "2026-01-04T01:00:39Z"
       }
     },
     {
