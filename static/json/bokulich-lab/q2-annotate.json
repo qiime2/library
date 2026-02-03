@@ -1314,6 +1314,16 @@
   },
   "releases": [
     {
+      "tag_name": "test-release",
+      "html_url": "https://github.com/bokulich-lab/q2-annotate/releases/tag/test-release",
+      "name": "Test release",
+      "published_at": "2026-02-03T12:44:50Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
       "tag_name": "2025.10.0",
       "html_url": "https://github.com/bokulich-lab/q2-annotate/releases/tag/2025.10.0",
       "name": "2025.10.0",
@@ -2623,9 +2633,9 @@
   "branch": "main",
   "docs": null,
   "last_commit": {
-    "sha": "bb3ed1682797e503fd0be9df0e242a2613f26a3c",
-    "status": "passed",
-    "date": "2026-01-27T10:20:03Z"
+    "sha": "26282e76c459eef373a3b5355e3540bd09814fea",
+    "status": "failed",
+    "date": "2026-02-03T12:39:49Z"
   },
   "stars": 4,
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",

@@ -718,7 +718,8 @@
       "url": "/myst/amplicon/_/references/plugins/feature-table"
     },
     {
-      "identifier": "q2-action-feature-table-summarize",
+      "identifier": "q2-action-feature-table--summarize",
+      "html_id": "q2-action-feature-table-summarize",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.plugins.feature-table.json",
       "url": "/myst/amplicon/_/references/plugins/feature-table"
@@ -742,7 +743,7 @@
       "url": "/myst/amplicon/_/references/plugins/feature-table"
     },
     {
-      "identifier": "q2-action-feature-table-summarize-plus",
+      "identifier": "q2-action-feature-table-summarize",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.plugins.feature-table.json",
       "url": "/myst/amplicon/_/references/plugins/feature-table"
@@ -1613,6 +1614,24 @@
       "url": "/myst/amplicon/_/references/plugins/types"
     },
     {
+      "identifier": "q2-action-types-partition-genes",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.plugins.types.json",
+      "url": "/myst/amplicon/_/references/plugins/types"
+    },
+    {
+      "identifier": "q2-action-types-partition-proteins",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.plugins.types.json",
+      "url": "/myst/amplicon/_/references/plugins/types"
+    },
+    {
+      "identifier": "q2-action-types-partition-loci",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.plugins.types.json",
+      "url": "/myst/amplicon/_/references/plugins/types"
+    },
+    {
       "identifier": "q2-plugin-vizard",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.plugins.vizard.json",
@@ -1697,97 +1716,31 @@
       "url": "/myst/amplicon/_/references/plugins/vsearch"
     },
     {
-      "identifier": "q2-type-uchimestats",
+      "identifier": "q2-type-featuredata-differentialabundance",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-sampledata-dada2stats",
+      "identifier": "q2-type-featuredata-ancombc2output",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dada2basetransitionstats",
+      "identifier": "q2-type-srametadata",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-featuredata-decontamscore",
+      "identifier": "q2-type-srafailedids",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-deblurstats",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-featuredata-silvataxonomy",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-featuredata-silvataxidmap",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampleestimator-classifier",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampleestimator-regressor",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-booleanseries",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-regressorpredictions",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-classifierpredictions",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-featuredata-importance",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-probabilities",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-truetargets",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-artificialgrouping",
+      "identifier": "q2-type-ncbiaccessionids",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
@@ -1806,6 +1759,24 @@
     },
     {
       "identifier": "q2-type-qualityfilterstats",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-deblurstats",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-artificialgrouping",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-firstdifferences",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
@@ -1914,6 +1885,18 @@
     },
     {
       "identifier": "q2-type-featuremap-magtocontigs",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuremap-taxonomytocontigs",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuremap-functiontocontigs",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
@@ -2285,25 +2268,7 @@
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dist1d-unordered-independent",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedunordered-matched",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-multi-independent",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-unordered-matched",
+      "identifier": "q2-type-dist1d-ordered-independent",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
@@ -2315,25 +2280,7 @@
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dist1d-ordered-independent",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedordered-independent",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedunordered-independent",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-ordered-matched",
+      "identifier": "q2-type-dist1d-unordered-independent",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
@@ -2345,25 +2292,115 @@
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
+      "identifier": "q2-type-dist1d-nestedordered-independent",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedunordered-matched",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-unordered-matched",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedunordered-independent",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-multi-independent",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-ordered-matched",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
       "identifier": "q2-type-statstable-pairwise",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-sampledata-firstdifferences",
+      "identifier": "q2-type-featuredata-decontamscore",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-featuredata-differentialabundance",
+      "identifier": "q2-type-sampleestimator-classifier",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-featuredata-ancombc2output",
+      "identifier": "q2-type-sampleestimator-regressor",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-booleanseries",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-regressorpredictions",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-classifierpredictions",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuredata-importance",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-probabilities",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-truetargets",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-uchimestats",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuredata-silvataxonomy",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.classes.json",
+      "url": "/myst/amplicon/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuredata-silvataxidmap",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
@@ -2381,175 +2418,73 @@
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-srametadata",
+      "identifier": "q2-type-sampledata-dada2stats",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-srafailedids",
+      "identifier": "q2-type-dada2basetransitionstats",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.classes.json",
       "url": "/myst/amplicon/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-ncbiaccessionids",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.classes.json",
-      "url": "/myst/amplicon/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-format-uchimestatsfmt",
+      "identifier": "q2-format-frictionlesscsvfileformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-uchimestatsdirfmt",
+      "identifier": "q2-format-datapackageschemafileformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-dada2statsformat",
+      "identifier": "q2-format-dataloafpackagedirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-dada2statsdirfmt",
+      "identifier": "q2-format-ancombc2outputdirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-dada2basetransitionstatsformat",
+      "identifier": "q2-format-srametadataformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-dada2basetransitionstatsdirfmt",
+      "identifier": "q2-format-srametadatadirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-decontamscoreformat",
+      "identifier": "q2-format-srafailedidsformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-decontamscoredirfmt",
+      "identifier": "q2-format-srafailedidsdirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-deblurstatsfmt",
+      "identifier": "q2-format-ncbiaccessionidsformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-deblurstatsdirfmt",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxonomyformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxonomydirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxidmapformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxidmapdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-sampleestimatordirfmt",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-booleanseriesformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-booleanseriesdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-importanceformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-importancedirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-predictionsformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-predictionsdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-probabilitiesformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-probabilitiesdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-truetargetsdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-artificialgroupingformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-artificialgroupingdirectoryformat",
+      "identifier": "q2-format-ncbiaccessionidsdirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
@@ -2586,6 +2521,42 @@
     },
     {
       "identifier": "q2-format-qualityfilterstatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-deblurstatsfmt",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-deblurstatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-artificialgroupingformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-artificialgroupingdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-firstdifferencesformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-firstdifferencesdirectoryformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
@@ -2856,6 +2827,18 @@
     },
     {
       "identifier": "q2-format-magtocontigsdirfmt",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-featuremapformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-featuremapdirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
@@ -3455,37 +3438,109 @@
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-firstdifferencesformat",
+      "identifier": "q2-format-decontamscoreformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-firstdifferencesdirectoryformat",
+      "identifier": "q2-format-decontamscoredirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-frictionlesscsvfileformat",
+      "identifier": "q2-format-sampleestimatordirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-datapackageschemafileformat",
+      "identifier": "q2-format-booleanseriesformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-dataloafpackagedirfmt",
+      "identifier": "q2-format-booleanseriesdirectoryformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-ancombc2outputdirfmt",
+      "identifier": "q2-format-importanceformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-importancedirectoryformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-predictionsformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-predictionsdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-probabilitiesformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-probabilitiesdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-truetargetsdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-uchimestatsfmt",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-uchimestatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-silvataxonomyformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-silvataxonomydirectoryformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-silvataxidmapformat",
+      "kind": "heading",
+      "data": "/myst/amplicon/_/references.artifacts.formats.json",
+      "url": "/myst/amplicon/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-silvataxidmapdirectoryformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
@@ -3509,37 +3564,25 @@
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srametadataformat",
+      "identifier": "q2-format-dada2statsformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srametadatadirfmt",
+      "identifier": "q2-format-dada2statsdirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srafailedidsformat",
+      "identifier": "q2-format-dada2basetransitionstatsformat",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srafailedidsdirfmt",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-ncbiaccessionidsformat",
-      "kind": "heading",
-      "data": "/myst/amplicon/_/references.artifacts.formats.json",
-      "url": "/myst/amplicon/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-ncbiaccessionidsdirfmt",
+      "identifier": "q2-format-dada2basetransitionstatsdirfmt",
       "kind": "heading",
       "data": "/myst/amplicon/_/references.artifacts.formats.json",
       "url": "/myst/amplicon/_/references/artifacts/formats"
