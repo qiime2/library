@@ -6,9 +6,9 @@
       "branch": "main",
       "docs": null,
       "last_commit": {
-        "sha": "26282e76c459eef373a3b5355e3540bd09814fea",
-        "status": "failed",
-        "date": "2026-02-03T12:39:49Z"
+        "sha": "faa1abb267e37976e2af8cc81612d452b2a8b99e",
+        "status": "passed",
+        "date": "2026-02-04T14:36:45Z"
       },
       "stars": 4,
       "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
@@ -29,6 +29,142 @@
           "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
         ]
       ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "4941302a70664121f86b7be97fd5f4172515d830",
+        "status": "passed",
+        "date": "2026-02-04T12:43:44Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "RESCRIPt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 98,
+      "description": "REference Sequence annotation and CuRatIon Pipeline",
+      "branch": "master",
+      "last_commit": {
+        "sha": "7d7dca543f2e72f9937af3644cda6815e190ff10",
+        "status": "passed",
+        "date": "2026-02-04T12:29:49Z"
+      }
     },
     {
       "owner": "rachis-org",
@@ -288,36 +424,6 @@
         "status": "passed",
         "date": "2026-01-27T10:20:19Z"
       }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "a13cc1650a8f7db2c1d7e886998822a9f7ded394",
-        "status": "passed",
-        "date": "2026-01-27T10:20:18Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "distros": [
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-assembly-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
     },
     {
       "owner": "qiime2",
@@ -1155,112 +1261,6 @@
         "sha": "89cdef446365df8f3c207ef022a4a777a6009b6e",
         "status": "passed",
         "date": "2026-01-27T10:20:10Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "RESCRIPt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "amplicon",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 98,
-      "description": "REference Sequence annotation and CuRatIon Pipeline",
-      "branch": "master",
-      "last_commit": {
-        "sha": "a4cd7a7f09495a87a09ee9bedad4ecc28225d44d",
-        "status": "passed",
-        "date": "2026-01-27T10:20:09Z"
       }
     },
     {
