@@ -7,15 +7,7 @@
     "base": "https://moshpit.qiime2.org/",
     "pretty": true
   },
-  "q2-feature-table": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
   "RESCRIPt": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
-  "q2-alignment": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
@@ -23,13 +15,45 @@
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
-  "q2": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
+  "q2-long-reads-qc": {
+    "base": "https://github.com/bokulich-lab/q2-long-reads-qc",
+    "pretty": true
+  },
+  "q2-minimap2": {
+    "base": "https://github.com/bokulich-lab/q2-minimap2",
+    "pretty": true
   },
   "q2-fastp": {
     "base": "https://moshpit.qiime2.org/",
     "pretty": true
+  },
+  "q2-ena-uploader": {
+    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
+    "pretty": true
+  },
+  "q2-gunc": {
+    "base": "https://github.com/bokulich-lab/q2-gunc",
+    "pretty": true
+  },
+  "q2-skani": {
+    "base": "https://github.com/bokulich-lab/q2-skani",
+    "pretty": true
+  },
+  "q2-fondue": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "q2-feature-table": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "q2-alignment": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "q2": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
   },
   "q2-demux": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -81,10 +105,6 @@
   },
   "q2-boots": {
     "base": "https://q2-boots.readthedocs.io/en/latest/",
-    "pretty": false
-  },
-  "q2-fondue": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
   "q2-sapienns": {
@@ -155,29 +175,9 @@
     "base": "https://micom-dev.github.io/q2-micom/",
     "pretty": true
   },
-  "q2-minimap2": {
-    "base": "https://github.com/bokulich-lab/q2-minimap2",
-    "pretty": true
-  },
-  "q2-long-reads-qc": {
-    "base": "https://github.com/bokulich-lab/q2-long-reads-qc",
-    "pretty": true
-  },
-  "q2-ena-uploader": {
-    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
-    "pretty": true
-  },
   "genome-sampler": {
     "base": "https://genome-sampler.readthedocs.io/en/latest/",
     "pretty": false
-  },
-  "q2-gunc": {
-    "base": "https://github.com/bokulich-lab/q2-gunc",
-    "pretty": true
-  },
-  "q2-skani": {
-    "base": "https://github.com/bokulich-lab/q2-skani",
-    "pretty": true
   },
   "q2-conduit": {
     "base": "https://github.com/biocore/q2-conduit",
