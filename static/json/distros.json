@@ -1,6 +1,78 @@
 {
   "plugins": [
     {
+      "owner": "rachis-org",
+      "name": "rachis",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "2026.1/tiny/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 525,
+      "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "e8ca0ec2ec3870b7fe9b5e844b06b400d0533a0f",
+        "status": "passed",
+        "date": "2026-02-10T17:13:30Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "c01285365ae4286b8b2d50e5b3c096ff2ac3d330",
+        "status": "failed",
+        "date": "2026-02-10T16:31:16Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-assembly",
       "docs": "https://moshpit.qiime2.org/",
@@ -175,42 +247,6 @@
         "sha": "fb33feea1cd2f52b653233299fc6de02298b0d2e",
         "status": "passed",
         "date": "2026-02-09T12:05:03Z"
-      }
-    },
-    {
-      "owner": "rachis-org",
-      "name": "rachis",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "2026.1/tiny/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 525,
-      "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "b4538952ac1b7e035b3d8b62713e426875908fdb",
-        "status": "failed",
-        "date": "2026-02-06T13:51:10Z"
       }
     },
     {
@@ -566,42 +602,6 @@
         "sha": "5a4fb79d9919c3253b84be3d294370380fcb1a34",
         "status": "passed",
         "date": "2026-02-05T14:41:51Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "e6eba093f93732357eddf86b3adccd0c907c5116",
-        "status": "failed",
-        "date": "2026-02-05T08:48:59Z"
       }
     },
     {

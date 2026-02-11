@@ -2,6 +2,36 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "branch": "main",
+      "docs": null,
+      "last_commit": {
+        "sha": "c01285365ae4286b8b2d50e5b3c096ff2ac3d330",
+        "status": "failed",
+        "date": "2026-02-10T16:31:16Z"
+      },
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "distros": [
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-assembly",
       "branch": "main",
       "docs": null,
@@ -184,36 +214,6 @@
           "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "branch": "main",
-      "docs": null,
-      "last_commit": {
-        "sha": "e6eba093f93732357eddf86b3adccd0c907c5116",
-        "status": "failed",
-        "date": "2026-02-05T08:48:59Z"
-      },
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "distros": [
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -330,5 +330,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-02-10T02:36:45.426Z"
+  "last_updated": "2026-02-11T02:34:06.228Z"
 }
