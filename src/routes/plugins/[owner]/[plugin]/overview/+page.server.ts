@@ -12,7 +12,6 @@ export const load: PageServerLoad = async ({ fetch, parent }) => {
   // q2-fmt would become
   // q2-plugin-fmt
   xref_id = "q2-plugin-" + xref_id.toLowerCase();
-
   try {
     let index = await fetch(docs + "/myst.xref.json");
     if (index.ok) {
@@ -30,7 +29,7 @@ export const load: PageServerLoad = async ({ fetch, parent }) => {
       }
     }
   } catch {}
-  let p = Promise.reject();
+  let p = Promise.reject('no docs');
   p.catch(() => {});
   return {
     baseurl: docs,
