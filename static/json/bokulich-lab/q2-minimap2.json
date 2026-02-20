@@ -703,19 +703,40 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-minimap2/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:13:56Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
   "owner": "bokulich-lab",
   "name": "q2-minimap2",
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-minimap2",
   "last_commit": {
-    "sha": "2de9728a27584238553f426ffce079f10530d654",
-    "status": "passed",
-    "date": "2026-02-06T12:38:52Z"
+    "sha": "abb1eba289bfc52d643ee43f7253a927fb601f71",
+    "status": "failed",
+    "date": "2026-02-20T09:37:14Z"
   },
   "stars": 3,
   "description": "QIIME 2 plugin for sequence alignment using minimap2.",
   "distros": [
+    [
+      "2026.1",
+      "amplicon",
+      "environment-files/q2-minimap2-qiime2-amplicon-2026.1.yml"
+    ],
+    [
+      "2026.1",
+      "moshpit",
+      "environment-files/q2-minimap2-qiime2-moshpit-2026.1.yml"
+    ],
     [
       "2025.10",
       "amplicon",

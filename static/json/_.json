@@ -7,39 +7,55 @@
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
   },
-  "RESCRIPt": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
-  "rachis": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
-  "q2-ena-uploader": {
-    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
+  "q2-minimap2": {
+    "base": "https://github.com/bokulich-lab/q2-minimap2",
     "pretty": true
   },
   "q2-long-reads-qc": {
     "base": "https://github.com/bokulich-lab/q2-long-reads-qc",
     "pretty": true
   },
-  "q2-minimap2": {
-    "base": "https://github.com/bokulich-lab/q2-minimap2",
+  "q2-skani": {
+    "base": "https://github.com/bokulich-lab/q2-skani",
     "pretty": true
   },
-  "q2-fastp": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
+  "q2-rgi": {
+    "base": "https://github.com/bokulich-lab/q2-rgi/wiki",
+    "pretty": true
+  },
+  "q2-fondue": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
   "q2-gunc": {
     "base": "https://github.com/bokulich-lab/q2-gunc",
     "pretty": true
   },
-  "q2-skani": {
-    "base": "https://github.com/bokulich-lab/q2-skani",
+  "q2-ena-uploader": {
+    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
     "pretty": true
   },
-  "q2-fondue": {
+  "q2-fastp": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "q2-assembly": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "q2-amrfinderplus": {
+    "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+    "pretty": true
+  },
+  "q2-annotate": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "RESCRIPt": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
+  "rachis": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
@@ -111,10 +127,6 @@
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
   },
-  "q2-amrfinderplus": {
-    "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-    "pretty": true
-  },
   "q2-kmerizer": {
     "base": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
     "pretty": true
@@ -162,10 +174,6 @@
   "q2-stats": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
-  },
-  "q2-rgi": {
-    "base": "https://github.com/bokulich-lab/q2-rgi/wiki",
-    "pretty": true
   },
   "q2-classo-latest": {
     "base": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",

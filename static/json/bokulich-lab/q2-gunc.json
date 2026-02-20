@@ -83,6 +83,173 @@
   },
   "releases": [
     {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:09:19Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-gunc/pull/10",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#10"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-gunc/pull/10",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-gunc",
+                      "issue_number": "10"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env file for QIIME 2 2025.10 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-gunc/pull/9",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#9"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-gunc/pull/9",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-gunc",
+                      "issue_number": "9"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-gunc/compare/2025.10.0.dev1...2026.1.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2025.10.0.dev1...2026.1.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-gunc/compare/2025.10.0.dev1...2026.1.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-gunc",
+                  "issue_number": "2025.10.0.dev1...2026.1.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2025.10.0.dev1",
       "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2025.10.0.dev1",
       "name": "2025.10.0.dev1",
@@ -108,13 +275,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-gunc",
   "last_commit": {
-    "sha": "a2e329a44ce502df001be9b5ea40fbcd9c3b7164",
+    "sha": "1538ea555f5e8ccb66ee687b3166fd065b2506b2",
     "status": "passed",
-    "date": "2026-02-06T09:17:25Z"
+    "date": "2026-02-20T09:11:41Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
   "distros": [
+    [
+      "2026.1",
+      "tiny",
+      "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
+    ],
     [
       "2025.10",
       "tiny",

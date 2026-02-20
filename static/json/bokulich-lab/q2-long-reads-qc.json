@@ -301,19 +301,45 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-long-reads-qc/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:13:35Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
   "owner": "bokulich-lab",
   "name": "q2-long-reads-qc",
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
   "last_commit": {
-    "sha": "de8e8d0045810b9b2ab0a13c52fd6cfaad0c019e",
-    "status": "passed",
-    "date": "2026-02-06T12:40:28Z"
+    "sha": "3ee49b65a740ea13d836c351748dec8e4e08dabc",
+    "status": "failed",
+    "date": "2026-02-20T09:36:55Z"
   },
   "stars": 2,
   "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
   "distros": [
+    [
+      "2026.1",
+      "amplicon",
+      "environment-files/q2-long-reads-qc-qiime2-amplicon-2026.1.yml"
+    ],
+    [
+      "2026.1",
+      "moshpit",
+      "environment-files/q2-long-reads-qc-qiime2-moshpit-2026.1.yml"
+    ],
+    [
+      "2026.1",
+      "tiny",
+      "environment-files/q2-long-reads-qc-qiime2-tiny-2026.1.yml"
+    ],
     [
       "2025.10",
       "amplicon",

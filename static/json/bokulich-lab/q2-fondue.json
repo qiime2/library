@@ -2513,6 +2513,1353 @@
   },
   "releases": [
     {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:08:46Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: Sequences mismatch by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/149",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#149"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/149",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "149"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Update QIIME 2 versions in README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lina-kim",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lina-kim"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/150",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#150"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/150",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "150"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: remove original sequences after gzipping by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/152",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#152"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/152",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "152"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Add scraper sync note by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/153",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#153"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/153",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "153"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: Fetch restricted access sequences with a repository key by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/156",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#156"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/156",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "156"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Add minimal Docker image for q2-fondue by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lina-kim",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lina-kim"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/158",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#158"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/158",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "158"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: Pandas deprecations by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/161",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#161"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/161",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "161"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: update to the newest version by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/162",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#162"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/162",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "162"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: remove the Rust dependency by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/164",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#164"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/164",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "164"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: update the distro by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/165",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#165"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/165",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "165"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DEV: 2024.10 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/nbokulich",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@nbokulich"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/168",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#168"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/168",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "168"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update installation instructions by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/adamovanja",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@adamovanja"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/167",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#167"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/167",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "167"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: use tempfiles in tests by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/169",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#169"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/169",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "169"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: Update download and upload artifact actions to v4 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/VinzentRisch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@VinzentRisch"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/170",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#170"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/170",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "170"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "setup.py -> pyproject.toml by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/q2d2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@q2d2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/171",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#171"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/171",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "171"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: fix path in version file by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/172",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#172"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/172",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "172"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update recipe run reqs to require most recent q2-pkg builds by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/173",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#173"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/173",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "173"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: allow parsl parallelization of sequence download by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/174",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#174"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/174",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "174"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: update workflows to the most recent versions by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/175",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#175"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/175",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "175"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DEP: template out version pins by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/179",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#179"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/179",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "179"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "LANG: 2025.10 update & version templating by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/177",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#177"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/177",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "177"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAIN: adding env file for moshpit distro by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/183",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#183"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/183",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "183"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update toolkit version to support AlmaLinux by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/184",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#184"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/184",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "184"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/VinzentRisch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@VinzentRisch"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/170",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#170"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/170",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "170"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/q2d2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@q2d2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/171",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#171"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/171",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "171"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/lizgehret",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@lizgehret"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/172",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#172"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/172",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "172"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-fondue/pull/183",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#183"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-fondue/pull/183",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-fondue",
+                      "issue_number": "183"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-fondue/compare/2022.11.0...2026.1.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.11.0...2026.1.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-fondue/compare/2022.11.0...2026.1.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-fondue",
+                  "issue_number": "2022.11.0...2026.1.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2023.5.0.dev0",
       "html_url": "https://github.com/bokulich-lab/q2-fondue/releases/tag/2023.5.0.dev0",
       "name": "2023.5.0.dev0",
@@ -4439,8 +5786,8 @@
   "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
   "branch": "main",
   "last_commit": {
-    "sha": "51190cfa72d09e6629bd5b70c2d3bb0ed86839c5",
-    "status": "pending",
-    "date": "2026-02-06T09:05:40Z"
+    "sha": "b87ab615fa7c1f7c9544ef9133e6f16b7f9fc457",
+    "status": "passed",
+    "date": "2026-02-20T09:18:39Z"
   }
 }

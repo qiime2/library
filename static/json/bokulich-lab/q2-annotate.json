@@ -1314,6 +1314,267 @@
   },
   "releases": [
     {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-annotate/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:29:06Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env file for QIIME 2 2025.10 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/313",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#313"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/313",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "313"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: remove auto-lineage parameters by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/fethalen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@fethalen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/317",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#317"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/317",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "317"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: make the BUSCO visualization more responsive by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/319",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#319"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/319",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "319"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add action to collapse contig abundance per annotation by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-annotate/pull/318",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#318"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-annotate/pull/318",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-annotate",
+                      "issue_number": "318"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-annotate/compare/2025.10.0...2026.1.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2025.10.0...2026.1.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-annotate/compare/2025.10.0...2026.1.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-annotate",
+                  "issue_number": "2025.10.0...2026.1.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2025.10.0",
       "html_url": "https://github.com/bokulich-lab/q2-annotate/releases/tag/2025.10.0",
       "name": "2025.10.0",
@@ -2620,30 +2881,36 @@
   ],
   "owner": "bokulich-lab",
   "name": "q2-annotate",
-  "branch": "main",
-  "docs": null,
-  "last_commit": {
-    "sha": "c01285365ae4286b8b2d50e5b3c096ff2ac3d330",
-    "status": "failed",
-    "date": "2026-02-10T16:31:16Z"
-  },
-  "stars": 4,
-  "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+  "docs": "https://moshpit.qiime2.org/en/stable/",
+  "in_distro": true,
   "distros": [
+    [
+      "2026.1",
+      "moshpit",
+      "2026.1/moshpit/released/seed-environment-conda.yml"
+    ],
     [
       "2025.10",
       "moshpit",
-      "environment-files/q2-annotate-qiime2-moshpit-2025.10.yml"
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "moshpit",
+      "2025.7/moshpit/released/seed-environment-conda.yml"
     ],
     [
       "2025.4",
       "moshpit",
-      "environment-files/q2-annotate-qiime2-moshpit-2025.4.yml"
-    ],
-    [
-      "2024.10",
-      "metagenome",
-      "environment-files/q2-moshpit-qiime2-metagenome-2024.10.yml"
+      "2025.4/moshpit/released/seed-environment-conda.yml"
     ]
-  ]
+  ],
+  "stars": 4,
+  "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+  "branch": "main",
+  "last_commit": {
+    "sha": "b38a6c79af43e205b771f16d92910d0850af4dcf",
+    "status": "failed",
+    "date": "2026-02-20T08:45:02Z"
+  }
 }

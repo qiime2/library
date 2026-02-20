@@ -124,6 +124,314 @@
   },
   "releases": [
     {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:06:40Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add Zenodo DOI to the README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/18",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#18"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/18",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "18"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DOC: QIIME 2 data import section by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/21",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#21"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/21",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "21"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: new experiment-extended files by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/22",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#22"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/22",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "22"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DOC: add overview of sample template submissions by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/23",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#23"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/23",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "23"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: MyST Markdown image rendering issue by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/ZuzanaSebb",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@ZuzanaSebb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/24",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#24"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/24",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "24"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-ena-uploader/compare/2025.10.0...2026.1.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2025.10.0...2026.1.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/compare/2025.10.0...2026.1.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-ena-uploader",
+                  "issue_number": "2025.10.0...2026.1.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2025.10.0",
       "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2025.10.0",
       "name": "2025.10.0",
@@ -964,13 +1272,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "2f838866b55a1defcd277aa579b7a420ed385af6",
+    "sha": "21ede9113b500012b474e6f00fab1ec07a968f4e",
     "status": "passed",
-    "date": "2026-02-08T00:43:20Z"
+    "date": "2026-02-20T09:10:06Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
   "distros": [
+    [
+      "2026.1",
+      "tiny",
+      "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
+    ],
     [
       "2025.10",
       "tiny",

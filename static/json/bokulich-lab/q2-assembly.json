@@ -614,6 +614,173 @@
   },
   "releases": [
     {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:28:43Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env file for QIIME 2 2025.10 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/138",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#138"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/138",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "138"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add abundance feature table as input/output to/from the simulate-reads-mason action by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/142",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#142"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/142",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "142"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2025.10.0...2026.1.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2025.10.0...2026.1.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2025.10.0...2026.1.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2025.10.0...2026.1.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2025.10.0",
       "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2025.10.0",
       "name": "2025.10.0",
@@ -5555,30 +5722,71 @@
   ],
   "owner": "bokulich-lab",
   "name": "q2-assembly",
-  "branch": "main",
-  "docs": null,
-  "last_commit": {
-    "sha": "c437fb708e42b0502975639f1757b6140cb44cd8",
-    "status": "passed",
-    "date": "2026-02-09T15:38:38Z"
-  },
-  "stars": 2,
-  "description": "QIIME 2 plugin for (meta)genome assembly.",
+  "docs": "https://moshpit.qiime2.org/en/stable/",
+  "in_distro": true,
   "distros": [
+    [
+      "2026.1",
+      "moshpit",
+      "2026.1/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2026.1",
+      "pathogenome",
+      "2026.1/pathogenome/released/seed-environment-conda.yml"
+    ],
     [
       "2025.10",
       "moshpit",
-      "environment-files/q2-assembly-qiime2-moshpit-2025.10.yml"
+      "2025.10/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.10",
+      "pathogenome",
+      "2025.10/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "moshpit",
+      "2025.7/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.7",
+      "pathogenome",
+      "2025.7/pathogenome/released/seed-environment-conda.yml"
     ],
     [
       "2025.4",
       "moshpit",
-      "environment-files/q2-assembly-qiime2-moshpit-2025.4.yml"
+      "2025.4/moshpit/released/seed-environment-conda.yml"
+    ],
+    [
+      "2025.4",
+      "pathogenome",
+      "2025.4/pathogenome/released/seed-environment-conda.yml"
     ],
     [
       "2024.10",
       "metagenome",
-      "environment-files/q2-assembly-qiime2-metagenome-2024.10.yml"
+      "2024.10/metagenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2024.10",
+      "pathogenome",
+      "2024.10/pathogenome/released/seed-environment-conda.yml"
+    ],
+    [
+      "2024.5",
+      "metagenome",
+      "2024.5/metagenome/released/seed-environment-conda.yml"
     ]
-  ]
+  ],
+  "stars": 2,
+  "description": "QIIME 2 plugin for (meta)genome assembly.",
+  "branch": "main",
+  "last_commit": {
+    "sha": "3292a0d4d3a6cfa7d70500a71f5a19add553840b",
+    "status": "failed",
+    "date": "2026-02-20T09:05:21Z"
+  }
 }

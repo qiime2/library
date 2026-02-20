@@ -594,13 +594,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
   "last_commit": {
-    "sha": "8e51252574b654e84df32e3dc5d4f3315166d5c0",
+    "sha": "0a850f0f49986ce836017a459a53252d8d9add1f",
     "status": "passed",
-    "date": "2026-01-21T09:39:28Z"
+    "date": "2026-02-20T09:23:18Z"
   },
   "stars": 3,
   "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
   "distros": [
+    [
+      "2026.1",
+      "amplicon",
+      "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+    ],
     [
       "2025.10",
       "amplicon",

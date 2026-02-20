@@ -81,19 +81,332 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-skani/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-02-20T09:14:44Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fix README references to q2-skani by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-skani/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-skani/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-skani",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "TEST: add unit tests by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-skani/pull/3",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#3"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-skani/pull/3",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-skani",
+                      "issue_number": "3"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-skani/pull/4",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#4"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-skani/pull/4",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-skani",
+                      "issue_number": "4"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env file for QIIME 2 2025.10 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-skani/pull/5",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#5"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-skani/pull/5",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-skani",
+                      "issue_number": "5"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-skani/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-skani/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-skani",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": https://github.com/bokulich-lab/q2-skani/commits/2026.1.0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "owner": "bokulich-lab",
   "name": "q2-skani",
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-skani",
   "last_commit": {
-    "sha": "0347bc10b29d9d7bd2ada84664594c69c453298a",
+    "sha": "99a26e2dc8d6c7670762b58d99f63515a627b856",
     "status": "passed",
-    "date": "2026-02-06T09:14:50Z"
+    "date": "2026-02-20T09:23:46Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for ANI analysis using skani.",
   "distros": [
+    [
+      "2026.1",
+      "moshpit",
+      "environment-files/q2-skani-qiime2-moshpit-2026.1.yml"
+    ],
+    [
+      "2026.1",
+      "tiny",
+      "environment-files/q2-skani-qiime2-tiny-2026.1.yml"
+    ],
     [
       "2025.10",
       "moshpit",
