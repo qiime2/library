@@ -7,6 +7,22 @@
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
   },
+  "q2-annotate": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "q2-rgi": {
+    "base": "https://github.com/bokulich-lab/q2-rgi/wiki",
+    "pretty": true
+  },
+  "q2-ena-uploader": {
+    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
+    "pretty": true
+  },
+  "q2-types": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": false
+  },
   "rachis": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
@@ -27,20 +43,12 @@
     "base": "https://github.com/bokulich-lab/q2-skani",
     "pretty": true
   },
-  "q2-rgi": {
-    "base": "https://github.com/bokulich-lab/q2-rgi/wiki",
-    "pretty": true
-  },
   "q2-fondue": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },
   "q2-gunc": {
     "base": "https://github.com/bokulich-lab/q2-gunc",
-    "pretty": true
-  },
-  "q2-ena-uploader": {
-    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
     "pretty": true
   },
   "q2-fastp": {
@@ -54,10 +62,6 @@
   "q2-amrfinderplus": {
     "base": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
     "pretty": true
-  },
-  "q2-annotate": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
   },
   "RESCRIPt": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -148,10 +152,6 @@
     "pretty": false
   },
   "q2-phylogeny": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": false
-  },
-  "q2-types": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": false
   },

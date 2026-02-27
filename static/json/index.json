@@ -2,6 +2,66 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "0b038d37c5f8aac6807f255b6ae50626cc3d1bb2",
+        "status": "pending",
+        "date": "2026-02-26T11:15:33Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "63de51c9e5ff9269a5ea308a41c06faa4daf7c37",
+        "status": "passed",
+        "date": "2026-02-26T10:18:40Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-minimap2",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-minimap2",
@@ -137,31 +197,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "0a850f0f49986ce836017a459a53252d8d9add1f",
-        "status": "passed",
-        "date": "2026-02-20T09:23:18Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-gunc",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-gunc",
@@ -187,41 +222,6 @@
           "2025.7",
           "tiny",
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "21ede9113b500012b474e6f00fab1ec07a968f4e",
-        "status": "passed",
-        "date": "2026-02-20T09:10:06Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     },
@@ -366,5 +366,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-02-26T02:13:10.656Z"
+  "last_updated": "2026-02-27T02:11:50.628Z"
 }

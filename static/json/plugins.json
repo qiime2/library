@@ -1,6 +1,258 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "80aa399cd6044c3e1219a3df573cb9a0ec79d54d",
+        "status": "failed",
+        "date": "2026-02-26T11:55:34Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
+      "last_commit": {
+        "sha": "0b038d37c5f8aac6807f255b6ae50626cc3d1bb2",
+        "status": "pending",
+        "date": "2026-02-26T11:15:33Z"
+      },
+      "stars": 3,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "63de51c9e5ff9269a5ea308a41c06faa4daf7c37",
+        "status": "passed",
+        "date": "2026-02-26T10:18:40Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-types",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "2026.1/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "2025.10/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "2025.7/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "2025.4/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "tiny",
+          "2024.10/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "tiny",
+          "2024.5/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "tiny",
+          "2024.2/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "amplicon",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "tiny",
+          "2023.9/tiny/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "core",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 17,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "aba63b02e336ad6ece9819afca9fdfcdee754f6b",
+        "status": "passed",
+        "date": "2026-02-26T09:40:25Z"
+      }
+    },
+    {
       "owner": "rachis-org",
       "name": "rachis",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -264,31 +516,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "0a850f0f49986ce836017a459a53252d8d9add1f",
-        "status": "passed",
-        "date": "2026-02-20T09:23:18Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-fondue",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
       "in_distro": true,
@@ -385,41 +612,6 @@
           "2025.7",
           "tiny",
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "21ede9113b500012b474e6f00fab1ec07a968f4e",
-        "status": "passed",
-        "date": "2026-02-20T09:10:06Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     },
@@ -544,42 +736,6 @@
           "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "b38a6c79af43e205b771f16d92910d0850af4dcf",
-        "status": "failed",
-        "date": "2026-02-20T08:45:02Z"
-      }
     },
     {
       "owner": "bokulich-lab",
@@ -1360,7 +1516,7 @@
           "2023.7/core/released/seed-environment-conda.yml"
         ]
       ],
-      "stars": 3,
+      "stars": 4,
       "description": null,
       "branch": "dev",
       "last_commit": {
@@ -2784,162 +2940,6 @@
       "branch": "dev",
       "last_commit": {
         "sha": "d531670ca66ed8646ea80c3d564985528dbd2701",
-        "status": "passed",
-        "date": "2026-01-27T10:19:57Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-types",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "2026.1/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "2025.10/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "amplicon",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "2025.7/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "2025.4/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "tiny",
-          "2024.10/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "tiny",
-          "2024.5/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "tiny",
-          "2024.2/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "amplicon",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "tiny",
-          "2023.9/tiny/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "core",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 17,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "8686840e63ab71466892e2264223e577a1584d8e",
         "status": "passed",
         "date": "2026-01-27T10:19:57Z"
       }
