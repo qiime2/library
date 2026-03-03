@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-qsip2",
+      "branch": "main",
+      "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
+      "last_commit": {
+        "sha": "dbedb023d44bf613cb1f7428b28d719b0ca5cde9",
+        "status": "passed",
+        "date": "2026-03-02T19:18:36Z"
+      },
+      "stars": 1,
+      "description": "A QIIME 2 plugin for the analysis of qSIP data.",
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
@@ -219,36 +239,6 @@
           "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "1538ea555f5e8ccb66ee687b3166fd065b2506b2",
-        "status": "passed",
-        "date": "2026-02-20T09:11:41Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
-      "distros": [
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -366,5 +356,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-03-03T02:24:42.483Z"
+  "last_updated": "2026-03-03T21:33:21.599Z"
 }
