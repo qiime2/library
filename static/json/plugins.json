@@ -6,9 +6,9 @@
       "branch": "main",
       "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
       "last_commit": {
-        "sha": "f64abf0dcb00adc7698f3ca788fbf22fb60e2237",
-        "status": "passed",
-        "date": "2026-03-04T22:47:50Z"
+        "sha": "89830ea0cbbaffb795a23d190748dfeac76ed8e9",
+        "status": "failed",
+        "date": "2026-03-05T19:57:13Z"
       },
       "stars": 1,
       "description": "A QIIME 2 plugin for the analysis of qSIP data.",
@@ -19,6 +19,249 @@
           "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
         ]
       ]
+    },
+    {
+      "owner": "rachis-org",
+      "name": "rachis",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "2026.1/tiny/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 525,
+      "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "395f6185bf08baae4d7dccae9a4db24bda8e1eca",
+        "status": "passed",
+        "date": "2026-03-05T18:36:54Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-sample-classifier",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "amplicon",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "core",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 6,
+      "description": "QIIME 2 plugin for machine learning prediction of sample data.",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "802233ebeac7297d5ec0f54a8be39d8428a7d395",
+        "status": "passed",
+        "date": "2026-03-05T08:15:03Z"
+      }
+    },
+    {
+      "owner": "qiime2",
+      "name": "q2-diversity-lib",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "amplicon",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "metagenome",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "amplicon",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "amplicon",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "core",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 0,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "94fd703cad9d4f484ceea02be11bc9275046a9ce",
+        "status": "passed",
+        "date": "2026-03-05T08:14:40Z"
+      }
     },
     {
       "owner": "qiime2",
@@ -200,122 +443,6 @@
           "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-sample-classifier",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "amplicon",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "amplicon",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "core",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 6,
-      "description": "QIIME 2 plugin for machine learning prediction of sample data.",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "6b5d2def710f1668a0d2443a97246f53f0a2d3cc",
-        "status": "passed",
-        "date": "2026-03-02T13:27:30Z"
-      }
     },
     {
       "owner": "qiime2",
@@ -820,42 +947,6 @@
         "sha": "aba63b02e336ad6ece9819afca9fdfcdee754f6b",
         "status": "passed",
         "date": "2026-02-26T09:40:25Z"
-      }
-    },
-    {
-      "owner": "rachis-org",
-      "name": "rachis",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "2026.1/tiny/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 525,
-      "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "e27e7a9a3f70fbfe5d6f22c8fc98909b20af9ebb",
-        "status": "passed",
-        "date": "2026-02-25T20:04:42Z"
       }
     },
     {
@@ -3144,97 +3235,6 @@
         "sha": "d531670ca66ed8646ea80c3d564985528dbd2701",
         "status": "passed",
         "date": "2026-01-27T10:19:57Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-diversity-lib",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "amplicon",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "amplicon",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "amplicon",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "metagenome",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "amplicon",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "amplicon",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "core",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 0,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "b131fc888ca69b29eaa99ea6f78de7a9829bdbd8",
-        "status": "passed",
-        "date": "2026-01-27T10:19:56Z"
       }
     },
     {
