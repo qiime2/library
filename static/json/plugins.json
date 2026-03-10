@@ -1,26 +1,6 @@
 {
   "plugins": [
     {
-      "owner": "caporaso-lab",
-      "name": "q2-qsip2",
-      "branch": "main",
-      "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
-      "last_commit": {
-        "sha": "89830ea0cbbaffb795a23d190748dfeac76ed8e9",
-        "status": "failed",
-        "date": "2026-03-05T19:57:13Z"
-      },
-      "stars": 1,
-      "description": "A QIIME 2 plugin for the analysis of qSIP data.",
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
-        ]
-      ]
-    },
-    {
       "owner": "rachis-org",
       "name": "rachis",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -51,10 +31,30 @@
       "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
       "branch": "dev",
       "last_commit": {
-        "sha": "395f6185bf08baae4d7dccae9a4db24bda8e1eca",
+        "sha": "2ebc5483b3d6aec5e53e6e723a149287b0b6170b",
         "status": "passed",
-        "date": "2026-03-05T18:36:54Z"
+        "date": "2026-03-09T14:49:47Z"
       }
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "q2-qsip2",
+      "branch": "main",
+      "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
+      "last_commit": {
+        "sha": "89830ea0cbbaffb795a23d190748dfeac76ed8e9",
+        "status": "failed",
+        "date": "2026-03-05T19:57:13Z"
+      },
+      "stars": 1,
+      "description": "A QIIME 2 plugin for the analysis of qSIP data.",
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
+        ]
+      ]
     },
     {
       "owner": "qiime2",
