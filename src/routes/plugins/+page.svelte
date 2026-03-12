@@ -8,6 +8,7 @@
 
 
     let state = getFilterContext();
+    const pluginSources = ["Additional", "Distribution"] as const;
 </script>
 
 <div class="max-width">
@@ -23,7 +24,7 @@
     </div>
     <div class="sm:flex gap-4 md:gap-12 relative">
         <div class="prose shrink-0 lg:sticky top-[60px] self-start">
-            <dl class='grid grid-cols-3 gap-4 sm:grid-cols-1 sm:grid-rows-3'>
+            <dl class='grid grid-cols-4 gap-4 sm:grid-cols-1 sm:auto-rows-min'>
                 <div>
                     <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Epoch</dt>
                     {#each state.filtered_epochs as epoch (epoch)}
@@ -40,6 +41,12 @@
                     <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Status</dt>
                     {#each ['passed', 'failed'] as status}
                     <dd class='mt-0 ml-0 pl-1'><FilterCheckbox name={status} attr={state.filters.status}/></dd>
+                    {/each}
+                </div>
+                <div>
+                    <dt class='border-b-2 border-b-gray-700 text-gray-700 mb-1 mt-0'>Plugin Source</dt>
+                    {#each pluginSources as source}
+                    <dd class='mt-0 ml-0 pl-1'><FilterCheckbox name={source} attr={state.filters.source}/></dd>
                     {/each}
                 </div>
             </dl>
