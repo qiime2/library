@@ -5,8 +5,10 @@
     import { sortOverviews } from "$lib/scripts/util";
     import { SvelteSet } from "svelte/reactivity";
 
+    type ReleaseTuple = [string, string, string];
+
     let { children, unfiltered, distro_epochs }:
-        { children: Snippet, unfiltered: any[], distro_epochs: string[] } = $props();
+        { children: Snippet, unfiltered: any[], distro_epochs: ReleaseTuple[] } = $props();
 
     const releases = distro_epochs.map((x) => x.slice(0, 2))
     const distros: Set<string> = new Set();

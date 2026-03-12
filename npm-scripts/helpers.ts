@@ -393,6 +393,20 @@ export function sortReleases(a, b) {
   return byEpoch;
 }
 
+export function uniqReleases(releases) {
+  const seen = new Set();
+
+  return releases.filter((release) => {
+    const key = JSON.stringify(release);
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
+}
+
 // Sort QIIME 2 epochs from newest to oldest
 function sortEpochs(a, b) {
   const A = a.split(".");
