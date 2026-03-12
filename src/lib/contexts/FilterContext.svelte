@@ -7,6 +7,9 @@
 
     type ReleaseTuple = [string, string, string];
 
+    const DISTRO_SOURCE = "Distribution";
+    const THIRD_PARTY_SOURCE = "Additional";
+
     let { children, unfiltered, distro_epochs }:
         { children: Snippet, unfiltered: any[], distro_epochs: ReleaseTuple[] } = $props();
 
@@ -18,54 +21,6 @@
         epochs.add(epoch);
     }
 
-
-    let state: PluginFilter = $state({
-        sort: {
-            sort_col: new Column("Updated", "last_commit.date", SortType.numerical),
-            sort_descending: true,
-        },
-        filters: {
-            search: "",
-            epochs: new SvelteSet(),
-            distros: new SvelteSet(),
-            status: new SvelteSet()
-        },
-        filtered: unfiltered,
-        filtered_epochs: [...epochs],
-        filtered_distros: [...distros]
-    })
-    $effect(() => {
-        let new_distros: Set<string> = new Set()
-        if (state.filters.epochs.size > 0) {
-            for (const [epoch, distro] of releases) {
-                if (state.filters.epochs.has(epoch)) {
-                    new_distros.add(distro)
-                }
-            }
-            state.filtered_distros = [...new_distros];
-            for (const distro of state.filters.distros.difference(new_distros)) {
-                state.filters.distros.delete(distro)
-            }
-        } else {
-            state.filtered_distros = [...distros];
-        }
-
-        let new_epochs: Set<string> = new Set()
-        if (state.filters.distros.size > 0) {
-            for (const [epoch, distro] of releases) {
-                if (state.filters.distros.has(distro)) {
-                    new_epochs.add(epoch)
-                }
-            }
-            state.filtered_epochs = [...new_epochs];
-            for (const epoch of state.filters.epochs.difference(new_epochs)) {
-                state.filters.epochs.delete(epoch)
-            }
-        } else {
-            state.filtered_epochs = [...epochs];
-        }
-    })
-
     function contains(target: string | undefined, query: string) {
         if (!target) {
             return false
@@ -73,45 +28,129 @@
         return target.toLowerCase().search(query.toLowerCase()) >= 0;
     }
 
-    $effect(() => {
-        let filtered = unfiltered.slice();
+    function matchesSearchStatusAndSource(plugin: any, filters: PluginFilter["filters"]) {
+        if (
+            filters.search.length > 0
+            && !contains(plugin.name, filters.search)
+            && !contains(plugin.owner, filters.search)
+            && !contains(plugin.description, filters.search)
+        ) {
+            return false;
+        }
 
-        if (state.filters.search.length > 0) {
-            filtered = filtered.filter((e) =>
-                contains(e.name, state.filters.search)
-                || contains(e.owner, state.filters.search)
-                || contains(e.description, state.filters.search)
+        if (
+            filters.status.size > 0
+            && !filters.status.has(plugin.last_commit.status)
+        ) {
+            return false;
+        }
+
+        if (filters.source.size > 0) {
+            const source = plugin.in_distro ? DISTRO_SOURCE : THIRD_PARTY_SOURCE;
+            if (!filters.source.has(source)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function getMatchingReleases(
+        plugin: any,
+        filters: PluginFilter["filters"],
+        { ignoreEpoch = false, ignoreDistro = false } = {},
+    ) {
+        return plugin.distros
+            .map((d: ReleaseTuple) => d.slice(0, 2) as [string, string])
+            .filter((release: [string, string]) => {
+                const [epoch, distro] = release;
+                const epochMatch =
+                    ignoreEpoch || filters.epochs.size === 0 || filters.epochs.has(epoch);
+                const distroMatch =
+                    ignoreDistro || filters.distros.size === 0 || filters.distros.has(distro);
+                return epochMatch && distroMatch;
+            });
+    }
+
+    function getAvailableDistros(filters: PluginFilter["filters"]) {
+        const available = new Set<string>();
+        for (const plugin of unfiltered) {
+            if (!matchesSearchStatusAndSource(plugin, filters)) {
+                continue;
+            }
+            for (const [_, distro] of getMatchingReleases(plugin, filters, { ignoreDistro: true })) {
+                available.add(distro);
+            }
+        }
+        return [...distros].filter((distro) => available.has(distro));
+    }
+
+    function getAvailableEpochs(filters: PluginFilter["filters"]) {
+        const available = new Set<string>();
+        for (const plugin of unfiltered) {
+            if (!matchesSearchStatusAndSource(plugin, filters)) {
+                continue;
+            }
+            for (const [epoch] of getMatchingReleases(plugin, filters, { ignoreEpoch: true })) {
+                available.add(epoch);
+            }
+        }
+        return [...epochs].filter((epoch) => available.has(epoch));
+    }
+
+    function filterPlugins(
+        plugins: any[],
+        filters: PluginFilter["filters"],
+        sort: PluginFilter["sort"],
+    ) {
+        let filtered = plugins.slice();
+
+        filtered = filtered.filter((plugin) => {
+            return (
+                matchesSearchStatusAndSource(plugin, filters)
+                && getMatchingReleases(plugin, filters).length > 0
             );
+        });
 
+        return sortOverviews(filtered, sort.sort_col, sort.sort_descending)
+    }
+
+    const initialSort: PluginFilter["sort"] = {
+        sort_col: new Column("Updated", "last_commit.date", SortType.numerical),
+        sort_descending: true,
+    };
+    const initialFilters: PluginFilter["filters"] = {
+        search: "",
+        epochs: new SvelteSet(),
+        distros: new SvelteSet(),
+        source: new SvelteSet([THIRD_PARTY_SOURCE]),
+        status: new SvelteSet()
+    };
+
+    let state: PluginFilter = $state({
+        sort: initialSort,
+        filters: initialFilters,
+        filtered: filterPlugins(unfiltered, initialFilters, initialSort),
+        filtered_epochs: getAvailableEpochs(initialFilters),
+        filtered_distros: getAvailableDistros(initialFilters)
+    })
+
+    $effect(() => {
+        const newDistros = new Set(getAvailableDistros(state.filters));
+        state.filtered_distros = [...newDistros];
+        for (const distro of state.filters.distros.difference(newDistros)) {
+            state.filters.distros.delete(distro)
         }
 
-        if (state.filters.epochs.size > 0) {
-            filtered = filtered.filter(({distros}) => {
-                return distros
-                    .map((d: string) => d.slice(0, 2))
-                    .filter(([epoch, distro]: any) => state.filters.epochs.has(epoch))
-                    .length > 0
-            })
+        const newEpochs = new Set(getAvailableEpochs(state.filters));
+        state.filtered_epochs = [...newEpochs];
+        for (const epoch of state.filters.epochs.difference(newEpochs)) {
+            state.filters.epochs.delete(epoch)
         }
+    })
 
-        if (state.filters.distros.size > 0) {
-            filtered = filtered.filter(({distros}) => {
-                return distros
-                    .map((d: string) => d.slice(0, 2))
-                    .filter(([epoch, distro]: any) => state.filters.distros.has(distro))
-                    .length > 0
-            })
-        }
-
-        if (state.filters.status.size > 0) {
-            filtered = filtered.filter(({last_commit}) => {
-                return state.filters.status.has(last_commit.status)
-            })
-        }
-
-        state.filtered = sortOverviews(
-            filtered, state.sort.sort_col, state.sort.sort_descending,
-        )
+    $effect(() => {
+        state.filtered = filterPlugins(unfiltered, state.filters, state.sort);
     });
 
     setFilterContext(state);
