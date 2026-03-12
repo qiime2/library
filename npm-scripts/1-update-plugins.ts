@@ -8,6 +8,7 @@ import {
   getGithubReleases,
   getEnvironmentFiles,
   sortReleases,
+  uniqReleases,
   getLibraryCatalog,
   get_octokit,
   cleanup,
@@ -26,8 +27,9 @@ export async function main(catalog: string, octokit: Octokit) {
     plugins: [],
   };
 
-  // A set containing all QIIME 2 releases represented by all plugins on the library
-  let global_releases = new Set();
+  // All QIIME 2 releases represented by plugins on the library.
+  // We dedupe these by value later because array identity is not stable.
+  let global_releases: [string, string, string][] = [];
   let directlyRegistered = new Set();
 
   for (const plugin of plugins) {
@@ -94,7 +96,7 @@ export async function main(catalog: string, octokit: Octokit) {
       repo_name,
       branch,
     );
-    global_releases = new Set([...global_releases, ...plugin.distros]);
+    global_releases.push(...plugin.distros);
 
     repo_info = { ...repo_info, ...plugin };
 
@@ -114,7 +116,7 @@ export async function main(catalog: string, octokit: Octokit) {
     if (directlyRegistered.has(plugin.name)) {
       continue;
     }
-    global_releases = new Set([...global_releases, ...plugin.distros]);
+    global_releases.push(...plugin.distros);
     json_overview.plugins.push(plugin);
   }
 
@@ -124,7 +126,7 @@ export async function main(catalog: string, octokit: Octokit) {
       new Date(a.last_commit.date).getTime(),
   );
 
-  let releases = Array.from(global_releases);
+  let releases = uniqReleases(global_releases);
   releases.sort(sortReleases);
   json_overview.distros = releases;
 
