@@ -8,7 +8,7 @@
     type ReleaseTuple = [string, string, string];
 
     const DISTRO_SOURCE = "Distribution";
-    const THIRD_PARTY_SOURCE = "Additional";
+    const THIRD_PARTY_SOURCE = "Stand-alone";
 
     let { children, unfiltered, distro_epochs }:
         { children: Snippet, unfiltered: any[], distro_epochs: ReleaseTuple[] } = $props();
