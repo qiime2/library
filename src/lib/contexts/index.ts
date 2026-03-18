@@ -13,6 +13,7 @@ export interface PluginFilter {
     search: string;
     epochs: SvelteSet<string>;
     distros: SvelteSet<string>;
+    source: SvelteSet<"Distro-associated" | "Stand-alone">;
     status: SvelteSet<"passed" | "failed" | "pending">;
   };
   filtered: any[];
