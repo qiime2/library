@@ -7,7 +7,7 @@
 
     type ReleaseTuple = [string, string, string];
 
-    const DISTRO_SOURCE = "Distribution";
+    const DISTRO_SOURCE = "Distro-associated";
     const THIRD_PARTY_SOURCE = "Stand-alone";
 
     let { children, unfiltered, distro_epochs }:
