@@ -8,7 +8,7 @@
 
 
     let state = getFilterContext();
-    const pluginSources = ["Stand-alone", "Distribution"] as const;
+    const pluginSources = ["Stand-alone", "Distro-associated"] as const;
 </script>
 
 <div class="max-width">
