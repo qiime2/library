@@ -1,6 +1,42 @@
 {
   "plugins": [
     {
+      "owner": "rachis-org",
+      "name": "rachis",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "2026.1/tiny/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 526,
+      "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "ddfa22a529f1accf272c3e4f54c9ea86d10b38c3",
+        "status": "passed",
+        "date": "2026-03-20T19:02:16Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-assembly",
       "docs": "https://moshpit.qiime2.org/en/stable/",
@@ -69,42 +105,6 @@
         "sha": "1db7b9da9cac407adb3a5aa00a9d625242fb0061",
         "status": "failed",
         "date": "2026-03-16T10:37:14Z"
-      }
-    },
-    {
-      "owner": "rachis-org",
-      "name": "rachis",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "2026.1/tiny/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 526,
-      "description": "Rachis Framework (Formerly Known as QIIME 2 Framework (Q2F))",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "8b1394c43d26b0e0223f5f249d422f38a51eb045",
-        "status": "passed",
-        "date": "2026-03-13T22:23:37Z"
       }
     },
     {
