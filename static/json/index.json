@@ -2,6 +2,41 @@
   "plugins": [
     {
       "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "8d87c0f1cbaebbce7f7bbfe8ba8953671a557445",
+        "status": "passed",
+        "date": "2026-03-28T13:23:28Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        [
+          "2025.7",
+          "amplicon",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.5",
+          "amplicon",
+          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "caporaso-lab",
       "name": "q2-qsip2",
       "branch": "main",
       "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
@@ -184,61 +219,6 @@
           "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-skani",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-skani",
-      "last_commit": {
-        "sha": "99a26e2dc8d6c7670762b58d99f63515a627b856",
-        "status": "passed",
-        "date": "2026-02-20T09:23:46Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for ANI analysis using skani.",
-      "distros": [
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -356,5 +336,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-03-28T02:25:54.932Z"
+  "last_updated": "2026-03-29T02:38:22.641Z"
 }

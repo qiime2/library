@@ -1,6 +1,32 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "amplicon",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "amplicon",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "branch": "main",
+      "last_commit": {
+        "sha": "8d87c0f1cbaebbce7f7bbfe8ba8953671a557445",
+        "status": "passed",
+        "date": "2026-03-28T13:23:28Z"
+      }
+    },
+    {
       "owner": "rachis-org",
       "name": "rachis",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -2759,32 +2785,6 @@
         "sha": "641f234fc69192c595a18806fe6d03aa997237a7",
         "status": "passed",
         "date": "2026-01-27T10:20:06Z"
-      }
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "amplicon",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "amplicon",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "branch": "main",
-      "last_commit": {
-        "sha": "3409b8477d908f47972c5b63449ab8a805f72d80",
-        "status": "passed",
-        "date": "2026-01-27T10:19:59Z"
       }
     },
     {
