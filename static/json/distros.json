@@ -21,9 +21,50 @@
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
       "branch": "main",
       "last_commit": {
-        "sha": "8d87c0f1cbaebbce7f7bbfe8ba8953671a557445",
+        "sha": "4cef47fcd98d4b0d499cab200e69b5b1fa7be287",
         "status": "passed",
-        "date": "2026-03-28T13:23:28Z"
+        "date": "2026-04-01T18:41:47Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 1,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "e632434db5e7790c2c029025c678237e1811d5ba",
+        "status": "failed",
+        "date": "2026-04-01T14:37:44Z"
       }
     },
     {
@@ -923,7 +964,7 @@
       "branch": "main",
       "last_commit": {
         "sha": "67e3db62fc0508863ab88afdbbcdec37b86e43d9",
-        "status": "failed",
+        "status": "passed",
         "date": "2026-03-13T08:40:47Z"
       }
     },
@@ -1404,47 +1445,6 @@
         "sha": "308d2a051ae6e75dd117d2b75105477fa2206301",
         "status": "passed",
         "date": "2026-03-04T10:23:55Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "docs": null,
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "43e72e4b9420808e70fa18268c3a52ecaebd761c",
-        "status": "passed",
-        "date": "2026-03-02T13:45:41Z"
       }
     },
     {
@@ -2505,7 +2505,7 @@
           "2023.7/core/released/seed-environment-conda.yml"
         ]
       ],
-      "stars": 22,
+      "stars": 23,
       "description": "QIIME 2 plugin wrapping DADA2",
       "branch": "dev",
       "last_commit": {

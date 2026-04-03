@@ -1,14 +1,59 @@
 {
   "plugins": [
     {
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "41963b75657b5be3868c05292d7bff60618c3fa8",
+        "status": "passed",
+        "date": "2026-04-02T05:40:22Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
+        [
+          "2025.4",
+          "amplicon",
+          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "amplicon",
+          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "metagenome",
+          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
       "docs": "https://q2-boots.readthedocs.io/en/latest/",
       "last_commit": {
-        "sha": "8d87c0f1cbaebbce7f7bbfe8ba8953671a557445",
+        "sha": "4cef47fcd98d4b0d499cab200e69b5b1fa7be287",
         "status": "passed",
-        "date": "2026-03-28T13:23:28Z"
+        "date": "2026-04-01T18:41:47Z"
       },
       "stars": 3,
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
@@ -32,6 +77,31 @@
           "2024.5",
           "amplicon",
           "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "e632434db5e7790c2c029025c678237e1811d5ba",
+        "status": "failed",
+        "date": "2026-04-01T14:37:44Z"
+      },
+      "stars": 1,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        [
+          "2026.1",
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.1.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
         ]
       ]
     },
@@ -932,7 +1002,7 @@
       "branch": "main",
       "last_commit": {
         "sha": "67e3db62fc0508863ab88afdbbcdec37b86e43d9",
-        "status": "failed",
+        "status": "passed",
         "date": "2026-03-13T08:40:47Z"
       }
     },
@@ -1434,31 +1504,6 @@
         "status": "passed",
         "date": "2026-03-04T10:23:55Z"
       }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "last_commit": {
-        "sha": "43e72e4b9420808e70fa18268c3a52ecaebd761c",
-        "status": "passed",
-        "date": "2026-03-02T13:45:41Z"
-      },
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        [
-          "2026.1",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.1.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
-        ]
-      ]
     },
     {
       "owner": "qiime2",
@@ -2743,7 +2788,7 @@
           "2023.7/core/released/seed-environment-conda.yml"
         ]
       ],
-      "stars": 22,
+      "stars": 23,
       "description": "QIIME 2 plugin wrapping DADA2",
       "branch": "dev",
       "last_commit": {
@@ -3356,51 +3401,6 @@
           "2025.4",
           "amplicon",
           "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "micom-dev",
-      "name": "q2-micom",
-      "branch": "main",
-      "docs": "https://micom-dev.github.io/q2-micom/",
-      "last_commit": {
-        "sha": "8c2817a3557c4c777e16c917bc088dd2e776d767",
-        "status": "failed",
-        "date": "2026-01-07T10:26:33Z"
-      },
-      "stars": 10,
-      "description": "A Qiime plugin for MICOM.",
-      "distros": [
-        [
-          "2025.4",
-          "amplicon",
-          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "amplicon",
-          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.10",
-          "metagenome",
-          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
-        ],
-        [
-          "2024.10",
-          "tiny",
-          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
         ]
       ]
     },
