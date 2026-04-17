@@ -714,6 +714,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.4",
+      "moshpit",
+      "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.1",
       "moshpit",
       "2026.1/moshpit/released/seed-environment-conda.yml"
@@ -735,12 +740,12 @@
     ],
     [
       "2024.10",
-      "metagenome",
+      "moshpit",
       "2024.10/metagenome/released/seed-environment-conda.yml"
     ],
     [
       "2024.5",
-      "metagenome",
+      "moshpit",
       "2024.5/metagenome/released/seed-environment-conda.yml"
     ]
   ],
@@ -748,8 +753,8 @@
   "description": null,
   "branch": "main",
   "last_commit": {
-    "sha": "da944050b70890059a3fe26035282c81627117f7",
+    "sha": "3cf46f152354f9f991513cde4661aa8b1c6a0c49",
     "status": "passed",
-    "date": "2026-01-27T10:19:58Z"
+    "date": "2026-04-16T14:44:43Z"
   }
 }

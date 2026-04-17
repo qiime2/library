@@ -2834,8 +2834,13 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.4",
+      "moshpit",
+      "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.1",
-      "amplicon",
+      "qiime2",
       "2026.1/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -2850,7 +2855,7 @@
     ],
     [
       "2025.10",
-      "amplicon",
+      "qiime2",
       "2025.10/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -2865,7 +2870,7 @@
     ],
     [
       "2025.7",
-      "amplicon",
+      "qiime2",
       "2025.7/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -2880,7 +2885,7 @@
     ],
     [
       "2025.4",
-      "amplicon",
+      "qiime2",
       "2025.4/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -2895,12 +2900,12 @@
     ],
     [
       "2024.10",
-      "amplicon",
+      "qiime2",
       "2024.10/amplicon/released/seed-environment-conda.yml"
     ],
     [
       "2024.10",
-      "metagenome",
+      "moshpit",
       "2024.10/metagenome/released/seed-environment-conda.yml"
     ],
     [
@@ -2910,26 +2915,26 @@
     ],
     [
       "2024.5",
-      "amplicon",
+      "qiime2",
       "2024.5/amplicon/released/seed-environment-conda.yml"
     ],
     [
       "2024.5",
-      "metagenome",
+      "moshpit",
       "2024.5/metagenome/released/seed-environment-conda.yml"
     ],
     [
       "2024.2",
-      "amplicon",
+      "qiime2",
       "2024.2/amplicon/released/seed-environment-conda.yml"
     ]
   ],
-  "stars": 99,
+  "stars": 98,
   "description": "REference Sequence annotation and CuRatIon Pipeline",
   "branch": "master",
   "last_commit": {
-    "sha": "72292cdaf52c93319ddbf41243e653106bca5042",
+    "sha": "8121ad2a9d5873701a6dfe8df56da6eed4c46c83",
     "status": "passed",
-    "date": "2026-02-19T15:27:20Z"
+    "date": "2026-04-16T14:44:17Z"
   }
 }

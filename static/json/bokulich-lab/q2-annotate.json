@@ -2885,6 +2885,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.4",
+      "moshpit",
+      "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.1",
       "moshpit",
       "2026.1/moshpit/released/seed-environment-conda.yml"
@@ -2909,8 +2914,8 @@
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
   "branch": "main",
   "last_commit": {
-    "sha": "80aa399cd6044c3e1219a3df573cb9a0ec79d54d",
-    "status": "failed",
-    "date": "2026-02-26T11:55:34Z"
+    "sha": "20c4deee85aec837d7d832feb0e1a6ae8ebed4f9",
+    "status": "passed",
+    "date": "2026-04-16T14:44:34Z"
   }
 }

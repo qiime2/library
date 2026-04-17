@@ -24,8 +24,23 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.4",
+      "moshpit",
+      "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.4",
+      "pathogenome",
+      "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.4",
+      "tiny",
+      "2026.4/tiny/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.1",
-      "amplicon",
+      "qiime2",
       "2026.1/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -45,7 +60,7 @@
     ],
     [
       "2025.10",
-      "amplicon",
+      "qiime2",
       "2025.10/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -65,7 +80,7 @@
     ],
     [
       "2025.7",
-      "amplicon",
+      "qiime2",
       "2025.7/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -85,7 +100,7 @@
     ],
     [
       "2025.4",
-      "amplicon",
+      "qiime2",
       "2025.4/amplicon/released/seed-environment-conda.yml"
     ],
     [
@@ -105,12 +120,12 @@
     ],
     [
       "2024.10",
-      "amplicon",
+      "qiime2",
       "2024.10/amplicon/released/seed-environment-conda.yml"
     ],
     [
       "2024.10",
-      "metagenome",
+      "moshpit",
       "2024.10/metagenome/released/seed-environment-conda.yml"
     ],
     [
@@ -125,27 +140,27 @@
     ],
     [
       "2024.5",
-      "amplicon",
+      "qiime2",
       "2024.5/amplicon/released/seed-environment-conda.yml"
     ],
     [
       "2024.5",
-      "metagenome",
+      "moshpit",
       "2024.5/metagenome/released/seed-environment-conda.yml"
     ],
     [
       "2024.2",
-      "amplicon",
+      "qiime2",
       "2024.2/amplicon/released/seed-environment-conda.yml"
     ],
     [
       "2023.9",
-      "amplicon",
+      "qiime2",
       "2023.9/amplicon/released/seed-environment-conda.yml"
     ],
     [
       "2023.7",
-      "core",
+      "qiime2",
       "2023.7/core/released/seed-environment-conda.yml"
     ]
   ],
@@ -153,8 +168,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "0927c005b68e711ececdc6431b472148daf629ee",
+    "sha": "d8169a3cbb7b5501a47940a52d82bfc5484ef9fe",
     "status": "passed",
-    "date": "2026-01-27T10:19:57Z"
+    "date": "2026-04-16T14:44:29Z"
   }
 }

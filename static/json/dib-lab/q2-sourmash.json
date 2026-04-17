@@ -446,6 +446,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.4",
+      "moshpit",
+      "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.1",
       "moshpit",
       "2026.1/moshpit/released/seed-environment-conda.yml"
@@ -467,7 +472,7 @@
     ],
     [
       "2024.10",
-      "metagenome",
+      "moshpit",
       "2024.10/metagenome/released/seed-environment-conda.yml"
     ]
   ],
@@ -475,8 +480,8 @@
   "description": "Qiime2 Sourmash Plugin",
   "branch": "main",
   "last_commit": {
-    "sha": "641f234fc69192c595a18806fe6d03aa997237a7",
+    "sha": "05e430924c51662b8e5aa6aa3cf6d079aa899cb2",
     "status": "passed",
-    "date": "2026-01-27T10:20:06Z"
+    "date": "2026-04-16T14:44:30Z"
   }
 }

@@ -8,11 +8,13 @@ import {
   getGithubReleases,
   getEnvironmentFiles,
   sortReleases,
+  uniqReleases,
   getLibraryCatalog,
   get_octokit,
   cleanup,
   loadYamlDir,
   loadYamlPath,
+  normalizeDistros,
 } from "./helpers.js";
 import type { Octokit } from "octokit";
 import { join } from "node:path";
@@ -20,14 +22,54 @@ import { join } from "node:path";
 // Paths we are writing to
 const ROOT_PATH = "./static/json";
 
+type ReleaseTuple = [string, string, string];
+
+function getCanonicalDistroMap(
+  distros: { name: string; alt: string[] }[],
+) {
+  const mapping = new Map<string, string>();
+
+  for (const distro of distros) {
+    mapping.set(distro.name, distro.name);
+    for (const alias of distro.alt) {
+      mapping.set(alias, distro.name);
+    }
+  }
+
+  return mapping;
+}
+
+function canonicalizeReleases(
+  releases: ReleaseTuple[],
+  distroMap: Map<string, string>,
+): ReleaseTuple[] {
+  const deduped = new Map<string, ReleaseTuple>();
+
+  for (const [epoch, distro, envPath] of releases) {
+    const canonical = distroMap.get(distro) || distro;
+    const key = JSON.stringify([epoch, canonical]);
+    if (!deduped.has(key)) {
+      deduped.set(key, [epoch, canonical, envPath]);
+    }
+  }
+
+  return [...deduped.values()];
+}
+
 export async function main(catalog: string, octokit: Octokit) {
   let plugins = await loadYamlDir(join(catalog, "plugins"));
+  const { index: rawDistros } = await loadYamlPath(
+    join(catalog, "distros", "index.yml"),
+  );
+  const distros = normalizeDistros(rawDistros);
+  const distroMap = getCanonicalDistroMap(distros);
   let json_overview: any = {
     plugins: [],
   };
 
-  // A set containing all QIIME 2 releases represented by all plugins on the library
-  let global_releases = new Set();
+  // All QIIME 2 releases represented by plugins on the library.
+  // We dedupe these by value later because array identity is not stable.
+  let global_releases: [string, string, string][] = [];
   let directlyRegistered = new Set();
 
   for (const plugin of plugins) {
@@ -88,13 +130,16 @@ export async function main(catalog: string, octokit: Octokit) {
     repo_info.releases = await getGithubReleases(octokit, owner, repo_name);
 
     // Get the releases this plugin is compatible with
-    plugin.distros = await getEnvironmentFiles(
-      octokit,
-      owner,
-      repo_name,
-      branch,
+    plugin.distros = canonicalizeReleases(
+      await getEnvironmentFiles(
+        octokit,
+        owner,
+        repo_name,
+        branch,
+      ) as ReleaseTuple[],
+      distroMap,
     );
-    global_releases = new Set([...global_releases, ...plugin.distros]);
+    global_releases.push(...plugin.distros);
 
     repo_info = { ...repo_info, ...plugin };
 
@@ -114,7 +159,8 @@ export async function main(catalog: string, octokit: Octokit) {
     if (directlyRegistered.has(plugin.name)) {
       continue;
     }
-    global_releases = new Set([...global_releases, ...plugin.distros]);
+    plugin.distros = canonicalizeReleases(plugin.distros, distroMap);
+    global_releases.push(...plugin.distros);
     json_overview.plugins.push(plugin);
   }
 
@@ -124,7 +170,7 @@ export async function main(catalog: string, octokit: Octokit) {
       new Date(a.last_commit.date).getTime(),
   );
 
-  let releases = Array.from(global_releases);
+  let releases = uniqReleases(global_releases);
   releases.sort(sortReleases);
   json_overview.distros = releases;
 

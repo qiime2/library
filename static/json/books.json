@@ -7,7 +7,7 @@
         "source": "https://github.com/qiime2/amplicon-docs",
         "description": ""
       },
-      "distro": "amplicon"
+      "distro": "qiime2"
     },
     {
       "book": {
@@ -16,6 +16,13 @@
         "description": ""
       },
       "distro": "moshpit"
+    },
+    {
+      "book": {
+        "url": "https://develop.qiime2.org/en/stable/",
+        "title": "Docs for Tiny"
+      },
+      "distro": "tiny"
     }
   ],
   "plugins": [
