@@ -1188,6 +1188,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.4",
+      "pathogenome",
+      "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.1",
       "pathogenome",
       "2026.1/pathogenome/released/seed-environment-conda.yml"
@@ -1217,8 +1222,8 @@
   "description": null,
   "branch": "main",
   "last_commit": {
-    "sha": "65ec49807ec5068c7e5c77d0f4590ec687c9c046",
-    "status": "failed",
-    "date": "2026-02-06T12:27:09Z"
+    "sha": "43267b323d1425cfbc956c680e5a794ebc2eb7a4",
+    "status": "passed",
+    "date": "2026-04-16T14:44:31Z"
   }
 }
