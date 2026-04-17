@@ -11,6 +11,7 @@ export async function main(catalog) {
       if (source.type === "rss") {
         let data: any = await (await fetch(source.url)).text();
         data = parser.parse(data);
+        console.log(data)
 
         source.url = data.feed.author.uri;
         source.entries = data.feed.entry.map((entry) => ({
