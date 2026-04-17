@@ -1,0 +1,577 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A "
+          },
+          {
+            "type": "link",
+            "url": "https://qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " plugin "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "developed"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " by Colin Wood (colin.wood@nau.edu). 🔌"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Important: This package should be considered alpha software"
+          }
+        ],
+        "identifier": "important-this-package-should-be-considered-alpha-software",
+        "label": "Important: This package should be considered alpha software",
+        "html_id": "important-this-package-should-be-considered-alpha-software",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Because the underlying qSIP2 package is relatively new and only cursory user testing & validation of this software has been performed, the package should be considered experimental."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install Prerequisites"
+          }
+        ],
+        "identifier": "install-prerequisites",
+        "label": "Install Prerequisites",
+        "html_id": "install-prerequisites",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "link",
+            "url": "https://conda.io/miniconda.html",
+            "children": [
+              {
+                "type": "text",
+                "value": "Miniconda"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " provides the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": " environment and package manager, and is currently the only supported way to install QIIME 2.\nFollow the instructions for downloading and installing Miniconda."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After installing Miniconda and opening a new terminal, make sure you’re running the latest version of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda"
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "conda update conda"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Install development version of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-qsip2"
+          }
+        ],
+        "identifier": "install-development-version-of-q2-qsip2",
+        "label": "Install development version of q2-qsip2",
+        "html_id": "install-development-version-of-q2-qsip2",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Next, you need to get into the top-level "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-qsip2"
+          },
+          {
+            "type": "text",
+            "value": " directory.\nYou can achieve this by "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository",
+            "children": [
+              {
+                "type": "text",
+                "value": "cloning the repository"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", for example with the command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "git clone https://github.com/caporaso-lab/q2-qsip2"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Once you have the directory on your computer, change ("
+          },
+          {
+            "type": "inlineCode",
+            "value": "cd"
+          },
+          {
+            "type": "text",
+            "value": ") into it."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you’re in a conda environment, deactivate it by running "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conda deactivate"
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Then, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda env create -n q2-qsip2-dev --file ./environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After this completes, activate the new environment you created by running:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "conda activate q2-qsip2-dev"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Finally, run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "make install"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Testing and using the most recent development version of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-qsip2"
+          }
+        ],
+        "identifier": "testing-and-using-the-most-recent-development-version-of-q2-qsip2",
+        "label": "Testing and using the most recent development version of q2-qsip2",
+        "html_id": "testing-and-using-the-most-recent-development-version-of-q2-qsip2",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "After completing the install steps above, confirm that everything is working as expected by running:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "make test"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You should get a report that tests were run, and you should see that all tests passed and none failed.\nIt’s usually ok if some warnings are reported."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If all of the tests pass, you’re ready to use the plugin.\nStart by making QIIME 2’s command line interface aware of "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-qsip2"
+          },
+          {
+            "type": "text",
+            "value": " by running:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime dev refresh-cache"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You should then see the plugin in the list of available plugins if you run:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime info"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You should be able to review the help text by running:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "shell",
+        "value": "qiime qsip2 --help"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Accessing the usage tutorial"
+          }
+        ],
+        "identifier": "accessing-the-usage-tutorial",
+        "label": "Accessing the usage tutorial",
+        "html_id": "accessing-the-usage-tutorial",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can find instructions for performing an example analysis with q2-qsip2 in the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/colinvwood/q2-qsip2/blob/main/tutorial/tutorial.md",
+            "children": [
+              {
+                "type": "text",
+                "value": "tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nThe data files that you’ll need to run that tutorial can be downloaded from "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/colinvwood/q2-qsip2/tree/main/tutorial",
+            "children": [
+              {
+                "type": "text",
+                "value": "the directory containing the tutorial"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Have fun! 😎"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "About"
+          }
+        ],
+        "identifier": "about",
+        "label": "About",
+        "html_id": "about",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-qsip2"
+          },
+          {
+            "type": "text",
+            "value": " Python package was "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org/en/stable/plugins/tutorials/create-from-template.html",
+            "children": [
+              {
+                "type": "text",
+                "value": "created from template"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn how to use QIIME 2, refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 User Documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn QIIME 2 plugin development, refer to "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org",
+            "children": [
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Developing with QIIME 2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "q2-qsip2"
+          },
+          {
+            "type": "text",
+            "value": " is a QIIME 2 community plugin.\nMore information on development and support for community plugins can be found "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nIf you need help with a community plugin, first refer to the "
+          },
+          {
+            "type": "link",
+            "url": "www.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "project website"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nIf that page doesn’t provide information on how to get help, or you need additional help, head to the "
+          },
+          {
+            "type": "link",
+            "url": "https://forum.qiime2.org/c/community-contributions/community-plugins/14",
+            "children": [
+              {
+                "type": "text",
+                "value": "Community Plugins category"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " on the QIIME 2 Forum where the QIIME 2 developers will do their best to help you."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "caporaso-lab",
+  "name": "q2-qsip2",
+  "branch": "main",
+  "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
+  "last_commit": {
+    "sha": "89830ea0cbbaffb795a23d190748dfeac76ed8e9",
+    "status": "failed",
+    "date": "2026-03-05T19:57:13Z"
+  },
+  "stars": 1,
+  "description": "A QIIME 2 plugin for the analysis of qSIP data.",
+  "distros": [
+    [
+      "2026.1",
+      "qiime2",
+      "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
+    ]
+  ]
+}
