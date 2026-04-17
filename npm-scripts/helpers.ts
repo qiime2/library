@@ -24,8 +24,11 @@ const mkdtemp = promisify(fs.mkdtemp);
 
 // Env files are ignored if they do not match this regex
 const ENV_FILE_REGEX = new RegExp(
-  `.*-qiime2-.*-20[0-9][0-9]\.([1-9]|1[0-2])(?:-release-.*)?\.yml`,
+  `.*-(qiime2|rachis)-.*-20[0-9][0-9]\.([1-9]|1[0-2])(?:-release-.*)?\.yml`,
 );
+const SEED_ENVIRONMENT_REGEX =
+  /^seed-environment-conda(?:-[a-z0-9-]+)?\.ya?ml$/i;
+const SOLVED_ENVIRONMENT_REGEX = /^(qiime2|rachis)-.*-conda\.ya?ml$/i;
 
 const DEFAULT_CATALOG_REPO = "https://github.com/qiime2/library-catalog.git";
 
@@ -54,6 +57,75 @@ export async function getLibraryCatalog() {
 }
 
 let EPOCH = /^20\d\d\.\d\d?$/;
+
+function getDistroAliases(distro): string[] {
+  if (Array.isArray(distro.alt)) {
+    return distro.alt;
+  }
+
+  if (typeof distro.alt === "string") {
+    return [distro.alt];
+  }
+
+  return [];
+}
+
+async function getReleasedSeedEnvironmentFiles(workdir, epoch, distro) {
+  const released = join(workdir, epoch, distro, "released");
+  let entries: string[];
+
+  try {
+    entries = await promisify(fs.readdir)(released);
+  } catch {
+    return [];
+  }
+
+  const seedEntries = entries.filter((entry) => SEED_ENVIRONMENT_REGEX.test(entry));
+  const seen = new Set(seedEntries);
+  const preferred = [
+    "seed-environment-conda.yml",
+    "seed-environment-conda-linux.yml",
+    "seed-environment-conda-osx.yml",
+  ];
+
+  const ordered = [
+    ...preferred.filter((name) => seen.has(name)),
+    ...seedEntries
+      .filter((name) => !preferred.includes(name))
+      .sort((a, b) => a.localeCompare(b)),
+  ];
+
+  return ordered.map((entry) => join(epoch, distro, "released", entry));
+}
+
+function getSolvedEnvironmentKind(path: string) {
+  if (/-((linux-64)|(ubuntu-latest))-conda\.ya?ml$/i.test(path)) {
+    return "linux";
+  }
+
+  if (/-((osx-64)|(osx-arm64)|(macos-latest))-conda\.ya?ml$/i.test(path)) {
+    return "osx";
+  }
+
+  return null;
+}
+
+async function getReleasedSolvedEnvironmentFiles(workdir, epoch, distro) {
+  const released = join(workdir, epoch, distro, "released");
+  let entries: string[];
+
+  try {
+    entries = await promisify(fs.readdir)(released);
+  } catch {
+    return [];
+  }
+
+  return entries
+    .filter((entry) => SOLVED_ENVIRONMENT_REGEX.test(entry))
+    .sort((a, b) => a.localeCompare(b))
+    .map((entry) => join(epoch, distro, "released", entry));
+}
+
 export async function getDistributionsData(distros) {
   let workdir = await mkdtemp(join(tmpdir(), "q2-distributions-clone"));
   try {
@@ -64,12 +136,28 @@ export async function getDistributionsData(distros) {
     console.error(stderr);
     const { packages } = await loadYamlPath(join(workdir, "data.yaml"));
     let plugins: Record<string, any> = {};
+    let releaseEnvironmentFiles: Record<string, Record<string, any>> = {};
+    const distroAliases = new Map<string, string>();
+    const distroNames: string[] = [];
+
+    for (const distro of distros) {
+      for (const name of [distro.name, ...getDistroAliases(distro)]) {
+        distroNames.push(name);
+        if (!distroAliases.has(name)) {
+          distroAliases.set(name, distro.name);
+        }
+      }
+    }
+    const allDistros = [...new Set(distroNames)];
 
     for (const pkg of packages) {
       let [owner, name] = pkg.repo.split("/");
       let docs = null;
+      const pkgDistros = new Set(pkg.distros);
       for (const distro of distros) {
-        if (distro.docs && pkg.distros.includes(distro.name)) {
+        const names = [distro.name, ...getDistroAliases(distro)];
+        const hasDistro = names.some((name) => pkgDistros.has(name));
+        if (distro.docs && hasDistro) {
           docs = distro.docs;
           break;
         }
@@ -82,36 +170,68 @@ export async function getDistributionsData(distros) {
     );
     epochs.sort(sortEpochs);
 
-    let distro_names: string[] = [];
-    for (const distro of distros) {
-      distro_names.push(distro.name);
-      if (distro.alt) {
-        distro_names.push(distro.alt);
-      }
-    }
+    const seenReleases = new Set();
     for (const epoch of epochs) {
-      for (const distro of distro_names) {
-        try {
-          let envPath = join(
-            epoch,
-            distro,
-            "released",
-            "seed-environment-conda.yml",
-          )
-          let env = await loadYamlPath(join(workdir, envPath));
-          for (const dep of env.dependencies) {
-            let name = dep.split("=")[0];
-            if (Object.hasOwn(plugins, name)) {
-              plugins[name].distros.push([epoch, distro, envPath]);
+      for (const distro of allDistros) {
+        const canonicalDistro = distroAliases.get(distro) || distro;
+        const solvedEnvPaths = await getReleasedSolvedEnvironmentFiles(
+          workdir,
+          epoch,
+          distro,
+        );
+        if (solvedEnvPaths.length > 0) {
+          if (!releaseEnvironmentFiles[canonicalDistro]) {
+            releaseEnvironmentFiles[canonicalDistro] = {};
+          }
+          if (!releaseEnvironmentFiles[canonicalDistro][epoch]) {
+            releaseEnvironmentFiles[canonicalDistro][epoch] = { source: distro };
+          }
+          for (const envPath of solvedEnvPaths) {
+            const envKind = getSolvedEnvironmentKind(envPath);
+            if (
+              envKind &&
+              !releaseEnvironmentFiles[canonicalDistro][epoch][envKind]
+            ) {
+              releaseEnvironmentFiles[canonicalDistro][epoch][envKind] = envPath;
             }
           }
-        } catch {
-          continue;
+        }
+
+        let envPaths = await getReleasedSeedEnvironmentFiles(
+          workdir,
+          epoch,
+          distro,
+        );
+
+        for (const envPath of envPaths) {
+          let env;
+          try {
+            env = await loadYamlPath(join(workdir, envPath));
+          } catch {
+            continue;
+          }
+
+          for (const dep of env.dependencies || []) {
+            if (typeof dep !== "string") {
+              continue;
+            }
+            let name = dep.split("=")[0];
+            if (Object.hasOwn(plugins, name)) {
+              const key = JSON.stringify([name, epoch, canonicalDistro]);
+              if (!seenReleases.has(key)) {
+                seenReleases.add(key);
+                plugins[name].distros.push([epoch, canonicalDistro, envPath]);
+              }
+            }
+          }
         }
       }
     }
 
-    return Object.values(plugins).filter(({ distros }) => distros.length > 0);
+    return {
+      plugins: Object.values(plugins).filter(({ distros }) => distros.length > 0),
+      releaseEnvironmentFiles,
+    };
   } finally {
     await promisify(fs.rm)(workdir, { force: true, recursive: true });
   }

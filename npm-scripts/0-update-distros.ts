@@ -25,7 +25,7 @@ export async function main(catalog, octokit) {
     index: { name: string; source: string; docs?: string }[];
     ignore: string[];
   } = await loadYamlPath(join(catalog, "distros", "index.yml"));
-  let plugins = await getDistributionsData(index);
+  let { plugins, releaseEnvironmentFiles } = await getDistributionsData(index);
   plugins = plugins.filter(({ name }) => !ignore.includes(name));
 
   let distro_overview: Record<string, any> = { plugins: [] };
@@ -97,6 +97,7 @@ export async function main(catalog, octokit) {
   let releases = Array.from(global_releases);
   releases.sort(sortReleases);
   distro_overview.distros = index;
+  distro_overview.release_env_files = releaseEnvironmentFiles;
 
   let install = fs.readFileSync(
     "./npm-scripts/install-distro.myst.md",

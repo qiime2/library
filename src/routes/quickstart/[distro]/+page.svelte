@@ -4,10 +4,57 @@
     import { fade } from 'svelte/transition';
     import MyStTableOfContents from '$lib/components/MySTTableOfContents.svelte';
 
+    type ReleaseEnvFiles = {
+        source?: string;
+        generic?: string;
+        linux?: string;
+        osx?: string;
+    };
+
+    function getDistroAliases(distro: { alt?: string | string[] }): string[] {
+        if (Array.isArray(distro.alt)) {
+            return distro.alt;
+        }
+        if (typeof distro.alt === "string") {
+            return [distro.alt];
+        }
+        return [];
+    }
+
+    function sortEpochs(a: string, b: string) {
+        const [yearA, monthA] = a.split(".").map((x) => parseInt(x, 10));
+        const [yearB, monthB] = b.split(".").map((x) => parseInt(x, 10));
+
+        if (yearA !== yearB) {
+            return yearB - yearA;
+        }
+
+        return monthB - monthA;
+    }
+
+    function defaultLegacyInstallUrl(
+        epoch: string,
+        distroName: string,
+        os: "linux" | "osx",
+    ) {
+        if (os === "linux") {
+            return `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${epoch}/${distroName}/released/qiime2-${distroName}-ubuntu-latest-conda.yml`;
+        }
+
+        return `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${epoch}/${distroName}/released/qiime2-${distroName}-macos-latest-conda.yml`;
+    }
+
+    function distributionRawUrl(path: string) {
+        return `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${path}`;
+    }
+
     let {data} = $props();
     let distro = data.distro;
+    const aliases = getDistroAliases(distro);
     const distroPlugins: Record<string, Record<string, any[]>> = {};
-    const distroAlts: Record<string, string> = {};
+    const distroSourcesByEpoch: Record<string, string> = {};
+    const releaseEnvFilesByEpoch: Record<string, ReleaseEnvFiles> =
+        (data.release_env_files?.[distro.name] || {}) as Record<string, ReleaseEnvFiles>;
 
     data.plugins.sort((a: any, b: any) => a.name.localeCompare(b.name))
 
@@ -25,30 +72,100 @@
         }
     }
 
-    if (distroPlugins[distro.alt]) {
-        for (const epoch of Object.keys(distroPlugins[distro.alt])) {
-            if (!distroPlugins[distro.name]) {
-                distroPlugins[distro.name] = {};
+    if (!distroPlugins[distro.name]) {
+        distroPlugins[distro.name] = {};
+    }
+    for (const name of [distro.name, ...aliases]) {
+        if (!distroPlugins[name]) {
+            continue;
+        }
+
+        for (const epoch of Object.keys(distroPlugins[name])) {
+            if (!distroPlugins[distro.name][epoch]) {
+                distroPlugins[distro.name][epoch] = distroPlugins[name][epoch];
+                distroSourcesByEpoch[epoch] = name;
             }
-            distroPlugins[distro.name][epoch] = distroPlugins[distro.alt][epoch];
-            distroAlts[epoch] = distro.alt;
         }
     }
 
-    const distroEpochs = [...Object.keys(distroPlugins[distro.name])]
+    const distroEpochs = (
+        Object.keys(releaseEnvFilesByEpoch).length > 0
+            ? [...Object.keys(releaseEnvFilesByEpoch)]
+            : [...Object.keys(distroPlugins[distro.name])]
+    );
+    distroEpochs.sort(sortEpochs);
+
     let selectedEpoch: string = $state(distroEpochs[0]);
-    let distroName: string = $derived(distroAlts[selectedEpoch] || distro.name);
+    let selectedReleaseFiles: ReleaseEnvFiles = $derived(
+        releaseEnvFilesByEpoch[selectedEpoch] || {},
+    );
+    let distroName: string = $derived(
+        selectedReleaseFiles.source || distroSourcesByEpoch[selectedEpoch] || distro.name,
+    );
+
+    let linuxInstallable: boolean = $derived(
+        Boolean(selectedReleaseFiles.linux || selectedReleaseFiles.generic || !releaseEnvFilesByEpoch[selectedEpoch])
+    );
+    let macosInstallable: boolean = $derived(
+        Boolean(selectedReleaseFiles.osx || selectedReleaseFiles.generic || !releaseEnvFilesByEpoch[selectedEpoch])
+    );
+
+    let linuxUrl: string = $derived(
+        (selectedReleaseFiles.linux ? distributionRawUrl(selectedReleaseFiles.linux) : null)
+        || (selectedReleaseFiles.generic ? distributionRawUrl(selectedReleaseFiles.generic) : null)
+        || defaultLegacyInstallUrl(selectedEpoch, distroName, "linux"),
+    );
+
+    let macosUrl: string = $derived(
+        (selectedReleaseFiles.osx ? distributionRawUrl(selectedReleaseFiles.osx) : null)
+        || (selectedReleaseFiles.generic ? distributionRawUrl(selectedReleaseFiles.generic) : null)
+        || defaultLegacyInstallUrl(selectedEpoch, distroName, "osx"),
+    );
+
+    let installNotice: string | null = $derived.by(() => {
+        if (linuxInstallable && macosInstallable) {
+            return null;
+        }
+        if (linuxInstallable && !macosInstallable) {
+            return "This release provides an install environment for Linux/WSL only.";
+        }
+        if (!linuxInstallable && macosInstallable) {
+            return "This release provides an install environment for macOS only.";
+        }
+
+        return "This release currently does not provide install environment files.";
+    });
 
     let ast = $derived.by(() => {
         let ast = structuredClone(data.install);
+        visit(ast, (node) => {
+            if (node.type === "tabSet" && Array.isArray(node.children)) {
+                node.children = node.children.filter((child: any) => {
+                    if (child.type !== "tabItem") {
+                        return true;
+                    }
+                    if (child.title === "Linux / Windows WSL") {
+                        return linuxInstallable;
+                    }
+                    if (
+                        child.title === "macOS (Apple Silicon)"
+                        || child.title === "macOS (Intel)"
+                    ) {
+                        return macosInstallable;
+                    }
+                    return true;
+                });
+            }
+        })
+
         visit(ast, (node) => {
             if (node.value) {
                 let value = node.value
                 value = value.replaceAll('((epoch))', selectedEpoch);
                 value = value.replaceAll('((distro))', distroName);
-                value = value.replaceAll('((linux_url))', `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${selectedEpoch}/${distroName}/released/qiime2-${distroName}-ubuntu-latest-conda.yml`);
-                value = value.replaceAll('((macos_url))', `https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/${selectedEpoch}/${distroName}/released/qiime2-${distroName}-macos-latest-conda.yml`);
-                value = value.replaceAll('((env_name))', `qiime2-${distro.name}-${selectedEpoch}`);
+                value = value.replaceAll('((linux_url))', linuxUrl);
+                value = value.replaceAll('((macos_url))', macosUrl);
+                value = value.replaceAll('((env_name))', `rachis-${distro.name}-${selectedEpoch}`);
                 node.value = value;
             }
         })
@@ -90,7 +207,7 @@
         <dt>Built-in plugins</dt>
         <dd>
             <ul class='list-none flex flex-wrap !pl-0 !mt-0'>
-                {#each distroPlugins[distro.name][selectedEpoch] as plugin (plugin.name)}
+                {#each (distroPlugins[distro.name][selectedEpoch] || []) as plugin (plugin.name)}
                 <li transition:fade class="!my-0 after:content-[','] last:after:content-['']">
                     <a href='/plugins/{plugin.owner}/{plugin.name}'>{plugin.name}</a>
                 </li>
@@ -100,6 +217,9 @@
     </dl>
     <h2 id="{distro.name}-installation">Installation Instructions</h2>
     <p>You can install this distribution with either conda or docker.</p>
+    {#if installNotice}
+    <p class='bg-yellow-50 border border-yellow-200 rounded px-4 py-2'>{installNotice}</p>
+    {/if}
     <MyStTableOfContents {ast} />
     {#key selectedEpoch}
     <MyStMinimal {ast} />

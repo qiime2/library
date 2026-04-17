@@ -29,7 +29,8 @@
 
     function environmentLink(epoch: string, distro: string, env: string = '') {
         if (data.repo_info.in_distro) {
-            return `https://github.com/qiime2/distributions/blob/dev/${epoch}/${distro}/released/seed-environment-conda.yml`
+            const path = env || `${epoch}/${distro}/released/seed-environment-conda.yml`;
+            return `https://github.com/qiime2/distributions/blob/dev/${path}`
         }
         return `https://github.com/${owner}/${plugin}/blob/${data.repo_info.branch}/${env}`
     }

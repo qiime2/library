@@ -21,8 +21,56 @@ import { join } from "node:path";
 // Paths we are writing to
 const ROOT_PATH = "./static/json";
 
+type ReleaseTuple = [string, string, string];
+
+function getDistroAliases(distro: { alt?: string | string[] }): string[] {
+  if (Array.isArray(distro.alt)) {
+    return distro.alt;
+  }
+
+  if (typeof distro.alt === "string") {
+    return [distro.alt];
+  }
+
+  return [];
+}
+
+function getCanonicalDistroMap(
+  distros: { name: string; alt?: string | string[] }[],
+) {
+  const mapping = new Map<string, string>();
+
+  for (const distro of distros) {
+    mapping.set(distro.name, distro.name);
+    for (const alias of getDistroAliases(distro)) {
+      mapping.set(alias, distro.name);
+    }
+  }
+
+  return mapping;
+}
+
+function canonicalizeReleases(
+  releases: ReleaseTuple[],
+  distroMap: Map<string, string>,
+): ReleaseTuple[] {
+  const deduped = new Map<string, ReleaseTuple>();
+
+  for (const [epoch, distro, envPath] of releases) {
+    const canonical = distroMap.get(distro) || distro;
+    const key = JSON.stringify([epoch, canonical]);
+    if (!deduped.has(key)) {
+      deduped.set(key, [epoch, canonical, envPath]);
+    }
+  }
+
+  return [...deduped.values()];
+}
+
 export async function main(catalog: string, octokit: Octokit) {
   let plugins = await loadYamlDir(join(catalog, "plugins"));
+  const { index: distros } = await loadYamlPath(join(catalog, "distros", "index.yml"));
+  const distroMap = getCanonicalDistroMap(distros);
   let json_overview: any = {
     plugins: [],
   };
@@ -90,11 +138,14 @@ export async function main(catalog: string, octokit: Octokit) {
     repo_info.releases = await getGithubReleases(octokit, owner, repo_name);
 
     // Get the releases this plugin is compatible with
-    plugin.distros = await getEnvironmentFiles(
-      octokit,
-      owner,
-      repo_name,
-      branch,
+    plugin.distros = canonicalizeReleases(
+      await getEnvironmentFiles(
+        octokit,
+        owner,
+        repo_name,
+        branch,
+      ) as ReleaseTuple[],
+      distroMap,
     );
     global_releases.push(...plugin.distros);
 
@@ -116,6 +167,7 @@ export async function main(catalog: string, octokit: Octokit) {
     if (directlyRegistered.has(plugin.name)) {
       continue;
     }
+    plugin.distros = canonicalizeReleases(plugin.distros, distroMap);
     global_releases.push(...plugin.distros);
     json_overview.plugins.push(plugin);
   }
