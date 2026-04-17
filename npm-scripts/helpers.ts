@@ -58,16 +58,20 @@ export async function getLibraryCatalog() {
 
 let EPOCH = /^20\d\d\.\d\d?$/;
 
-function getDistroAliases(distro): string[] {
-  if (Array.isArray(distro.alt)) {
-    return distro.alt;
-  }
+export function normalizeDistros(distros) {
+  return distros.map((distro) => {
+    let alt: string[] = [];
+    if (Array.isArray(distro.alt)) {
+      alt = distro.alt.filter((name): name is string => typeof name === "string");
+    } else if (typeof distro.alt === "string") {
+      alt = [distro.alt];
+    }
 
-  if (typeof distro.alt === "string") {
-    return [distro.alt];
-  }
+    // Keep aliases deterministic and avoid self-aliases.
+    alt = [...new Set(alt)].filter((name) => name !== distro.name);
 
-  return [];
+    return { ...distro, alt };
+  });
 }
 
 async function getReleasedSeedEnvironmentFiles(workdir, epoch, distro) {
@@ -127,6 +131,7 @@ async function getReleasedSolvedEnvironmentFiles(workdir, epoch, distro) {
 }
 
 export async function getDistributionsData(distros) {
+  distros = normalizeDistros(distros);
   let workdir = await mkdtemp(join(tmpdir(), "q2-distributions-clone"));
   try {
     let { stdout, stderr } = await exec(
@@ -141,7 +146,7 @@ export async function getDistributionsData(distros) {
     const distroNames: string[] = [];
 
     for (const distro of distros) {
-      for (const name of [distro.name, ...getDistroAliases(distro)]) {
+      for (const name of [distro.name, ...distro.alt]) {
         distroNames.push(name);
         if (!distroAliases.has(name)) {
           distroAliases.set(name, distro.name);
@@ -155,7 +160,7 @@ export async function getDistributionsData(distros) {
       let docs = null;
       const pkgDistros = new Set(pkg.distros);
       for (const distro of distros) {
-        const names = [distro.name, ...getDistroAliases(distro)];
+        const names = [distro.name, ...distro.alt];
         const hasDistro = names.some((name) => pkgDistros.has(name));
         if (distro.docs && hasDistro) {
           docs = distro.docs;

@@ -1,21 +1,9 @@
 import { error, redirect } from "@sveltejs/kit";
 
-function getDistroAliases(distro: { alt?: string | string[] }): string[] {
-  if (Array.isArray(distro.alt)) {
-    return distro.alt;
-  }
-
-  if (typeof distro.alt === "string") {
-    return [distro.alt];
-  }
-
-  return [];
-}
-
 export async function load({ params, parent, url }) {
   const data = await parent();
   for (const distro of data.distros) {
-    const aliases = getDistroAliases(distro);
+    const aliases: string[] = distro.alt;
     if (distro.name === params.distro || aliases.includes(params.distro)) {
       if (params.distro !== distro.name) {
         throw redirect(308, `/quickstart/${distro.name}${url.search}`);

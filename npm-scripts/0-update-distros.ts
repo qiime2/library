@@ -8,6 +8,7 @@ import {
   getHighLevelRepoOverview,
   getLatestCommit,
   getLibraryCatalog,
+  normalizeDistros,
   getReadme,
   getRunsStatusOfCommit,
   loadYamlPath,
@@ -19,12 +20,18 @@ const ROOT_PATH = "./static/json";
 
 export async function main(catalog, octokit) {
   let {
-    index,
+    index: rawIndex,
     ignore,
   }: {
-    index: { name: string; source: string; docs?: string }[];
+    index: {
+      name: string;
+      source?: string;
+      docs?: string;
+      alt?: string | string[];
+    }[];
     ignore: string[];
   } = await loadYamlPath(join(catalog, "distros", "index.yml"));
+  const index = normalizeDistros(rawIndex);
   let { plugins, releaseEnvironmentFiles } = await getDistributionsData(index);
   plugins = plugins.filter(({ name }) => !ignore.includes(name));
 

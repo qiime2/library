@@ -11,16 +11,6 @@
         osx?: string;
     };
 
-    function getDistroAliases(distro: { alt?: string | string[] }): string[] {
-        if (Array.isArray(distro.alt)) {
-            return distro.alt;
-        }
-        if (typeof distro.alt === "string") {
-            return [distro.alt];
-        }
-        return [];
-    }
-
     function sortEpochs(a: string, b: string) {
         const [yearA, monthA] = a.split(".").map((x) => parseInt(x, 10));
         const [yearB, monthB] = b.split(".").map((x) => parseInt(x, 10));
@@ -50,7 +40,7 @@
 
     let {data} = $props();
     let distro = data.distro;
-    const aliases = getDistroAliases(distro);
+    const aliases: string[] = distro.alt;
     const distroPlugins: Record<string, Record<string, any[]>> = {};
     const distroSourcesByEpoch: Record<string, string> = {};
     const releaseEnvFilesByEpoch: Record<string, ReleaseEnvFiles> =

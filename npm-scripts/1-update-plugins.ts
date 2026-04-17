@@ -14,6 +14,7 @@ import {
   cleanup,
   loadYamlDir,
   loadYamlPath,
+  normalizeDistros,
 } from "./helpers.js";
 import type { Octokit } from "octokit";
 import { join } from "node:path";
@@ -23,26 +24,14 @@ const ROOT_PATH = "./static/json";
 
 type ReleaseTuple = [string, string, string];
 
-function getDistroAliases(distro: { alt?: string | string[] }): string[] {
-  if (Array.isArray(distro.alt)) {
-    return distro.alt;
-  }
-
-  if (typeof distro.alt === "string") {
-    return [distro.alt];
-  }
-
-  return [];
-}
-
 function getCanonicalDistroMap(
-  distros: { name: string; alt?: string | string[] }[],
+  distros: { name: string; alt: string[] }[],
 ) {
   const mapping = new Map<string, string>();
 
   for (const distro of distros) {
     mapping.set(distro.name, distro.name);
-    for (const alias of getDistroAliases(distro)) {
+    for (const alias of distro.alt) {
       mapping.set(alias, distro.name);
     }
   }
@@ -69,7 +58,10 @@ function canonicalizeReleases(
 
 export async function main(catalog: string, octokit: Octokit) {
   let plugins = await loadYamlDir(join(catalog, "plugins"));
-  const { index: distros } = await loadYamlPath(join(catalog, "distros", "index.yml"));
+  const { index: rawDistros } = await loadYamlPath(
+    join(catalog, "distros", "index.yml"),
+  );
+  const distros = normalizeDistros(rawDistros);
   const distroMap = getCanonicalDistroMap(distros);
   let json_overview: any = {
     plugins: [],
