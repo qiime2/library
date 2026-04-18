@@ -11,8 +11,15 @@ export async function main(catalog) {
       if (source.type === "rss") {
         let data: any = await (await fetch(source.url)).text();
         data = parser.parse(data);
+        console.log(data)
 
-        source.url = data.feed.author.uri;
+        try {
+          source.url = data.feed.author.uri;
+        } catch(error: any) {
+          console.error(error.message)
+          console.log("Received the following for data:", data);
+        }
+
         source.entries = data.feed.entry.map((entry) => ({
           id: entry["yt:videoId"],
           title: entry.title,
