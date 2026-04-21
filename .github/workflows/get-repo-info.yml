@@ -1,6 +1,6 @@
 name: Get Repo Info
 
-# Run every night at midnight or when button clicked
+# Run every day at noon or when button clicked
 on:
   schedule:
     - cron: "0 12 * * *"
