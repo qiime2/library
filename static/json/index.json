@@ -2,6 +2,56 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-deseq2",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-deseq2",
+      "last_commit": {
+        "sha": "898b8cb370555bec6a3f463173eb58a34b87d2fd",
+        "status": "passed",
+        "date": "2026-04-23T08:25:59Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for differential expression analysis with DESeq2.",
+      "distros": [
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-deseq2-qiime2-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-deseq2-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-subread",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-subread",
+      "last_commit": {
+        "sha": "19720ca683297c6ff8217c8c23f3c3e664a60efa",
+        "status": "failed",
+        "date": "2026-04-23T07:08:58Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
+      "distros": [
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-subread-qiime2-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-subread-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-kmerizer",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
@@ -149,66 +199,6 @@
           "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-rgi/wiki",
-      "last_commit": {
-        "sha": "0b038d37c5f8aac6807f255b6ae50626cc3d1bb2",
-        "status": "pending",
-        "date": "2026-02-26T11:15:33Z"
-      },
-      "stars": 3,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "63de51c9e5ff9269a5ea308a41c06faa4daf7c37",
-        "status": "passed",
-        "date": "2026-02-26T10:18:40Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -332,5 +322,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-04-22T13:57:03.913Z"
+  "last_updated": "2026-04-23T13:59:14.434Z"
 }

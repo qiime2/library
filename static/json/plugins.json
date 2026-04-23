@@ -2,6 +2,56 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-deseq2",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-deseq2",
+      "last_commit": {
+        "sha": "898b8cb370555bec6a3f463173eb58a34b87d2fd",
+        "status": "passed",
+        "date": "2026-04-23T08:25:59Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for differential expression analysis with DESeq2.",
+      "distros": [
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-deseq2-qiime2-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-deseq2-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-subread",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-subread",
+      "last_commit": {
+        "sha": "19720ca683297c6ff8217c8c23f3c3e664a60efa",
+        "status": "failed",
+        "date": "2026-04-23T07:08:58Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
+      "distros": [
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-subread-qiime2-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-subread-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-fastp",
       "docs": "https://moshpit.qiime2.org/en/stable/",
       "in_distro": true,
@@ -3657,6 +3707,16 @@
     [
       "2026.4",
       "moshpit",
+      "environment-files/q2-deseq2-qiime2-moshpit-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "moshpit",
+      "environment-files/q2-subread-qiime2-moshpit-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "moshpit",
       "2026.4/moshpit/released/seed-environment-conda-linux.yml"
     ],
     [
@@ -3668,6 +3728,16 @@
       "2026.4",
       "qiime2",
       "2026.4/qiime2/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.4",
+      "tiny",
+      "environment-files/q2-deseq2-qiime2-tiny-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "tiny",
+      "environment-files/q2-subread-qiime2-tiny-2026.4.yml"
     ],
     [
       "2026.4",

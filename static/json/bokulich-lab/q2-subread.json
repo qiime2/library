@@ -1,0 +1,129 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-subread/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/github/bokulich-lab/q2-subread",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/github/bokulich-lab/q2-subread/graph/badge.svg?token=6DYYQJJGY6",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For installation instructions head to the "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-subread",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Library"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2026.4.0",
+      "html_url": "https://github.com/bokulich-lab/q2-subread/releases/tag/2026.4.0",
+      "name": "2026.4.0",
+      "published_at": "2026-04-23T09:14:45Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
+      "tag_name": "2026.1.0",
+      "html_url": "https://github.com/bokulich-lab/q2-subread/releases/tag/2026.1.0",
+      "name": "2026.1.0",
+      "published_at": "2026-03-18T09:54:48Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "bokulich-lab",
+  "name": "q2-subread",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-subread",
+  "last_commit": {
+    "sha": "19720ca683297c6ff8217c8c23f3c3e664a60efa",
+    "status": "failed",
+    "date": "2026-04-23T07:08:58Z"
+  },
+  "stars": 0,
+  "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
+  "distros": [
+    [
+      "2026.4",
+      "moshpit",
+      "environment-files/q2-subread-qiime2-moshpit-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "tiny",
+      "environment-files/q2-subread-qiime2-tiny-2026.4.yml"
+    ]
+  ]
+}
