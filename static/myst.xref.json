@@ -1710,25 +1710,7 @@
       "url": "/myst/qiime2/_/references/plugins/vsearch"
     },
     {
-      "identifier": "q2-type-deblurstats",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
       "identifier": "q2-type-sampledata-firstdifferences",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-dada2stats",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dada2basetransitionstats",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -1740,37 +1722,19 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-blastdb",
+      "identifier": "q2-type-srametadata",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-taxonomicclassifier",
+      "identifier": "q2-type-srafailedids",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-featuredata-differentialabundance",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-featuredata-ancombc2output",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-uchimestats",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-qualityfilterstats",
+      "identifier": "q2-type-ncbiaccessionids",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -1788,19 +1752,103 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-placements",
+      "identifier": "q2-type-sampledata-dada2stats",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-seppreferencedatabase",
+      "identifier": "q2-type-dada2basetransitionstats",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-sampledata-artificialgrouping",
+      "identifier": "q2-type-qualityfilterstats",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-deblurstats",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-uchimestats",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuredata-differentialabundance",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuredata-ancombc2output",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-blastdb",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-taxonomicclassifier",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampleestimator-classifier",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampleestimator-regressor",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-booleanseries",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-regressorpredictions",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-classifierpredictions",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-featuredata-importance",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-probabilities",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-sampledata-truetargets",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -2298,42 +2346,6 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dist1d-multi-independent",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-unordered-independent",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedunordered-independent",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedordered-matched",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-unordered-matched",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedunordered-matched",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
       "identifier": "q2-type-dist1d-ordered-independent",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
@@ -2346,7 +2358,13 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dist1d-nestedordered-independent",
+      "identifier": "q2-type-dist1d-multi-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedunordered-independent",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -2358,88 +2376,58 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
+      "identifier": "q2-type-dist1d-nestedordered-matched",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedordered-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-unordered-matched",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-unordered-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedunordered-matched",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
       "identifier": "q2-type-statstable-pairwise",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-srametadata",
+      "identifier": "q2-type-sampledata-artificialgrouping",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-srafailedids",
+      "identifier": "q2-type-placements",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-ncbiaccessionids",
+      "identifier": "q2-type-seppreferencedatabase",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampleestimator-classifier",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampleestimator-regressor",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-booleanseries",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-regressorpredictions",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-classifierpredictions",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-featuredata-importance",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-probabilities",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-sampledata-truetargets",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-format-deblurstatsfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-deblurstatsdirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
       "identifier": "q2-format-firstdifferencesformat",
@@ -2449,30 +2437,6 @@
     },
     {
       "identifier": "q2-format-firstdifferencesdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-dada2statsformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-dada2statsdirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-dada2basetransitionstatsformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-dada2basetransitionstatsdirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
@@ -2490,67 +2454,37 @@
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-blastdbdirfmtv5",
+      "identifier": "q2-format-srametadataformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-taxonomicclassifierdirfmt",
+      "identifier": "q2-format-srametadatadirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-taxonomicclassifertemporarypickledirfmt",
+      "identifier": "q2-format-srafailedidsformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-frictionlesscsvfileformat",
+      "identifier": "q2-format-srafailedidsdirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-datapackageschemafileformat",
+      "identifier": "q2-format-ncbiaccessionidsformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-dataloafpackagedirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-ancombc2outputdirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-uchimestatsfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-uchimestatsdirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-qualityfilterstatsfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-qualityfilterstatsdirfmt",
+      "identifier": "q2-format-ncbiaccessionidsdirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
@@ -2580,37 +2514,163 @@
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-placementsformat",
+      "identifier": "q2-format-dada2statsformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-placementsdirfmt",
+      "identifier": "q2-format-dada2statsdirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-raxmlinfoformat",
+      "identifier": "q2-format-dada2basetransitionstatsformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-seppreferencedirfmt",
+      "identifier": "q2-format-dada2basetransitionstatsdirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-artificialgroupingformat",
+      "identifier": "q2-format-qualityfilterstatsfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-artificialgroupingdirectoryformat",
+      "identifier": "q2-format-qualityfilterstatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-deblurstatsfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-deblurstatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-uchimestatsfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-uchimestatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-frictionlesscsvfileformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-datapackageschemafileformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-dataloafpackagedirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-ancombc2outputdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-blastdbdirfmtv5",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-taxonomicclassifierdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-taxonomicclassifertemporarypickledirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-sampleestimatordirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-booleanseriesformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-booleanseriesdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-importanceformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-importancedirectoryformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-predictionsformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-predictionsdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-probabilitiesformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-probabilitiesdirectoryformat",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-truetargetsdirectoryformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
@@ -3492,97 +3552,37 @@
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srametadataformat",
+      "identifier": "q2-format-artificialgroupingformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srametadatadirfmt",
+      "identifier": "q2-format-artificialgroupingdirectoryformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srafailedidsformat",
+      "identifier": "q2-format-placementsformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-srafailedidsdirfmt",
+      "identifier": "q2-format-placementsdirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-ncbiaccessionidsformat",
+      "identifier": "q2-format-raxmlinfoformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-ncbiaccessionidsdirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-sampleestimatordirfmt",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-booleanseriesformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-booleanseriesdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-importanceformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-importancedirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-predictionsformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-predictionsdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-probabilitiesformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-probabilitiesdirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-truetargetsdirectoryformat",
+      "identifier": "q2-format-seppreferencedirfmt",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
