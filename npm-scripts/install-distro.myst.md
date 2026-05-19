@@ -11,7 +11,9 @@ for downloading and installing Miniconda.
 It is important to follow all of the directions provided in the
 [Miniconda instructions](https://www.anaconda.com/docs/getting-started/miniconda/install),
 particularly ensuring that you run `conda init` at the end of the installation process (via installer or manual command),
-to ensure that your Miniconda installation is fully installed and available for the following commands.
+to ensure that your Miniconda installation is fully installed and available for the following commands. 
+On Windows, [set up WSL](https://learn.microsoft.com/en-us/windows/wsl/install) first, then install Miniconda inside WSL.
+
 
 ### 2. Updating Miniconda
 
