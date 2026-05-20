@@ -818,6 +818,207 @@
             "value": "."
           }
         ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "If using PR2 data"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " ("
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "e.g."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-pr2-data"
+          },
+          {
+            "type": "text",
+            "value": "): See "
+          },
+          {
+            "type": "link",
+            "url": "https://pr2-database.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "The PR2 Databases"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for more details. "
+          },
+          {
+            "type": "link",
+            "url": "https://pr2-database.org/papers/papers-citing-pr2/",
+            "children": [
+              {
+                "type": "text",
+                "value": "How to cite PR2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "If using MIDORI2 data"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " ("
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "e.g."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-midori2-data"
+          },
+          {
+            "type": "text",
+            "value": "): See "
+          },
+          {
+            "type": "link",
+            "url": "https://www.reference-midori.info",
+            "children": [
+              {
+                "type": "text",
+                "value": "MIDORI Refrence 2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for more details. "
+          },
+          {
+            "type": "link",
+            "url": "https://www.reference-midori.info/",
+            "children": [
+              {
+                "type": "text",
+                "value": "How to cite MIDORI2"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "If using EUKARYOME data"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " ("
+          },
+          {
+            "type": "emphasis",
+            "children": [
+              {
+                "type": "text",
+                "value": "e.g."
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ", with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "get-eukaryome-data"
+          },
+          {
+            "type": "text",
+            "value": "): See "
+          },
+          {
+            "type": "link",
+            "url": "https://eukaryome.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "EUKARYOME"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " for more details. "
+          },
+          {
+            "type": "link",
+            "url": "https://eukaryome.org/",
+            "children": [
+              {
+                "type": "text",
+                "value": "How to cite Eukaryome"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
       }
     ]
   },
@@ -2934,12 +3135,12 @@
       "2024.2/amplicon/released/seed-environment-conda.yml"
     ]
   ],
-  "stars": 98,
+  "stars": 99,
   "description": "REference Sequence annotation and CuRatIon Pipeline",
   "branch": "master",
   "last_commit": {
-    "sha": "e8cefb054b602cb305e4f7311a7efd2dce26298b",
+    "sha": "25e04d345b7b7fc23891c75450e9c070af5b9c14",
     "status": "passed",
-    "date": "2026-05-18T14:24:17Z"
+    "date": "2026-05-19T17:02:17Z"
   }
 }

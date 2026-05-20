@@ -2,6 +2,52 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.4",
+          "pathogenome",
+          "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 1,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "299cdef7ebde4db1ea63b296d469ab66a2663a00",
+        "status": "passed",
+        "date": "2026-05-20T11:46:16Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
       "in_distro": true,
@@ -107,13 +153,13 @@
           "2024.2/amplicon/released/seed-environment-conda.yml"
         ]
       ],
-      "stars": 98,
+      "stars": 99,
       "description": "REference Sequence annotation and CuRatIon Pipeline",
       "branch": "master",
       "last_commit": {
-        "sha": "e8cefb054b602cb305e4f7311a7efd2dce26298b",
+        "sha": "25e04d345b7b7fc23891c75450e9c070af5b9c14",
         "status": "passed",
-        "date": "2026-05-18T14:24:17Z"
+        "date": "2026-05-19T17:02:17Z"
       }
     },
     {
@@ -1127,7 +1173,7 @@
       "branch": "dev",
       "last_commit": {
         "sha": "2f00d837dac5c30439f163a0751ccfccc4ef6400",
-        "status": "passed",
+        "status": "failed",
         "date": "2026-05-11T08:33:31Z"
       }
     },
@@ -1723,7 +1769,7 @@
       "branch": "dev",
       "last_commit": {
         "sha": "04319c686475f3a778521b0afa7e41e5fcc6e87e",
-        "status": "passed",
+        "status": "failed",
         "date": "2026-05-11T08:33:30Z"
       }
     },
@@ -1915,7 +1961,7 @@
       "branch": "dev",
       "last_commit": {
         "sha": "ede190c684c4f44ab00d7d1e8712ad78a2699941",
-        "status": "passed",
+        "status": "failed",
         "date": "2026-05-11T08:33:30Z"
       }
     },
@@ -2939,52 +2985,6 @@
         "sha": "3cf46f152354f9f991513cde4661aa8b1c6a0c49",
         "status": "passed",
         "date": "2026-04-16T14:44:43Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "docs": null,
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.4",
-          "pathogenome",
-          "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "5cc59d1adb92d006ff1e1900b79e4aade61a0981",
-        "status": "passed",
-        "date": "2026-04-16T14:44:42Z"
       }
     },
     {
