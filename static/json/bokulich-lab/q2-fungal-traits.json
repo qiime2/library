@@ -1,0 +1,1936 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "q2-fungal-traits"
+          },
+          {
+            "type": "text",
+            "value": " is a "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "link",
+                "url": "https://qiime2.org",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "QIIME 2"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " plugin"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " that annotates fungal taxonomic data with\necological traits and spore volumes derived from published fungal trait datasets.\nThe plugin provides an "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "inlineCode",
+                "value": "annotate"
+              },
+              {
+                "type": "text",
+                "value": " action"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": " that generates a metadata table containing fungal trait annotations and spore volume estimates based on the taxonomy of input sequences."
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation instructions"
+          }
+        ],
+        "identifier": "installation-instructions",
+        "label": "Installation instructions",
+        "html_id": "installation-instructions",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For installation instructions head to the "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-fungal-traits",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 Library"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "How annotation works"
+          }
+        ],
+        "identifier": "how-annotation-works",
+        "label": "How annotation works",
+        "html_id": "how-annotation-works",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The plugin links taxonomic assignments to known fungal trait datasets and produces a metadata table with:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "ecological fungal lifestyle traits"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "estimated spore volumes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Trait and spore annotations are inferred from the taxonomy hierarchy, but the two\nreference datasets are matched differently."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fungal trait matching"
+          }
+        ],
+        "identifier": "fungal-trait-matching",
+        "label": "Fungal trait matching",
+        "html_id": "fungal-trait-matching",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Fungal trait annotations are only attempted when both "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "phylum"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " and "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "genus"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "\nare present in the taxonomy input."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "The FungalTraits dataset is matched on "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "genus + phylum"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "If either genus or phylum is missing, fungal trait annotation is skipped for that\nfeature."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Spore volume matching"
+          }
+        ],
+        "identifier": "spore-volume-matching",
+        "label": "Spore volume matching",
+        "html_id": "spore-volume-matching",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Spore volume annotations are only attempted for rows where the taxonomy contains\n"
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kingdom"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " and the kingdom is "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Fungi"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "The spore dataset is then matched hierarchically using the available taxonomic\nranks."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "start": 1,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Species level"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\nIf a species match exists in the spore dataset, that value is used."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Genus level fallback"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\nIf no species-level match exists, the "
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "geometric mean of spore volumes within\nthe genus"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " is used."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Family level fallback"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": "\nIf no genus-level match exists, the "
+                  },
+                  {
+                    "type": "strong",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "geometric mean of spore volumes within\nthe family"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " is used."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "The output records whether each spore value came from a "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "species"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "genus"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ",\nor "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "family"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " match."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Taxonomy requirements"
+          }
+        ],
+        "identifier": "taxonomy-requirements",
+        "label": "Taxonomy requirements",
+        "html_id": "taxonomy-requirements",
+        "implicit": true
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Fungal trait annotation requires "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "genus + phylum"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Spore volume annotation requires "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "kingdom"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": " and at least one of "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "species"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ",\n"
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "genus"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ", or "
+              },
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "family"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "If only one of these two annotation paths can run, the plugin still returns the\npartial annotation."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Taxonomy string format and normalization"
+          }
+        ],
+        "identifier": "taxonomy-string-format-and-normalization",
+        "label": "Taxonomy string format and normalization",
+        "html_id": "taxonomy-string-format-and-normalization",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The input taxonomy is expected in standard QIIME 2 semicolon-separated format, for\nexample:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "k__Fungi;p__Basidiomycota;c__Agaricomycetes;o__Polyporales;f__Polyporaceae;g__Datroniella;s__Datroniella_minuta"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The code extracts taxonomic ranks from the prefixed fields and normalizes matching\nkeys so the input taxonomy can align with the reference datasets more reliably.\nThe current normalization behavior includes:"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "surrounding whitespace around each rank is stripped"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "explicit empty ranks such as "
+              },
+              {
+                "type": "inlineCode",
+                "value": "f__"
+              },
+              {
+                "type": "text",
+                "value": " are treated as missing values"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "square brackets "
+              },
+              {
+                "type": "inlineCode",
+                "value": "["
+              },
+              {
+                "type": "text",
+                "value": " and "
+              },
+              {
+                "type": "inlineCode",
+                "value": "]"
+              },
+              {
+                "type": "text",
+                "value": " are removed"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "underscores "
+              },
+              {
+                "type": "inlineCode",
+                "value": "_"
+              },
+              {
+                "type": "text",
+                "value": " and hyphens "
+              },
+              {
+                "type": "inlineCode",
+                "value": "-"
+              },
+              {
+                "type": "text",
+                "value": " are converted to spaces"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "repeated internal whitespace is collapsed"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "matching is case-insensitive via case folding"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "if a normalized species string does not already start with the normalized genus,\nthe genus name is prepended before species-level matching so matching uses a\nconsistent "
+              },
+              {
+                "type": "inlineCode",
+                "value": "Genus species"
+              },
+              {
+                "type": "text",
+                "value": " form"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "These normalized keys are used internally for matching only; the original taxonomy\nstring is retained in the output metadata."
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Data sources"
+          }
+        ],
+        "identifier": "data-sources",
+        "label": "Data sources",
+        "html_id": "data-sources",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The annotations rely on two curated fungal datasets."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Fungal trait dataset"
+          }
+        ],
+        "identifier": "fungal-trait-dataset",
+        "label": "Fungal trait dataset",
+        "html_id": "fungal-trait-dataset",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Ecological trait data are derived from:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Põlme, S., Abarenkov, K., Henrik Nilsson, R. et al. FungalTraits: a user-friendly traits database of fungi and fungus-like stramenopiles. Fungal Diversity 105, 1–16 (2020). https://doi.org/10.1007/s13225-020-00466-2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This dataset links ~10210 fungal genera to 17 ecological traits like lifestyle and\nfruit body type."
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Spore volume dataset"
+          }
+        ],
+        "identifier": "spore-volume-dataset",
+        "label": "Spore volume dataset",
+        "html_id": "spore-volume-dataset",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Spore volume estimates are derived from:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Abrego, N., Furneaux, B., Hardwick, B. et al. Airborne DNA reveals predictable spatial and seasonal dynamics of fungi. Nature 631, 835–842 (2024). https://doi.org/10.1038/s41586-024-07658-9"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This dataset provides measured spore dimensions for ~30000 fungal species."
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Usage"
+          }
+        ],
+        "identifier": "usage",
+        "label": "Usage",
+        "html_id": "usage",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The plugin provides a single action: "
+          },
+          {
+            "type": "inlineCode",
+            "value": "annotate"
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This action takes taxonomic assignments as input and produces a metadata table with fungal trait annotations and spore volume estimates."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "qiime fungal-traits annotate \\\n  --i-taxonomy taxonomy.qza \\\n  --o-metadata fungal_traits.qza"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The metadata output can be examined in the browser:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "qiime metadata tabulate \\\n  --m-input-file fungal_traits.qza \\\n  --o-visualization fungal_traits.qzv"
+      },
+      {
+        "type": "code",
+        "lang": "bash",
+        "value": "qiime tools view fungal_traits.qzv"
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Output format"
+          }
+        ],
+        "identifier": "output-format",
+        "label": "Output format",
+        "html_id": "output-format",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "annotate"
+          },
+          {
+            "type": "text",
+            "value": " action produces a metadata table where each row corresponds to a feature (e.g., ASV or sequence) and columns contain taxonomic information, ecological trait annotations, and estimated spore volumes."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Column"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "header": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Description"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "feature-id"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Unique identifier of the feature (e.g., ASV or sequence ID)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "taxon"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxonomic assignment for the feature."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "fungal_traits_genus"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Genus used for fungal trait matching."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "primary_lifestyle"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Primary ecological lifestyle (e.g., saprotroph, pathogen, symbiont)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "secondary_lifestyle"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Secondary lifestyle annotation if present."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "comment_on_lifestyle_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Notes or comments related to the lifestyle classification."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "endophytic_interaction_capability_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Indicates whether the genus has the capacity for endophytic interactions with plants."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "plant_pathogenic_capacity_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Indicates whether the genus includes plant pathogenic taxa."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "decay_substrate_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Substrate type the fungus is associated with during decay (e.g., wood, litter)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "decay_type_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Type of decay performed by the fungus (e.g., white rot, brown rot)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "aquatic_habitat_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Indicates whether taxa are associated with aquatic environments."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "animal_biotrophic_capacity_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Indicates whether taxa have biotrophic interactions with animals."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "specific_hosts"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Known host organisms associated with the fungus."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "growth_form_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Morphological growth form (e.g., filamentous mycelium, yeast-like)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "fruitbody_type_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Type of fruiting body produced by the fungus."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "hymenium_type_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Type of hymenium structure present in reproductive structures."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ectomycorrhiza_exploration_type_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Exploration type for ectomycorrhizal fungi."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ectomycorrhiza_lineage_template"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Phylogenetic lineage associated with ectomycorrhizal fungi."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "primary_photobiont"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Primary photobiont partner in lichenized fungi."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "secondary_photobiont"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Secondary photobiont partner if present."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "mitospores_taxon"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxon used to match mitospore measurements."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "mitospores_volume"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Estimated volume of mitospores."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "mitospores_matching_level"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxonomic level used to determine mitospore volume (species, genus, or family)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "meiospores_taxon"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxon used to match meiospore measurements."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "meiospores_volume"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Estimated volume of meiospores."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "meiospores_matching_level"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxonomic level used to determine meiospore volume (species, genus, or family)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "multinucleate_sexual_spores_taxon"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxon used to match multinucleate sexual spore measurements."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "multinucleate_sexual_spores_volume"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Estimated volume of multinucleate sexual spores."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "multinucleate_sexual_spores_matching_level"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxonomic level used to determine multinucleate sexual spore volume (species, genus, or family)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "multinucleate_asexual_spores_taxon"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxon used to match multinucleate asexual spore measurements."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "multinucleate_asexual_spores_volume"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Estimated volume of multinucleate asexual spores."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "multinucleate_asexual_spores_matching_level"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Taxonomic level used to determine multinucleate asexual spore volume (species, genus, or family)."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Handling of duplicated entries in the fungal trait dataset"
+          }
+        ],
+        "identifier": "handling-of-duplicated-entries-in-the-fungal-trait-dataset",
+        "label": "Handling of duplicated entries in the fungal trait dataset",
+        "html_id": "handling-of-duplicated-entries-in-the-fungal-trait-dataset",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Three rows in the fungal traits dataset were exact duplicates and were removed."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Removed rows:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "jrk02819 | Ascomycota | Dothideomycetes | Phaeotrichales | Phaeotrichaceae | Echinoascotheca | unspecified_saprotroph | filamentous_mycelium"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "jrk00124 | Ascomycota | Lecanoromycetes | Lecanorales | Lecanoraceae | Adelolecia | lichenized | non-aquatic | thallus_photosynthetic | apothecium_(hymenium_on_surface) | smooth | chlorococcoid"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "jrk10035 | Ascomycota | Sordariomycetes | Microascales | Ceratocystidaceae | Phialophoropsis | plant_pathogen | arthropod-associated | wood_pathogen | wood | blue-staining | non-aquatic | arthropod_ectosymbiont | Ambrosia_beetles_(Coleoptera:Curculionidae) | filamentous_mycelium | perithecium(hymenium_hidden,_narrow_opening) | closed"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "One genus entry was duplicated with differing completeness.\nThe less complete row was removed."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Removed row:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "inlineCode",
+            "value": "jrk00561 | Ascomycota | Dothideomycetes | Dothideomycetes order incertae sedis | Paranectriellaceae | Paranectriella |   | litter_saprotroph |   |   | no_endophytic_capacity |   | leaf/fruit/seed |   | non-aquatic |   |   | filamentous_mycelium"
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "About"
+          }
+        ],
+        "identifier": "about",
+        "label": "About",
+        "html_id": "about",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "q2-fungal-traits"
+          },
+          {
+            "type": "text",
+            "value": " Python package was "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org/en/latest/plugins/tutorials/create-from-template.html",
+            "children": [
+              {
+                "type": "text",
+                "value": "created from a template"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn how to use QIIME 2, refer to the "
+          },
+          {
+            "type": "link",
+            "url": "https://docs.qiime2.org",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME 2 User Documentation"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nTo learn QIIME 2 plugin development, refer to "
+          },
+          {
+            "type": "link",
+            "url": "https://develop.qiime2.org",
+            "children": [
+              {
+                "type": "emphasis",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Developing with QIIME 2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "owner": "bokulich-lab",
+  "name": "q2-fungal-traits",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
+  "last_commit": {
+    "sha": "68351529865bc4cb82757165afedbbbc5a973c1e",
+    "status": "passed",
+    "date": "2026-05-20T14:32:44Z"
+  },
+  "stars": 0,
+  "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
+  "distros": [
+    [
+      "2026.4",
+      "qiime2",
+      "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
+    ]
+  ]
+}

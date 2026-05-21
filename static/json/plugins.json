@@ -6,22 +6,42 @@
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
       "last_commit": {
-        "sha": "299cdef7ebde4db1ea63b296d469ab66a2663a00",
+        "sha": "ceba59e1c0b118c6294d494eecabf23b5bf0a548",
         "status": "passed",
-        "date": "2026-05-20T11:46:16Z"
+        "date": "2026-05-21T11:55:41Z"
       },
       "stars": 1,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         [
+          "2026.4",
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
+        ],
+        [
           "2026.1",
           "pathogenome",
           "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.1.yml"
-        ],
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-fungal-traits",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
+      "last_commit": {
+        "sha": "68351529865bc4cb82757165afedbbbc5a973c1e",
+        "status": "passed",
+        "date": "2026-05-20T14:32:44Z"
+      },
+      "stars": 0,
+      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
+      "distros": [
         [
-          "2024.10",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
         ]
       ]
     },
@@ -3322,7 +3342,7 @@
         "status": "pending",
         "date": "2026-02-26T11:15:33Z"
       },
-      "stars": 3,
+      "stars": 4,
       "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
       "distros": [
         [
@@ -3722,7 +3742,17 @@
     [
       "2026.4",
       "pathogenome",
+      "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "pathogenome",
       "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.4",
+      "qiime2",
+      "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
     ],
     [
       "2026.4",
@@ -4053,11 +4083,6 @@
       "2024.10",
       "moshpit",
       "2024.10/metagenome/released/seed-environment-conda.yml"
-    ],
-    [
-      "2024.10",
-      "pathogenome",
-      "environment-files/q2-amrfinderplus-qiime2-pathogenome-2024.10.yml"
     ],
     [
       "2024.10",
