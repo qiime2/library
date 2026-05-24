@@ -1,6 +1,51 @@
 {
   "plugins": [
     {
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "15e6f81b2f7e295581a811192bbe6d325302d00a",
+        "status": "passed",
+        "date": "2026-05-23T03:51:59Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "moshpit",
+          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
@@ -3266,51 +3311,6 @@
         "status": "passed",
         "date": "2026-04-16T14:44:30Z"
       }
-    },
-    {
-      "owner": "micom-dev",
-      "name": "q2-micom",
-      "branch": "main",
-      "docs": "https://micom-dev.github.io/q2-micom/",
-      "last_commit": {
-        "sha": "41963b75657b5be3868c05292d7bff60618c3fa8",
-        "status": "passed",
-        "date": "2026-04-02T05:40:22Z"
-      },
-      "stars": 10,
-      "description": "A Qiime plugin for MICOM.",
-      "distros": [
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.10",
-          "moshpit",
-          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
-        ],
-        [
-          "2024.10",
-          "tiny",
-          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
-        ]
-      ]
     },
     {
       "owner": "caporaso-lab",
