@@ -73,7 +73,21 @@
           },
           {
             "type": "text",
-            "value": "\nfor the pathogenome distribution."
+            "value": "\nfor the pathogenome distribution. The pathogenome distribution is only available for\nlinux. If you want to install q2-amrfinderplus on macOS you can install it with the\ntiny distribution. For this follow the instructions on the "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins/bokulich-lab/q2-amrfinderplus",
+            "children": [
+              {
+                "type": "text",
+                "value": "QIIME2 Library"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
           }
         ]
       },
@@ -110,21 +124,7 @@
           },
           {
             "type": "text",
-            "value": ".\nFor details on the package, please refer to the\n"
-          },
-          {
-            "type": "link",
-            "url": "https://github.com/ncbi/amr/wiki",
-            "children": [
-              {
-                "type": "text",
-                "value": "AMRFinderPlus documentation"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": ").\nCheckout the "
+            "value": ".\nFor a tutorial on the package, please refer to the "
           },
           {
             "type": "link",
@@ -135,23 +135,6 @@
                 "value": "MOSHPIT docs"
               }
             ]
-          },
-          {
-            "type": "text",
-            "value": "\nfor a tutorial of "
-          },
-          {
-            "type": "emphasis",
-            "children": [
-              {
-                "type": "text",
-                "value": "q2-amrfinderplus"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": "."
           }
         ]
       },
@@ -327,9 +310,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
   "last_commit": {
-    "sha": "ceba59e1c0b118c6294d494eecabf23b5bf0a548",
+    "sha": "f7a490dc8ce3c503cf2a2208e1efe70fab69db11",
     "status": "passed",
-    "date": "2026-05-21T11:55:41Z"
+    "date": "2026-05-26T11:56:56Z"
   },
   "stars": 1,
   "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
@@ -340,9 +323,9 @@
       "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
     ],
     [
-      "2026.1",
-      "pathogenome",
-      "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.1.yml"
+      "2026.4",
+      "tiny",
+      "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
     ]
   ]
 }

@@ -1,14 +1,39 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
+      "last_commit": {
+        "sha": "f7a490dc8ce3c503cf2a2208e1efe70fab69db11",
+        "status": "passed",
+        "date": "2026-05-26T11:56:56Z"
+      },
+      "stars": 1,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        [
+          "2026.4",
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "micom-dev",
       "name": "q2-micom",
       "branch": "main",
       "docs": "https://micom-dev.github.io/q2-micom/",
       "last_commit": {
-        "sha": "15e6f81b2f7e295581a811192bbe6d325302d00a",
+        "sha": "309db02843034e92c6c66214d87a2a46f34a8ceb",
         "status": "passed",
-        "date": "2026-05-23T03:51:59Z"
+        "date": "2026-05-26T07:25:54Z"
       },
       "stars": 10,
       "description": "A Qiime plugin for MICOM.",
@@ -42,31 +67,6 @@
           "2024.10",
           "tiny",
           "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-amrfinderplus/wiki",
-      "last_commit": {
-        "sha": "ceba59e1c0b118c6294d494eecabf23b5bf0a548",
-        "status": "passed",
-        "date": "2026-05-21T11:55:41Z"
-      },
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        [
-          "2026.4",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.1.yml"
         ]
       ]
     },
@@ -332,5 +332,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-05-25T15:20:14.210Z"
+  "last_updated": "2026-05-26T15:53:39.316Z"
 }
