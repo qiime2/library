@@ -1,14 +1,74 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "78d7765887e093836cd9d750a22586c9c59d2eb9",
+        "status": "failed",
+        "date": "2026-06-03T13:06:56Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        [
+          "2025.7",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "d491a282c71dce44a5239473d67539001c3453a3",
+        "status": "passed",
+        "date": "2026-06-03T13:03:52Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
       "last_commit": {
-        "sha": "f7a490dc8ce3c503cf2a2208e1efe70fab69db11",
+        "sha": "1855c94a4c17e3bb6d61002d25c23d294fd82369",
         "status": "passed",
-        "date": "2026-05-26T11:56:56Z"
+        "date": "2026-06-03T13:02:37Z"
       },
       "stars": 1,
       "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
@@ -91,41 +151,6 @@
       ]
     },
     {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "branch": "main",
-      "docs": "https://q2-boots.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "e47e84e78928a9e3f96d715d083340776d035d68",
-        "status": "failed",
-        "date": "2026-05-14T20:19:33Z"
-      },
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": [
-        [
-          "2025.7",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.5",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
-        ]
-      ]
-    },
-    {
       "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
@@ -182,31 +207,6 @@
           "2026.4",
           "tiny",
           "environment-files/q2-deseq2-qiime2-tiny-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-subread",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-subread",
-      "last_commit": {
-        "sha": "19720ca683297c6ff8217c8c23f3c3e664a60efa",
-        "status": "passed",
-        "date": "2026-04-23T07:08:58Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
-      "distros": [
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-subread-qiime2-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-subread-qiime2-tiny-2026.4.yml"
         ]
       ]
     }
@@ -332,5 +332,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-06-02T16:44:33.767Z"
+  "last_updated": "2026-06-03T17:01:40.084Z"
 }
