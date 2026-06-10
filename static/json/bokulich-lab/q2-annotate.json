@@ -902,6 +902,38 @@
                 "children": [
                   {
                     "type": "text",
+                    "value": "filter-kraken2-reads"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Filter Kraken 2-classified reads by taxonomy (for example, retain only bacterial reads)."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "-"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
                     "value": "filter-kraken2-results"
                   }
                 ]
@@ -2924,8 +2956,8 @@
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
   "branch": "main",
   "last_commit": {
-    "sha": "f105161c346df1ddef8ba5acafdd245bbd194eb0",
+    "sha": "044b66fa703ef0aba1510b6d04753dbb8d98593f",
     "status": "passed",
-    "date": "2026-06-03T13:42:09Z"
+    "date": "2026-06-10T14:21:00Z"
   }
 }

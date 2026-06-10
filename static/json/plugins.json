@@ -1,6 +1,77 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "34b71a40fb81ba879be8c88589db320ab48deb91",
+        "status": "failed",
+        "date": "2026-06-10T15:27:31Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "044b66fa703ef0aba1510b6d04753dbb8d98593f",
+        "status": "passed",
+        "date": "2026-06-10T14:21:00Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-vsearch",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -2499,47 +2570,6 @@
       }
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "f105161c346df1ddef8ba5acafdd245bbd194eb0",
-        "status": "passed",
-        "date": "2026-06-03T13:42:09Z"
-      }
-    },
-    {
       "owner": "dib-lab",
       "name": "q2-sourmash",
       "docs": "https://moshpit.qiime2.org/en/stable/",
@@ -3489,36 +3519,6 @@
           "2025.4",
           "tiny",
           "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "1538ea555f5e8ccb66ee687b3166fd065b2506b2",
-        "status": "failed",
-        "date": "2026-02-20T09:11:41Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
-      "distros": [
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
         ]
       ]
     },
