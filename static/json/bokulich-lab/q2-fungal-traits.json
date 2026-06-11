@@ -865,6 +865,24 @@
         "children": [
           {
             "type": "text",
+            "value": "Aguilar-Trigueros, C.A., Krah, F.-S., Cornwell, W.K., Zanne, A.E., Abrego, N., Anderson, I.C. et al. (2023) Symbiotic status alters fungal eco-evolutionary offspring trajectories. Ecology Letters, 26, 1523–1534. https://doi.org/10.1111/ele.14271"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The processing was done according to:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
             "value": "Abrego, N., Furneaux, B., Hardwick, B. et al. Airborne DNA reveals predictable spatial and seasonal dynamics of fungi. Nature 631, 835–842 (2024). https://doi.org/10.1038/s41586-024-07658-9"
           }
         ]
@@ -1836,6 +1854,59 @@
       },
       {
         "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Cite the plugin"
+          }
+        ],
+        "identifier": "cite-the-plugin",
+        "label": "Cite the plugin",
+        "html_id": "cite-the-plugin",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "If you want to cite the plugin please cite:"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Our pre-print - doi and link TBD"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Põlme, S., Abarenkov, K., Henrik Nilsson, R. et al. FungalTraits: a user-friendly traits database of fungi and fungus-like stramenopiles. Fungal Diversity 105, 1–16 (2020). https://doi.org/10.1007/s13225-020-00466-2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Aguilar-Trigueros, C.A., Krah, F.-S., Cornwell, W.K., Zanne, A.E., Abrego, N., Anderson, I.C. et al. (2023) Symbiotic status alters fungal eco-evolutionary offspring trajectories. Ecology Letters, 26, 1523–1534. https://doi.org/10.1111/ele.14271"
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak"
+      },
+      {
+        "type": "heading",
         "depth": 2,
         "children": [
           {
@@ -1920,9 +1991,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
   "last_commit": {
-    "sha": "68351529865bc4cb82757165afedbbbc5a973c1e",
+    "sha": "5cb7b5e7dd4cd2d9e593a956ed93342ec5a493a2",
     "status": "passed",
-    "date": "2026-05-20T14:32:44Z"
+    "date": "2026-06-11T11:12:15Z"
   },
   "stars": 0,
   "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",

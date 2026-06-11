@@ -1282,13 +1282,28 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "871e44308b17e26b0e18ea8e699e0fd78eadea82",
-    "status": "passed",
-    "date": "2026-05-03T00:52:01Z"
+    "sha": "6412de32e384c1d150206d304dc19664f0480e46",
+    "status": "failed",
+    "date": "2026-06-11T13:28:20Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
   "distros": [
+    [
+      "2026.4",
+      "moshpit",
+      "environment-files/q2-ena-uploader-rachis-moshpit-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "qiime2",
+      "environment-files/q2-ena-uploader-rachis-qiime2-2026.4.yml"
+    ],
+    [
+      "2026.4",
+      "tiny",
+      "environment-files/q2-ena-uploader-rachis-tiny-2026.4.yml"
+    ],
     [
       "2026.1",
       "tiny",

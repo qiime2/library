@@ -11,19 +11,83 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
-  "q2-gunc": {
-    "base": "https://github.com/bokulich-lab/q2-gunc",
-    "pretty": true
-  },
   "q2-annotate": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
   },
-  "q2-vsearch": {
+  "q2-long-reads-qc": {
+    "base": "https://github.com/bokulich-lab/q2-long-reads-qc",
+    "pretty": true
+  },
+  "q2-minimap2": {
+    "base": "https://github.com/bokulich-lab/q2-minimap2",
+    "pretty": true
+  },
+  "q2-skani": {
+    "base": "https://github.com/bokulich-lab/q2-skani",
+    "pretty": true
+  },
+  "q2-fastp": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "q2-subread": {
+    "base": "https://github.com/bokulich-lab/q2-subread",
+    "pretty": true
+  },
+  "q2-rgi": {
+    "base": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+    "pretty": true
+  },
+  "q2-gunc": {
+    "base": "https://github.com/bokulich-lab/q2-gunc",
+    "pretty": true
+  },
+  "q2-ena-uploader": {
+    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
+    "pretty": true
+  },
+  "q2-fondue": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
+  "q2-assembly": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "q2-amrfinderplus": {
+    "base": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
+    "pretty": true
+  },
+  "q2-deseq2": {
+    "base": "https://github.com/bokulich-lab/q2-deseq2",
+    "pretty": true
+  },
+  "q2-fungal-traits": {
+    "base": "https://github.com/bokulich-lab/q2-fungal-traits",
+    "pretty": true
+  },
+  "q2-feature-table": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": true
+  },
+  "q2-kmerizer": {
+    "base": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+    "pretty": true
+  },
+  "q2-qsip2": {
+    "base": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
+    "pretty": true
+  },
+  "q2-boots": {
+    "base": "https://q2-boots.readthedocs.io/en/latest/",
+    "pretty": true
+  },
   "q2-types": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": true
+  },
+  "q2-vsearch": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
@@ -107,14 +171,6 @@
     "base": "https://micom-dev.github.io/q2-micom/",
     "pretty": true
   },
-  "q2-feature-table": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
-  "q2-assembly": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
-  },
   "q2-sourmash": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
@@ -123,72 +179,16 @@
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
   },
-  "q2-boots": {
-    "base": "https://q2-boots.readthedocs.io/en/latest/",
-    "pretty": true
-  },
   "RESCRIPt": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
-  "q2-kmerizer": {
-    "base": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
-    "pretty": true
-  },
-  "q2-fondue": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
-  "q2-fastp": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
-  },
-  "q2-amrfinderplus": {
-    "base": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
-    "pretty": true
-  },
-  "q2-fungal-traits": {
-    "base": "https://github.com/bokulich-lab/q2-fungal-traits",
     "pretty": true
   },
   "q2-alignment": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
-  "q2-ena-uploader": {
-    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
-    "pretty": true
-  },
-  "q2-deseq2": {
-    "base": "https://github.com/bokulich-lab/q2-deseq2",
-    "pretty": true
-  },
-  "q2-subread": {
-    "base": "https://github.com/bokulich-lab/q2-subread",
-    "pretty": true
-  },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
-  "q2-qsip2": {
-    "base": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
-    "pretty": true
-  },
-  "q2-rgi": {
-    "base": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
-    "pretty": true
-  },
-  "q2-minimap2": {
-    "base": "https://github.com/bokulich-lab/q2-minimap2",
-    "pretty": true
-  },
-  "q2-long-reads-qc": {
-    "base": "https://github.com/bokulich-lab/q2-long-reads-qc",
-    "pretty": true
-  },
-  "q2-skani": {
-    "base": "https://github.com/bokulich-lab/q2-skani",
     "pretty": true
   },
   "q2-classo-latest": {

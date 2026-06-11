@@ -239,7 +239,7 @@
       {
         "type": "code",
         "lang": "shell",
-        "value": "conda env create -n q2-qsip2-dev --file ./environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
+        "value": "conda env create -n q2-qsip2-dev --file ./environment-files/q2-qsip2-qiime2-amplicon-2026.4.yml"
       },
       {
         "type": "paragraph",
@@ -561,17 +561,17 @@
   "branch": "main",
   "docs": "https://github.com/caporaso-lab/q2-qsip2/blob/main/tutorial/tutorial.md",
   "last_commit": {
-    "sha": "89830ea0cbbaffb795a23d190748dfeac76ed8e9",
-    "status": "failed",
-    "date": "2026-03-05T19:57:13Z"
+    "sha": "8d59673c1f8eaffa71a15ac715c3807bf7c024d6",
+    "status": "passed",
+    "date": "2026-06-10T23:15:40Z"
   },
   "stars": 1,
   "description": "A QIIME 2 plugin for the analysis of qSIP data.",
   "distros": [
     [
-      "2026.1",
+      "2026.4",
       "qiime2",
-      "environment-files/q2-qsip2-qiime2-amplicon-2026.1.yml"
+      "environment-files/q2-qsip2-qiime2-amplicon-2026.4.yml"
     ]
   ]
 }

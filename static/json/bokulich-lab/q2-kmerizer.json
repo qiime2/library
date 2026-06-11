@@ -573,13 +573,23 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
   "last_commit": {
-    "sha": "d491a282c71dce44a5239473d67539001c3453a3",
-    "status": "passed",
-    "date": "2026-06-03T13:03:52Z"
+    "sha": "a799419eda3aba6ea41ead9a783e3e8ae88f94c6",
+    "status": "failed",
+    "date": "2026-06-11T08:32:35Z"
   },
   "stars": 2,
   "description": "QIIME 2 plugin for generating kmers from biological sequences",
   "distros": [
+    [
+      "2026.4",
+      "qiime2",
+      "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
+    ],
+    [
+      "2025.10",
+      "qiime2",
+      "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
+    ],
     [
       "2025.4",
       "qiime2",

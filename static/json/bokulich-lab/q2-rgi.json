@@ -579,6 +579,16 @@
   },
   "releases": [
     {
+      "tag_name": "2026.4.0",
+      "html_url": "https://github.com/bokulich-lab/q2-rgi/releases/tag/2026.4.0",
+      "name": "2026.4.0",
+      "published_at": "2026-06-11T13:32:48Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    },
+    {
       "tag_name": "2026.1.0",
       "html_url": "https://github.com/bokulich-lab/q2-rgi/releases/tag/2026.1.0",
       "name": "2026.1.0",
@@ -761,13 +771,18 @@
   "branch": "main",
   "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
   "last_commit": {
-    "sha": "0b038d37c5f8aac6807f255b6ae50626cc3d1bb2",
-    "status": "pending",
-    "date": "2026-02-26T11:15:33Z"
+    "sha": "a7283876cf595f7207b84a607554960faf970475",
+    "status": "failed",
+    "date": "2026-06-11T13:32:20Z"
   },
   "stars": 4,
   "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
   "distros": [
+    [
+      "2026.4",
+      "qiime2",
+      "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
+    ],
     [
       "2026.1",
       "qiime2",
