@@ -1,6 +1,41 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "c4e2a8343b190e5a37277f18cffda96db84ad338",
+        "status": "passed",
+        "date": "2026-06-12T07:57:22Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        [
+          "2025.7",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-long-reads-qc",
       "branch": "main",
@@ -259,56 +294,6 @@
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "6412de32e384c1d150206d304dc19664f0480e46",
-        "status": "failed",
-        "date": "2026-06-11T13:28:20Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-ena-uploader-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-ena-uploader-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -432,5 +417,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-06-11T16:12:57.301Z"
+  "last_updated": "2026-06-12T15:27:40.905Z"
 }
