@@ -166,44 +166,6 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "bin-contigs-metabat"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Bin contigs into MAGs using MetaBat 2."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://bitbucket.org/berkeleylab/metabat/src/master/",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "MetaBat 2"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
                     "value": "build-custom-diamond-db"
                   }
                 ]
@@ -432,70 +394,6 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "dereplicate-mags"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Dereplicate MAGs from multiple samples."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "-"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "estimate-abundance"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Estimate contig/MAG abundance."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "-"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
                     "value": "estimate-bracken"
                   }
                 ]
@@ -534,44 +432,6 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "evaluate-busco"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Evaluate quality of the generated MAGs using BUSCO."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://busco.ezlab.org",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "BUSCO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
                     "value": "extract-annotations"
                   }
                 ]
@@ -591,44 +451,6 @@
                   {
                     "type": "text",
                     "value": "-"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "fetch-busco-db"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Download BUSCO database."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "https://busco.ezlab.org",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "BUSCO"
-                      }
-                    ]
                   }
                 ]
               }
@@ -870,38 +692,6 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "filter-derep-mags"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Filter dereplicated MAGs."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "-"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
                     "value": "filter-kraken2-reads"
                   }
                 ]
@@ -966,38 +756,6 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "filter-mags"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Filter MAGs."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "-"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
                     "value": "filter-reads-pangenome"
                   }
                 ]
@@ -1023,38 +781,6 @@
                         "value": "Bowtie 2"
                       }
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableRow",
-            "children": [
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "get-feature-lengths"
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Get feature lengths."
-                  }
-                ]
-              },
-              {
-                "type": "tableCell",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "-"
                   }
                 ]
               }
@@ -2956,8 +2682,8 @@
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
   "branch": "main",
   "last_commit": {
-    "sha": "d3211271aaca9aa99f3d00ad67f6aac87f2e10ea",
-    "status": "passed",
-    "date": "2026-06-15T16:23:19Z"
+    "sha": "1fc976f8cfe57212669431685ca04e9b6cf75828",
+    "status": "failed",
+    "date": "2026-06-19T12:38:31Z"
   }
 }
