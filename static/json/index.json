@@ -1,6 +1,31 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-fmt",
+      "branch": "dev",
+      "docs": "https://q2-fmt.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "faaf49896b9ddcbc9f0de33c5b39841cf13eb954",
+        "status": "pending",
+        "date": "2026-06-23T15:00:34Z"
+      },
+      "stars": 6,
+      "description": "q2-fmt is an all-in-one suite for assessing engraftment extent following Fecal Microbiota Transplants! ",
+      "distros": [
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-fmt-qiime2-amplicon-2025.4-release-2025.7.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-fmt-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
@@ -254,36 +279,6 @@
           "environment-files/q2-subread-rachis-tiny-2026.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
-      "last_commit": {
-        "sha": "a7283876cf595f7207b84a607554960faf970475",
-        "status": "failed",
-        "date": "2026-06-11T13:32:20Z"
-      },
-      "stars": 4,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -338,14 +333,13 @@
       "title": "Docs for Tiny"
     },
     {
-      "url": "https://q2-boots.readthedocs.io/en/latest/",
-      "title": "q2-boots Documentation",
+      "url": "https://q2-fmt.readthedocs.io/en/latest/",
+      "title": "q2-fmt book",
       "description": ""
     },
     {
-      "url": "https://genome-sampler.readthedocs.io/en/latest/",
-      "title": "genome-sampler documentation",
-      "source": "https://github.com/caporaso-lab/genome-sampler",
+      "url": "https://q2-boots.readthedocs.io/en/latest/",
+      "title": "q2-boots Documentation",
       "description": ""
     }
   ],
@@ -407,5 +401,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-06-22T17:06:40.414Z"
+  "last_updated": "2026-06-23T15:13:34.340Z"
 }
