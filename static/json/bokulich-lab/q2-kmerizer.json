@@ -44,7 +44,7 @@
         "children": [
           {
             "type": "text",
-            "value": "The easiest way to install q2-kmerizer is to install it directly into an existing installation of "
+            "value": "The easiest way to install and use q2-kmerizer is to install "
           },
           {
             "type": "link",
@@ -58,7 +58,23 @@
           },
           {
             "type": "text",
-            "value": " (amplicon distribution version 2024.10 or later). If you have the QIIME 2 amplicon distribution installed, activate your environment and run the following to install q2-kmerizer into this environment:"
+            "value": ". q2-kmerizer has been included in the QIIME 2 distribution starting with release 2025.10. You can also install with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "pip"
+          },
+          {
+            "type": "text",
+            "value": ", e.g., if you are using a custom "
+          },
+          {
+            "type": "inlineCode",
+            "value": "rachis"
+          },
+          {
+            "type": "text",
+            "value": " environment :"
           }
         ]
       },
@@ -72,21 +88,7 @@
         "children": [
           {
             "type": "text",
-            "value": "And refresh your cache:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "",
-        "value": "qiime dev refresh-cache"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "If the installation worked correctly, the following command should display a description of the plugin in your terminal:"
+            "value": "To confirm that q2-kmerizer is installed in your QIIME 2/rachis environment, run the following command in your terminal:"
           }
         ]
       },
@@ -94,224 +96,6 @@
         "type": "code",
         "lang": "",
         "value": "qiime kmerizer --help"
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Installation of stable release"
-          }
-        ],
-        "identifier": "installation-of-stable-release",
-        "label": "Installation of stable release",
-        "html_id": "installation-of-stable-release",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "If you do not already have QIIME 2 installed, you can follow these instructions to install the QIIME 2 amplicon distribution as well as the latest stable version of q2-kmerizer."
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "link",
-            "url": "https://conda.io/miniconda.html",
-            "children": [
-              {
-                "type": "text",
-                "value": "Miniconda"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": " provides the "
-          },
-          {
-            "type": "inlineCode",
-            "value": "conda"
-          },
-          {
-            "type": "text",
-            "value": " environment and package manager, and is currently the only supported way to install QIIME 2.\nFollow the instructions for downloading and installing Miniconda."
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "After installing Miniconda and opening a new terminal, make sure you’re running the latest version of "
-          },
-          {
-            "type": "inlineCode",
-            "value": "conda"
-          },
-          {
-            "type": "text",
-            "value": ":"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "bash",
-        "value": "conda update conda"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Now use conda to install q2-kmerizer and QIIME 2:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "conda env create -n kmerizer-stable --file https://raw.githubusercontent.com/bokulich-lab/q2-kmerizer/main/environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "After this completes, activate the new environment you created by running:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "conda activate kmerizer-stable"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Then refresh your cache and test as shown above."
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "depth": 3,
-        "children": [
-          {
-            "type": "text",
-            "value": "Install development version of "
-          },
-          {
-            "type": "inlineCode",
-            "value": "q2-kmerizer"
-          }
-        ],
-        "identifier": "install-development-version-of-q2-kmerizer",
-        "label": "Install development version of q2-kmerizer",
-        "html_id": "install-development-version-of-q2-kmerizer",
-        "implicit": true
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "If you wish to use the development version of q2-kmerizer, e.g., to develop new features in your fork or to contribute to the main branch, follow these instructions."
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "First, you must have conda installed, as described above."
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Next, clone the repository and move into the top-level "
-          },
-          {
-            "type": "inlineCode",
-            "value": "q2-kmerizer"
-          },
-          {
-            "type": "text",
-            "value": " directory. NOTE: make sure your current working directory is a location where you want to install this plugin!"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "",
-        "value": "git clone https://github.com/bokulich-lab/q2-kmerizer.git\ncd q2-kmerizer"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Then, run:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "conda env create -n q2-kmerizer-dev --file ./environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "After this completes, activate the new environment you created by running:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "conda activate q2-kmerizer-dev"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Finally, run:"
-          }
-        ]
-      },
-      {
-        "type": "code",
-        "lang": "shell",
-        "value": "make install"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Then refresh your cache and test as shown above."
-          }
-        ]
       },
       {
         "type": "heading",
@@ -573,9 +357,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
   "last_commit": {
-    "sha": "a799419eda3aba6ea41ead9a783e3e8ae88f94c6",
-    "status": "failed",
-    "date": "2026-06-11T08:32:35Z"
+    "sha": "a491156198ae2c10d80a5e5dc7832cf87bd4ea72",
+    "status": "passed",
+    "date": "2026-06-26T13:49:57Z"
   },
   "stars": 2,
   "description": "QIIME 2 plugin for generating kmers from biological sequences",

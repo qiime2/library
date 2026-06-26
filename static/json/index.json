@@ -1,6 +1,76 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "a491156198ae2c10d80a5e5dc7832cf87bd4ea72",
+        "status": "passed",
+        "date": "2026-06-26T13:49:57Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "65652af2871a28b70c2735522651aad97ddb461f",
+        "status": "pending",
+        "date": "2026-06-26T13:45:06Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        [
+          "2025.7",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-fmt",
       "branch": "dev",
@@ -47,41 +117,6 @@
           "2026.4",
           "tiny",
           "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "branch": "main",
-      "docs": "https://q2-boots.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "c4e2a8343b190e5a37277f18cffda96db84ad338",
-        "status": "passed",
-        "date": "2026-06-12T07:57:22Z"
-      },
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": [
-        [
-          "2025.7",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.5",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
         ]
       ]
     },
@@ -254,31 +289,6 @@
           "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-subread",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-subread",
-      "last_commit": {
-        "sha": "46defb976b465e7b91932deff9d1092ba1d4fdb0",
-        "status": "passed",
-        "date": "2026-06-11T13:35:33Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
-      "distros": [
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-subread-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-subread-rachis-tiny-2026.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -333,13 +343,13 @@
       "title": "Docs for Tiny"
     },
     {
-      "url": "https://q2-fmt.readthedocs.io/en/latest/",
-      "title": "q2-fmt book",
+      "url": "https://q2-boots.readthedocs.io/en/latest/",
+      "title": "q2-boots Documentation",
       "description": ""
     },
     {
-      "url": "https://q2-boots.readthedocs.io/en/latest/",
-      "title": "q2-boots Documentation",
+      "url": "https://q2-fmt.readthedocs.io/en/latest/",
+      "title": "q2-fmt book",
       "description": ""
     }
   ],
@@ -401,5 +411,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-06-25T14:43:26.052Z"
+  "last_updated": "2026-06-26T14:35:56.427Z"
 }
