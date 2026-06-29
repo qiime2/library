@@ -11,6 +11,14 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-fungal-traits": {
+    "base": "https://github.com/bokulich-lab/q2-fungal-traits",
+    "pretty": true
+  },
+  "q2-assembly": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
   "q2-boots": {
     "base": "https://q2-boots.readthedocs.io/en/latest/",
     "pretty": true
@@ -103,16 +111,8 @@
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
-  "q2-assembly": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
-  },
   "q2-deseq2": {
     "base": "https://github.com/bokulich-lab/q2-deseq2",
-    "pretty": true
-  },
-  "q2-fungal-traits": {
-    "base": "https://github.com/bokulich-lab/q2-fungal-traits",
     "pretty": true
   },
   "q2-qsip2": {

@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-fungal-traits",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
+      "last_commit": {
+        "sha": "2f32334e8aa242e1aaf6b91e86b415635cffa407",
+        "status": "passed",
+        "date": "2026-06-29T12:36:30Z"
+      },
+      "stars": 0,
+      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
@@ -224,71 +244,6 @@
           "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-skani",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-skani",
-      "last_commit": {
-        "sha": "09d3b25fbad9fe7394a2255c4c28b1ef9695f551",
-        "status": "failed",
-        "date": "2026-06-11T13:46:20Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for ANI analysis using skani.",
-      "distros": [
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-skani-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-skani-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -411,5 +366,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-06-28T13:59:23.389Z"
+  "last_updated": "2026-06-29T15:59:29.679Z"
 }
