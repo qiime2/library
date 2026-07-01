@@ -1,6 +1,37 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "branch": "main",
+      "last_commit": {
+        "sha": "99fbf7d8b2c09057b0af979f5e94a60dafdf3631",
+        "status": "passed",
+        "date": "2026-07-01T09:44:04Z"
+      }
+    },
+    {
       "owner": "qiime2",
       "name": "q2-taxa",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -200,37 +231,6 @@
         "sha": "cfdd96cc88d302d58f75deb85f60e3e63f0566cb",
         "status": "passed",
         "date": "2026-06-29T10:56:46Z"
-      }
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "branch": "main",
-      "last_commit": {
-        "sha": "fff637f0d9d03ecd3b64dfed2cc13e7c9182aa5c",
-        "status": "passed",
-        "date": "2026-06-26T14:54:17Z"
       }
     },
     {

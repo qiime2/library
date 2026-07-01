@@ -1,34 +1,14 @@
 {
   "plugins": [
     {
-      "owner": "bokulich-lab",
-      "name": "q2-fungal-traits",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
-      "last_commit": {
-        "sha": "2f32334e8aa242e1aaf6b91e86b415635cffa407",
-        "status": "passed",
-        "date": "2026-06-29T12:36:30Z"
-      },
-      "stars": 0,
-      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
-        ]
-      ]
-    },
-    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
       "docs": "https://q2-boots.readthedocs.io/en/latest/",
       "last_commit": {
-        "sha": "fff637f0d9d03ecd3b64dfed2cc13e7c9182aa5c",
+        "sha": "99fbf7d8b2c09057b0af979f5e94a60dafdf3631",
         "status": "passed",
-        "date": "2026-06-26T14:54:17Z"
+        "date": "2026-07-01T09:44:04Z"
       },
       "stars": 3,
       "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
@@ -52,6 +32,26 @@
           "2024.5",
           "qiime2",
           "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-fungal-traits",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
+      "last_commit": {
+        "sha": "2f32334e8aa242e1aaf6b91e86b415635cffa407",
+        "status": "passed",
+        "date": "2026-06-29T12:36:30Z"
+      },
+      "stars": 0,
+      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
         ]
       ]
     },
@@ -366,5 +366,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-06-30T14:30:47.128Z"
+  "last_updated": "2026-07-01T14:48:09.699Z"
 }
