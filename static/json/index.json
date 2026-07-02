@@ -1,6 +1,41 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "2cde2d7efc64f37a59d54cd7a69a19b3fe23da21",
+        "status": "passed",
+        "date": "2026-07-02T09:05:17Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
@@ -52,41 +87,6 @@
           "2026.4",
           "qiime2",
           "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-kmerizer",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
-      "last_commit": {
-        "sha": "a491156198ae2c10d80a5e5dc7832cf87bd4ea72",
-        "status": "passed",
-        "date": "2026-06-26T13:49:57Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for generating kmers from biological sequences",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
         ]
       ]
     },
@@ -366,5 +366,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-07-01T14:48:09.699Z"
+  "last_updated": "2026-07-02T14:14:15.636Z"
 }
