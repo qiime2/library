@@ -11,6 +11,10 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-annotate": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
@@ -42,10 +46,6 @@
   "q2-quality-control": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
-  },
-  "q2-annotate": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
   },
   "q2-fmt": {
     "base": "https://q2-fmt.readthedocs.io/en/latest/",
