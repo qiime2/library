@@ -2,6 +2,56 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "9469cd61776f3298d530831b1b84f41328dec6a5",
+        "status": "passed",
+        "date": "2026-07-12T00:43:50Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-ena-uploader-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-ena-uploader-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-rachis-tiny-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-kmerizer",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
@@ -199,51 +249,6 @@
           "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-minimap2",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-minimap2",
-      "last_commit": {
-        "sha": "39f0f5b49bdff6c8649b1061f07332659cb0ca6c",
-        "status": "passed",
-        "date": "2026-06-11T14:03:40Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for sequence alignment using minimap2.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-minimap2-rachis-amplicon-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-minimap2-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-minimap2-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-minimap2-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-minimap2-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -366,5 +371,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-07-11T13:38:58.077Z"
+  "last_updated": "2026-07-12T13:39:05.594Z"
 }
