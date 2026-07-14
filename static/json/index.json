@@ -2,6 +2,76 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "c257a8833ef697bfc2fa7e7324553af55f8a1612",
+        "status": "passed",
+        "date": "2026-07-14T12:42:11Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "3dd402362935f5a3510e13a0e85fec8f4d385d83",
+        "status": "passed",
+        "date": "2026-07-14T11:51:57Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        [
+          "2025.7",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -47,76 +117,6 @@
           "2025.4",
           "tiny",
           "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-kmerizer",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
-      "last_commit": {
-        "sha": "2cde2d7efc64f37a59d54cd7a69a19b3fe23da21",
-        "status": "passed",
-        "date": "2026-07-02T09:05:17Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for generating kmers from biological sequences",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "q2-boots",
-      "branch": "main",
-      "docs": "https://q2-boots.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "99fbf7d8b2c09057b0af979f5e94a60dafdf3631",
-        "status": "passed",
-        "date": "2026-07-01T09:44:04Z"
-      },
-      "stars": 3,
-      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
-      "distros": [
-        [
-          "2025.7",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.5",
-          "qiime2",
-          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
         ]
       ]
     },
@@ -371,5 +371,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-07-13T14:47:37.660Z"
+  "last_updated": "2026-07-14T13:56:40.564Z"
 }
