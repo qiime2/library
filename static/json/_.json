@@ -11,6 +11,10 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-composition": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": true
+  },
   "q2-assembly": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
@@ -18,6 +22,10 @@
   "q2-annotate": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
+  },
+  "q2-boots": {
+    "base": "https://q2-boots.readthedocs.io/en/latest/",
+    "pretty": true
   },
   "RESCRIPt": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -115,10 +123,6 @@
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
-  "q2-composition": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
   "q2-alignment": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
@@ -126,10 +130,6 @@
   "q2-fastp": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
-  },
-  "q2-boots": {
-    "base": "https://q2-boots.readthedocs.io/en/latest/",
-    "pretty": true
   },
   "q2-ena-uploader": {
     "base": "https://github.com/bokulich-lab/q2-ena-uploader",
