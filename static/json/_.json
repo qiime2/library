@@ -11,6 +11,10 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-ena-uploader": {
+    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
+    "pretty": true
+  },
   "q2-assembly": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
@@ -130,10 +134,6 @@
   "q2-fastp": {
     "base": "https://moshpit.qiime2.org/en/stable/",
     "pretty": false
-  },
-  "q2-ena-uploader": {
-    "base": "https://github.com/bokulich-lab/q2-ena-uploader",
-    "pretty": true
   },
   "q2-fungal-traits": {
     "base": "https://github.com/bokulich-lab/q2-fungal-traits",
