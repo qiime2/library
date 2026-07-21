@@ -7,7 +7,7 @@
         "children": [
           {
             "type": "image",
-            "url": "https://github.com/bokulich-lab/q2-fastp/actions/workflows/ci.yaml/badge.svg",
+            "url": "https://github.com/bokulich-lab/q2-mag/actions/workflows/ci.yaml/badge.svg",
             "alt": "CI"
           },
           {
@@ -16,11 +16,11 @@
           },
           {
             "type": "link",
-            "url": "https://codecov.io/gh/bokulich-lab/q2-fastp",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-mag",
             "children": [
               {
                 "type": "image",
-                "url": "https://codecov.io/gh/bokulich-lab/q2-fastp/graph/badge.svg?token=QFSOA2xc7K",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-mag/graph/badge.svg?token=jR9BVgUrP2",
                 "alt": "codecov"
               }
             ]
@@ -39,6 +39,15 @@
                 "alt": "Code style: black"
               }
             ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Rachis plugin for contig binning, bin quality control and MAG dereplication."
           }
         ]
       },
@@ -64,21 +73,21 @@
             "children": [
               {
                 "type": "text",
-                "value": "q2-fastp"
+                "value": "q2-mag"
               }
             ]
           },
           {
             "type": "text",
-            "value": " is available as part of the QIIME 2 moshpit distribution. For installation and usage instructions please consult the official "
+            "value": " is available as part of the Rachis MOSHPIT distribution. For installation and usage instructions please consult the official "
           },
           {
             "type": "link",
-            "url": "https://moshpit.qiime2.org",
+            "url": "https://https://library.qiime2.org/quickstart/moshpit",
             "children": [
               {
                 "type": "text",
-                "value": "MOSHPIT documentation"
+                "value": "Rachis documentation"
               }
             ]
           },
@@ -90,20 +99,9 @@
       }
     ]
   },
-  "releases": [
-    {
-      "tag_name": "2026.4.0",
-      "html_url": "https://github.com/bokulich-lab/q2-fastp/releases/tag/2026.4.0",
-      "name": "2026.4.0",
-      "published_at": "2026-04-27T17:00:24Z",
-      "ast": {
-        "type": "root",
-        "children": []
-      }
-    }
-  ],
+  "releases": [],
   "owner": "bokulich-lab",
-  "name": "q2-fastp",
+  "name": "q2-mag",
   "docs": "https://moshpit.qiime2.org/en/stable/",
   "in_distro": true,
   "distros": [
@@ -111,29 +109,14 @@
       "2026.7",
       "moshpit",
       "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-    ],
-    [
-      "2026.4",
-      "moshpit",
-      "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-    ],
-    [
-      "2026.1",
-      "moshpit",
-      "2026.1/moshpit/released/seed-environment-conda.yml"
-    ],
-    [
-      "2025.10",
-      "moshpit",
-      "2025.10/moshpit/released/seed-environment-conda.yml"
     ]
   ],
-  "stars": 2,
-  "description": null,
+  "stars": 0,
+  "description": "Rachis plugin for contig binning and bin quality control.",
   "branch": "main",
   "last_commit": {
-    "sha": "8dc8b2cd4ac2292c488c59d35bde58620bb90111",
+    "sha": "663758c7f2da7faef6e67e507f37019542ba0eb4",
     "status": "passed",
-    "date": "2026-07-21T07:46:28Z"
+    "date": "2026-07-21T07:46:34Z"
   }
 }
