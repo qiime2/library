@@ -44,6 +44,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.7",
+      "tiny",
+      "2026.7/tiny/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.4",
       "qiime2",
       "2026.4/qiime2/released/seed-environment-conda-linux.yml"
@@ -208,8 +213,8 @@
   "description": "This plugin exists to define integration tests between interfaces and the framework.",
   "branch": "dev",
   "last_commit": {
-    "sha": "4b7f12ae17d0f2d561e8f24d487fd256f6dc292e",
+    "sha": "fe72fa2838662ce863401c7c74aa697e3406dfe2",
     "status": "passed",
-    "date": "2026-07-14T12:41:46Z"
+    "date": "2026-07-21T07:46:27Z"
   }
 }

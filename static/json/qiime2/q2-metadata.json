@@ -24,6 +24,11 @@
   "in_distro": true,
   "distros": [
     [
+      "2026.7",
+      "tiny",
+      "2026.7/tiny/released/seed-environment-conda-linux.yml"
+    ],
+    [
       "2026.4",
       "qiime2",
       "2026.4/qiime2/released/seed-environment-conda-linux.yml"
@@ -173,8 +178,8 @@
   "description": null,
   "branch": "dev",
   "last_commit": {
-    "sha": "7c658a396ab48c317cd08e134a5da28a2680092c",
+    "sha": "fa5e63cbaebc5ad815336a7ddaef60c9fa2a14a5",
     "status": "passed",
-    "date": "2026-07-14T12:41:44Z"
+    "date": "2026-07-21T07:46:40Z"
   }
 }
