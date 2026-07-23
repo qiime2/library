@@ -83,6 +83,237 @@
   },
   "releases": [
     {
+      "tag_name": "2026.7.0",
+      "html_url": "https://github.com/bokulich-lab/q2-subread/releases/tag/2026.7.0",
+      "name": "2026.7.0",
+      "published_at": "2026-07-23T13:46:31Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env files for 2026.4.0 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-subread/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-subread/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-subread",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add test-env-files GitHub workflow by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-subread/pull/2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#2"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-subread/pull/2",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-subread",
+                      "issue_number": "2"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-subread/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-subread/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-subread",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-subread/compare/2026.4.0...2026.7.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2026.4.0...2026.7.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-subread/compare/2026.4.0...2026.7.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-subread",
+                  "issue_number": "2026.4.0...2026.7.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2026.4.0",
       "html_url": "https://github.com/bokulich-lab/q2-subread/releases/tag/2026.4.0",
       "name": "2026.4.0",
@@ -108,13 +339,23 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-subread",
   "last_commit": {
-    "sha": "46defb976b465e7b91932deff9d1092ba1d4fdb0",
-    "status": "failed",
-    "date": "2026-06-11T13:35:33Z"
+    "sha": "a28144df55140ccbf402720629d9b3012bc353ba",
+    "status": "passed",
+    "date": "2026-07-23T13:57:13Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
   "distros": [
+    [
+      "2026.7",
+      "moshpit",
+      "environment-files/q2-subread-rachis-moshpit-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-subread-rachis-tiny-2026.7.yml"
+    ],
     [
       "2026.4",
       "moshpit",

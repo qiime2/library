@@ -705,6 +705,173 @@
   },
   "releases": [
     {
+      "tag_name": "2026.7.0",
+      "html_url": "https://github.com/bokulich-lab/q2-minimap2/releases/tag/2026.7.0",
+      "name": "2026.7.0",
+      "published_at": "2026-07-23T13:52:44Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env files for 2026.4.0 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-minimap2/pull/55",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#55"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-minimap2/pull/55",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-minimap2",
+                      "issue_number": "55"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add test-env-files GitHub workflow by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-minimap2/pull/56",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#56"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-minimap2/pull/56",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-minimap2",
+                      "issue_number": "56"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-minimap2/compare/2026.4.0...2026.7.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2026.4.0...2026.7.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-minimap2/compare/2026.4.0...2026.7.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-minimap2",
+                  "issue_number": "2026.4.0...2026.7.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2026.4.0",
       "html_url": "https://github.com/bokulich-lab/q2-minimap2/releases/tag/2026.4.0",
       "name": "2026.4.0",
@@ -730,9 +897,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-minimap2",
   "last_commit": {
-    "sha": "39f0f5b49bdff6c8649b1061f07332659cb0ca6c",
-    "status": "passed",
-    "date": "2026-06-11T14:03:40Z"
+    "sha": "706b7dd97962de83353d9e9ba6fb49f467e23029",
+    "status": "failed",
+    "date": "2026-07-23T09:15:18Z"
   },
   "stars": 3,
   "description": "QIIME 2 plugin for sequence alignment using minimap2.",

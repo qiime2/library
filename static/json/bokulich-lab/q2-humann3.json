@@ -83,6 +83,126 @@
   },
   "releases": [
     {
+      "tag_name": "2026.7.0",
+      "html_url": "https://github.com/bokulich-lab/q2-humann3/releases/tag/2026.7.0",
+      "name": "2026.7.0",
+      "published_at": "2026-07-23T13:53:28Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add test-env-files GitHub workflow by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-humann3/pull/2",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#2"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-humann3/pull/2",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-humann3",
+                      "issue_number": "2"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-humann3/compare/2026.4.0...2026.7.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2026.4.0...2026.7.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-humann3/compare/2026.4.0...2026.7.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-humann3",
+                  "issue_number": "2026.4.0...2026.7.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2026.4.0",
       "html_url": "https://github.com/bokulich-lab/q2-humann3/releases/tag/2026.4.0",
       "name": "2026.4.0",
@@ -98,9 +218,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-humann3",
   "last_commit": {
-    "sha": "9b6b2be4153abea25e3e011d843c3d29ed3255d7",
+    "sha": "96850da8a7b12d9520ecdcaac4b54f0934719528",
     "status": "passed",
-    "date": "2026-06-11T12:40:10Z"
+    "date": "2026-07-23T08:57:47Z"
   },
   "stars": 0,
   "description": "Rachis plugin for functional profiling using HUMANN 3.",

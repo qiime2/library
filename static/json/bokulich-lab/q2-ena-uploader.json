@@ -124,6 +124,173 @@
   },
   "releases": [
     {
+      "tag_name": "2026.7.0",
+      "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2026.7.0",
+      "name": "2026.7.0",
+      "published_at": "2026-07-23T13:54:14Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env files for 2026.4.0 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/30",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#30"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/30",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "30"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add test-env-files GitHub workflow by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-ena-uploader/pull/31",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#31"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/pull/31",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-ena-uploader",
+                      "issue_number": "31"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-ena-uploader/compare/2026.4.0...2026.7.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2026.4.0...2026.7.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-ena-uploader/compare/2026.4.0...2026.7.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-ena-uploader",
+                  "issue_number": "2026.4.0...2026.7.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2026.4.0",
       "html_url": "https://github.com/bokulich-lab/q2-ena-uploader/releases/tag/2026.4.0",
       "name": "2026.4.0",
@@ -1282,9 +1449,9 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
   "last_commit": {
-    "sha": "933c9c160838c379c48f7fffc7194ef964622aa2",
-    "status": "passed",
-    "date": "2026-07-19T00:43:33Z"
+    "sha": "d96ee1ae7d8c32383c990375384949c736f4b439",
+    "status": "failed",
+    "date": "2026-07-23T08:56:53Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
