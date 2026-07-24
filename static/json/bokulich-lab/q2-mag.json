@@ -99,7 +99,105 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "2026.7.0",
+      "html_url": "https://github.com/bokulich-lab/q2-mag/releases/tag/2026.7.0",
+      "name": "2026.7.0",
+      "published_at": "2026-07-24T07:45:11Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: add workflow to test env files by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-mag/pull/4",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#4"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-mag/pull/4",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-mag",
+                      "issue_number": "4"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": https://github.com/bokulich-lab/q2-mag/commits/2026.7.0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "owner": "bokulich-lab",
   "name": "q2-mag",
   "docs": "https://moshpit.qiime2.org/en/stable/",

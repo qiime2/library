@@ -328,13 +328,23 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
   "last_commit": {
-    "sha": "6e544c012c7fc90e0aaa84b3e42b9dfd2f127ca9",
-    "status": "pending",
-    "date": "2026-07-23T09:15:38Z"
+    "sha": "46e9517e83354de470416437a0c6cfb9db8a0d21",
+    "status": "passed",
+    "date": "2026-07-24T11:31:40Z"
   },
   "stars": 2,
   "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
   "distros": [
+    [
+      "2026.7",
+      "moshpit",
+      "environment-files/q2-long-reads-qc-rachis-moshpit-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-long-reads-qc-rachis-tiny-2026.7.yml"
+    ],
     [
       "2026.4",
       "qiime2",

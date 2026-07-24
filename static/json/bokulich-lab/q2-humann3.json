@@ -218,13 +218,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-humann3",
   "last_commit": {
-    "sha": "96850da8a7b12d9520ecdcaac4b54f0934719528",
+    "sha": "52a5eae020174374d5e1bf82eae754cd8bf4daf5",
     "status": "passed",
-    "date": "2026-07-23T08:57:47Z"
+    "date": "2026-07-24T11:31:23Z"
   },
   "stars": 0,
   "description": "Rachis plugin for functional profiling using HUMANN 3.",
   "distros": [
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-humann3-rachis-tiny-2026.7.yml"
+    ],
     [
       "2026.4",
       "tiny",

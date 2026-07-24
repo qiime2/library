@@ -614,6 +614,361 @@
   },
   "releases": [
     {
+      "tag_name": "2026.7.0",
+      "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2026.7.0",
+      "name": "2026.7.0",
+      "published_at": "2026-07-24T07:43:33Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add an action to sort alignment maps by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/fethalen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@fethalen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/146",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#146"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/146",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "146"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "FIX: do not append _alignment_sorted to the BAM file path in the sort-alignment-maps action by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/fethalen",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@fethalen"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/155",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#155"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/155",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "155"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env files for 2026.4.0 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/156",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#156"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/156",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "156"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: explicitly list q2-feature-table as a dependency by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/158",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#158"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/158",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "158"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update copyright headers by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/160",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#160"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/160",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "160"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: allow mapping reads to single reference genome by map-reads by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-assembly/pull/159",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#159"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-assembly/pull/159",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-assembly",
+                      "issue_number": "159"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/q2-assembly/compare/2026.4.0...2026.7.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2026.4.0...2026.7.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/q2-assembly/compare/2026.4.0...2026.7.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "q2-assembly",
+                  "issue_number": "2026.4.0...2026.7.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "tag_name": "2026.4.0",
       "html_url": "https://github.com/bokulich-lab/q2-assembly/releases/tag/2026.4.0",
       "name": "2026.4.0",
@@ -5805,8 +6160,8 @@
   "description": "QIIME 2 plugin for (meta)genome assembly.",
   "branch": "main",
   "last_commit": {
-    "sha": "724316647568abcde56a2c0c360f9ca2f27840a9",
+    "sha": "4bb0896f6cb4b70da0c7a07c63bdc6e90940c0c5",
     "status": "passed",
-    "date": "2026-07-21T07:46:31Z"
+    "date": "2026-07-24T11:30:55Z"
   }
 }

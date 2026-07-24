@@ -83,173 +83,6 @@
   },
   "releases": [
     {
-      "tag_name": "2026.7.0",
-      "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2026.7.0",
-      "name": "2026.7.0",
-      "published_at": "2026-07-23T13:53:55Z",
-      "ast": {
-        "type": "root",
-        "children": [
-          {
-            "type": "heading",
-            "depth": 2,
-            "children": [
-              {
-                "type": "text",
-                "value": "What’s Changed"
-              }
-            ],
-            "identifier": "whats-changed",
-            "label": "What’s Changed",
-            "html_id": "whats-changed",
-            "implicit": true
-          },
-          {
-            "type": "list",
-            "ordered": false,
-            "spread": false,
-            "children": [
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "MAINT: add env files for 2026.4.0 by "
-                  },
-                  {
-                    "type": "link",
-                    "url": "https://github.com/misialq",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "@misialq"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "value": " in "
-                  },
-                  {
-                    "type": "link",
-                    "url": "https://github.com/bokulich-lab/q2-gunc/pull/13",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "#13"
-                      }
-                    ],
-                    "urlSource": "https://github.com/bokulich-lab/q2-gunc/pull/13",
-                    "data": {
-                      "kind": "issue",
-                      "org": "bokulich-lab",
-                      "repo": "q2-gunc",
-                      "issue_number": "13"
-                    },
-                    "internal": false,
-                    "protocol": "github"
-                  },
-                  {
-                    "type": "text",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "type": "listItem",
-                "spread": true,
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "MAINT: add test-env-files GitHub workflow by "
-                  },
-                  {
-                    "type": "link",
-                    "url": "https://github.com/misialq",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "@misialq"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "text",
-                    "value": " in "
-                  },
-                  {
-                    "type": "link",
-                    "url": "https://github.com/bokulich-lab/q2-gunc/pull/14",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "#14"
-                      }
-                    ],
-                    "urlSource": "https://github.com/bokulich-lab/q2-gunc/pull/14",
-                    "data": {
-                      "kind": "issue",
-                      "org": "bokulich-lab",
-                      "repo": "q2-gunc",
-                      "issue_number": "14"
-                    },
-                    "internal": false,
-                    "protocol": "github"
-                  },
-                  {
-                    "type": "text",
-                    "value": ""
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "children": [
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Full Changelog"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": ": "
-              },
-              {
-                "type": "link",
-                "url": "https://github.com/bokulich-lab/q2-gunc/compare/2026.4.0...2026.7.0",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "#2026.4.0...2026.7.0"
-                  }
-                ],
-                "urlSource": "https://github.com/bokulich-lab/q2-gunc/compare/2026.4.0...2026.7.0",
-                "data": {
-                  "kind": "issue",
-                  "org": "bokulich-lab",
-                  "repo": "q2-gunc",
-                  "issue_number": "2026.4.0...2026.7.0"
-                },
-                "internal": false,
-                "protocol": "github"
-              },
-              {
-                "type": "text",
-                "value": ""
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "tag_name": "2026.4.0",
       "html_url": "https://github.com/bokulich-lab/q2-gunc/releases/tag/2026.4.0",
       "name": "2026.4.0",
@@ -609,13 +442,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-gunc",
   "last_commit": {
-    "sha": "114eed2d50568e88c7b66a0bf3f8b0aa223ccad1",
+    "sha": "b579b55f610c5c33a81e3594c5e2a3e226b25623",
     "status": "failed",
-    "date": "2026-07-23T09:01:10Z"
+    "date": "2026-07-24T12:42:06Z"
   },
   "stars": 0,
   "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
   "distros": [
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-gunc-rachis-tiny-2026.7.yml"
+    ],
     [
       "2026.4",
       "tiny",

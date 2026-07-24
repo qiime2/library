@@ -2,137 +2,6 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
-      "name": "q2-skani",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-skani",
-      "last_commit": {
-        "sha": "52cf5911998aa8896cf726b35674d101dae272b7",
-        "status": "pending",
-        "date": "2026-07-23T14:04:59Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for ANI analysis using skani.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-skani-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-skani-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-skani-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-skani-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-subread",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-subread",
-      "last_commit": {
-        "sha": "a28144df55140ccbf402720629d9b3012bc353ba",
-        "status": "passed",
-        "date": "2026-07-23T13:57:13Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-subread-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-subread-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-subread-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-subread-rachis-tiny-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-mag",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ]
-      ],
-      "stars": 0,
-      "description": "Rachis plugin for contig binning and bin quality control.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "a33c3eceb47a244e9fdadb0c41ebf8e40976c328",
-        "status": "failed",
-        "date": "2026-07-23T09:44:59Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-fastp",
       "docs": "https://moshpit.qiime2.org/en/stable/",
       "in_distro": true,
@@ -162,309 +31,33 @@
       "description": null,
       "branch": "main",
       "last_commit": {
-        "sha": "8f8fac8dbcaae4b7ab81fc6d14a939f844b9c3f0",
+        "sha": "1521f0f4508f4d9c38a1c9f1955bf82dc8fc1ac7",
         "status": "failed",
-        "date": "2026-07-23T09:27:12Z"
+        "date": "2026-07-24T13:01:18Z"
       }
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-rgi",
+      "name": "q2-amrfinderplus",
       "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
       "last_commit": {
-        "sha": "7f177c6e992441358b0e737185d4ebac704ad7e2",
+        "sha": "9f877511362a5e272b3a674d73c63b210a665e18",
         "status": "failed",
-        "date": "2026-07-23T09:18:03Z"
+        "date": "2026-07-24T12:58:48Z"
       },
-      "stars": 4,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-deseq2",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-deseq2",
-      "last_commit": {
-        "sha": "57cbf7901786b2527336a9eef8e10bc2dc6f9fd8",
-        "status": "failed",
-        "date": "2026-07-23T09:15:58Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for differential expression analysis with DESeq2.",
-      "distros": [
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-deseq2-qiime2-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-deseq2-qiime2-tiny-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-long-reads-qc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
-      "last_commit": {
-        "sha": "6e544c012c7fc90e0aaa84b3e42b9dfd2f127ca9",
-        "status": "pending",
-        "date": "2026-07-23T09:15:38Z"
-      },
-      "stars": 2,
-      "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-long-reads-qc-rachis-amplicon-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-long-reads-qc-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-long-reads-qc-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-long-reads-qc-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-minimap2",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-minimap2",
-      "last_commit": {
-        "sha": "706b7dd97962de83353d9e9ba6fb49f467e23029",
-        "status": "failed",
-        "date": "2026-07-23T09:15:18Z"
-      },
-      "stars": 3,
-      "description": "QIIME 2 plugin for sequence alignment using minimap2.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-minimap2-rachis-amplicon-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-minimap2-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-minimap2-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-minimap2-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-minimap2-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-viromics",
-      "docs": null,
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "pathogenome",
-          "2026.7/pathogenome/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "pathogenome",
-          "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ]
-      ],
       "stars": 1,
-      "description": null,
-      "branch": "main",
-      "last_commit": {
-        "sha": "5ca302cb30cdc40d144c8849aae8c337cf84ac67",
-        "status": "passed",
-        "date": "2026-07-23T09:15:06Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "114eed2d50568e88c7b66a0bf3f8b0aa223ccad1",
-        "status": "failed",
-        "date": "2026-07-23T09:01:10Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "distros": [
         [
           "2026.4",
-          "tiny",
-          "environment-files/q2-gunc-rachis-tiny-2026.4.yml"
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
         ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-kmerizer",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
-      "last_commit": {
-        "sha": "f938f86774b16366300e710459a30ead7ef25897",
-        "status": "passed",
-        "date": "2026-07-23T08:58:16Z"
-      },
-      "stars": 2,
-      "description": "QIIME 2 plugin for generating kmers from biological sequences",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-humann3",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-humann3",
-      "last_commit": {
-        "sha": "96850da8a7b12d9520ecdcaac4b54f0934719528",
-        "status": "passed",
-        "date": "2026-07-23T08:57:47Z"
-      },
-      "stars": 0,
-      "description": "Rachis plugin for functional profiling using HUMANN 3.",
-      "distros": [
         [
           "2026.4",
           "tiny",
-          "environment-files/q2-humann3-rachis-tiny-2026.4.yml"
+          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
         ]
       ]
     },
@@ -554,9 +147,512 @@
       "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
       "branch": "main",
       "last_commit": {
-        "sha": "22162caf3454b1c0e3c39d76ffc3092dbf729861",
+        "sha": "2691f257181524c2c605ddc05be89bcacb1208d8",
+        "status": "failed",
+        "date": "2026-07-24T12:58:28Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-gunc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-gunc",
+      "last_commit": {
+        "sha": "b579b55f610c5c33a81e3594c5e2a3e226b25623",
+        "status": "failed",
+        "date": "2026-07-24T12:42:06Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
+      "distros": [
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-gunc-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-gunc-rachis-tiny-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-viromics",
+      "docs": null,
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "pathogenome",
+          "2026.7/pathogenome/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "pathogenome",
+          "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 1,
+      "description": null,
+      "branch": "main",
+      "last_commit": {
+        "sha": "983be5ea627a7d118e689411eca17e71031f972f",
         "status": "passed",
-        "date": "2026-07-23T08:57:28Z"
+        "date": "2026-07-24T11:32:52Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-subread",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-subread",
+      "last_commit": {
+        "sha": "35f8a098002795467502972ee5408889158338ec",
+        "status": "passed",
+        "date": "2026-07-24T11:32:38Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-subread-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-subread-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-subread-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-subread-rachis-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-skani",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-skani",
+      "last_commit": {
+        "sha": "3127a184c82d6ece530240c91dbb87d8593e6e98",
+        "status": "failed",
+        "date": "2026-07-24T11:32:20Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for ANI analysis using skani.",
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-skani-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-skani-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-skani-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-skani-rachis-tiny-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "environment-files/q2-skani-qiime2-moshpit-2026.1.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-skani-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+      "last_commit": {
+        "sha": "cee649c62b2ccfc5f09723a0dbf82edd11787cf0",
+        "status": "passed",
+        "date": "2026-07-24T11:32:05Z"
+      },
+      "stars": 4,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-minimap2",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-minimap2",
+      "last_commit": {
+        "sha": "7460dce1ef2d014f02e68b1b9987ee141da7c90b",
+        "status": "passed",
+        "date": "2026-07-24T11:31:54Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for sequence alignment using minimap2.",
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-minimap2-rachis-qiime2-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-minimap2-rachis-amplicon-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-minimap2-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "environment-files/q2-minimap2-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "environment-files/q2-minimap2-qiime2-moshpit-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-minimap2-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-long-reads-qc",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
+      "last_commit": {
+        "sha": "46e9517e83354de470416437a0c6cfb9db8a0d21",
+        "status": "passed",
+        "date": "2026-07-24T11:31:40Z"
+      },
+      "stars": 2,
+      "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-long-reads-qc-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-long-reads-qc-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-long-reads-qc-rachis-amplicon-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-long-reads-qc-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-long-reads-qc-rachis-tiny-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "environment-files/q2-long-reads-qc-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "environment-files/q2-long-reads-qc-qiime2-moshpit-2026.1.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-long-reads-qc-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-humann3",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-humann3",
+      "last_commit": {
+        "sha": "52a5eae020174374d5e1bf82eae754cd8bf4daf5",
+        "status": "passed",
+        "date": "2026-07-24T11:31:23Z"
+      },
+      "stars": 0,
+      "description": "Rachis plugin for functional profiling using HUMANN 3.",
+      "distros": [
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-humann3-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-humann3-rachis-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "moshpit",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "moshpit",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "4bb0896f6cb4b70da0c7a07c63bdc6e90940c0c5",
+        "status": "passed",
+        "date": "2026-07-24T11:30:55Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "d4faae6457930deedd0b5d53c9e1494111f0fdfb",
+        "status": "passed",
+        "date": "2026-07-24T11:30:33Z"
       }
     },
     {
@@ -565,13 +661,28 @@
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
       "last_commit": {
-        "sha": "d96ee1ae7d8c32383c990375384949c736f4b439",
+        "sha": "5dd1b176151514168382e353617e974bbd1dc0af",
         "status": "failed",
-        "date": "2026-07-23T08:56:53Z"
+        "date": "2026-07-24T11:29:28Z"
       },
       "stars": 0,
       "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
       "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-ena-uploader-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-ena-uploader-rachis-qiime2-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-rachis-tiny-2026.7.yml"
+        ],
         [
           "2026.4",
           "moshpit",
@@ -611,26 +722,92 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
+      "name": "q2-deseq2",
       "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
+      "docs": "https://github.com/bokulich-lab/q2-deseq2",
       "last_commit": {
-        "sha": "f72eb15cf7faa18ade411aeb1cceefebad33fed5",
-        "status": "passed",
-        "date": "2026-07-23T08:56:04Z"
+        "sha": "9a7db4d8ba4c1d9efd1f562689f09e324b975904",
+        "status": "failed",
+        "date": "2026-07-24T10:13:44Z"
       },
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "stars": 0,
+      "description": "QIIME 2 plugin for differential expression analysis with DESeq2.",
       "distros": [
         [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-deseq2-qiime2-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-deseq2-qiime2-tiny-2026.7.yml"
+        ],
+        [
           "2026.4",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
+          "moshpit",
+          "environment-files/q2-deseq2-qiime2-moshpit-2026.4.yml"
         ],
         [
           "2026.4",
           "tiny",
-          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
+          "environment-files/q2-deseq2-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-mag",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ]
+      ],
+      "stars": 0,
+      "description": "Rachis plugin for contig binning and bin quality control.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "a33c3eceb47a244e9fdadb0c41ebf8e40976c328",
+        "status": "failed",
+        "date": "2026-07-23T09:44:59Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "f938f86774b16366300e710459a30ead7ef25897",
+        "status": "passed",
+        "date": "2026-07-23T08:58:16Z"
+      },
+      "stars": 2,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
         ]
       ]
     },
@@ -2522,133 +2699,6 @@
       }
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "665351d294fc88fa15344ffb7e5c65a6dbc050e7",
-        "status": "passed",
-        "date": "2026-07-21T07:46:31Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "moshpit",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "moshpit",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "724316647568abcde56a2c0c360f9ca2f27840a9",
-        "status": "passed",
-        "date": "2026-07-21T07:46:31Z"
-      }
-    },
-    {
       "owner": "qiime2",
       "name": "q2-cutadapt",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -4118,6 +4168,21 @@
     [
       "2026.7",
       "moshpit",
+      "environment-files/q2-deseq2-qiime2-moshpit-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "moshpit",
+      "environment-files/q2-ena-uploader-rachis-moshpit-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "moshpit",
+      "environment-files/q2-long-reads-qc-rachis-moshpit-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "moshpit",
       "environment-files/q2-skani-rachis-moshpit-2026.7.yml"
     ],
     [
@@ -4138,7 +4203,42 @@
     [
       "2026.7",
       "qiime2",
+      "environment-files/q2-ena-uploader-rachis-qiime2-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "qiime2",
+      "environment-files/q2-minimap2-rachis-qiime2-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "qiime2",
       "2026.7/qiime2/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-deseq2-qiime2-tiny-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-ena-uploader-rachis-tiny-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-gunc-rachis-tiny-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-humann3-rachis-tiny-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-long-reads-qc-rachis-tiny-2026.7.yml"
     ],
     [
       "2026.7",

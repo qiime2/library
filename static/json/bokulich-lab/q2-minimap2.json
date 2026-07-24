@@ -708,7 +708,7 @@
       "tag_name": "2026.7.0",
       "html_url": "https://github.com/bokulich-lab/q2-minimap2/releases/tag/2026.7.0",
       "name": "2026.7.0",
-      "published_at": "2026-07-23T13:52:44Z",
+      "published_at": "2026-07-24T12:41:12Z",
       "ast": {
         "type": "root",
         "children": [
@@ -824,6 +824,100 @@
                     "value": ""
                   }
                 ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add env files for 2026.7.0 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-minimap2/pull/57",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#57"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-minimap2/pull/57",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-minimap2",
+                      "issue_number": "57"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: migrate Dockerfile to use micromamba by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/q2-minimap2/pull/58",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#58"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/q2-minimap2/pull/58",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "q2-minimap2",
+                      "issue_number": "58"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
               }
             ]
           },
@@ -897,13 +991,18 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-minimap2",
   "last_commit": {
-    "sha": "706b7dd97962de83353d9e9ba6fb49f467e23029",
-    "status": "failed",
-    "date": "2026-07-23T09:15:18Z"
+    "sha": "7460dce1ef2d014f02e68b1b9987ee141da7c90b",
+    "status": "passed",
+    "date": "2026-07-24T11:31:54Z"
   },
   "stars": 3,
   "description": "QIIME 2 plugin for sequence alignment using minimap2.",
   "distros": [
+    [
+      "2026.7",
+      "qiime2",
+      "environment-files/q2-minimap2-rachis-qiime2-2026.7.yml"
+    ],
     [
       "2026.4",
       "qiime2",

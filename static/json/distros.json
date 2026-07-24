@@ -2,27 +2,6 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
-      "name": "q2-mag",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ]
-      ],
-      "stars": 0,
-      "description": "Rachis plugin for contig binning and bin quality control.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "a33c3eceb47a244e9fdadb0c41ebf8e40976c328",
-        "status": "failed",
-        "date": "2026-07-23T09:44:59Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-fastp",
       "docs": "https://moshpit.qiime2.org/en/stable/",
       "in_distro": true,
@@ -52,14 +31,14 @@
       "description": null,
       "branch": "main",
       "last_commit": {
-        "sha": "8f8fac8dbcaae4b7ab81fc6d14a939f844b9c3f0",
+        "sha": "1521f0f4508f4d9c38a1c9f1955bf82dc8fc1ac7",
         "status": "failed",
-        "date": "2026-07-23T09:27:12Z"
+        "date": "2026-07-24T13:01:18Z"
       }
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-viromics",
+      "name": "q2-amrfinderplus",
       "docs": null,
       "in_distro": true,
       "distros": [
@@ -100,48 +79,12 @@
         ]
       ],
       "stars": 1,
-      "description": null,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
       "branch": "main",
       "last_commit": {
-        "sha": "5ca302cb30cdc40d144c8849aae8c337cf84ac67",
-        "status": "passed",
-        "date": "2026-07-23T09:15:06Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-kmerizer",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "qiime2",
-          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 2,
-      "description": "QIIME 2 plugin for generating kmers from biological sequences",
-      "branch": "main",
-      "last_commit": {
-        "sha": "f938f86774b16366300e710459a30ead7ef25897",
-        "status": "passed",
-        "date": "2026-07-23T08:58:16Z"
+        "sha": "9f877511362a5e272b3a674d73c63b210a665e18",
+        "status": "failed",
+        "date": "2026-07-24T12:58:48Z"
       }
     },
     {
@@ -230,14 +173,14 @@
       "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
       "branch": "main",
       "last_commit": {
-        "sha": "22162caf3454b1c0e3c39d76ffc3092dbf729861",
-        "status": "passed",
-        "date": "2026-07-23T08:57:28Z"
+        "sha": "2691f257181524c2c605ddc05be89bcacb1208d8",
+        "status": "failed",
+        "date": "2026-07-24T12:58:28Z"
       }
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
+      "name": "q2-viromics",
       "docs": null,
       "in_distro": true,
       "distros": [
@@ -278,12 +221,196 @@
         ]
       ],
       "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "description": null,
       "branch": "main",
       "last_commit": {
-        "sha": "f72eb15cf7faa18ade411aeb1cceefebad33fed5",
+        "sha": "983be5ea627a7d118e689411eca17e71031f972f",
         "status": "passed",
-        "date": "2026-07-23T08:56:04Z"
+        "date": "2026-07-24T11:32:52Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-assembly",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "moshpit",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "moshpit",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 2,
+      "description": "QIIME 2 plugin for (meta)genome assembly.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "4bb0896f6cb4b70da0c7a07c63bdc6e90940c0c5",
+        "status": "passed",
+        "date": "2026-07-24T11:30:55Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "d4faae6457930deedd0b5d53c9e1494111f0fdfb",
+        "status": "passed",
+        "date": "2026-07-24T11:30:33Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-mag",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ]
+      ],
+      "stars": 0,
+      "description": "Rachis plugin for contig binning and bin quality control.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "a33c3eceb47a244e9fdadb0c41ebf8e40976c328",
+        "status": "failed",
+        "date": "2026-07-23T09:44:59Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 2,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "branch": "main",
+      "last_commit": {
+        "sha": "f938f86774b16366300e710459a30ead7ef25897",
+        "status": "passed",
+        "date": "2026-07-23T08:58:16Z"
       }
     },
     {
@@ -2171,133 +2298,6 @@
         "sha": "8af4c16ecbe8efd9daba8e51987f99aa31a0d38e",
         "status": "passed",
         "date": "2026-07-21T07:46:39Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "665351d294fc88fa15344ffb7e5c65a6dbc050e7",
-        "status": "passed",
-        "date": "2026-07-21T07:46:31Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-assembly",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "moshpit",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "moshpit",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 2,
-      "description": "QIIME 2 plugin for (meta)genome assembly.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "724316647568abcde56a2c0c360f9ca2f27840a9",
-        "status": "passed",
-        "date": "2026-07-21T07:46:31Z"
       }
     },
     {
