@@ -2,6 +2,71 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "d257e35f3817bcfc728c7c6d55aace4fb5970a5f",
+        "status": "passed",
+        "date": "2026-07-26T00:45:48Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-ena-uploader-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-ena-uploader-rachis-qiime2-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-ena-uploader-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-ena-uploader-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-rachis-tiny-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-amrfinderplus",
       "branch": "main",
       "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
@@ -254,76 +319,6 @@
           "environment-files/q2-minimap2-qiime2-moshpit-2025.10.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-long-reads-qc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-long-reads-qc",
-      "last_commit": {
-        "sha": "46e9517e83354de470416437a0c6cfb9db8a0d21",
-        "status": "passed",
-        "date": "2026-07-24T11:31:40Z"
-      },
-      "stars": 2,
-      "description": "QIIME2 plugin for quality control analysis of long-read sequences.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-long-reads-qc-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-long-reads-qc-rachis-amplicon-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-long-reads-qc-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-long-reads-qc-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-long-reads-qc-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-long-reads-qc-qiime2-amplicon-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-long-reads-qc-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-long-reads-qc-qiime2-tiny-2025.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -446,5 +441,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-07-25T13:45:20.286Z"
+  "last_updated": "2026-07-26T13:40:07.912Z"
 }
