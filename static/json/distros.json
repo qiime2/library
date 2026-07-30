@@ -2,6 +2,152 @@
   "plugins": [
     {
       "owner": "qiime2",
+      "name": "q2-feature-table",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "pathogenome",
+          "2026.7/pathogenome/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "pathogenome",
+          "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "pathogenome",
+          "2026.1/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "pathogenome",
+          "2025.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "qiime2",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "pathogenome",
+          "2025.7/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "pathogenome",
+          "2025.4/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "moshpit",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "pathogenome",
+          "2024.10/pathogenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "moshpit",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "qiime2",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "qiime2",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "qiime2",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 2,
+      "description": "QIIME 2 plugin supporting operations on feature tables.",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "a09c11b980de720f1620fe8b8fbfba88db68f4df",
+        "status": "passed",
+        "date": "2026-07-30T08:13:38Z"
+      }
+    },
+    {
+      "owner": "qiime2",
       "name": "q2-taxa",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
       "in_distro": true,
@@ -131,9 +277,9 @@
       "description": null,
       "branch": "dev",
       "last_commit": {
-        "sha": "4961273ed0550cee655f2684abfaf5d62395671e",
+        "sha": "4d075c9553d857596fc938501b3c70a512b097b2",
         "status": "passed",
-        "date": "2026-07-27T22:40:22Z"
+        "date": "2026-07-30T08:11:04Z"
       }
     },
     {
@@ -1031,152 +1177,6 @@
         "sha": "9750feb0f1ffec8f780954a2bb435d8c87d8bb48",
         "status": "passed",
         "date": "2026-07-21T07:46:45Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-feature-table",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "qiime2",
-          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "pathogenome",
-          "2026.7/pathogenome/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "pathogenome",
-          "2026.4/pathogenome/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "pathogenome",
-          "2026.1/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "pathogenome",
-          "2025.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "qiime2",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "pathogenome",
-          "2025.7/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "pathogenome",
-          "2025.4/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "moshpit",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "pathogenome",
-          "2024.10/pathogenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "qiime2",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "moshpit",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "qiime2",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "qiime2",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "qiime2",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 2,
-      "description": "QIIME 2 plugin supporting operations on feature tables.",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "990daa4174aa4ab602344f71157a0cdeed53f272",
-        "status": "passed",
-        "date": "2026-07-21T07:46:44Z"
       }
     },
     {
