@@ -168,10 +168,10 @@
     <p>{distro.description}</p>
     <p>
      This page contains the official installation instructions for {distro.title}.
-     {distro.title} can be installed natively on macOS or Linux, and on Windows systems that support the Windows Subsystem for Linux.
-     {distro.title} can also be used through Docker or Podman.
-     Instructions for all of these installation types follow on this page.
-
+     {distro.title} can be installed natively through a conda installation, or used through Docker or Podman.
+     Instructions for both of these installation types follow on this page.
+    </p>
+    <p>
      {distro.title} deployment can occur on a personal computer, institutional high-performance computing (HPC) hardware, cloud-based hardware, or other types of systems.
      Generally the determining factor for where to install {distro.title} is the analyses that you want to run: in some cases (e.g., generating visualizations) a personal computer will be sufficient, but for memory or CPU intensive steps (e.g., quality control or taxonomic annotation) an HPC system may be required.
      If you have questions about what type of system you need for running {distro.title}, refer to the QIIME 2 Forum.
