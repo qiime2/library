@@ -11,7 +11,8 @@
         osx?: string;
     };
 
-    // The first epoch whose docker images include the "workshop" variant.
+    // The first epoch for which we will recommend installation of the
+    // the "workshop" variant of the Docker containers.
     const WORKSHOP_IMAGE_EPOCH = "2026.7";
 
     // Marks a block in the install instructions that only applies to some epochs,
