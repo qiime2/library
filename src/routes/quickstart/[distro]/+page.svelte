@@ -11,15 +11,41 @@
         osx?: string;
     };
 
-    function sortEpochs(a: string, b: string) {
+    // The first epoch whose docker images include the "workshop" variant.
+    const WORKSHOP_IMAGE_EPOCH = "2026.7";
+
+    // Marks a block in the install instructions that only applies to some epochs,
+    // e.g. `((if:epoch>=2026.7))`.
+    const EPOCH_CONDITION = /^\(\(if:epoch(>=|<)(\d+\.\d+)\)\)/;
+
+    function compareEpochs(a: string, b: string) {
         const [yearA, monthA] = a.split(".").map((x) => parseInt(x, 10));
         const [yearB, monthB] = b.split(".").map((x) => parseInt(x, 10));
 
         if (yearA !== yearB) {
-            return yearB - yearA;
+            return yearA - yearB;
         }
 
-        return monthB - monthA;
+        return monthA - monthB;
+    }
+
+    function sortEpochs(a: string, b: string) {
+        return compareEpochs(b, a);
+    }
+
+    // The first node carrying a `value`, which is where an epoch condition marker
+    // would be found for a block such as a paragraph.
+    function firstValueNode(node: any): any {
+        if (typeof node.value === "string") {
+            return node;
+        }
+        for (const child of node.children || []) {
+            const found = firstValueNode(child);
+            if (found) {
+                return found;
+            }
+        }
+        return null;
     }
 
     function defaultLegacyInstallUrl(
@@ -112,6 +138,12 @@
         || defaultLegacyInstallUrl(selectedEpoch, distroName, "osx"),
     );
 
+    let dockerImage: string = $derived(
+        compareEpochs(selectedEpoch, WORKSHOP_IMAGE_EPOCH) >= 0
+            ? `${distroName}-workshop`
+            : distroName,
+    );
+
     let installNotice: string | null = $derived.by(() => {
         if (linuxInstallable && macosInstallable) {
             return null;
@@ -149,9 +181,29 @@
         })
 
         visit(ast, (node) => {
+            if (!Array.isArray(node.children)) {
+                return;
+            }
+            node.children = node.children.filter((child: any) => {
+                const marked = firstValueNode(child);
+                const condition = marked && EPOCH_CONDITION.exec(marked.value);
+                if (!condition) {
+                    return true;
+                }
+                const [marker, operator, epoch] = condition;
+                marked.value = marked.value.slice(marker.length);
+                if (operator === '>=') {
+                    return compareEpochs(selectedEpoch, epoch) >= 0;
+                }
+                return compareEpochs(selectedEpoch, epoch) < 0;
+            });
+        })
+
+        visit(ast, (node) => {
             if (node.value) {
                 let value = node.value
                 value = value.replaceAll('((epoch))', selectedEpoch);
+                value = value.replaceAll('((docker_image))', dockerImage);
                 value = value.replaceAll('((distro))', distroName);
                 value = value.replaceAll('((linux_url))', linuxUrl);
                 value = value.replaceAll('((macos_url))', macosUrl);
