@@ -11,7 +11,7 @@ for downloading and installing Miniconda.
 It is important to follow all of the directions provided in the
 [Miniconda instructions](https://www.anaconda.com/docs/getting-started/miniconda/install),
 particularly ensuring that you run `conda init` at the end of the installation process (via installer or manual command),
-to ensure that your Miniconda installation is fully installed and available for the following commands. 
+to ensure that your Miniconda installation is fully installed and available for the following commands.
 On Windows, [set up WSL](https://learn.microsoft.com/en-us/windows/wsl/install) first, then install Miniconda inside WSL.
 
 
@@ -94,7 +94,10 @@ qiime info
 
 ## Using Docker
 
-Steps 1-3 will guide you through installing `docker` and pulling the image for your selected _base distribution_.
+Steps 1-3 will guide you through installing `docker` and pulling the "workshop" image for your selected _base distribution_.
+The "workshop" image contains some conveniences, like a built-in JupyterLab environment with support for viewing `.qzv` files.
+You can find details about how to use these features [here](https://use.qiime2.org/en/stable/how-to-guides/use-the-workshop-container/).
+If you don't want these features and prefer a smaller container, you can replace the `((distro))-workshop` container name in all steps with `((distro))` (i.e., remove `-workshop`).
 
 ### 1. Install docker
 
@@ -105,7 +108,7 @@ See [https://www.docker.com](https://www.docker.com) for instructions for your p
 Run the following command to pull the selected image:
 
 ```bash
-docker pull quay.io/qiime2/((distro)):((epoch))
+docker pull quay.io/qiime2/((distro))-workshop:((epoch))
 ```
 
 ### 3. Test your install
@@ -115,8 +118,8 @@ Finally, to verify things are working, run:
 ```bash
 docker run \
   -v $(pwd):/data \
-  -it quay.io/qiime2/((distro)):((epoch)) \
+  -it quay.io/qiime2/((distro))-workshop:((epoch)) \
   qiime info
 ```
 
-This command mounts your current working directory as a volume to `/data` inside the container, then starts an interactive session (`-i`) with the command `qiime info` using the image `quay.io/qiime2/((distro)):((epoch))` (`-t`).
+This command mounts your current working directory as a volume to `/data` inside the container, then starts an interactive session (`-i`) with the command `qiime info` using the image `quay.io/qiime2/((distro))-workshop:((epoch))` (`-t`).
