@@ -2,6 +2,42 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-fastp",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 2,
+      "description": null,
+      "branch": "main",
+      "last_commit": {
+        "sha": "5af25433ea15328761b45ea24cbd975149d47a0c",
+        "status": "failed",
+        "date": "2026-08-04T06:50:40Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -345,42 +381,6 @@
         "sha": "4d075c9553d857596fc938501b3c70a512b097b2",
         "status": "passed",
         "date": "2026-07-30T08:11:04Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-fastp",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 2,
-      "description": null,
-      "branch": "main",
-      "last_commit": {
-        "sha": "1521f0f4508f4d9c38a1c9f1955bf82dc8fc1ac7",
-        "status": "failed",
-        "date": "2026-07-24T13:01:18Z"
       }
     },
     {
