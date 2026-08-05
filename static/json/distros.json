@@ -4121,6 +4121,61 @@
         ]
       },
       {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "((if:epoch>=2026.7))These steps use the “workshop” image, which contains some conveniences, like a built-in JupyterLab environment with support for viewing "
+          },
+          {
+            "type": "inlineCode",
+            "value": ".qzv"
+          },
+          {
+            "type": "text",
+            "value": " files.\nYou can find details about how to use these features "
+          },
+          {
+            "type": "link",
+            "url": "https://use.qiime2.org/en/stable/how-to-guides/use-the-workshop-container/",
+            "children": [
+              {
+                "type": "text",
+                "value": "here"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": ".\nIf you don’t want these features and prefer a smaller container, you can replace the "
+          },
+          {
+            "type": "inlineCode",
+            "value": "((distro))-workshop"
+          },
+          {
+            "type": "text",
+            "value": " container name in all steps with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "((distro))"
+          },
+          {
+            "type": "text",
+            "value": " (i.e., remove "
+          },
+          {
+            "type": "inlineCode",
+            "value": "-workshop"
+          },
+          {
+            "type": "text",
+            "value": ")."
+          }
+        ]
+      },
+      {
         "type": "heading",
         "depth": 3,
         "children": [
@@ -4183,7 +4238,7 @@
       {
         "type": "code",
         "lang": "bash",
-        "value": "docker pull quay.io/qiime2/((distro)):((epoch))"
+        "value": "docker pull quay.io/qiime2/((docker_image)):((epoch))"
       },
       {
         "type": "heading",
@@ -4211,7 +4266,7 @@
       {
         "type": "code",
         "lang": "bash",
-        "value": "docker run \\\n  -v $(pwd):/data \\\n  -it quay.io/qiime2/((distro)):((epoch)) \\\n  qiime info"
+        "value": "docker run \\\n  -v $(pwd):/data \\\n  -it quay.io/qiime2/((docker_image)):((epoch)) \\\n  qiime info"
       },
       {
         "type": "paragraph",
@@ -4246,7 +4301,7 @@
           },
           {
             "type": "inlineCode",
-            "value": "quay.io/qiime2/((distro)):((epoch))"
+            "value": "quay.io/qiime2/((docker_image)):((epoch))"
           },
           {
             "type": "text",
