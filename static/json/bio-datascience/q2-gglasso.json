@@ -75,6 +75,21 @@
                 "alt": "Code style: black"
               }
             ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://deepwiki.com/Vlasovets/q2-gglasso",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://deepwiki.com/badge.svg",
+                "alt": "Ask DeepWiki"
+              }
+            ]
           }
         ]
       },
@@ -276,7 +291,7 @@
       {
         "type": "code",
         "lang": "",
-        "value": "pip install git+https://github.com/bio-datascience/q2-gglasso.git\nqiime dev refresh-cache"
+        "value": "pip install git+https://github.com/Vlasovets/q2-gglasso.git\nqiime dev refresh-cache"
       },
       {
         "type": "thematicBreak"
@@ -579,15 +594,177 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "q2-gglasso",
+      "html_url": "https://github.com/bio-datascience/q2-gglasso/releases/tag/q2-gglasso",
+      "name": "q2-gglasso",
+      "published_at": "2026-08-13T08:58:33Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "install plugin by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bio-datascience/q2-gglasso/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bio-datascience/q2-gglasso/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bio-datascience",
+                      "repo": "q2-gglasso",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/Oddant1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@Oddant1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bio-datascience/q2-gglasso/pull/1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#1"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bio-datascience/q2-gglasso/pull/1",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bio-datascience",
+                      "repo": "q2-gglasso",
+                      "issue_number": "1"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": https://github.com/bio-datascience/q2-gglasso/commits/q2-gglasso"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "owner": "bio-datascience",
   "name": "q2-gglasso",
   "branch": "main",
   "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
   "last_commit": {
-    "sha": "5aebb7ebe94d9b5e220c8132de34c5f4db292928",
+    "sha": "3f586aa1e074727f497e59481ec1565228042cd3",
     "status": "passed",
-    "date": "2025-09-22T10:10:02Z"
+    "date": "2026-08-09T12:38:58Z"
   },
   "stars": 1,
   "description": "QIIME 2 plugin which contains algorithms for solving General Graphical Lasso (GGLasso) problems",
