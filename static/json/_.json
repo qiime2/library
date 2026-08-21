@@ -11,6 +11,10 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-mag": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
   "q2-feature-table": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
@@ -86,10 +90,6 @@
   "q2-deseq2": {
     "base": "https://github.com/bokulich-lab/q2-deseq2",
     "pretty": true
-  },
-  "q2-mag": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
   },
   "q2-kmerizer": {
     "base": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
