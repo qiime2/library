@@ -1,6 +1,117 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-cutadapt",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "qiime2",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "moshpit",
+          "2024.10/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "moshpit",
+          "2024.5/metagenome/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "qiime2",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "qiime2",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "qiime2",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": null,
+      "branch": "dev",
+      "last_commit": {
+        "sha": "4911775eabcecdcbc5831dd67430f510cde1009d",
+        "status": "passed",
+        "date": "2026-08-21T20:12:53Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-mag",
       "docs": "https://moshpit.qiime2.org/en/stable/",
@@ -2817,117 +2928,6 @@
         "sha": "895f3b9e031203f4286dfc24a18c1b8ba94cfd59",
         "status": "passed",
         "date": "2026-07-21T07:46:40Z"
-      }
-    },
-    {
-      "owner": "qiime2",
-      "name": "q2-cutadapt",
-      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "qiime2",
-          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "qiime2",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "moshpit",
-          "2024.10/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "qiime2",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "moshpit",
-          "2024.5/metagenome/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "qiime2",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "qiime2",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "qiime2",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": null,
-      "branch": "dev",
-      "last_commit": {
-        "sha": "6482eb669b8fa8cbb3888f7766fc69d293beef57",
-        "status": "passed",
-        "date": "2026-07-21T07:46:31Z"
       }
     },
     {
