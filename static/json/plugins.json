@@ -6,13 +6,23 @@
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-core",
       "last_commit": {
-        "sha": "c56ffcd2be63e9be79cbe3bd39a7900349e09689",
-        "status": "passed",
-        "date": "2026-08-26T09:48:47Z"
+        "sha": "35065a86ce2dc1e9ad110b3670b41aec4cc43930",
+        "status": "pending",
+        "date": "2026-08-26T11:45:55Z"
       },
       "stars": 1,
       "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
       "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-core-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-core-rachis-qiime2-2026.7.yml"
+        ],
         [
           "2026.7",
           "tiny",
@@ -4188,6 +4198,11 @@
     [
       "2026.7",
       "moshpit",
+      "environment-files/q2-core-rachis-moshpit-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "moshpit",
       "environment-files/q2-deseq2-qiime2-moshpit-2026.7.yml"
     ],
     [
@@ -4219,6 +4234,11 @@
       "2026.7",
       "pathogenome",
       "2026.7/pathogenome/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.7",
+      "qiime2",
+      "environment-files/q2-core-rachis-qiime2-2026.7.yml"
     ],
     [
       "2026.7",
