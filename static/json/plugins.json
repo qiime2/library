@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-core",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-core",
+      "last_commit": {
+        "sha": "c56ffcd2be63e9be79cbe3bd39a7900349e09689",
+        "status": "passed",
+        "date": "2026-08-26T09:48:47Z"
+      },
+      "stars": 1,
+      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
+      "distros": [
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-core-rachis-tiny-2026.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-cutadapt",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -4133,7 +4153,7 @@
         "status": "passed",
         "date": "2025-03-04T18:19:15Z"
       },
-      "stars": 7,
+      "stars": 6,
       "description": "QIIME 2 plugin for PICRUSt2",
       "distros": [
         [
@@ -4214,6 +4234,11 @@
       "2026.7",
       "qiime2",
       "2026.7/qiime2/released/seed-environment-conda-linux.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-core-rachis-tiny-2026.7.yml"
     ],
     [
       "2026.7",

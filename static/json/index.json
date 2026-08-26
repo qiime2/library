@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-core",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-core",
+      "last_commit": {
+        "sha": "c56ffcd2be63e9be79cbe3bd39a7900349e09689",
+        "status": "passed",
+        "date": "2026-08-26T09:48:47Z"
+      },
+      "stars": 1,
+      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
+      "distros": [
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-core-rachis-tiny-2026.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bio-datascience",
       "name": "q2-gglasso",
       "branch": "main",
@@ -259,36 +279,6 @@
           "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
-      "last_commit": {
-        "sha": "cee649c62b2ccfc5f09723a0dbf82edd11787cf0",
-        "status": "passed",
-        "date": "2026-07-24T11:32:05Z"
-      },
-      "stars": 4,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -411,5 +401,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-08-25T12:56:17.477Z"
+  "last_updated": "2026-08-26T10:02:30.560Z"
 }
