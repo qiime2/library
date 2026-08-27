@@ -1,6 +1,20 @@
 {
   "plugins": [
     {
+      "owner": "biocore",
+      "name": "q2-conduit",
+      "branch": "main",
+      "docs": "https://github.com/biocore/q2-conduit",
+      "last_commit": {
+        "sha": "26458c89481484a17e5d837e1121a72178a19d06",
+        "status": "passed",
+        "date": "2026-08-27T00:20:05Z"
+      },
+      "stars": 0,
+      "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts for downstream analyses",
+      "distros": []
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-core",
       "branch": "main",
@@ -214,81 +228,6 @@
           "environment-files/q2-subread-rachis-tiny-2026.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-skani",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-skani",
-      "last_commit": {
-        "sha": "3127a184c82d6ece530240c91dbb87d8593e6e98",
-        "status": "failed",
-        "date": "2026-07-24T11:32:20Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for ANI analysis using skani.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-skani-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-skani-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-skani-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-skani-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2026.1.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.10.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.7.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-skani-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -411,5 +350,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-08-26T13:01:31.846Z"
+  "last_updated": "2026-08-27T22:04:00.545Z"
 }

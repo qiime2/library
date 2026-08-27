@@ -11,6 +11,14 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-conduit": {
+    "base": "https://github.com/biocore/q2-conduit",
+    "pretty": true
+  },
+  "q2-composition": {
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": true
+  },
   "q2-core": {
     "base": "https://github.com/bokulich-lab/q2-core",
     "pretty": true
@@ -24,10 +32,6 @@
     "pretty": false
   },
   "q2-feature-table": {
-    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
-  "q2-composition": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
@@ -218,10 +222,6 @@
   "genome-sampler": {
     "base": "https://genome-sampler.readthedocs.io/en/latest/",
     "pretty": false
-  },
-  "q2-conduit": {
-    "base": "https://github.com/biocore/q2-conduit",
-    "pretty": true
   },
   "q2-dbotu": {
     "base": "https://github.com/cduvallet/q2-dbotu",

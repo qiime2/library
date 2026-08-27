@@ -118,7 +118,7 @@
         "children": [
           {
             "type": "text",
-            "value": "q2-conduit requires a QIIME 2 installation.  To install both the current\nQIIME 2 shotgun metagenomics (“MOSHPIT”) distribution and the q2-conduit plugin\ninto a fresh environment named "
+            "value": "q2-conduit requires a QIIME 2 installation.  To install both the current\nQIIME 2 distribution and the q2-conduit plugin into a fresh environment named\n"
           },
           {
             "type": "inlineCode",
@@ -133,7 +133,45 @@
       {
         "type": "code",
         "lang": "",
-        "value": "conda env create \\\n -n q2-conduit \\\n -f https://raw.githubusercontent.com/biocore/q2-conduit.git/main/environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
+        "value": "conda env create \\\n -n q2-conduit \\\n -f https://raw.githubusercontent.com/biocore/q2-conduit.git/main/environment-files/q2-conduit-qiime2-2026.7.yml"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "The "
+          },
+          {
+            "type": "inlineCode",
+            "value": "qiime2"
+          },
+          {
+            "type": "text",
+            "value": " distribution has no native Apple Silicon build.  On such machines,\neither configure the environment for "
+          },
+          {
+            "type": "inlineCode",
+            "value": "osx-64"
+          },
+          {
+            "type": "text",
+            "value": " and run under Rosetta, or use the\n"
+          },
+          {
+            "type": "inlineCode",
+            "value": "tiny"
+          },
+          {
+            "type": "text",
+            "value": " distribution instead, which builds natively and carries everything\nq2-conduit itself requires:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "",
+        "value": "conda env create \\\n -n q2-conduit \\\n -f https://raw.githubusercontent.com/biocore/q2-conduit.git/main/environment-files/q2-conduit-tiny-2026.7.yml"
       },
       {
         "type": "paragraph",
@@ -191,18 +229,123 @@
         "implicit": true
       },
       {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Extracting the input files from Conduit"
+          }
+        ],
+        "identifier": "extracting-the-input-files-from-conduit",
+        "label": "Extracting the input files from Conduit",
+        "html_id": "extracting-the-input-files-from-conduit",
+        "implicit": true
+      },
+      {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "In an active QIIME environment, import the Conduit artifacts\n“protein_group_matrix.tsv” (the counts data) and “database_taxonomy.tsv”\n(the protein taxonomy information) into QIIME artifacts:"
+            "value": "Conduit collects its results in a single "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conduit.rds"
+          },
+          {
+            "type": "text",
+            "value": " object, so the two\ntab-delimited files q2-conduit reads must first be written out from it. In R,\nwith the path to your own Conduit output substituted for "
+          },
+          {
+            "type": "inlineCode",
+            "value": "conduit.rds"
+          },
+          {
+            "type": "text",
+            "value": ":"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "lang": "r",
+        "value": "# Ensure conduitR is installed\nif (!requireNamespace(\"conduitR\", quietly = TRUE)) {\n    if (!requireNamespace(\"remotes\", quietly = TRUE)) {\n        install.packages(\"remotes\")\n    }\n    remotes::install_github(\"baynec2/conduitR\")\n}\n\n# Configure\nconduit_rds <- \"conduit.rds\" # path to your Conduit output\n\n# Read Conduit.rds object and extract protein_groups SummarizedExperiment\n# from QFeatures\nconduit <- readRDS(conduit_rds)\npg_se <- conduit@QFeatures[[\"protein_groups\"]]\n\n# Extract Protein Group Info from SE, reformat, and write to .tsv\npg <- SummarizedExperiment::assay(pg_se, \"intensity\") |>\n    as.data.frame() |>\n    tibble::rownames_to_column(var = \"protein_group\")\n\nreadr::write_tsv(pg, \"protein_group_matrix.tsv\")\n\n# Extract Taxonomy Information from rowdata, reformat, and write to tsv\ntaxonomy <- SummarizedExperiment::rowData(pg_se) |>\n    as.data.frame() |>\n    tibble::rownames_to_column(var = \"protein_group\") |>\n    dplyr::select(\n        protein_group,\n        domain,\n        kingdom,\n        phylum,\n        class,\n        order,\n        family,\n        genus,\n        species\n    )\n\nreadr::write_tsv(taxonomy, \"protein_group_taxonomy.tsv\")"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This writes "
+          },
+          {
+            "type": "inlineCode",
+            "value": "protein_group_matrix.tsv"
+          },
+          {
+            "type": "text",
+            "value": ", holding one row per protein group and\none column per sample, and "
+          },
+          {
+            "type": "inlineCode",
+            "value": "protein_group_taxonomy.tsv"
+          },
+          {
+            "type": "text",
+            "value": ", holding one row per\nprotein group and one column per taxonomic rank. Both files are keyed on the\nsame "
+          },
+          {
+            "type": "inlineCode",
+            "value": "protein_group"
+          },
+          {
+            "type": "text",
+            "value": " column."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Importing into QIIME 2"
+          }
+        ],
+        "identifier": "importing-into-qiime-2",
+        "label": "Importing into QIIME 2",
+        "html_id": "importing-into-qiime-2",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "In an active QIIME environment, import the two files into QIIME artifacts:"
           }
         ]
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime tools import \\\n    --input-path protein_group_matrix.tsv \\\n    --output-path conduit_count_table.qza \\\n    --type ConduitCountTable\n\nqiime tools import \\\n    --input-path database_taxonomy.tsv \\\n    --output-path conduit_taxonomy_table.qza \\\n    --type ConduitTaxonomyTable"
+        "value": "qiime tools import \\\n    --input-path protein_group_matrix.tsv \\\n    --output-path conduit_intensity_table.qza \\\n    --type ConduitIntensityTable\n\nqiime tools import \\\n    --input-path protein_group_taxonomy.tsv \\\n    --output-path conduit_taxonomy_table.qza \\\n    --type ConduitTaxonomyTable"
+      },
+      {
+        "type": "heading",
+        "depth": 3,
+        "children": [
+          {
+            "type": "text",
+            "value": "Extracting QIIME 2 objects"
+          }
+        ],
+        "identifier": "extracting-qiime-2-objects",
+        "label": "Extracting QIIME 2 objects",
+        "html_id": "extracting-qiime-2-objects",
+        "implicit": true
       },
       {
         "type": "paragraph",
@@ -213,11 +356,11 @@
           },
           {
             "type": "inlineCode",
-            "value": "FeatureTable[Frequency]"
+            "value": "FeatureTable[Unconstrained]"
           },
           {
             "type": "text",
-            "value": "\nQIIME object containing the counts generated by Conduit, as well as a\n"
+            "value": "\nQIIME object containing the intensities generated by Conduit, as well as a\n"
           },
           {
             "type": "inlineCode",
@@ -225,44 +368,76 @@
           },
           {
             "type": "text",
-            "value": " QIIME object containing the associated proteins’\ntaxonomies:"
+            "value": " QIIME object containing the associated protein groups’\ntaxonomies:"
           }
         ]
       },
       {
         "type": "code",
         "lang": "",
-        "value": "qiime conduit extract \\\n     --i-conduit-counts conduit_count_table.qza \\\n     --i-conduit-taxonomy conduit_taxonomy_table.qza \\\n     --o-table conduit_counts.qza \\\n     --o-taxonomy conduit_taxonomy.qza"
+        "value": "qiime conduit extract \\\n     --i-conduit-intensities conduit_intensity_table.qza \\\n     --i-conduit-taxonomy conduit_taxonomy_table.qza \\\n     --o-table conduit_intensities.qza \\\n     --o-taxonomy conduit_taxonomy.qza"
       },
       {
         "type": "paragraph",
         "children": [
           {
             "type": "text",
-            "value": "These objects are suitable for use in downstream QIIME functions such as\n"
-          },
-          {
-            "type": "inlineCode",
-            "value": "qiime diversity core-metrics-phylogenetic"
-          },
-          {
-            "type": "text",
-            "value": " or "
-          },
-          {
-            "type": "inlineCode",
-            "value": "qiime taxa barplot"
-          },
-          {
-            "type": "text",
-            "value": ", i.e., as\nshown below:"
+            "value": "Three things are worth knowing about the results:"
           }
         ]
       },
       {
-        "type": "code",
-        "lang": "",
-        "value": "qiime taxa barplot \\               \n    --i-table conduit_counts.qza \\\n    --i-taxonomy conduit_taxonomy.qza \\ \n    --o-visualization taxa_barplot.qzv"
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "A protein group naming more than one protein becomes a single feature whose\nid is the semicolon-joined protein list Conduit reports; no protein group is\ndiscarded."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "The taxonomy string runs from kingdom to species, and every rank is present\nwhether or not Conduit assigned it, so that the Nth rank of one feature’s\ntaxonomy is the same rank as the Nth of another’s. A protein group with no assignment\nat any reported kingdom or more specific rank is labeled "
+              },
+              {
+                "type": "inlineCode",
+                "value": "Unassigned"
+              },
+              {
+                "type": "text",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "text",
+                "value": "Conduit writes "
+              },
+              {
+                "type": "inlineCode",
+                "value": "NA"
+              },
+              {
+                "type": "text",
+                "value": " for a protein group it did not measure in a given\nsample. Because biom tables cannot hold nulls, these become zeroes, and are\ntherefore indistinguishable from a measured zero."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -272,22 +447,11 @@
   "branch": "main",
   "docs": "https://github.com/biocore/q2-conduit",
   "last_commit": {
-    "sha": "0a4a7eee677b5fec780efb90f6caebabbec64030",
+    "sha": "26458c89481484a17e5d837e1121a72178a19d06",
     "status": "passed",
-    "date": "2025-10-08T21:17:26Z"
+    "date": "2026-08-27T00:20:05Z"
   },
   "stars": 0,
-  "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts usable in downstream analyses",
-  "distros": [
-    [
-      "2025.7",
-      "qiime2",
-      "environment-files/q2-conduit-qiime2-amplicon-2025.7.yml"
-    ],
-    [
-      "2025.7",
-      "moshpit",
-      "environment-files/q2-conduit-qiime2-moshpit-2025.7.yml"
-    ]
-  ]
+  "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts for downstream analyses",
+  "distros": []
 }
