@@ -1,6 +1,71 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-ena-uploader",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
+      "last_commit": {
+        "sha": "83512744f2fcfad5fd607d36a1b21d3a34cbe7fe",
+        "status": "passed",
+        "date": "2026-08-30T00:42:55Z"
+      },
+      "stars": 0,
+      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-ena-uploader-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-ena-uploader-rachis-qiime2-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-rachis-tiny-2026.7.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "environment-files/q2-ena-uploader-rachis-moshpit-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-ena-uploader-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-rachis-tiny-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
+        ],
+        [
+          "2025.7",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
+        ]
+      ]
+    },
+    {
       "owner": "biocore",
       "name": "q2-conduit",
       "branch": "main",
@@ -61,71 +126,6 @@
           "2025.4",
           "qiime2",
           "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-ena-uploader",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
-      "last_commit": {
-        "sha": "1d0162c99c7705ddf90e2aae1d0dcddb8d83e8f3",
-        "status": "passed",
-        "date": "2026-08-09T00:24:59Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for submission of metadata and raw sequence reads to ENA.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-ena-uploader-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "qiime2",
-          "environment-files/q2-ena-uploader-rachis-qiime2-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-ena-uploader-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-ena-uploader-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.7.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
     },
@@ -350,5 +350,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-08-29T16:31:05.814Z"
+  "last_updated": "2026-08-30T16:24:44.309Z"
 }
