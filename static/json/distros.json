@@ -1,52 +1,6 @@
 {
   "plugins": [
     {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "c9767e1c4a74eea0dafb90be9512a82c1c4c00f3",
-        "status": "failed",
-        "date": "2026-09-01T12:40:43Z"
-      }
-    },
-    {
       "owner": "qiime2",
       "name": "q2-vizard",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -162,9 +116,55 @@
       "description": "The first choice of wizard lizards for interactive, generalized microbiome data visualization!",
       "branch": "dev",
       "last_commit": {
-        "sha": "d1dc4d3ec25e5dd298fb99c67f81831abd03ca37",
+        "sha": "09e1ad91498ddbb73694e7d253dcd4a4ecff8b44",
         "status": "passed",
-        "date": "2026-08-31T12:24:56Z"
+        "date": "2026-09-03T09:25:55Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "c9767e1c4a74eea0dafb90be9512a82c1c4c00f3",
+        "status": "failed",
+        "date": "2026-09-01T12:40:43Z"
       }
     },
     {
@@ -675,7 +675,7 @@
     {
       "owner": "bokulich-lab",
       "name": "q2-fastp",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
       "in_distro": true,
       "distros": [
         [

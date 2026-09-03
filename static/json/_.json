@@ -11,13 +11,13 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
-  "q2-annotate": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
-  },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
+  },
+  "q2-annotate": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
   },
   "q2-ena-uploader": {
     "base": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -56,8 +56,8 @@
     "pretty": true
   },
   "q2-fastp": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
+    "base": "https://amplicon-docs.readthedocs.io/en/stable/",
+    "pretty": true
   },
   "q2-taxa": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
