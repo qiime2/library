@@ -1,6 +1,57 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-mag",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ]
+      ],
+      "stars": 0,
+      "description": "Rachis plugin for contig binning and bin quality control.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "438963af34b002aa3e59c69bebe609971ccb51be",
+        "status": "pending",
+        "date": "2026-09-04T14:13:19Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+      "last_commit": {
+        "sha": "e6f78f5fb22ffbbf6e03c3627db323307641a417",
+        "status": "failed",
+        "date": "2026-09-04T14:10:32Z"
+      },
+      "stars": 4,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "qiime2",
       "name": "q2-vizard",
       "docs": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -486,27 +537,6 @@
         "sha": "4911775eabcecdcbc5831dd67430f510cde1009d",
         "status": "passed",
         "date": "2026-08-21T20:12:53Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-mag",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ]
-      ],
-      "stars": 0,
-      "description": "Rachis plugin for contig binning and bin quality control.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "8c892165ef3a4ddc6aff49063697b6134e920fd5",
-        "status": "passed",
-        "date": "2026-08-21T10:06:36Z"
       }
     },
     {
@@ -1287,36 +1317,6 @@
           "2025.4",
           "tiny",
           "environment-files/q2-skani-qiime2-tiny-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
-      "last_commit": {
-        "sha": "cee649c62b2ccfc5f09723a0dbf82edd11787cf0",
-        "status": "passed",
-        "date": "2026-07-24T11:32:05Z"
-      },
-      "stars": 4,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
         ]
       ]
     },

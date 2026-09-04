@@ -2,6 +2,36 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+      "last_commit": {
+        "sha": "e6f78f5fb22ffbbf6e03c3627db323307641a417",
+        "status": "failed",
+        "date": "2026-09-04T14:10:32Z"
+      },
+      "stars": 4,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-ena-uploader",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-ena-uploader",
@@ -193,41 +223,6 @@
           "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-subread",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-subread",
-      "last_commit": {
-        "sha": "35f8a098002795467502972ee5408889158338ec",
-        "status": "passed",
-        "date": "2026-07-24T11:32:38Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for read mapping and analysis with Subread.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-subread-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-subread-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "environment-files/q2-subread-rachis-moshpit-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-subread-rachis-tiny-2026.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -350,5 +345,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-09-04T12:02:49.776Z"
+  "last_updated": "2026-09-04T16:04:30.861Z"
 }

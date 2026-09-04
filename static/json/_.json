@@ -11,6 +11,14 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
+  "q2-mag": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
+  },
+  "q2-rgi": {
+    "base": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+    "pretty": true
+  },
   "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
@@ -38,10 +46,6 @@
   "q2-cutadapt": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
-  },
-  "q2-mag": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
   },
   "q2-feature-table": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
@@ -81,10 +85,6 @@
   },
   "q2-skani": {
     "base": "https://github.com/bokulich-lab/q2-skani",
-    "pretty": true
-  },
-  "q2-rgi": {
-    "base": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
     "pretty": true
   },
   "q2-minimap2": {
