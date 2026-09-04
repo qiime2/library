@@ -18,8 +18,8 @@
     <div class="prose lg:prose-lg max-w-4xl mt-10 mb-5 pb-10">
         <h1 class='text-[#1a414c]'>Welcome to the QIIME 2 Library</h1>
         <p>
-            This site is the hub for community distributed software, tutorials, and resources.<br/>
-            You can learn how to add your own plugins to this site <a href="https://develop.qiime2.org/en/stable/plugins/how-to-guides/distribute-on-library.html">here</a>.
+            This site is the distribution hub for software, tutorials, and resources related to <code>rachis</code>, QIIME 2, and MOSHPIT.<br/>
+            Learn to <a href="https://develop.qiime2.org/en/stable/plugins/tutorials/intro.html">build your own plugins</a> and <a href="https://develop.qiime2.org/en/stable/plugins/how-to-guides/distribute-on-library.html">distribute them on this site</a> in <i>Developing with QIIME 2</i>.
         </p>
     </div>
 </article>
