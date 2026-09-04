@@ -5,7 +5,7 @@
         owner: string, plugin: string, branch: string, releases: string[], in_distro: boolean
     } = $props();
 
-    let selected_ = $state(JSON.stringify(releases[0]));
+    let selected_ = $state(JSON.stringify(releases[0] || false));
     let selected = $derived(JSON.parse(selected_))
     let env_name = $derived(`${plugin}-${selected[1]}-${selected[0]}`);
     let env_filepath = $derived(`https://raw.githubusercontent.com/${owner}/${plugin}/refs/heads/${branch}/${selected[2]}`);
@@ -20,6 +20,7 @@
 
 </script>
 
+{#if selected}
 <section class='border-l-violet-500 bg-white border-l-4 rounded overflow-clip shadow-md prose-sm'>
     <div class='px-2 py-1 bg-violet-100 not-prose text-base flex items-center'>
         <div class="flex flex-row gap-2 items-center">
@@ -37,3 +38,4 @@
     </div>
     <InstallPlugin env_url={env_filepath} env_name={env_name} base_env={selected[1]}/>
 </section>
+{/if}
