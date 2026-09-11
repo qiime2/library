@@ -2,6 +2,51 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-fungal-traits",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
+      "last_commit": {
+        "sha": "6f57f07356034c32b1c7a50f5226987c93ef97f2",
+        "status": "pending",
+        "date": "2026-09-11T16:08:39Z"
+      },
+      "stars": 0,
+      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
+      "last_commit": {
+        "sha": "a1c61ea87867c06cd221fda119072fb51e54d031",
+        "status": "failed",
+        "date": "2026-09-11T16:05:38Z"
+      },
+      "stars": 1,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        [
+          "2026.4",
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-rgi",
       "branch": "main",
       "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
@@ -158,71 +203,6 @@
           "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
-      "last_commit": {
-        "sha": "9f877511362a5e272b3a674d73c63b210a665e18",
-        "status": "failed",
-        "date": "2026-07-24T12:58:48Z"
-      },
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        [
-          "2026.4",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-gunc",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-gunc",
-      "last_commit": {
-        "sha": "b579b55f610c5c33a81e3594c5e2a3e226b25623",
-        "status": "failed",
-        "date": "2026-07-24T12:42:06Z"
-      },
-      "stars": 0,
-      "description": "QIIME 2 plugin for analysis of genomes using GUNC.",
-      "distros": [
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-gunc-rachis-tiny-2026.7.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-gunc-rachis-tiny-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.10.yml"
-        ],
-        [
-          "2025.7",
-          "tiny",
-          "environment-files/q2-gunc-qiime2-tiny-2025.7.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -345,5 +325,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-09-10T16:09:01.826Z"
+  "last_updated": "2026-09-11T16:12:17.603Z"
 }
