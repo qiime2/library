@@ -1,6 +1,51 @@
 {
   "plugins": [
     {
+      "owner": "micom-dev",
+      "name": "q2-micom",
+      "branch": "main",
+      "docs": "https://micom-dev.github.io/q2-micom/",
+      "last_commit": {
+        "sha": "655d479e6f711264bdae9e7bafa91c6d02fd6850",
+        "status": "passed",
+        "date": "2026-09-22T05:25:35Z"
+      },
+      "stars": 10,
+      "description": "A Qiime plugin for MICOM.",
+      "distros": [
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
+        ],
+        [
+          "2025.4",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "moshpit",
+          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
+        ],
+        [
+          "2024.10",
+          "tiny",
+          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-fungal-traits",
       "branch": "main",
@@ -183,26 +228,6 @@
           "environment-files/q2-core-rachis-tiny-2026.7.yml"
         ]
       ]
-    },
-    {
-      "owner": "bio-datascience",
-      "name": "q2-gglasso",
-      "branch": "main",
-      "docs": "https://vlasovets.github.io/q2-hdstats-docs/intro.html",
-      "last_commit": {
-        "sha": "3f586aa1e074727f497e59481ec1565228042cd3",
-        "status": "passed",
-        "date": "2026-08-09T12:38:58Z"
-      },
-      "stars": 1,
-      "description": "QIIME 2 plugin which contains algorithms for solving General Graphical Lasso (GGLasso) problems",
-      "distros": [
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-gglasso-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -325,5 +350,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-09-21T18:05:40.209Z"
+  "last_updated": "2026-09-22T16:39:32.974Z"
 }
