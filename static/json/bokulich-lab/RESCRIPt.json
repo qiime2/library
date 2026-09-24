@@ -278,6 +278,86 @@
             "children": [
               {
                 "type": "link",
+                "url": "https://forum.qiime2.org/t/rescript-evaluate/34265",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "RESCRIPt-evaluate"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://forum.qiime2.org/t/using-rescripts-extract-seq-segments-to-extract-reference-sequences-without-pcr-primer-pairs/23618",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Using RESCRIPt’s ‘extract-seq-segments’ to extract reference sequences without PCR primer pairs"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://forum.qiime2.org/t/train-a-taxonomy-classifier-by-extracting-an-amplicon-region-from-a-curated-sequence-alignment-using-silva-as-an-example/34289",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Train a taxonomy classifier by extracting an amplicon region from a curated sequence alignment (using SILVA as an example)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://forum.qiime2.org/t/importing-sequence-data-with-lower-case-nucleotide-characters-constructing-an-rdp-classifier-as-an-example/25158",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Constructing an RDP classifier"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
+                "url": "https://forum.qiime2.org/t/how-to-train-a-unite-classifier-using-rescript/28285",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "How to train a UNITE classifier using RESCRIPt"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": true,
+            "children": [
+              {
+                "type": "link",
                 "url": "https://forum.qiime2.org/t/using-rescript-to-compile-an-sequence-databases-and-taxonomy-classifiers-from-ncbi-genbank/15947",
                 "children": [
                   {
@@ -326,59 +406,11 @@
             "children": [
               {
                 "type": "link",
-                "url": "https://forum.qiime2.org/t/using-rescripts-extract-seq-segments-to-extract-reference-sequences-without-pcr-primer-pairs/23618",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Using RESCRIPt’s ‘extract-seq-segments’ to extract reference sequences without PCR primer pairs"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "link",
                 "url": "https://forum.qiime2.org/t/how-to-train-a-gtdb-ssu-classifier-using-rescript/25725",
                 "children": [
                   {
                     "type": "text",
                     "value": "How to train a GTDB SSU classifier using RESCRIPt"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "link",
-                "url": "https://forum.qiime2.org/t/importing-sequence-data-with-lower-case-nucleotide-characters-constructing-an-rdp-classifier-as-an-example/25158",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Constructing an RDP classifier"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "link",
-                "url": "https://forum.qiime2.org/t/how-to-train-a-unite-classifier-using-rescript/28285",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "How to train a UNITE classifier using RESCRIPt"
                   }
                 ]
               }
@@ -3149,8 +3181,8 @@
   "description": "REference Sequence annotation and CuRatIon Pipeline",
   "branch": "master",
   "last_commit": {
-    "sha": "09f3a3e1c191562169ea1708d54436a22ec99cbf",
+    "sha": "af29a4f03330f539b30e5a9497e60a412ede5e4b",
     "status": "passed",
-    "date": "2026-09-23T15:07:02Z"
+    "date": "2026-09-23T22:46:51Z"
   }
 }
