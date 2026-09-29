@@ -1,6 +1,36 @@
 {
   "plugins": [
     {
+      "owner": "bokulich-lab",
+      "name": "q2-core",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-core",
+      "last_commit": {
+        "sha": "0cea28147fc2d8a4bbd912d7011c3d84d273afd9",
+        "status": "passed",
+        "date": "2026-09-29T11:22:09Z"
+      },
+      "stars": 1,
+      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
+      "distros": [
+        [
+          "2026.7",
+          "moshpit",
+          "environment-files/q2-core-rachis-moshpit-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-core-rachis-qiime2-2026.7.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-core-rachis-tiny-2026.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "micom-dev",
       "name": "q2-micom",
       "branch": "main",
@@ -55,7 +85,7 @@
         "status": "failed",
         "date": "2026-09-11T16:08:39Z"
       },
-      "stars": 0,
+      "stars": 1,
       "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
       "distros": [
         [
@@ -198,36 +228,6 @@
       "stars": 0,
       "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts for downstream analyses",
       "distros": []
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-core",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-core",
-      "last_commit": {
-        "sha": "35065a86ce2dc1e9ad110b3670b41aec4cc43930",
-        "status": "passed",
-        "date": "2026-08-26T11:45:55Z"
-      },
-      "stars": 1,
-      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-core-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "qiime2",
-          "environment-files/q2-core-rachis-qiime2-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-core-rachis-tiny-2026.7.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -350,5 +350,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-09-28T19:30:08.536Z"
+  "last_updated": "2026-09-29T17:56:32.129Z"
 }

@@ -11,11 +11,15 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
-  "q2-vizard": {
+  "RESCRIPt": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
-  "RESCRIPt": {
+  "q2-core": {
+    "base": "https://github.com/bokulich-lab/q2-core",
+    "pretty": true
+  },
+  "q2-vizard": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
     "pretty": true
   },
@@ -77,10 +81,6 @@
   },
   "q2-composition": {
     "base": "https://amplicon-docs.readthedocs.io/en/stable/",
-    "pretty": true
-  },
-  "q2-core": {
-    "base": "https://github.com/bokulich-lab/q2-core",
     "pretty": true
   },
   "q2-gglasso": {
