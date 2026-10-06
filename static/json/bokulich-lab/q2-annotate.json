@@ -432,6 +432,38 @@
                 "children": [
                   {
                     "type": "text",
+                    "value": "estimate-tfa"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Estimate a sparse load table and gene taxonomy mapping."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "-"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
                     "value": "extract-annotations"
                   }
                 ]
@@ -3529,8 +3561,8 @@
   "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
   "branch": "main",
   "last_commit": {
-    "sha": "c9767e1c4a74eea0dafb90be9512a82c1c4c00f3",
-    "status": "passed",
-    "date": "2026-09-01T12:40:43Z"
+    "sha": "635d2f9e4020b7119b74775fdd96db3c8f701383",
+    "status": "failed",
+    "date": "2026-10-05T16:40:45Z"
   }
 }
