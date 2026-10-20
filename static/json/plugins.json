@@ -2,6 +2,26 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-fungal-traits",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
+      "last_commit": {
+        "sha": "f4c6f765ec3762b5553fd33c01993daf1a3e71f8",
+        "status": "passed",
+        "date": "2026-10-20T14:51:20Z"
+      },
+      "stars": 1,
+      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-annotate",
       "docs": "https://moshpit.qiime2.org/en/stable/",
       "in_distro": true,
@@ -1632,26 +1652,6 @@
           "2024.10",
           "tiny",
           "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-fungal-traits",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
-      "last_commit": {
-        "sha": "6f57f07356034c32b1c7a50f5226987c93ef97f2",
-        "status": "failed",
-        "date": "2026-09-11T16:08:39Z"
-      },
-      "stars": 1,
-      "description": "A QIIME 2 plugin to annotate fungal taxonomies with lifestyle traits and spore volume data.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-fungal-traits-qiime2-amplicon-2026.4.yml"
         ]
       ]
     },
