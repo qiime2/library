@@ -1,6 +1,131 @@
 {
   "plugins": [
     {
+      "owner": "caporaso-lab",
+      "name": "q2-boots",
+      "branch": "main",
+      "docs": "https://q2-boots.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "2ed33939f026896b818956e64f5c13c587c2a9ff",
+        "status": "passed",
+        "date": "2026-10-21T08:19:02Z"
+      },
+      "stars": 3,
+      "description": "q2-boots: bootstrapped and rarefaction-based alpha and beta diversity analyses 🥾",
+      "distros": [
+        [
+          "2025.7",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.7-release-2025.7.beta.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.10.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-amrfinderplus",
+      "branch": "main",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
+      "last_commit": {
+        "sha": "30e9dabe1345b93888233ebf040c36ad0844c873",
+        "status": "passed",
+        "date": "2026-10-21T08:18:45Z"
+      },
+      "stars": 1,
+      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
+      "distros": [
+        [
+          "2026.4",
+          "pathogenome",
+          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
+        ],
+        [
+          "2026.4",
+          "tiny",
+          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-rgi",
+      "branch": "main",
+      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
+      "last_commit": {
+        "sha": "1452355249436e6e767b4cb4df05777da617ea7c",
+        "status": "passed",
+        "date": "2026-10-21T08:18:45Z"
+      },
+      "stars": 4,
+      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-kmerizer",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-kmerizer/blob/main/README.md",
+      "last_commit": {
+        "sha": "788c46c5004acd349daf6605d1b441a26706bf61",
+        "status": "passed",
+        "date": "2026-10-21T08:18:44Z"
+      },
+      "stars": 3,
+      "description": "QIIME 2 plugin for generating kmers from biological sequences",
+      "distros": [
+        [
+          "2026.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-rachis-qiime2-2026.4.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.10.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2025.4.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/q2-kmerizer-qiime2-amplicon-2024.10.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-fungal-traits",
       "branch": "main",
@@ -87,31 +212,6 @@
     },
     {
       "owner": "bokulich-lab",
-      "name": "q2-amrfinderplus",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-amrfinderplus/intro/",
-      "last_commit": {
-        "sha": "72650b200df331f5612d359c0d2872f4ff20fe94",
-        "status": "passed",
-        "date": "2026-10-12T12:49:15Z"
-      },
-      "stars": 1,
-      "description": "q2-amrfinderplus: QIIME 2 plugin to find acquired antimicrobial resistance genes and point mutations in protein and/or assembled nucleotide sequences with AMRFinderPlus.",
-      "distros": [
-        [
-          "2026.4",
-          "pathogenome",
-          "environment-files/q2-amrfinderplus-qiime2-pathogenome-2026.4.yml"
-        ],
-        [
-          "2026.4",
-          "tiny",
-          "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
       "name": "q2-core",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-core",
@@ -139,95 +239,6 @@
           "environment-files/q2-core-rachis-tiny-2026.7.yml"
         ]
       ]
-    },
-    {
-      "owner": "micom-dev",
-      "name": "q2-micom",
-      "branch": "main",
-      "docs": "https://micom-dev.github.io/q2-micom/",
-      "last_commit": {
-        "sha": "655d479e6f711264bdae9e7bafa91c6d02fd6850",
-        "status": "passed",
-        "date": "2026-09-22T05:25:35Z"
-      },
-      "stars": 10,
-      "description": "A Qiime plugin for MICOM.",
-      "distros": [
-        [
-          "2025.4",
-          "qiime2",
-          "environment-files/q2-micom-qiime2-amplicon-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "environment-files/q2-micom-qiime2-moshpit-2025.4.yml"
-        ],
-        [
-          "2025.4",
-          "tiny",
-          "environment-files/q2-micom-qiime2-tiny-2025.4.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/q2-micom-qiime2-amplicon-2024.10.yml"
-        ],
-        [
-          "2024.10",
-          "moshpit",
-          "environment-files/q2-micom-qiime2-metagenome-2024.10.yml"
-        ],
-        [
-          "2024.10",
-          "tiny",
-          "environment-files/q2-micom-qiime2-tiny-2024.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
-      "last_commit": {
-        "sha": "e6f78f5fb22ffbbf6e03c3627db323307641a417",
-        "status": "failed",
-        "date": "2026-09-04T14:10:32Z"
-      },
-      "stars": 4,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "biocore",
-      "name": "q2-conduit",
-      "branch": "main",
-      "docs": "https://github.com/biocore/q2-conduit",
-      "last_commit": {
-        "sha": "26458c89481484a17e5d837e1121a72178a19d06",
-        "status": "passed",
-        "date": "2026-08-27T00:20:05Z"
-      },
-      "stars": 0,
-      "description": "Plugin that converts Conduit metaproteomics results into QIIME 2 artifacts for downstream analyses",
-      "distros": []
     }
   ],
   "distros": [
@@ -350,5 +361,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-10-20T16:38:38.407Z"
+  "last_updated": "2026-10-21T16:56:13.290Z"
 }
