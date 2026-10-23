@@ -56,33 +56,225 @@
             "value": " if you have any questions about PICRUSt2."
           }
         ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "For other general questions and comments about PICRUSt2 please search the "
-          },
-          {
-            "type": "link",
-            "url": "https://groups.google.com/forum/#!forum/picrust-users",
-            "children": [
-              {
-                "type": "text",
-                "value": "PICRUSt Google group"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": ". If the question has not been previously answered then please make a new thread there, rather than a new issue on this repository."
-          }
-        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag_name": "rachis-qiime2-2026.7_picrust2-v2.6.4",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/rachis-qiime2-2026.7_picrust2-v2.6.4",
+      "name": "q2-2026.7_picrust2-v2.6.4",
+      "published_at": "2026-10-23T13:46:39Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Update to Q2-2026.7 and PICRUSt2-v2.6.4 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/R-Wright-1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@R-Wright-1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/picrust/q2-picrust2/pull/23",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#23"
+                      }
+                    ],
+                    "urlSource": "https://github.com/picrust/q2-picrust2/pull/23",
+                    "data": {
+                      "kind": "issue",
+                      "org": "picrust",
+                      "repo": "q2-picrust2",
+                      "issue_number": "23"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/R-Wright-1",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@R-Wright-1"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/picrust/q2-picrust2/pull/23",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#23"
+                      }
+                    ],
+                    "urlSource": "https://github.com/picrust/q2-picrust2/pull/23",
+                    "data": {
+                      "kind": "issue",
+                      "org": "picrust",
+                      "repo": "q2-picrust2",
+                      "issue_number": "23"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/picrust/q2-picrust2/compare/2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4"
+                  }
+                ],
+                "urlSource": "https://github.com/picrust/q2-picrust2/compare/2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4",
+                "data": {
+                  "kind": "issue",
+                  "org": "picrust",
+                  "repo": "q2-picrust2",
+                  "issue_number": "2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Long-needed update to split placement for bacteria and archaea, as introduced in PICRUSt2 v2.6.0 with the new reference database, PICRUSt-SC"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Also updates packages required for working with QIIME2 "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "rachis-qiime2-2026.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "tag_name": "2024.5_1",
       "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2024.5_1",
@@ -413,17 +605,17 @@
   "branch": "master",
   "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
   "last_commit": {
-    "sha": "56c7dcfc9ba73a4d7a0689798fda04058970b629",
+    "sha": "f7503aac1cf16fbed9db3391254501f72ead1115",
     "status": "passed",
-    "date": "2025-03-04T18:19:15Z"
+    "date": "2026-10-23T13:44:54Z"
   },
   "stars": 6,
   "description": "QIIME 2 plugin for PICRUSt2",
   "distros": [
     [
-      "2024.5",
+      "2026.7",
       "qiime2",
-      "environment-files/q2-picrust2-qiime2-amplicon-2024.5.yml"
+      "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
     ]
   ]
 }

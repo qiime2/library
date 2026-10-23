@@ -1054,7 +1054,2013 @@
       }
     ]
   },
-  "releases": [],
+  "releases": [
+    {
+      "tag_name": "2023.5.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2023.5.0",
+      "name": "2023.5.0",
+      "published_at": "2023-06-05T09:27:10Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " added a new action for fetching whole genomes and taxonomies from NCBI databases, "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "get-ncbi-genomes"
+                  },
+                  {
+                    "type": "text",
+                    "value": "! 🥳"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " added a new action for getting sequence and taxonomy data from GTDB, "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "get-gtdb-data"
+                  },
+                  {
+                    "type": "text",
+                    "value": "! 🎉"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mirand863",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mirand863"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " updated "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "orient-seqs"
+                  },
+                  {
+                    "type": "text",
+                    "value": " to use VSEARCH "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "orient"
+                  },
+                  {
+                    "type": "text",
+                    "value": " under the hood for higher efficiency. This has resulted in deprecation of some parameters that are not compatible with "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "orient"
+                  },
+                  {
+                    "type": "text",
+                    "value": "."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/RESCRIPt/compare/2023.2.0...2023.5.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2023.2.0...2023.5.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/RESCRIPt/compare/2023.2.0...2023.5.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "RESCRIPt",
+                  "issue_number": "2023.2.0...2023.5.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2023.2.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2023.2.0",
+      "name": "2023.2.0",
+      "published_at": "2023-03-08T09:47:27Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "DEP: Fix joblib for ncbi.py by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/147",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#147"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/147",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "147"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: Add future deprecation warning for orient-seqs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mirand863",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mirand863"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/150",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#150"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/150",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "150"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: enables "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "merge-taxa"
+                  },
+                  {
+                    "type": "text",
+                    "value": " and "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "dereplicate"
+                  },
+                  {
+                    "type": "text",
+                    "value": " to handle user-defined rank handles. by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/133",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#133"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/133",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "133"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: initial draft of "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "get-gtdb"
+                  },
+                  {
+                    "type": "text",
+                    "value": " by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/154",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#154"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/154",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "154"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mirand863",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mirand863"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/150",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#150"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/150",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "150"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/RESCRIPt/compare/2022.8.0...2023.2.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2022.8.0...2023.2.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/RESCRIPt/compare/2022.8.0...2023.2.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "RESCRIPt",
+                  "issue_number": "2022.8.0...2023.2.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2022.8.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2022.8.0",
+      "name": "2022.8.0",
+      "published_at": "2023-01-05T15:05:50Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "What’s Changed"
+              }
+            ],
+            "identifier": "whats-changed",
+            "label": "What’s Changed",
+            "html_id": "whats-changed",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Adds reverse complementing to orient-seqs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/jwdebelius",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@jwdebelius"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/121",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#121"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/121",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "121"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "drop experimental loo cv method by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/nbokulich",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@nbokulich"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/130",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#130"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/130",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "130"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "update readme by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/nbokulich",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@nbokulich"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/132",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#132"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/132",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "132"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "dep: update pinnings by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/137",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#137"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/137",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "137"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "dep/bug: missing vsearch dependency by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/139",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#139"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/139",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "139"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Adds Manuscript DOI badge to README by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/141",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#141"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/141",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "141"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add vsearch’s --qsegout option to extract reads by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/140",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#140"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/140",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "140"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "pin joblib to version 1.1 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/nbokulich",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@nbokulich"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/144",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#144"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/144",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "144"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "update readme for q2-2022.8 by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/142",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#142"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/142",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "142"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update copyright headers by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/148",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#148"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/148",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "148"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "depth": 2,
+            "children": [
+              {
+                "type": "text",
+                "value": "New Contributors"
+              }
+            ],
+            "identifier": "new-contributors",
+            "label": "New Contributors",
+            "html_id": "new-contributors",
+            "implicit": true
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "link",
+                    "url": "https://github.com/jwdebelius",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@jwdebelius"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " made their first contribution in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/121",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#121"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/121",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "121"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/bokulich-lab/RESCRIPt/compare/2021.11.0...2022.8.0",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2021.11.0...2022.8.0"
+                  }
+                ],
+                "urlSource": "https://github.com/bokulich-lab/RESCRIPt/compare/2021.11.0...2022.8.0",
+                "data": {
+                  "kind": "issue",
+                  "org": "bokulich-lab",
+                  "repo": "RESCRIPt",
+                  "issue_number": "2021.11.0...2022.8.0"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.11.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2021.11.0",
+      "name": "2021.11.0",
+      "published_at": "2021-11-24T07:32:59Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: update rescript citation to PLoS Comp Bio by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/120",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#120"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/120",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "120"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.8.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2021.8.0",
+      "name": "2021.8.0",
+      "published_at": "2021-11-08T07:51:58Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: added LSU-138 to get-silva-data by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/99",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#99"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/99",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "99"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: issue-98 : updated minimum qiime 2 version in docs by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/100",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#100"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/100",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "100"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: removal of RESCRIPt RNA types, etc.. by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/102",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#102"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/102",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "102"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: add support for fetching protein seqs from NCBI by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/92",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#92"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/92",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "92"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: A couple of tweaks for get-ncbi-data by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/BenKaehler",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@BenKaehler"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/101",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#101"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/101",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "101"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MAINT: add visualization gallery link by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/110",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#110"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/110",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "110"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: set unresolved taxonomies to ‘Unassigned’ by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/114",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#114"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/114",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "114"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "BUG: fix ‘Taxon’ column to always be first after merge by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/misialq",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@misialq"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/113",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#113"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/113",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "113"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: reverse transcribe support for aligned RNA fasta by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/nbokulich",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@nbokulich"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/115",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#115"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/115",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "115"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: replace-taxonomy action by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/mikerobeson",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@mikerobeson"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/116",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#116"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/116",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "116"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "CI: alpha library api tweaks by "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/thermokarst",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "@thermokarst"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "value": " in "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://github.com/bokulich-lab/RESCRIPt/pull/118",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "#118"
+                      }
+                    ],
+                    "urlSource": "https://github.com/bokulich-lab/RESCRIPt/pull/118",
+                    "data": {
+                      "kind": "issue",
+                      "org": "bokulich-lab",
+                      "repo": "RESCRIPt",
+                      "issue_number": "118"
+                    },
+                    "internal": false,
+                    "protocol": "github"
+                  },
+                  {
+                    "type": "text",
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.8.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2021.8.0.dev0",
+      "name": "2021.8.0.dev0",
+      "published_at": "2021-05-26T12:34:15Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "RESCRIPt 2021.8.0.dev0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.4.0.dev0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2021.4.0.dev0",
+      "name": "2021.4.0.dev0",
+      "published_at": "2021-03-23T12:29:14Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "RESCRIPt 2021.4.0.dev0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2021.2.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2021.2.0",
+      "name": "2021.2.0",
+      "published_at": "2021-03-01T08:41:51Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "MAINT: update feature-classifier default params (#95)\nENH: use add-fragments flag when aligning primers for trimming (#91)\nIMP: add fasta subsampling action (#87)\nIMP: add alignment trimming action (#85)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2020.11",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2020.11",
+      "name": "2020.11",
+      "published_at": "2020-10-06T09:25:09Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: improvements to "
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "get-ncbi-data"
+                  },
+                  {
+                    "type": "text",
+                    "value": " (make more robust to server-side errors, hangups)"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: Support for SILVA 138.1"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: parallelise sequence processing"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: adds ability to NOT propagate SILVA taxonomy"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "ENH: added filter-taxa method"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: adds super to dereplicate"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "IMP: additional evaluate CV options"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "README: more tutorials, updates"
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "biorxiv preprint citation (README and plugin registration)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2020.6.1",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2020.6.1",
+      "name": "2020.6.1",
+      "published_at": "2020-07-14T18:55:04Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "list",
+            "ordered": false,
+            "spread": false,
+            "children": [
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Adds "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "get_ncbi_data"
+                      },
+                      {
+                        "type": "text",
+                        "value": " to automatically acquire sequence/taxonomy data from genbank based on a user-defined query or list of accessions."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "spread": true,
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "various enhancements and bug fixes for "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "dereplicate"
+                      },
+                      {
+                        "type": "text",
+                        "value": " and "
+                      },
+                      {
+                        "type": "inlineCode",
+                        "value": "evaluate-cross-validate"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2020.6.0",
+      "html_url": "https://github.com/bokulich-lab/RESCRIPt/releases/tag/2020.6.0",
+      "name": "2020.6.0",
+      "published_at": "2020-06-12T20:56:50Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Public beta release"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "owner": "bokulich-lab",
   "name": "RESCRIPt",
   "docs": "https://amplicon-docs.qiime2.org/en/stable/",

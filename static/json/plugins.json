@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "picrust",
+      "name": "q2-picrust2",
+      "branch": "master",
+      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+      "last_commit": {
+        "sha": "f7503aac1cf16fbed9db3391254501f72ead1115",
+        "status": "passed",
+        "date": "2026-10-23T13:44:54Z"
+      },
+      "stars": 6,
+      "description": "QIIME 2 plugin for PICRUSt2",
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "bokulich-lab",
       "name": "RESCRIPt",
       "docs": "https://amplicon-docs.qiime2.org/en/stable/",
@@ -4449,26 +4469,6 @@
       ]
     },
     {
-      "owner": "picrust",
-      "name": "q2-picrust2",
-      "branch": "master",
-      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
-      "last_commit": {
-        "sha": "56c7dcfc9ba73a4d7a0689798fda04058970b629",
-        "status": "passed",
-        "date": "2025-03-04T18:19:15Z"
-      },
-      "stars": 6,
-      "description": "QIIME 2 plugin for PICRUSt2",
-      "distros": [
-        [
-          "2024.5",
-          "qiime2",
-          "environment-files/q2-picrust2-qiime2-amplicon-2024.5.yml"
-        ]
-      ]
-    },
-    {
       "owner": "PlanesLab",
       "name": "q2-metnet",
       "branch": "main",
@@ -4564,6 +4564,11 @@
       "2026.7",
       "qiime2",
       "environment-files/q2-minimap2-rachis-qiime2-2026.7.yml"
+    ],
+    [
+      "2026.7",
+      "qiime2",
+      "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
     ],
     [
       "2026.7",
@@ -5099,11 +5104,6 @@
       "2024.5",
       "qiime2",
       "environment-files/q2-boots-qiime2-amplicon-2024.5.yml"
-    ],
-    [
-      "2024.5",
-      "qiime2",
-      "environment-files/q2-picrust2-qiime2-amplicon-2024.5.yml"
     ],
     [
       "2024.5",

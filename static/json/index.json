@@ -1,6 +1,26 @@
 {
   "plugins": [
     {
+      "owner": "picrust",
+      "name": "q2-picrust2",
+      "branch": "master",
+      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+      "last_commit": {
+        "sha": "f7503aac1cf16fbed9db3391254501f72ead1115",
+        "status": "passed",
+        "date": "2026-10-23T13:44:54Z"
+      },
+      "stars": 6,
+      "description": "QIIME 2 plugin for PICRUSt2",
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
+        ]
+      ]
+    },
+    {
       "owner": "caporaso-lab",
       "name": "q2-boots",
       "branch": "main",
@@ -209,36 +229,6 @@
           "environment-files/q2-ena-uploader-qiime2-tiny-2025.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-core",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-core",
-      "last_commit": {
-        "sha": "0cea28147fc2d8a4bbd912d7011c3d84d273afd9",
-        "status": "passed",
-        "date": "2026-09-29T11:22:09Z"
-      },
-      "stars": 1,
-      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-core-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "qiime2",
-          "environment-files/q2-core-rachis-qiime2-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-core-rachis-tiny-2026.7.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -361,5 +351,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-10-22T16:56:45.070Z"
+  "last_updated": "2026-10-23T16:48:40.436Z"
 }
