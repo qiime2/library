@@ -6,9 +6,9 @@
       "branch": "master",
       "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
       "last_commit": {
-        "sha": "f7503aac1cf16fbed9db3391254501f72ead1115",
+        "sha": "1c952c1f929e16c2b689231f4406ef148d4adb7b",
         "status": "passed",
-        "date": "2026-10-23T13:44:54Z"
+        "date": "2026-10-26T12:06:17Z"
       },
       "stars": 6,
       "description": "QIIME 2 plugin for PICRUSt2",
@@ -17,6 +17,26 @@
           "2026.7",
           "qiime2",
           "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "caporaso-lab",
+      "name": "genome-sampler",
+      "branch": "dev",
+      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
+      "last_commit": {
+        "sha": "e0d2dee26f0eb5e32156a4a7c3160714fb3e722e",
+        "status": "passed",
+        "date": "2026-10-26T08:54:54Z"
+      },
+      "stars": 7,
+      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
+      "distros": [
+        [
+          "2024.10",
+          "qiime2",
+          "environment-files/genome-sampler-qiime2-amplicon-2024.10.yml"
         ]
       ]
     },
@@ -4395,26 +4415,6 @@
           "2025.4",
           "qiime2",
           "environment-files/q2-classo-qiime2-amplicon-2025.4.yml"
-        ]
-      ]
-    },
-    {
-      "owner": "caporaso-lab",
-      "name": "genome-sampler",
-      "branch": "dev",
-      "docs": "https://genome-sampler.readthedocs.io/en/latest/",
-      "last_commit": {
-        "sha": "da619ed52037a3762f3dd540a0e1963de0ffa2c0",
-        "status": "passed",
-        "date": "2025-11-24T21:05:42Z"
-      },
-      "stars": 7,
-      "description": "genome-sampler: sample viral genomes across time of isolation, location of isolation, and genome divergence.",
-      "distros": [
-        [
-          "2024.10",
-          "qiime2",
-          "environment-files/genome-sampler-qiime2-amplicon-2024.10.yml"
         ]
       ]
     },
