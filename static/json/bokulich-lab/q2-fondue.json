@@ -213,26 +213,7 @@
           },
           {
             "type": "text",
-            "value": ".\nAfter that, don’t forget to run "
-          },
-          {
-            "type": "strong",
-            "children": [
-              {
-                "type": "link",
-                "url": "#mandatory-configuration-for-all-three-options",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "the mandatory configuration step"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": "!"
+            "value": "."
           }
         ]
       },
@@ -303,42 +284,6 @@
         "type": "code",
         "lang": "",
         "value": "conda activate qiime2-amplicon-{ENV_VERSION}\nmamba install -y \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2-fondue"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Now, don’t forget to run "
-              },
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "#mandatory-configuration-for-all-three-options",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "the mandatory configuration step"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": "!"
-              }
-            ]
-          }
-        ]
       },
       {
         "type": "heading",
@@ -413,42 +358,6 @@
         "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/2024.5/metagenome/released/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue"
       },
       {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
-        "children": [
-          {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Now, don’t forget to run "
-              },
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "link",
-                    "url": "#mandatory-configuration-for-all-three-options",
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "the mandatory configuration step"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": "!"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "type": "paragraph",
         "children": [
           {
@@ -471,28 +380,20 @@
         "children": [
           {
             "type": "text",
-            "value": "Mandatory configuration for all three options"
+            "value": "Verify the installation"
           }
         ],
-        "identifier": "mandatory-configuration-for-all-three-options",
-        "label": "Mandatory configuration for all three options",
-        "html_id": "mandatory-configuration-for-all-three-options",
+        "identifier": "verify-the-installation",
+        "label": "Verify the installation",
+        "html_id": "verify-the-installation",
         "implicit": true
       },
       {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
+        "type": "paragraph",
         "children": [
           {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Refresh the QIIME 2 CLI cache and see that everything worked:"
-              }
-            ]
+            "type": "text",
+            "value": "Refresh the QIIME 2 CLI cache and check that q2-fondue is available:"
           }
         ]
       },
@@ -502,54 +403,42 @@
         "value": "qiime dev refresh-cache\nqiime fondue --help"
       },
       {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
+        "type": "heading",
+        "depth": 3,
         "children": [
           {
-            "type": "listItem",
-            "spread": true,
-            "children": [
-              {
-                "type": "text",
-                "value": "Run the "
-              },
-              {
-                "type": "inlineCode",
-                "value": "vdb-config"
-              },
-              {
-                "type": "text",
-                "value": " tool to make sure the wrapped SRA Toolkit is configured on your system.\nThe command below will open the configuration interface - everything should be already configured, so you\ncan directly exit by pressing "
-              },
-              {
-                "type": "strong",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "x"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": " (this step is still required to ensure everything is working as expected).\nFeel free to adjust the configuration, if you need to change e.g. the cache location.\nFor more information see "
-              },
-              {
-                "type": "link",
-                "url": "https://github.com/ncbi/sra-tools/wiki/05.-Toolkit-Configuration",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "here"
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "value": "."
-              }
-            ]
+            "type": "text",
+            "value": "Optional SRA Toolkit configuration"
+          }
+        ],
+        "identifier": "optional-sra-toolkit-configuration",
+        "label": "Optional SRA Toolkit configuration",
+        "html_id": "optional-sra-toolkit-configuration",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You do not need to run "
+          },
+          {
+            "type": "inlineCode",
+            "value": "vdb-config -i"
+          },
+          {
+            "type": "text",
+            "value": " before using q2-fondue. SRA Toolkit\ninitializes its user configuration automatically when needed."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "To customize the settings, activate your q2-fondue conda environment and open the\nconfiguration interface:"
           }
         ]
       },
@@ -559,19 +448,34 @@
         "value": "vdb-config -i"
       },
       {
-        "type": "list",
-        "ordered": false,
-        "spread": false,
+        "type": "paragraph",
         "children": [
           {
-            "type": "listItem",
-            "spread": true,
+            "type": "text",
+            "value": "For details and available settings,\nsee the "
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/ncbi/sra-tools/wiki/05.-Toolkit-Configuration",
             "children": [
               {
                 "type": "text",
-                "value": "In case you need to configure a proxy server, run the following command\n(this can also be done using the graphical interface described above):"
+                "value": "SRA Toolkit configuration documentation"
               }
             ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can also configure a proxy without opening the interface:"
           }
         ]
       },
@@ -615,34 +519,6 @@
         "type": "code",
         "lang": "shell",
         "value": "mamba create -y -n fondue \\\n   -c https://packages.qiime2.org/qiime2/{ENV_VERSION}/tested/ \\\n   -c conda-forge -c bioconda -c defaults \\\n   q2cli q2-fondue\n\nconda activate fondue"
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "type": "text",
-            "value": "Now, don’t forget to run "
-          },
-          {
-            "type": "strong",
-            "children": [
-              {
-                "type": "link",
-                "url": "#mandatory-configuration-for-all-three-options",
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "the mandatory configuration step"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "value": "!"
-          }
-        ]
       },
       {
         "type": "paragraph",
@@ -5826,8 +5702,8 @@
   "description": "Functions for reproducibly Obtaining and Normalizing Data re-Used from Elsewhere",
   "branch": "main",
   "last_commit": {
-    "sha": "9547e897050d399655f138bc77b0ae4c8e30293c",
-    "status": "passed",
-    "date": "2026-10-21T08:18:57Z"
+    "sha": "2d38e49875b26107f3c22319b577c9f170c7eb90",
+    "status": "failed",
+    "date": "2026-10-27T17:12:27Z"
   }
 }
