@@ -61,10 +61,71 @@
   },
   "releases": [
     {
-      "tag_name": "rachis-qiime2-2026.7_picrust2-v2.6.4",
-      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/rachis-qiime2-2026.7_picrust2-v2.6.4",
+      "tag_name": "2026.7.1",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2026.7.1",
+      "name": "q2-2026.7.1_picrust2-v2.6.4",
+      "published_at": "2026-10-28T13:41:27Z",
+      "ast": {
+        "type": "root",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "text",
+                "value": "Update to fix marker gene and NSTI output."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "type": "strong",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Full Changelog"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "value": ": "
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/picrust/q2-picrust2/compare/2026.7...2026.7.1",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "#2026.7...2026.7.1"
+                  }
+                ],
+                "urlSource": "https://github.com/picrust/q2-picrust2/compare/2026.7...2026.7.1",
+                "data": {
+                  "kind": "issue",
+                  "org": "picrust",
+                  "repo": "q2-picrust2",
+                  "issue_number": "2026.7...2026.7.1"
+                },
+                "internal": false,
+                "protocol": "github"
+              },
+              {
+                "type": "text",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag_name": "2026.7",
+      "html_url": "https://github.com/picrust/q2-picrust2/releases/tag/2026.7",
       "name": "q2-2026.7_picrust2-v2.6.4",
-      "published_at": "2026-10-26T13:56:25Z",
+      "published_at": "2026-10-28T12:04:19Z",
       "ast": {
         "type": "root",
         "children": [
@@ -218,19 +279,19 @@
               },
               {
                 "type": "link",
-                "url": "https://github.com/picrust/q2-picrust2/compare/2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4",
+                "url": "https://github.com/picrust/q2-picrust2/compare/2024.5_1...2026.7",
                 "children": [
                   {
                     "type": "text",
-                    "value": "#2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4"
+                    "value": "#2024.5_1...2026.7"
                   }
                 ],
-                "urlSource": "https://github.com/picrust/q2-picrust2/compare/2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4",
+                "urlSource": "https://github.com/picrust/q2-picrust2/compare/2024.5_1...2026.7",
                 "data": {
                   "kind": "issue",
                   "org": "picrust",
                   "repo": "q2-picrust2",
-                  "issue_number": "2024.5_1...rachis-qiime2-2026.7_picrust2-v2.6.4"
+                  "issue_number": "2024.5_1...2026.7"
                 },
                 "internal": false,
                 "protocol": "github"
@@ -605,9 +666,9 @@
   "branch": "master",
   "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
   "last_commit": {
-    "sha": "8e9eac0a78964de3b2a6abea0186cd894f79530d",
+    "sha": "b53b1c3cc9db862bc4473b497ea3a289b2bd07a9",
     "status": "passed",
-    "date": "2026-10-26T20:10:23Z"
+    "date": "2026-10-28T13:40:22Z"
   },
   "stars": 6,
   "description": "QIIME 2 plugin for PICRUSt2",

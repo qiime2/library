@@ -1,6 +1,77 @@
 {
   "plugins": [
     {
+      "owner": "picrust",
+      "name": "q2-picrust2",
+      "branch": "master",
+      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
+      "last_commit": {
+        "sha": "b53b1c3cc9db862bc4473b497ea3a289b2bd07a9",
+        "status": "passed",
+        "date": "2026-10-28T13:40:22Z"
+      },
+      "stars": 6,
+      "description": "QIIME 2 plugin for PICRUSt2",
+      "distros": [
+        [
+          "2026.7",
+          "qiime2",
+          "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-annotate",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.10",
+          "moshpit",
+          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "moshpit",
+          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "moshpit",
+          "2026.1/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "moshpit",
+          "2025.10/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "moshpit",
+          "2025.7/moshpit/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "moshpit",
+          "2025.4/moshpit/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 4,
+      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "fab0770fb172bbecb25d20dea2b27fcf7f859b01",
+        "status": "failed",
+        "date": "2026-10-28T07:30:13Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-fondue",
       "docs": "https://amplicon-docs.qiime2.org/en/stable/",
@@ -100,77 +171,6 @@
         "status": "failed",
         "date": "2026-10-27T17:12:27Z"
       }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-annotate",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.10",
-          "moshpit",
-          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "moshpit",
-          "2026.4/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "moshpit",
-          "2026.1/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "moshpit",
-          "2025.10/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "moshpit",
-          "2025.7/moshpit/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "moshpit",
-          "2025.4/moshpit/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 4,
-      "description": "QIIME 2 plugin for functional annotation and taxonomic classification of shotgun metagenomes.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "f2f883ee08cdbd9d454b805a6f5568ed75cf1bfb",
-        "status": "failed",
-        "date": "2026-10-27T14:08:40Z"
-      }
-    },
-    {
-      "owner": "picrust",
-      "name": "q2-picrust2",
-      "branch": "master",
-      "docs": "https://github.com/picrust/picrust2/wiki/q2-picrust2-Tutorial/",
-      "last_commit": {
-        "sha": "8e9eac0a78964de3b2a6abea0186cd894f79530d",
-        "status": "passed",
-        "date": "2026-10-26T20:10:23Z"
-      },
-      "stars": 6,
-      "description": "QIIME 2 plugin for PICRUSt2",
-      "distros": [
-        [
-          "2026.7",
-          "qiime2",
-          "environment-files/q2-picrust2-qiime2-rachis-qiime2-2026.7.yml"
-        ]
-      ]
     },
     {
       "owner": "caporaso-lab",
