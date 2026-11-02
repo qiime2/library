@@ -345,27 +345,27 @@
   "branch": "main",
   "docs": "https://github.com/bokulich-lab/q2-core",
   "last_commit": {
-    "sha": "0cea28147fc2d8a4bbd912d7011c3d84d273afd9",
-    "status": "passed",
-    "date": "2026-09-29T11:22:09Z"
+    "sha": "e9750f62e3130fa9132194ce9da22b9899ea982b",
+    "status": "failed",
+    "date": "2026-11-02T10:07:47Z"
   },
   "stars": 1,
   "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
   "distros": [
     [
-      "2026.7",
+      "2026.10",
       "moshpit",
-      "environment-files/q2-core-rachis-moshpit-2026.7.yml"
+      "environment-files/q2-core-rachis-moshpit-2026.10.yml"
     ],
     [
-      "2026.7",
+      "2026.10",
       "qiime2",
-      "environment-files/q2-core-rachis-qiime2-2026.7.yml"
+      "environment-files/q2-core-rachis-qiime2-2026.10.yml"
     ],
     [
-      "2026.7",
+      "2026.10",
       "tiny",
-      "environment-files/q2-core-rachis-tiny-2026.7.yml"
+      "environment-files/q2-core-rachis-tiny-2026.10.yml"
     ]
   ]
 }

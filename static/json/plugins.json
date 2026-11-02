@@ -1,6 +1,138 @@
 {
   "plugins": [
     {
+      "owner": "qiime2",
+      "name": "q2-dada2",
+      "docs": "https://amplicon-docs.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.10",
+          "qiime2",
+          "2026.10/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "qiime2",
+          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.4",
+          "qiime2",
+          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.1",
+          "qiime2",
+          "2026.1/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.10",
+          "qiime2",
+          "2025.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.7",
+          "qiime2",
+          "2025.7/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2025.4",
+          "qiime2",
+          "2025.4/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.10",
+          "qiime2",
+          "2024.10/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.5",
+          "qiime2",
+          "2024.5/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2024.2",
+          "qiime2",
+          "2024.2/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.9",
+          "qiime2",
+          "2023.9/amplicon/released/seed-environment-conda.yml"
+        ],
+        [
+          "2023.7",
+          "qiime2",
+          "2023.7/core/released/seed-environment-conda.yml"
+        ]
+      ],
+      "stars": 24,
+      "description": "QIIME 2 plugin wrapping DADA2",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "4339defd645adb9118fa19ac2fa6dabefe4da4eb",
+        "status": "passed",
+        "date": "2026-11-02T13:28:59Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-core",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-core",
+      "last_commit": {
+        "sha": "e9750f62e3130fa9132194ce9da22b9899ea982b",
+        "status": "failed",
+        "date": "2026-11-02T10:07:47Z"
+      },
+      "stars": 1,
+      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
+      "distros": [
+        [
+          "2026.10",
+          "moshpit",
+          "environment-files/q2-core-rachis-moshpit-2026.10.yml"
+        ],
+        [
+          "2026.10",
+          "qiime2",
+          "environment-files/q2-core-rachis-qiime2-2026.10.yml"
+        ],
+        [
+          "2026.10",
+          "tiny",
+          "environment-files/q2-core-rachis-tiny-2026.10.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
+      "name": "q2-mag",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.10",
+          "moshpit",
+          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ]
+      ],
+      "stars": 0,
+      "description": "Rachis plugin for contig binning and bin quality control.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "c0062c05d811f233783c14ebb306e2d4c3bd27c4",
+        "status": "failed",
+        "date": "2026-11-02T08:42:04Z"
+      }
+    },
+    {
       "owner": "picrust",
       "name": "q2-picrust2",
       "branch": "master",
@@ -1689,82 +1821,6 @@
       }
     },
     {
-      "owner": "qiime2",
-      "name": "q2-dada2",
-      "docs": "https://amplicon-docs.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.10",
-          "qiime2",
-          "2026.10/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "qiime2",
-          "2026.7/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.4",
-          "qiime2",
-          "2026.4/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "2026.1/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "2025.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.7",
-          "qiime2",
-          "2025.7/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2025.4",
-          "qiime2",
-          "2025.4/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.10",
-          "qiime2",
-          "2024.10/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.5",
-          "qiime2",
-          "2024.5/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2024.2",
-          "qiime2",
-          "2024.2/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.9",
-          "qiime2",
-          "2023.9/amplicon/released/seed-environment-conda.yml"
-        ],
-        [
-          "2023.7",
-          "qiime2",
-          "2023.7/core/released/seed-environment-conda.yml"
-        ]
-      ],
-      "stars": 24,
-      "description": "QIIME 2 plugin wrapping DADA2",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "66e08a5790be080aa2b0b78bd8ea980a76be1be5",
-        "status": "passed",
-        "date": "2026-10-21T08:18:58Z"
-      }
-    },
-    {
       "owner": "bokulich-lab",
       "name": "q2-fastp",
       "docs": "https://amplicon-docs.qiime2.org/en/stable/",
@@ -2162,32 +2218,6 @@
         "sha": "03b8ef57d6124c3b0b9fdba304e284a2d2a43001",
         "status": "passed",
         "date": "2026-10-21T08:18:57Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-mag",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.10",
-          "moshpit",
-          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ]
-      ],
-      "stars": 0,
-      "description": "Rachis plugin for contig binning and bin quality control.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "18ecf4e1adbefa6a79671642c998d6bde07b357c",
-        "status": "passed",
-        "date": "2026-10-21T08:18:51Z"
       }
     },
     {
@@ -3915,36 +3945,6 @@
       ]
     },
     {
-      "owner": "bokulich-lab",
-      "name": "q2-core",
-      "branch": "main",
-      "docs": "https://github.com/bokulich-lab/q2-core",
-      "last_commit": {
-        "sha": "0cea28147fc2d8a4bbd912d7011c3d84d273afd9",
-        "status": "passed",
-        "date": "2026-09-29T11:22:09Z"
-      },
-      "stars": 1,
-      "description": "Provides an action to compute a prevalence-abundance core score for each feature in a relative-frequency feature table.",
-      "distros": [
-        [
-          "2026.7",
-          "moshpit",
-          "environment-files/q2-core-rachis-moshpit-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "qiime2",
-          "environment-files/q2-core-rachis-qiime2-2026.7.yml"
-        ],
-        [
-          "2026.7",
-          "tiny",
-          "environment-files/q2-core-rachis-tiny-2026.7.yml"
-        ]
-      ]
-    },
-    {
       "owner": "micom-dev",
       "name": "q2-micom",
       "branch": "main",
@@ -4493,6 +4493,11 @@
     [
       "2026.10",
       "moshpit",
+      "environment-files/q2-core-rachis-moshpit-2026.10.yml"
+    ],
+    [
+      "2026.10",
+      "moshpit",
       "2026.10/moshpit/released/seed-environment-conda-linux.yml"
     ],
     [
@@ -4503,17 +4508,22 @@
     [
       "2026.10",
       "qiime2",
+      "environment-files/q2-core-rachis-qiime2-2026.10.yml"
+    ],
+    [
+      "2026.10",
+      "qiime2",
       "2026.10/qiime2/released/seed-environment-conda-linux.yml"
     ],
     [
       "2026.10",
       "tiny",
-      "2026.10/tiny/released/seed-environment-conda-linux.yml"
+      "environment-files/q2-core-rachis-tiny-2026.10.yml"
     ],
     [
-      "2026.7",
-      "moshpit",
-      "environment-files/q2-core-rachis-moshpit-2026.7.yml"
+      "2026.10",
+      "tiny",
+      "2026.10/tiny/released/seed-environment-conda-linux.yml"
     ],
     [
       "2026.7",
@@ -4553,11 +4563,6 @@
     [
       "2026.7",
       "qiime2",
-      "environment-files/q2-core-rachis-qiime2-2026.7.yml"
-    ],
-    [
-      "2026.7",
-      "qiime2",
       "environment-files/q2-ena-uploader-rachis-qiime2-2026.7.yml"
     ],
     [
@@ -4574,11 +4579,6 @@
       "2026.7",
       "qiime2",
       "2026.7/qiime2/released/seed-environment-conda-linux.yml"
-    ],
-    [
-      "2026.7",
-      "tiny",
-      "environment-files/q2-core-rachis-tiny-2026.7.yml"
     ],
     [
       "2026.7",
