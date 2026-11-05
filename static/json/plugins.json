@@ -1,6 +1,42 @@
 {
   "plugins": [
     {
+      "owner": "rachis-org",
+      "name": "rachis-cli",
+      "docs": "https://amplicon-docs.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.10",
+          "qiime2",
+          "2026.10/qiime2/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.10",
+          "moshpit",
+          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.10",
+          "pathogenome",
+          "2026.10/pathogenome/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.10",
+          "tiny",
+          "2026.10/tiny/released/seed-environment-conda-linux.yml"
+        ]
+      ],
+      "stars": 20,
+      "description": "Command line interface for rachis",
+      "branch": "dev",
+      "last_commit": {
+        "sha": "490e38cd47beb367a571ec39d5236e7d16cc5c85",
+        "status": "failed",
+        "date": "2026-11-05T09:59:50Z"
+      }
+    },
+    {
       "owner": "bokulich-lab",
       "name": "q2-mag",
       "docs": "https://moshpit.qiime2.org/en/stable/",
@@ -21,9 +57,9 @@
       "description": "Rachis plugin for contig binning and bin quality control.",
       "branch": "main",
       "last_commit": {
-        "sha": "9d98c3edb7d3c71d3d6fdc78fd00bd7b055d4e59",
+        "sha": "329d80be037fa27fe050eacce90369a1c70d9430",
         "status": "failed",
-        "date": "2026-11-04T14:08:16Z"
+        "date": "2026-11-05T08:57:33Z"
       }
     },
     {
@@ -329,42 +365,6 @@
       }
     },
     {
-      "owner": "rachis-org",
-      "name": "rachis-cli",
-      "docs": "https://amplicon-docs.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.10",
-          "qiime2",
-          "2026.10/qiime2/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.10",
-          "moshpit",
-          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.10",
-          "pathogenome",
-          "2026.10/pathogenome/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.10",
-          "tiny",
-          "2026.10/tiny/released/seed-environment-conda-linux.yml"
-        ]
-      ],
-      "stars": 20,
-      "description": "Command line interface for rachis",
-      "branch": "dev",
-      "last_commit": {
-        "sha": "a658281af4db332d5865716578cdeb31ba462132",
-        "status": "failed",
-        "date": "2026-11-03T10:29:16Z"
-      }
-    },
-    {
       "owner": "qiime2",
       "name": "q2-dada2",
       "docs": "https://amplicon-docs.qiime2.org/en/stable/",
@@ -537,7 +537,7 @@
       "branch": "main",
       "last_commit": {
         "sha": "fab0770fb172bbecb25d20dea2b27fcf7f859b01",
-        "status": "failed",
+        "status": "passed",
         "date": "2026-10-28T07:30:13Z"
       }
     },
