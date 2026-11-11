@@ -11,13 +11,17 @@
     "base": "https://develop.qiime2.org/en/stable/",
     "pretty": true
   },
-  "q2-annotate": {
-    "base": "https://moshpit.qiime2.org/en/stable/",
-    "pretty": false
+  "q2-diversity": {
+    "base": "https://amplicon-docs.qiime2.org/en/stable/",
+    "pretty": true
   },
   "rachis-cli": {
     "base": "https://amplicon-docs.qiime2.org/en/stable/",
     "pretty": true
+  },
+  "q2-annotate": {
+    "base": "https://moshpit.qiime2.org/en/stable/",
+    "pretty": false
   },
   "q2-mag": {
     "base": "https://moshpit.qiime2.org/en/stable/",
@@ -68,10 +72,6 @@
     "pretty": true
   },
   "q2-sample-classifier": {
-    "base": "https://amplicon-docs.qiime2.org/en/stable/",
-    "pretty": true
-  },
-  "q2-diversity": {
     "base": "https://amplicon-docs.qiime2.org/en/stable/",
     "pretty": true
   },
