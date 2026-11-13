@@ -502,6 +502,38 @@
                 "children": [
                   {
                     "type": "text",
+                    "value": "pool-contigs"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Pool contigs from one or more samples."
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "-"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
                     "value": "rename-contigs"
                   }
                 ]
@@ -6165,8 +6197,8 @@
   "description": "QIIME 2 plugin for (meta)genome assembly.",
   "branch": "main",
   "last_commit": {
-    "sha": "ff048648b65705105eb00c3344d9788d75410a40",
-    "status": "failed",
-    "date": "2026-11-04T08:26:08Z"
+    "sha": "15ec2b9d788d95db2f3bd3079cebd9b7c8b3e364",
+    "status": "passed",
+    "date": "2026-11-13T08:17:07Z"
   }
 }
