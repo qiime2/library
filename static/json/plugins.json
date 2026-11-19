@@ -2,6 +2,32 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-mag",
+      "docs": "https://moshpit.qiime2.org/en/stable/",
+      "in_distro": true,
+      "distros": [
+        [
+          "2026.10",
+          "moshpit",
+          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
+        ],
+        [
+          "2026.7",
+          "moshpit",
+          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
+        ]
+      ],
+      "stars": 0,
+      "description": "Rachis plugin for contig binning and bin quality control.",
+      "branch": "main",
+      "last_commit": {
+        "sha": "05c49dc254568933f34e7375ec4620a66b3f60d1",
+        "status": "failed",
+        "date": "2026-11-19T10:27:58Z"
+      }
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-fungal-traits",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
@@ -307,32 +333,6 @@
         "sha": "546881c0d1e8820396098eaa08cdc8879c3d8d85",
         "status": "passed",
         "date": "2026-11-11T10:38:44Z"
-      }
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-mag",
-      "docs": "https://moshpit.qiime2.org/en/stable/",
-      "in_distro": true,
-      "distros": [
-        [
-          "2026.10",
-          "moshpit",
-          "2026.10/moshpit/released/seed-environment-conda-linux.yml"
-        ],
-        [
-          "2026.7",
-          "moshpit",
-          "2026.7/moshpit/released/seed-environment-conda-linux.yml"
-        ]
-      ],
-      "stars": 0,
-      "description": "Rachis plugin for contig binning and bin quality control.",
-      "branch": "main",
-      "last_commit": {
-        "sha": "329d80be037fa27fe050eacce90369a1c70d9430",
-        "status": "failed",
-        "date": "2026-11-05T08:57:33Z"
       }
     },
     {
