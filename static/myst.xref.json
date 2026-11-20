@@ -1786,18 +1786,6 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-featuredata-silvataxonomy",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-featuredata-silvataxidmap",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
       "identifier": "q2-type-bowtie2index",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
@@ -2302,43 +2290,7 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dist1d-nestedunordered-matched",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
       "identifier": "q2-type-dist1d-unordered-matched",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-unordered-independent",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedunordered-independent",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedordered-matched",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-multi-independent",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.classes.json",
-      "url": "/myst/qiime2/_/references/artifacts/classes"
-    },
-    {
-      "identifier": "q2-type-dist1d-nestedordered-independent",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -2350,13 +2302,49 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-dist1d-multi-matched",
+      "identifier": "q2-type-dist1d-nestedordered-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedunordered-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-multi-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-unordered-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedunordered-matched",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-nestedordered-matched",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
       "identifier": "q2-type-dist1d-ordered-independent",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-dist1d-multi-matched",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -2404,6 +2392,18 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
+      "identifier": "q2-type-deblurstats",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
+      "identifier": "q2-type-uchimestats",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.classes.json",
+      "url": "/myst/qiime2/_/references/artifacts/classes"
+    },
+    {
       "identifier": "q2-type-sampledata-dada2stats",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
@@ -2416,13 +2416,13 @@
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-deblurstats",
+      "identifier": "q2-type-featuredata-silvataxonomy",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
     },
     {
-      "identifier": "q2-type-uchimestats",
+      "identifier": "q2-type-featuredata-silvataxidmap",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.classes.json",
       "url": "/myst/qiime2/_/references/artifacts/classes"
@@ -2543,30 +2543,6 @@
     },
     {
       "identifier": "q2-format-fastpjsondirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxonomyformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxonomydirectoryformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxidmapformat",
-      "kind": "heading",
-      "data": "/myst/qiime2/_/references.artifacts.formats.json",
-      "url": "/myst/qiime2/_/references/artifacts/formats"
-    },
-    {
-      "identifier": "q2-format-silvataxidmapdirectoryformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
@@ -3538,6 +3514,30 @@
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
+      "identifier": "q2-format-deblurstatsfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-deblurstatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-uchimestatsfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
+      "identifier": "q2-format-uchimestatsdirfmt",
+      "kind": "heading",
+      "data": "/myst/qiime2/_/references.artifacts.formats.json",
+      "url": "/myst/qiime2/_/references/artifacts/formats"
+    },
+    {
       "identifier": "q2-format-dada2statsformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
@@ -3562,25 +3562,25 @@
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-deblurstatsfmt",
+      "identifier": "q2-format-silvataxonomyformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-deblurstatsdirfmt",
+      "identifier": "q2-format-silvataxonomydirectoryformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-uchimestatsfmt",
+      "identifier": "q2-format-silvataxidmapformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
     },
     {
-      "identifier": "q2-format-uchimestatsdirfmt",
+      "identifier": "q2-format-silvataxidmapdirectoryformat",
       "kind": "heading",
       "data": "/myst/qiime2/_/references.artifacts.formats.json",
       "url": "/myst/qiime2/_/references/artifacts/formats"
