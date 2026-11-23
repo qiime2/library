@@ -2,6 +2,31 @@
   "plugins": [
     {
       "owner": "bokulich-lab",
+      "name": "q2-sort-me-rna",
+      "branch": "main",
+      "docs": "https://github.com/bokulich-lab/q2-sort-me-rna",
+      "last_commit": {
+        "sha": "e3f78dad5c5b1a9436a62273ce4987c86ba6c396",
+        "status": "passed",
+        "date": "2026-11-20T13:19:34Z"
+      },
+      "stars": 0,
+      "description": "Rachis plugin for filtering and aligning ribosomal RNA reads using SortMeRNA.",
+      "distros": [
+        [
+          "2026.10",
+          "tiny",
+          "environment-files/q2-sort-me-rna-rachis-tiny-2026.10.yml"
+        ],
+        [
+          "2026.7",
+          "tiny",
+          "environment-files/q2-sort-me-rna-rachis-tiny-2026.7.yml"
+        ]
+      ]
+    },
+    {
+      "owner": "bokulich-lab",
       "name": "q2-fungal-traits",
       "branch": "main",
       "docs": "https://github.com/bokulich-lab/q2-fungal-traits",
@@ -159,36 +184,6 @@
           "environment-files/q2-amrfinderplus-qiime2-tiny-2026.4.yml"
         ]
       ]
-    },
-    {
-      "owner": "bokulich-lab",
-      "name": "q2-rgi",
-      "branch": "main",
-      "docs": "https://moshpit.qiime2.org/en/stable/chapters/tutorials/amr-gene-annotation/q2-rgi/intro/",
-      "last_commit": {
-        "sha": "1452355249436e6e767b4cb4df05777da617ea7c",
-        "status": "passed",
-        "date": "2026-10-21T08:18:45Z"
-      },
-      "stars": 4,
-      "description": "This is a QIIME2 plugin that annotates sequence data with antimicrobial resistance gene information from CARD.",
-      "distros": [
-        [
-          "2026.4",
-          "qiime2",
-          "environment-files/q2-rgi-rachis-qiime2-2026.4.yml"
-        ],
-        [
-          "2026.1",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2026.1.yml"
-        ],
-        [
-          "2025.10",
-          "qiime2",
-          "environment-files/q2-rgi-qiime2-amplicon-2025.10.yml"
-        ]
-      ]
     }
   ],
   "distros": [
@@ -310,5 +305,5 @@
       "timestamp": 1650549351
     }
   ],
-  "last_updated": "2026-11-22T19:17:10.913Z"
+  "last_updated": "2026-11-23T23:40:08.702Z"
 }

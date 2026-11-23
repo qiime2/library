@@ -1,0 +1,128 @@
+{
+  "readme": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "url": "https://github.com/bokulich-lab/q2-sort-me-rna/actions/workflows/ci.yaml/badge.svg",
+            "alt": "CI"
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://codecov.io/gh/bokulich-lab/q2-sort-me-rna",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://codecov.io/gh/bokulich-lab/q2-sort-me-rna/graph/badge.svg?token=7PZMsLlZPe",
+                "alt": "codecov"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\n"
+          },
+          {
+            "type": "link",
+            "url": "https://github.com/psf/black",
+            "children": [
+              {
+                "type": "image",
+                "url": "https://img.shields.io/badge/code%20style-black-000000.svg",
+                "alt": "Code style: black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Rachis plugin for filtering and aligning ribosomal RNA reads using SortMeRNA."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Installation"
+          }
+        ],
+        "identifier": "installation",
+        "label": "Installation",
+        "html_id": "installation",
+        "implicit": true
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "For installation and usage instructions please consult the "
+          },
+          {
+            "type": "link",
+            "url": "https://library.qiime2.org/plugins",
+            "children": [
+              {
+                "type": "text",
+                "value": "Rachis library"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag_name": "2026.10.0",
+      "html_url": "https://github.com/bokulich-lab/q2-sort-me-rna/releases/tag/2026.10.0",
+      "name": "2026.10.0",
+      "published_at": "2026-11-20T13:20:08Z",
+      "ast": {
+        "type": "root",
+        "children": []
+      }
+    }
+  ],
+  "owner": "bokulich-lab",
+  "name": "q2-sort-me-rna",
+  "branch": "main",
+  "docs": "https://github.com/bokulich-lab/q2-sort-me-rna",
+  "last_commit": {
+    "sha": "e3f78dad5c5b1a9436a62273ce4987c86ba6c396",
+    "status": "passed",
+    "date": "2026-11-20T13:19:34Z"
+  },
+  "stars": 0,
+  "description": "Rachis plugin for filtering and aligning ribosomal RNA reads using SortMeRNA.",
+  "distros": [
+    [
+      "2026.10",
+      "tiny",
+      "environment-files/q2-sort-me-rna-rachis-tiny-2026.10.yml"
+    ],
+    [
+      "2026.7",
+      "tiny",
+      "environment-files/q2-sort-me-rna-rachis-tiny-2026.7.yml"
+    ]
+  ]
+}
